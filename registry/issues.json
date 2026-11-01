@@ -1,11 +1,12 @@
 [
   {
     "id": "ISS-0001",
-    "status": "open",
+    "status": "resolved",
     "severity": "critical",
     "title": "No verified durable remote repository",
     "impact": "Local sandbox repository will not automatically synchronize across chats or devices",
-    "next_action": "Select a private remote and upload or push canonical Git history"
+    "next_action": "Select a private remote and upload or push canonical Git history",
+    "resolution": "User-selected public GitHub repository verified accessible; prior sandbox durability blocker superseded by GitHub remote. Remote still must be checked per change."
   },
   {
     "id": "ISS-0002",
@@ -13,7 +14,7 @@
     "severity": "high",
     "title": "Verify bibliographic metadata and full-text evidence",
     "impact": "21 imported source claims must not be treated as independently confirmed",
-    "next_action": "Check DOI, publication year, design, data and applicability; correct with provenance retained"
+    "next_action": "Full-text assessment, retraction/correction tracking and validation of bibliographic-to-effect correspondence; preliminary metadata/scope review complete."
   },
   {
     "id": "ISS-0003",
@@ -21,7 +22,7 @@
     "severity": "high",
     "title": "Foundation model lacks calibrated biological validation",
     "impact": "Arithmetic PASS is not experimentally observed enhancement",
-    "next_action": "Fit/validate against independent human measurements and quantify uncertainty"
+    "next_action": "Biological calibration; rectify oxygen extraction scenario feasibility and test independent data, not just CSV equality."
   },
   {
     "id": "ISS-0004",
@@ -38,5 +39,21 @@
     "title": "No independent cross-model review",
     "impact": "Foundation has not been critically audited by Sol or Argon 4",
     "next_action": "Review claims independently, record reviewer provenance and resolve contradictory conclusions"
+  },
+  {
+    "id": "ISS-0006",
+    "status": "open",
+    "severity": "high",
+    "title": "Foundation source-to-claim mismatches/omitted harms",
+    "impact": "SRC-0006 and SRC-0018 do not directly justify original efficiency wording; SRC-0011 omitted 26 serious adverse events",
+    "next_action": "Use corrected, endpoint-specific citations and quantify harms; see audits/2026-11-01_sources.md"
+  },
+  {
+    "id": "ISS-0007",
+    "status": "open",
+    "severity": "high",
+    "title": "Fick extraction scenarios physically conditional",
+    "impact": "EXP-0004 yields delta C 0.225 and 0.300 L O2/L blood at Q=25 L/min; infeasible if arterial oxygen content=0.200 L/L, even at zero venous oxygen",
+    "next_action": "Add arterial/venous oxygen content, realistic extraction fractions and physiological constraints; keep historical CSV unchanged"
   }
 ]

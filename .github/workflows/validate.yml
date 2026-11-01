@@ -16,3 +16,5 @@ jobs:
         run: python tools/validate_repository.py
       - name: Recompute baseline CSVs in isolated directory
         run: python tools/reproduce_foundation.py
+      - name: Audit Foundation conservation and feasibility bounds
+        run: python tools/audit_foundation.py

@@ -46,5 +46,14 @@
     "experiment_id": "EXP-0006",
     "claim": "In idealized square grid, r=150 um corresponds to L~0.212 mm, ~2222 channels per cm2 in model geometry.",
     "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0007",
+    "type": "independent_model_constraint_audit",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0004",
+    "claim": "With explicitly conditional CaO2=0.200 L O2/L blood, the extraction-only +50% and +100% scenarios exceed the arterial content upper bound; +30% demands deltaC=0.195 and CvO2=0.005 L/L, an extreme boundary scenario.",
+    "external_validation": "not_done",
+    "evidence": "tools/audit_foundation.py"
   }
 ]

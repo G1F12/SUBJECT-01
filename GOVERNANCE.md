@@ -12,7 +12,7 @@
 8. For every completed research change: update relevant registries, PROJECT_STATE.md, CHANGELOG.md and handoffs/CURRENT.md, run validators, then commit once. Avoid per-experiment ZIP/release creation.
 9. Multi-AI: store agent/model metadata, task, prompt or reproducible instructions, referenced data/commit and disagreements; independent reviewer does not inherit trusted status. Only adjudicated/verified claims merge.
 10. At beginning of a new chat: read Git HEAD, PROJECT_STATE.md, open issues, current handoff and current registries before planning new research; at end prepare a short handoff with commit ID and known unresolved issues.
-11. Confidentiality: use **private** repo by default for unpublished research and personal data; no API keys, credentials, identifying medical details or personal datasets committed.
+11. Visibility/privacy: **this repository is intentionally PUBLIC by explicit user decision (DEC-0005)**. Publish only appropriate scientific code, claims and shareable data. Never commit secrets, identifying health data, restricted material or unpublished personal datasets. Changing repository visibility requires a separate decision.
 12. Safety/regulation: computational analysis first; any wet-lab or biological interventions require independent scientific and ethical review and relevant permissions. Model calculations are not efficacy evidence.
 
 ## Change and commit protocol

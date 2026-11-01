@@ -26,5 +26,12 @@
     "status": "adopted",
     "decision": "No remote publication; portable Git bundle is initialization handoff until a user-controlled durable private remote is attached.",
     "basis": "Connected GitHub repository listing returned no accessible repositories"
+  },
+  {
+    "id": "DEC-0005",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "The user explicitly selects public visibility for G1F12/SUBJECT-01; public scientific text/code only. Never commit credentials, raw personal health records or proprietary/unlicensed datasets.",
+    "basis": "User instruction 2026-11-01; repo visibility inspected via GitHub connection"
   }
 ]
