@@ -27,3 +27,18 @@ python tools/reproduce_foundation.py
 - [Аудит 21 источника](audits/2026-11-01_sources.md) — метаданные и доступные аннотации, не full-text/retraction clearance.
 - [Проверки Foundation](tools/audit_foundation.py) — 45 строк вычислительных сценариев, условные ограничения кислородного извлечения.
 - Все исходные импортированные результаты сохранены, включая отрицательные и непроверенные утверждения.
+
+## Интегрированная частично калиброванная модель
+
+[Отчёт цикла](research/integrated_2026_11_01/REPORT.md) и
+[аудит данных](research/integrated_2026_11_01/DATA_AUDIT.md).
+Python >=3.12; `pip install -r requirements.txt`.
+После трёх прежних проверок выполнить:
+
+```text
+python research/integrated_2026_11_01/test_model.py
+python research/integrated_2026_11_01/experiments.py --check
+```
+
+Полная калибровка/валидация организма не завершена; сценарный uplift не эффект
+вмешательства. Индивидуальные биологические эксперименты не выполнялись.

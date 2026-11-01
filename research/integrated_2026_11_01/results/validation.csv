@@ -1,0 +1,11 @@
+check,observed,predicted,residual,relative_error,unit,interpretation
+cycling_85W_holdout,442.7083333,432.0910973,-10.61723602,-0.02398246255,W,тот же cohort; не независимая выборка
+reaction_independent_cohort_age41,0.2378,0.2281548571,-0.00964514287,-0.04055989432,s,"другая выборка; та же статья, uncorrected"
+oxygen_external_young_men,3.4,3.784732,0.384732,0.1131564706,L/min,внешняя выборка; SD; cohort may overlap synthesis not established
+oxygen_external_old_men,2.2,2.790438,0.590438,0.2683809091,L/min,внешняя выборка; SD; cohort may overlap synthesis not established
+oxygen_external_young_women,2.2,2.838549,0.638549,0.2902495455,L/min,внешняя выборка; SD; cohort may overlap synthesis not established
+oxygen_external_old_women,1.4,1.972551,0.572551,0.408965,L/min,внешняя выборка; SD; cohort may overlap synthesis not established
+thermal_constant_loss_bout2,94700,146700,52000,0.5491024287,J,отрицательный тест constant-loss; та же выборка
+thermal_constant_loss_bout3,92000,146700,54700,0.5945652174,J,отрицательный тест constant-loss; та же выборка
+thermal_constant_loss_bout4,91900,146700,54800,0.5963003264,J,отрицательный тест constant-loss; та же выборка
+sprint_same_sample_Pmax,1680,1674.75,-5.25,-0.003125,W,тождество линейного FV; не независимая валидация

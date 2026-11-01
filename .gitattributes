@@ -1,1 +1,3 @@
 research/foundation_2026_11_01/** -text
+research/integrated_2026_11_01/** text eol=lf
+research/integrated_2026_11_01/**/*.png -text

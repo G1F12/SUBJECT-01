@@ -1,0 +1,20 @@
+{
+  "calibration.csv": "9951392852f16d7a1da7e4210f91aa873cf32f8d92af6ae7e08aacfbfadb4cb7",
+  "sources.json": "e8d45b1d4fae5b8e7f00dff84964e35234fb4ac74acebf2942c462be08b89664",
+  "parameters.json": "68172ec0ed7d531335b137d06030f123e6c00b05d524a57b49b7056c41807e3e",
+  "architecture_matrix.csv": "c8288701489f117ef11b88978cefed6ae9f52d05aac22ef6af7a79ed327fc9a2",
+  "environment.json": "187c665ec11e548f3480877fd2fc63cfcaa8979f997b7e9b5d29a49684191fee",
+  "model.py": "cf4739e9e671d4ebac00af9532d1fff0b8544768e30e7dbed5a333fb09aad67c",
+  "experiments.py": "f26701811f7ceeb357c5d54597858f1b8b92536c587d6bb08c016ea5b5293774",
+  "test_model.py": "4b101ed9ef8f11c8b696e78285fd5c63fd821093526c2d768f228d9600f855af",
+  "results/bottlenecks.csv": "1e1b2595105c20bde9a440ee34ddd05041a3c80807b56de56377f680f1ad5131",
+  "results/global_sensitivity.csv": "e9522ed391bf3ff8977ee74d15faaea3f46205754a2cfb64116062e96b03d307",
+  "results/local_sensitivity.csv": "d0121334b87bff144bb75911faf9c18c4e3321493f3cd83ce9296636ef314cea",
+  "results/pareto.csv": "68eb8e18bf5f30a9393015f9f537abd25be02057b7fdec9d5deec73fcf6798ce",
+  "results/scenarios.csv": "33d11ffa4816769da057e366ce669fad0dab89b3f6beb6afb81e50695fc7fbf1",
+  "results/sprint.csv": "12b249e053fc55c4f8d31b2a30a6c9d0184d8b50f5435094b512d470c9e71902",
+  "results/uncertainty.csv": "3f26b7ead9b8226b839673da5c70ad31e5bd65ebea50677143377f9fb8d8156c",
+  "results/validation.csv": "21942a6a1fb419245c3daaf31de8622292d25604dbcf6a4e976cddffa2a7ecc9",
+  "results/summary.json": "b9cd14e2702c07c1711c3063bbaaf5f84b5e3142b5d4cec6a62bfdfd78e5e741",
+  "results/constraints.png": "bc7092571e3a1e981700a8f5de4e2718b0978310b2bb0dc6bc2931343113272e"
+}

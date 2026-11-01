@@ -98,5 +98,77 @@
     "reproduction_command": "python tools/reproduce_foundation.py",
     "limits": "Not a capillary density prescription; no perfusion/consumption model",
     "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0007",
+    "title": "Частичная калибровка и отложенные агрегаты",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/integrated_2026_11_01/model.py",
+    "inputs": "research/integrated_2026_11_01/parameters.json",
+    "outputs": [
+      "research/integrated_2026_11_01/results/validation.csv",
+      "research/integrated_2026_11_01/calibration.csv"
+    ],
+    "report": "research/integrated_2026_11_01/REPORT.md",
+    "method": "Опубликованные числовые агрегаты; affine cycling fit; weighted age RT fit; external transport checks",
+    "reproduction_command": "python research/integrated_2026_11_01/experiments.py --check",
+    "limits": "Частично калиброванный surrogate; нет совместной анатомической/whole-body валидации; перенос cycling→running не подтверждён.",
+    "external_validation": "partial_aggregate_holdouts_only"
+  },
+  {
+    "id": "EXP-0008",
+    "title": "Связанные механика–кислород–тепло–управление",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/integrated_2026_11_01/model.py",
+    "inputs": "research/integrated_2026_11_01/parameters.json",
+    "outputs": [
+      "research/integrated_2026_11_01/results/scenarios.csv",
+      "research/integrated_2026_11_01/results/sprint.csv",
+      "research/integrated_2026_11_01/results/bottlenecks.csv"
+    ],
+    "report": "research/integrated_2026_11_01/REPORT.md",
+    "method": "18 сценариев, 6 архитектур × 3 среды; SI constraints; sprint dt=.01 s",
+    "reproduction_command": "python research/integrated_2026_11_01/experiments.py --check",
+    "limits": "Частично калиброванный surrogate; нет совместной анатомической/whole-body валидации; перенос cycling→running не подтверждён.",
+    "external_validation": "partial_aggregate_holdouts_only"
+  },
+  {
+    "id": "EXP-0009",
+    "title": "Раздельная UQ и глобальная чувствительность",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/integrated_2026_11_01/model.py",
+    "inputs": "research/integrated_2026_11_01/parameters.json",
+    "outputs": [
+      "research/integrated_2026_11_01/results/uncertainty.csv",
+      "research/integrated_2026_11_01/results/global_sensitivity.csv",
+      "research/integrated_2026_11_01/results/local_sensitivity.csv",
+      "research/integrated_2026_11_01/results/summary.json"
+    ],
+    "report": "research/integrated_2026_11_01/REPORT.md",
+    "method": "768 UQ; 7168 Jansen evaluations, N=512, 12 independent uniform dimensions; seed=20261101",
+    "reproduction_command": "python research/integrated_2026_11_01/experiments.py --check",
+    "limits": "Частично калиброванный surrogate; нет совместной анатомической/whole-body валидации; перенос cycling→running не подтверждён.",
+    "external_validation": "partial_aggregate_holdouts_only"
+  },
+  {
+    "id": "EXP-0010",
+    "title": "Условный Pareto-поиск внутренних архитектур",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/integrated_2026_11_01/model.py",
+    "inputs": "research/integrated_2026_11_01/parameters.json",
+    "outputs": [
+      "research/integrated_2026_11_01/results/pareto.csv",
+      "research/integrated_2026_11_01/architecture_matrix.csv",
+      "research/integrated_2026_11_01/results/constraints.png"
+    ],
+    "report": "research/integrated_2026_11_01/REPORT.md",
+    "method": "162 кандидата, 6 целей, явные экспертные constraints, без efficacy scores",
+    "reproduction_command": "python research/integrated_2026_11_01/experiments.py --check",
+    "limits": "Частично калиброванный surrogate; нет совместной анатомической/whole-body валидации; перенос cycling→running не подтверждён.",
+    "external_validation": "partial_aggregate_holdouts_only"
   }
 ]

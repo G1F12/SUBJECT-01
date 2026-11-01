@@ -19,5 +19,26 @@
     "experiment_id": "EXP-0004",
     "claim": "At assumed CaO2=0.200 L/L, extraction-only 50% and 100% oxygen-uptake gains are impossible without changing Q or oxygen content.",
     "context": "Conditional mass-balance constraint; CaO2 is an assumed illustration, not an absolute biological universal."
+  },
+  {
+    "id": "NEG-0004",
+    "status": "model_counterexample",
+    "experiment_id": "EXP-0007",
+    "claim": "Перенос fixed arterial content/extraction из pooled young men завышает VO2 внешних 4 групп на 11.3..40.9%.",
+    "context": "Закон Фика не опровергнут; универсальная переносимость параметров отвергнута; см. validation.csv."
+  },
+  {
+    "id": "NEG-0005",
+    "status": "model_counterexample",
+    "experiment_id": "EXP-0007",
+    "claim": "Constant heat loss, настроенный на первом bout, завышает stored heat следующих bouts на 54.9..59.6%.",
+    "context": "Та же выборка; динамическая адаптация не представлена; не клиническая thermal validation."
+  },
+  {
+    "id": "NEG-0006",
+    "status": "model_counterexample",
+    "experiment_id": "EXP-0008",
+    "claim": "Добавление только сократительной массы не дало прироста peak COM в данном baseline; +25% плеча также не обходит contact/FV envelope.",
+    "context": "Условные контрпримеры для endpoint; не доказательство невозможности иной анатомии."
   }
 ]

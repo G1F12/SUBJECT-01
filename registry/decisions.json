@@ -33,5 +33,12 @@
     "status": "adopted",
     "decision": "The user explicitly selects public visibility for G1F12/SUBJECT-01; public scientific text/code only. Never commit credentials, raw personal health records or proprietary/unlicensed datasets.",
     "basis": "User instruction 2026-11-01; repo visibility inspected via GitHub connection"
+  },
+  {
+    "id": "DEC-0006",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "Интегрированная модель — частично калиброванный surrogate ограничений. Условные uplift/сценарные интервалы не являются эффектом вмешательства или популяционным прогнозом. Сохранять отрицательные holdout результаты и исходный Foundation.",
+    "basis": "EXP-0007..0010; NEG-0004..0006; user computational-first instruction"
   }
 ]

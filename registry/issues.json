@@ -22,7 +22,8 @@
     "severity": "high",
     "title": "Foundation model lacks calibrated biological validation",
     "impact": "Arithmetic PASS is not experimentally observed enhancement",
-    "next_action": "Biological calibration; rectify oxygen extraction scenario feasibility and test independent data, not just CSV equality."
+    "next_action": "Biological calibration; rectify oxygen extraction scenario feasibility and test independent data, not just CSV equality.",
+    "progress_2026_11_01": "43 опубликованных агрегата и частичная калибровка EXP-0007; whole-body validation не завершена; ISS-0008."
   },
   {
     "id": "ISS-0004",
@@ -54,6 +55,31 @@
     "severity": "high",
     "title": "Fick extraction scenarios physically conditional",
     "impact": "EXP-0004 yields delta C 0.225 and 0.300 L O2/L blood at Q=25 L/min; infeasible if arterial oxygen content=0.200 L/L, even at zero venous oxygen",
-    "next_action": "Add arterial/venous oxygen content, realistic extraction fractions and physiological constraints; keep historical CSV unchanged"
+    "next_action": "Add arterial/venous oxygen content, realistic extraction fractions and physiological constraints; keep historical CSV unchanged",
+    "progress_2026_11_01": "В новой модели явные Ca/Cv и bound tests, прежние CSV сохранены. Физиологическая калибровка/перфузионные constraints пока частичны; issue открыт."
+  },
+  {
+    "id": "ISS-0008",
+    "status": "open",
+    "severity": "high",
+    "title": "Нет совместной индивидуальной анатомической и метаболической калибровки",
+    "impact": "PCSA/геометрия/костная усталость/контакт/FV и cycling→running перенос не идентифицированы; модель не digital twin",
+    "next_action": "Получить открытые одновременные kinetic/kinematic/gas-exchange данные, разделить участников на fit и validation."
+  },
+  {
+    "id": "ISS-0009",
+    "status": "open",
+    "severity": "high",
+    "title": "Не завершена проверка исправлений и приборной неопределённости",
+    "impact": "Europe PMC/Crossref notices проверены ограниченно; отсутствие notice не clearance; индивидуальные ковариации/метрология недоступны",
+    "next_action": "Проверить Crossmark/reverse notices и supplements; получить сырые измерения и metadata приборов."
+  },
+  {
+    "id": "ISS-0010",
+    "status": "open",
+    "severity": "high",
+    "title": "Новая внутренняя архитектура не имеет доказанной интеграции",
+    "impact": "Перфузия, хроническая иннервация, иммунная/опухолевая безопасность, fatigue и tissue maintenance неизвестны",
+    "next_action": "Искать независимые существующие долгосрочные данные интеграции; не переносить in-vitro effect на whole-body performance."
   }
 ]

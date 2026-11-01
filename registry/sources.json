@@ -20,7 +20,8 @@
       "retraction_correction_check": "not_completed",
       "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39169839/",
       "integration_check_date": "2026-11-01"
-    }
+    },
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0001"
   },
   {
     "id": "SRC-0002",
@@ -43,7 +44,8 @@
       "retraction_correction_check": "not_completed",
       "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/35838893/",
       "integration_check_date": "2026-11-01"
-    }
+    },
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0002"
   },
   {
     "id": "SRC-0003",
@@ -413,7 +415,8 @@
       "retraction_correction_check": "not_completed",
       "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39088644/",
       "integration_check_date": "2026-11-01"
-    }
+    },
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0018"
   },
   {
     "id": "SRC-0019",
@@ -481,5 +484,75 @@
       "full_text_systematic_review": "not_completed",
       "retraction_correction_check": "not_completed"
     }
+  },
+  {
+    "id": "SRC-0022",
+    "url": "https://doi.org/10.1111/sms.12490",
+    "title": "A simple method for measuring power, force, velocity properties, and mechanical effectiveness in sprint running.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0022",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0023",
+    "url": "https://doi.org/10.1152/japplphysiol.00059.2008",
+    "title": "Influence of aging on the in vivo properties of human patellar tendon.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0023",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0024",
+    "url": "https://doi.org/10.3389/fnhum.2015.00131",
+    "title": "Factors influencing the latency of simple reaction time.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0024",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0025",
+    "url": "https://doi.org/10.1098/rsos.170185",
+    "title": "Operating length and velocity of human M. vastus lateralis fascicles during vertical jumping.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0025",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0026",
+    "url": "https://doi.org/10.1111/apha.13486",
+    "title": "Contribution of oxygen extraction fraction to maximal oxygen uptake in healthy young men.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0026",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0027",
+    "url": "https://doi.org/10.1152/japplphysiol.00985.2009",
+    "title": "Age and sex influence the balance between maximal cardiac output and peripheral vascular reserve.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0027",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0028",
+    "url": "https://doi.org/10.1371/journal.pone.0083148",
+    "title": "Age-related decrements in heat dissipation during physical activity occur as early as the age of 40.",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/integrated_2026_11_01/calibration.csv",
+    "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
+    "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0028",
+    "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
   }
 ]
