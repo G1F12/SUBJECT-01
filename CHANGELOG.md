@@ -8,3 +8,8 @@
 - Established mandatory distinction between arithmetic reproduction and experimentally established augmentation.
 - Added automated integrity and reproduction checks.
 - Explicit limitations: no remote configured, no independent literature audit, no imported prior-project archives, no external multi-AI check.
+
+## 2026-11-01 - GitHub remote setup
+- Genesis commit uploaded and verified on GitHub.
+- Updated state and handoff to reflect remote synchronization.
+
