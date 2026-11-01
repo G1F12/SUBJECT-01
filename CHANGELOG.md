@@ -13,3 +13,7 @@
 - Genesis commit uploaded and verified on GitHub.
 - Updated state and handoff to reflect remote synchronization.
 
+
+## 2026-11-01 - Windows integrity repair
+- Restored documented UTF-8 text from genesis.
+- Protected foundation file bytes from line-ending conversion.
