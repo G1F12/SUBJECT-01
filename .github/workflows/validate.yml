@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Install reproducibility requirements
         run: pip install -r requirements.txt
       - name: Structural and hash audit
@@ -18,3 +18,7 @@ jobs:
         run: python tools/reproduce_foundation.py
       - name: Audit Foundation conservation and feasibility bounds
         run: python tools/audit_foundation.py
+      - name: Integrated physiological invariants and input provenance
+        run: python research/integrated_2026_11_01/test_model.py
+      - name: Reproduce integrated experiments with fixed seed
+        run: python research/integrated_2026_11_01/experiments.py --check

@@ -55,5 +55,45 @@
     "claim": "With explicitly conditional CaO2=0.200 L O2/L blood, the extraction-only +50% and +100% scenarios exceed the arterial content upper bound; +30% demands deltaC=0.195 and CvO2=0.005 L/L, an extreme boundary scenario.",
     "external_validation": "not_done",
     "evidence": "tools/audit_foundation.py"
+  },
+  {
+    "id": "FND-0008",
+    "type": "conditional_model_result",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0008",
+    "claim": "В выбранной модели увеличение sigma до 3x упирается в рабочий tendon cap; +2 kg только мышцы не повышают peak COM, а повышают maintenance и инерцию.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0009",
+    "type": "conditional_sensitivity",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0009",
+    "claim": "При выбранных независимых интервалах steady power чувствительна прежде всего к доступной испаряемой воде и delta efficiency; это не универсальная иерархия физиологии.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0010",
+    "type": "conditional_pareto",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0010",
+    "claim": "162 архитектуры: 84 допустимы в условной сетке, 28 Pareto по 6 целям. Достижимость ресурсных коэффициентов не установлена.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0011",
+    "type": "aggregate_holdout",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0007",
+    "claim": "Low-power cycling affine fit по 35/60 W даёт ошибку -2.40% metabolic power на 85 W той же выборки; независимую running validation это не заменяет.",
+    "external_validation": "partial_same_cohort_workload_holdout"
+  },
+  {
+    "id": "FND-0012",
+    "type": "conditional_environment_reversal",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0008",
+    "claim": "В 35 C/80% RH более тяжёлый пакет с +50% доступной испаряемой водой проигрывает baseline steady output: vapor capacity среды ограничивает пользу охлаждения.",
+    "external_validation": "not_done"
   }
 ]

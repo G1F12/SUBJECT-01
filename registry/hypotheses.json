@@ -6,7 +6,10 @@
     "scope": "integrated biological or internal bioengineered augmentation",
     "test": "Quantify joint moment after strength, stress, fatigue, mass and safety constraints",
     "related_experiments": [
-      "EXP-0001"
+      "EXP-0001",
+      "EXP-0008",
+      "EXP-0009",
+      "EXP-0010"
     ],
     "claim_level": "hypothesis"
   },
@@ -17,7 +20,8 @@
     "scope": "sensory prediction plus motor execution",
     "test": "Test latency-accuracy tradeoff on unexpected events with controlled tasks",
     "related_experiments": [
-      "EXP-0005"
+      "EXP-0005",
+      "EXP-0010"
     ],
     "claim_level": "hypothesis"
   },
@@ -27,7 +31,9 @@
     "status": "unverified",
     "scope": "new physical transducers and neural coding",
     "test": "Demonstrate useful information transfer and discrimination distinct from ordinary cues",
-    "related_experiments": [],
+    "related_experiments": [
+      "EXP-0010"
+    ],
     "claim_level": "hypothesis"
   },
   {
@@ -39,7 +45,10 @@
     "related_experiments": [
       "EXP-0002",
       "EXP-0003",
-      "EXP-0004"
+      "EXP-0004",
+      "EXP-0008",
+      "EXP-0009",
+      "EXP-0010"
     ],
     "claim_level": "hypothesis"
   },

@@ -1,0 +1,44 @@
+parameter,group,value,spread,spread_type,unit,n,source_id,locator,role
+specific_tension,review_weighted_median,268000,0,IQR_200000_430000,Pa,30,SRC-0001,Table 2/discussion,calibration
+sprint_F0,sprinters,638,84,SD,N,9,SRC-0022,abstract,calibration
+sprint_v0,sprinters,10.5,0.74,SD,m/s,9,SRC-0022,abstract,calibration
+sprint_Pmax,sprinters,1680,280,SD,W,9,SRC-0022,abstract,same_sample_consistency
+tendon_stress,young,26600000.0,2400000.0,SE,Pa,11,SRC-0023,Table 3,observed_operating_envelope_not_failure
+tendon_stiffness,young,2552000,218000,SE,N/m,11,SRC-0023,Table 3,observed_operating_envelope_not_failure
+tendon_modulus,young,900000000.0,100000000.0,SE,Pa,11,SRC-0023,Table 3,observed_operating_envelope_not_failure
+gross_efficiency,young_trained_men_35W,0.138,0.014,SD,1,6,SRC-0018,Table 3,calibration
+gross_efficiency,young_trained_men_60W,0.175,0.014,SD,1,6,SRC-0018,Table 3,calibration
+gross_efficiency,young_trained_men_85W,0.192,0.012,SD,1,6,SRC-0018,Table 3,heldout_workload_same_sample
+cardiac_output,pooled_117,0.0004166666666666667,3.9999999999999996e-05,SD,m3/s,117,SRC-0026,Table 3; 12 studies,calibration
+arterial_content,pooled_117,0.203,0.01,SD,m3_O2/m3_blood,117,SRC-0026,Table 3; 12 studies,calibration
+extraction,pooled_117,0.79,0.08,SD,1,117,SRC-0026,Table 3; 12 studies,calibration
+VO2,pooled_117,6.699999999999999e-05,1.0833333333333334e-05,SD,m3/s,117,SRC-0026,Table 3; 12 studies,same_sample_consistency
+cardiac_output,young_men,0.00039333333333333337,4.5e-05,SD,m3/s,19,SRC-0027,Table 2,external_transportability_check
+VO2,young_men,5.6666666666666664e-05,8.333333333333334e-06,SD,m3/s,19,SRC-0027,Table 2,external_transportability_check
+cardiac_output,old_men,0.00029,5.833333333333333e-05,SD,m3/s,12,SRC-0027,Table 2,external_transportability_check
+VO2,old_men,3.666666666666667e-05,6.666666666666667e-06,SD,m3/s,12,SRC-0027,Table 2,external_transportability_check
+cardiac_output,young_women,0.000295,3.1666666666666666e-05,SD,m3/s,17,SRC-0027,Table 2,external_transportability_check
+VO2,young_women,3.666666666666667e-05,6.666666666666667e-06,SD,m3/s,17,SRC-0027,Table 2,external_transportability_check
+cardiac_output,old_women,0.00020500000000000002,2.6666666666666667e-05,SD,m3/s,17,SRC-0027,Table 2,external_transportability_check
+VO2,old_women,2.3333333333333332e-05,3.3333333333333333e-06,SD,m3/s,17,SRC-0027,Table 2,external_transportability_check
+reaction_time,age_20.8,0.2179,0.0195,between_subject_SD,s,86,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_28.6,0.221,0.0228,between_subject_SD,s,115,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_35.5,0.2248,0.023399999999999997,between_subject_SD,s,201,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_42.3,0.22769999999999999,0.026600000000000002,between_subject_SD,s,273,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_48.6,0.2336,0.0272,between_subject_SD,s,276,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_55,0.2364,0.027,between_subject_SD,s,272,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,age_61.6,0.2391,0.0281,between_subject_SD,s,246,SRC-0024,Table 2 uncorrected; subtract 0.018 s hardware,calibration
+reaction_time,replication_age_41,0.2378,0.0278,between_subject_SD,s,189,SRC-0024,Table 2 experiment 2 uncorrected,heldout_cohort_same_publication
+reaction_within_SD,experiment_1,0.04,0,trial_to_trial_SD,s,1469,SRC-0024,Table 2,variability
+fascicle_length_start,squat_jump,0.132,0.011,SD,m,17,SRC-0025,Tables 1-3; 17 active adults,context_not_direct_sprint_calibration
+fascicle_length_end,squat_jump,0.068,0.007,SD,m,17,SRC-0025,Tables 1-3; 17 active adults,context_not_direct_sprint_calibration
+fascicle_velocity_max,squat_jump,0.354,0.093,SD,m/s,17,SRC-0025,Tables 1-3; 17 active adults,context_not_direct_sprint_calibration
+knee_moment_per_mass,squat_jump,1.47,0.22,SD,N*m/kg,17,SRC-0025,Tables 1-3; 17 active adults,context_not_direct_sprint_calibration
+peak_power_per_mass,squat_jump,46.78,4.14,SD,W/kg,17,SRC-0025,Tables 1-3; 17 active adults,context_not_direct_sprint_calibration
+stored_heat,young_Ex1,146700,5600,SE,J,18,SRC-0028,"Table 2; heat=400 W, duration=900 s, 35 C RH .20",calibration
+stored_heat,young_Ex2,94700,4500,SE,J,18,SRC-0028,"Table 2; heat=400 W, duration=900 s, 35 C RH .20",heldout_bout_same_cohort
+stored_heat,young_Ex3,92000,4500,SE,J,18,SRC-0028,"Table 2; heat=400 W, duration=900 s, 35 C RH .20",heldout_bout_same_cohort
+stored_heat,young_Ex4,91900,3600,SE,J,18,SRC-0028,"Table 2; heat=400 W, duration=900 s, 35 C RH .20",heldout_bout_same_cohort
+evaporated_water_rate,young_Ex4,0.00015833333333333332,3.3333333333333333e-06,SE,kg/s,18,SRC-0028,Table 2; calorimetry not total sweat secretion,context
+tendon_area,young,0.0001275,8.7e-06,SE,m^2,11,SRC-0023,Table 2 MRI,calibration
+tendon_length,young,0.0464,0.0021,SE,m,11,SRC-0023,Table 2 MRI,context

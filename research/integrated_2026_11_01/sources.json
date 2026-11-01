@@ -1,0 +1,257 @@
+[
+  {
+    "id": "SRC-0001",
+    "title": "Specific tension of human muscle in vivo: a systematic review.",
+    "doi": "10.1152/japplphysiol.00296.2024",
+    "pmid": "39169839",
+    "pmcid": "PMC11486478",
+    "version": "2024-08-22",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC11486478",
+    "metadata_sha256": "afca97f9ed773c0b5764760ce91fdb12926140a674c87818769560523cb22ed1",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "целевые фрагменты методики/таблиц/обсуждения; не исчерпывающий полнотекстовый аудит",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1152%2Fjapplphysiol.00296.2024",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0018",
+    "title": "Leg cycling efficiency is unaltered in healthy aging regardless of sex or training status.",
+    "doi": "10.1152/japplphysiol.00393.2024",
+    "pmid": "39088644",
+    "pmcid": "PMC11486473",
+    "version": "2024-08-01",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC11486473",
+    "metadata_sha256": "c22bfda7a34b87f4e5d57eb844a919a2dec7b183b9e48b1352a9d41ec8d711a7",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1152%2Fjapplphysiol.00393.2024",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0002",
+    "title": "Tri-culture of spatially organizing human skeletal muscle cells, endothelial cells, and fibroblasts enhances contractile force and vascular perfusion of skeletal muscle tissues.",
+    "doi": "10.1096/fj.202200500r",
+    "pmid": "35838893",
+    "pmcid": "PMC12166285",
+    "version": "2022-08-01",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC12166285",
+    "metadata_sha256": "7ead20a1df27a10aed0c1cb1a07caa454ea1f25e3d679cb18b8aff9c5102fea9",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12166285/fullTextXML",
+    "fulltext_sha256": "1d47cc2ead34ed117353e3525b305019b124181d3431b3140bb50d3ff9caffd2",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1096%2Ffj.202200500r",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0022",
+    "title": "A simple method for measuring power, force, velocity properties, and mechanical effectiveness in sprint running.",
+    "doi": "10.1111/sms.12490",
+    "pmid": "25996964",
+    "pmcid": null,
+    "version": "2015-05-21",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A25996964",
+    "metadata_sha256": "786138c3bbce2ff1106777044bfdd245852de2e9c8e78d74381984479f949c86",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "аннотация/индексируемая таблица; полный текст недоступен",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1111%2Fsms.12490",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0023",
+    "title": "Influence of aging on the in vivo properties of human patellar tendon.",
+    "doi": "10.1152/japplphysiol.00059.2008",
+    "pmid": "18927271",
+    "pmcid": "PMC2612460",
+    "version": "2008-10-16",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC2612460",
+    "metadata_sha256": "8f54f576f75a7742ecb7071cb375457b881c44bbfa66aa1b268038ce5c2fc718",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "целевые фрагменты методики/таблиц/обсуждения; не исчерпывающий полнотекстовый аудит",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1152%2Fjapplphysiol.00059.2008",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0024",
+    "title": "Factors influencing the latency of simple reaction time.",
+    "doi": "10.3389/fnhum.2015.00131",
+    "pmid": "25859198",
+    "pmcid": "PMC4374455",
+    "version": "2015-03-26",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC4374455",
+    "metadata_sha256": "7e324f9e9629d6a88f67be00b400e18589a0860a5ff07df68549cb7482bf1e1c",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4374455/fullTextXML",
+    "fulltext_sha256": "b0a869d788712f23daf6da84aa337638cbdabddad4e93b6d78be723b326b51e0",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.3389%2Ffnhum.2015.00131",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    },
+    "related_commentary": {
+      "doi": "10.3389/fnhum.2015.00452",
+      "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2015.00452/pdf",
+      "assessment": "Полемика о сравнении с Victorian samples; не erratum. Историческое сравнение в модели не используется; protocol-dependence сохраняется."
+    }
+  },
+  {
+    "id": "SRC-0025",
+    "title": "Operating length and velocity of human M. vastus lateralis fascicles during vertical jumping.",
+    "doi": "10.1098/rsos.170185",
+    "pmid": "28573027",
+    "pmcid": "PMC5451828",
+    "version": "2017-05-03",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC5451828",
+    "metadata_sha256": "d511ab93b06f1f067969e9e250f8e331e3def3b27c899ba2a274495015068810",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5451828/fullTextXML",
+    "fulltext_sha256": "b12641b9d69bf1ce2dd925a58dc85127af27473b3b8e3a1fa6e1630df0ef4eb7",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1098%2Frsos.170185",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0026",
+    "title": "Contribution of oxygen extraction fraction to maximal oxygen uptake in healthy young men.",
+    "doi": "10.1111/apha.13486",
+    "pmid": "32365270",
+    "pmcid": "PMC7540168",
+    "version": "2020-05-30",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC7540168",
+    "metadata_sha256": "61bfdca58d25609791f63b8534e2393d88352ec6e92919d2461755cc647f4de0",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7540168/fullTextXML",
+    "fulltext_sha256": "22b0c8e3102ae3a7c2e3ec94034d8f82f463b3ea1cfa047485b5cb3b62fa9097",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1111%2Fapha.13486",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0027",
+    "title": "Age and sex influence the balance between maximal cardiac output and peripheral vascular reserve.",
+    "doi": "10.1152/japplphysiol.00985.2009",
+    "pmid": "19959767",
+    "pmcid": "PMC2838638",
+    "version": "2009-12-03",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC2838638",
+    "metadata_sha256": "e2a8461a6dba37545d9f8e48382697d02516f1ba17f8c18c988e1ebd3cddfc72",
+    "is_retracted": "not_reported",
+    "correction_links": {
+      "commentCorrection": [
+        {
+          "source": "MED",
+          "id": "20019158",
+          "reference": "J Appl Physiol (1985). 2010 Mar;108(3):473-4. doi: 10.1152/japplphysiol.01385.2009",
+          "type": "Comment in",
+          "orderIn": 1
+        }
+      ]
+    },
+    "review_scope": "аннотация/индексируемая таблица; полный текст недоступен",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1152%2Fjapplphysiol.00985.2009",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  },
+  {
+    "id": "SRC-0028",
+    "title": "Age-related decrements in heat dissipation during physical activity occur as early as the age of 40.",
+    "doi": "10.1371/journal.pone.0083148",
+    "pmid": "24349447",
+    "pmcid": "PMC3861480",
+    "version": "2013-12-12",
+    "accessed": "2026-11-01",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC3861480",
+    "metadata_sha256": "5de1f36d12147e327adba542e2dddccf1b62b5dec0daedda32da6cb0bce96f2f",
+    "is_retracted": "not_reported",
+    "correction_links": {},
+    "review_scope": "полный текст: методика, таблицы, ограничения",
+    "rights": "Только числовые факты и собственные аннотации; полные тексты не перераспространяются.",
+    "correction_check": "Europe PMC core isRetracted/commentCorrectionList + доступные notices; отсутствие ссылки не гарантирует отсутствие поправок.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3861480/fullTextXML",
+    "fulltext_sha256": "26c0cc5207d09c39b26a7a3b844cd5a45a2abff7a58ea68e4a4f840c5b8d6bf9",
+    "crossref_notice_check": {
+      "url": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0083148",
+      "relation": {},
+      "update_to": [],
+      "updated_by": [],
+      "scope": "Проверена запись DOI; reverse notices и Crossmark не исчерпываются этим запросом."
+    }
+  }
+]

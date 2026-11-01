@@ -1,16 +1,44 @@
-# SUBJECT-01 — Canonical current state
+# SUBJECT-01 — каноническое состояние на 01.11.2026
 
-- **As of:** 2026-11-01. Foundation / computational-first.
-- **Canonical source:** https://github.com/G1F12/SUBJECT-01 (public by explicit user decision DEC-0005).
-- **Verified baseline:** EXP-0001..0006: standalone execution and all 7 imported CSVs reproduce byte-for-byte as CSV records; 13 imported file SHA256 checks PASS.
-- **Independent arithmetic/feasibility audit:** 45 CSV rows checked with `python tools/audit_foundation.py`: PASS arithmetic; conditional Fick oxygen-content violation for +50%/+100% extraction-only scenarios at assumed CaO2 0.200 L/L. See FND-0007 / NEG-0003 / ISS-0007. No physiological calibration.
-- **Source audit:** 21/21 citations checked for publication identity and accessible abstracts/publisher/regulator summaries, documented in `audits/2026-11-01_sources.md` and `registry/sources.json`. No full-text systematic audit or correction/retraction audit. Scope mismatches recorded in ISS-0006; no source upgraded to empirically validated efficacy.
-- **Evidence status:** no proof of radical healthy-human augmentation. **NO_GO** for intervention or efficacy claims.
-- **Registries:** `registry/*.json` are cumulative and retain original claims, negative results and permanent IDs. No historical A/B/C artifacts imported (ISS-0004).
-- **Open issues:** ISS-0002..0007 except ISS-0001 resolved. Sol/Argon 4 independent reviews not performed (ISS-0005).
-- **Next action:** source full-text quality/retraction check, calibrated physiological bounds, and independent validation data, preserving prior imported outputs.
-- **Verification:** `python tools/validate_repository.py`; `python tools/reproduce_foundation.py`; `python tools/audit_foundation.py`; `git status --short`; `git rev-parse HEAD`.
+Источник истины: существующий публичный GitHub G1F12/SUBJECT-01, ветка main.
+Фаза: Foundation → частично калиброванная интегрированная вычислительная модель.
+Решение о PUBLIC: DEC-0005. Новых репозиториев/архивов не создавалось.
 
-Do not confuse metadata audit, arithmetic checks and independent empirical validation. Require GitHub commit and remote-head verification for any claim of permanent publication.
+- Foundation EXP-0001..0006 и аудит FND-0007/NEG-0003 сохранены; 13 исходных
+  SHA256 и 7 CSV воспроизводятся. Файлы Foundation не изменены.
+- Новый цикл: EXP-0007..0010, `research/integrated_2026_11_01/REPORT.md`.
+  43 опубликованных количественных агрегата, 10 используемых источников;
+  полные provenance/методики/единицы/SD/SE/IQR: DATA_AUDIT.md и sources.json.
+- Связаны механика, передача мощности, контакт, масса, кислород, энергетика,
+  heat budget, компоненты задержки и условная ошибка предиктора. Не digital twin.
+- Выполнены 18 сценариев, 768 UQ, 7168 Sobol/Jansen evaluations,
+  локальная чувствительность, 162 архитектуры, 84 условно допустимы и 28 Pareto.
+- Сохранены отрицательные результаты: fixed extraction transportability,
+  constant heat loss и muscle-only mass uplift (NEG-0004..0006).
+- Реестры: EXP=10, HYP=5 (все unverified), FND=12, NEG=6, DEC=6,
+  ISS=10, SRC=28. Прежние IDs и imported claims сохранены.
+- Классификация: результаты модели `arithmetic_reproduced`; отдельные агрегаты
+  сверены с источниками. Нет эмпирической валидации интегрированной архитектуры,
+  доказательства радикального усиления или безопасности. **NO_GO** для вмешательств.
+- Полнотекстовая проверка выбранных методик/таблиц доступна частично; полный
+  систематический аудит и exhaustive correction/retraction clearance не завершены.
+  Получены Europe PMC/Crossref notices для 10 используемых работ; ограниченность
+  и найденная Comment in записаны. Это не доказательство отсутствия ретракций.
+- ISS-0001 resolved; ISS-0002..0010 остаются открыты. Явные Ca/Cv constraints
+  реализованы в новой модели, но физиологическая задача ISS-0007 не закрыта.
+- Основные блокеры: нет одновременных индивидуальных anatomical/kinetic/gas данных,
+  не установлен перенос cycling→running, неизвестны fatigue/кости/геометрия,
+  хроническая интеграция нового органа, приборная ошибка и ковариации.
+- Выбор направлений условный: I нативная координация мышцы–передачи–ресурсов;
+  II внутренние параллельные сократительные ветви; III новый внутренний
+  предиктивный сенсорный канал. Эффективность вмешательств не заявлена.
+- Следующий цикл: один совместный открытый kinetic/kinematic/gas-exchange набор,
+  участники fit отдельно от external validation; идентифицировать энергетику бега.
 
-Integration verification, reviewer provenance, dimensional derivations and date/correction clarifications: `audits/2026-11-01_integration.md`. No comprehensive correction/retraction audit completed; one SRC-0003 correction notice observed.
+Проверки: `python tools/validate_repository.py`, `python tools/reproduce_foundation.py`,
+`python tools/audit_foundation.py`,
+`python research/integrated_2026_11_01/test_model.py` и
+`python research/integrated_2026_11_01/experiments.py --check`; `git diff --check`.
+Точные команды — в отчёте. Python >=3.12, зависимости зафиксированы requirements.txt.
+Публикацию утверждать только после проверки PR, Actions и SHA непосредственно
+на GitHub; SHA содержащего исследование commit: `git log -1 --format=%H -- research/integrated_2026_11_01/REPORT.md`.

@@ -26,3 +26,21 @@
 - Preserved all 13 legacy source artifact hashes and seven original CSVs; no biological or clinical validation, full-text or retraction audit claimed.
 
 - Integration review clarified online/issue dates, observed SRC-0003 figure correction and abstract-level inference limits; added reviewer/environment provenance and strengthened invariant/coverage checks.
+
+## 2026-11-01 — частичная физиологическая калибровка и связанная модель
+
+- EXP-0007..0010: 43 опубликованных агрегата, 6 подсистем, 18 сценариев,
+  768 UQ, 7168 Sobol/Jansen evaluations и 162-кандидатная Pareto-сетка.
+- FND-0008..0012 и NEG-0004..0006 сохраняют plateau/ресурсные ограничения и
+  отрицательные проверки переноса extraction и постоянного теплоотвода.
+- SRC-0022..0028 добавлены; прежние SRC и HYP не продублированы. Источники,
+  SD/SE/IQR, частичная проверка notices и ограничения лицензий документированы.
+- DEC-0006 закрепляет surrogate status; ISS-0008..0010 фиксируют отсутствие
+  совместных данных, полного notice/метрологического контроля и интеграции органа.
+- Добавлены 19 физических/данных тестов, повторение результатов по seed,
+  SHA256 manifest, русские отчёт/матрица/состояние. CI включает обе новые проверки.
+- Зафиксированы numpy/matplotlib среды расчёта; workflow Python3.12.
+- При разработке найдены и исправлены неполный учёт фонового обмена sprint
+  и ненормированная скорость в convection scaling; добавлен сквозной баланс энергии.
+- Все исходные Foundation bytes, прежние отрицательные результаты и NO_GO сохранены.
+  Полная физиологическая калибровка и биологическая validation не заявлены.
