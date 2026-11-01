@@ -26,10 +26,26 @@ for name in ['findings','negative_results']:
 for e in datas.get('hypotheses',[]):
     for ref in e.get('related_experiments',[]):
         if ref not in all_ids:problems.append(f'bad exp ref {ref}')
-if any(e.get('verification')!='not_independently_checked' for e in datas.get('sources',[])):
-    print('INFO: independently verified source(s) present; ensure check reports exist')
+for s in datas.get('sources',[]):
+    v=s.get('verification')
+    if v not in ('not_independently_checked','metadata_and_scope_checked_only','externally_verified'):
+        problems.append(f'unsupported source verification status for {s["id"]}: {v}')
+    if v=='metadata_and_scope_checked_only' and not (ROOT/'audits/2026-11-01_sources.md').is_file():
+        problems.append('metadata audit report missing')
+    if v=='metadata_and_scope_checked_only' and not s.get('audit_2026_11_01'):
+        problems.append(f'source metadata audit record missing {s["id"]}')
+    if v=='metadata_and_scope_checked_only':
+        report_path=ROOT/'audits/2026-11-01_sources.md'
+        if report_path.is_file() and report_path.read_text('utf-8').count('| '+s['id']+' |') != 1:
+            problems.append(f'source must occur once in audit table: {s["id"]}')
+    if v=='externally_verified' and not s.get('external_provenance'):
+        problems.append(f'externally verified source missing evidence: {s["id"]}')
 try: manifest=json.loads((ROOT/'provenance/import_manifest.json').read_text('utf-8'))
 except Exception as e:problems.append('missing manifest: '+str(e));manifest=[]
+if len(manifest)!=13 or len({e['path'] for e in manifest})!=13:
+    problems.append('expected 13 distinct imported artifacts')
+if {s['id'] for s in datas.get('sources',[])} != {f'SRC-{i:04d}' for i in range(1,22)}:
+    problems.append('expected original 21 source identifiers')
 for entry in manifest:
     p=ROOT/entry['path']
     if not p.is_file():problems.append(f'manifest file missing: {p}');continue

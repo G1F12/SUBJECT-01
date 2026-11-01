@@ -12,5 +12,12 @@
     "experiment_id": "EXP-0005",
     "claim": "No evidence established that hypothetical 100 ms aggregate latency is achieved by an augmentation system.",
     "context": "Not evidence of impossibility; does not justify a positive efficacy claim."
+  },
+  {
+    "id": "NEG-0003",
+    "status": "model_counterexample",
+    "experiment_id": "EXP-0004",
+    "claim": "At assumed CaO2=0.200 L/L, extraction-only 50% and 100% oxygen-uptake gains are impossible without changing Q or oxygen content.",
+    "context": "Conditional mass-balance constraint; CaO2 is an assumed illustration, not an absolute biological universal."
   }
 ]

@@ -7,8 +7,20 @@
     "reported_area": "muscles",
     "reported_evidence_type": "systematic_review",
     "reported_key_result": "Specific tension estimated 26.8 N/cm2; IQR 20-43; methodological variation",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Persad et al., Specific tension of human muscle in vivo: a systematic review",
+      "year": "2024",
+      "scope_note": "26.8 N/cm2 is a synthesis, not a universal physiological ceiling; human estimates span 2-73 N/cm2.",
+      "source_locator": "https://doi.org/10.1152/japplphysiol.00296.2024",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39169839/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0002",
@@ -18,8 +30,20 @@
     "reported_area": "tissue_engineering",
     "reported_evidence_type": "lab_experiment",
     "reported_key_result": "Tri-culture construct +43% contractile force vs comparator; not human strength improvement",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Kim et al., Tri-culture of spatially organizing human skeletal muscle cells, endothelial cells, and fibroblasts enhances contractile force and vascular perfusion of skeletal muscle tissues",
+      "year": "2022",
+      "scope_note": "+43% force applies to an in-vitro engineered construct vs comparator, not a 43% human strength increase.",
+      "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12166285/",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/35838893/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0003",
@@ -29,8 +53,20 @@
     "reported_area": "tissue_engineering",
     "reported_evidence_type": "review",
     "reported_key_result": "Stable jointly perfusable innervated muscle remains unresolved",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Wang et al., Manufacturing, Cell Regulation, and Coculture Strategies for Vascularization and Neural Innervation of Skeletal Muscle Tissue",
+      "year": "2026",
+      "scope_note": "A review of engineering challenges, not a quantitative demonstration of a human-integrated perfused and innervated muscle.",
+      "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13568890/",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "partial: PMC figure 5 correction dated 2026-08-17 observed; comprehensive check not completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/42596108/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0004",
@@ -40,8 +76,20 @@
     "reported_area": "tissue_engineering",
     "reported_evidence_type": "review",
     "reported_key_result": "Typical oxygen diffusion limit order 100-200 um; depends on consumption",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Rademakers et al., Oxygen and nutrient delivery in tissue engineering: Approaches to graft vascularization",
+      "year": "2019",
+      "scope_note": "~100-200 um is context-dependent oxygen diffusion scale; not a prescriptive vascular channel spacing.",
+      "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6852121/",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/31310055/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0005",
@@ -51,8 +99,20 @@
     "reported_area": "thermoregulation",
     "reported_evidence_type": "review",
     "reported_key_result": "Most exercise metabolic energy dissipates as heat; task-dependent",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Cramer et al., Human temperature regulation under heat stress in health, disease, and injury",
+      "year": "2022",
+      "scope_note": "Thermoregulation review, no validation of project heat-loss coefficients or heat-capacity assumption.",
+      "source_locator": "https://doi.org/10.1152/physrev.00047.2021",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/35679471/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0006",
@@ -62,8 +122,20 @@
     "reported_area": "thermoregulation",
     "reported_evidence_type": "review",
     "reported_key_result": "Typical measured mechanical efficiency range for selected exercise modes",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "claim_source_mismatch",
+      "verified_title": "Periard et al., Exercise under heat stress: thermoregulation, hydration, performance implications, and mitigation strategies",
+      "year": "2021",
+      "scope_note": "Article is about exercise heat stress and hydration; not the direct cited source for an exercise-mode mechanical-efficiency range.",
+      "source_locator": "https://doi.org/10.1152/physrev.00038.2020",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/33829868/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0007",
@@ -73,8 +145,20 @@
     "reported_area": "genome_editing",
     "reported_evidence_type": "clinical_case",
     "reported_key_result": "Personalized base editing with short follow-up; not healthy enhancement",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease",
+      "year": "2025",
+      "scope_note": "One infant treatment case with short follow-up: disease correction, not healthy augmentation; no long-term safety inference.",
+      "source_locator": "https://doi.org/10.1056/NEJMoa2504747",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/40373211/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0008",
@@ -84,8 +168,18 @@
     "reported_area": "genome_editing",
     "reported_evidence_type": "regulatory_record",
     "reported_key_result": "FDA-approved ex vivo treatment; not general enhancement",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "FDA CASGEVY regulatory product listing",
+      "year": "2023-2026",
+      "scope_note": "FDA indication concerns sickle cell disease and transfusion-dependent beta-thalassemia, not general enhancement; page includes updates through 2026.",
+      "source_locator": "https://www.fda.gov/vaccines-blood-biologics/casgevy",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed"
+    }
   },
   {
     "id": "SRC-0009",
@@ -95,8 +189,20 @@
     "reported_area": "neuroengineering",
     "reported_evidence_type": "clinical_study",
     "reported_key_result": "Implant translated neural signals into voice",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Wairagkar et al., An instantaneous voice-synthesis neuroprosthesis",
+      "year": "2025",
+      "scope_note": "Speech restoration in a participant with ALS; no direct evidence of superior healthy-human cognitive performance.",
+      "source_locator": "https://doi.org/10.1038/s41586-025-09127-3",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/40506548/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0010",
@@ -106,8 +212,20 @@
     "reported_area": "neuroengineering",
     "reported_evidence_type": "clinical_study",
     "reported_key_result": "80 ms neural decoding increments for synthesized speech; not human reaction latency",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "A streaming brain-to-voice neuroprosthesis to restore naturalistic communication",
+      "year": "2025",
+      "scope_note": "80-ms decoder increments are not stimulus-to-movement reaction times.",
+      "source_locator": "https://doi.org/10.1038/s41593-025-01905-6",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/40164740/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0011",
@@ -117,8 +235,21 @@
     "reported_area": "vision",
     "reported_evidence_type": "clinical_study",
     "reported_key_result": "PRIMA: 26/32 completers improved 12-month clinically meaningful vision",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "material_omission",
+      "verified_title": "Holz et al., Subretinal Photovoltaic Implant to Restore Vision in Geographic Atrophy Due to AMD",
+      "year": "2025",
+      "scope_note": "26/32 12-month completers improved; 38 implanted, 6 not assessed, and 26 serious adverse events in 19 participants were reported. Uses external glasses.",
+      "source_locator": "https://doi.org/10.1056/NEJMoa2501396",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/41124203/",
+      "integration_check_date": "2026-11-01",
+      "publication_date_note": "Online 2025-10-20; journal issue 2026."
+    }
   },
   {
     "id": "SRC-0012",
@@ -128,8 +259,21 @@
     "reported_area": "hearing",
     "reported_evidence_type": "clinical_study",
     "reported_key_result": "DB-OTO 9/12 met threshold endpoint; restoration rather than enhanced healthy hearing",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Valayannopoulos et al., DB-OTO Gene Therapy for Inherited Deafness",
+      "year": "2025",
+      "scope_note": "9/12 met week-24 hearing endpoints; open-label single-group, disease restoration; 67 adverse events occurred/worsened.",
+      "source_locator": "https://doi.org/10.1056/NEJMoa2400521",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/41085057/",
+      "integration_check_date": "2026-11-01",
+      "publication_date_note": "Online 2025-10-12; journal issue 2026."
+    }
   },
   {
     "id": "SRC-0013",
@@ -139,8 +283,21 @@
     "reported_area": "sensory_augmentation",
     "reported_evidence_type": "framework_with_demonstration",
     "reported_key_result": "Plasticity and new signal integration require functional testing",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "scope_mismatch",
+      "verified_title": "Nardini et al., Towards Human Sensory Augmentation: A Cognitive Neuroscience Framework for Evaluating Integration of New Signals within Perception, Brain Representations, and Subjective Experience",
+      "year": "2024",
+      "scope_note": "Human testbed includes wearable cue systems; no internally integrated new sensory organ demonstrated.",
+      "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11533871/",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39497728/",
+      "integration_check_date": "2026-11-01",
+      "publication_date_note": "First publication 2024-10-28; indexed journal year 2025."
+    }
   },
   {
     "id": "SRC-0014",
@@ -150,8 +307,20 @@
     "reported_area": "aging",
     "reported_evidence_type": "systematic_review",
     "reported_key_result": "15 trials 4656 people; exercise evidence; limited support other interventions",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "scope_mismatch",
+      "verified_title": "Interventions that prolong multidimensional healthspan in humans: a systematic review of randomized controlled trials",
+      "year": "2026",
+      "scope_note": "15 articles and 4656 people; outcomes are intrinsic capacity/quality of life, not measured increase in lifespan.",
+      "source_locator": "https://doi.org/10.1093/gerona/glag133",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/42172592/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0015",
@@ -161,8 +330,20 @@
     "reported_area": "aging",
     "reported_evidence_type": "systematic_review",
     "reported_key_result": "Senolytic evidence preliminary with insufficient clinical efficacy and long-term safety",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Trivedi et al., Therapeutic reversal of cellular senescence: A systematic review of senolytics, senomorphics and anti-ageing therapies in human clinical trials",
+      "year": "2026",
+      "scope_note": "Six completed small clinical studies; clinically definitive benefit and long-term safety not established.",
+      "source_locator": "https://pubmed.ncbi.nlm.nih.gov/42834340/",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/42834340/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0016",
@@ -172,8 +353,21 @@
     "reported_area": "genomics",
     "reported_evidence_type": "review",
     "reported_key_result": "Pleiotropy pervasive; association not causal trait-specific editing target",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Jee et al., Dissecting pleiotropy to gain mechanistic insights into human disease",
+      "year": "2025",
+      "scope_note": "Methodological review on genetic pleiotropy, not gene-editing efficacy or a validated enhancement target.",
+      "source_locator": "https://doi.org/10.1038/s41576-025-00908-0",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/41315867/",
+      "integration_check_date": "2026-11-01",
+      "publication_date_note": "Online 2025-11-28; journal issue 2026."
+    }
   },
   {
     "id": "SRC-0017",
@@ -183,8 +377,20 @@
     "reported_area": "neuroengineering",
     "reported_evidence_type": "systematic_review",
     "reported_key_result": "tDCS may enhance practice-related motor learning; generalization uncertain",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Kvistad et al., Effects of concurrent transcranial direct current stimulation on human motor skill learning: A systematic review and Bayesian meta-analysis",
+      "year": "2026",
+      "scope_note": "Evidence concerns concurrent tDCS and task-specific motor learning, not a universal gain in reaction speed.",
+      "source_locator": "https://doi.org/10.1016/j.bbr.2026.116378",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/42463027/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0018",
@@ -194,8 +400,20 @@
     "reported_area": "energy",
     "reported_evidence_type": "physiology_experiment",
     "reported_key_result": "Leg cycling gross efficiency varies with workload; not transferable to sprinting",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "claim_source_mismatch",
+      "verified_title": "Duong et al., Leg cycling efficiency is unaltered in healthy aging regardless of sex or training status",
+      "year": "2024",
+      "scope_note": "Primary conclusion is no efficiency alteration across aging/training/sex groups; original description omits primary question and overgeneralizes to workload effects.",
+      "source_locator": "https://doi.org/10.1152/japplphysiol.00393.2024",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39088644/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0019",
@@ -205,8 +423,20 @@
     "reported_area": "cognition",
     "reported_evidence_type": "meta_analysis",
     "reported_key_result": "Sleep restriction impairs memory formation; effect small rather than superhuman enhancement",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Crowley et al., A systematic and meta-analytic review of the impact of sleep restriction on memory formation",
+      "year": "2024",
+      "scope_note": "Sleep restriction harms memory; no quantified augmentation beyond rested baseline.",
+      "source_locator": "https://doi.org/10.1016/j.neubiorev.2024.105929",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/39427809/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0020",
@@ -216,8 +446,20 @@
     "reported_area": "cognition",
     "reported_evidence_type": "meta_analysis",
     "reported_key_result": "tRNS pooled cognitive effect small and non-significant g=0.17 CI -0.06 to 0.40",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "Chen et al., Effects of Transcranial Random Noise Stimulation On Cognitive Functions in Healthy Adults: Evidence From A Systematic Review And Meta-analysis",
+      "year": "2026",
+      "scope_note": "13 RCTs/403 participants; overall g=0.17 [−0.06,0.40], p=.145, not significant.",
+      "source_locator": "https://doi.org/10.3791/70542",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed",
+      "integration_check_locator": "https://pubmed.ncbi.nlm.nih.gov/42224104/",
+      "integration_check_date": "2026-11-01"
+    }
   },
   {
     "id": "SRC-0021",
@@ -227,7 +469,17 @@
     "reported_area": "sensation",
     "reported_evidence_type": "NIH_research_summary",
     "reported_key_result": "Brain microstimulation evokes touch sensations; not novel healthy sense",
-    "verification": "not_independently_checked",
-    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv",
+    "audit_2026_11_01": {
+      "level": "bibliography_and_accessible_abstract_or_summary",
+      "verdict": "supported_with_caveat",
+      "verified_title": "NIH Research Matters: Creating an artificial sense of touch",
+      "year": "2025",
+      "scope_note": "NIH secondary summary of experimental brain microstimulation in people with spinal cord injury; not a demonstration of a new internal healthy-human sense.",
+      "source_locator": "https://www.nih.gov/news-events/nih-research-matters/creating-artificial-sense-touch",
+      "full_text_systematic_review": "not_completed",
+      "retraction_correction_check": "not_completed"
+    }
   }
 ]

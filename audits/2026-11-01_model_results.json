@@ -1,0 +1,20 @@
+{
+  "audit": "2026-11-01 independently reconstructed CSV formulas",
+  "rows_checked": 45,
+  "arithmetics": "PASS",
+  "conditional_CaO2_L_per_L": 0.2,
+  "fick_extraction_only_unphysical_gain_pct": [
+    50,
+    100
+  ],
+  "fick_extraction_only_near_or_beyond_bound_gain_pct": [
+    30,
+    50,
+    100
+  ],
+  "caveats": [
+    "CaO2 is an explicit assumed comparator, not a hard universal value",
+    "Original synthetic parameter sweeps not calibrated to human physiology",
+    "Cannot interpret arithmetic PASS as efficacy or safe enhancement"
+  ]
+}
