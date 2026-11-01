@@ -1,0 +1,55 @@
+[
+  {
+    "id": "HYP-0001",
+    "title": "Co-designed muscle–tendon–bone architecture",
+    "status": "unverified",
+    "scope": "integrated biological or internal bioengineered augmentation",
+    "test": "Quantify joint moment after strength, stress, fatigue, mass and safety constraints",
+    "related_experiments": [
+      "EXP-0001"
+    ],
+    "claim_level": "hypothesis"
+  },
+  {
+    "id": "HYP-0002",
+    "title": "Predictive sensorimotor architecture",
+    "status": "unverified",
+    "scope": "sensory prediction plus motor execution",
+    "test": "Test latency-accuracy tradeoff on unexpected events with controlled tasks",
+    "related_experiments": [
+      "EXP-0005"
+    ],
+    "claim_level": "hypothesis"
+  },
+  {
+    "id": "HYP-0003",
+    "title": "Novel internally integrated sensory modalities",
+    "status": "unverified",
+    "scope": "new physical transducers and neural coding",
+    "test": "Demonstrate useful information transfer and discrimination distinct from ordinary cues",
+    "related_experiments": [],
+    "claim_level": "hypothesis"
+  },
+  {
+    "id": "HYP-0004",
+    "title": "Integrated energy–oxygen–thermal optimization",
+    "status": "unverified",
+    "scope": "whole-body energy transport and heat",
+    "test": "Constrain continuous usable power with simultaneous oxygen and thermoregulation budgets",
+    "related_experiments": [
+      "EXP-0002",
+      "EXP-0003",
+      "EXP-0004"
+    ],
+    "claim_level": "hypothesis"
+  },
+  {
+    "id": "HYP-0005",
+    "title": "Regeneration and long-term maintenance system",
+    "status": "unverified",
+    "scope": "tissue repair, immune and tumor surveillance",
+    "test": "Assess evidence for long-term recovery and comparative harm rates",
+    "related_experiments": [],
+    "claim_level": "hypothesis"
+  }
+]

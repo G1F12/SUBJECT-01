@@ -1,0 +1,4 @@
+target_speed_m_s,mass_kg,kinetic_energy_J,drag_power_at_speed_W,minimum_avg_external_power_during_2s_accel_W,minimum_peak_external_power_at_end_of_2s_accel_W,caveat
+9.0,75.0,3037.5,218.7,1573.42,3256.2,"excludes running internal work, ground losses and biomechanics"
+12.0,75.0,5400.0,518.4,2829.6,5918.4,"excludes running internal work, ground losses and biomechanics"
+15.0,75.0,8437.5,1012.5,4471.88,9450.0,"excludes running internal work, ground losses and biomechanics"

@@ -1,0 +1,22 @@
+source_id,publication_date,area,evidence_type,clinical_setting,key_result_or_critical_scope,url
+S01,2024-10,muscles,systematic_review,healthy_human,"Specific tension estimated 26.8 N/cm2; IQR 20-43; methodological variation",https://doi.org/10.1152/japplphysiol.00296.2024
+S02,2022,tissue_engineering,lab_experiment,engineered_human_cells,"Tri-culture construct +43% contractile force vs comparator; not human strength improvement",https://pmc.ncbi.nlm.nih.gov/articles/PMC12166285/
+S03,2026,tissue_engineering,review,preclinical,"Stable jointly perfusable innervated muscle remains unresolved",https://pmc.ncbi.nlm.nih.gov/articles/PMC13568890/
+S04,2019,tissue_engineering,review,preclinical,"Typical oxygen diffusion limit order 100-200 um; depends on consumption",https://pmc.ncbi.nlm.nih.gov/articles/PMC6852121/
+S05,2022,thermoregulation,review,human,"Most exercise metabolic energy dissipates as heat; task-dependent",https://doi.org/10.1152/physrev.00047.2021
+S06,2021,thermoregulation,review,human,"Typical measured mechanical efficiency range for selected exercise modes",https://doi.org/10.1152/physrev.00038.2020
+S07,2025-05-15,genome_editing,clinical_case,diseased_infant,"Personalized base editing with short follow-up; not healthy enhancement",https://doi.org/10.1056/NEJMoa2504747
+S08,2026,genome_editing,regulatory_record,genetic_disease,"FDA-approved ex vivo treatment; not general enhancement",https://www.fda.gov/vaccines-blood-biologics/casgevy
+S09,2025,neuroengineering,clinical_study,paralysis_communication,"Implant translated neural signals into voice",https://doi.org/10.1038/s41586-025-09127-3
+S10,2025-03-31,neuroengineering,clinical_study,paralysis_communication,"80 ms neural decoding increments for synthesized speech; not human reaction latency",https://doi.org/10.1038/s41593-025-01905-6
+S11,2025,vision,clinical_study,AMD_patients,"PRIMA: 26/32 completers improved 12-month clinically meaningful vision",https://doi.org/10.1056/NEJMoa2501396
+S12,2025-10-12,hearing,clinical_study,OTOF_deficiency,"DB-OTO 9/12 met threshold endpoint; restoration rather than enhanced healthy hearing",https://doi.org/10.1056/NEJMoa2400521
+S13,2024,sensory_augmentation,framework_with_demonstration,healthy_volunteers,"Plasticity and new signal integration require functional testing",https://pmc.ncbi.nlm.nih.gov/articles/PMC11533871/
+S14,2026-05-22,aging,systematic_review,human_RCT,"15 trials 4656 people; exercise evidence; limited support other interventions",https://doi.org/10.1093/gerona/glag133
+S15,2026,aging,systematic_review,human_clinical_trials,"Senolytic evidence preliminary with insufficient clinical efficacy and long-term safety",https://pubmed.ncbi.nlm.nih.gov/42834340/
+S16,2025-11-28,genomics,review,complex_human_genetic_traits,"Pleiotropy pervasive; association not causal trait-specific editing target",https://doi.org/10.1038/s41576-025-00908-0
+S17,2026-07-16,neuroengineering,systematic_review,motor_learning,"tDCS may enhance practice-related motor learning; generalization uncertain",https://doi.org/10.1016/j.bbr.2026.116378
+S18,2024,energy,physiology_experiment,healthy_adults,"Leg cycling gross efficiency varies with workload; not transferable to sprinting",https://doi.org/10.1152/japplphysiol.00393.2024
+S19,2024-12,cognition,meta_analysis,healthy_people,"Sleep restriction impairs memory formation; effect small rather than superhuman enhancement",https://doi.org/10.1016/j.neubiorev.2024.105929
+S20,2026-05-15,cognition,meta_analysis,healthy_people,"tRNS pooled cognitive effect small and non-significant g=0.17 CI -0.06 to 0.40",https://doi.org/10.3791/70542
+S21,2025-02-25,sensation,NIH_research_summary,spinal_cord_injury,"Brain microstimulation evokes touch sensations; not novel healthy sense",https://www.nih.gov/news-events/nih-research-matters/creating-artificial-sense-touch

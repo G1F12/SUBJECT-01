@@ -1,0 +1,102 @@
+[
+  {
+    "id": "EXP-0001",
+    "title": "muscle_force + tendon_capacity",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "F = sigma*PCSA; F_system/F0=min(1+g_muscle,tendon_capacity_ratio)",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/muscle_force.csv",
+      "research/foundation_2026_11_01/tendon_bottleneck.csv",
+      "research/foundation_2026_11_01/force_tendon_constraints.png"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "Synthetic PCSA/tendon capacity; no person-specific measurement",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0002",
+    "title": "sprint energy and drag lower-bound",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "E=m*v^2/2; constant acceleration power + aerodynamic drag",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/sprint_energy.csv",
+      "research/foundation_2026_11_01/speed_constraints.png"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "Excludes contact mechanics, limb internal work and ground losses",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0003",
+    "title": "thermal energy budget",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "P_met=P_mech/efficiency; P_heat=P_met-P_mech",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/heat_budget.csv",
+      "research/foundation_2026_11_01/thermal_constraints.png"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "No individual thermal physiology, sweating or environment",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0004",
+    "title": "oxygen delivery by Fick principle",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "VO2=Q*(CaO2-CvO2)",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/oxygen_fick.csv"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "No dynamic cardiovascular constraint validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0005",
+    "title": "illustrative reaction delay budget",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "sum of sensory/central/neural/motor latencies",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/reaction_budget.csv"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "Latency terms hypothetical, not calibrated on humans",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0006",
+    "title": "idealized vascular diffusion geometry",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-01",
+    "model": "research/foundation_2026_11_01/model.py",
+    "method": "square grid: L_max=sqrt(2)*r",
+    "inputs": "research/foundation_2026_11_01/model.py",
+    "outputs": [
+      "research/foundation_2026_11_01/diffusion_grid.csv"
+    ],
+    "report": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "reproduction_command": "python tools/reproduce_foundation.py",
+    "limits": "Not a capillary density prescription; no perfusion/consumption model",
+    "external_validation": "not_done"
+  }
+]

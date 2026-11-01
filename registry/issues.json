@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ISS-0001",
+    "status": "open",
+    "severity": "critical",
+    "title": "No verified durable remote repository",
+    "impact": "Local sandbox repository will not automatically synchronize across chats or devices",
+    "next_action": "Select a private remote and upload or push canonical Git history"
+  },
+  {
+    "id": "ISS-0002",
+    "status": "open",
+    "severity": "high",
+    "title": "Verify bibliographic metadata and full-text evidence",
+    "impact": "21 imported source claims must not be treated as independently confirmed",
+    "next_action": "Check DOI, publication year, design, data and applicability; correct with provenance retained"
+  },
+  {
+    "id": "ISS-0003",
+    "status": "open",
+    "severity": "high",
+    "title": "Foundation model lacks calibrated biological validation",
+    "impact": "Arithmetic PASS is not experimentally observed enhancement",
+    "next_action": "Fit/validate against independent human measurements and quantify uncertainty"
+  },
+  {
+    "id": "ISS-0004",
+    "status": "open",
+    "severity": "medium",
+    "title": "Historical SUBJECT-01 results not yet deduplicated/imported",
+    "impact": "Prior A/B/C and genetics studies not available as validated files in this repository",
+    "next_action": "Import only after receiving provenance files; assign crosswalk IDs and audit legacy duplicates"
+  },
+  {
+    "id": "ISS-0005",
+    "status": "open",
+    "severity": "medium",
+    "title": "No independent cross-model review",
+    "impact": "Foundation has not been critically audited by Sol or Argon 4",
+    "next_action": "Review claims independently, record reviewer provenance and resolve contradictory conclusions"
+  }
+]

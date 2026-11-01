@@ -1,0 +1,3 @@
+scenario,sensory_detection_ms,central_processing_ms,neural_delivery_ms,motor_execution_ms,total_latency_ms,moving_object_distance_at_10m_s_m
+reference_hypothetical,45.0,65.0,20.0,60.0,190.0,1.9
+optimized_hypothetical,20.0,40.0,10.0,30.0,100.0,1.0

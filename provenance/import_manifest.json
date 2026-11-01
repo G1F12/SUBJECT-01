@@ -1,0 +1,80 @@
+[
+  {
+    "path": "research/foundation_2026_11_01/FOUNDATION_REPORT.md",
+    "sha256": "29bf866f66cb709830d45bebfba3afdbf606c600ac5aa6c8df205623c07955fe",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/diffusion_grid.csv",
+    "sha256": "c8622de8312f990a1c348a3b7910c73a3fa457b5ae678fa689c7cb704d5a88dd",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/force_tendon_constraints.png",
+    "sha256": "ae59afae580937621c8f971336de4e868b0f5550839b1c1a401d6ac7ac59fd83",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/heat_budget.csv",
+    "sha256": "b22bd9b5f7bd34720e9c7f4cb48d24bec6e3cb6e2f7544d9bf7f04e395f19652",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/literature_register.csv",
+    "sha256": "6a047c4c0caa783b4f6fa09f9726edd498050d286820bb73dd3365e59294cf78",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/model.py",
+    "sha256": "6eb173a2f14f09cd279d8be3cdfe67436a1d69672a576c3a6cf2cbe3419ac276",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/muscle_force.csv",
+    "sha256": "a4a1cc7c8e75bc450e978187f300469be93d627d4c8ac8560ecaa95d9a68c241",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/oxygen_fick.csv",
+    "sha256": "17af63599259168911a3727a5b9b5221c9d5cc1db45011752446a9d4059a9867",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/reaction_budget.csv",
+    "sha256": "5a8602a5eda4f35111a5e8704842006350d49deac5610d6f9ba063ca65cba4ec",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/speed_constraints.png",
+    "sha256": "63d2991e19172c803c9e65be059351f4049b1d3caf92b9e9253bcb9733413c69",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/sprint_energy.csv",
+    "sha256": "2bb7eaf3070552bd8fc9abd4b6f7dd53509ad1ec9b855c95f14518235340059a",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/tendon_bottleneck.csv",
+    "sha256": "189bc9192e5153ceffca66ac7d8adaf1a2f2bf4cbd156a2f750ae7c016358360",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  },
+  {
+    "path": "research/foundation_2026_11_01/thermal_constraints.png",
+    "sha256": "052b196ac4475e20bb4fa8b1ec469da69cc556aeada143f42ff2415be90c179e",
+    "origin": "SUBJECT01_FOUNDATION_20261101 (existing conversation files)",
+    "imported": "2026-11-01"
+  }
+]

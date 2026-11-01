@@ -1,0 +1,4 @@
+max_distance_to_perfused_vessel_um,max_square_grid_spacing_mm,idealized_vascular_tracks_per_cm2
+100,0.1414,5000
+150,0.2121,2222
+200,0.2828,1250

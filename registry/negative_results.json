@@ -1,0 +1,16 @@
+[
+  {
+    "id": "NEG-0001",
+    "status": "model_counterexample",
+    "experiment_id": "EXP-0001",
+    "claim": "Isolated muscle force increase does not necessarily yield equal functional force increase when load-transmission capacity is limiting.",
+    "context": "Conditional mathematical counterexample; not a biological experimental null result."
+  },
+  {
+    "id": "NEG-0002",
+    "status": "missing_evidence",
+    "experiment_id": "EXP-0005",
+    "claim": "No evidence established that hypothetical 100 ms aggregate latency is achieved by an augmentation system.",
+    "context": "Not evidence of impossibility; does not justify a positive efficacy claim."
+  }
+]

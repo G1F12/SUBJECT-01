@@ -1,0 +1,233 @@
+[
+  {
+    "id": "SRC-0001",
+    "legacy_id": "S01",
+    "url": "https://doi.org/10.1152/japplphysiol.00296.2024",
+    "reported_publication_date": "2024-10",
+    "reported_area": "muscles",
+    "reported_evidence_type": "systematic_review",
+    "reported_key_result": "Specific tension estimated 26.8 N/cm2; IQR 20-43; methodological variation",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0002",
+    "legacy_id": "S02",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12166285/",
+    "reported_publication_date": "2022",
+    "reported_area": "tissue_engineering",
+    "reported_evidence_type": "lab_experiment",
+    "reported_key_result": "Tri-culture construct +43% contractile force vs comparator; not human strength improvement",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0003",
+    "legacy_id": "S03",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13568890/",
+    "reported_publication_date": "2026",
+    "reported_area": "tissue_engineering",
+    "reported_evidence_type": "review",
+    "reported_key_result": "Stable jointly perfusable innervated muscle remains unresolved",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0004",
+    "legacy_id": "S04",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6852121/",
+    "reported_publication_date": "2019",
+    "reported_area": "tissue_engineering",
+    "reported_evidence_type": "review",
+    "reported_key_result": "Typical oxygen diffusion limit order 100-200 um; depends on consumption",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0005",
+    "legacy_id": "S05",
+    "url": "https://doi.org/10.1152/physrev.00047.2021",
+    "reported_publication_date": "2022",
+    "reported_area": "thermoregulation",
+    "reported_evidence_type": "review",
+    "reported_key_result": "Most exercise metabolic energy dissipates as heat; task-dependent",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0006",
+    "legacy_id": "S06",
+    "url": "https://doi.org/10.1152/physrev.00038.2020",
+    "reported_publication_date": "2021",
+    "reported_area": "thermoregulation",
+    "reported_evidence_type": "review",
+    "reported_key_result": "Typical measured mechanical efficiency range for selected exercise modes",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0007",
+    "legacy_id": "S07",
+    "url": "https://doi.org/10.1056/NEJMoa2504747",
+    "reported_publication_date": "2025-05-15",
+    "reported_area": "genome_editing",
+    "reported_evidence_type": "clinical_case",
+    "reported_key_result": "Personalized base editing with short follow-up; not healthy enhancement",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0008",
+    "legacy_id": "S08",
+    "url": "https://www.fda.gov/vaccines-blood-biologics/casgevy",
+    "reported_publication_date": "2026",
+    "reported_area": "genome_editing",
+    "reported_evidence_type": "regulatory_record",
+    "reported_key_result": "FDA-approved ex vivo treatment; not general enhancement",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0009",
+    "legacy_id": "S09",
+    "url": "https://doi.org/10.1038/s41586-025-09127-3",
+    "reported_publication_date": "2025",
+    "reported_area": "neuroengineering",
+    "reported_evidence_type": "clinical_study",
+    "reported_key_result": "Implant translated neural signals into voice",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0010",
+    "legacy_id": "S10",
+    "url": "https://doi.org/10.1038/s41593-025-01905-6",
+    "reported_publication_date": "2025-03-31",
+    "reported_area": "neuroengineering",
+    "reported_evidence_type": "clinical_study",
+    "reported_key_result": "80 ms neural decoding increments for synthesized speech; not human reaction latency",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0011",
+    "legacy_id": "S11",
+    "url": "https://doi.org/10.1056/NEJMoa2501396",
+    "reported_publication_date": "2025",
+    "reported_area": "vision",
+    "reported_evidence_type": "clinical_study",
+    "reported_key_result": "PRIMA: 26/32 completers improved 12-month clinically meaningful vision",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0012",
+    "legacy_id": "S12",
+    "url": "https://doi.org/10.1056/NEJMoa2400521",
+    "reported_publication_date": "2025-10-12",
+    "reported_area": "hearing",
+    "reported_evidence_type": "clinical_study",
+    "reported_key_result": "DB-OTO 9/12 met threshold endpoint; restoration rather than enhanced healthy hearing",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0013",
+    "legacy_id": "S13",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11533871/",
+    "reported_publication_date": "2024",
+    "reported_area": "sensory_augmentation",
+    "reported_evidence_type": "framework_with_demonstration",
+    "reported_key_result": "Plasticity and new signal integration require functional testing",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0014",
+    "legacy_id": "S14",
+    "url": "https://doi.org/10.1093/gerona/glag133",
+    "reported_publication_date": "2026-05-22",
+    "reported_area": "aging",
+    "reported_evidence_type": "systematic_review",
+    "reported_key_result": "15 trials 4656 people; exercise evidence; limited support other interventions",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0015",
+    "legacy_id": "S15",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42834340/",
+    "reported_publication_date": "2026",
+    "reported_area": "aging",
+    "reported_evidence_type": "systematic_review",
+    "reported_key_result": "Senolytic evidence preliminary with insufficient clinical efficacy and long-term safety",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0016",
+    "legacy_id": "S16",
+    "url": "https://doi.org/10.1038/s41576-025-00908-0",
+    "reported_publication_date": "2025-11-28",
+    "reported_area": "genomics",
+    "reported_evidence_type": "review",
+    "reported_key_result": "Pleiotropy pervasive; association not causal trait-specific editing target",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0017",
+    "legacy_id": "S17",
+    "url": "https://doi.org/10.1016/j.bbr.2026.116378",
+    "reported_publication_date": "2026-07-16",
+    "reported_area": "neuroengineering",
+    "reported_evidence_type": "systematic_review",
+    "reported_key_result": "tDCS may enhance practice-related motor learning; generalization uncertain",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0018",
+    "legacy_id": "S18",
+    "url": "https://doi.org/10.1152/japplphysiol.00393.2024",
+    "reported_publication_date": "2024",
+    "reported_area": "energy",
+    "reported_evidence_type": "physiology_experiment",
+    "reported_key_result": "Leg cycling gross efficiency varies with workload; not transferable to sprinting",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0019",
+    "legacy_id": "S19",
+    "url": "https://doi.org/10.1016/j.neubiorev.2024.105929",
+    "reported_publication_date": "2024-12",
+    "reported_area": "cognition",
+    "reported_evidence_type": "meta_analysis",
+    "reported_key_result": "Sleep restriction impairs memory formation; effect small rather than superhuman enhancement",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0020",
+    "legacy_id": "S20",
+    "url": "https://doi.org/10.3791/70542",
+    "reported_publication_date": "2026-05-15",
+    "reported_area": "cognition",
+    "reported_evidence_type": "meta_analysis",
+    "reported_key_result": "tRNS pooled cognitive effect small and non-significant g=0.17 CI -0.06 to 0.40",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  },
+  {
+    "id": "SRC-0021",
+    "legacy_id": "S21",
+    "url": "https://www.nih.gov/news-events/nih-research-matters/creating-artificial-sense-touch",
+    "reported_publication_date": "2025-02-25",
+    "reported_area": "sensation",
+    "reported_evidence_type": "NIH_research_summary",
+    "reported_key_result": "Brain microstimulation evokes touch sensations; not novel healthy sense",
+    "verification": "not_independently_checked",
+    "source_file": "research/foundation_2026_11_01/literature_register.csv"
+  }
+]

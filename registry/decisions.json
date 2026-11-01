@@ -1,0 +1,30 @@
+[
+  {
+    "id": "DEC-0001",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "One Git research repository is canonical; one state file and explicit registries; no new archive or release per study.",
+    "basis": "User governance directive 2026-11-01"
+  },
+  {
+    "id": "DEC-0002",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "Foundation 1.0 imported as a legacy computational baseline; calculations do not validate biological efficacy or safety.",
+    "basis": "Code reproduction and source report caveats"
+  },
+  {
+    "id": "DEC-0003",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "Imported sources remain provenance-only until independent bibliographic audit; no imported literature claim designated independently confirmed.",
+    "basis": "Source CSV metadata has not been independently audited in this bootstrap"
+  },
+  {
+    "id": "DEC-0004",
+    "date": "2026-11-01",
+    "status": "adopted",
+    "decision": "No remote publication; portable Git bundle is initialization handoff until a user-controlled durable private remote is attached.",
+    "basis": "Connected GitHub repository listing returned no accessible repositories"
+  }
+]

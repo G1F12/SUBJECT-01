@@ -1,0 +1,6 @@
+VO2_requested_gain_pct,baseline_VO2_L_min,target_VO2_L_min,cardiac_output_needed_if_extraction_constant_L_min,extraction_needed_if_cardiac_output_constant_L_L
+0,3.75,3.75,25.0,0.15
+20,3.75,4.5,30.0,0.18
+30,3.75,4.875,32.5,0.195
+50,3.75,5.625,37.5,0.225
+100,3.75,7.5,50.0,0.3

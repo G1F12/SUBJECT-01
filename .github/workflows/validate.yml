@@ -1,0 +1,18 @@
+name: Validate research repository
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reproducibility requirements
+        run: pip install -r requirements.txt
+      - name: Structural and hash audit
+        run: python tools/validate_repository.py
+      - name: Recompute baseline CSVs in isolated directory
+        run: python tools/reproduce_foundation.py

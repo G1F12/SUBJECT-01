@@ -1,0 +1,50 @@
+[
+  {
+    "id": "FND-0001",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0001",
+    "claim": "For synthetic PCSA=100 cm^2, sigma=26.8 N/cm^2 implies 2680 N; tendon 1.1x limits muscle-only 1.2x to 1.1x system output.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0002",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0002",
+    "claim": "At m=75 kg, v=15 m/s, t=2 s, lower-bound mean mechanical power ~4472 W and end power 9450 W under the simplified model.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0003",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0003",
+    "claim": "500 W external at 25% assumed efficiency implies 1500 W heat, conditional mean heat loss >=1281.25 W for 0.5 K/600 s heat-storage budget.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0004",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0004",
+    "claim": "Fick scenario Q=25 L/min, delta C=0.15 L/L yields 3.75 L O2/min; at unchanged delta C, +30% requires Q=32.5 L/min.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0005",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0005",
+    "claim": "Hypothetical latency budgets 190 vs 100 ms imply 0.9 m difference in 10 m/s object travel.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0006",
+    "type": "model_calculation",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0006",
+    "claim": "In idealized square grid, r=150 um corresponds to L~0.212 mm, ~2222 channels per cm2 in model geometry.",
+    "external_validation": "not_done"
+  }
+]
