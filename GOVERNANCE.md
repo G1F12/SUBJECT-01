@@ -27,3 +27,15 @@
 ## Source audit policy
 
 Legacy source imports are references with provenance, **not externally verified** evidence; a DOI URL alone is not a verification. Reviews should check publication title, year, design, numeric claim, applicability, conflicts, full text and retraction/correction status.
+
+## Дополнительная обязательная цель TARGET-CPE45
+
+DEC-0007 (02.11.2026): оценка 2700-секундной комплексной работоспособности при
+перемежающейся интенсивной нагрузке и восстановлении дополняет главную цель.
+Спецификация: research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md; CPE45.json.
+Будущие сравнения архитектур обязаны включать самостоятельный CPE45 endpoint
+и post-функцию; отсутствие данных означает not_assessed, а не достижение цели.
+EXP-0001..0010 и их Pareto сохраняются без ретроактивного повышения статуса.
+Интенсивность/пороги требуют научного обоснования; synthetic PASS не empirical
+validation. Разработка динамики — следующая задача ISS-0011, не результат этой
+регистрации. Политика NO_GO и основная цель проекта остаются в силе.

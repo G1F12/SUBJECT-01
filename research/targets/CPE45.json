@@ -1,0 +1,84 @@
+{
+  "target_id": "TARGET-CPE45",
+  "name": "COMBAT-LIKE PERFORMANCE ENDURANCE",
+  "adopted_date": "2026-11-02",
+  "integration_date": "2026-11-03",
+  "status": "adopted_research_requirement",
+  "duration_s": 2700,
+  "relationship_to_main_goal": "additional_mandatory_independent_objective_not_replacement",
+  "load_pattern": "alternating_explosive_and_submaximal_efforts_with_short_recovery",
+  "not_required": "continuous_absolute_maximum_power_for_2700_seconds",
+  "dimensions": [
+    "force",
+    "explosive_power",
+    "speed",
+    "acceleration",
+    "maneuverability",
+    "reaction_latency",
+    "response_accuracy",
+    "coordination",
+    "performance_fatigability",
+    "between_effort_recovery",
+    "post45_function"
+  ],
+  "success_thresholds": null,
+  "intensity_schedule": null,
+  "early_late_windows_s": null,
+  "post45_observation_times_s": null,
+  "physiological_validation": "not_done",
+  "biological_interventions": "NO_GO",
+  "historical_experiments_cpe45_status": "not_assessed",
+  "historical_experiment_ids": [
+    "EXP-0001",
+    "EXP-0002",
+    "EXP-0003",
+    "EXP-0004",
+    "EXP-0005",
+    "EXP-0006",
+    "EXP-0007",
+    "EXP-0008",
+    "EXP-0009",
+    "EXP-0010"
+  ],
+  "optimization": {
+    "independent_objective": true,
+    "aggregation": "vector_no_arbitrary_weighted_score",
+    "directions": {
+      "work_positive_J": "maximize_at_matched_demand",
+      "power_force_speed_retention": "maximize_at_matched_demand",
+      "reaction_latency": "minimize_jointly_with_errors",
+      "accuracy": "maximize",
+      "coordination_and_maneuver_error": "minimize",
+      "recovery": "compare_at_matched_rest_and_load",
+      "post45_function": "retain_separate_vector"
+    },
+    "missing_measurements": "not_assessed_never_feasible_by_default"
+  },
+  "measurement_module": "tools/cpe45.py",
+  "tests": "python -m unittest discover -s tests -p test_cpe45.py",
+  "required_units": {
+    "time_s": "s",
+    "power_W": "W signed external mechanical power",
+    "force_N": "N magnitude",
+    "speed_m_s": "m/s path speed",
+    "acceleration_m_s2": "m/s^2 signed task axis",
+    "coordination_error_m": "m task-defined error",
+    "maneuver_error_m": "m trajectory error",
+    "latency_s": "s stimulus-to-response",
+    "accuracy": "correct/presented including omissions"
+  },
+  "protocol_parameters_required": [
+    "early_end_s",
+    "late_start_s",
+    "max_gap_s",
+    "task_id encoding comparable demands"
+  ],
+  "next_research_task": "dynamic_fatigue_and_recovery_model_over_2700_s",
+  "decision_id": "DEC-0007",
+  "issue_id": "ISS-0011",
+  "source_ids": [
+    "SRC-0029",
+    "SRC-0030",
+    "SRC-0031"
+  ]
+}

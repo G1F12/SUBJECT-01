@@ -1,0 +1,75 @@
+[
+  {
+    "id": "SRC-0029",
+    "title": "Repeated-sprint ability - part I: factors contributing to fatigue.",
+    "authors": "Girard O, Mendez-Villanueva A, Bishop D.",
+    "doi": "10.2165/11590550-000000000-00000",
+    "pmid": "21780851",
+    "year": "2011",
+    "journal": "Sports medicine (Auckland, N.Z.)",
+    "volume": "41",
+    "issue": "8",
+    "pages": "673-694",
+    "accessed": "2026-11-03",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A21780851",
+    "metadata_sha256": "e679b8856ea9b3c82ea5bea05eb4ba12b2c6da8fe717f04bf762b0b61e1ad853",
+    "notice_check": {
+      "europepmc": {
+        "commentCorrection": [
+          {
+            "source": "MED",
+            "id": "22233536",
+            "reference": "Sports Med. 2012 Feb 1;42(2):165-7. doi: 10.2165/11598220-000000000-00000",
+            "type": "Comment in",
+            "orderIn": 1
+          }
+        ]
+      },
+      "crossref_relation": {},
+      "crossref_update_to": []
+    },
+    "review_depth": "библиография и аннотация; не полная оценка качества/ретракций"
+  },
+  {
+    "id": "SRC-0030",
+    "title": "Translating Fatigue to Human Performance.",
+    "authors": "Enoka RM, Duchateau J.",
+    "doi": "10.1249/mss.0000000000000929",
+    "pmid": "27015386",
+    "year": "2016",
+    "journal": "Medicine and science in sports and exercise",
+    "volume": "48",
+    "issue": "11",
+    "pages": "2228-2238",
+    "accessed": "2026-11-03",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=PMCID%3APMC5035715",
+    "metadata_sha256": "cc2af5c88f477a513d82b65ac04d4bcabc1541dce8c26154cd45ba8a757397ea",
+    "notice_check": {
+      "europepmc": {},
+      "crossref_relation": {},
+      "crossref_update_to": []
+    },
+    "review_depth": "библиография, аннотация и целевые полнотекстовые разделы о performance/perceived fatigability"
+  },
+  {
+    "id": "SRC-0031",
+    "title": "The influence of recovery duration on multiple sprint cycling performance.",
+    "authors": "Glaister M, Stone MH, Stewart AM, Hughes M, Moir GL.",
+    "doi": "10.1519/r-16094.1",
+    "pmid": "16331865",
+    "year": "2005",
+    "journal": "Journal of strength and conditioning research",
+    "volume": "19",
+    "issue": "4",
+    "pages": "831-837",
+    "accessed": "2026-11-03",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A16331865",
+    "metadata_sha256": "7c0129279db34007ee61543002f63a177057245f34381b8bc8b3c3a68c3e72cd",
+    "notice_check": {
+      "europepmc": {},
+      "crossref_relation": {},
+      "crossref_update_to": []
+    },
+    "review_depth": "библиография и аннотация; не полная оценка качества/ретракций"
+  }
+]
