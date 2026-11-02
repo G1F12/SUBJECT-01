@@ -40,5 +40,15 @@
     "status": "adopted",
     "decision": "Интегрированная модель — частично калиброванный surrogate ограничений. Условные uplift/сценарные интервалы не являются эффектом вмешательства или популяционным прогнозом. Сохранять отрицательные holdout результаты и исходный Foundation.",
     "basis": "EXP-0007..0010; NEG-0004..0006; user computational-first instruction"
+  },
+  {
+    "id": "DEC-0007",
+    "date": "2026-11-02",
+    "integrated_date": "2026-11-03",
+    "status": "adopted",
+    "target_id": "TARGET-CPE45",
+    "decision": "TARGET-CPE45 принят как дополнительная обязательная самостоятельная характеристика: комплексная работоспособность 2700 s при чередовании интенсивных усилий и короткого восстановления, с отдельной post-функцией. Это не continuous absolute maximum power, не замена главной цели и не установленная способность.",
+    "basis": "Прямое требование пользователя; research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md; CPE45.json",
+    "limitations": "Пороги/duty cycle не калиброваны; EXP-0001..0010 по новой цели not_assessed; NO_GO сохранён."
   }
 ]

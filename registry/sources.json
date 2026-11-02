@@ -554,5 +554,68 @@
     "audit_report": "research/integrated_2026_11_01/DATA_AUDIT.md",
     "calibration_review": "research/integrated_2026_11_01/sources.json#SRC-0028",
     "limitations": "Агрегатные числа; ограниченная проверка notices; биологическое усиление не валидировано."
+  },
+  {
+    "id": "SRC-0029",
+    "url": "https://doi.org/10.2165/11590550-000000000-00000",
+    "title": "Repeated-sprint ability - part I: factors contributing to fatigue.",
+    "authors": "Girard O, Mendez-Villanueva A, Bishop D.",
+    "year": "2011",
+    "journal": "Sports medicine (Auckland, N.Z.)",
+    "volume": "41",
+    "issue": "8",
+    "pages": "673-694",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/targets/CPE45_sources.json",
+    "audit_report": "research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md",
+    "review_provenance": {
+      "path": "research/targets/CPE45_sources.json",
+      "source_id": "SRC-0029",
+      "accessed": "2026-11-03",
+      "depth": "библиография и аннотация; не полная оценка качества/ретракций"
+    },
+    "limitations": "Обзор повторных усилий и task dependence; не 45-минутная валидация. Есть индексируемый Comment in PMID22233536."
+  },
+  {
+    "id": "SRC-0030",
+    "url": "https://doi.org/10.1249/mss.0000000000000929",
+    "title": "Translating Fatigue to Human Performance.",
+    "authors": "Enoka RM, Duchateau J.",
+    "year": "2016",
+    "journal": "Medicine and science in sports and exercise",
+    "volume": "48",
+    "issue": "11",
+    "pages": "2228-2238",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/targets/CPE45_sources.json",
+    "audit_report": "research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md",
+    "review_provenance": {
+      "path": "research/targets/CPE45_sources.json",
+      "source_id": "SRC-0030",
+      "accessed": "2026-11-03",
+      "depth": "библиография, аннотация и целевые полнотекстовые разделы о performance/perceived fatigability"
+    },
+    "limitations": "Performance и perceived fatigability различаются; нужен валидированный criterion test; не универсальный показатель боевой выносливости."
+  },
+  {
+    "id": "SRC-0031",
+    "url": "https://doi.org/10.1519/r-16094.1",
+    "title": "The influence of recovery duration on multiple sprint cycling performance.",
+    "authors": "Glaister M, Stone MH, Stewart AM, Hughes M, Moir GL.",
+    "year": "2005",
+    "journal": "Journal of strength and conditioning research",
+    "volume": "19",
+    "issue": "4",
+    "pages": "831-837",
+    "verification": "metadata_and_scope_checked_only",
+    "source_file": "research/targets/CPE45_sources.json",
+    "audit_report": "research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md",
+    "review_provenance": {
+      "path": "research/targets/CPE45_sources.json",
+      "source_id": "SRC-0031",
+      "accessed": "2026-11-03",
+      "depth": "библиография и аннотация; не полная оценка качества/ретракций"
+    },
+    "limitations": "Восстановление влияет на повторный cycling output; короткий протокол другой выборки не переносится автоматически на 2700 s."
   }
 ]

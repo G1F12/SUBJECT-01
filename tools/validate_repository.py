@@ -33,8 +33,15 @@ for s in datas.get('sources',[]):
     report_path=ROOT/s.get('audit_report','audits/2026-11-01_sources.md')
     if v=='metadata_and_scope_checked_only' and not report_path.is_file():
         problems.append('metadata audit report missing')
-    if v=='metadata_and_scope_checked_only' and not (s.get('audit_2026_11_01') or s.get('calibration_review')):
+    if v=='metadata_and_scope_checked_only' and not (s.get('audit_2026_11_01') or s.get('calibration_review') or s.get('review_provenance')):
         problems.append(f'source metadata audit record missing {s["id"]}')
+    if s.get('review_provenance'):
+        provenance=s['review_provenance']
+        try:
+            records=json.loads((ROOT/provenance['path']).read_text('utf-8'))
+            if sum(x['id']==s['id'] for x in records)!=1 or provenance['source_id']!=s['id']:
+                problems.append(f'source provenance ID mismatch: {s["id"]}')
+        except Exception as exc:problems.append(f'bad source review provenance {s["id"]}: {exc}')
     if v=='metadata_and_scope_checked_only':
         if report_path.is_file() and report_path.read_text('utf-8').count('| '+s['id']+' |') != 1:
             problems.append(f'source must occur once in audit table: {s["id"]}')
@@ -53,6 +60,15 @@ for entry in manifest:
     if h!=entry['sha256']:problems.append(f'hash mismatch: {p}')
 for rel in ['PROJECT_STATE.md','GOVERNANCE.md','CHANGELOG.md','handoffs/CURRENT.md']:
     if not (ROOT/rel).is_file():problems.append(f'missing governing file: {rel}')
+try:
+    goal=json.loads((ROOT/'research/targets/CPE45.json').read_text('utf-8'))
+    if goal['target_id']!='TARGET-CPE45' or goal['duration_s']!=2700:
+        problems.append('CPE45 ID/duration mismatch')
+    for ref in [goal['decision_id'],goal['issue_id'],*goal['source_ids']]:
+        if ref not in all_ids:problems.append(f'CPE45 missing registry ref: {ref}')
+    if goal['historical_experiments_cpe45_status']!='not_assessed' or goal['success_thresholds'] is not None:
+        problems.append('CPE45 historical/threshold policy changed without validation')
+except Exception as exc:problems.append(f'CPE45 specification missing/invalid: {exc}')
 if problems:
     print('FAIL: '+'; '.join(problems));sys.exit(1)
 print('PASS: registries', ', '.join(f'{k}={len(v)}' for k,v in datas.items()))

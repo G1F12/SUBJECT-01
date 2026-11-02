@@ -22,3 +22,5 @@ jobs:
         run: python research/integrated_2026_11_01/test_model.py
       - name: Reproduce integrated experiments with fixed seed
         run: python research/integrated_2026_11_01/experiments.py --check
+      - name: Verify CPE45 measurement functions (synthetic, not physiological validation)
+        run: python -m unittest discover -s tests -p test_cpe45.py
