@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-04",
+  "queries": [
+    "phosphocreatine recovery dataset individual time series open data",
+    "repeated sprint recovery cycling power data supplementary",
+    "PCr VO2 power data availability recovery"
+  ],
+  "included_actual_files": "OSF db3sk Power_rawdata.xlsx, VO2_rawdata.xlsx, version1, hashes in osf_provenance.json",
+  "PCr_joint_status": "No joint PCrвЂ“VO2вЂ“power numeric files obtained. Dryad raw blocked. OSF lacks PCr and continuous gas traces.",
+  "frontiers_692622_candidates": [
+    "https://www.frontiersin.org/articles/10.3389/fphys.2021.692622/full#supplementary-material"
+  ],
+  "frontiers_scope": "supplement numeric files not obtained from publisher HTML; participant data availability not verified, not used",
+  "other_candidates": [
+    {
+      "doi": "10.1371/journal.pone.0139801",
+      "reason": "training/recovery over days; running endpoint, not short-pause cycling identification"
+    },
+    {
+      "doi": "10.1371/journal.pone.0219295",
+      "reason": "running protocol; not selected after suitable independent cycling dataset was obtained"
+    }
+  ],
+  "restrictions": "No author contacts or human experiments. No claim of systematic/exhaustive search."
+}

@@ -1,0 +1,383 @@
+[
+  {
+    "id": "SRC-0040",
+    "doi": "10.1055/a-2940-7047",
+    "title": "Work-to-rest ratios in repeated sprint assessments: A replication\n                    study",
+    "year": 2026,
+    "authors": [
+      {
+        "given": "Lauren B. L.",
+        "family": "Jutlah",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Waterloo, ON, Canada",
+            "place": [
+              "Waterloo"
+            ],
+            "department": [
+              "Department of Kinesiology and Health Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kailey A.",
+        "family": "Stevens",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Waterloo, ON, Canada",
+            "place": [
+              "Waterloo"
+            ],
+            "department": [
+              "Department of Kinesiology and Health Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ashley",
+        "family": "Meelu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Waterloo, ON, Canada",
+            "place": [
+              "Waterloo"
+            ],
+            "department": [
+              "Department of Kinesiology and Health Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jeremy N.",
+        "family": "Cohen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Waterloo, ON, Canada",
+            "place": [
+              "Waterloo"
+            ],
+            "department": [
+              "Department of Kinesiology and Health Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jennifer",
+        "family": "Murphy",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technological University Dublin, Leinster, Ireland",
+            "place": [
+              "Dublin"
+            ],
+            "department": [
+              "School of Biological, Health and Sport Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joe P.",
+        "family": "Warne",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technological University Dublin, Leinster, Ireland",
+            "place": [
+              "Dublin"
+            ],
+            "department": [
+              "School of Biological, Health and Sport Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8601-323X",
+        "authenticated-orcid": false,
+        "given": "Jason S.",
+        "family": "Au",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Waterloo, ON, Canada",
+            "place": [
+              "Waterloo"
+            ],
+            "department": [
+              "Department of Kinesiology and Health Sciences"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "accessed": "2026-11-04",
+    "version": "indexed published record retrieved2026-11-04",
+    "crossref_url": "https://api.crossref.org/works/10.1055%2Fa-2940-7047",
+    "crossref_response_sha256": "5a598b77aeed4cf10d6fccfa10519463a2774bad0b670de90d2a141e1bab6419",
+    "europepmc_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1055/a-2940-7047",
+    "europepmc_response_sha256": "f6c252fbc784f3deea8f81b1edba4716ad9bd189a6997db11317979fd54c9bea",
+    "pmids": [
+      "42712884"
+    ],
+    "notices": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {}
+      ]
+    },
+    "depth": "bibliography, accessible methods/data availability; limited correction/retraction field check, not exhaustive Crossmark/reverse notices"
+  },
+  {
+    "id": "SRC-0041",
+    "doi": "10.1016/j.dib.2024.111114",
+    "title": "An ergometer dataset to measure muscle bioenergetics with magnetic resonance techniques",
+    "year": 2024,
+    "authors": [
+      {
+        "given": "Usman",
+        "family": "Rehman",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0636-8303",
+        "authenticated-orcid": false,
+        "given": "Gwenaelle",
+        "family": "Begue",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7711-2356",
+        "authenticated-orcid": false,
+        "given": "Armin",
+        "family": "Ahmadi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6529-8299",
+        "authenticated-orcid": false,
+        "given": "Paolo",
+        "family": "Taboga",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4204-7670",
+        "authenticated-orcid": false,
+        "given": "Jorge",
+        "family": "Gamboa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Baback",
+        "family": "Roshanravan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1549-8414",
+        "authenticated-orcid": false,
+        "given": "Thomas",
+        "family": "Jue",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "accessed": "2026-11-04",
+    "version": "indexed published record retrieved2026-11-04",
+    "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.dib.2024.111114",
+    "crossref_response_sha256": "971dce193bae5b768c41498483642f69ce54d511816854e72af8f1fb27a8e045",
+    "europepmc_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.dib.2024.111114",
+    "europepmc_response_sha256": "635045398d5edddc15297e256c7c0ff236149e4b3839ca03295f070f1198c940",
+    "pmids": [
+      "39640409"
+    ],
+    "notices": {
+      "crossref_relation": {
+        "is-supplemented-by": [
+          {
+            "id-type": "uri",
+            "id": "https://datadryad.org/stash/share/LKj22wpyxIQguzk5GCQgsMBwY6hccwEKj77L2nXXXb0",
+            "asserted-by": "subject"
+          }
+        ]
+      },
+      "crossref_update_to": [],
+      "europepmc": [
+        {}
+      ]
+    },
+    "depth": "bibliography, accessible methods/data availability; limited correction/retraction field check, not exhaustive Crossmark/reverse notices"
+  },
+  {
+    "id": "SRC-0042",
+    "doi": "10.3389/fphys.2021.692622",
+    "title": "The Aerobic and Anaerobic Contribution During Repeated 30-s Sprints in Elite Cyclists",
+    "year": 2021,
+    "authors": [
+      {
+        "given": "Nicki Winfield",
+        "family": "Almquist",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Øyvind",
+        "family": "Sandbakk",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Bent R.",
+        "family": "Rønnestad",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Dionne",
+        "family": "Noordhof",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "accessed": "2026-11-04",
+    "version": "indexed published record retrieved2026-11-04",
+    "crossref_url": "https://api.crossref.org/works/10.3389%2Ffphys.2021.692622",
+    "crossref_response_sha256": "32e704e4188da42e3a2fd6d9dc011ba710201fdd2147af48ada00bf43730a77d",
+    "europepmc_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3389/fphys.2021.692622",
+    "europepmc_response_sha256": "2ea001fa8efe9579b610e950a40a5bb818fbe8a5cbc2604ffa57e7de71a2cd83",
+    "pmids": [
+      "34122152"
+    ],
+    "notices": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {}
+      ]
+    },
+    "depth": "bibliography, accessible methods/data availability; limited correction/retraction field check, not exhaustive Crossmark/reverse notices"
+  }
+]

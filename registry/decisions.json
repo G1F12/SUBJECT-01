@@ -57,5 +57,12 @@
     "status": "adopted",
     "decision": "CPE45 dynamic system is verified conditional surrogate; retain failed real-data transfer, missing neural/damage states and thermal feedback limitation. No universal retention threshold or validated augmentation; NO_GO.",
     "basis": "EXP-0011..0014; NEG-0007..0009"
+  },
+  {
+    "id": "DEC-0009",
+    "date": "2026-11-04",
+    "status": "adopted",
+    "decision": "Pre-extraction rules and pre-test code/parameter locks govern new power validation; retain constant selected before test, flat recovery profile, all negative transfers and NO_GO. No architecture re-ranking with unvalidated energy module. OSF raw with unknown licence is not redistributed.",
+    "basis": "User recovery-cycle directive; commits9f25664/8319168; EXP-0015..0018"
   }
 ]

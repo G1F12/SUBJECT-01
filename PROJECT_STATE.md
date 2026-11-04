@@ -1,41 +1,43 @@
-# SUBJECT-01 — состояние на 04.11.2026
+# SUBJECT-01 — состояние после recovery-cycle,04.11.2026
 
-Канонический публичный репозиторий G1F12/SUBJECT-01 (DEC-0005).
-Базовый main:070a7343e522ca9fdbe37d3c0f7e3e0894bc7e30. Новый цикл публикуется
-через research/cpe45-dynamics-20261104; итоговый GitHub HEAD проверять напрямую.
+Канонический публичный G1F12/SUBJECT-01. Проверенная база текущего цикла:
+c7a7c9caa7f619f64c88b9e0430a6b1f83148807. Итоговый GitHub mainHEAD проверять
+через remote/API после PR/CI. Ветка research/cpe45-recovery-identification-20261104.
 
-Foundation EXP-0001..0006 и Integrated EXP-0007..0010 сохранены без изменений:
-13 исходных hashes,7 CSV,45 arithmetic rows и прежние отрицательные результаты.
-Исторические Pareto по CPE45 по-прежнему not_assessed.
+[Отчёт EXP-0015..0018](research/recovery_2026_11_04/REPORT.md),
+[causal matrix](research/recovery_2026_11_04/DIAGNOSTIC_MATRIX.md),
+[аудит данных](research/recovery_2026_11_04/DATA_AUDIT.md).
 
-Выполнен EXP-0011..0014: [отчёт](research/cpe45_2026_11_04/REPORT.md),
-[аудит](research/cpe45_2026_11_04/DATA_AUDIT.md).
+- Foundation EXP1..6,Integrated EXP7..10,CPE45 EXP11..14 и NEG1..9 сохранены.
+  СтарыйRMSE378.543770W воспроизведён; старые10holdout остаются просмотренными.
+- Новая работаSRC-0040:21человек,три паузы12/18/24s,10×6s. РеальныеPower/VO2
+  файлы скачаны. 630meanpower cells,1260VO2phaseextrema,безPCr/continuousgas.
+  OSF node_license=null: raw не вGit; pinnedURL/version/SHA256/recipe сохранены.
+- Prereg9f25664 до extraction; lock8319168 до test. Все условия одного человека
+  в одной группе:14development/7test,378/189endpoints;groupedLOPOCV выбралconstant.
+- Новый закрытый test:D1RMSE350.70W,D2corrected361.71W,constant126.54W;
+  mono118.29W,ноpairedbootstrapinterval пересекает0 и модель до test не выбрана.
+  D4conditional134.46W тоже хуже. Новое физическое улучшение НЕ валидировано.
+- Exactη–metabolic-scale symmetry;scenarioJacobian rank7/11; recoveryprofile
+  flat1..600s приdepletion0. Ни один новый physiological recoveryparameter
+  не идентифицирован. Syntheticrecovery отдельно softwarecontrol.
+- Матрица причин разделяет software/structure/parameters/data/transfer.
+  Ledger и единицы согласованы;dtbias мал. Единственная физиологическая причина
+  старой ошибки не установлена;posthoclatentfit на test не выполнен.
+- 24pause/depletioncases,14perturbations,64epistemicUQ,4dt×2structures,
+  2700sstability с conservation. Не прогноз новых возможностей человека.
+- 26новых+70прежних=96unit tests;Foundationhashes/CSV/arithmetic,все3reproduction
+  suites иCI. Численные outputs/2PNG/sourcehashes/lockedparams сохранены.
 
-- Раздельная динамика резервов, oxidative/slow kinetics, peripheral state,
-  механики, восстановления и тепла2700s; подключён tools/cpe45.py.
-- 8 первичных источников SRC-0032..0039, ограниченный notice audit; CC BY XLSX v1,
-  44 строки условий,414 MeanP чисел/26 пропусков, исходные bytes и SHA256.
-- 11 fit/10 пригодных holdout участников,99/90 endpoints; первый sprint — вход.
-  Проверка переноса отрицательная: coupled RMSE378.54W, constant115.34W.
-- 15 сценариев,64 epistemic UQ,16 perturbations,4dt,4negative. CSV/JSON/2PNG,
-  trace/episodes/recovery/retention, seed20261104, параметры и hashes сохранены.
-- Baseline:86.38kJ работы, max-task early/late175.86/114.08W, конечные резервы
-  2758/2439J. Это модель, не измерения45-минутной работоспособности человека.
-- I/II/III сравнены в3средах; II больше условная работа, но больше humid heat.
-  III без данных не получает neural benefit. Ни одна архитектура не достигла CPE45.
-- Thermal one-node без motor feedback/cold regulation; реакция/accuracy,
-  coordination/damage/central activation и post45 test неизвестны.
-- 26 новых+25measurement+19integrated=70 unit tests; Foundation checks отдельно.
-  CI включает dynamic invariants и numerical reproduction.
+Реестры EXP18/HYP6/FND20/NEG12/DEC9/ISS15/SRC42; всеHYP unverified.
+ISS-0014:missingPCr jointdata/exactconfounding;ISS-0015:baseline/loss/rawlicence.
+ISS-0011 остаётся open;ISS-0001resolved,остальные прежниеopen сохраняются.
+CPE45 not_assessed,NOT EXTERNALLY VALIDATED;NO_GO для вмешательств неизменён.
+АрхитектурыI/II/III не перерангированы на неподтверждённой новой модели.
 
-Реестры:EXP14/HYP6/FND16/NEG9/DEC8/ISS13/SRC39. Все HYP unverified.
-ISS-0011 остаётся открытым: код создан, эмпирической CPE45 validation нет.
-ISS-0012 dataset ambiguity/failed transfer; ISS-0013 thermal/neural/damage gaps.
-ISS-0002..0010 сохранены; ISS-0001 resolved. Один агент OpenAI Codex, внешнего
-независимого научного рецензирования нет. Model not_empirically_validated;
-TARGET-CPE45 not_assessed; вмешательства NO_GO.
+Следующий приоритет: совместныеPCr–continuousVO2–power данные с независимым
+metabolic-cost anchor для разрываη–capacitysymmetry. Текущие7test теперь
+просмотрены и не могут снова служить новой независимой проверкой.
 
-Следующий приоритет: совместные индивидуальные PCr–VO2–power ряды для
-идентификации восстановления и новый заранее фиксированный participant holdout.
-Команды всех проверок — в REPORT.md и .github/workflows/validate.yml.
-SHA research commit: git log -1 --format=%H -- research/cpe45_2026_11_04/REPORT.md.
+SHA research: git log -1 --format=%H -- research/recovery_2026_11_04/REPORT.md.
+Команды воспроизведения в REPORT.md/.github/workflows/validate.yml.

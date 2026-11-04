@@ -61,5 +61,26 @@
     "status": "model_counterexample",
     "claim": "More conditional contractile/transport/cooling support increases humid stored heat; no thermal motor feedback and implausible sparse-load cooling prevent feasibility claims.",
     "context": "One-node heat diagnostic; no core temperature or safety prediction."
+  },
+  {
+    "id": "NEG-0010",
+    "experiment_id": "EXP-0016",
+    "status": "model_counterexample",
+    "claim": "D2 fails new independent cohort test and is worse than constant; D4conditional fast-recovery hybrid also worse,RMSE134.46vs126.54W.",
+    "context": "All189samecells; pre-testconstant selection retained. Mono118.29W has paired bootstrap advantage interval crossing zero."
+  },
+  {
+    "id": "NEG-0011",
+    "experiment_id": "EXP-0017",
+    "status": "model_counterexample",
+    "claim": "Power endpoints do not identify absolute metabolic capacities/eta; zero-depletion optimum leaves all recoverytau1..600s equivalent.",
+    "context": "Structural exact symmetry plus practical flat profile; gridtau1s not physiology."
+  },
+  {
+    "id": "NEG-0012",
+    "experiment_id": "EXP-0015",
+    "status": "model_counterexample",
+    "claim": "Warminitialoxygen800W worsens old normalizedforecastRMSE to582.94W; timestep reduction and zero intercept do not remove original error.",
+    "context": "Rejects these specific model fixes; does not deny real warm-up/BMR effects."
   }
 ]

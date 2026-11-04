@@ -1,0 +1,59 @@
+{
+  "local_checks": [
+    {
+      "command": "python tools/validate_repository.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/reproduce_foundation.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/audit_foundation.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/integrated_2026_11_01/test_model.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/integrated_2026_11_01/experiments.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_cpe45.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/cpe45_2026_11_04/test_model.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/cpe45_2026_11_04/experiments.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/recovery_2026_11_04/test_recovery.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/recovery_2026_11_04/reproduce.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unit_tests": {
+    "integrated": 19,
+    "measurement": 25,
+    "historical_dynamic": 26,
+    "recovery": 26,
+    "total": 96
+  },
+  "all_passed": true,
+  "python": "3.12.10",
+  "interpretation": "software verification and numerical reproduction; new physiological model validation negative",
+  "historical_trees_changed": false
+}

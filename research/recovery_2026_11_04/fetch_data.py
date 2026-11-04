@@ -8,6 +8,9 @@ def get(url):
     with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SUBJECT-01 research/1.0'}),timeout=60) as r:return r.read()
 def save_json(path,obj):path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf8',newline='\n')
 def retrieve_osf():
+    if (BASE/'osf_provenance.json').exists():
+        verify_cache()
+        return json.loads((BASE/'osf_provenance.json').read_text('utf8'))['files']
     CACHE.mkdir(parents=True,exist_ok=True)
     listing=json.loads(get('https://api.osf.io/v2/nodes/db3sk/files/osfstorage/?page%5Bsize%5D=100'))
     out=[]

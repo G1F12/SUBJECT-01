@@ -123,5 +123,33 @@
     "status": "arithmetic_reproduced",
     "claim": "Conditional II work108.85kJ vs baseline86.38kJ; humid one-node delta4.602 vs3.618K; architecture heat ranking changes by climate.",
     "limits": "No feedback from heat to motor output; no architecture meets validated CPE45."
+  },
+  {
+    "id": "FND-0017",
+    "experiment_id": "EXP-0015",
+    "status": "arithmetic_reproduced",
+    "claim": "OldRMSE378.543770W reproduced; energy/units pass; release law, nominal demand and recovery change discrepancy but no unique physiological cause identified.",
+    "limits": "Counterfactuals use viewed old holdout and are not independent validation."
+  },
+  {
+    "id": "FND-0018",
+    "experiment_id": "EXP-0016",
+    "status": "arithmetic_reproduced",
+    "claim": "New locked7participant test189endpoints: D1RMSE350.70W,D2 361.71W,constant126.54W; constant was selected before test.",
+    "limits": "Independent power endpoint only, no PCr or continuous VO2; corrected physical model fails."
+  },
+  {
+    "id": "FND-0019",
+    "experiment_id": "EXP-0017",
+    "status": "arithmetic_reproduced",
+    "claim": "Exact eta–metabolic-scale invariance and scenarioJacobian rank7/11; effective recoverytau profile1..600s flat at depletion0.",
+    "limits": "No new physiological recovery coefficient identified; synthetic recovery is software control only."
+  },
+  {
+    "id": "FND-0020",
+    "experiment_id": "EXP-0018",
+    "status": "arithmetic_reproduced",
+    "claim": "Corrected paid-reserve module conserves energy and runs2700s stably,200.58kJ external work in isolated6/12s scenario.",
+    "limits": "Mathematical stress test, not prediction of human endurance or architecture superiority; heatgenerated not heatstorage."
   }
 ]

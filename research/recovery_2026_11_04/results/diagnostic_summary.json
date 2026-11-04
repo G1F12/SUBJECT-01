@@ -1,0 +1,77 @@
+{
+  "historical_RMSE_reproduced_W": 378.54377003872094,
+  "old_holdout_status": "viewed diagnostic only, original files untouched",
+  "synthetic_control": {
+    "origin": "SYNTHETIC SOFTWARE CONTROL, not human data",
+    "true_depletion": 0.18,
+    "true_tau_s": 60.0,
+    "recovered_depletion": 0.18,
+    "recovered_tau_s": 60.0,
+    "MSE": 0.0,
+    "zero_depletion_tau1_vs600_max_difference": 0.0
+  },
+  "identifiability": {
+    "parameters": [
+      "fast_capacity_J",
+      "slow_capacity_J",
+      "fast_power_cap_W",
+      "slow_power_cap_W",
+      "fast_recovery_tau_s",
+      "slow_recovery_tau_s",
+      "eta",
+      "recharge_efficiency",
+      "oxygen_tau_s",
+      "oxygen_cap_W",
+      "maintenance_W"
+    ],
+    "output_count": 36,
+    "singular_values": [
+      4.840633783428484,
+      1.3346024287978977,
+      0.6387635823321418,
+      0.44968762248273886,
+      0.3815928602959985,
+      0.0756021814062085,
+      0.02391598374125991,
+      5.071500530734065e-12,
+      4.700882312696924e-12,
+      2.660597703464759e-12,
+      1.3603280287518277e-12
+    ],
+    "relative_rank_threshold": 1e-06,
+    "rank": 7,
+    "normalized_energy_scale_symmetry_error": 0.0,
+    "absolute_eta_metabolic_scale_symmetry_error_W": 9.094947017729282e-13,
+    "interpretation": "exact scaling symmetries prevent absolute capacities/efficiency identification from power alone; rank is local scenario diagnostic, not physiological fit"
+  },
+  "empirical_recovery_profile": {
+    "tau_grid_min_s": 1,
+    "tau_grid_max_s": 600,
+    "delta_profile_chi2_max": 0.0,
+    "identified": false,
+    "reason": "depletion fitted zero; all tau values give the same observed output"
+  },
+  "UQ": {
+    "runs": 64,
+    "type": "independent epistemic uniform .75..1.25 multipliers, not human distribution or confidence interval",
+    "work_J_p05_p50_p95": [
+      14679.362769722595,
+      19694.976749589627,
+      25575.776126423585
+    ]
+  },
+  "stability_2700s": {
+    "time_s": 2700.0,
+    "fast_J": 1093.3454708606575,
+    "slow_J": 435.62918725143686,
+    "fatigue": 0.0,
+    "energy_residual_J": -3.306195139884949e-08,
+    "oxidative_J": 1714044.462021325,
+    "external_J": 200584.60411105826,
+    "heat_J": 1541930.8832521879,
+    "recharged_J": 228440.9445745106,
+    "withdrawn_J": 256911.96991639512
+  },
+  "NO_GO": true,
+  "CPE45": "NOT EXTERNALLY VALIDATED"
+}
