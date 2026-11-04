@@ -1,0 +1,148 @@
+{
+  "preregistration_commit": "0446eaadcecb7c4ebea3613d20527a6d3fd94897",
+  "base_commit": "a4d3a04ab8ef0fc056815989f4b775cf9773f3ca",
+  "code_sha256": {
+    "dataset.py": "e1e77215023e1e9f3a0e3003ae3fce7ca04e8e865fc060d66928de0f41c14375",
+    "models.py": "3a5743c1ed9470d177d3d485ad3303225308ac5ca798b493a0d75706691bf170"
+  },
+  "development_snapshot_sha256": "fd644816c54e3cc11d72a0229f52944fc8db7cf1eea13a60ba94ed400c85a6df",
+  "source_retrieval_sha256": "8ec0046b042de532a9266461f2028b7a33de4092e4f46ef4bfb1440a41cd6e94",
+  "parameters": {
+    "constant": [
+      457.28531288427706
+    ],
+    "affine": [
+      153.85300276414077,
+      364.33308572400125
+    ],
+    "quadratic": [
+      180.18881313018647,
+      292.1249293409384,
+      40.823256992031816
+    ],
+    "baseline_slope": [
+      3.989339516973961
+    ],
+    "historical_D2_equilibrium": [
+      128.69565217391278,
+      3.569358178053834
+    ]
+  },
+  "selected_model": "quadratic",
+  "development_ids": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27,
+    28,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38,
+    39,
+    42,
+    43,
+    44,
+    46,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63,
+    64,
+    66,
+    67,
+    68,
+    69
+  ],
+  "test_ids": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    50,
+    55,
+    60,
+    65,
+    70
+  ],
+  "LOPO_scores": [
+    {
+      "model": "constant",
+      "n": 216,
+      "participants": 51,
+      "RMSE_W": 136.74999505725285,
+      "MAE_W": 113.42701954834345,
+      "bias_W": -4.876099524153688e-13
+    },
+    {
+      "model": "affine",
+      "n": 216,
+      "participants": 51,
+      "RMSE_W": 28.896784020079103,
+      "MAE_W": 23.568858604230023,
+      "bias_W": -0.004612117512381886
+    },
+    {
+      "model": "quadratic",
+      "n": 216,
+      "participants": 51,
+      "RMSE_W": 28.46338372992138,
+      "MAE_W": 22.998695740242034,
+      "bias_W": -0.0014219307699838701
+    },
+    {
+      "model": "baseline_slope",
+      "n": 216,
+      "participants": 51,
+      "RMSE_W": 37.42271707388772,
+      "MAE_W": 27.148708254414736,
+      "bias_W": -6.106771013124471
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "n": 216,
+      "participants": 51,
+      "RMSE_W": 42.34473515383125,
+      "MAE_W": 34.72264014328759,
+      "bias_W": -31.31811441068503
+    }
+  ],
+  "endpoint": "systemic costW from measuredVO2/VCO2, given prescribed cycleW; NOT independently predicted mechanicalpower",
+  "reduced_model_status": "absolute systemiccost NOT DEFINED by9Dquotient without independent measurement layer; no fake eta1 conversion",
+  "test_status": "NOT_OPENED",
+  "metrics": "participant-balancedRMSE primary;MAE,bias,calibration;2000pairedparticipantbootstrap seed20261106",
+  "NO_GO": true,
+  "CPE45": "NOT EXTERNALLY VALIDATED"
+}
