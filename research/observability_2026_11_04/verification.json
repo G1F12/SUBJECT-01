@@ -1,0 +1,80 @@
+[
+  {
+    "command": "python tools/validate_repository.py",
+    "returncode": 0,
+    "elapsed_s": 0.09,
+    "tail": "PASS: registries hypotheses=6, experiments=22, findings=24, negative_results=15, decisions=10, issues=16, sources=49\nPASS: 13 imported file checksums match; references/files consistent\n"
+  },
+  {
+    "command": "python tools/reproduce_foundation.py",
+    "returncode": 0,
+    "elapsed_s": 1.34,
+    "tail": "PASS: foundation model standalone execution and 7 CSV datasets exactly reproduced\nModel output first line: PASS: all model consistency checks\n"
+  },
+  {
+    "command": "python tools/audit_foundation.py",
+    "returncode": 0,
+    "elapsed_s": 0.06,
+    "tail": "{\n  \"audit\": \"2026-11-01 independently reconstructed CSV formulas\",\n  \"rows_checked\": 45,\n  \"arithmetics\": \"PASS\",\n  \"conditional_CaO2_L_per_L\": 0.2,\n  \"fick_extraction_only_unphysical_gain_pct\": [\n    50,\n    100\n  ],\n  \"fick_extraction_only_near_or_beyond_bound_gain_pct\": [\n    30,\n    50,\n    100\n  ],\n  \"caveats\": [\n    \"CaO2 is an explicit assumed comparator, not a hard universal value\",\n    \"Original synthetic parameter sweeps not calibrated to human physiology\",\n    \"Cannot interpret arithmetic PASS as efficacy or safe enhancement\"\n  ]\n}\n"
+  },
+  {
+    "command": "python research/integrated_2026_11_01/test_model.py",
+    "returncode": 0,
+    "elapsed_s": 0.3,
+    "tail": "Physics.test_added_mass_coupling) ... ok\ntest_all_results_finite (__main__.Physics.test_all_results_finite) ... ok\ntest_architecture_matrix_matches_outputs (__main__.Physics.test_architecture_matrix_matches_outputs) ... ok\ntest_calibration_fit_wiring (__main__.Physics.test_calibration_fit_wiring) ... ok\ntest_contact_and_drag (__main__.Physics.test_contact_and_drag) ... ok\ntest_dimensions (__main__.Physics.test_dimensions) ... ok\ntest_energy_and_thermal_balance (__main__.Physics.test_energy_and_thermal_balance) ... ok\ntest_evaporation_bounds (__main__.Physics.test_evaporation_bounds) ... ok\ntest_fick_bound (__main__.Physics.test_fick_bound) ... ok\ntest_force_velocity_and_length (__main__.Physics.test_force_velocity_and_length) ... ok\ntest_infeasible_heat_budget_is_explicit (__main__.Physics.test_infeasible_heat_budget_is_explicit) ... ok\ntest_invalid_inputs (__main__.Physics.test_invalid_inputs) ... ok\ntest_manifest (__main__.Physics.test_manifest) ... ok\ntest_monotonic_oxygen_cooling (__main__.Physics.test_monotonic_oxygen_cooling) ... ok\ntest_prediction_tradeoff (__main__.Physics.test_prediction_tradeoff) ... ok\ntest_sprint_energy_reserve_and_timestep (__main__.Physics.test_sprint_energy_reserve_and_timestep) ... ok\ntest_static_force_and_tendon_plateau (__main__.Physics.test_static_force_and_tendon_plateau) ... ok\ntest_transmission_power (__main__.Physics.test_transmission_power) ... ok\ntest_uncertainty_not_degenerate (__main__.Physics.test_uncertainty_not_degenerate) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.036s\n\nOK\n"
+  },
+  {
+    "command": "python research/integrated_2026_11_01/experiments.py --check",
+    "returncode": 0,
+    "elapsed_s": 7.25,
+    "tail": "PASS: �������������� ��� CSV � summary ��� seed 20261101\n"
+  },
+  {
+    "command": "python -m unittest discover -s tests -p test_cpe45.py",
+    "returncode": 0,
+    "elapsed_s": 0.31,
+    "tail": ".........................\n----------------------------------------------------------------------\nRan 25 tests in 0.172s\n\nOK\n"
+  },
+  {
+    "command": "python research/cpe45_2026_11_04/test_model.py",
+    "returncode": 0,
+    "elapsed_s": 2.17,
+    "tail": "Tests.test_invalid_dt) ... ok\ntest_invalid_parameters (__main__.DynamicTests.test_invalid_parameters) ... ok\ntest_kinetic_each_step (__main__.DynamicTests.test_kinetic_each_step) ... ok\ntest_missing_observations (__main__.DynamicTests.test_missing_observations) ... ok\ntest_no_instant_recovery (__main__.DynamicTests.test_no_instant_recovery) ... ok\ntest_no_invented_neural_data (__main__.DynamicTests.test_no_invented_neural_data) ... ok\ntest_no_mutation_inputs (__main__.DynamicTests.test_no_mutation_inputs) ... ok\ntest_oxygen_cap (__main__.DynamicTests.test_oxygen_cap) ... ok\ntest_participant_disjoint (__main__.DynamicTests.test_participant_disjoint) ... ok\ntest_physical_force (__main__.DynamicTests.test_physical_force) ... ok\ntest_protocol_exact (__main__.DynamicTests.test_protocol_exact) ... ok\ntest_recharge_energy_bound (__main__.DynamicTests.test_recharge_energy_bound) ... ok\ntest_recovery_rate (__main__.DynamicTests.test_recovery_rate) ... ok\ntest_reproducibility (__main__.DynamicTests.test_reproducibility) ... ok\ntest_reserve_bounds (__main__.DynamicTests.test_reserve_bounds) ... ok\ntest_source_immutable (__main__.DynamicTests.test_source_immutable) ... ok\ntest_speed_bound (__main__.DynamicTests.test_speed_bound) ... ok\ntest_unpaid_work_raises (__main__.DynamicTests.test_unpaid_work_raises) ... ok\ntest_zero_energy_no_output (__main__.DynamicTests.test_zero_energy_no_output) ... ok\ntest_zero_reserves_no_creation (__main__.DynamicTests.test_zero_reserves_no_creation) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 1.864s\n\nOK\n"
+  },
+  {
+    "command": "python research/cpe45_2026_11_04/experiments.py --check",
+    "returncode": 0,
+    "elapsed_s": 21.33,
+    "tail": "PASS: CPE45 source/output hashes and numerical reproduction; no empirical CPE45 claim\n"
+  },
+  {
+    "command": "python research/recovery_2026_11_04/test_recovery.py",
+    "returncode": 0,
+    "elapsed_s": 1.2,
+    "tail": "SE) ... ok\ntest_instrumented_legacy_parity (__main__.RecoveryTests.test_instrumented_legacy_parity) ... ok\ntest_invalid_parameters (__main__.RecoveryTests.test_invalid_parameters) ... ok\ntest_locked_model_unchanged (__main__.RecoveryTests.test_locked_model_unchanged) ... ok\ntest_missing_no_imputation (__main__.RecoveryTests.test_missing_no_imputation) ... ok\ntest_no_PC_r_or_continuous_VO2_claim (__main__.RecoveryTests.test_no_PC_r_or_continuous_VO2_claim) ... ok\ntest_no_energy_no_output (__main__.RecoveryTests.test_no_energy_no_output) ... ok\ntest_old_shape_unchanged (__main__.RecoveryTests.test_old_shape_unchanged) ... ok\ntest_recharge_not_free (__main__.RecoveryTests.test_recharge_not_free) ... ok\ntest_recharge_paid (__main__.RecoveryTests.test_recharge_paid) ... ok\ntest_release_power_bound (__main__.RecoveryTests.test_release_power_bound) ... ok\ntest_reproducible (__main__.RecoveryTests.test_reproducible) ... ok\ntest_reserve_bounds (__main__.RecoveryTests.test_reserve_bounds) ... ok\ntest_same_test_cells (__main__.RecoveryTests.test_same_test_cells) ... ok\ntest_source_hashes (__main__.RecoveryTests.test_source_hashes) ... ok\ntest_synthetic_parameter_recovery (__main__.RecoveryTests.test_synthetic_parameter_recovery) ... ok\ntest_test_gate (__main__.RecoveryTests.test_test_gate) ... ok\ntest_training_digest_ignores_test_outcomes (__main__.RecoveryTests.test_training_digest_ignores_test_outcomes) ... ok\ntest_units_work_power (__main__.RecoveryTests.test_units_work_power) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.819s\n\nOK\n"
+  },
+  {
+    "command": "python research/recovery_2026_11_04/reproduce.py --check",
+    "returncode": 0,
+    "elapsed_s": 4.84,
+    "tail": "RMSE_p975_W\": 381.9142701553227,\n      \"paired_RMSE_minus_constant_p025_W\": 205.99049907311317,\n      \"paired_RMSE_minus_constant_p975_W\": 242.22781185300232,\n      \"resamples\": 2000,\n      \"participants\": 7\n    },\n    {\n      \"model\": \"D2_corrected\",\n      \"RMSE_p025_W\": 314.7960801049765,\n      \"RMSE_p975_W\": 409.371804768508,\n      \"paired_RMSE_minus_constant_p025_W\": 197.9613292572433,\n      \"paired_RMSE_minus_constant_p975_W\": 270.3549449403868,\n      \"resamples\": 2000,\n      \"participants\": 7\n    },\n    {\n      \"model\": \"empirical_recovery\",\n      \"RMSE_p025_W\": 110.11073135874364,\n      \"RMSE_p975_W\": 150.6508240043268,\n      \"paired_RMSE_minus_constant_p025_W\": 0.0,\n      \"paired_RMSE_minus_constant_p975_W\": 0.0,\n      \"resamples\": 2000,\n      \"participants\": 7\n    },\n    {\n      \"model\": \"D4_hybrid_conditional\",\n      \"RMSE_p025_W\": 118.64936022295748,\n      \"RMSE_p975_W\": 158.53784069666858,\n      \"paired_RMSE_minus_constant_p025_W\": 4.454489602104831,\n      \"paired_RMSE_minus_constant_p975_W\": 11.032783234850053,\n      \"resamples\": 2000,\n      \"participants\": 7\n    }\n  ],\n  \"status\": \"new independent cohort, locked participant test for power endpoint only; CPE45 NOT EXTERNALLY VALIDATED\",\n  \"source\": \"OSF db3sk; no PCr and no continuous VO2\",\n  \"model_lock_sha256\": \"c609562ad4182465b3f77730fa9c37816e1ac85b0bc97de274e91a85a64bd934\",\n  \"raw_data_policy\": \"unlicensed raw omitted; public retrieval recipe + SHA256; predictions/statistics are our derived research outputs\"\n}\nPASS recovery source/output hashes, lock, negative diagnostic and independent test reproduction\n"
+  },
+  {
+    "command": "python research/observability_2026_11_04/test_observability.py",
+    "returncode": 0,
+    "elapsed_s": 1.47,
+    "tail": "... ok\ntest_exact_scale_all_protocols (__main__.ObservabilityTests.test_exact_scale_all_protocols) ... ok\ntest_fd_convergence_rejects_spurious_direction (__main__.ObservabilityTests.test_fd_convergence_rejects_spurious_direction) ... ok\ntest_known_oxygen_breaks_scale (__main__.ObservabilityTests.test_known_oxygen_breaks_scale) ... ok\ntest_new_baseline_shift_symmetry (__main__.ObservabilityTests.test_new_baseline_shift_symmetry) ... ok\ntest_no_human_outcome_dependency (__main__.ObservabilityTests.test_no_human_outcome_dependency) ... ok\ntest_prior_locks_preserved (__main__.ObservabilityTests.test_prior_locks_preserved) ... ok\ntest_quotient_has_nine_parameters (__main__.ObservabilityTests.test_quotient_has_nine_parameters) ... ok\ntest_reduced_preserves_power_and_bounds (__main__.ObservabilityTests.test_reduced_preserves_power_and_bounds) ... ok\ntest_relative_PCr_cannot_anchor_scale (__main__.ObservabilityTests.test_relative_PCr_cannot_anchor_scale) ... ok\ntest_results_structural_rank_bounds (__main__.ObservabilityTests.test_results_structural_rank_bounds) ... ok\ntest_singular_FIM_not_scored_full_rank (__main__.ObservabilityTests.test_singular_FIM_not_scored_full_rank) ... ok\ntest_status_no_empirical_promotion (__main__.ObservabilityTests.test_status_no_empirical_promotion) ... ok\ntest_synthetic_truth_recovered (__main__.ObservabilityTests.test_synthetic_truth_recovered) ... ok\ntest_zero_depletion_flat_profile (__main__.ObservabilityTests.test_zero_depletion_flat_profile) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.546s\n\nOK\n"
+  },
+  {
+    "command": "python research/observability_2026_11_04/inspect_data.py --check",
+    "returncode": 0,
+    "elapsed_s": 1.12,
+    "tail": "PASS pinned numeric members, content inventory and exploratory PCr replay\n"
+  },
+  {
+    "command": "python research/observability_2026_11_04/audit.py --check",
+    "returncode": 0,
+    "elapsed_s": 64.67,
+    "tail": "PASS cycle5 hashes and numerical replay; no new human validation\n"
+  }
+]

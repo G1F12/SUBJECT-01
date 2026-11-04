@@ -1,0 +1,158 @@
+{
+  "symmetry": [
+    {
+      "design": "short_long",
+      "baseline_shift_power_error_W": 2.2737367544323206e-13,
+      "baseline_shift_reserve_error_J": 0.0,
+      "power_max_abs_W": 2.2168933355715126e-12,
+      "relative_PCr_max_abs": 5.551115123125783e-16,
+      "oxygen_scale_error_W": 3.410605131648481e-13,
+      "reserve_scale_error_J": 3.637978807091713e-12
+    },
+    {
+      "design": "short_incomplete",
+      "baseline_shift_power_error_W": 1.7053025658242404e-13,
+      "baseline_shift_reserve_error_J": 2.842170943040401e-14,
+      "power_max_abs_W": 2.5266899683629163e-11,
+      "relative_PCr_max_abs": 1.1102230246251565e-16,
+      "oxygen_scale_error_W": 6.252776074688882e-13,
+      "reserve_scale_error_J": 9.094947017729282e-13
+    },
+    {
+      "design": "medium_rest",
+      "baseline_shift_power_error_W": 2.5579538487363607e-13,
+      "baseline_shift_reserve_error_J": 0.0,
+      "power_max_abs_W": 1.432454155292362e-11,
+      "relative_PCr_max_abs": 1.1102230246251565e-16,
+      "oxygen_scale_error_W": 3.410605131648481e-13,
+      "reserve_scale_error_J": 9.094947017729282e-13
+    },
+    {
+      "design": "long_rest",
+      "baseline_shift_power_error_W": 2.2737367544323206e-13,
+      "baseline_shift_reserve_error_J": 0.0,
+      "power_max_abs_W": 1.2505552149377763e-12,
+      "relative_PCr_max_abs": 7.771561172376096e-16,
+      "oxygen_scale_error_W": 3.410605131648481e-13,
+      "reserve_scale_error_J": 5.4569682106375694e-12
+    },
+    {
+      "design": "predepleted",
+      "baseline_shift_power_error_W": 1.5631940186722204e-13,
+      "baseline_shift_reserve_error_J": 0.0,
+      "power_max_abs_W": 4.831690603168681e-13,
+      "relative_PCr_max_abs": 8.326672684688674e-17,
+      "oxygen_scale_error_W": 3.979039320256561e-13,
+      "reserve_scale_error_J": 4.547473508864641e-13
+    },
+    {
+      "design": "long_effort",
+      "baseline_shift_power_error_W": 1.7053025658242404e-13,
+      "baseline_shift_reserve_error_J": 2.2737367544323207e-14,
+      "power_max_abs_W": 1.6711965145077556e-11,
+      "relative_PCr_max_abs": 1.1102230246251565e-16,
+      "oxygen_scale_error_W": 5.684341886080801e-13,
+      "reserve_scale_error_J": 9.094947017729282e-13
+    },
+    {
+      "design": "low_power",
+      "baseline_shift_power_error_W": 6.252776074688882e-13,
+      "baseline_shift_reserve_error_J": 1.0231815394945443e-12,
+      "power_max_abs_W": 1.1084466677857563e-11,
+      "relative_PCr_max_abs": 1.3183898417423734e-16,
+      "oxygen_scale_error_W": 4.547473508864641e-13,
+      "reserve_scale_error_J": 9.094947017729282e-13
+    },
+    {
+      "design": "high_power",
+      "baseline_shift_power_error_W": 2.2737367544323206e-13,
+      "baseline_shift_reserve_error_J": 2.2737367544323207e-14,
+      "power_max_abs_W": 1.91562321560923e-11,
+      "relative_PCr_max_abs": 1.1102230246251565e-16,
+      "oxygen_scale_error_W": 4.547473508864641e-13,
+      "reserve_scale_error_J": 9.094947017729282e-13
+    }
+  ],
+  "reduction": [
+    {
+      "design": "short_long",
+      "power_max_abs_W": 2.1600499167107046e-12,
+      "relative_PCr_max_abs": 4.996003610813204e-16,
+      "energy_residual_J": -1.7462298274040222e-10,
+      "reduced_energy_residual_mechanical_J": 9.094947017729282e-12
+    },
+    {
+      "design": "short_incomplete",
+      "power_max_abs_W": 1.5717205315013416e-11,
+      "relative_PCr_max_abs": 1.5265566588595902e-16,
+      "energy_residual_J": -1.1641532182693481e-10,
+      "reduced_energy_residual_mechanical_J": -3.637978807091713e-12
+    },
+    {
+      "design": "medium_rest",
+      "power_max_abs_W": 1.1823431123048067e-11,
+      "relative_PCr_max_abs": 1.5265566588595902e-16,
+      "energy_residual_J": 2.6193447411060333e-10,
+      "reduced_energy_residual_mechanical_J": 9.094947017729282e-12
+    },
+    {
+      "design": "long_rest",
+      "power_max_abs_W": 2.4442670110147446e-12,
+      "relative_PCr_max_abs": 6.661338147750939e-16,
+      "energy_residual_J": -1.7462298274040222e-10,
+      "reduced_energy_residual_mechanical_J": 5.093170329928398e-11
+    },
+    {
+      "design": "predepleted",
+      "power_max_abs_W": 2.2168933355715126e-12,
+      "relative_PCr_max_abs": 1.3877787807814457e-16,
+      "energy_residual_J": -1.4551915228366852e-10,
+      "reduced_energy_residual_mechanical_J": -3.637978807091713e-12
+    },
+    {
+      "design": "long_effort",
+      "power_max_abs_W": 6.963318810448982e-12,
+      "relative_PCr_max_abs": 3.885780586188048e-16,
+      "energy_residual_J": -6.402842700481415e-10,
+      "reduced_energy_residual_mechanical_J": -9.094947017729282e-11
+    },
+    {
+      "design": "low_power",
+      "power_max_abs_W": 7.560174708487466e-12,
+      "relative_PCr_max_abs": 2.5673907444456745e-16,
+      "energy_residual_J": 2.9103830456733704e-10,
+      "reduced_energy_residual_mechanical_J": 3.637978807091713e-11
+    },
+    {
+      "design": "high_power",
+      "power_max_abs_W": 8.242295734817162e-12,
+      "relative_PCr_max_abs": 1.5265566588595902e-16,
+      "energy_residual_J": 1.7462298274040222e-10,
+      "reduced_energy_residual_mechanical_J": -6.184563972055912e-11
+    }
+  ],
+  "quotient": {
+    "fast_capacity_J_mechanical_equivalent": 2241.299303944313,
+    "slow_capacity_J_mechanical_equivalent": 6163.5730858468605,
+    "fast_power_cap_W_mechanical_equivalent": 560.3248259860783,
+    "slow_power_cap_W_mechanical_equivalent": 205.45243619489537,
+    "oxidative_excess_cap_mechanical_W": 340.23010223317834,
+    "fast_recovery_tau_s": 81.657,
+    "slow_recovery_tau_s": 600,
+    "recharge_efficiency": 0.8,
+    "oxygen_tau_s": 28
+  },
+  "generator": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.0
+  ]
+}

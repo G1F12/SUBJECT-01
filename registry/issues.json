@@ -91,7 +91,8 @@
     "impact": "Измерительные функции и синтетические тесты не устанавливают достижимость цели, tissue safety, интенсивность, duty cycle, физиологию утомления или восстановление.",
     "next_action": "Identify context-specific recovery from simultaneous individual PCr–VO2–power data; repeat locked participant holdout before architecture efficacy claims.",
     "progress_2026_11_04": "Dynamic model implemented and software-verified EXP-0011..0014; participant endpoint transfer negative. Empirical CPE45 validation, central/damage/thermal feedback remain unresolved.",
-    "progress_recovery_2026_11_04": "New independent21participant source,14dev/7test: physical correction fails. Exact metabolic-scale confounding and flat recovery profile; empiricalCPE45 validation remains absent."
+    "progress_recovery_2026_11_04": "New independent21participant source,14dev/7test: physical correction fails. Exact metabolic-scale confounding and flat recovery profile; empiricalCPE45 validation remains absent.",
+    "progress_cycle5_2026_11_04": "Two exact D2 symmetries and nine-combination quotient established. Real PCr files acquired, but no joint calibrated continuousVO2-power-PCr source. Historical negative tests preserved; issue remains open."
   },
   {
     "id": "ISS-0012",
@@ -116,7 +117,8 @@
     "severity": "high",
     "title": "Recovery: exact metabolic-scale confounding and missing jointPCr–VO2–power",
     "impact": "No physiological recovery coefficient identified. OSF offers phaseVO2extrema only; DryadPCr raw401/403. Eta and energy capacity cannot be separated from power alone.",
-    "next_action": "Acquire synchronized individualPCr–continuousVO2–power with independent metabolic-cost anchor; new locked participants required after current7test opened."
+    "next_action": "Acquire synchronized individualPCr–continuousVO2–power with independent metabolic-cost anchor; new locked participants required after current7test opened.",
+    "progress_cycle5_2026_11_04": "Two exact D2 symmetries and nine-combination quotient established. Real PCr files acquired, but no joint calibrated continuousVO2-power-PCr source. Historical negative tests preserved; issue remains open."
   },
   {
     "id": "ISS-0015",
@@ -125,5 +127,13 @@
     "title": "Новая независимая выборка: baseline noise, fit loss и raw licence ограничивают перенос",
     "impact": "Normalized fit loss vs W-RMSE selection changes participant weights; firstbaseline variability not decomposed; OSF node_license=null, raw pinned retrieval only.",
     "next_action": "Resolve source licensing and measurement/baseline reliability; preregister a new model/loss before another independent test."
+  },
+  {
+    "id": "ISS-0016",
+    "status": "open",
+    "severity": "high",
+    "title": "PCr/VO2 measurement maps require independent gain, baseline, timing and active-volume calibration",
+    "impact": "Full local synthetic rank11 assumes known local oxidativeW and fast-PCr map; ordinary pulmonaryVO2 and ATP-normalizedPCr need additional nuisanceparameters. New independent power test absent.",
+    "next_action": "Obtain one synchronized sameparticipant power-continuousVO2-PCr numerical dataset with independent scale and baseline calibration; preregister before newparticipant validation."
   }
 ]

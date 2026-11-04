@@ -1,0 +1,55 @@
+{
+  "origin": "separate synthetic twitch map; fatigue not equated to PCr",
+  "parameters": [
+    "rate_s_inv",
+    "tau_s"
+  ],
+  "spectral": {
+    "rank": 2,
+    "nullity": 0,
+    "singular_values": [
+      9.669405717004743,
+      3.2577148476174957
+    ],
+    "ranks_by_relative_threshold": {
+      "0.0001": 2,
+      "1e-06": 2,
+      "1e-08": 2
+    },
+    "condition_identifiable": 2.9681559526538632,
+    "condition_full": 2.9681559526538632,
+    "sensitivity_cosines": [
+      [
+        1.0,
+        0.7790279834175984
+      ],
+      [
+        0.7790279834175984,
+        1.0000000000000002
+      ]
+    ],
+    "projected_parameter_correlations": [
+      [
+        1.0000000000000002,
+        -0.779027983417598
+      ],
+      [
+        -0.779027983417598,
+        0.9999999999999998
+      ]
+    ],
+    "correlation_warning": "pinv correlations only in estimable local subspace; no marginal CI for unidentified parameters",
+    "null_vectors": [],
+    "FIM": [
+      [
+        65.67982143990481,
+        39.13865340177885
+      ],
+      [
+        39.13865340177885,
+        38.43029150852669
+      ]
+    ]
+  },
+  "assumptions": "known baseline, known activation history, twitch=1-fatigue with calibrated gain; unknown gain confounds rate; voluntary MVC alone does not separate central activation"
+}

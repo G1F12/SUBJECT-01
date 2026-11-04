@@ -151,5 +151,33 @@
     "status": "arithmetic_reproduced",
     "claim": "Corrected paid-reserve module conserves energy and runs2700s stably,200.58kJ external work in isolated6/12s scenario.",
     "limits": "Mathematical stress test, not prediction of human endurance or architecture superiority; heatgenerated not heatstorage."
+  },
+  {
+    "id": "FND-0021",
+    "experiment_id": "EXP-0019",
+    "status": "arithmetic_reproduced",
+    "claim": "D2 has two exact power symmetries: eta/metabolic scale and additive oxidative baseline; nine invariant combinations preserve power. General trace design local rank9/11 vs historic normalized rank7/11, different experiment.",
+    "limits": "Conditional computation/content inspection, not human augmentation or full CPE45 validation; see Cycle5 report"
+  },
+  {
+    "id": "FND-0022",
+    "experiment_id": "EXP-0020",
+    "status": "arithmetic_reproduced",
+    "claim": "Actual numeric PCr obtained: Figshare two participants/six scans/522 relative cells; plantar MAT144 points/one subject; PeerJ XLS17 participants. None contains synchronized continuous human VO2 and calibrated power.",
+    "limits": "Conditional computation/content inspection, not human augmentation or full CPE45 validation; see Cycle5 report"
+  },
+  {
+    "id": "FND-0023",
+    "experiment_id": "EXP-0021",
+    "status": "arithmetic_reproduced",
+    "claim": "Under known local oxidative-W and PCr map, combined M1/M3 rank9, M4rank10, M2/M5/M6/M7energy rank11. Unknown VO2gain restores scale symmetry. Full calibrated M5 robustD favors30/60s; E favors6/30s within finite grid.",
+    "limits": "Conditional computation/content inspection, not human augmentation or full CPE45 validation; see Cycle5 report"
+  },
+  {
+    "id": "FND-0024",
+    "experiment_id": "EXP-0022",
+    "status": "arithmetic_reproduced",
+    "claim": "Exact nine-combination quotient power parity below1.6e-11W; noiseless nonlinear optimizer still maxparametererror1.2%, illustrating local practical recovery limits. New external validation absent.",
+    "limits": "Conditional computation/content inspection, not human augmentation or full CPE45 validation; see Cycle5 report"
   }
 ]

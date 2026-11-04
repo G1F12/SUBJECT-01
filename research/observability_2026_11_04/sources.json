@@ -1,0 +1,166 @@
+[
+  {
+    "id": "SRC-0043",
+    "doi": "10.1073/pnas.2302738120",
+    "title": "WASF3 disrupts mitochondrial respiration and may mediate exercise intolerance in myalgic encephalomyelitis/chronic fatigue syndrome",
+    "year": 2023,
+    "url": "https://doi.org/10.1073/pnas.2302738120",
+    "metadata": {
+      "label": "SRC-43",
+      "url": "https://api.crossref.org/works/10.1073/pnas.2302738120",
+      "request_body": null,
+      "status": 200,
+      "bytes": 14749,
+      "content_type": "application/json",
+      "sha256": "c3bd0eb9e8274d5d79f0b177a342ec12c68c2697df08eefb9eba7bd6de1087c5",
+      "cache": "SRC-43.bin"
+    },
+    "relations": {},
+    "update_to": [],
+    "limits": "Bibliography, accessible methods and supplementary file contents where obtained; limited notice fields, not exhaustive retraction/correction audit"
+  },
+  {
+    "id": "SRC-0044",
+    "doi": "10.3389/fbioe.2020.00622",
+    "title": "Energy Expenditure of Dynamic Submaximal Human Plantarflexion Movements: Model Prediction and Validation by in-vivo Magnetic Resonance Spectroscopy",
+    "year": 2020,
+    "url": "https://doi.org/10.3389/fbioe.2020.00622",
+    "metadata": {
+      "label": "SRC-44",
+      "url": "https://api.crossref.org/works/10.3389/fbioe.2020.00622",
+      "request_body": null,
+      "status": 200,
+      "bytes": 23432,
+      "content_type": "application/json",
+      "sha256": "58c59b1a4eaddaebed7fa9ae9b7a8f843eadcfa2de2ac08ffff7e080890f3e2b",
+      "cache": "SRC-44.bin"
+    },
+    "relations": {},
+    "update_to": [],
+    "limits": "Bibliography, accessible methods and supplementary file contents where obtained; limited notice fields, not exhaustive retraction/correction audit"
+  },
+  {
+    "id": "SRC-0045",
+    "doi": "10.7717/peerj.2259",
+    "title": "Non-invasive assessment of phosphate metabolism and oxidative capacity in working skeletal muscle in healthy young Chinese volunteers using (31)P Magnetic Resonance Spectroscopy.",
+    "year": 2016,
+    "url": "https://doi.org/10.7717/peerj.2259",
+    "metadata": {
+      "label": "SRC-45_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.7717/peerj.2259",
+      "request_body": null,
+      "status": 200,
+      "bytes": 8591,
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "8e9feb5bd9b3ca67f14a63e17352dfcf47ca601f894afab91cb410f4a2f92a03",
+      "cache": "SRC-45_epmc.bin"
+    },
+    "crossref_blocker": {
+      "label": "SRC-45",
+      "url": "https://api.crossref.org/works/10.7717/peerj.2259",
+      "request_body": null,
+      "status": 429,
+      "error": "HTTP Error 429: Too Many Requests",
+      "numeric_obtained": false
+    },
+    "notices": {},
+    "limits": "Indexed bibliography and accessible methods; Crossref rate limited, no exhaustive notices audit"
+  },
+  {
+    "id": "SRC-0046",
+    "doi": "10.3389/fphys.2021.599514",
+    "title": "Magnetic Resonance-Compatible Arm-Crank Ergometry: A New Platform Linking Whole-Body Calorimetry to Upper-Extremity Biomechanics and Arm Muscle Metabolism.",
+    "year": 2021,
+    "url": "https://doi.org/10.3389/fphys.2021.599514",
+    "metadata": {
+      "label": "SRC-46_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3389/fphys.2021.599514",
+      "request_body": null,
+      "status": 200,
+      "bytes": 7352,
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "50f742c59f329d36b07320b3ca29b558c328dcc9ebdcd33b20c7e202ebc88bf7",
+      "cache": "SRC-46_epmc.bin"
+    },
+    "crossref_blocker": {
+      "label": "SRC-46",
+      "url": "https://api.crossref.org/works/10.3389/fphys.2021.599514",
+      "request_body": null,
+      "status": 429,
+      "error": "HTTP Error 429: Too Many Requests",
+      "numeric_obtained": false
+    },
+    "notices": {
+      "commentCorrection": [
+        {
+          "source": "PPR",
+          "id": "PPR184631",
+          "type": "Preprint in",
+          "note": "CrossRef Pre-print loader",
+          "orderIn": 10002
+        }
+      ]
+    },
+    "limits": "Indexed bibliography and accessible methods; Crossref rate limited, no exhaustive notices audit"
+  },
+  {
+    "id": "SRC-0047",
+    "doi": "10.1002/mrm.70337",
+    "title": "Simultaneous Assessment of Skeletal Muscle Energetics and Blood Flow During Dynamic Exercise by Interleaved\n                    <scp>\n                      <sup>31</sup>\n                      P\n                    </scp>\n                    ‐\n                    <scp>MRS</scp>\n                    /\n                    <scp>\n                      <sup>1</sup>\n                      H\n                    </scp>\n                    ‐\n                    <scp>MRI</scp>",
+    "year": 2026,
+    "url": "https://doi.org/10.1002/mrm.70337",
+    "metadata": {
+      "label": "SRC-47",
+      "url": "https://api.crossref.org/works/10.1002/mrm.70337",
+      "request_body": null,
+      "status": 200,
+      "bytes": 17210,
+      "content_type": "application/json",
+      "sha256": "0e9abbd4b982aaf9ad093251e07b8908e95ad20fbcb94b493ca3751916f90bf8",
+      "cache": "SRC-47.bin"
+    },
+    "relations": {},
+    "update_to": [],
+    "limits": "Bibliography, accessible methods and supplementary file contents where obtained; limited notice fields, not exhaustive retraction/correction audit"
+  },
+  {
+    "id": "SRC-0048",
+    "doi": "10.3390/diagnostics16050744",
+    "title": "pH-Resolved ATP Synthesis in Skeletal Muscle: Concept, Implementation, and Assessment Using Dynamic 31P Magnetic Resonance Spectroscopy at 7T",
+    "year": 2026,
+    "url": "https://doi.org/10.3390/diagnostics16050744",
+    "metadata": {
+      "label": "SRC-48",
+      "url": "https://api.crossref.org/works/10.3390/diagnostics16050744",
+      "request_body": null,
+      "status": 200,
+      "bytes": 22950,
+      "content_type": "application/json",
+      "sha256": "086c9accb52af3623941b3a0356c113020256a7fa7d83a78efae314cb53f2b97",
+      "cache": "SRC-48.bin"
+    },
+    "relations": {},
+    "update_to": [],
+    "limits": "Bibliography, accessible methods and supplementary file contents where obtained; limited notice fields, not exhaustive retraction/correction audit"
+  },
+  {
+    "id": "SRC-0049",
+    "doi": "10.1038/srep01182",
+    "title": "Integrating muscle cell biochemistry and whole-body physiology in humans:31P-MRS data from the InSight trial",
+    "year": 2013,
+    "url": "https://doi.org/10.1038/srep01182",
+    "metadata": {
+      "label": "SRC-49",
+      "url": "https://api.crossref.org/works/10.1038/srep01182",
+      "request_body": null,
+      "status": 200,
+      "bytes": 16248,
+      "content_type": "application/json",
+      "sha256": "5a7a8c4190ee0b3ad0f4c1c5e8d75c548cd263d133d44f7ee63f97d73ebee2bd",
+      "cache": "SRC-49.bin"
+    },
+    "relations": {},
+    "update_to": [],
+    "limits": "Bibliography, accessible methods and supplementary file contents where obtained; limited notice fields, not exhaustive retraction/correction audit"
+  }
+]
