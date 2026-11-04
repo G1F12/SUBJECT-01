@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SRC-0050",
+    "doi": "10.1186/s12966-024-01646-y",
+    "title": "Composite activity type and stride-specific energy expenditure estimation model for thigh-worn accelerometry.",
+    "year": 2024,
+    "pmid": "39256837",
+    "pmcid": "PMC11389320",
+    "metadata": {
+      "label": "SRC-0050_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1186/s12966-024-01646-y",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 7764,
+      "sha256": "dd0094dad5034c9bc3c5cd7d0c91281718366297fa2c6355a1860831a03d3b30",
+      "cache": "SRC-0050_epmc.bin"
+    },
+    "notices": {},
+    "retraction_indexed": null,
+    "scope": "bibliography, accessiblemethods andactualnumericfiles whereobtained; not exhaustive noticesaudit"
+  },
+  {
+    "id": "SRC-0051",
+    "doi": "10.1038/s41597-022-01643-5",
+    "title": "A multidevice and multimodal dataset for human energy expenditure estimation using wearable devices.",
+    "year": 2022,
+    "pmid": "36050312",
+    "pmcid": "PMC9436988",
+    "metadata": {
+      "label": "SRC-0051_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/s41597-022-01643-5",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 5474,
+      "sha256": "7777d1a4a13f8660b7a6bccbf0f228a60df168f9563feabae6b1b1ccebbe4195",
+      "cache": "SRC-0051_epmc.bin"
+    },
+    "notices": {},
+    "retraction_indexed": null,
+    "scope": "bibliography, accessiblemethods andactualnumericfiles whereobtained; not exhaustive noticesaudit"
+  },
+  {
+    "id": "SRC-0052",
+    "doi": "10.14814/phy2.70528",
+    "title": "Skeletal muscle energetics during submaximal contractions are linked to metabolic performance during ambulatory exercise: A pilot study in male adults.",
+    "year": 2025,
+    "pmid": "40859664",
+    "pmcid": "PMC12381362",
+    "metadata": {
+      "label": "SRC-0052_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.14814/phy2.70528",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 8403,
+      "sha256": "72698afb4fae371c259965625c46031b1de7e0577dae9be0989b6c2d5f04d0d5",
+      "cache": "SRC-0052_epmc.bin"
+    },
+    "notices": {},
+    "retraction_indexed": null,
+    "scope": "bibliography, accessiblemethods andactualnumericfiles whereobtained; not exhaustive noticesaudit"
+  },
+  {
+    "id": "SRC-0053",
+    "doi": "10.1113/jp291176",
+    "title": "Neither intracellular oxygen availability nor mitochondrial coupling explain lower oxidative capacity in older human vastus lateralis muscle in vivo.",
+    "year": 2026,
+    "pmid": "42227731",
+    "pmcid": "PMC13370723",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=TITLE:Neither%20intracellular%20oxygen%20availability%20nor%20mitochondrial%20coupling",
+    "metadata_sha256": "b55002883403a29a4ec6dbbceecda83e830402a55690e45ad5f0d78f91be5aed",
+    "raw_access": "fullTextXML500twice; numericfiles not obtained; noindividualdataused"
+  },
+  {
+    "id": "SRC-0054",
+    "doi": "10.1113/jphysiol.1949.sp004363",
+    "title": "New methods for calculating metabolic rate with special reference to protein metabolism.",
+    "year": 1949,
+    "pmid": "15394301",
+    "pmcid": null,
+    "metadata": {
+      "label": "SRC-0054_epmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1113/jphysiol.1949.sp004363",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 2113,
+      "sha256": "dbfbce9feabc08787a97f263a355c513412f5176057b91ef536998959fa7a9b3",
+      "cache": "SRC-0054_epmc.bin"
+    },
+    "notices": {},
+    "retraction_indexed": null,
+    "scope": "bibliography, accessiblemethods andactualnumericfiles whereobtained; not exhaustive noticesaudit"
+  },
+  {
+    "id": "SRC-0055",
+    "doi": "10.13026/hv8f-3w60",
+    "title": "Brno University of Technology Continuous Glycaemia, ECG, Activity and Food Intake Database (BUT CGM)",
+    "year": 2026,
+    "version": "1.0.0",
+    "metadata": {
+      "label": "physionet_but_cgm",
+      "url": "https://www.physionet.org/content/but-cgm/1.0.0/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 75306,
+      "sha256": "f9cf0705e50a46d17f3e58b42363ee7cbd01b4102133cfdb0d3d030bb72e8efa",
+      "cache": "physionet_but_cgm.bin"
+    },
+    "numeric_provenance": "physionet_probe.json",
+    "license": "CC BY 4.0",
+    "scope": "actual CPET numeric files one exploratory participant; no PCr or local calibration; not exhaustive notices audit"
+  }
+]

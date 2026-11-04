@@ -1,0 +1,68 @@
+{
+  "doi": "10.13026/hv8f-3w60",
+  "version": "1.0.0",
+  "license": "CC BY 4.0",
+  "numeric_participants_obtained": 1,
+  "participant": "BUT-CGM-101",
+  "source_population": 60,
+  "source_records": 65,
+  "warning": "154/155 repeated records share CPET; not independent people",
+  "rows": 531,
+  "median_interval_s": 2.1000000000000227,
+  "phases": {
+    "CoolDown": {
+      "rows": 46,
+      "first_s": 1049.3,
+      "last_s": 1125.18,
+      "recorded_WR_W_range": [
+        75.0,
+        75.0
+      ],
+      "VO2_L_min_range": [
+        1.9429793545094,
+        3.3466513124012
+      ]
+    },
+    "Test": {
+      "rows": 367,
+      "first_s": 302.68,
+      "last_s": 1047.76,
+      "recorded_WR_W_range": [
+        100.0,
+        280.0
+      ],
+      "VO2_L_min_range": [
+        1.31889831791058,
+        3.40524098595502
+      ]
+    },
+    "WarmUp": {
+      "rows": 118,
+      "first_s": 7.28,
+      "last_s": 299.2,
+      "recorded_WR_W_range": [
+        75.0,
+        75.0
+      ],
+      "VO2_L_min_range": [
+        0.614173579318831,
+        1.34729685278129
+      ]
+    }
+  },
+  "units_from_actual_summary": {
+    "VO2": "L/min",
+    "VCO2": "L/min",
+    "WR": "W",
+    "EE": "kcal/h"
+  },
+  "missing": [
+    "PCr",
+    "active muscle volume",
+    "local ATP flux",
+    "independent efficiency"
+  ],
+  "rights": "public CC BY4 license file obtained; raw ignored, only content summary redistributed",
+  "interpretation": "WarmUp/Test/CoolDown recorded. CoolDown WR is active workload, not zero-cost passive rest. EE is gas-derived, not an independent calorimeter.",
+  "validation": "NOT DONE; exploratory opened participant, no parameter fitting or model comparison"
+}

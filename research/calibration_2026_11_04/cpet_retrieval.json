@@ -1,0 +1,1889 @@
+{
+  "files": [
+    {
+      "member": "zenodo_repo/data/CPET/P10/P10_cycle.csv",
+      "cache": "P10_cycle.csv",
+      "bytes": 231184,
+      "sha256": "a220cc05bde4aac820fd0eb004afc7eb58daa6ddcc68e146993ca19416f08221",
+      "CRC32": 1862231917,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P10/P10_walk.csv",
+      "cache": "P10_walk.csv",
+      "bytes": 308014,
+      "sha256": "21960b4f08369ef1114cc1512e0dcd11f99fe8657619aaf4e996a39a15d2baf5",
+      "CRC32": 1782037065,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P11/P11_cycle.csv",
+      "cache": "P11_cycle.csv",
+      "bytes": 277361,
+      "sha256": "d1c1138e686671f8fcf6dbd6f8a5770859193056f865b15be371d731085c2301",
+      "CRC32": 2577405719,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P11/P11_walk.csv",
+      "cache": "P11_walk.csv",
+      "bytes": 293002,
+      "sha256": "e2bd7d1be9e763a43a5663be0e548d815ea877af7d842f0518426ef1cee43d05",
+      "CRC32": 1870995495,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P12/P12_cycle.csv",
+      "cache": "P12_cycle.csv",
+      "bytes": 221448,
+      "sha256": "752561704642f7265016396db8d774db6af53e4387949be29d11c2b2d3d93082",
+      "CRC32": 341057023,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P12/P12_walk.csv",
+      "cache": "P12_walk.csv",
+      "bytes": 439971,
+      "sha256": "fc6afa83107467b32581611f1ee58b29702cab04847a3d2e900da1d5da549a73",
+      "CRC32": 2723620083,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P13/P13_cycle.csv",
+      "cache": "P13_cycle.csv",
+      "bytes": 271903,
+      "sha256": "32f01e056102e9ee3588a05866b1dfdf8e03c3128881fc35986ede220215f623",
+      "CRC32": 3568401698,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P13/P13_walk.csv",
+      "cache": "P13_walk.csv",
+      "bytes": 386082,
+      "sha256": "b55b448f7d6461eee2ddf0a567a167285f5f908b55acfa0cc9398f5d7dc8af3f",
+      "CRC32": 1124850319,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P14/P14_cycle.csv",
+      "cache": "P14_cycle.csv",
+      "bytes": 204515,
+      "sha256": "e3c567d12547404be40bb63494bbe589c38a05c7eba9501eef8e0d2f6e0741b5",
+      "CRC32": 6433840,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P14/P14_walk.csv",
+      "cache": "P14_walk.csv",
+      "bytes": 287463,
+      "sha256": "7015e02616fae563e6d0845197c96333e7eb7b7d1a621dfc62f340e6aabed39a",
+      "CRC32": 2276499888,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P15/P15_cycle.csv",
+      "cache": "P15_cycle.csv",
+      "bytes": 282463,
+      "sha256": "81840d1b17fe4b095b4bbf260b9b4fa2557e29fbde51405e515ed7c38fae89b0",
+      "CRC32": 1073792841,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P15/P15_walk.csv",
+      "cache": "P15_walk.csv",
+      "bytes": 332537,
+      "sha256": "cecb2130823589268abbf3c586202900d14da5c597f44aa6b28668be76a624a0",
+      "CRC32": 4049860129,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P16/P16_cycle.csv",
+      "cache": "P16_cycle.csv",
+      "bytes": 7311,
+      "sha256": "52240817d7012c96376ea17e3edc2151d6a27b708d1459d687669666f2233f6c",
+      "CRC32": 180696879,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P16/P16_walk.csv",
+      "cache": "P16_walk.csv",
+      "bytes": 307146,
+      "sha256": "73d6c87be507d95986114ff81275345d92cb5dbfd5711f4f4da86c2bf4de9d10",
+      "CRC32": 2589243797,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P17/P17_cycle.csv",
+      "cache": "P17_cycle.csv",
+      "bytes": 359156,
+      "sha256": "036f3b03ec00d484c570d3bfd035502a53a5aabdec997d829cefc21efe262537",
+      "CRC32": 3809728625,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P17/P17_walk.csv",
+      "cache": "P17_walk.csv",
+      "bytes": 450646,
+      "sha256": "79bbe0689a16a983a18eb0656c344203e3da59b7907b25dfa6acae4156d91102",
+      "CRC32": 2842565595,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P18/P18_cycle.csv",
+      "cache": "P18_cycle.csv",
+      "bytes": 189253,
+      "sha256": "838e13d960fa9013ed5f01deb9a26d7d67b0f1206f9b4c059eaa79e64bb2295f",
+      "CRC32": 3774412387,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P18/P18_walk.csv",
+      "cache": "P18_walk.csv",
+      "bytes": 274117,
+      "sha256": "a5e1ff45f850ff806f2f48ba5cefc03c67b9c146f8122b90849e434bbd46fab5",
+      "CRC32": 333133585,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P19/P19_cycle.csv",
+      "cache": "P19_cycle.csv",
+      "bytes": 200938,
+      "sha256": "9c9ce13c1b11fdd02874cf00de056c7ee7c587eadde2f6e1cec269257130bf01",
+      "CRC32": 3941507610,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P19/P19_walk.csv",
+      "cache": "P19_walk.csv",
+      "bytes": 289660,
+      "sha256": "918971ae0e8a5743f10886e4b8061c03f05590e366012db14a5c2692abd930cf",
+      "CRC32": 1807428929,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P2/P2_cycle.csv",
+      "cache": "P2_cycle.csv",
+      "bytes": 288115,
+      "sha256": "873afcb7b68a78bad1a5e175b9655801b741ab2d25a2584c6494b231c384d841",
+      "CRC32": 2747366422,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P2/P2_walk.csv",
+      "cache": "P2_walk.csv",
+      "bytes": 412848,
+      "sha256": "ed8c0fa3291fd73b6b5245e8eeac2f9d11ffa7e9f5340b44b83838cb3f716cbd",
+      "CRC32": 750924721,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P20/P20_cycle.csv",
+      "cache": "P20_cycle.csv",
+      "bytes": 236142,
+      "sha256": "73d03396db87914aadb0791570b2556a701bf906a9ca7a262da93511f3276ea0",
+      "CRC32": 3385267691,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P20/P20_walk.csv",
+      "cache": "P20_walk.csv",
+      "bytes": 269321,
+      "sha256": "0aaf0b986fad2833ad192404efe4e1f746470928956d6e22db2dcdddd7becbbb",
+      "CRC32": 1095572188,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P21/P21_cycle.csv",
+      "cache": "P21_cycle.csv",
+      "bytes": 238323,
+      "sha256": "2517859dddc941c984f8af176d27552a0d871e21ad9456017b16611ae18b85b3",
+      "CRC32": 4051455500,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P21/P21_walk.csv",
+      "cache": "P21_walk.csv",
+      "bytes": 308079,
+      "sha256": "e502b0f6bc626a6a62970fc9c6da57407f608cd7b4f8d1f10b8ca0ae706fcf49",
+      "CRC32": 3158767651,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P22/P22_cycle.csv",
+      "cache": "P22_cycle.csv",
+      "bytes": 376242,
+      "sha256": "aed1b4318f93735f49018573b71bc890b436db70367ab23dfea74ec605a53084",
+      "CRC32": 3315011545,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P22/P22_walk.csv",
+      "cache": "P22_walk.csv",
+      "bytes": 407238,
+      "sha256": "e185eff0a4d97afd8ab5a9c39d579097cb9141ae0ad8403215c1c520f4956f2a",
+      "CRC32": 2562032798,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P23/P23_cycle.csv",
+      "cache": "P23_cycle.csv",
+      "bytes": 167601,
+      "sha256": "9db6184a11c10dc44ed4f79f694a8f3c8029f9160e7dcb11c48f43a278e14f8f",
+      "CRC32": 3277289944,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P23/P23_walk.csv",
+      "cache": "P23_walk.csv",
+      "bytes": 283028,
+      "sha256": "e6aa88aea100c42bded1da303d7f234c485ecafd50d4e3d604ed1aa6d794ad6f",
+      "CRC32": 864554048,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P24/P24_cycle.csv",
+      "cache": "P24_cycle.csv",
+      "bytes": 221940,
+      "sha256": "37bfe4e8d9e051a61c1ecb5a162fc83c09646020832802a233030c9f2856cb54",
+      "CRC32": 504104596,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P24/P24_walk.csv",
+      "cache": "P24_walk.csv",
+      "bytes": 342994,
+      "sha256": "657d26093469e15c5bfdfe7c49f594772598ec120a5c93d96a407eff016b8220",
+      "CRC32": 592466103,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P25/P25_cycle.csv",
+      "cache": "P25_cycle.csv",
+      "bytes": 238581,
+      "sha256": "4b898462ca7f175871f98d40ca1c3c154cc53a32f4347ab8a08a17a3851b7987",
+      "CRC32": 1406991191,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P25/P25_walk.csv",
+      "cache": "P25_walk.csv",
+      "bytes": 363262,
+      "sha256": "4b10f79eb0aa072a003bf3d1e0c131875592e55acafa5142e9a5866bdabd3128",
+      "CRC32": 2382180607,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P26/P26_cycle.csv",
+      "cache": "P26_cycle.csv",
+      "bytes": 323281,
+      "sha256": "b760ebcb1e8bd1113337482ef667e152ca02d39a0effce0b5a1a0f813c93471e",
+      "CRC32": 2753301348,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P26/P26_walk.csv",
+      "cache": "P26_walk.csv",
+      "bytes": 390665,
+      "sha256": "69ce1c0d7cef2ffe2f1b16f8b1e2dfa57deff607da798211d5a7a9f9e96e3588",
+      "CRC32": 2156961222,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P27/P27_cycle.csv",
+      "cache": "P27_cycle.csv",
+      "bytes": 245776,
+      "sha256": "c9ff1a70176a0378ccd750336f55a980820abb334bffb437269b668d7e04f885",
+      "CRC32": 2623886864,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P27/P27_walk.csv",
+      "cache": "P27_walk.csv",
+      "bytes": 183632,
+      "sha256": "84beabddd6a7d400a6bde77c6d7b6b7da486568e9d83434e410251d63592e302",
+      "CRC32": 2884302,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P28/P28_cycle.csv",
+      "cache": "P28_cycle.csv",
+      "bytes": 237794,
+      "sha256": "8a2e6f53b42a2c6e26993ffb587831bbf09e640413f6018bbd913036b881039d",
+      "CRC32": 2970925955,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P28/P28_walk.csv",
+      "cache": "P28_walk.csv",
+      "bytes": 332808,
+      "sha256": "ff7421230bb79de661bc91ff5c82d81db83e149dccf0cf2af6aaf89177da5374",
+      "CRC32": 2859332800,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P29/P29_walk.csv",
+      "cache": "P29_walk.csv",
+      "bytes": 224048,
+      "sha256": "1edf14364ad576fc8f1c2ea6193606d82b92e03b2e592c464cb69b5f4f962d6e",
+      "CRC32": 1814696269,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P3/P3_cycle.csv",
+      "cache": "P3_cycle.csv",
+      "bytes": 173153,
+      "sha256": "ee25084094180825843d44d42d850a84db555640e69bdca78d41d37c94d27be4",
+      "CRC32": 2000423628,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P3/P3_walk.csv",
+      "cache": "P3_walk.csv",
+      "bytes": 259710,
+      "sha256": "319ca65678dbbb867af005a4e9b9a82b3613eccceeca2e05768d4aa141c8958c",
+      "CRC32": 1995598259,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P30/P30_cycle.csv",
+      "cache": "P30_cycle.csv",
+      "bytes": 185507,
+      "sha256": "5303e9de040c245830fe659e40da2b8d636a7a479e17f781d9e606cef80c7fd0",
+      "CRC32": 2971494202,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P30/P30_walk.csv",
+      "cache": "P30_walk.csv",
+      "bytes": 267070,
+      "sha256": "997b4f22b21fba36860f78d06c1a4badf8136176551945258f43ad6b56d18483",
+      "CRC32": 2816592946,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P31/P31_cycle.csv",
+      "cache": "P31_cycle.csv",
+      "bytes": 172207,
+      "sha256": "886bba8dc410208a0d91e094d2e408917c359e4310d7b91fac99d1cb38f83c24",
+      "CRC32": 20840657,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P31/P31_walk.csv",
+      "cache": "P31_walk.csv",
+      "bytes": 206674,
+      "sha256": "e0a0d6c3a3d697244374f84b86e26ebfd75f882a49ac5d2e2d70ee042cc527b2",
+      "CRC32": 3891350196,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P32/P32_cycle.csv",
+      "cache": "P32_cycle.csv",
+      "bytes": 197798,
+      "sha256": "4107ce6d024ed45dd00d70657082f5bc99550785af4f327efbb25d3c92a4ad62",
+      "CRC32": 370765492,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P32/P32_walk.csv",
+      "cache": "P32_walk.csv",
+      "bytes": 308073,
+      "sha256": "bec535f55fd82a5252a83e78e786f37108ba85adc3119d36b9b728ccef929c26",
+      "CRC32": 3794474886,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P33/P33_cycle.csv",
+      "cache": "P33_cycle.csv",
+      "bytes": 161892,
+      "sha256": "cff1b8206a755d5a0dc4eca0447ea775f0d27fa16f6372e53858ed01260f1e0f",
+      "CRC32": 1727002258,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P33/P33_walk.csv",
+      "cache": "P33_walk.csv",
+      "bytes": 259225,
+      "sha256": "019b55ca903ce6167dc032da34ed8af512a3ed943d37ce0540dc0068016d6a7b",
+      "CRC32": 2467127683,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P34/P34_cycle.csv",
+      "cache": "P34_cycle.csv",
+      "bytes": 165574,
+      "sha256": "823acef1068ecf7296e0c184a1a1dc5d81767a37c218cba154f4c46327a5750d",
+      "CRC32": 3552119000,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P34/P34_walk.csv",
+      "cache": "P34_walk.csv",
+      "bytes": 315996,
+      "sha256": "55c7a293c8820ce462dd08e31df8050850d5d9a83a3a22efb999eb45be715e15",
+      "CRC32": 1420841559,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P35/P35_cycle.csv",
+      "cache": "P35_cycle.csv",
+      "bytes": 263339,
+      "sha256": "95bf8a49b42343f15da4e36357fbe9c718981f77b96b71ff44f34969c09b73d1",
+      "CRC32": 1004178900,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P35/P35_walk.csv",
+      "cache": "P35_walk.csv",
+      "bytes": 309064,
+      "sha256": "5313e1e1dafd0b82ed2a92f429f550e494f14b0f58634918da20c4f956d0b655",
+      "CRC32": 3730073760,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P36/P36_cycle.csv",
+      "cache": "P36_cycle.csv",
+      "bytes": 243274,
+      "sha256": "7471123b6690d3244300c2b4c84ab1fd27b61c1359130d4d22eaab50a7a6a883",
+      "CRC32": 2006949867,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P36/P36_walk.csv",
+      "cache": "P36_walk.csv",
+      "bytes": 335930,
+      "sha256": "610e9ad120cc06107faa074685daff373d95a0107e5ae9664264a7602123565d",
+      "CRC32": 3081087989,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P37/P37_cycle.csv",
+      "cache": "P37_cycle.csv",
+      "bytes": 244767,
+      "sha256": "ef0c9c28013e4015e06f38b2ae690874db091d7a26751f1d2d6b0f0b24292f35",
+      "CRC32": 345003409,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P37/P37_walk.csv",
+      "cache": "P37_walk.csv",
+      "bytes": 276202,
+      "sha256": "37daebfcf0ff3308b367b14ad31fb6f3c9baa52ecb6aa576072d67341726d283",
+      "CRC32": 305881083,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P38/P38_cycle.csv",
+      "cache": "P38_cycle.csv",
+      "bytes": 200767,
+      "sha256": "5c697a5bb20a8a64f0e386f01c8a20488c724f2934d89e91c7d7f0a4be505d9d",
+      "CRC32": 1012521403,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P38/P38_walk.csv",
+      "cache": "P38_walk.csv",
+      "bytes": 303173,
+      "sha256": "6b29c93497dd1c68ffec87e771bfebd47c6eed60e88f8175c452f1002eb632d0",
+      "CRC32": 2064851563,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P39/P39_cycle.csv",
+      "cache": "P39_cycle.csv",
+      "bytes": 248224,
+      "sha256": "d19af25f22f1c983804d66fe26d99f52a0f6c189b8d3c9cba3f1bfec0ed2a1a9",
+      "CRC32": 1252435843,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P39/P39_walk.csv",
+      "cache": "P39_walk.csv",
+      "bytes": 310184,
+      "sha256": "750740761be4f8b6d7f923bf9f9a59bf9675d51686062b59bae15f19486fac89",
+      "CRC32": 4203660252,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P4/P4_cycle.csv",
+      "cache": "P4_cycle.csv",
+      "bytes": 189961,
+      "sha256": "ab253c99893af9e6d3bae5b7c8dc8401b58732fb8eef4008f188f884dbba3a5c",
+      "CRC32": 2216196304,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P4/P4_walk.csv",
+      "cache": "P4_walk.csv",
+      "bytes": 313228,
+      "sha256": "9a0815ea7b3b77573f9ed257ff5a56dfdfb2cbb5e818a7b37e7a8a5b346a1605",
+      "CRC32": 589373281,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P40/P40_cycle.csv",
+      "cache": "P40_cycle.csv",
+      "bytes": 196740,
+      "sha256": "f670d4ed63482bc2c6451520c81bd182645d05f956d2ef83950b927210085b61",
+      "CRC32": 1025173621,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P40/P40_walk.csv",
+      "cache": "P40_walk.csv",
+      "bytes": 276685,
+      "sha256": "0f16ee9f0fe1451eb32e973bd6f19c2f257610f7ab06b22a3ee8d3e069cd4596",
+      "CRC32": 3893269188,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P41/P41_walk.csv",
+      "cache": "P41_walk.csv",
+      "bytes": 255099,
+      "sha256": "1498e2c849d1f81152a84146957fdebc25ed4ccf4a16a865283d96de228e095d",
+      "CRC32": 1414030238,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P42/P42_cycle.csv",
+      "cache": "P42_cycle.csv",
+      "bytes": 201608,
+      "sha256": "272ce09fd7d8df0367e0b0d2d2e591ae1f3bad5316b248fff30a03d8fe695488",
+      "CRC32": 1120278017,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P42/P42_walk.csv",
+      "cache": "P42_walk.csv",
+      "bytes": 284141,
+      "sha256": "9028f50bf154d3c64efc6c0f17b768c7bf083157f592fe808163f6d9da5d8020",
+      "CRC32": 4133370868,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P43/P43_cycle.csv",
+      "cache": "P43_cycle.csv",
+      "bytes": 187174,
+      "sha256": "fb474fcee335be05f24f78b28b6b89e3b055c37429073b72002039d0b78b4582",
+      "CRC32": 2488286412,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P43/P43_walk.csv",
+      "cache": "P43_walk.csv",
+      "bytes": 305052,
+      "sha256": "aa5fe7d271aa834f231dd7dfddb57c8bad5617a052a3b47f2188d7c1c74b538c",
+      "CRC32": 4113059443,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P44/P44_cycle.csv",
+      "cache": "P44_cycle.csv",
+      "bytes": 239584,
+      "sha256": "f13716c054c71dbf96af69b9488222a563d9629dacaeccb3f486eb3f15924cc9",
+      "CRC32": 1457262169,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P44/P44_walk.csv",
+      "cache": "P44_walk.csv",
+      "bytes": 325034,
+      "sha256": "76423c7f07a01116852fd0869bb224f18fa0ca83bfb4d4dd8610a40dde8f40c4",
+      "CRC32": 4293904683,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P45/P45_walk.csv",
+      "cache": "P45_walk.csv",
+      "bytes": 298945,
+      "sha256": "94135d6ec3e0dac4214af416c42ad7cc9903ebfb70e478efc1f694cd9d178d44",
+      "CRC32": 2791563569,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P46/P46_cycle.csv",
+      "cache": "P46_cycle.csv",
+      "bytes": 186516,
+      "sha256": "eb5435e025f1e6bd98ec912c3e2020642f928abdce93e96151491f5d5c572989",
+      "CRC32": 3521530244,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P46/P46_walk.csv",
+      "cache": "P46_walk.csv",
+      "bytes": 312375,
+      "sha256": "7268985d18b0bde612ca458104e1caa202004ebfda4853cdf8ba5ca63c4e1cd3",
+      "CRC32": 3516267148,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P47/P47_cycle.csv",
+      "cache": "P47_cycle.csv",
+      "bytes": 127960,
+      "sha256": "e6d8cadb3a5da5ec60d4f3e8908118186c8e80f9534ca41bab36e0f2f80ee955",
+      "CRC32": 446249920,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P47/P47_walk.csv",
+      "cache": "P47_walk.csv",
+      "bytes": 230952,
+      "sha256": "631afef57a78bfdf3ca227b4e8e8d14951a52ce53927585044d4d092bddf32dc",
+      "CRC32": 1362841054,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P48/P48_cycle.csv",
+      "cache": "P48_cycle.csv",
+      "bytes": 188969,
+      "sha256": "4335000d194444318b1636aafee04269e752c6c8b00cf8098bffacd755ea5a71",
+      "CRC32": 744838809,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P48/P48_walk.csv",
+      "cache": "P48_walk.csv",
+      "bytes": 275432,
+      "sha256": "edb90298d802e220f625d286b481b58d0d291c4b5187610f618ae9e515e5b3f3",
+      "CRC32": 475952795,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P49/P49_cycle.csv",
+      "cache": "P49_cycle.csv",
+      "bytes": 287705,
+      "sha256": "7cdbfc9efa5179211f99abb373cd515f2119952e3e638a78050a48eb99ed15ff",
+      "CRC32": 2041650004,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P49/P49_walk.csv",
+      "cache": "P49_walk.csv",
+      "bytes": 385031,
+      "sha256": "2ef72bd80b85651e6876c03b9c86d270ec944cd60df67c1c1d4e46509f8a9aed",
+      "CRC32": 970242251,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P5/P5_cycle.csv",
+      "cache": "P5_cycle.csv",
+      "bytes": 206049,
+      "sha256": "3f80770812ec498c0ee86cfcded9507a01f045d8329a959ba73e1d5fb2088e58",
+      "CRC32": 2909836473,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P5/P5_walk.csv",
+      "cache": "P5_walk.csv",
+      "bytes": 265193,
+      "sha256": "9805c02f007844a7de6417af32add9bc9bc9fc9d70903fb81c3f23109dcb573b",
+      "CRC32": 3879550541,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P50/P50_cycle.csv",
+      "cache": "P50_cycle.csv",
+      "bytes": 245266,
+      "sha256": "846bfee3ed9e9c209cf779665070c7049d63396b29b731c969f6c1fc2c266df8",
+      "CRC32": 693553682,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P50/P50_walk.csv",
+      "cache": "P50_walk.csv",
+      "bytes": 404886,
+      "sha256": "1f473be649f61fdd8ee1a3fdf137f48c9fe55c06c905744714a3493fceb1c5fe",
+      "CRC32": 2844360597,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P51/P51_cycle.csv",
+      "cache": "P51_cycle.csv",
+      "bytes": 151589,
+      "sha256": "a89965c5cbcde4a2df4bab9fdc0377d57ecf3bbda1536e1a2d807c9780fb498e",
+      "CRC32": 1151947825,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P51/P51_walk.csv",
+      "cache": "P51_walk.csv",
+      "bytes": 300359,
+      "sha256": "dc608e0258f8aeb585c528074d30a31fb76e1503a7b3b80a402fd65671aee314",
+      "CRC32": 3823049846,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P52/P52_cycle.csv",
+      "cache": "P52_cycle.csv",
+      "bytes": 154991,
+      "sha256": "a2bf367e0cb8bff4203786b3a9b42993cba57dbb8c72e661bd3c4412c28e8d05",
+      "CRC32": 993524501,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P52/P52_walk.csv",
+      "cache": "P52_walk.csv",
+      "bytes": 332185,
+      "sha256": "35fe5874621ef3966bb3095e38bc889067527a7e094cd08d0d82e58938b5e41b",
+      "CRC32": 61762512,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P53/P53_cycle.csv",
+      "cache": "P53_cycle.csv",
+      "bytes": 141192,
+      "sha256": "75d73833cbefd1e2d83c7d3973690b50ac71acb79f8ed72cad9621cc5baf5faa",
+      "CRC32": 938565406,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P53/P53_walk.csv",
+      "cache": "P53_walk.csv",
+      "bytes": 345335,
+      "sha256": "45a34b3049f14994b17c333bda9aa03102972f1052bbaafbc6faafc36f8ebef2",
+      "CRC32": 2520859606,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P54/P54_cycle.csv",
+      "cache": "P54_cycle.csv",
+      "bytes": 108522,
+      "sha256": "faf12e2f55b397107d1aefd7f5137342c457a0e8b3085390b40ea71e01924ea3",
+      "CRC32": 752891582,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P54/P54_walk.csv",
+      "cache": "P54_walk.csv",
+      "bytes": 234244,
+      "sha256": "17d0cfe6f169d40bb660f1db2359cef368d3570530749beadb0734c24071f293",
+      "CRC32": 2452177279,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P55/P55_cycle.csv",
+      "cache": "P55_cycle.csv",
+      "bytes": 152669,
+      "sha256": "d0bcf5409a7f3057c7176550a89689abadbc6b4307df68ccc53dbcf718d96fc3",
+      "CRC32": 1077471032,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P55/P55_walk.csv",
+      "cache": "P55_walk.csv",
+      "bytes": 302399,
+      "sha256": "a454466b6c44646141038fc1d10deba57c9c183c302cd75eec9097a5b0d20954",
+      "CRC32": 1771567822,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P56/P56_cycle.csv",
+      "cache": "P56_cycle.csv",
+      "bytes": 82180,
+      "sha256": "48c56fdea8cda243cf4098d219a5f41583bd48ae38802e6fa2e1dc6ad80a2c31",
+      "CRC32": 3629669771,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P56/P56_walk.csv",
+      "cache": "P56_walk.csv",
+      "bytes": 247093,
+      "sha256": "edbfabdab1eec09c6b60bb37896e78253bb51b754351fe243835e8fd09aa547d",
+      "CRC32": 3365191415,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P57/P57_cycle.csv",
+      "cache": "P57_cycle.csv",
+      "bytes": 173453,
+      "sha256": "04a8efc02812a3973cc3accf7421922029eb324ffe5655d3eae1dd1a92863221",
+      "CRC32": 3308079777,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P57/P57_walk.csv",
+      "cache": "P57_walk.csv",
+      "bytes": 352864,
+      "sha256": "0f22047975bd3be85d8a1670226ec06d7819913b3022186a0c34858fd40e8da8",
+      "CRC32": 2643835047,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P58/P58_cycle.csv",
+      "cache": "P58_cycle.csv",
+      "bytes": 158846,
+      "sha256": "2b5cf52ea6898ed313f3fb923a182391e42f138681111730f71196d702edd2f4",
+      "CRC32": 1542635430,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P58/P58_walk.csv",
+      "cache": "P58_walk.csv",
+      "bytes": 323219,
+      "sha256": "28708d823388ae6cad6b42dec35158670321f826b4cfaf530f1e8432303e517e",
+      "CRC32": 3715446181,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P59/P59_cycle.csv",
+      "cache": "P59_cycle.csv",
+      "bytes": 135322,
+      "sha256": "0011a242ffe783bc74f05d991560f60e925b1faa92762e0ec93b1bfbe47fa2ee",
+      "CRC32": 3804027127,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P59/P59_walk.csv",
+      "cache": "P59_walk.csv",
+      "bytes": 303990,
+      "sha256": "a506e9d66d8a92e8809de16bbe8df36c05f100715eee503c99a7705ed32442c5",
+      "CRC32": 2383743000,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P6/P6_cycle.csv",
+      "cache": "P6_cycle.csv",
+      "bytes": 244675,
+      "sha256": "1dea46a40df9c7cc3201b8944aff4f05bd6985b6045fd51ed4d58394127bbcbc",
+      "CRC32": 3601657008,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P6/P6_walk.csv",
+      "cache": "P6_walk.csv",
+      "bytes": 309195,
+      "sha256": "6f0a6bf20c534b66bd8dec3879275e8032e192c4c0b5a18d7ab9a2ebb848d47e",
+      "CRC32": 1333840119,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P60/P60_cycle.csv",
+      "cache": "P60_cycle.csv",
+      "bytes": 130376,
+      "sha256": "e2110a328bd55ca338f271e5cc9c511e9a67705d008b40ab7ec9d7b15afeecaa",
+      "CRC32": 1724264485,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P60/P60_walk.csv",
+      "cache": "P60_walk.csv",
+      "bytes": 294236,
+      "sha256": "aebeb315effb179b47aa92929029833a05bdd76ca186ab8630923c26fd805e78",
+      "CRC32": 3114891337,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P61/P61_cycle.csv",
+      "cache": "P61_cycle.csv",
+      "bytes": 97657,
+      "sha256": "bbd94b63ec7f4865e42e0cb1fc812e2afc2932a320cd6ad6bed7043db3a4dfce",
+      "CRC32": 3788726424,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P61/P61_walk.csv",
+      "cache": "P61_walk.csv",
+      "bytes": 258711,
+      "sha256": "08ee07349f2588b56593db1c4137c8d37d2fd40ddca3fe81a380bf83e0df5df9",
+      "CRC32": 1638689553,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P62/P62_cycle.csv",
+      "cache": "P62_cycle.csv",
+      "bytes": 182762,
+      "sha256": "709b4d9dee3eb2e6a410d256dedc3e16976fd2476efaaaf5f76ab073a1a76aed",
+      "CRC32": 668091672,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P62/P62_walk.csv",
+      "cache": "P62_walk.csv",
+      "bytes": 367706,
+      "sha256": "3fb016633f0a500e1b5e9a10fb9acaaaf9eb89aaaf120239de2d8c33f5a03fd3",
+      "CRC32": 4086097588,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P63/P63_cycle.csv",
+      "cache": "P63_cycle.csv",
+      "bytes": 128481,
+      "sha256": "ca28785036af746794def7ffca389c889286053874e60597a06a6e7319b6d4ae",
+      "CRC32": 1401233088,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P63/P63_walk.csv",
+      "cache": "P63_walk.csv",
+      "bytes": 277767,
+      "sha256": "d92eea1b2d75f73c3d64c6838fc53b8d5603296d453e160513275b5207ceeb41",
+      "CRC32": 3533596313,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P64/P64_cycle.csv",
+      "cache": "P64_cycle.csv",
+      "bytes": 127865,
+      "sha256": "1acb61219fa06330dbc9b24026f2837de88ca5087e065e3757270be72ad7de02",
+      "CRC32": 3360386378,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P64/P64_walk.csv",
+      "cache": "P64_walk.csv",
+      "bytes": 293919,
+      "sha256": "b10487b1b7914cc7f95958fea0d9622a1c3a7e58afd99f4082d0506c013a2313",
+      "CRC32": 2690045060,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P65/P65_cycle.csv",
+      "cache": "P65_cycle.csv",
+      "bytes": 96444,
+      "sha256": "62607546320a7f97239f326f99713596d3779534fc63b8ea6baefc9dc35708cb",
+      "CRC32": 559752220,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P65/P65_walk.csv",
+      "cache": "P65_walk.csv",
+      "bytes": 232051,
+      "sha256": "7631d94d6bbef59e74e482f0d5282c36780fd6da557cdca85957de41d93aba5e",
+      "CRC32": 3934879350,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P66/P66_cycle.csv",
+      "cache": "P66_cycle.csv",
+      "bytes": 68129,
+      "sha256": "f66c5f52d7c08631209902c72c2895c1234a91f3c70b82ed2cb236841396c1bd",
+      "CRC32": 2425660687,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P66/P66_walk.csv",
+      "cache": "P66_walk.csv",
+      "bytes": 244604,
+      "sha256": "949b5ec6f90fdd4ef35ebfb41372e9f3e757cebbd9878ac98a8b51cd5f374504",
+      "CRC32": 2048868098,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P67/P67_cycle.csv",
+      "cache": "P67_cycle.csv",
+      "bytes": 152498,
+      "sha256": "2a6c462b85582883c4db8383d5b80eee7a79d15ee2673810d69b8e4328e66d9a",
+      "CRC32": 563751932,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P67/P67_walk.csv",
+      "cache": "P67_walk.csv",
+      "bytes": 301123,
+      "sha256": "99b147ffdb482545ee254bf0ffb5fd62fb27f3f2c020fa764a5dfc1557d4d7fb",
+      "CRC32": 1670724713,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P68/P68_cycle.csv",
+      "cache": "P68_cycle.csv",
+      "bytes": 105769,
+      "sha256": "73cf112c1081f2f7c16c571f3be46e644bc4d05e278ab75611a4c40f3ba95fbc",
+      "CRC32": 510631614,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P68/P68_walk.csv",
+      "cache": "P68_walk.csv",
+      "bytes": 251582,
+      "sha256": "1ebbe2c125edc472bc93825694aefd89cd9ced24dc5d6a29c42f4bf0b8086f16",
+      "CRC32": 3880578783,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P69/P69_cycle.csv",
+      "cache": "P69_cycle.csv",
+      "bytes": 152421,
+      "sha256": "551c8ffca7c9b4d80df5e1672981e407444217c620856ce59555286c1b94e145",
+      "CRC32": 694767888,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P69/P69_walk.csv",
+      "cache": "P69_walk.csv",
+      "bytes": 355056,
+      "sha256": "3e0a17fc8a763e9c02d8e4a66eec11211ff583436420a8ef671b32db697e7522",
+      "CRC32": 223471215,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P7/P7_cycle.csv",
+      "cache": "P7_cycle.csv",
+      "bytes": 220061,
+      "sha256": "1354da24f1487c0f970ef7d9ba9507dc793c0ed9f3e29a8e92b6945113c19a20",
+      "CRC32": 2169773719,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P7/P7_walk.csv",
+      "cache": "P7_walk.csv",
+      "bytes": 278774,
+      "sha256": "6a34b94e68934a1313e29a9081518dddc482e334f498d4579e8f1b929314f848",
+      "CRC32": 3276760071,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P70/P70_cycle.csv",
+      "cache": "P70_cycle.csv",
+      "bytes": 112895,
+      "sha256": "affd2e72bf161677c8dce4203a86275e68df89d0fd3941604f8966166cda9ae9",
+      "CRC32": 1569280954,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P70/P70_walk.csv",
+      "cache": "P70_walk.csv",
+      "bytes": 236599,
+      "sha256": "e4ea97f6213cce3bc8587a12bdb5439b730fc6d7f315f5c9c7d538435eec0ba0",
+      "CRC32": 111195437,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P8/P8_cycle.csv",
+      "cache": "P8_cycle.csv",
+      "bytes": 188248,
+      "sha256": "b6700ba2d67c7d90c9a107cc4985ea6112a8463685cc5d98d8b699f68bf32862",
+      "CRC32": 596207202,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P8/P8_walk.csv",
+      "cache": "P8_walk.csv",
+      "bytes": 291618,
+      "sha256": "e645e7bb2c9c63b4a266ba9fc5f80165a467db9756eedc986b748b33371d7aae",
+      "CRC32": 2659858449,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P9/P9_cycle.csv",
+      "cache": "P9_cycle.csv",
+      "bytes": 253123,
+      "sha256": "cae2b1155e823ce366397efee1eb65d72d22ca9baed9c6a86d503c0318694b13",
+      "CRC32": 3986142151,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    },
+    {
+      "member": "zenodo_repo/data/CPET/P9/P9_walk.csv",
+      "cache": "P9_walk.csv",
+      "bytes": 328325,
+      "sha256": "dc47ddced14e3d07edd709d5c54f46dfe33a5153d0a879ba4f3d47e35dd4261b",
+      "CRC32": 572159169,
+      "archive_url": "https://zenodo.org/api/records/13477128/files/zenodo.zip/content",
+      "doi": "10.5281/zenodo.13477128",
+      "version": "1.0.0",
+      "license": {
+        "id": "cc-by-4.0"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "start": 6501171200,
+      "end": 6501683152,
+      "bytes": 511953,
+      "sha256": "b12ef3b76aeb2edcad5770c666f1f173fb4e9bd73bd6a888154f6cc0e95f57aa"
+    },
+    {
+      "start": 6054477824,
+      "end": 6055526399,
+      "bytes": 1048576,
+      "sha256": "8900b2b03c0d8011c48dec71777e18630945f66c0f24bd2dcf65de66ba7169ee"
+    },
+    {
+      "start": 6055526400,
+      "end": 6056574975,
+      "bytes": 1048576,
+      "sha256": "674e7f1a3b850b0a028464ce83474b817a47112b125622ba686feec78a436b78"
+    },
+    {
+      "start": 6056574976,
+      "end": 6057623551,
+      "bytes": 1048576,
+      "sha256": "5654ffdb1754fa30a7b3315ab3155f7dd82000ac7f4af61045a51c86cf17308a"
+    },
+    {
+      "start": 6057623552,
+      "end": 6058672127,
+      "bytes": 1048576,
+      "sha256": "126fb30771aeef79f01dd866d6c977be9cb31d78aba95e8ee8a1c043bfa89748"
+    },
+    {
+      "start": 6058672128,
+      "end": 6059720703,
+      "bytes": 1048576,
+      "sha256": "25a82751cfbaf67cf92440c8abb2b4aca732f5759c7a3c4e5a24ba19faa15b00"
+    },
+    {
+      "start": 6059720704,
+      "end": 6060769279,
+      "bytes": 1048576,
+      "sha256": "e8e7af60222d10100fa43c0947b59a275ec706515978c8b6989d2be1c44c5226"
+    },
+    {
+      "start": 6060769280,
+      "end": 6061817855,
+      "bytes": 1048576,
+      "sha256": "038e8dd8c343557efc02705d103d40b71922c4069ef36f2a279a6c0ef70ce966"
+    },
+    {
+      "start": 6061817856,
+      "end": 6062866431,
+      "bytes": 1048576,
+      "sha256": "fd63bc0a1502b43350c007cda7f4a36dc11e5983b5a48dceef1409061f4972ab"
+    },
+    {
+      "start": 6062866432,
+      "end": 6063915007,
+      "bytes": 1048576,
+      "sha256": "e00ed9f0f4a10bc07aafd8e6ddaf804f5539550b702ec9a1614eb2cd165920fa"
+    },
+    {
+      "start": 6063915008,
+      "end": 6064963583,
+      "bytes": 1048576,
+      "sha256": "27166bd523b0045d0777beb3b0a9d10d98c88e0a8c1a74ca764fec01c5f914ef"
+    },
+    {
+      "start": 6064963584,
+      "end": 6066012159,
+      "bytes": 1048576,
+      "sha256": "95d27de65174f3ed73bafa60545b432a5f4c26397d670cd00a009b31b43121c4"
+    },
+    {
+      "start": 6066012160,
+      "end": 6067060735,
+      "bytes": 1048576,
+      "sha256": "2e4ab86212645b24a57829077c3adf1dd2c48246ff17f3b9d4a15f75762a2aa9"
+    },
+    {
+      "start": 6067060736,
+      "end": 6068109311,
+      "bytes": 1048576,
+      "sha256": "f833454e7646a8ff264468ae6b98f63b3731a4450c715ea9acc92c8534fec2f4"
+    },
+    {
+      "start": 6068109312,
+      "end": 6069157887,
+      "bytes": 1048576,
+      "sha256": "a248357644b0b9b09122ce50ef3a83802967767d40221af03ab5e583aa741958"
+    },
+    {
+      "start": 6069157888,
+      "end": 6070206463,
+      "bytes": 1048576,
+      "sha256": "50e6fa04591c50fb4b5f2841a8a033ba7d104fdc518baf5511045e91ccbf4d19"
+    },
+    {
+      "start": 6070206464,
+      "end": 6071255039,
+      "bytes": 1048576,
+      "sha256": "e459b28185c97478e75c18ef01df255a354494808fff14a45d0936c00b04b1b9"
+    },
+    {
+      "start": 6071255040,
+      "end": 6072303615,
+      "bytes": 1048576,
+      "sha256": "d991cd3c399ff7b0e22bd3dca8a60472caa8726688c36d8f0113b8ebc31f5abe"
+    },
+    {
+      "start": 6072303616,
+      "end": 6073352191,
+      "bytes": 1048576,
+      "sha256": "4c440ec41dc5091eaaed506af7c7dd0df793f7d4ab76a017d67d6e27a0de10ad"
+    },
+    {
+      "start": 6073352192,
+      "end": 6074400767,
+      "bytes": 1048576,
+      "sha256": "aa570fabb0f65c1f5f4450b8688d35afed31e766f90ed62a11fd144f94e0b18c"
+    },
+    {
+      "start": 6074400768,
+      "end": 6075449343,
+      "bytes": 1048576,
+      "sha256": "26f090f3c4863026c326c9d654d51e5612d5e343dd5bbea95fbe33ea377b933c"
+    }
+  ],
+  "total_range_bytes": 21483473,
+  "raw_policy": "publicCCBY4; raw cache ignored; no new ZIP created"
+}

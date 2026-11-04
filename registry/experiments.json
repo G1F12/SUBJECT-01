@@ -399,5 +399,74 @@
     "reproduction_command": "python research/observability_2026_11_04/verify.py",
     "limits": "Known observation maps and calibration assumptions; local rank is not global identifiability or human validation",
     "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0023",
+    "title": "Public CPET acquisition and metabolic-anchor metrology",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/calibration_2026_11_04/acquire.py",
+    "inputs": "research/calibration_2026_11_04/cpet_retrieval.json",
+    "outputs": [
+      "research/calibration_2026_11_04/cpet_retrieval.json",
+      "research/calibration_2026_11_04/weee_oxygen_summary.json",
+      "research/calibration_2026_11_04/physionet_summary.json"
+    ],
+    "report": "research/calibration_2026_11_04/REPORT.md",
+    "method": "Actual human gas data; fixed participant split and published pre-test lock; conditional observation-model inference",
+    "reproduction_command": "python research/calibration_2026_11_04/verify.py",
+    "limits": "Whole-body gas-derived cost, not local ATP physiology or CPE45 power validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0024",
+    "title": "Conditional systemic identification and measurement-map symmetries",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/calibration_2026_11_04/analysis.py",
+    "inputs": "research/calibration_2026_11_04/development_stage_audit.json",
+    "outputs": [
+      "research/calibration_2026_11_04/results/parameter_identification.json",
+      "research/calibration_2026_11_04/results/systemic_parameter_uncertainty.json",
+      "research/calibration_2026_11_04/results/parameter_status.json"
+    ],
+    "report": "research/calibration_2026_11_04/REPORT.md",
+    "method": "Actual human gas data; fixed participant split and published pre-test lock; conditional observation-model inference",
+    "reproduction_command": "python research/calibration_2026_11_04/verify.py",
+    "limits": "Whole-body gas-derived cost, not local ATP physiology or CPE45 power validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0025",
+    "title": "Preregistered independent systemic-cost validation",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/calibration_2026_11_04/models.py",
+    "inputs": "research/calibration_2026_11_04/model_lock.json",
+    "outputs": [
+      "research/calibration_2026_11_04/results/independent_test.json"
+    ],
+    "report": "research/calibration_2026_11_04/REPORT.md",
+    "method": "Actual human gas data; fixed participant split and published pre-test lock; conditional observation-model inference",
+    "reproduction_command": "python research/calibration_2026_11_04/verify.py",
+    "limits": "Whole-body gas-derived cost, not local ATP physiology or CPE45 power validation",
+    "external_validation": "limited_systemic_cost_only"
+  },
+  {
+    "id": "EXP-0026",
+    "title": "Real-data calibration falsification and unchanged 9D energy model",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/calibration_2026_11_04/analysis.py",
+    "inputs": "research/calibration_2026_11_04/development_timing_sensitivity.json",
+    "outputs": [
+      "research/calibration_2026_11_04/results/falsification.json",
+      "research/calibration_2026_11_04/results/summary.json"
+    ],
+    "report": "research/calibration_2026_11_04/REPORT.md",
+    "method": "Actual human gas data; fixed participant split and published pre-test lock; conditional observation-model inference",
+    "reproduction_command": "python research/calibration_2026_11_04/verify.py",
+    "limits": "Whole-body gas-derived cost, not local ATP physiology or CPE45 power validation",
+    "external_validation": "not_done"
   }
 ]

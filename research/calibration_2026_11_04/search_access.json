@@ -1,0 +1,72 @@
+[
+  {
+    "label": "epmc_target",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=30&query=phosphocreatine%20oxygen%20uptake%20muscle%20data%20availability",
+    "status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 218054,
+    "sha256": "dd1f27b7f8228d432c29c0fdedae1b49a5861b7261b00c5ff8896f6afd10977e",
+    "cache": "epmc_target.bin"
+  },
+  {
+    "label": "crossref_target",
+    "url": "https://api.crossref.org/works?rows=10&query=cycling%20metabolic%20efficiency%20oxygen%20uptake%20open%20data",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 71013,
+    "sha256": "617aaf3f7809bf640fe8355fbeb3015252600f564b0bd944bfe91f1878bc22c3",
+    "cache": "crossref_target.bin"
+  },
+  {
+    "label": "openalex_target",
+    "url": "https://api.openalex.org/works?per-page=10&search=phosphocreatine%20local%20oxygen%20muscle%20dataset",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 298635,
+    "sha256": "e0039f1f8b742e32a81e4550c3bf056a7ca88d0c4077e447ab6a6163e0d92e90",
+    "cache": "openalex_target.bin"
+  },
+  {
+    "label": "figshare_target",
+    "url": "https://api.figshare.com/v2/articles/search",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 25444,
+    "sha256": "a94f59eac1b0e055440fe0241e3ef9909148564c235b36aced9db4088d401314",
+    "cache": "figshare_target.bin"
+  },
+  {
+    "label": "osf_target",
+    "url": "https://api.osf.io/v2/nodes/?filter[title]=cycling",
+    "status": 200,
+    "content_type": "application/vnd.api+json; charset=utf-8",
+    "bytes": 59276,
+    "sha256": "db8d27b1eb3a3f1c5f525110f6385fbe114c3b0187295b8f2155efafba17748b",
+    "cache": "osf_target.bin"
+  },
+  {
+    "label": "dryad_retry",
+    "url": "https://datadryad.org/api/v2/files/3450615/download",
+    "status": 401,
+    "error": "HTTP Error 401: Unauthorized",
+    "numeric_obtained": false
+  },
+  {
+    "label": "lendt_epmc",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI:10.1186/s12966-024-01646-y",
+    "status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 7764,
+    "sha256": "4cc53e74da765b170af1c6949e9eb80f483eea6a9cdf59f8780ff0690ee0e87d",
+    "cache": "lendt_epmc.bin"
+  },
+  {
+    "label": "local_epmc",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=TITLE%3ANeither%20intracellular%20oxygen%20availability%20nor%20mitochondrial%20coupling",
+    "status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 21875,
+    "sha256": "b55002883403a29a4ec6dbbceecda83e830402a55690e45ad5f0d78f91be5aed",
+    "cache": "local_epmc.bin"
+  }
+]

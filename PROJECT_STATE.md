@@ -1,3 +1,25 @@
+# SUBJECT-01 — состояние после Research Cycle 6, 04.11.2026
+
+База a4d3a04ab8ef0fc056815989f4b775cf9773f3ca; ветка research/metabolic-anchors-20261104.
+[Отчёт EXP-0023..0026](research/calibration_2026_11_04/REPORT.md),
+[метрология](research/calibration_2026_11_04/DATA_AUDIT.md),
+[reproduction](research/calibration_2026_11_04/README.md).
+
+Получены реальные CPET VO2/VCO2/W:66cycling people Lendt, отдельный WEEE17VO2
+и BUT-CGM1 exploratory person. CC BY4, native memberSHA, без публикации raw.
+Независимый системный gas scale найден, localATPscale/localbaseline не найдены.
+Условные systemic a153.853W,b3.64333W/W, effectiveδeff .274474 не равны D2M/η.
+51development/216stages, published lock726772f; новые13test/56stages:
+selectedquadratic RMSE26.56W vs constant135.40W vs historic equilibrium40.58W.
+Ограниченная systemic-cost validation прошла; это не power/CPE45 validation.
+9D quotient сохранён. Localparams не идентифицированы; pulmonaryτ30finite/51fits
+только effective. Gain/offset/timing/volume остаются существенными.
+Старые10+7 и новые13test просмотрены, повторное независимое claim запрещено.
+TARGET-CPE45 NOT EXTERNALLY VALIDATED; interventions NO_GO; архитектуры без новых преимуществ.
+Реестры EXP26/FND28/NEG20/DEC11/ISS17/SRC55. История Cycle5 ниже сохранена.
+
+---
+
 # SUBJECT-01 — состояние после Research Cycle 5, 04.11.2026
 
 Канон: публичный G1F12/SUBJECT-01. База цикла:

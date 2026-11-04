@@ -1,0 +1,9 @@
+{
+  "label": "physionet_but_cgm",
+  "url": "https://www.physionet.org/content/but-cgm/1.0.0/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 75306,
+  "sha256": "f9cf0705e50a46d17f3e58b42363ee7cbd01b4102133cfdb0d3d030bb72e8efa",
+  "cache": "physionet_but_cgm.bin"
+}

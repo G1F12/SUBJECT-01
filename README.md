@@ -83,3 +83,10 @@ python research/recovery_2026_11_04/reproduce.py --check
 
 При отсутствии cache исходные общедоступные OSFfiles скачиваются с проверкой
 SHA256; из-за неустановленной rawлицензии сами XLSX не перепубликуются.
+
+### Research Cycle 6
+
+[Physiological calibration report](research/calibration_2026_11_04/REPORT.md):
+real VO2/VCO2–workload data and limited independent systemic-cost validation.
+This does not validate local reserve physiology or TARGET-CPE45. Offline replay
+and public native retrieval are separate; see [reproduction](research/calibration_2026_11_04/README.md).

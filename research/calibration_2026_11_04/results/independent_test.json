@@ -1,0 +1,2982 @@
+{
+  "scores": [
+    {
+      "model": "constant",
+      "n": 56,
+      "participants": 13,
+      "RMSE_W": 135.3990259998851,
+      "MAE_W": 113.74006763990522,
+      "bias_W": -2.964990975872747,
+      "calibration_intercept_W": 0.0022009871205515568,
+      "calibration_slope": 1.006479084075683
+    },
+    {
+      "model": "affine",
+      "n": 56,
+      "participants": 13,
+      "RMSE_W": 26.404021760498825,
+      "MAE_W": 21.644769020693737,
+      "bias_W": 0.48325957151508536,
+      "calibration_intercept_W": 7.5092983301684235,
+      "calibration_slope": 0.9826525381781331
+    },
+    {
+      "model": "quadratic",
+      "n": 56,
+      "participants": 13,
+      "RMSE_W": 26.56072458723567,
+      "MAE_W": 22.286931224254428,
+      "bias_W": 0.5769765413596817,
+      "calibration_intercept_W": 8.440853206109907,
+      "calibration_slope": 0.9804312154879098
+    },
+    {
+      "model": "baseline_slope",
+      "n": 56,
+      "participants": 13,
+      "RMSE_W": 29.71847468311173,
+      "MAE_W": 24.774519917260342,
+      "bias_W": -10.474557563212043,
+      "calibration_intercept_W": 61.7830755381475,
+      "calibration_slope": 0.8859242224656065
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "n": 56,
+      "participants": 13,
+      "RMSE_W": 40.57972283228661,
+      "MAE_W": 35.018892407553004,
+      "bias_W": -30.90486668862561,
+      "calibration_intercept_W": 29.60936519511395,
+      "calibration_slope": 1.0030173873560795
+    }
+  ],
+  "participant_errors": [
+    {
+      "model": "constant",
+      "participant": 5,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 176.68638343232027,
+      "MAE_W": 150.43914414568363,
+      "bias_W": -45.90732365745344
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 166.1612535137853,
+      "MAE_W": 142.63560438332183,
+      "bias_W": -41.297267655228254
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 143.33836719441567,
+      "MAE_W": 127.58154026648221,
+      "bias_W": -33.7349176306888
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 144.41634509162367,
+      "MAE_W": 127.25244711850758,
+      "bias_W": 24.204692719012137
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 141.874054477453,
+      "MAE_W": 121.9971915896484,
+      "bias_W": -37.258132614273734
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 152.7086512705133,
+      "MAE_W": 134.28299086653698,
+      "bias_W": -22.38686293953856
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 157.32017079447348,
+      "MAE_W": 137.37289985426554,
+      "bias_W": -37.5953846612409
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 148.43533580829387,
+      "MAE_W": 129.87279223068217,
+      "bias_W": -11.487544604332435
+    },
+    {
+      "model": "constant",
+      "participant": 50,
+      "n": 4,
+      "participants": 1,
+      "RMSE_W": 132.88544968129614,
+      "MAE_W": 107.51624275962325,
+      "bias_W": 61.47410096039309
+    },
+    {
+      "model": "constant",
+      "participant": 55,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 71.33902841173273,
+      "MAE_W": 60.74623393759782,
+      "bias_W": -1.164837135544186
+    },
+    {
+      "model": "constant",
+      "participant": 60,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 99.47536631448706,
+      "MAE_W": 87.23660098549104,
+      "bias_W": 58.31188411470694
+    },
+    {
+      "model": "constant",
+      "participant": 65,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 90.85016863523893,
+      "MAE_W": 80.6963248900089,
+      "bias_W": 35.57535068184142
+    },
+    {
+      "model": "constant",
+      "participant": 70,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 83.48818314493427,
+      "MAE_W": 70.9908662909184,
+      "bias_W": 12.721359736000995
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 29.295244479751236,
+      "MAE_W": 21.439856625988618,
+      "bias_W": -21.439856625988618
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 19.989984060307393,
+      "MAE_W": 16.829800623763415,
+      "bias_W": -16.829800623763415
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 18.892698327617065,
+      "MAE_W": 16.610375153466443,
+      "bias_W": -9.26745059922397
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 51.47245155220794,
+      "MAE_W": 48.67215975047697,
+      "bias_W": 48.67215975047697
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 23.34791705184883,
+      "MAE_W": 20.18232128302173,
+      "bias_W": -12.790665582808902
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 5.935603414270899,
+      "MAE_W": 4.544401886132971,
+      "bias_W": 2.080604091926273
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 14.564259317706034,
+      "MAE_W": 13.127917629776073,
+      "bias_W": -13.127917629776073
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 24.851408968320364,
+      "MAE_W": 21.83238984811885,
+      "bias_W": 12.979922427132397
+    },
+    {
+      "model": "affine",
+      "participant": 50,
+      "n": 4,
+      "participants": 1,
+      "RMSE_W": 32.19931149267044,
+      "MAE_W": 31.291605133257725,
+      "bias_W": 31.291605133257725
+    },
+    {
+      "model": "affine",
+      "participant": 55,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 31.868950193509704,
+      "MAE_W": 31.34733296267956,
+      "bias_W": -31.34733296267956
+    },
+    {
+      "model": "affine",
+      "participant": 60,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 29.12475251895873,
+      "MAE_W": 28.12938828757158,
+      "bias_W": 28.12938828757158
+    },
+    {
+      "model": "affine",
+      "participant": 65,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 10.751591734491624,
+      "MAE_W": 9.913311993630238,
+      "bias_W": 5.392854854706058
+    },
+    {
+      "model": "affine",
+      "participant": 70,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 19.30653358408351,
+      "MAE_W": 17.46113609113437,
+      "bias_W": -17.46113609113437
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 25.566644387492445,
+      "MAE_W": 19.67636258258798,
+      "bias_W": -19.67636258258798
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 16.308517870337617,
+      "MAE_W": 15.066306580362777,
+      "bias_W": -15.066306580362777
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 20.413493089228716,
+      "MAE_W": 18.185847829433445,
+      "bias_W": -7.503956555823334
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 52.3806260938227,
+      "MAE_W": 50.435653793877606,
+      "bias_W": 50.435653793877606
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 23.116459841061307,
+      "MAE_W": 21.757793958988728,
+      "bias_W": -11.027171539408267
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 11.332360813860303,
+      "MAE_W": 9.228931863404433,
+      "bias_W": 3.8440981353269086
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 16.611307190049853,
+      "MAE_W": 13.878082680663283,
+      "bias_W": -11.364423586375437
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 22.185874154544944,
+      "MAE_W": 20.256901259355583,
+      "bias_W": 14.743416470533031
+    },
+    {
+      "model": "quadratic",
+      "participant": 50,
+      "n": 4,
+      "participants": 1,
+      "RMSE_W": 32.46699118776962,
+      "MAE_W": 31.026996681627786,
+      "bias_W": 31.026996681627786
+    },
+    {
+      "model": "quadratic",
+      "participant": 55,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 35.0296333106699,
+      "MAE_W": 34.503588784578405,
+      "bias_W": -34.503588784578405
+    },
+    {
+      "model": "quadratic",
+      "participant": 60,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 26.52807715117073,
+      "MAE_W": 24.973132465672734,
+      "bias_W": 24.973132465672734
+    },
+    {
+      "model": "quadratic",
+      "participant": 65,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 11.672873159568342,
+      "MAE_W": 10.123115521721576,
+      "bias_W": 2.2365990328072103
+    },
+    {
+      "model": "quadratic",
+      "participant": 70,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 23.215473283381023,
+      "MAE_W": 20.617391913033217,
+      "bias_W": -20.617391913033217
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 12.563329507846833,
+      "MAE_W": 12.104578479622344,
+      "bias_W": 1.210835182681603
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 19.882385371069876,
+      "MAE_W": 15.60133580762598,
+      "bias_W": -15.60133580762598
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 31.77382165162466,
+      "MAE_W": 28.902384661553768,
+      "bias_W": -8.445939387549721
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 38.76116218204428,
+      "MAE_W": 36.08870731049939,
+      "bias_W": 25.21524268064156
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 35.74778099434921,
+      "MAE_W": 32.572700187583365,
+      "bias_W": -12.46100135350635
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 21.296491516221916,
+      "MAE_W": 19.1284022097249,
+      "bias_W": -10.108792231571632
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 17.952462585981095,
+      "MAE_W": 14.406327186060025,
+      "bias_W": 3.21963748507378
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 29.94786939662719,
+      "MAE_W": 23.54210776813434,
+      "bias_W": -0.6637754127280684
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 50,
+      "n": 4,
+      "participants": 1,
+      "RMSE_W": 17.98637890173616,
+      "MAE_W": 15.629680962761874,
+      "bias_W": 5.065176087452365
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 55,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 43.47869581905745,
+      "MAE_W": 41.980310871475005,
+      "bias_W": -41.980310871475005
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 60,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 7.176547649001561,
+      "MAE_W": 6.0427856863056295,
+      "bias_W": -5.549546900111258
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 65,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 25.94914599575706,
+      "MAE_W": 25.829270439722677,
+      "bias_W": -25.829270439722677
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 70,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 50.26840591815022,
+      "MAE_W": 50.24016735331518,
+      "bias_W": -50.24016735331518
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 57.812686643292615,
+      "MAE_W": 53.25474834297265,
+      "bias_W": -53.25474834297265
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 50.30888571937662,
+      "MAE_W": 48.64469234074745,
+      "bias_W": -48.64469234074745
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 43.26765330268438,
+      "MAE_W": 41.082342316208006,
+      "bias_W": -41.082342316208006
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 22.25315340062233,
+      "MAE_W": 20.994370388127162,
+      "bias_W": 16.85726803349294
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 47.630466658392756,
+      "MAE_W": 44.605557299792935,
+      "bias_W": -44.605557299792935
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 30.040682082504965,
+      "MAE_W": 29.734287625057764,
+      "bias_W": -29.734287625057764
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 45.35824047960372,
+      "MAE_W": 44.9428093467601,
+      "bias_W": -44.9428093467601
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "n": 5,
+      "participants": 1,
+      "RMSE_W": 27.643428863599414,
+      "MAE_W": 23.529922965076977,
+      "bias_W": -18.83496928985164
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 50,
+      "n": 4,
+      "participants": 1,
+      "RMSE_W": 6.447367014046255,
+      "MAE_W": 5.473986320945855,
+      "bias_W": 0.5863036040663729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 55,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 62.25851493514308,
+      "MAE_W": 62.052634491870904,
+      "bias_W": -62.052634491870904
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 60,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 9.182900526367671,
+      "MAE_W": 7.451365565818245,
+      "bias_W": -2.5759132416197676
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 65,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 27.519940581028013,
+      "MAE_W": 25.31244667448529,
+      "bias_W": -25.31244667448529
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 70,
+      "n": 3,
+      "participants": 1,
+      "RMSE_W": 49.139600132981506,
+      "MAE_W": 48.16643762032572,
+      "bias_W": -48.16643762032572
+    }
+  ],
+  "predictions": [
+    {
+      "model": "constant",
+      "participant": 5,
+      "stage": 1,
+      "observed_cost_W": 277.22066732815745,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 5,
+      "stage": 2,
+      "observed_cost_W": 376.02040721982127,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 5,
+      "stage": 3,
+      "observed_cost_W": 487.8551291200442,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 5,
+      "stage": 4,
+      "observed_cost_W": 616.046344677611,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 5,
+      "stage": 5,
+      "observed_cost_W": 758.8206343630186,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "stage": 1,
+      "observed_cost_W": 282.3047764600165,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "stage": 2,
+      "observed_cost_W": 378.9200074883036,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "stage": 3,
+      "observed_cost_W": 487.7615630774877,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "stage": 4,
+      "observed_cost_W": 607.9849903787415,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 10,
+      "stage": 5,
+      "observed_cost_W": 735.9415652929772,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "stage": 1,
+      "observed_cost_W": 293.37943027478667,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "stage": 2,
+      "observed_cost_W": 386.574638904284,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "stage": 3,
+      "observed_cost_W": 502.09905779827994,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "stage": 4,
+      "observed_cost_W": 588.5500357182735,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 15,
+      "stage": 5,
+      "observed_cost_W": 684.4979898792052,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "stage": 1,
+      "observed_cost_W": 246.11915340211337,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "stage": 2,
+      "observed_cost_W": 323.194142828197,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "stage": 3,
+      "observed_cost_W": 423.8997928287215,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "stage": 4,
+      "observed_cost_W": 525.224865912984,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 20,
+      "stage": 5,
+      "observed_cost_W": 646.9651458543087,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "stage": 1,
+      "observed_cost_W": 299.82987263878556,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "stage": 2,
+      "observed_cost_W": 402.8931056913319,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "stage": 3,
+      "observed_cost_W": 497.06805143008364,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "stage": 4,
+      "observed_cost_W": 576.8875815034017,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 25,
+      "stage": 5,
+      "observed_cost_W": 696.0386162291511,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "stage": 1,
+      "observed_cost_W": 262.9522650796652,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "stage": 2,
+      "observed_cost_W": 371.8780408713929,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "stage": 3,
+      "observed_cost_W": 487.9122744012587,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "stage": 4,
+      "observed_cost_W": 585.731306579982,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 30,
+      "stage": 5,
+      "observed_cost_W": 689.8869921867794,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "stage": 1,
+      "observed_cost_W": 271.4152941821612,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "stage": 2,
+      "observed_cost_W": 393.7115436038314,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "stage": 3,
+      "observed_cost_W": 497.40838447382157,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "stage": 4,
+      "observed_cost_W": 607.83878695024,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 35,
+      "stage": 5,
+      "observed_cost_W": 704.0294785175357,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "stage": 1,
+      "observed_cost_W": 285.28409703380726,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "stage": 2,
+      "observed_cost_W": 352.40821854245513,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "stage": 3,
+      "observed_cost_W": 438.2005040106945,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "stage": 4,
+      "observed_cost_W": 575.7993356585597,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 40,
+      "stage": 5,
+      "observed_cost_W": 692.1721321975309,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 50,
+      "stage": 1,
+      "observed_cost_W": 231.30485472313885,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 50,
+      "stage": 2,
+      "observed_cost_W": 352.2165600317152,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 50,
+      "stage": 3,
+      "observed_cost_W": 450.35383645794445,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 50,
+      "stage": 4,
+      "observed_cost_W": 549.3695964827374,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 55,
+      "stage": 1,
+      "observed_cost_W": 367.9132176811966,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 55,
+      "stage": 2,
+      "observed_cost_W": 465.193973351075,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 55,
+      "stage": 3,
+      "observed_cost_W": 542.2432590271922,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 60,
+      "stage": 1,
+      "observed_cost_W": 303.56387442808983,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 60,
+      "stage": 2,
+      "observed_cost_W": 392.6840236901673,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 60,
+      "stage": 3,
+      "observed_cost_W": 500.6723881904532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 65,
+      "stage": 1,
+      "observed_cost_W": 320.2243157082911,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 65,
+      "stage": 2,
+      "observed_cost_W": 419.93879670248754,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 65,
+      "stage": 3,
+      "observed_cost_W": 524.9667741965283,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 70,
+      "stage": 1,
+      "observed_cost_W": 342.5992086554423,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 70,
+      "stage": 2,
+      "observed_cost_W": 446.40307807273274,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "constant",
+      "participant": 70,
+      "stage": 3,
+      "observed_cost_W": 544.6895727166532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 457.28531288427706
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "stage": 1,
+      "observed_cost_W": 277.22066732815745,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "stage": 2,
+      "observed_cost_W": 376.02040721982127,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "stage": 3,
+      "observed_cost_W": 487.8551291200442,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "stage": 4,
+      "observed_cost_W": 616.046344677611,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 5,
+      "stage": 5,
+      "observed_cost_W": 758.8206343630186,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "stage": 1,
+      "observed_cost_W": 282.3047764600165,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "stage": 2,
+      "observed_cost_W": 378.9200074883036,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "stage": 3,
+      "observed_cost_W": 487.7615630774877,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "stage": 4,
+      "observed_cost_W": 607.9849903787415,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 10,
+      "stage": 5,
+      "observed_cost_W": 735.9415652929772,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "stage": 1,
+      "observed_cost_W": 293.37943027478667,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "stage": 2,
+      "observed_cost_W": 386.574638904284,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "stage": 3,
+      "observed_cost_W": 502.09905779827994,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "stage": 4,
+      "observed_cost_W": 588.5500357182735,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 15,
+      "stage": 5,
+      "observed_cost_W": 684.4979898792052,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "stage": 1,
+      "observed_cost_W": 246.11915340211337,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "stage": 2,
+      "observed_cost_W": 323.194142828197,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "stage": 3,
+      "observed_cost_W": 423.8997928287215,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "stage": 4,
+      "observed_cost_W": 525.224865912984,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 20,
+      "stage": 5,
+      "observed_cost_W": 646.9651458543087,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "stage": 1,
+      "observed_cost_W": 299.82987263878556,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "stage": 2,
+      "observed_cost_W": 402.8931056913319,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "stage": 3,
+      "observed_cost_W": 497.06805143008364,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "stage": 4,
+      "observed_cost_W": 576.8875815034017,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 25,
+      "stage": 5,
+      "observed_cost_W": 696.0386162291511,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "stage": 1,
+      "observed_cost_W": 262.9522650796652,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "stage": 2,
+      "observed_cost_W": 371.8780408713929,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "stage": 3,
+      "observed_cost_W": 487.9122744012587,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "stage": 4,
+      "observed_cost_W": 585.731306579982,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 30,
+      "stage": 5,
+      "observed_cost_W": 689.8869921867794,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "stage": 1,
+      "observed_cost_W": 271.4152941821612,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "stage": 2,
+      "observed_cost_W": 393.7115436038314,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "stage": 3,
+      "observed_cost_W": 497.40838447382157,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "stage": 4,
+      "observed_cost_W": 607.83878695024,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 35,
+      "stage": 5,
+      "observed_cost_W": 704.0294785175357,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "stage": 1,
+      "observed_cost_W": 285.28409703380726,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "stage": 2,
+      "observed_cost_W": 352.40821854245513,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "stage": 3,
+      "observed_cost_W": 438.2005040106945,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "stage": 4,
+      "observed_cost_W": 575.7993356585597,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 40,
+      "stage": 5,
+      "observed_cost_W": 692.1721321975309,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 700.3526313501427
+    },
+    {
+      "model": "affine",
+      "participant": 50,
+      "stage": 1,
+      "observed_cost_W": 231.30485472313885,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 263.1529284813411
+    },
+    {
+      "model": "affine",
+      "participant": 50,
+      "stage": 2,
+      "observed_cost_W": 352.2165600317152,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 372.4528541985415
+    },
+    {
+      "model": "affine",
+      "participant": 50,
+      "stage": 3,
+      "observed_cost_W": 450.35383645794445,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 481.75277991574194
+    },
+    {
+      "model": "affine",
+      "participant": 50,
+      "stage": 4,
+      "observed_cost_W": 549.3695964827374,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 591.0527056329422
+    },
+    {
+      "model": "affine",
+      "participant": 55,
+      "stage": 1,
+      "observed_cost_W": 367.9132176811966,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.0195456261414
+    },
+    {
+      "model": "affine",
+      "participant": 55,
+      "stage": 2,
+      "observed_cost_W": 465.193973351075,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 427.1028170571417
+    },
+    {
+      "model": "affine",
+      "participant": 55,
+      "stage": 3,
+      "observed_cost_W": 542.2432590271922,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 518.186088488142
+    },
+    {
+      "model": "affine",
+      "participant": 60,
+      "stage": 1,
+      "observed_cost_W": 303.56387442808983,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.0195456261414
+    },
+    {
+      "model": "affine",
+      "participant": 60,
+      "stage": 2,
+      "observed_cost_W": 392.6840236901673,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 427.1028170571417
+    },
+    {
+      "model": "affine",
+      "participant": 60,
+      "stage": 3,
+      "observed_cost_W": 500.6723881904532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 518.186088488142
+    },
+    {
+      "model": "affine",
+      "participant": 65,
+      "stage": 1,
+      "observed_cost_W": 320.2243157082911,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.0195456261414
+    },
+    {
+      "model": "affine",
+      "participant": 65,
+      "stage": 2,
+      "observed_cost_W": 419.93879670248754,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 427.1028170571417
+    },
+    {
+      "model": "affine",
+      "participant": 65,
+      "stage": 3,
+      "observed_cost_W": 524.9667741965283,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 518.186088488142
+    },
+    {
+      "model": "affine",
+      "participant": 70,
+      "stage": 1,
+      "observed_cost_W": 342.5992086554423,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.0195456261414
+    },
+    {
+      "model": "affine",
+      "participant": 70,
+      "stage": 2,
+      "observed_cost_W": 446.40307807273274,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 427.1028170571417
+    },
+    {
+      "model": "affine",
+      "participant": 70,
+      "stage": 3,
+      "observed_cost_W": 544.6895727166532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 518.186088488142
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "stage": 1,
+      "observed_cost_W": 277.22066732815745,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "stage": 2,
+      "observed_cost_W": 376.02040721982127,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "stage": 3,
+      "observed_cost_W": 487.8551291200442,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "stage": 4,
+      "observed_cost_W": 616.046344677611,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 5,
+      "stage": 5,
+      "observed_cost_W": 758.8206343630186,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "stage": 1,
+      "observed_cost_W": 282.3047764600165,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "stage": 2,
+      "observed_cost_W": 378.9200074883036,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "stage": 3,
+      "observed_cost_W": 487.7615630774877,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "stage": 4,
+      "observed_cost_W": 607.9849903787415,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 10,
+      "stage": 5,
+      "observed_cost_W": 735.9415652929772,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "stage": 1,
+      "observed_cost_W": 293.37943027478667,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "stage": 2,
+      "observed_cost_W": 386.574638904284,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "stage": 3,
+      "observed_cost_W": 502.09905779827994,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "stage": 4,
+      "observed_cost_W": 588.5500357182735,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 15,
+      "stage": 5,
+      "observed_cost_W": 684.4979898792052,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "stage": 1,
+      "observed_cost_W": 246.11915340211337,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "stage": 2,
+      "observed_cost_W": 323.194142828197,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "stage": 3,
+      "observed_cost_W": 423.8997928287215,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "stage": 4,
+      "observed_cost_W": 525.224865912984,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 20,
+      "stage": 5,
+      "observed_cost_W": 646.9651458543087,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "stage": 1,
+      "observed_cost_W": 299.82987263878556,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "stage": 2,
+      "observed_cost_W": 402.8931056913319,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "stage": 3,
+      "observed_cost_W": 497.06805143008364,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "stage": 4,
+      "observed_cost_W": 576.8875815034017,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 25,
+      "stage": 5,
+      "observed_cost_W": 696.0386162291511,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "stage": 1,
+      "observed_cost_W": 262.9522650796652,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "stage": 2,
+      "observed_cost_W": 371.8780408713929,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "stage": 3,
+      "observed_cost_W": 487.9122744012587,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "stage": 4,
+      "observed_cost_W": 585.731306579982,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 30,
+      "stage": 5,
+      "observed_cost_W": 689.8869921867794,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "stage": 1,
+      "observed_cost_W": 271.4152941821612,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "stage": 2,
+      "observed_cost_W": 393.7115436038314,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "stage": 3,
+      "observed_cost_W": 497.40838447382157,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "stage": 4,
+      "observed_cost_W": 607.83878695024,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 35,
+      "stage": 5,
+      "observed_cost_W": 704.0294785175357,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "stage": 1,
+      "observed_cost_W": 285.28409703380726,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "stage": 2,
+      "observed_cost_W": 352.40821854245513,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "stage": 3,
+      "observed_cost_W": 438.2005040106945,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "stage": 4,
+      "observed_cost_W": 575.7993356585597,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 40,
+      "stage": 5,
+      "observed_cost_W": 692.1721321975309,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 710.2285353736656
+    },
+    {
+      "model": "quadratic",
+      "participant": 50,
+      "stage": 1,
+      "observed_cost_W": 231.30485472313885,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 271.5003850617509
+    },
+    {
+      "model": "quadratic",
+      "participant": 50,
+      "stage": 2,
+      "observed_cost_W": 352.2165600317152,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 370.160143251881
+    },
+    {
+      "model": "quadratic",
+      "participant": 50,
+      "stage": 3,
+      "observed_cost_W": 450.35383645794445,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 476.1680877005768
+    },
+    {
+      "model": "quadratic",
+      "participant": 50,
+      "stage": 4,
+      "observed_cost_W": 549.3695964827374,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.5242184078384
+    },
+    {
+      "model": "quadratic",
+      "participant": 55,
+      "stage": 1,
+      "observed_cost_W": 367.9132176811966,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.45709204866364
+    },
+    {
+      "model": "quadratic",
+      "participant": 55,
+      "stage": 2,
+      "observed_cost_W": 465.193973351075,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 422.2455921939082
+    },
+    {
+      "model": "quadratic",
+      "participant": 55,
+      "stage": 3,
+      "observed_cost_W": 542.2432590271922,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 513.1369994631567
+    },
+    {
+      "model": "quadratic",
+      "participant": 60,
+      "stage": 1,
+      "observed_cost_W": 303.56387442808983,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.45709204866364
+    },
+    {
+      "model": "quadratic",
+      "participant": 60,
+      "stage": 2,
+      "observed_cost_W": 392.6840236901673,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 422.2455921939082
+    },
+    {
+      "model": "quadratic",
+      "participant": 60,
+      "stage": 3,
+      "observed_cost_W": 500.6723881904532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 513.1369994631567
+    },
+    {
+      "model": "quadratic",
+      "participant": 65,
+      "stage": 1,
+      "observed_cost_W": 320.2243157082911,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.45709204866364
+    },
+    {
+      "model": "quadratic",
+      "participant": 65,
+      "stage": 2,
+      "observed_cost_W": 419.93879670248754,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 422.2455921939082
+    },
+    {
+      "model": "quadratic",
+      "participant": 65,
+      "stage": 3,
+      "observed_cost_W": 524.9667741965283,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 513.1369994631567
+    },
+    {
+      "model": "quadratic",
+      "participant": 70,
+      "stage": 1,
+      "observed_cost_W": 342.5992086554423,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 336.45709204866364
+    },
+    {
+      "model": "quadratic",
+      "participant": 70,
+      "stage": 2,
+      "observed_cost_W": 446.40307807273274,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 422.2455921939082
+    },
+    {
+      "model": "quadratic",
+      "participant": 70,
+      "stage": 3,
+      "observed_cost_W": 544.6895727166532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 513.1369994631567
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "stage": 1,
+      "observed_cost_W": 277.22066732815745,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 265.04310070597444
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "stage": 2,
+      "observed_cost_W": 376.02040721982127,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 384.7232862151933
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "stage": 3,
+      "observed_cost_W": 487.8551291200442,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 504.40347172441216
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "stage": 4,
+      "observed_cost_W": 616.046344677611,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 624.0836572336309
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 5,
+      "stage": 5,
+      "observed_cost_W": 758.8206343630186,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 743.7638427428498
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "stage": 1,
+      "observed_cost_W": 282.3047764600165,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 243.62087371344165
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "stage": 2,
+      "observed_cost_W": 378.9200074883036,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 363.30105922266046
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "stage": 3,
+      "observed_cost_W": 487.7615630774877,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 482.9812447318793
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "stage": 4,
+      "observed_cost_W": 607.9849903787415,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 602.6614302410982
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 10,
+      "stage": 5,
+      "observed_cost_W": 735.9415652929772,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 722.341615750317
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "stage": 1,
+      "observed_cost_W": 293.37943027478667,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 243.21392010897847
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "stage": 2,
+      "observed_cost_W": 386.574638904284,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 362.8941056181973
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "stage": 3,
+      "observed_cost_W": 502.09905779827994,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 482.57429112741613
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "stage": 4,
+      "observed_cost_W": 588.5500357182735,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 602.254476636635
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 15,
+      "stage": 5,
+      "observed_cost_W": 684.4979898792052,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 721.9346621458538
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "stage": 1,
+      "observed_cost_W": 246.11915340211337,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 218.9354918274688
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "stage": 2,
+      "observed_cost_W": 323.194142828197,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 338.61567733668767
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "stage": 3,
+      "observed_cost_W": 423.8997928287215,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 458.2958628459065
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "stage": 4,
+      "observed_cost_W": 525.224865912984,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 577.9760483551253
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 20,
+      "stage": 5,
+      "observed_cost_W": 646.9651458543087,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 697.6562338643441
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "stage": 1,
+      "observed_cost_W": 299.82987263878556,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 242.7220731266068
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "stage": 2,
+      "observed_cost_W": 402.8931056913319,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 362.4022586358256
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "stage": 3,
+      "observed_cost_W": 497.06805143008364,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 482.08244414504446
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "stage": 4,
+      "observed_cost_W": 576.8875815034017,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 601.7626296542633
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 25,
+      "stage": 5,
+      "observed_cost_W": 696.0386162291511,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 721.4428151634821
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "stage": 1,
+      "observed_cost_W": 262.9522650796652,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 230.20301257380632
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "stage": 2,
+      "observed_cost_W": 371.8780408713929,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 349.88319808302515
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "stage": 3,
+      "observed_cost_W": 487.9122744012587,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 469.563383592244
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "stage": 4,
+      "observed_cost_W": 585.731306579982,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 589.2435691014628
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 30,
+      "stage": 5,
+      "observed_cost_W": 689.8869921867794,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 708.9237546106817
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "stage": 1,
+      "observed_cost_W": 271.4152941821612,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 258.7399640121541
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "stage": 2,
+      "observed_cost_W": 393.7115436038314,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 378.4201495213729
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "stage": 3,
+      "observed_cost_W": 497.40838447382157,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 498.10033503059174
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "stage": 4,
+      "observed_cost_W": 607.83878695024,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 617.7805205398106
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 35,
+      "stage": 5,
+      "observed_cost_W": 704.0294785175357,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 737.4607060490295
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "stage": 1,
+      "observed_cost_W": 285.28409703380726,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 228.74871105744376
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "stage": 2,
+      "observed_cost_W": 352.40821854245513,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 348.4288965666626
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "stage": 3,
+      "observed_cost_W": 438.2005040106945,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 468.1090820758815
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "stage": 4,
+      "observed_cost_W": 575.7993356585597,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 587.7892675851002
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 40,
+      "stage": 5,
+      "observed_cost_W": 692.1721321975309,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 707.4694530943191
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 50,
+      "stage": 1,
+      "observed_cost_W": 231.30485472313885,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 221.35610974750807
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 50,
+      "stage": 2,
+      "observed_cost_W": 352.2165600317152,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 341.03629525672693
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 50,
+      "stage": 3,
+      "observed_cost_W": 450.35383645794445,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 460.7164807659458
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 50,
+      "stage": 4,
+      "observed_cost_W": 549.3695964827374,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 580.3966662751645
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 55,
+      "stage": 1,
+      "observed_cost_W": 367.9132176811966,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 316.7363512239972
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 55,
+      "stage": 2,
+      "observed_cost_W": 465.193973351075,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 416.46983914834624
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 55,
+      "stage": 3,
+      "observed_cost_W": 542.2432590271922,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 516.2033270726953
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 60,
+      "stage": 1,
+      "observed_cost_W": 303.56387442808983,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 293.6903939451098
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 60,
+      "stage": 2,
+      "observed_cost_W": 392.6840236901673,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 393.42388186945885
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 60,
+      "stage": 3,
+      "observed_cost_W": 500.6723881904532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 493.1573697938079
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 65,
+      "stage": 1,
+      "observed_cost_W": 320.2243157082911,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 296.1472038383639
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 65,
+      "stage": 2,
+      "observed_cost_W": 419.93879670248754,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 395.88069176271296
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 65,
+      "stage": 3,
+      "observed_cost_W": 524.9667741965283,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 495.614179687062
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 70,
+      "stage": 1,
+      "observed_cost_W": 342.5992086554423,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 294.59029787061183
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 70,
+      "stage": 2,
+      "observed_cost_W": 446.40307807273274,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 394.3237857949609
+    },
+    {
+      "model": "baseline_slope",
+      "participant": 70,
+      "stage": 3,
+      "observed_cost_W": 544.6895727166532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 494.05727371930993
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "stage": 1,
+      "observed_cost_W": 277.22066732815745,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "stage": 2,
+      "observed_cost_W": 376.02040721982127,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "stage": 3,
+      "observed_cost_W": 487.8551291200442,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "stage": 4,
+      "observed_cost_W": 616.046344677611,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 5,
+      "stage": 5,
+      "observed_cost_W": 758.8206343630186,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "stage": 1,
+      "observed_cost_W": 282.3047764600165,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "stage": 2,
+      "observed_cost_W": 378.9200074883036,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "stage": 3,
+      "observed_cost_W": 487.7615630774877,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "stage": 4,
+      "observed_cost_W": 607.9849903787415,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 10,
+      "stage": 5,
+      "observed_cost_W": 735.9415652929772,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "stage": 1,
+      "observed_cost_W": 293.37943027478667,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "stage": 2,
+      "observed_cost_W": 386.574638904284,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "stage": 3,
+      "observed_cost_W": 502.09905779827994,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "stage": 4,
+      "observed_cost_W": 588.5500357182735,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 15,
+      "stage": 5,
+      "observed_cost_W": 684.4979898792052,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "stage": 1,
+      "observed_cost_W": 246.11915340211337,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "stage": 2,
+      "observed_cost_W": 323.194142828197,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "stage": 3,
+      "observed_cost_W": 423.8997928287215,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "stage": 4,
+      "observed_cost_W": 525.224865912984,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 20,
+      "stage": 5,
+      "observed_cost_W": 646.9651458543087,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "stage": 1,
+      "observed_cost_W": 299.82987263878556,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "stage": 2,
+      "observed_cost_W": 402.8931056913319,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "stage": 3,
+      "observed_cost_W": 497.06805143008364,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "stage": 4,
+      "observed_cost_W": 576.8875815034017,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 25,
+      "stage": 5,
+      "observed_cost_W": 696.0386162291511,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "stage": 1,
+      "observed_cost_W": 262.9522650796652,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "stage": 2,
+      "observed_cost_W": 371.8780408713929,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "stage": 3,
+      "observed_cost_W": 487.9122744012587,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "stage": 4,
+      "observed_cost_W": 585.731306579982,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 30,
+      "stage": 5,
+      "observed_cost_W": 689.8869921867794,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "stage": 1,
+      "observed_cost_W": 271.4152941821612,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "stage": 2,
+      "observed_cost_W": 393.7115436038314,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "stage": 3,
+      "observed_cost_W": 497.40838447382157,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "stage": 4,
+      "observed_cost_W": 607.83878695024,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 35,
+      "stage": 5,
+      "observed_cost_W": 704.0294785175357,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "stage": 1,
+      "observed_cost_W": 285.28409703380726,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "stage": 2,
+      "observed_cost_W": 352.40821854245513,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "stage": 3,
+      "observed_cost_W": 438.2005040106945,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "stage": 4,
+      "observed_cost_W": 575.7993356585597,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 40,
+      "stage": 5,
+      "observed_cost_W": 692.1721321975309,
+      "given_power_W": 150.0,
+      "predicted_cost_W": 664.099378881988
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 50,
+      "stage": 1,
+      "observed_cost_W": 231.30485472313885,
+      "given_power_W": 30.0,
+      "predicted_cost_W": 235.7763975155278
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 50,
+      "stage": 2,
+      "observed_cost_W": 352.2165600317152,
+      "given_power_W": 60.0,
+      "predicted_cost_W": 342.85714285714283
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 50,
+      "stage": 3,
+      "observed_cost_W": 450.35383645794445,
+      "given_power_W": 90.0,
+      "predicted_cost_W": 449.93788819875783
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 50,
+      "stage": 4,
+      "observed_cost_W": 549.3695964827374,
+      "given_power_W": 120.0,
+      "predicted_cost_W": 557.0186335403729
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 55,
+      "stage": 1,
+      "observed_cost_W": 367.9132176811966,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 307.1635610766045
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 55,
+      "stage": 2,
+      "observed_cost_W": 465.193973351075,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 396.39751552795036
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 55,
+      "stage": 3,
+      "observed_cost_W": 542.2432590271922,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 485.6314699792962
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 60,
+      "stage": 1,
+      "observed_cost_W": 303.56387442808983,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 307.1635610766045
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 60,
+      "stage": 2,
+      "observed_cost_W": 392.6840236901673,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 396.39751552795036
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 60,
+      "stage": 3,
+      "observed_cost_W": 500.6723881904532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 485.6314699792962
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 65,
+      "stage": 1,
+      "observed_cost_W": 320.2243157082911,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 307.1635610766045
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 65,
+      "stage": 2,
+      "observed_cost_W": 419.93879670248754,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 396.39751552795036
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 65,
+      "stage": 3,
+      "observed_cost_W": 524.9667741965283,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 485.6314699792962
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 70,
+      "stage": 1,
+      "observed_cost_W": 342.5992086554423,
+      "given_power_W": 50.0,
+      "predicted_cost_W": 307.1635610766045
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 70,
+      "stage": 2,
+      "observed_cost_W": 446.40307807273274,
+      "given_power_W": 75.0,
+      "predicted_cost_W": 396.39751552795036
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "participant": 70,
+      "stage": 3,
+      "observed_cost_W": 544.6895727166532,
+      "given_power_W": 100.0,
+      "predicted_cost_W": 485.6314699792962
+    }
+  ],
+  "bootstrap": [
+    {
+      "model": "constant",
+      "RMSE_95_W": [
+        118.30871059045472,
+        149.68823673874243
+      ],
+      "paired_minus_constant_95_W": [
+        0.0,
+        0.0
+      ],
+      "paired_minus_historical_95_W": [
+        75.01726014341894,
+        109.97850421709406
+      ]
+    },
+    {
+      "model": "affine",
+      "RMSE_95_W": [
+        20.372587074157387,
+        33.321218848426156
+      ],
+      "paired_minus_constant_95_W": [
+        -124.92203518506159,
+        -91.24222028377807
+      ],
+      "paired_minus_historical_95_W": [
+        -24.3632835754623,
+        -1.4978793133703956
+      ]
+    },
+    {
+      "model": "quadratic",
+      "RMSE_95_W": [
+        20.424771271047316,
+        33.729446278726996
+      ],
+      "paired_minus_constant_95_W": [
+        -125.32866373483742,
+        -90.20577001111133
+      ],
+      "paired_minus_historical_95_W": [
+        -23.93403024940933,
+        -1.2641841533596123
+      ]
+    },
+    {
+      "model": "baseline_slope",
+      "RMSE_95_W": [
+        22.835335601531806,
+        35.945725394415994
+      ],
+      "paired_minus_constant_95_W": [
+        -124.48163732688737,
+        -84.73491650658785
+      ],
+      "paired_minus_historical_95_W": [
+        -19.59154078476498,
+        -2.2834778778664537
+      ]
+    },
+    {
+      "model": "historical_D2_equilibrium",
+      "RMSE_95_W": [
+        31.59088111692698,
+        47.93023064631516
+      ],
+      "paired_minus_constant_95_W": [
+        -109.97850421709407,
+        -75.01726014341894
+      ],
+      "paired_minus_historical_95_W": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "selected_before_test": "quadratic",
+  "test_ids": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    50,
+    55,
+    60,
+    65,
+    70
+  ],
+  "limited_systemic_cost_validation_passed": true,
+  "mechanical_power_validation": "NOT DONE",
+  "CPE45_validation": "NOT DONE",
+  "lock_sha256": "25905c6724d1b7de91e07cf1a15b3a12e87070fcdef76384f14338d3960bc469",
+  "NO_GO": true,
+  "scope": "systemic costW from measuredVO2/VCO2, given prescribed cycleW; NOT independently predicted mechanicalpower"
+}

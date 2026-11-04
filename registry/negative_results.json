@@ -103,5 +103,40 @@
     "status": "model_counterexample",
     "claim": "Coarse12s sampling loses local directions; unmodelledpotentiation biases synthetictau to46..51s from60s. Clean nineparameter nonlinear fit still1.2%maxparametererror; modeldiscrepancy drift29.2%.",
     "context": "Preserves previous negative findings; synthetic stress is not empirical validation"
+  },
+  {
+    "id": "NEG-0016",
+    "experiment_id": "EXP-0023",
+    "status": "model_counterexample",
+    "claim": "No synchronized PCr/absoluteactivevolume/localflux new cohort. Dryad3450615 returns401; request-onlyMRS and failed500fullXML do not constitute numeric acquisition.",
+    "context": "Preserve prior negative outcomes and locks; no synthetic-human substitution"
+  },
+  {
+    "id": "NEG-0017",
+    "experiment_id": "EXP-0024",
+    "status": "model_counterexample",
+    "claim": "21/51 pulmonarytau profiles boundary/flat; gas gaps prevent recovery identification. Posture baseline is not localM; absolute systemiccost leaves local scale/baseline confounded.",
+    "context": "Preserve prior negative outcomes and locks; no synthetic-human substitution"
+  },
+  {
+    "id": "NEG-0018",
+    "experiment_id": "EXP-0025",
+    "status": "model_counterexample",
+    "claim": "Selected quadratic not better than affine on viewedtest; reduced9D alone cannot predict absolute systemiccost. Historical equilibrium bias-30.90W; no new sprint/CPE45 independent validation.",
+    "context": "Preserve prior negative outcomes and locks; no synthetic-human substitution"
+  },
+  {
+    "id": "NEG-0019",
+    "experiment_id": "EXP-0026",
+    "status": "model_counterexample",
+    "claim": "+15s timing leaves20/216 eligible stages; missingcoverage is not physiology. BUT-CGM CoolDown75W is active. No universally transferable efficiency/ATP reference established.",
+    "context": "Preserve prior negative outcomes and locks; no synthetic-human substitution"
+  },
+  {
+    "id": "NEG-0020",
+    "experiment_id": "EXP-0026",
+    "status": "model_counterexample",
+    "claim": "Sampled activation knees make finite-difference pulmonary FIM nonregular and platform-sensitive; profile support/status and locked metrics reproduce. Original diagnostics retained.",
+    "context": "NUMERICS.md; CI41881845684/41882497475; no test or model retuning"
   }
 ]

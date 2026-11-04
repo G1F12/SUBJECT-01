@@ -1,0 +1,72 @@
+{
+  "baseline": [
+    {
+      "task": "standing",
+      "participants": 37,
+      "cost_W_quantiles": [
+        85.00547286129705,
+        101.67190954790347,
+        116.95252590605278,
+        129.37754619670127,
+        283.6290404160153
+      ],
+      "oxygen_L_min_quantiles": [
+        0.2697695025414386,
+        0.3469372451359936,
+        0.5166459990242465
+      ],
+      "status": "MEASURED pulmonarygas; DERIVED independent-of-D2 systemicfuelcost; not fastingRMR orlocalM"
+    },
+    {
+      "task": "sitting",
+      "participants": 16,
+      "cost_W_quantiles": [
+        89.61804156139405,
+        100.37380280249982,
+        109.1510412524203,
+        113.54378674506488,
+        142.2323604538007
+      ],
+      "oxygen_L_min_quantiles": [
+        0.27570374037031775,
+        0.31776611543959865,
+        0.3822019263084828
+      ],
+      "status": "MEASURED pulmonarygas; DERIVED independent-of-D2 systemicfuelcost; not fastingRMR orlocalM"
+    }
+  ],
+  "systemic_cost_derived_from_independent_measuredgas": true,
+  "gross_ratio_quantiles": [
+    0.10390302230214994,
+    0.18231957778917018,
+    0.2175943839148056
+  ],
+  "gross_ratio_status": "EFFECTIVE ONLY; conditional lower bound onηlocal if no reserve withdrawal/anaerobicinput and correctfuelmap",
+  "interbout_windows": 1,
+  "recovery": [
+    {
+      "start_s": 1290,
+      "end_s": 1350,
+      "n_breaths": 16,
+      "observed_s": 50.0,
+      "coverage": 0.8333333333333334,
+      "vo2_L_min": 0.47412503739669776,
+      "vco2_L_min": 0.3836261909597919,
+      "power_W": 0.0,
+      "cadence_rpm": 4.15,
+      "cost_W": 158.36973152496168,
+      "RER": 0.8091245150565926,
+      "block_SE_W": 25.352899423618418,
+      "local_ATP_flux": null,
+      "PCr": null,
+      "participant": 58,
+      "stage": 2,
+      "task": "interbout_recovery",
+      "source": "P58_cycle.csv"
+    }
+  ],
+  "local_absolute_ATP_scale_found": false,
+  "local_M_found": false,
+  "absolute_reserve_J": "NOT OBSERVED",
+  "fusion": "sameparticipant cycle andwalkfiles distinguished; Cycle5PCr cohorts not assigned to these participants"
+}

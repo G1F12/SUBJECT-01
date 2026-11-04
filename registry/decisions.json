@@ -71,5 +71,12 @@
     "status": "adopted",
     "decision": "Cycle5 A/C/D: use nine mechanical-equivalent combinations for D2 power-only inference, never interpret gauge eta1/M0 physiologically; retain NO_GO and NOT EXTERNALLY VALIDATED. Two absolute anchors or calibrated dynamic oxidative channel needed to separate scale and baseline.",
     "basis": "EXP-0019..0022; mathematics and data-access audit"
+  },
+  {
+    "id": "DEC-0011",
+    "date": "2026-11-04",
+    "status": "adopted",
+    "decision": "Cycle6 A systemic anchor, C limited systemic-cost validation, D/E local partial-identification/access blocker. Keep9D quotient, do not map systemicdeltaefficiency/intercept to D2eta/M. Old10+7 and new13test people viewed; no reuse for independent claims. NO_GO, CPE45 NOT EXTERNALLY VALIDATED.",
+    "basis": "EXP-0023..0026; prereg0446eaa and model-lock726772f"
   }
 ]

@@ -1,0 +1,36 @@
+[
+  {
+    "label": "pilot_full",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12381362/fullTextXML",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 150257,
+    "sha256": "4294e9c1dd5cb5410c9b14342ec6ece42017b72334a6e61ddc1b0a0fcf2a9b73",
+    "cache": "pilot_full.bin"
+  },
+  {
+    "label": "local_full",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13370723/fullTextXML",
+    "status": 500,
+    "error": "HTTP Error 500: ",
+    "numeric_obtained": false
+  },
+  {
+    "label": "weee_metadata",
+    "url": "https://zenodo.org/api/records/6420886",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 5184,
+    "sha256": "c20f7de45e8c2bc8f50ce895c08d3e0a05585b971a2da5be839d5a84c3e62de2",
+    "cache": "weee_metadata.bin"
+  },
+  {
+    "label": "weee_paper",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9436988/fullTextXML",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 123316,
+    "sha256": "9f9209ef6589cf7dc61b22f3c190de2c6ed54fff426405dd24225261492668a5",
+    "cache": "weee_paper.bin"
+  }
+]

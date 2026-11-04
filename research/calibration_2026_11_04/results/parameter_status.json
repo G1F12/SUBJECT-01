@@ -1,0 +1,62 @@
+{
+  "rows": [
+    {
+      "quantity": "pulmonaryVO2/VCO2",
+      "status": "MEASURED",
+      "scope": "nativebreathgas with devicecalibration stated; instrumentuniterror unknown"
+    },
+    {
+      "quantity": "mechanicalW",
+      "status": "MEASURED",
+      "scope": "recorded prescribedergometerload; not maximalpower capacity or independent torque×velocity trace"
+    },
+    {
+      "quantity": "systemicfuelcostW",
+      "status": "EFFECTIVE ONLY",
+      "scope": "derivedfrommeasuredVO2/VCO2 byexplicitWeirtypeequation; not measuredheat/ATP"
+    },
+    {
+      "quantity": "systemiccostinterceptandslope",
+      "status": "IDENTIFIED",
+      "scope": "conditional affineobservationmodel on51developmentparticipants; clusterintervals; no localphysiologyassignment"
+    },
+    {
+      "quantity": "mechanicalefficiencyηD2",
+      "status": "UNIDENTIFIABLE",
+      "scope": "systemicdeltaefficiency is EFFECTIVEONLY, with conditional intervals and gain/otherconsumer ambiguity"
+    },
+    {
+      "quantity": "baselineposturegas",
+      "status": "MEASURED",
+      "scope": "standing37/sitting16developmentpeople; otherfile/task; not fastingRMR"
+    },
+    {
+      "quantity": "localM/oxidativeQ",
+      "status": "UNIDENTIFIABLE",
+      "scope": "localallocation,otherconsumers,gain/offset unknown"
+    },
+    {
+      "quantity": "Cf,Cs,Lf,Ls,rechargeefficiency,recoverytaus",
+      "status": "UNIDENTIFIABLE",
+      "scope": "noPCr/absoluteactivevolume, no validrecoverygas exceptsinglewindow; noreserveexcitationproof"
+    },
+    {
+      "quantity": "pulmonaryeffectiveτ",
+      "status": "EFFECTIVE ONLY",
+      "scope": "30finiteconditionalprofiles;21UNIDENTIFIABLE; notlocalτoxygen or mitochondrialcapacity"
+    },
+    {
+      "quantity": "PCr/ATP/Pi/pH/activevolume/MVC/twitch",
+      "status": "NOT OBSERVED",
+      "scope": "newCPET/WEEEcohorts; Cycle5PCrnotmergedacrosspersons"
+    },
+    {
+      "quantity": "WEEEfuelcost",
+      "status": "BOUNDED",
+      "scope": "onlyunderexplicitRER.7..1; noVCO2 orW, not independent absoluteefficiency"
+    }
+  ],
+  "warning": "labels apply tospecifiedmeasurementmap; IDENTIFIEDconditionalcoefficients are not11D2parameters",
+  "constant_test_calibration": "UNIDENTIFIABLE intercept/slope because constantprediction hasrank1; archivedminimum-normdiagnosticcoefficients are not interpreted",
+  "reduced_model": "9D quotient retained unchanged; absoluteEsys requiresseparatelyfittedobservationlayer"
+}

@@ -2,6 +2,7 @@ name: Validate research repository
 on:
   push:
   pull_request:
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -12,6 +13,8 @@ jobs:
           python-version: '3.12'
       - name: Install reproducibility requirements
         run: pip install -r requirements.txt
+      - name: Replay measured CPET snapshots and fixed systemic-cost test (offline, not new validation)
+        run: python research/calibration_2026_11_04/reproduce.py
       - name: Structural and hash audit
         run: python tools/validate_repository.py
       - name: Recompute baseline CSVs in isolated directory
@@ -38,3 +41,5 @@ jobs:
         run: python research/observability_2026_11_04/inspect_data.py --check-offline
       - name: Reproduce conditional measurement design, FIM and synthetic stress results
         run: python research/observability_2026_11_04/audit.py --check
+      - name: Verify real-data calibration, measurement maps and locked-test isolation
+        run: python -m unittest discover -s research/calibration_2026_11_04 -p test_calibration.py

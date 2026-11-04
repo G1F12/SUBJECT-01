@@ -1,0 +1,28 @@
+{
+  "parameters": [
+    "intercept_W",
+    "slope_W_per_W",
+    "effective_delta_efficiency"
+  ],
+  "estimate": [
+    153.85300276414077,
+    3.6433308572400125,
+    0.27447411151606066
+  ],
+  "participant_bootstrap_95": [
+    [
+      144.17572762403907,
+      3.559879130304252,
+      0.26843992260866173
+    ],
+    [
+      163.82826762842896,
+      3.72522831284841,
+      0.2809084139645152
+    ]
+  ],
+  "draws": 2000,
+  "participants": 51,
+  "seed": 20261107,
+  "meaning": "conditional whole-body empirical coefficients; not localη/M; calibration/gain/offset systematicerrors excluded"
+}
