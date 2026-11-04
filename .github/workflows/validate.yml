@@ -24,3 +24,7 @@ jobs:
         run: python research/integrated_2026_11_01/experiments.py --check
       - name: Verify CPE45 measurement functions (synthetic, not physiological validation)
         run: python -m unittest discover -s tests -p test_cpe45.py
+      - name: Verify dynamic CPE45 physical and data invariants
+        run: python research/cpe45_2026_11_04/test_model.py
+      - name: Reproduce dynamic CPE45 scenarios and held-participant endpoint errors
+        run: python research/cpe45_2026_11_04/experiments.py --check

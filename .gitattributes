@@ -1,3 +1,7 @@
 research/foundation_2026_11_01/** -text
 research/integrated_2026_11_01/** text eol=lf
 research/integrated_2026_11_01/**/*.png -text
+research/cpe45_2026_11_04/** text eol=lf
+research/cpe45_2026_11_04/**/*.png -text
+research/cpe45_2026_11_04/**/*.xlsx -text
+research/cpe45_2026_11_04/data/SRC-*_europepmc.json -text

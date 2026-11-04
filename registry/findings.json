@@ -95,5 +95,33 @@
     "experiment_id": "EXP-0008",
     "claim": "В 35 C/80% RH более тяжёлый пакет с +50% доступной испаряемой водой проигрывает baseline steady output: vapor capacity среды ограничивает пользу охлаждения.",
     "external_validation": "not_done"
+  },
+  {
+    "id": "FND-0013",
+    "experiment_id": "EXP-0011",
+    "status": "arithmetic_reproduced",
+    "claim": "Published supplement has 44 condition rows, 414 numeric/26 missing mean-power cells. Conditional participant holdout: new coupled cycling RMSE378.54 W vs constant115.34 W.",
+    "limits": "First sprint supplied; 11 fit/10 holdout NC participants; no external CPE45 validation."
+  },
+  {
+    "id": "FND-0014",
+    "experiment_id": "EXP-0012",
+    "status": "arithmetic_reproduced",
+    "claim": "Baseline mixed2700s: work86.38kJ, fast2758J/slow2439J at end; comparable max-task early/late mean power175.86/114.08W.",
+    "limits": "Scenario mechanics and rates; not measured human endurance."
+  },
+  {
+    "id": "FND-0015",
+    "experiment_id": "EXP-0013",
+    "status": "arithmetic_reproduced",
+    "claim": "Fast reserve capacity/recovery affect work more than moderate peripheral fatigue perturbations in this regime; UQ work p05..95=66.36..106.96kJ.",
+    "limits": "Independent uniform epistemic scenarios, not population CI; structural mismatch dominates."
+  },
+  {
+    "id": "FND-0016",
+    "experiment_id": "EXP-0014",
+    "status": "arithmetic_reproduced",
+    "claim": "Conditional II work108.85kJ vs baseline86.38kJ; humid one-node delta4.602 vs3.618K; architecture heat ranking changes by climate.",
+    "limits": "No feedback from heat to motor output; no architecture meets validated CPE45."
   }
 ]

@@ -1,0 +1,441 @@
+participant,condition,repetition,mean_power_W,source_cell,split
+1,Thermoneutral,1,1052.109208,Results!S3,fit
+1,Thermoneutral,2,1243.397843,Results!T3,fit
+1,Thermoneutral,3,1334.247765,Results!U3,fit
+1,Thermoneutral,4,1368.787372,Results!V3,fit
+1,Thermoneutral,5,1343.246114,Results!W3,fit
+1,Thermoneutral,6,1373.286331,Results!X3,fit
+1,Thermoneutral,7,1404.9975,Results!Y3,fit
+1,Thermoneutral,8,1383.716627,Results!Z3,fit
+1,Thermoneutral,9,1301.789119,Results!AA3,fit
+1,Thermoneutral,10,1379.957851,Results!AB3,fit
+2,Thermoneutral,1,987.0686043,Results!S4,validation
+2,Thermoneutral,2,1084.932778,Results!T4,validation
+2,Thermoneutral,3,1135.426944,Results!U4,validation
+2,Thermoneutral,4,1080.484717,Results!V4,validation
+2,Thermoneutral,5,1090.816897,Results!W4,validation
+2,Thermoneutral,6,1169.230132,Results!X4,validation
+2,Thermoneutral,7,1142.779366,Results!Y4,validation
+2,Thermoneutral,8,1133.046897,Results!Z4,validation
+2,Thermoneutral,9,1118.046323,Results!AA4,validation
+2,Thermoneutral,10,1098.755448,Results!AB4,validation
+3,Thermoneutral,1,1037.032254,Results!S5,fit
+3,Thermoneutral,2,1143.8307,Results!T5,fit
+3,Thermoneutral,3,1139.521228,Results!U5,fit
+3,Thermoneutral,4,1178.487352,Results!V5,fit
+3,Thermoneutral,5,1177.703286,Results!W5,fit
+3,Thermoneutral,6,1022.548744,Results!X5,fit
+3,Thermoneutral,7,1214.240258,Results!Y5,fit
+3,Thermoneutral,8,1186.638321,Results!Z5,fit
+3,Thermoneutral,9,1167.166156,Results!AA5,fit
+3,Thermoneutral,10,1172.082267,Results!AB5,fit
+4,Thermoneutral,1,869.5675284,Results!S6,validation
+4,Thermoneutral,2,1104.410341,Results!T6,validation
+4,Thermoneutral,3,1126.687375,Results!U6,validation
+4,Thermoneutral,4,1111.885151,Results!V6,validation
+4,Thermoneutral,5,1114.738881,Results!W6,validation
+4,Thermoneutral,6,1100.973484,Results!X6,validation
+4,Thermoneutral,7,1076.228257,Results!Y6,validation
+4,Thermoneutral,8,1115.55919,Results!Z6,validation
+4,Thermoneutral,9,1076.127561,Results!AA6,validation
+4,Thermoneutral,10,1107.485999,Results!AB6,validation
+5,Thermoneutral,1,1245.839548,Results!S7,fit
+5,Thermoneutral,2,1289.26405,Results!T7,fit
+5,Thermoneutral,3,1224.746435,Results!U7,fit
+5,Thermoneutral,4,1195.619716,Results!V7,fit
+5,Thermoneutral,5,1124.29795,Results!W7,fit
+5,Thermoneutral,6,1127.350311,Results!X7,fit
+5,Thermoneutral,7,1149.245983,Results!Y7,fit
+5,Thermoneutral,8,1153.38831,Results!Z7,fit
+5,Thermoneutral,9,1092.59898,Results!AA7,fit
+5,Thermoneutral,10,1059.443253,Results!AB7,fit
+6,Thermoneutral,1,1105.863391,Results!S8,validation
+6,Thermoneutral,2,1207.126297,Results!T8,validation
+6,Thermoneutral,3,1230.8815,Results!U8,validation
+6,Thermoneutral,4,1182.043624,Results!V8,validation
+6,Thermoneutral,5,1196.009103,Results!W8,validation
+6,Thermoneutral,6,1170.079036,Results!X8,validation
+6,Thermoneutral,7,1202.841331,Results!Y8,validation
+6,Thermoneutral,8,1105.339144,Results!Z8,validation
+6,Thermoneutral,9,1183.344561,Results!AA8,validation
+6,Thermoneutral,10,1183.835409,Results!AB8,validation
+7,Thermoneutral,1,1114.985286,Results!S9,fit
+7,Thermoneutral,2,1168.234863,Results!T9,fit
+7,Thermoneutral,3,1155.829759,Results!U9,fit
+7,Thermoneutral,4,1172.788914,Results!V9,fit
+7,Thermoneutral,5,1149.944478,Results!W9,fit
+7,Thermoneutral,6,1152.77263,Results!X9,fit
+7,Thermoneutral,7,1120.59995,Results!Y9,fit
+7,Thermoneutral,8,1147.085388,Results!Z9,fit
+7,Thermoneutral,9,1141.460091,Results!AA9,fit
+7,Thermoneutral,10,1135.884549,Results!AB9,fit
+8,Thermoneutral,1,1040.147496,Results!S10,validation
+8,Thermoneutral,2,1155.911173,Results!T10,validation
+8,Thermoneutral,3,1099.886325,Results!U10,validation
+8,Thermoneutral,4,1129.698025,Results!V10,validation
+8,Thermoneutral,5,1133.862247,Results!W10,validation
+8,Thermoneutral,6,1114.40537,Results!X10,validation
+8,Thermoneutral,7,1114.546006,Results!Y10,validation
+8,Thermoneutral,8,1173.21396,Results!Z10,validation
+8,Thermoneutral,9,1058.233858,Results!AA10,validation
+8,Thermoneutral,10,1162.068033,Results!AB10,validation
+9,Thermoneutral,1,989.1518796,Results!S11,fit
+9,Thermoneutral,2,1131.757342,Results!T11,fit
+9,Thermoneutral,3,1086.203591,Results!U11,fit
+9,Thermoneutral,4,1042.792044,Results!V11,fit
+9,Thermoneutral,5,933.5056623,Results!W11,fit
+9,Thermoneutral,6,881.8664524,Results!X11,fit
+9,Thermoneutral,7,893.2002755,Results!Y11,fit
+9,Thermoneutral,8,933.5056623,Results!Z11,fit
+9,Thermoneutral,9,901.620019,Results!AA11,fit
+9,Thermoneutral,10,933.5056623,Results!AB11,fit
+10,Thermoneutral,1,1017.756052,Results!S12,validation
+10,Thermoneutral,2,999.7581349,Results!T12,validation
+10,Thermoneutral,3,1059.901357,Results!U12,validation
+10,Thermoneutral,4,1030.163973,Results!V12,validation
+10,Thermoneutral,5,977.6365518,Results!W12,validation
+10,Thermoneutral,6,897.4122671,Results!X12,validation
+10,Thermoneutral,7,946.2360702,Results!Y12,validation
+10,Thermoneutral,8,999.6061355,Results!Z12,validation
+10,Thermoneutral,9,939.3222875,Results!AA12,validation
+10,Thermoneutral,10,992.7135788,Results!AB12,validation
+11,Thermoneutral,1,1272.593349,Results!S13,fit
+11,Thermoneutral,2,1338.174586,Results!T13,fit
+11,Thermoneutral,3,1326.26257,Results!U13,fit
+11,Thermoneutral,4,1255.569157,Results!V13,fit
+11,Thermoneutral,5,1291.379276,Results!W13,fit
+11,Thermoneutral,6,1215.487855,Results!X13,fit
+11,Thermoneutral,7,1273.894242,Results!Y13,fit
+11,Thermoneutral,8,1232.65292,Results!Z13,fit
+11,Thermoneutral,9,1200.399222,Results!AA13,fit
+11,Thermoneutral,10,1267.010868,Results!AB13,fit
+12,Thermoneutral,1,1297.624808,Results!S14,validation
+12,Thermoneutral,2,1397.468299,Results!T14,validation
+12,Thermoneutral,3,1258.289218,Results!U14,validation
+12,Thermoneutral,4,1347.138924,Results!V14,validation
+12,Thermoneutral,5,1219.88907,Results!W14,validation
+12,Thermoneutral,6,1343.758573,Results!X14,validation
+12,Thermoneutral,7,1259.381354,Results!Y14,validation
+12,Thermoneutral,8,1300.193009,Results!Z14,validation
+12,Thermoneutral,9,1339.998718,Results!AA14,validation
+12,Thermoneutral,10,1372.385954,Results!AB14,validation
+13,Thermoneutral,1,1294.48596,Results!S15,fit
+13,Thermoneutral,2,1268.159375,Results!T15,fit
+13,Thermoneutral,3,1229.048642,Results!U15,fit
+13,Thermoneutral,4,1375.721009,Results!V15,fit
+13,Thermoneutral,5,1248.781207,Results!W15,fit
+13,Thermoneutral,6,1356.697577,Results!X15,fit
+13,Thermoneutral,7,1377.415597,Results!Y15,fit
+13,Thermoneutral,8,1325.152901,Results!Z15,fit
+13,Thermoneutral,9,1310.966517,Results!AA15,fit
+13,Thermoneutral,10,1323.978196,Results!AB15,fit
+14,Thermoneutral,1,1278.706221,Results!S16,validation
+14,Thermoneutral,2,1355.108999,Results!T16,validation
+14,Thermoneutral,3,1357.275692,Results!U16,validation
+14,Thermoneutral,4,1418.045061,Results!V16,validation
+14,Thermoneutral,5,1443.544764,Results!W16,validation
+14,Thermoneutral,6,1436.420368,Results!X16,validation
+14,Thermoneutral,7,1500.45307,Results!Y16,validation
+14,Thermoneutral,8,1438.597136,Results!Z16,validation
+14,Thermoneutral,9,1480.781909,Results!AA16,validation
+14,Thermoneutral,10,1484.469879,Results!AB16,validation
+15,Thermoneutral,1,987.9625282,Results!S17,fit
+15,Thermoneutral,2,1055.77792,Results!T17,fit
+15,Thermoneutral,3,1114.447232,Results!U17,fit
+15,Thermoneutral,4,1099.107506,Results!V17,fit
+15,Thermoneutral,5,1114.974912,Results!W17,fit
+15,Thermoneutral,6,1086.620209,Results!X17,fit
+15,Thermoneutral,7,1090.714769,Results!Y17,fit
+15,Thermoneutral,8,1083.046047,Results!Z17,fit
+15,Thermoneutral,9,1020.443983,Results!AA17,fit
+15,Thermoneutral,10,1107.70465,Results!AB17,fit
+16,Thermoneutral,1,1332.344635,Results!S18,validation
+16,Thermoneutral,2,1416.831092,Results!T18,validation
+16,Thermoneutral,3,1413.264179,Results!U18,validation
+16,Thermoneutral,4,1348.07395,Results!V18,validation
+16,Thermoneutral,5,1339.855061,Results!W18,validation
+16,Thermoneutral,6,1372.624248,Results!X18,validation
+16,Thermoneutral,7,1392.715967,Results!Y18,validation
+16,Thermoneutral,8,1370.014946,Results!Z18,validation
+16,Thermoneutral,9,1305.32963,Results!AA18,validation
+16,Thermoneutral,10,1284.920847,Results!AB18,validation
+17,Thermoneutral,1,1151.368409,Results!S19,fit
+17,Thermoneutral,2,1206.359669,Results!T19,fit
+17,Thermoneutral,3,1196.867984,Results!U19,fit
+17,Thermoneutral,4,1191.704134,Results!V19,fit
+17,Thermoneutral,5,1132.982701,Results!W19,fit
+17,Thermoneutral,6,1145.455047,Results!X19,fit
+17,Thermoneutral,7,1161.39334,Results!Y19,fit
+17,Thermoneutral,8,1167.931881,Results!Z19,fit
+17,Thermoneutral,9,1077.417803,Results!AA19,fit
+17,Thermoneutral,10,1199.971977,Results!AB19,fit
+18,Thermoneutral,1,,Results!S20,validation
+18,Thermoneutral,2,,Results!T20,validation
+18,Thermoneutral,3,,Results!U20,validation
+18,Thermoneutral,4,,Results!V20,validation
+18,Thermoneutral,5,,Results!W20,validation
+18,Thermoneutral,6,,Results!X20,validation
+18,Thermoneutral,7,,Results!Y20,validation
+18,Thermoneutral,8,,Results!Z20,validation
+18,Thermoneutral,9,,Results!AA20,validation
+18,Thermoneutral,10,,Results!AB20,validation
+19,Thermoneutral,1,1154.049203,Results!S21,fit
+19,Thermoneutral,2,1217.350789,Results!T21,fit
+19,Thermoneutral,3,1192.882391,Results!U21,fit
+19,Thermoneutral,4,1178.710963,Results!V21,fit
+19,Thermoneutral,5,1060.540231,Results!W21,fit
+19,Thermoneutral,6,1137.723477,Results!X21,fit
+19,Thermoneutral,7,1142.59798,Results!Y21,fit
+19,Thermoneutral,8,1096.9494,Results!Z21,fit
+19,Thermoneutral,9,1114.592996,Results!AA21,fit
+19,Thermoneutral,10,1068.022511,Results!AB21,fit
+20,Thermoneutral,1,1305.6916,Results!S22,validation
+20,Thermoneutral,2,1257.587527,Results!T22,validation
+20,Thermoneutral,3,1320.222542,Results!U22,validation
+20,Thermoneutral,4,1276.503714,Results!V22,validation
+20,Thermoneutral,5,1300.807307,Results!W22,validation
+20,Thermoneutral,6,1222.868254,Results!X22,validation
+20,Thermoneutral,7,1290.027802,Results!Y22,validation
+20,Thermoneutral,8,1318.091253,Results!Z22,validation
+20,Thermoneutral,9,1102.926926,Results!AA22,validation
+20,Thermoneutral,10,1367.292156,Results!AB22,validation
+21,Thermoneutral,1,1285.594379,Results!S23,fit
+21,Thermoneutral,2,1234.515349,Results!T23,fit
+21,Thermoneutral,3,1171.934489,Results!U23,fit
+21,Thermoneutral,4,1152.661691,Results!V23,fit
+21,Thermoneutral,5,1166.767378,Results!W23,fit
+21,Thermoneutral,6,1179.424246,Results!X23,fit
+21,Thermoneutral,7,1173.471321,Results!Y23,fit
+21,Thermoneutral,8,1160.253552,Results!Z23,fit
+21,Thermoneutral,9,1160.919728,Results!AA23,fit
+21,Thermoneutral,10,1144.417681,Results!AB23,fit
+22,Thermoneutral,1,1317.695491,Results!S24,validation
+22,Thermoneutral,2,1328.244243,Results!T24,validation
+22,Thermoneutral,3,1228.19495,Results!U24,validation
+22,Thermoneutral,4,1304.69265,Results!V24,validation
+22,Thermoneutral,5,1257.226587,Results!W24,validation
+22,Thermoneutral,6,1279.722222,Results!X24,validation
+22,Thermoneutral,7,1296.997053,Results!Y24,validation
+22,Thermoneutral,8,1298.257621,Results!Z24,validation
+22,Thermoneutral,9,1324.560252,Results!AA24,validation
+22,Thermoneutral,10,1271.857987,Results!AB24,validation
+23,Conditions in Qatar in 2022,1,1433.28148,Results!S25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,2,1416.80127,Results!T25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,3,1451.541758,Results!U25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,4,1442.86105,Results!V25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,5,1438.65024,Results!W25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,6,1482.390277,Results!X25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,7,1363.024038,Results!Y25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,8,1391.104686,Results!Z25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,9,1399.686001,Results!AA25,excluded_unresolved_pairing
+23,Conditions in Qatar in 2022,10,1396.050488,Results!AB25,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,1,1109.040285,Results!S26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,2,1167.367083,Results!T26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,3,1140.163261,Results!U26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,4,1128.295347,Results!V26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,5,1125.58772,Results!W26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,6,1120.121218,Results!X26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,7,1164.294854,Results!Y26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,8,1124.120499,Results!Z26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,9,1120.43847,Results!AA26,excluded_unresolved_pairing
+24,Conditions in Qatar in 2022,10,1133.649399,Results!AB26,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,1,1181.350455,Results!S27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,2,1158.936572,Results!T27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,3,1234.196779,Results!U27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,4,1256.261113,Results!V27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,5,1218.58542,Results!W27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,6,1203.04667,Results!X27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,7,1219.828098,Results!Y27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,8,1189.217929,Results!Z27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,9,1204.839208,Results!AA27,excluded_unresolved_pairing
+25,Conditions in Qatar in 2022,10,1222.297378,Results!AB27,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,1,1188.185281,Results!S28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,2,1176.481282,Results!T28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,3,1136.900685,Results!U28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,4,991.9250399,Results!V28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,5,1148.630522,Results!W28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,6,1064.496584,Results!X28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,7,1078.004419,Results!Y28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,8,1119.468883,Results!Z28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,9,1108.130639,Results!AA28,excluded_unresolved_pairing
+26,Conditions in Qatar in 2022,10,1093.365288,Results!AB28,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,1,1249.604566,Results!S29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,2,1323.450017,Results!T29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,3,1294.618823,Results!U29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,4,1254.339763,Results!V29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,5,1281.508917,Results!W29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,6,1229.181219,Results!X29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,7,1208.677313,Results!Y29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,8,1166.48698,Results!Z29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,9,1171.238557,Results!AA29,excluded_unresolved_pairing
+27,Conditions in Qatar in 2022,10,1155.102087,Results!AB29,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,1,1266.537909,Results!S30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,2,1291.995419,Results!T30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,3,1181.572305,Results!U30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,4,1249.93416,Results!V30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,5,1211.907614,Results!W30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,6,1166.982543,Results!X30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,7,1140.890384,Results!Y30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,8,1200.021586,Results!Z30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,9,1090.10863,Results!AA30,excluded_unresolved_pairing
+28,Conditions in Qatar in 2022,10,1172.052855,Results!AB30,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,1,,Results!S31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,2,,Results!T31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,3,,Results!U31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,4,,Results!V31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,5,,Results!W31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,6,,Results!X31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,7,,Results!Y31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,8,,Results!Z31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,9,,Results!AA31,excluded_unresolved_pairing
+29,Conditions in Qatar in 2022,10,,Results!AB31,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,1,1185.452868,Results!S32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,2,1197.902452,Results!T32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,3,1190.413929,Results!U32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,4,1220.541341,Results!V32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,5,1207.732847,Results!W32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,6,1201.359231,Results!X32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,7,1226.371656,Results!Y32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,8,1199.582195,Results!Z32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,9,1185.304624,Results!AA32,excluded_unresolved_pairing
+30,Conditions in Qatar in 2022,10,1219.915155,Results!AB32,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,1,1012.768449,Results!S33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,2,977.4481661,Results!T33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,3,1009.547773,Results!U33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,4,1005.054617,Results!V33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,5,959.8205274,Results!W33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,6,916.6443113,Results!X33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,7,920.5146818,Results!Y33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,8,847.7404505,Results!Z33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,9,887.3173848,Results!AA33,excluded_unresolved_pairing
+31,Conditions in Qatar in 2022,10,773.7226119,Results!AB33,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,1,1051.348406,Results!S34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,2,1033.147812,Results!T34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,3,959.7320175,Results!U34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,4,862.8596684,Results!V34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,5,926.1451595,Results!W34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,6,896.5295683,Results!X34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,7,918.8077612,Results!Y34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,8,892.245207,Results!Z34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,9,897.2488287,Results!AA34,excluded_unresolved_pairing
+32,Conditions in Qatar in 2022,10,939.8954297,Results!AB34,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,1,1340.31463,Results!S35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,2,1351.113464,Results!T35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,3,1357.332754,Results!U35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,4,1227.504759,Results!V35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,5,1324.722181,Results!W35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,6,1370.313033,Results!X35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,7,1360.933204,Results!Y35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,8,1345.062424,Results!Z35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,9,1342.128531,Results!AA35,excluded_unresolved_pairing
+33,Conditions in Qatar in 2022,10,1351.362207,Results!AB35,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,1,1326.208842,Results!S36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,2,1428.721128,Results!T36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,3,1272.304979,Results!U36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,4,1289.761096,Results!V36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,5,1333.808985,Results!W36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,6,1278.378369,Results!X36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,7,1295.411873,Results!Y36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,8,,Results!Z36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,9,,Results!AA36,excluded_unresolved_pairing
+34,Conditions in Qatar in 2022,10,,Results!AB36,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,1,1338.603839,Results!S37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,2,1418.164386,Results!T37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,3,1299.778259,Results!U37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,4,1393.337365,Results!V37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,5,1382.940362,Results!W37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,6,1350.814245,Results!X37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,7,1347.104566,Results!Y37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,8,1372.098176,Results!Z37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,9,1400.71401,Results!AA37,excluded_unresolved_pairing
+35,Conditions in Qatar in 2022,10,1405.669768,Results!AB37,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,1,1521.877675,Results!S38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,2,1514.598985,Results!T38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,3,1522.856071,Results!U38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,4,1519.329713,Results!V38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,5,1551.736884,Results!W38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,6,1541.213165,Results!X38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,7,1535.414097,Results!Y38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,8,1527.442502,Results!Z38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,9,1487.83131,Results!AA38,excluded_unresolved_pairing
+36,Conditions in Qatar in 2022,10,1442.425435,Results!AB38,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,1,1128.12178,Results!S39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,2,1123.412882,Results!T39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,3,1141.461037,Results!U39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,4,1157.548396,Results!V39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,5,1074.697588,Results!W39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,6,1157.548396,Results!X39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,7,1130.90339,Results!Y39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,8,,Results!Z39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,9,,Results!AA39,excluded_unresolved_pairing
+37,Conditions in Qatar in 2022,10,,Results!AB39,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,1,1415.67509,Results!S40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,2,1472.275722,Results!T40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,3,1471.752641,Results!U40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,4,1447.920862,Results!V40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,5,1440.979225,Results!W40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,6,1457.77353,Results!X40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,7,1399.571608,Results!Y40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,8,1401.020706,Results!Z40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,9,1421.312468,Results!AA40,excluded_unresolved_pairing
+38,Conditions in Qatar in 2022,10,1395.355121,Results!AB40,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,1,1157.291989,Results!S41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,2,1205.280788,Results!T41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,3,1196.508474,Results!U41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,4,1146.497589,Results!V41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,5,1146.753777,Results!W41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,6,1116.1549,Results!X41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,7,1176.141361,Results!Y41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,8,1154.609434,Results!Z41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,9,1165.239567,Results!AA41,excluded_unresolved_pairing
+39,Conditions in Qatar in 2022,10,1180.868187,Results!AB41,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,1,1297.067841,Results!S42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,2,1307.694522,Results!T42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,3,1309.0933,Results!U42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,4,1309.419695,Results!V42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,5,1271.009539,Results!W42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,6,1262.753312,Results!X42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,7,1275.669703,Results!Y42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,8,1278.373729,Results!Z42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,9,1258.987936,Results!AA42,excluded_unresolved_pairing
+40,Conditions in Qatar in 2022,10,1216.083145,Results!AB42,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,1,1189.909484,Results!S43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,2,1124.052149,Results!T43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,3,1198.004859,Results!U43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,4,1170.032337,Results!V43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,5,1154.931777,Results!W43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,6,1108.22416,Results!X43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,7,1173.44948,Results!Y43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,8,1116.906601,Results!Z43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,9,1097.913998,Results!AA43,excluded_unresolved_pairing
+41,Conditions in Qatar in 2022,10,1123.511487,Results!AB43,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,1,1341.131119,Results!S44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,2,1355.474744,Results!T44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,3,1416.008835,Results!U44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,4,1343.740695,Results!V44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,5,1382.987133,Results!W44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,6,1360.419838,Results!X44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,7,1396.465915,Results!Y44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,8,1322.328366,Results!Z44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,9,1338.167066,Results!AA44,excluded_unresolved_pairing
+42,Conditions in Qatar in 2022,10,1358.978798,Results!AB44,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,1,1211.890002,Results!S45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,2,1204.069037,Results!T45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,3,1169.702005,Results!U45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,4,1139.2797,Results!V45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,5,1092.557915,Results!W45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,6,1081.545015,Results!X45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,7,1075.9249,Results!Y45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,8,1032.270119,Results!Z45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,9,1066.48023,Results!AA45,excluded_unresolved_pairing
+43,Conditions in Qatar in 2022,10,1069.126843,Results!AB45,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,1,1337.438085,Results!S46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,2,1329.38074,Results!T46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,3,1324.82515,Results!U46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,4,1350.043224,Results!V46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,5,1324.630451,Results!W46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,6,1337.93552,Results!X46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,7,1334.830195,Results!Y46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,8,1232.347875,Results!Z46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,9,1297.084339,Results!AA46,excluded_unresolved_pairing
+44,Conditions in Qatar in 2022,10,1266.370112,Results!AB46,excluded_unresolved_pairing

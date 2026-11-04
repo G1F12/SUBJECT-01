@@ -58,5 +58,12 @@ python research/integrated_2026_11_01/experiments.py --check
 python -m unittest discover -s tests -p test_cpe45.py
 ```
 
-Следующая исследовательская задача — динамическая модель утомления и восстановления
-на 2700 секунд (ISS-0011); текущий модуль её не реализует.
+Динамический цикл реализован отдельно: [CPE45 REPORT](research/cpe45_2026_11_04/REPORT.md).
+15 сценариев, раздельные состояния энергии/утомления/тепла; проверка переноса
+отрицательная: coupled RMSE378.54W против constant115.34W. ISS-0011 открыт,
+модель not_empirically_validated; NO_GO сохранён.
+
+```text
+python research/cpe45_2026_11_04/test_model.py
+python research/cpe45_2026_11_04/experiments.py --check
+```

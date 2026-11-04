@@ -617,5 +617,109 @@
       "depth": "библиография и аннотация; не полная оценка качества/ретракций"
     },
     "limitations": "Восстановление влияет на повторный cycling output; короткий протокол другой выборки не переносится автоматически на 2700 s."
+  },
+  {
+    "id": "SRC-0032",
+    "title": "Recovery of power output and muscle metabolites following 30 s of maximal sprint cycling in man.",
+    "doi": "10.1113/jphysiol.1995.sp020533",
+    "year": 1995,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0032"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0033",
+    "title": "Contribution of phosphocreatine and aerobic metabolism to energy supply during repeated sprint exercise",
+    "doi": "10.1152/jappl.1996.80.3.876",
+    "year": 1996,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0033"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0034",
+    "title": "Power output and muscle metabolism during and following recovery from 10 and 20 s of maximal sprint exercise in humans",
+    "doi": "10.1046/j.1365-201x.1998.00378.x",
+    "year": 1998,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0034"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0035",
+    "title": "Responses of soccer players performing repeated maximal efforts in simulated conditions of the FIFA World Cup Qatar 2022: A holistic approach",
+    "doi": "10.1371/journal.pone.0276314",
+    "year": 2022,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0035"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0036",
+    "title": "Influence of repeated sprint training on pulmonary O<sub>2</sub> uptake and muscle deoxygenation kinetics in humans",
+    "doi": "10.1152/japplphysiol.00144.2009",
+    "year": 2009,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0036"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0037",
+    "title": "Neuromuscular Fatigability during Repeated-Sprint Exercise in Male Athletes",
+    "doi": "10.1249/MSS.0000000000000443",
+    "year": 2015,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0037"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0038",
+    "title": "Peripheral and Central Fatigue Development during All-Out Repeated Cycling Sprints",
+    "doi": "10.1249/MSS.0000000000000800",
+    "year": 2016,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0038"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0039",
+    "title": "The effects of a 30-min run on the mechanics of the human Achilles tendon",
+    "doi": "10.1007/s00421-011-2019-8",
+    "year": 2011,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/cpe45_2026_11_04/sources.json",
+      "source_id": "SRC-0039"
+    },
+    "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
   }
 ]

@@ -1,0 +1,82 @@
+{
+  "fit_ids": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "validation_ids": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    22
+  ],
+  "excluded": [
+    {
+      "participant": 18,
+      "reason": "first sprint missing; no imputation"
+    }
+  ],
+  "excluded_climate_rows": 22,
+  "raw_rows": 44,
+  "raw_mean_power_cells": 440,
+  "missing_mean_power_cells": 26,
+  "selected_parameters": {
+    "empirical_slope_per_rep": 0.0040000000000000036,
+    "monoexponential_amplitude": 0.040000000000000036,
+    "monoexponential_tau_repetitions": 1,
+    "coupled_fatigue_rate_s_inv": 0
+  },
+  "pc_r_diagnostic": {
+    "source": "SRC-0032",
+    "fit_time_s": 90,
+    "test_time_s": 360,
+    "same_cohort": true,
+    "tau_s": 108.37868908192436,
+    "predicted_fraction": 0.9710181875572808,
+    "observed_fraction": 0.855,
+    "residual_percentage_points": 11.601818755728077,
+    "interpretation": "aggregate temporal holdout; rejects universal monoexponential recovery, no independent validation"
+  },
+  "bootstrap": [
+    {
+      "model": "constant",
+      "RMSE_cluster_p025_W": 73.41091638224654,
+      "RMSE_cluster_p975_W": 156.44353506798603,
+      "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+    },
+    {
+      "model": "monoexponential",
+      "RMSE_cluster_p025_W": 72.64817977704715,
+      "RMSE_cluster_p975_W": 134.2149805526074,
+      "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+    },
+    {
+      "model": "empirical_linear",
+      "RMSE_cluster_p025_W": 72.73356976587328,
+      "RMSE_cluster_p975_W": 143.62168121130475,
+      "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+    },
+    {
+      "model": "coupled_energy_peripheral",
+      "RMSE_cluster_p025_W": 334.9837157179304,
+      "RMSE_cluster_p975_W": 421.439429520088,
+      "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+    }
+  ],
+  "status": "limited participant-disjoint endpoint test; integrated CPE45 not_empirically_validated",
+  "baseline_conditioning": "first observed sprint in validation is an input; repetitions 2..10 predicted; no future sprint used for fit"
+}

@@ -9,7 +9,8 @@
       "EXP-0001",
       "EXP-0008",
       "EXP-0009",
-      "EXP-0010"
+      "EXP-0010",
+      "EXP-0014"
     ],
     "claim_level": "hypothesis"
   },
@@ -21,7 +22,8 @@
     "test": "Test latency-accuracy tradeoff on unexpected events with controlled tasks",
     "related_experiments": [
       "EXP-0005",
-      "EXP-0010"
+      "EXP-0010",
+      "EXP-0014"
     ],
     "claim_level": "hypothesis"
   },
@@ -48,7 +50,10 @@
       "EXP-0004",
       "EXP-0008",
       "EXP-0009",
-      "EXP-0010"
+      "EXP-0010",
+      "EXP-0012",
+      "EXP-0013",
+      "EXP-0014"
     ],
     "claim_level": "hypothesis"
   },
@@ -59,6 +64,19 @@
     "scope": "tissue repair, immune and tumor surveillance",
     "test": "Assess evidence for long-term recovery and comparative harm rates",
     "related_experiments": [],
+    "claim_level": "hypothesis"
+  },
+  {
+    "id": "HYP-0006",
+    "title": "Context-dependent recovery kinetics constrain repeated high-power endurance",
+    "status": "unverified",
+    "scope": "CPE45 energy recovery and task transfer",
+    "test": "Joint individual PCr–VO2–power calibration with locked participant holdout",
+    "related_experiments": [
+      "EXP-0011",
+      "EXP-0012",
+      "EXP-0013"
+    ],
     "claim_level": "hypothesis"
   }
 ]

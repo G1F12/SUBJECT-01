@@ -1,0 +1,2025 @@
+{
+  "seed": 20261104,
+  "cases": 15,
+  "UQ_runs": 64,
+  "uncertainty_type": "independent uniform epistemic scenarios, not confidence/credible intervals",
+  "ranges": {
+    "fast_capacity_J": [
+      4000,
+      12000
+    ],
+    "slow_capacity_J": [
+      11000,
+      33000
+    ],
+    "fast_recovery_tau_s": [
+      40,
+      160
+    ],
+    "slow_recovery_tau_s": [
+      300,
+      1200
+    ],
+    "oxygen_tau_s": [
+      20,
+      40
+    ],
+    "fatigue_rate_s_inv": [
+      0,
+      0.003
+    ],
+    "fatigue_recovery_tau_s": [
+      150,
+      600
+    ],
+    "slow_component_max_W": [
+      0,
+      340
+    ]
+  },
+  "uq_p05_p50_p95": {
+    "work_J": [
+      66360.60096593815,
+      84066.76496444244,
+      106957.77891336264
+    ],
+    "fast_end_J": [
+      1287.3994075342082,
+      2644.543598974238,
+      4240.849444134593
+    ],
+    "slow_end_J": [
+      886.1361848343843,
+      1960.9428559225653,
+      4786.481658372062
+    ],
+    "delta_K": [
+      -0.031217347909731095,
+      0.4990127938044997,
+      0.7775940167873436
+    ],
+    "contractile_fraction": [
+      0.8072499338829997,
+      0.911196281133742,
+      0.9903717358824918
+    ]
+  },
+  "uq_prefix32_p05_p50_p95": {
+    "work_J": [
+      65008.04588498165,
+      83461.2371643409,
+      105745.27882993591
+    ],
+    "fast_end_J": [
+      1252.7318743434062,
+      2677.272646366603,
+      4409.698966000386
+    ],
+    "slow_end_J": [
+      908.2568699399014,
+      1935.4450287625232,
+      4615.101919365962
+    ],
+    "delta_K": [
+      -0.0064770224191293396,
+      0.5582750256290864,
+      0.7481231383412685
+    ],
+    "contractile_fraction": [
+      0.8076176264385652,
+      0.909525090018263,
+      0.9901760044079572
+    ]
+  },
+  "baseline": {
+    "architecture": "baseline",
+    "climate": "temperate",
+    "protocol": "mixed",
+    "duration_s": 2700.0,
+    "dt_s": 0.25,
+    "mass_kg": 75.0,
+    "fast_J": 2757.5970054065215,
+    "slow_J": 2438.5139840982115,
+    "available_contractile_fraction": 0.952815876272281,
+    "stored_heat_J": 124854.81027065622,
+    "body_delta_K": 0.47563737245964277,
+    "thermal_envelope_exceeded": true,
+    "terminal_speed_m_s": 1.0458965624211791e-15,
+    "energy_residual_J": -1.3969838619232178e-09,
+    "kinetic_residual_J": 4.3655745685100555e-10,
+    "heat_residual_J": 3.259629011154175e-09,
+    "early_late": {
+      "acceleration_max": {
+        "mean_power_W": {
+          "early": 175.85837204383978,
+          "late": 114.08175938781199,
+          "late_over_early": 0.6487138375156374
+        },
+        "peak_power_W": {
+          "early": 394.91324301758914,
+          "late": 276.94650619403274,
+          "late_over_early": 0.7012844240872868
+        },
+        "mean_force_N": {
+          "early": 65.53241774941806,
+          "late": 53.85014435652158,
+          "late_over_early": 0.8217329103045307
+        },
+        "peak_force_N": {
+          "early": 477.76869632699527,
+          "late": 407.63697540387494,
+          "late_over_early": 0.853209886997032
+        },
+        "mean_speed_m_s": {
+          "early": 3.867954792831469,
+          "late": 3.230048854143041,
+          "late_over_early": 0.835079267247211
+        }
+      },
+      "maneuver_reacceleration": {
+        "mean_power_W": {
+          "early": 165.98929060013572,
+          "late": 143.9233384659363,
+          "late_over_early": 0.8670640012110433
+        },
+        "peak_power_W": {
+          "early": 246.8198337449118,
+          "late": 219.0883834859644,
+          "late_over_early": 0.8876449682418641
+        },
+        "mean_force_N": {
+          "early": 89.95322268984087,
+          "late": 83.83149950280121,
+          "late_over_early": 0.9319454822853052
+        },
+        "peak_force_N": {
+          "early": 368.3977003867432,
+          "late": 347.51287384889497,
+          "late_over_early": 0.9433090203442546
+        },
+        "mean_speed_m_s": {
+          "early": 2.5613291872622335,
+          "late": 2.398407584551766,
+          "late_over_early": 0.9363917752076951
+        }
+      },
+      "submax_065": {
+        "mean_power_W": {
+          "early": 82.41271354612707,
+          "late": 61.14106960958324,
+          "late_over_early": 0.741888805485844
+        },
+        "peak_power_W": {
+          "early": 272.9123928757144,
+          "late": 223.09597579887088,
+          "late_over_early": 0.8174637049203913
+        },
+        "mean_force_N": {
+          "early": 25.991510546669513,
+          "late": 22.372490411185424,
+          "late_over_early": 0.8607614540530111
+        },
+        "peak_force_N": {
+          "early": 395.83870571602483,
+          "late": 365.8654094215455,
+          "late_over_early": 0.9242790160192617
+        },
+        "mean_speed_m_s": {
+          "early": 4.4659578644759135,
+          "late": 3.892447561714001,
+          "late_over_early": 0.8715817927159922
+        }
+      }
+    },
+    "limiting_seconds": {
+      "mechanical": 1740.5,
+      "energetic": 959.5
+    },
+    "oxidative_J": 1885154.8722571763,
+    "external_J": 86376.5551926081,
+    "internal_J": 142763.51049685353,
+    "heat_generated_J": 1823582.2060750648,
+    "heat_lost_J": 1698727.395804412,
+    "recharged_J": 199246.40112506738,
+    "withdrawn_J": 224050.290135562,
+    "unmet_work_J": 1133809.3632095982,
+    "braking_J": 69879.05952462394,
+    "drag_J": 16497.495667983727,
+    "reaction": null,
+    "accuracy": null,
+    "coordination": null,
+    "tissue_damage": null,
+    "post45_status": "not_measured; terminal states are model states only",
+    "validation_status": "not_empirically_validated",
+    "target_achievement": "not_assessed",
+    "intervention_status": "NO_GO"
+  },
+  "scenarios": [
+    {
+      "architecture": "baseline",
+      "climate": "temperate",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 2757.5970054065215,
+      "slow_J": 2438.5139840982115,
+      "available_contractile_fraction": 0.952815876272281,
+      "stored_heat_J": 124854.81027065622,
+      "body_delta_K": 0.47563737245964277,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0458965624211791e-15,
+      "energy_residual_J": -1.3969838619232178e-09,
+      "kinetic_residual_J": 4.3655745685100555e-10,
+      "heat_residual_J": 3.259629011154175e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.85837204383978,
+            "late": 114.08175938781199,
+            "late_over_early": 0.6487138375156374
+          },
+          "peak_power_W": {
+            "early": 394.91324301758914,
+            "late": 276.94650619403274,
+            "late_over_early": 0.7012844240872868
+          },
+          "mean_force_N": {
+            "early": 65.53241774941806,
+            "late": 53.85014435652158,
+            "late_over_early": 0.8217329103045307
+          },
+          "peak_force_N": {
+            "early": 477.76869632699527,
+            "late": 407.63697540387494,
+            "late_over_early": 0.853209886997032
+          },
+          "mean_speed_m_s": {
+            "early": 3.867954792831469,
+            "late": 3.230048854143041,
+            "late_over_early": 0.835079267247211
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.98929060013572,
+            "late": 143.9233384659363,
+            "late_over_early": 0.8670640012110433
+          },
+          "peak_power_W": {
+            "early": 246.8198337449118,
+            "late": 219.0883834859644,
+            "late_over_early": 0.8876449682418641
+          },
+          "mean_force_N": {
+            "early": 89.95322268984087,
+            "late": 83.83149950280121,
+            "late_over_early": 0.9319454822853052
+          },
+          "peak_force_N": {
+            "early": 368.3977003867432,
+            "late": 347.51287384889497,
+            "late_over_early": 0.9433090203442546
+          },
+          "mean_speed_m_s": {
+            "early": 2.5613291872622335,
+            "late": 2.398407584551766,
+            "late_over_early": 0.9363917752076951
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 82.41271354612707,
+            "late": 61.14106960958324,
+            "late_over_early": 0.741888805485844
+          },
+          "peak_power_W": {
+            "early": 272.9123928757144,
+            "late": 223.09597579887088,
+            "late_over_early": 0.8174637049203913
+          },
+          "mean_force_N": {
+            "early": 25.991510546669513,
+            "late": 22.372490411185424,
+            "late_over_early": 0.8607614540530111
+          },
+          "peak_force_N": {
+            "early": 395.83870571602483,
+            "late": 365.8654094215455,
+            "late_over_early": 0.9242790160192617
+          },
+          "mean_speed_m_s": {
+            "early": 4.4659578644759135,
+            "late": 3.892447561714001,
+            "late_over_early": 0.8715817927159922
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1885154.8722571763,
+      "external_J": 86376.5551926081,
+      "internal_J": 142763.51049685353,
+      "heat_generated_J": 1823582.2060750648,
+      "heat_lost_J": 1698727.395804412,
+      "recharged_J": 199246.40112506738,
+      "withdrawn_J": 224050.290135562,
+      "unmet_work_J": 1133809.3632095982,
+      "braking_J": 69879.05952462394,
+      "drag_J": 16497.495667983727,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "baseline",
+      "climate": "hot_dry",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 2757.5970054065215,
+      "slow_J": 2438.5139840982115,
+      "available_contractile_fraction": 0.952815876272281,
+      "stored_heat_J": 824662.8253313652,
+      "body_delta_K": 3.1415726679290104,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0458965624211791e-15,
+      "energy_residual_J": -1.3969838619232178e-09,
+      "kinetic_residual_J": 4.3655745685100555e-10,
+      "heat_residual_J": 9.778887033462524e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.85837204383978,
+            "late": 114.08175938781199,
+            "late_over_early": 0.6487138375156374
+          },
+          "peak_power_W": {
+            "early": 394.91324301758914,
+            "late": 276.94650619403274,
+            "late_over_early": 0.7012844240872868
+          },
+          "mean_force_N": {
+            "early": 65.53241774941806,
+            "late": 53.85014435652158,
+            "late_over_early": 0.8217329103045307
+          },
+          "peak_force_N": {
+            "early": 477.76869632699527,
+            "late": 407.63697540387494,
+            "late_over_early": 0.853209886997032
+          },
+          "mean_speed_m_s": {
+            "early": 3.867954792831469,
+            "late": 3.230048854143041,
+            "late_over_early": 0.835079267247211
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.98929060013572,
+            "late": 143.9233384659363,
+            "late_over_early": 0.8670640012110433
+          },
+          "peak_power_W": {
+            "early": 246.8198337449118,
+            "late": 219.0883834859644,
+            "late_over_early": 0.8876449682418641
+          },
+          "mean_force_N": {
+            "early": 89.95322268984087,
+            "late": 83.83149950280121,
+            "late_over_early": 0.9319454822853052
+          },
+          "peak_force_N": {
+            "early": 368.3977003867432,
+            "late": 347.51287384889497,
+            "late_over_early": 0.9433090203442546
+          },
+          "mean_speed_m_s": {
+            "early": 2.5613291872622335,
+            "late": 2.398407584551766,
+            "late_over_early": 0.9363917752076951
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 82.41271354612707,
+            "late": 61.14106960958324,
+            "late_over_early": 0.741888805485844
+          },
+          "peak_power_W": {
+            "early": 272.9123928757144,
+            "late": 223.09597579887088,
+            "late_over_early": 0.8174637049203913
+          },
+          "mean_force_N": {
+            "early": 25.991510546669513,
+            "late": 22.372490411185424,
+            "late_over_early": 0.8607614540530111
+          },
+          "peak_force_N": {
+            "early": 395.83870571602483,
+            "late": 365.8654094215455,
+            "late_over_early": 0.9242790160192617
+          },
+          "mean_speed_m_s": {
+            "early": 4.4659578644759135,
+            "late": 3.892447561714001,
+            "late_over_early": 0.8715817927159922
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1885154.8722571763,
+      "external_J": 86376.5551926081,
+      "internal_J": 142763.51049685353,
+      "heat_generated_J": 1823582.2060750648,
+      "heat_lost_J": 998919.3807437094,
+      "recharged_J": 199246.40112506738,
+      "withdrawn_J": 224050.290135562,
+      "unmet_work_J": 1133809.3632095982,
+      "braking_J": 69879.05952462394,
+      "drag_J": 16497.495667983727,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "baseline",
+      "climate": "hot_humid",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 2757.5970054065215,
+      "slow_J": 2438.5139840982115,
+      "available_contractile_fraction": 0.952815876272281,
+      "stored_heat_J": 949735.0986132467,
+      "body_delta_K": 3.6180384709076066,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0458965624211791e-15,
+      "energy_residual_J": -1.3969838619232178e-09,
+      "kinetic_residual_J": 4.3655745685100555e-10,
+      "heat_residual_J": 3.6088749766349792e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.85837204383978,
+            "late": 114.08175938781199,
+            "late_over_early": 0.6487138375156374
+          },
+          "peak_power_W": {
+            "early": 394.91324301758914,
+            "late": 276.94650619403274,
+            "late_over_early": 0.7012844240872868
+          },
+          "mean_force_N": {
+            "early": 65.53241774941806,
+            "late": 53.85014435652158,
+            "late_over_early": 0.8217329103045307
+          },
+          "peak_force_N": {
+            "early": 477.76869632699527,
+            "late": 407.63697540387494,
+            "late_over_early": 0.853209886997032
+          },
+          "mean_speed_m_s": {
+            "early": 3.867954792831469,
+            "late": 3.230048854143041,
+            "late_over_early": 0.835079267247211
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.98929060013572,
+            "late": 143.9233384659363,
+            "late_over_early": 0.8670640012110433
+          },
+          "peak_power_W": {
+            "early": 246.8198337449118,
+            "late": 219.0883834859644,
+            "late_over_early": 0.8876449682418641
+          },
+          "mean_force_N": {
+            "early": 89.95322268984087,
+            "late": 83.83149950280121,
+            "late_over_early": 0.9319454822853052
+          },
+          "peak_force_N": {
+            "early": 368.3977003867432,
+            "late": 347.51287384889497,
+            "late_over_early": 0.9433090203442546
+          },
+          "mean_speed_m_s": {
+            "early": 2.5613291872622335,
+            "late": 2.398407584551766,
+            "late_over_early": 0.9363917752076951
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 82.41271354612707,
+            "late": 61.14106960958324,
+            "late_over_early": 0.741888805485844
+          },
+          "peak_power_W": {
+            "early": 272.9123928757144,
+            "late": 223.09597579887088,
+            "late_over_early": 0.8174637049203913
+          },
+          "mean_force_N": {
+            "early": 25.991510546669513,
+            "late": 22.372490411185424,
+            "late_over_early": 0.8607614540530111
+          },
+          "peak_force_N": {
+            "early": 395.83870571602483,
+            "late": 365.8654094215455,
+            "late_over_early": 0.9242790160192617
+          },
+          "mean_speed_m_s": {
+            "early": 4.4659578644759135,
+            "late": 3.892447561714001,
+            "late_over_early": 0.8715817927159922
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1885154.8722571763,
+      "external_J": 86376.5551926081,
+      "internal_J": 142763.51049685353,
+      "heat_generated_J": 1823582.2060750648,
+      "heat_lost_J": 873847.1074618218,
+      "recharged_J": 199246.40112506738,
+      "withdrawn_J": 224050.290135562,
+      "unmet_work_J": 1133809.3632095982,
+      "braking_J": 69879.05952462394,
+      "drag_J": 16497.495667983727,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "I_native_conditional",
+      "climate": "temperate",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 78.0,
+      "fast_J": 2757.6022672120757,
+      "slow_J": 2441.133284557006,
+      "available_contractile_fraction": 0.9480321793360749,
+      "stored_heat_J": 132724.41289501288,
+      "body_delta_K": 0.48617001060444276,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0912736744110733e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": 2.3283064365386963e-10,
+      "heat_residual_J": -1.862645149230957e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 182.29508430334837,
+            "late": 122.19014352266471,
+            "late_over_early": 0.670287649223355
+          },
+          "peak_power_W": {
+            "early": 409.01711765684,
+            "late": 285.54811212996134,
+            "late_over_early": 0.6981324247889606
+          },
+          "mean_force_N": {
+            "early": 68.2117518601962,
+            "late": 56.83396883001736,
+            "late_over_early": 0.8331990790458184
+          },
+          "peak_force_N": {
+            "early": 495.44847063510997,
+            "late": 422.1161237966344,
+            "late_over_early": 0.8519879438835049
+          },
+          "mean_speed_m_s": {
+            "early": 3.8581055753711357,
+            "late": 3.250834711466332,
+            "late_over_early": 0.8425986920157346
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 184.20526940122681,
+            "late": 162.38077317248963,
+            "late_over_early": 0.8815207822247465
+          },
+          "peak_power_W": {
+            "early": 268.78448911800837,
+            "late": 241.4799172509784,
+            "late_over_early": 0.8984146296662154
+          },
+          "mean_force_N": {
+            "early": 96.66271538864196,
+            "late": 90.81314497528814,
+            "late_over_early": 0.9394847290412333
+          },
+          "peak_force_N": {
+            "early": 391.9839996510303,
+            "late": 371.9135493593042,
+            "late_over_early": 0.9487977817727405
+          },
+          "mean_speed_m_s": {
+            "early": 2.6366293874071762,
+            "late": 2.486568875415236,
+            "late_over_early": 0.9430862324797542
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 93.01900702366761,
+            "late": 71.99280443926983,
+            "late_over_early": 0.7739579978632979
+          },
+          "peak_power_W": {
+            "early": 281.5680123881659,
+            "late": 233.85329269553776,
+            "late_over_early": 0.8305392743730801
+          },
+          "mean_force_N": {
+            "early": 28.22030048049756,
+            "late": 24.795712900211814,
+            "late_over_early": 0.8786480823387262
+          },
+          "peak_force_N": {
+            "early": 417.5186368828613,
+            "late": 382.00046825769385,
+            "late_over_early": 0.9149303396601853
+          },
+          "mean_speed_m_s": {
+            "early": 4.5955843411584825,
+            "late": 4.065836227847764,
+            "late_over_early": 0.8847267128651638
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2097758.0252995323,
+      "external_J": 97612.03150236176,
+      "internal_J": 153811.67880808204,
+      "heat_generated_J": 2024947.258245407,
+      "heat_lost_J": 1892222.8453503922,
+      "recharged_J": 199562.0914972175,
+      "withdrawn_J": 224363.35594544807,
+      "unmet_work_J": 1373121.0552692625,
+      "braking_J": 79054.03616762967,
+      "drag_J": 18557.99533473186,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "I_native_conditional",
+      "climate": "hot_dry",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 78.0,
+      "fast_J": 2757.6022672120757,
+      "slow_J": 2441.133284557006,
+      "available_contractile_fraction": 0.9480321793360749,
+      "stored_heat_J": 833471.8493643928,
+      "body_delta_K": 3.053010437232208,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0912736744110733e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": 2.3283064365386963e-10,
+      "heat_residual_J": 6.28642737865448e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 182.29508430334837,
+            "late": 122.19014352266471,
+            "late_over_early": 0.670287649223355
+          },
+          "peak_power_W": {
+            "early": 409.01711765684,
+            "late": 285.54811212996134,
+            "late_over_early": 0.6981324247889606
+          },
+          "mean_force_N": {
+            "early": 68.2117518601962,
+            "late": 56.83396883001736,
+            "late_over_early": 0.8331990790458184
+          },
+          "peak_force_N": {
+            "early": 495.44847063510997,
+            "late": 422.1161237966344,
+            "late_over_early": 0.8519879438835049
+          },
+          "mean_speed_m_s": {
+            "early": 3.8581055753711357,
+            "late": 3.250834711466332,
+            "late_over_early": 0.8425986920157346
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 184.20526940122681,
+            "late": 162.38077317248963,
+            "late_over_early": 0.8815207822247465
+          },
+          "peak_power_W": {
+            "early": 268.78448911800837,
+            "late": 241.4799172509784,
+            "late_over_early": 0.8984146296662154
+          },
+          "mean_force_N": {
+            "early": 96.66271538864196,
+            "late": 90.81314497528814,
+            "late_over_early": 0.9394847290412333
+          },
+          "peak_force_N": {
+            "early": 391.9839996510303,
+            "late": 371.9135493593042,
+            "late_over_early": 0.9487977817727405
+          },
+          "mean_speed_m_s": {
+            "early": 2.6366293874071762,
+            "late": 2.486568875415236,
+            "late_over_early": 0.9430862324797542
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 93.01900702366761,
+            "late": 71.99280443926983,
+            "late_over_early": 0.7739579978632979
+          },
+          "peak_power_W": {
+            "early": 281.5680123881659,
+            "late": 233.85329269553776,
+            "late_over_early": 0.8305392743730801
+          },
+          "mean_force_N": {
+            "early": 28.22030048049756,
+            "late": 24.795712900211814,
+            "late_over_early": 0.8786480823387262
+          },
+          "peak_force_N": {
+            "early": 417.5186368828613,
+            "late": 382.00046825769385,
+            "late_over_early": 0.9149303396601853
+          },
+          "mean_speed_m_s": {
+            "early": 4.5955843411584825,
+            "late": 4.065836227847764,
+            "late_over_early": 0.8847267128651638
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2097758.0252995323,
+      "external_J": 97612.03150236176,
+      "internal_J": 153811.67880808204,
+      "heat_generated_J": 2024947.258245407,
+      "heat_lost_J": 1191475.4088810205,
+      "recharged_J": 199562.0914972175,
+      "withdrawn_J": 224363.35594544807,
+      "unmet_work_J": 1373121.0552692625,
+      "braking_J": 79054.03616762967,
+      "drag_J": 18557.99533473186,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "I_native_conditional",
+      "climate": "hot_humid",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 78.0,
+      "fast_J": 2757.6022672120757,
+      "slow_J": 2441.133284557006,
+      "available_contractile_fraction": 0.9480321793360749,
+      "stored_heat_J": 1126443.5123732912,
+      "body_delta_K": 4.126166711990078,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0912736744110733e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": 2.3283064365386963e-10,
+      "heat_residual_J": -1.1641532182693481e-10,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 182.29508430334837,
+            "late": 122.19014352266471,
+            "late_over_early": 0.670287649223355
+          },
+          "peak_power_W": {
+            "early": 409.01711765684,
+            "late": 285.54811212996134,
+            "late_over_early": 0.6981324247889606
+          },
+          "mean_force_N": {
+            "early": 68.2117518601962,
+            "late": 56.83396883001736,
+            "late_over_early": 0.8331990790458184
+          },
+          "peak_force_N": {
+            "early": 495.44847063510997,
+            "late": 422.1161237966344,
+            "late_over_early": 0.8519879438835049
+          },
+          "mean_speed_m_s": {
+            "early": 3.8581055753711357,
+            "late": 3.250834711466332,
+            "late_over_early": 0.8425986920157346
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 184.20526940122681,
+            "late": 162.38077317248963,
+            "late_over_early": 0.8815207822247465
+          },
+          "peak_power_W": {
+            "early": 268.78448911800837,
+            "late": 241.4799172509784,
+            "late_over_early": 0.8984146296662154
+          },
+          "mean_force_N": {
+            "early": 96.66271538864196,
+            "late": 90.81314497528814,
+            "late_over_early": 0.9394847290412333
+          },
+          "peak_force_N": {
+            "early": 391.9839996510303,
+            "late": 371.9135493593042,
+            "late_over_early": 0.9487977817727405
+          },
+          "mean_speed_m_s": {
+            "early": 2.6366293874071762,
+            "late": 2.486568875415236,
+            "late_over_early": 0.9430862324797542
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 93.01900702366761,
+            "late": 71.99280443926983,
+            "late_over_early": 0.7739579978632979
+          },
+          "peak_power_W": {
+            "early": 281.5680123881659,
+            "late": 233.85329269553776,
+            "late_over_early": 0.8305392743730801
+          },
+          "mean_force_N": {
+            "early": 28.22030048049756,
+            "late": 24.795712900211814,
+            "late_over_early": 0.8786480823387262
+          },
+          "peak_force_N": {
+            "early": 417.5186368828613,
+            "late": 382.00046825769385,
+            "late_over_early": 0.9149303396601853
+          },
+          "mean_speed_m_s": {
+            "early": 4.5955843411584825,
+            "late": 4.065836227847764,
+            "late_over_early": 0.8847267128651638
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2097758.0252995323,
+      "external_J": 97612.03150236176,
+      "internal_J": 153811.67880808204,
+      "heat_generated_J": 2024947.258245407,
+      "heat_lost_J": 898503.7458721156,
+      "recharged_J": 199562.0914972175,
+      "withdrawn_J": 224363.35594544807,
+      "unmet_work_J": 1373121.0552692625,
+      "braking_J": 79054.03616762967,
+      "drag_J": 18557.99533473186,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "II_biohybrid_conditional",
+      "climate": "temperate",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 81.0,
+      "fast_J": 2757.6075372271266,
+      "slow_J": 2441.133286079534,
+      "available_contractile_fraction": 0.9432966430696661,
+      "stored_heat_J": 46285.02456170159,
+      "body_delta_K": 0.16326287323351532,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.1318221215283665e-15,
+      "energy_residual_J": -8.381903171539307e-09,
+      "kinetic_residual_J": 2.9103830456733704e-11,
+      "heat_residual_J": -1.862645149230957e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 188.62541126248408,
+            "late": 130.26898828969752,
+            "late_over_early": 0.6906226866136295
+          },
+          "peak_power_W": {
+            "early": 415.27611340311216,
+            "late": 294.0963505572328,
+            "late_over_early": 0.7081947192848795
+          },
+          "mean_force_N": {
+            "early": 70.86501862449165,
+            "late": 59.79755202363992,
+            "late_over_early": 0.8438232739414436
+          },
+          "peak_force_N": {
+            "early": 509.4153184982208,
+            "late": 436.5483193886864,
+            "late_over_early": 0.8569595446710366
+          },
+          "mean_speed_m_s": {
+            "early": 3.845596736073935,
+            "late": 3.269549720915352,
+            "late_over_early": 0.8502060786158551
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 202.46240341540582,
+            "late": 180.82112957037086,
+            "late_over_early": 0.89310966638763
+          },
+          "peak_power_W": {
+            "early": 290.7189305587035,
+            "late": 263.75299250398785,
+            "late_over_early": 0.9072439555178174
+          },
+          "mean_force_N": {
+            "early": 103.2881892145304,
+            "late": 97.65891144838719,
+            "late_over_early": 0.9454993082079195
+          },
+          "peak_force_N": {
+            "early": 415.3572388800158,
+            "late": 395.9537164115446,
+            "late_over_early": 0.953284737444828
+          },
+          "mean_speed_m_s": {
+            "early": 2.70458850095236,
+            "late": 2.5652394253695925,
+            "late_over_early": 0.9484767921132184
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 103.6340857823403,
+            "late": 82.87437273516804,
+            "late_over_early": 0.7996825765340054
+          },
+          "peak_power_W": {
+            "early": 291.1925514903299,
+            "late": 244.23838404604203,
+            "late_over_early": 0.8387521686115411
+          },
+          "mean_force_N": {
+            "early": 30.392164022235992,
+            "late": 27.13463108776558,
+            "late_over_early": 0.892816683534378
+          },
+          "peak_force_N": {
+            "early": 433.75803349115876,
+            "late": 397.8270558920131,
+            "late_over_early": 0.9171635455141881
+          },
+          "mean_speed_m_s": {
+            "early": 4.710014271673438,
+            "late": 4.218674210097779,
+            "late_over_early": 0.8956818316813532
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2309347.4253685935,
+      "external_J": 108854.25359015312,
+      "internal_J": 164627.78748486776,
+      "heat_generated_J": 2225294.4309551422,
+      "heat_lost_J": 2179009.4063934386,
+      "recharged_J": 199748.63622540332,
+      "withdrawn_J": 224549.89540209656,
+      "unmet_work_J": 1578123.1936007056,
+      "braking_J": 88295.73483814647,
+      "drag_J": 20558.518752006625,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "II_biohybrid_conditional",
+      "climate": "hot_dry",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 81.0,
+      "fast_J": 2757.6075372271266,
+      "slow_J": 2441.133286079534,
+      "available_contractile_fraction": 0.9432966430696661,
+      "stored_heat_J": 747850.0345892289,
+      "body_delta_K": 2.6379189932600666,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.1318221215283665e-15,
+      "energy_residual_J": -8.381903171539307e-09,
+      "kinetic_residual_J": 2.9103830456733704e-11,
+      "heat_residual_J": -1.30385160446167e-08,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 188.62541126248408,
+            "late": 130.26898828969752,
+            "late_over_early": 0.6906226866136295
+          },
+          "peak_power_W": {
+            "early": 415.27611340311216,
+            "late": 294.0963505572328,
+            "late_over_early": 0.7081947192848795
+          },
+          "mean_force_N": {
+            "early": 70.86501862449165,
+            "late": 59.79755202363992,
+            "late_over_early": 0.8438232739414436
+          },
+          "peak_force_N": {
+            "early": 509.4153184982208,
+            "late": 436.5483193886864,
+            "late_over_early": 0.8569595446710366
+          },
+          "mean_speed_m_s": {
+            "early": 3.845596736073935,
+            "late": 3.269549720915352,
+            "late_over_early": 0.8502060786158551
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 202.46240341540582,
+            "late": 180.82112957037086,
+            "late_over_early": 0.89310966638763
+          },
+          "peak_power_W": {
+            "early": 290.7189305587035,
+            "late": 263.75299250398785,
+            "late_over_early": 0.9072439555178174
+          },
+          "mean_force_N": {
+            "early": 103.2881892145304,
+            "late": 97.65891144838719,
+            "late_over_early": 0.9454993082079195
+          },
+          "peak_force_N": {
+            "early": 415.3572388800158,
+            "late": 395.9537164115446,
+            "late_over_early": 0.953284737444828
+          },
+          "mean_speed_m_s": {
+            "early": 2.70458850095236,
+            "late": 2.5652394253695925,
+            "late_over_early": 0.9484767921132184
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 103.6340857823403,
+            "late": 82.87437273516804,
+            "late_over_early": 0.7996825765340054
+          },
+          "peak_power_W": {
+            "early": 291.1925514903299,
+            "late": 244.23838404604203,
+            "late_over_early": 0.8387521686115411
+          },
+          "mean_force_N": {
+            "early": 30.392164022235992,
+            "late": 27.13463108776558,
+            "late_over_early": 0.892816683534378
+          },
+          "peak_force_N": {
+            "early": 433.75803349115876,
+            "late": 397.8270558920131,
+            "late_over_early": 0.9171635455141881
+          },
+          "mean_speed_m_s": {
+            "early": 4.710014271673438,
+            "late": 4.218674210097779,
+            "late_over_early": 0.8956818316813532
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2309347.4253685935,
+      "external_J": 108854.25359015312,
+      "internal_J": 164627.78748486776,
+      "heat_generated_J": 2225294.4309551422,
+      "heat_lost_J": 1477444.3963659003,
+      "recharged_J": 199748.63622540332,
+      "withdrawn_J": 224549.89540209656,
+      "unmet_work_J": 1578123.1936007056,
+      "braking_J": 88295.73483814647,
+      "drag_J": 20558.518752006625,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "II_biohybrid_conditional",
+      "climate": "hot_humid",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 81.0,
+      "fast_J": 2757.6075372271266,
+      "slow_J": 2441.133286079534,
+      "available_contractile_fraction": 0.9432966430696661,
+      "stored_heat_J": 1304535.458318908,
+      "body_delta_K": 4.601536008179569,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.1318221215283665e-15,
+      "energy_residual_J": -8.381903171539307e-09,
+      "kinetic_residual_J": 2.9103830456733704e-11,
+      "heat_residual_J": 4.6566128730773926e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 188.62541126248408,
+            "late": 130.26898828969752,
+            "late_over_early": 0.6906226866136295
+          },
+          "peak_power_W": {
+            "early": 415.27611340311216,
+            "late": 294.0963505572328,
+            "late_over_early": 0.7081947192848795
+          },
+          "mean_force_N": {
+            "early": 70.86501862449165,
+            "late": 59.79755202363992,
+            "late_over_early": 0.8438232739414436
+          },
+          "peak_force_N": {
+            "early": 509.4153184982208,
+            "late": 436.5483193886864,
+            "late_over_early": 0.8569595446710366
+          },
+          "mean_speed_m_s": {
+            "early": 3.845596736073935,
+            "late": 3.269549720915352,
+            "late_over_early": 0.8502060786158551
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 202.46240341540582,
+            "late": 180.82112957037086,
+            "late_over_early": 0.89310966638763
+          },
+          "peak_power_W": {
+            "early": 290.7189305587035,
+            "late": 263.75299250398785,
+            "late_over_early": 0.9072439555178174
+          },
+          "mean_force_N": {
+            "early": 103.2881892145304,
+            "late": 97.65891144838719,
+            "late_over_early": 0.9454993082079195
+          },
+          "peak_force_N": {
+            "early": 415.3572388800158,
+            "late": 395.9537164115446,
+            "late_over_early": 0.953284737444828
+          },
+          "mean_speed_m_s": {
+            "early": 2.70458850095236,
+            "late": 2.5652394253695925,
+            "late_over_early": 0.9484767921132184
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 103.6340857823403,
+            "late": 82.87437273516804,
+            "late_over_early": 0.7996825765340054
+          },
+          "peak_power_W": {
+            "early": 291.1925514903299,
+            "late": 244.23838404604203,
+            "late_over_early": 0.8387521686115411
+          },
+          "mean_force_N": {
+            "early": 30.392164022235992,
+            "late": 27.13463108776558,
+            "late_over_early": 0.892816683534378
+          },
+          "peak_force_N": {
+            "early": 433.75803349115876,
+            "late": 397.8270558920131,
+            "late_over_early": 0.9171635455141881
+          },
+          "mean_speed_m_s": {
+            "early": 4.710014271673438,
+            "late": 4.218674210097779,
+            "late_over_early": 0.8956818316813532
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.25,
+        "energetic": 959.75
+      },
+      "oxidative_J": 2309347.4253685935,
+      "external_J": 108854.25359015312,
+      "internal_J": 164627.78748486776,
+      "heat_generated_J": 2225294.4309551422,
+      "heat_lost_J": 920758.9726362389,
+      "recharged_J": 199748.63622540332,
+      "withdrawn_J": 224549.89540209656,
+      "unmet_work_J": 1578123.1936007056,
+      "braking_J": 88295.73483814647,
+      "drag_J": 20558.518752006625,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "III_sensory_unidentified",
+      "climate": "temperate",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.5,
+      "fast_J": 2757.5967881658516,
+      "slow_J": 2438.3783546813506,
+      "available_contractile_fraction": 0.9528427249826055,
+      "stored_heat_J": 127917.28773499785,
+      "body_delta_K": 0.48407677477766453,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0413809529834075e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": -5.820766091346741e-11,
+      "heat_residual_J": 6.05359673500061e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.36319406117488,
+            "late": 113.68689195420097,
+            "late_over_early": 0.6482939168782571
+          },
+          "peak_power_W": {
+            "early": 393.6862839749445,
+            "late": 276.80341246297013,
+            "late_over_early": 0.7031065691904745
+          },
+          "mean_force_N": {
+            "early": 65.64631495392439,
+            "late": 53.92999570064567,
+            "late_over_early": 0.8215235803943888
+          },
+          "peak_force_N": {
+            "early": 478.7541026289108,
+            "late": 408.8878344089412,
+            "late_over_early": 0.8540664866654439
+          },
+          "mean_speed_m_s": {
+            "early": 3.8523460718994507,
+            "late": 3.216495923443423,
+            "late_over_early": 0.8349446969226955
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.58047525446045,
+            "late": 143.5294388223633,
+            "late_over_early": 0.8668258658020542
+          },
+          "peak_power_W": {
+            "early": 246.58674026545768,
+            "late": 218.85202793662964,
+            "late_over_early": 0.8875255323989812
+          },
+          "mean_force_N": {
+            "early": 90.13661393644281,
+            "late": 83.99142714443842,
+            "late_over_early": 0.9318236338860311
+          },
+          "peak_force_N": {
+            "early": 369.45398758588885,
+            "late": 348.4875334568692,
+            "late_over_early": 0.9432501614990811
+          },
+          "mean_speed_m_s": {
+            "early": 2.550630344676623,
+            "late": 2.3881195371100317,
+            "late_over_early": 0.9362860212551909
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 81.88107461298107,
+            "late": 60.70624073766724,
+            "late_over_early": 0.7413952616596844
+          },
+          "peak_power_W": {
+            "early": 272.7458574411905,
+            "late": 222.93344598900669,
+            "late_over_early": 0.8173669366805164
+          },
+          "mean_force_N": {
+            "early": 25.97641120107779,
+            "late": 22.353926114708,
+            "late_over_early": 0.8605471303049171
+          },
+          "peak_force_N": {
+            "early": 396.6079132965655,
+            "late": 366.949197086365,
+            "late_over_early": 0.9252190508160056
+          },
+          "mean_speed_m_s": {
+            "early": 4.44596344220948,
+            "late": 3.8734719348814672,
+            "late_over_early": 0.8712334199843296
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1887886.1385901736,
+      "external_J": 85964.88367343342,
+      "internal_J": 143049.90772164514,
+      "heat_generated_J": 1826725.2797738987,
+      "heat_lost_J": 1698807.9920389068,
+      "recharged_J": 199232.44427318813,
+      "withdrawn_J": 224036.46913034157,
+      "unmet_work_J": 1131871.9973217354,
+      "braking_J": 69700.53747685667,
+      "drag_J": 16264.34619657681,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "III_sensory_unidentified",
+      "climate": "hot_dry",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.5,
+      "fast_J": 2757.5967881658516,
+      "slow_J": 2438.3783546813506,
+      "available_contractile_fraction": 0.9528427249826055,
+      "stored_heat_J": 827887.0752736632,
+      "body_delta_K": 3.1329690644225665,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0413809529834075e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": -5.820766091346741e-11,
+      "heat_residual_J": -8.032657206058502e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.36319406117488,
+            "late": 113.68689195420097,
+            "late_over_early": 0.6482939168782571
+          },
+          "peak_power_W": {
+            "early": 393.6862839749445,
+            "late": 276.80341246297013,
+            "late_over_early": 0.7031065691904745
+          },
+          "mean_force_N": {
+            "early": 65.64631495392439,
+            "late": 53.92999570064567,
+            "late_over_early": 0.8215235803943888
+          },
+          "peak_force_N": {
+            "early": 478.7541026289108,
+            "late": 408.8878344089412,
+            "late_over_early": 0.8540664866654439
+          },
+          "mean_speed_m_s": {
+            "early": 3.8523460718994507,
+            "late": 3.216495923443423,
+            "late_over_early": 0.8349446969226955
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.58047525446045,
+            "late": 143.5294388223633,
+            "late_over_early": 0.8668258658020542
+          },
+          "peak_power_W": {
+            "early": 246.58674026545768,
+            "late": 218.85202793662964,
+            "late_over_early": 0.8875255323989812
+          },
+          "mean_force_N": {
+            "early": 90.13661393644281,
+            "late": 83.99142714443842,
+            "late_over_early": 0.9318236338860311
+          },
+          "peak_force_N": {
+            "early": 369.45398758588885,
+            "late": 348.4875334568692,
+            "late_over_early": 0.9432501614990811
+          },
+          "mean_speed_m_s": {
+            "early": 2.550630344676623,
+            "late": 2.3881195371100317,
+            "late_over_early": 0.9362860212551909
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 81.88107461298107,
+            "late": 60.70624073766724,
+            "late_over_early": 0.7413952616596844
+          },
+          "peak_power_W": {
+            "early": 272.7458574411905,
+            "late": 222.93344598900669,
+            "late_over_early": 0.8173669366805164
+          },
+          "mean_force_N": {
+            "early": 25.97641120107779,
+            "late": 22.353926114708,
+            "late_over_early": 0.8605471303049171
+          },
+          "peak_force_N": {
+            "early": 396.6079132965655,
+            "late": 366.949197086365,
+            "late_over_early": 0.9252190508160056
+          },
+          "mean_speed_m_s": {
+            "early": 4.44596344220948,
+            "late": 3.8734719348814672,
+            "late_over_early": 0.8712334199843296
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1887886.1385901736,
+      "external_J": 85964.88367343342,
+      "internal_J": 143049.90772164514,
+      "heat_generated_J": 1826725.2797738987,
+      "heat_lost_J": 998838.2045002275,
+      "recharged_J": 199232.44427318813,
+      "withdrawn_J": 224036.46913034157,
+      "unmet_work_J": 1131871.9973217354,
+      "braking_J": 69700.53747685667,
+      "drag_J": 16264.34619657681,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "III_sensory_unidentified",
+      "climate": "hot_humid",
+      "protocol": "mixed",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.5,
+      "fast_J": 2757.5967881658516,
+      "slow_J": 2438.3783546813506,
+      "available_contractile_fraction": 0.9528427249826055,
+      "stored_heat_J": 953323.2391434261,
+      "body_delta_K": 3.6076565341283864,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 1.0413809529834075e-15,
+      "energy_residual_J": -5.820766091346741e-09,
+      "kinetic_residual_J": -5.820766091346741e-11,
+      "heat_residual_J": -9.89530235528946e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 175.36319406117488,
+            "late": 113.68689195420097,
+            "late_over_early": 0.6482939168782571
+          },
+          "peak_power_W": {
+            "early": 393.6862839749445,
+            "late": 276.80341246297013,
+            "late_over_early": 0.7031065691904745
+          },
+          "mean_force_N": {
+            "early": 65.64631495392439,
+            "late": 53.92999570064567,
+            "late_over_early": 0.8215235803943888
+          },
+          "peak_force_N": {
+            "early": 478.7541026289108,
+            "late": 408.8878344089412,
+            "late_over_early": 0.8540664866654439
+          },
+          "mean_speed_m_s": {
+            "early": 3.8523460718994507,
+            "late": 3.216495923443423,
+            "late_over_early": 0.8349446969226955
+          }
+        },
+        "maneuver_reacceleration": {
+          "mean_power_W": {
+            "early": 165.58047525446045,
+            "late": 143.5294388223633,
+            "late_over_early": 0.8668258658020542
+          },
+          "peak_power_W": {
+            "early": 246.58674026545768,
+            "late": 218.85202793662964,
+            "late_over_early": 0.8875255323989812
+          },
+          "mean_force_N": {
+            "early": 90.13661393644281,
+            "late": 83.99142714443842,
+            "late_over_early": 0.9318236338860311
+          },
+          "peak_force_N": {
+            "early": 369.45398758588885,
+            "late": 348.4875334568692,
+            "late_over_early": 0.9432501614990811
+          },
+          "mean_speed_m_s": {
+            "early": 2.550630344676623,
+            "late": 2.3881195371100317,
+            "late_over_early": 0.9362860212551909
+          }
+        },
+        "submax_065": {
+          "mean_power_W": {
+            "early": 81.88107461298107,
+            "late": 60.70624073766724,
+            "late_over_early": 0.7413952616596844
+          },
+          "peak_power_W": {
+            "early": 272.7458574411905,
+            "late": 222.93344598900669,
+            "late_over_early": 0.8173669366805164
+          },
+          "mean_force_N": {
+            "early": 25.97641120107779,
+            "late": 22.353926114708,
+            "late_over_early": 0.8605471303049171
+          },
+          "peak_force_N": {
+            "early": 396.6079132965655,
+            "late": 366.949197086365,
+            "late_over_early": 0.9252190508160056
+          },
+          "mean_speed_m_s": {
+            "early": 4.44596344220948,
+            "late": 3.8734719348814672,
+            "late_over_early": 0.8712334199843296
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1740.5,
+        "energetic": 959.5
+      },
+      "oxidative_J": 1887886.1385901736,
+      "external_J": 85964.88367343342,
+      "internal_J": 143049.90772164514,
+      "heat_generated_J": 1826725.2797738987,
+      "heat_lost_J": 873402.0406304627,
+      "recharged_J": 199232.44427318813,
+      "withdrawn_J": 224036.46913034157,
+      "unmet_work_J": 1131871.9973217354,
+      "braking_J": 69700.53747685667,
+      "drag_J": 16264.34619657681,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "baseline",
+      "climate": "temperate",
+      "protocol": "short_rest",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 1043.4003610959887,
+      "slow_J": 1693.0619773797514,
+      "available_contractile_fraction": 0.9439723929958607,
+      "stored_heat_J": 284326.6129611648,
+      "body_delta_K": 1.0831490017568182,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 0.00012144601936311182,
+      "energy_residual_J": -8.149072527885437e-09,
+      "kinetic_residual_J": -9.89530235528946e-10,
+      "heat_residual_J": -9.313225746154785e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 135.0672247558791,
+            "late": 104.36626986366409,
+            "late_over_early": 0.7726987065314771
+          },
+          "peak_power_W": {
+            "early": 266.4585054035682,
+            "late": 211.55165817618627,
+            "late_over_early": 0.793938470291192
+          },
+          "mean_force_N": {
+            "early": 58.1071348523728,
+            "late": 51.521262350640725,
+            "late_over_early": 0.8866598306995489
+          },
+          "peak_force_N": {
+            "early": 395.1978107787202,
+            "late": 356.2373320463093,
+            "late_over_early": 0.9014152465681907
+          },
+          "mean_speed_m_s": {
+            "early": 3.325732475243792,
+            "late": 2.968082634175448,
+            "late_over_early": 0.8924598284045302
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 1620.25,
+        "energetic": 1079.75
+      },
+      "oxidative_J": 2078181.821565437,
+      "external_J": 116501.98363342386,
+      "internal_J": 144976.31309838843,
+      "heat_generated_J": 1988943.3755935454,
+      "heat_lost_J": 1704616.7626323714,
+      "recharged_J": 199458.94069547125,
+      "withdrawn_J": 226722.4783569953,
+      "unmet_work_J": 1633383.3483069479,
+      "braking_J": 104648.77813492599,
+      "drag_J": 11853.205497945772,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "baseline",
+      "climate": "temperate",
+      "protocol": "long_rest",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 3473.203321381728,
+      "slow_J": 5860.780749103142,
+      "available_contractile_fraction": 0.9789806753382247,
+      "stored_heat_J": -430685.0657849889,
+      "body_delta_K": -1.6407050125142435,
+      "thermal_envelope_exceeded": false,
+      "terminal_speed_m_s": 1.350750106980653e-19,
+      "energy_residual_J": -4.190951585769653e-09,
+      "kinetic_residual_J": 2.837623469531536e-10,
+      "heat_residual_J": -7.916241884231567e-09,
+      "early_late": {
+        "acceleration_max": {
+          "mean_power_W": {
+            "early": 189.67885717102106,
+            "late": 128.27595674679657,
+            "late_over_early": 0.6762796795593222
+          },
+          "peak_power_W": {
+            "early": 422.3891786896235,
+            "late": 318.8107128029833,
+            "late_over_early": 0.7547795466541748
+          },
+          "mean_force_N": {
+            "early": 69.0277376214725,
+            "late": 57.11903108807792,
+            "late_over_early": 0.8274794025743916
+          },
+          "peak_force_N": {
+            "early": 499.9074710870959,
+            "late": 437.36303876961273,
+            "late_over_early": 0.8748879824070754
+          },
+          "mean_speed_m_s": {
+            "early": 4.059200365566107,
+            "late": 3.4451560863314494,
+            "late_over_early": 0.8487277729762864
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 2340.25,
+        "energetic": 359.75
+      },
+      "oxidative_J": 1143884.4721204692,
+      "external_J": 49121.163163610705,
+      "internal_J": 56161.42145784416,
+      "heat_generated_J": 1115429.324886378,
+      "heat_lost_J": 1546114.390671359,
+      "recharged_J": 223536.21525840313,
+      "withdrawn_J": 244202.23118791953,
+      "unmet_work_J": 574948.6557008382,
+      "braking_J": 42978.27237463338,
+      "drag_J": 6142.89078897704,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    },
+    {
+      "architecture": "baseline",
+      "climate": "temperate",
+      "protocol": "dense",
+      "duration_s": 2700.0,
+      "dt_s": 0.25,
+      "mass_kg": 75.0,
+      "fast_J": 927.6241100102131,
+      "slow_J": 734.4997991631544,
+      "available_contractile_fraction": 0.8969233055761507,
+      "stored_heat_J": 918767.6882196732,
+      "body_delta_K": 3.500067383693993,
+      "thermal_envelope_exceeded": true,
+      "terminal_speed_m_s": 5.274930881578389e-05,
+      "energy_residual_J": -3.026798367500305e-08,
+      "kinetic_residual_J": -1.0186340659856796e-10,
+      "heat_residual_J": -9.546056389808655e-09,
+      "early_late": {
+        "submax_065": {
+          "mean_power_W": {
+            "early": 96.16291778271,
+            "late": 84.82674095116279,
+            "late_over_early": 0.8821148828162383
+          },
+          "peak_power_W": {
+            "early": 302.19875650269597,
+            "late": 248.16645624493572,
+            "late_over_early": 0.8212027710402633
+          },
+          "mean_force_N": {
+            "early": 28.19805452955469,
+            "late": 26.504138512168833,
+            "late_over_early": 0.9399279118490091
+          },
+          "peak_force_N": {
+            "early": 398.383105378245,
+            "late": 385.8596395704617,
+            "late_over_early": 0.9685642648026128
+          },
+          "mean_speed_m_s": {
+            "early": 4.7716569583019535,
+            "late": 4.4850110560669165,
+            "late_over_early": 0.9399273869140327
+          }
+        }
+      },
+      "limiting_seconds": {
+        "mechanical": 900.25,
+        "energetic": 1799.75
+      },
+      "oxidative_J": 2773446.3721673684,
+      "external_J": 155121.67378760257,
+      "internal_J": 320812.21172034554,
+      "heat_generated_J": 2646662.574470623,
+      "heat_lost_J": 1727894.8862509402,
+      "recharged_J": 114681.033614291,
+      "withdrawn_J": 143018.90970511758,
+      "unmet_work_J": 1684381.6192617693,
+      "braking_J": 97715.82888866989,
+      "drag_J": 57405.84489882846,
+      "reaction": null,
+      "accuracy": null,
+      "coordination": null,
+      "tissue_damage": null,
+      "post45_status": "not_measured; terminal states are model states only",
+      "validation_status": "not_empirically_validated",
+      "target_achievement": "not_assessed",
+      "intervention_status": "NO_GO"
+    }
+  ],
+  "validation": {
+    "fit_ids": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "validation_ids": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      20,
+      22
+    ],
+    "excluded": [
+      {
+        "participant": 18,
+        "reason": "first sprint missing; no imputation"
+      }
+    ],
+    "excluded_climate_rows": 22,
+    "raw_rows": 44,
+    "raw_mean_power_cells": 440,
+    "missing_mean_power_cells": 26,
+    "selected_parameters": {
+      "empirical_slope_per_rep": 0.0040000000000000036,
+      "monoexponential_amplitude": 0.040000000000000036,
+      "monoexponential_tau_repetitions": 1,
+      "coupled_fatigue_rate_s_inv": 0
+    },
+    "pc_r_diagnostic": {
+      "source": "SRC-0032",
+      "fit_time_s": 90,
+      "test_time_s": 360,
+      "same_cohort": true,
+      "tau_s": 108.37868908192436,
+      "predicted_fraction": 0.9710181875572808,
+      "observed_fraction": 0.855,
+      "residual_percentage_points": 11.601818755728077,
+      "interpretation": "aggregate temporal holdout; rejects universal monoexponential recovery, no independent validation"
+    },
+    "bootstrap": [
+      {
+        "model": "constant",
+        "RMSE_cluster_p025_W": 73.41091638224654,
+        "RMSE_cluster_p975_W": 156.44353506798603,
+        "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+      },
+      {
+        "model": "monoexponential",
+        "RMSE_cluster_p025_W": 72.64817977704715,
+        "RMSE_cluster_p975_W": 134.2149805526074,
+        "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+      },
+      {
+        "model": "empirical_linear",
+        "RMSE_cluster_p025_W": 72.73356976587328,
+        "RMSE_cluster_p975_W": 143.62168121130475,
+        "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+      },
+      {
+        "model": "coupled_energy_peripheral",
+        "RMSE_cluster_p025_W": 334.9837157179304,
+        "RMSE_cluster_p975_W": 421.439429520088,
+        "interpretation": "participant cluster resampling, conditional on baseline sprint; not external population CI"
+      }
+    ],
+    "status": "limited participant-disjoint endpoint test; integrated CPE45 not_empirically_validated",
+    "baseline_conditioning": "first observed sprint in validation is an input; repetitions 2..10 predicted; no future sprint used for fit"
+  },
+  "convergence": [
+    {
+      "dt_s": 0.5,
+      "work_J": 86649.6645437361,
+      "fast_J": 2757.6014838854126,
+      "delta_K": 0.4477431639270915,
+      "energy_residual_J": 2.0954757928848267e-09,
+      "kinetic_residual_J": -2.9103830456733704e-11
+    },
+    {
+      "dt_s": 0.25,
+      "work_J": 86376.5551926081,
+      "fast_J": 2757.5970054065215,
+      "delta_K": 0.47563737245964277,
+      "energy_residual_J": -1.3969838619232178e-09,
+      "kinetic_residual_J": 4.3655745685100555e-10
+    },
+    {
+      "dt_s": 0.125,
+      "work_J": 86178.86345885438,
+      "fast_J": 2757.6225355198726,
+      "delta_K": 0.48285928759676583,
+      "energy_residual_J": 9.080395102500916e-09,
+      "kinetic_residual_J": 7.566995918750763e-10
+    },
+    {
+      "dt_s": 0.0625,
+      "work_J": 86075.11040664747,
+      "fast_J": 2759.42782834585,
+      "delta_K": 0.4835332622109386,
+      "energy_residual_J": -1.0710209608078003e-08,
+      "kinetic_residual_J": 9.74978320300579e-10
+    }
+  ],
+  "source_commit": "070a7343e522ca9fdbe37d3c0f7e3e0894bc7e30",
+  "agent": "OpenAI Codex; single agent, no independent scientific review",
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4"
+  },
+  "instructions": "User CPE45 A-H; code, config, sources, tests and this script fully specify reproduction. No intervention validation."
+}

@@ -1,41 +1,29 @@
-# SUBJECT-01 — передача состояния, 03.11.2026
+# SUBJECT-01 — передача, 04.11.2026
 
-Начать с git fetch origin, GitHub HEAD, PROJECT_STATE.md, GOVERNANCE.md и registry/*.json.
-Канонический репозиторий G1F12/SUBJECT-01 намеренно публичный (DEC-0005).
+Начать с git fetch origin, статуса рабочего дерева, GitHub main/PR/Actions.
+Публичный G1F12/SUBJECT-01 — единственный источник истины.
+База070a7343e522ca9fdbe37d3c0f7e3e0894bc7e30;
+ветка research/cpe45-dynamics-20261104. SHA research commit:
+git log -1 --format=%H -- research/cpe45_2026_11_04/REPORT.md.
+Итоговый HEAD проверять напрямую, не выводить из handoff.
 
-Вычислительный цикл EXP-0007..0010 выполнен: 43 агрегата, 6 связанных подсистем,
-18 сценариев, 768 UQ, 7168 глобальных sensitivity evaluations, 162 архитектуры.
-Данные/код/seed/результаты/права/ограничения: research/integrated_2026_11_01/.
-Читать REPORT.md и DATA_AUDIT.md до интерпретации процентов.
+Читать research/cpe45_2026_11_04/REPORT.md и DATA_AUDIT.md до интерпретации.
+EXP-0011..0014: динамика2700s,15 сценариев,64 UQ,16 perturbations,4dt,4negative.
+8 первичных источников, CC BY исходный XLSX v1,44 строки/26 missing MeanP,
+нет подтверждённого межклиматического pairing; Qatar исключён из holdout.
+11 fit/10 пригодных holdout NC участников,99/90 endpoints; Lp18 исключён.
+Первый sprint supplied. Coupled RMSE378.54W против constant115.34W:
+провал переноса, не validation успех. Не подгонять заново на этих holdout.
+PCr exponential temporal holdout +11.60pp (та же выборка).
 
-19 автоматических тестов и полное повторение CSV/summary дополняют все три
-Foundation-проверки. Workflow запускает шесть команд на Python3.12.
-13 исходных Foundation-артефактов сохранены по SHA256. Отрицательные результаты
-NEG-0004..0006 нельзя удалять: fixed extraction не переносится на другие группы,
-constant heat loss не описывает bouts, muscle-only/рычаг не гарантируют COM gain.
+Thermal diagnostic без motor feedback и cold regulation; deltaT не core temperature.
+Реакция/accuracy/coordination/damage/central activation/post45 test неизвестны.
+I/II/III условные; II больше работа, хуже humid heat; III neural gain не заявлен.
+TARGET-CPE45 not_assessed, model not_empirically_validated, NO_GO сохранён.
+Foundation/Integrated исторические файлы не изменены.
 
-Не завершены: полная физиологическая калибровка, интегрированная empirical
-validation, Crossmark/reverse notice clearance, приборная ошибка, индивидуальные
-ковариации, PCSA/кости/fatigue/анатомическая идентификация, хроническая интеграция.
-Исследование остаётся условным surrogate. Не объявлять новый орган, интеллект,
-долговечность или безопасное усиление подтверждёнными; NO_GO сохранён.
-
-TARGET-CPE45 принят DEC-0007 от 02.11.2026 как дополнительная обязательная цель.
-Спецификация/JSON: research/targets/. Модуль tools/cpe45.py измеряет временные
-ряды; это не модель динамики и не физиологическая валидация. Нет произвольных
-порогов. Источники SRC-0029..0031 проверены на указанной глубине. Старые EXP/Pareto
-по новой цели not_assessed; не переписывать их для видимости достижения.
-
-Следующий цикл — динамическая модель утомления/восстановления на 2700 s, ISS-0011.
-Она не разработана в текущей интеграции. Потребность в совместных данных и
-отдельных fit/validation участниках сохраняется.
-ISS-0002..0011 открыты; ISS-0001 resolved. HYP-0001..0005 остаются unverified.
-
-Воспроизведение: пять прежних команд из REPORT.md плюс
-`python -m unittest discover -s tests -p test_cpe45.py`; среда requirements.txt/environment.json.
-Содержащий исследование commit определяется командой
-`git log -1 --format=%H -- research/integrated_2026_11_01/REPORT.md`.
-Убедиться в merge PR и равенстве local main, origin/main и GitHub SHA перед
-заявлением о постоянной публикации. Не переписывать историю.
-
-CPE45: 25 синтетических unit-тестов и CLI-повторение; это верификация измерения, не физиологическая валидация.
+26 новых+25measurement+19integrated=70 unit tests; hashes/reproduction/CI отдельно.
+Команды — в REPORT.md. Реестры:EXP14/HYP6/FND16/NEG9/DEC8/ISS13/SRC39.
+ISS-0011 открыт несмотря на выполненный код; ISS-0012/13 новые ограничения.
+Следующий приоритет: индивидуальные совместные PCr–VO2–power данные, recovery
+identification, затем новый заранее фиксированный participant holdout.

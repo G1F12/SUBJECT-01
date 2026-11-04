@@ -50,5 +50,12 @@
     "decision": "TARGET-CPE45 принят как дополнительная обязательная самостоятельная характеристика: комплексная работоспособность 2700 s при чередовании интенсивных усилий и короткого восстановления, с отдельной post-функцией. Это не continuous absolute maximum power, не замена главной цели и не установленная способность.",
     "basis": "Прямое требование пользователя; research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md; CPE45.json",
     "limitations": "Пороги/duty cycle не калиброваны; EXP-0001..0010 по новой цели not_assessed; NO_GO сохранён."
+  },
+  {
+    "id": "DEC-0008",
+    "date": "2026-11-04",
+    "status": "adopted",
+    "decision": "CPE45 dynamic system is verified conditional surrogate; retain failed real-data transfer, missing neural/damage states and thermal feedback limitation. No universal retention threshold or validated augmentation; NO_GO.",
+    "basis": "EXP-0011..0014; NEG-0007..0009"
   }
 ]

@@ -1,0 +1,22 @@
+{
+  "article_id": 21704402,
+  "version": 1,
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "file": {
+    "id": 38501546,
+    "name": "pone.0276314.s001.xlsx",
+    "size": 85249,
+    "is_link_only": false,
+    "download_url": "https://ndownloader.figshare.com/files/38501546",
+    "supplied_md5": "663e7b6070e91cf56928a3b332e83e09",
+    "computed_md5": "663e7b6070e91cf56928a3b332e83e09",
+    "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  "sha256": "92ae208a422293b0d57ecfb2cf3d2d5de8c91ce55ae432f95ad310e7465b7eec",
+  "retrieved": "2026-11-04",
+  "attribution": "Chmura P et al. (2022), PLOS ONE 17(12):e0276314, doi:10.1371/journal.pone.0276314"
+}

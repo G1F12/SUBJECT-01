@@ -1,5 +1,21 @@
 # Changelog (append-only research history)
 
+## 2026-11-04 — динамический CPE45 и отрицательная проверка переноса
+
+- EXP-0011..0014: 2700-s раздельные energy/oxidative/peripheral/mechanical/
+  thermal states, recovery и мост к tools/cpe45.py без фиктивных neural данных.
+- SRC-0032..0039; CC BY XLSX v1, исходные hashes/пропуски;11 fit/10 holdout
+  участников,99/90 endpoints; coupled RMSE378.54W против constant115.34W.
+- NEG-0007 сохраняет провал переноса; NEG-0008 PCr exponential +11.60pp;
+  NEG-0009 humid heat/thermal feedback/cooling limitations. ISS-0012/13 открыты.
+- 15 сценариев,64 UQ,16 perturbations,4dt,4negative; I/II/III в3средах;
+  CSV/JSON/2PNG, trace/recovery/episode/retention и manifest сохранены.
+- 26 новых тестов, numerical reproduction и CI; прежние Foundation/Integrated
+  hashes не изменены. HYP-0006/DEC-0008; ISS-0011 открыт, NO_GO сохранён.
+- Первый запуск графиков остановился без matplotlib; установлены существующие
+  requirements.txt, повторение завершено. DOI-кандидат ...0802 отвергнут по
+  названию; правильный SRC-0038 ...0800 подтверждён до регистрации.
+
 ## 2026-11-01 · BOOTSTRAP
 
 - Created the single Git repository structure and initial canonical state.
