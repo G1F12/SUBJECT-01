@@ -170,5 +170,84 @@
     "reproduction_command": "python research/integrated_2026_11_01/experiments.py --check",
     "limits": "Частично калиброванный surrogate; нет совместной анатомической/whole-body валидации; перенос cycling→running не подтверждён.",
     "external_validation": "partial_aggregate_holdouts_only"
+  },
+  {
+    "id": "EXP-0011",
+    "title": "CPE45: исходные данные, participant holdout и отрицательная проверка переноса",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/cpe45_2026_11_04/validation.py",
+    "inputs": "research/cpe45_2026_11_04/config.json",
+    "outputs": [
+      "research/cpe45_2026_11_04/results/observations.csv",
+      "research/cpe45_2026_11_04/results/validation_scores.csv",
+      "research/cpe45_2026_11_04/results/validation_predictions.csv",
+      "research/cpe45_2026_11_04/results/validation_participants.csv",
+      "research/cpe45_2026_11_04/results/validation.json"
+    ],
+    "report": "research/cpe45_2026_11_04/REPORT.md",
+    "method": "11 fit, 10 validation participants; 99/90 endpoints; first sprint baseline input; 1000 participant bootstrap; source PCr aggregate diagnostic",
+    "reproduction_command": "python research/cpe45_2026_11_04/experiments.py --check",
+    "limits": "Conditional surrogate; real cycling endpoint transfer failed; not_empirically_validated CPE45; NO_GO",
+    "external_validation": "negative_participant_disjoint_endpoint_test"
+  },
+  {
+    "id": "EXP-0012",
+    "title": "CPE45: динамика энергии, механики, утомления и тепла 2700 s",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/cpe45_2026_11_04/model.py",
+    "inputs": "research/cpe45_2026_11_04/config.json",
+    "outputs": [
+      "research/cpe45_2026_11_04/results/scenarios.csv",
+      "research/cpe45_2026_11_04/results/episodes.csv",
+      "research/cpe45_2026_11_04/results/recovery.csv",
+      "research/cpe45_2026_11_04/results/retention.csv",
+      "research/cpe45_2026_11_04/results/dynamics.png",
+      "research/cpe45_2026_11_04/results/measurement_bridge.json"
+    ],
+    "report": "research/cpe45_2026_11_04/REPORT.md",
+    "method": "15 scenarios; explicit energy/kinetic/thermal ledgers; dt .25 s",
+    "reproduction_command": "python research/cpe45_2026_11_04/experiments.py --check",
+    "limits": "Conditional surrogate; real cycling endpoint transfer failed; not_empirically_validated CPE45; NO_GO",
+    "external_validation": "not_empirically_validated"
+  },
+  {
+    "id": "EXP-0013",
+    "title": "CPE45: чувствительность, UQ, сходимость и контрпримеры",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/cpe45_2026_11_04/model.py",
+    "inputs": "research/cpe45_2026_11_04/config.json",
+    "outputs": [
+      "research/cpe45_2026_11_04/results/uncertainty.csv",
+      "research/cpe45_2026_11_04/results/sensitivity.csv",
+      "research/cpe45_2026_11_04/results/convergence.csv",
+      "research/cpe45_2026_11_04/results/negative.csv",
+      "research/cpe45_2026_11_04/results/summary.json"
+    ],
+    "report": "research/cpe45_2026_11_04/REPORT.md",
+    "method": "64 independent epistemic uniform runs, seed20261104; 16 perturbations; 4 dt; 4 negatives",
+    "reproduction_command": "python research/cpe45_2026_11_04/experiments.py --check",
+    "limits": "Conditional surrogate; real cycling endpoint transfer failed; not_empirically_validated CPE45; NO_GO",
+    "external_validation": "not_empirically_validated"
+  },
+  {
+    "id": "EXP-0014",
+    "title": "CPE45: условное сравнение архитектур I/II/III в трёх средах",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/cpe45_2026_11_04/model.py",
+    "inputs": "research/cpe45_2026_11_04/config.json",
+    "outputs": [
+      "research/cpe45_2026_11_04/results/scenarios.csv",
+      "research/cpe45_2026_11_04/results/summary.json",
+      "research/cpe45_2026_11_04/results/retention.csv"
+    ],
+    "report": "research/cpe45_2026_11_04/REPORT.md",
+    "method": "4 architectures including baseline x3 climates; all uplift coefficients hypothetical; no neural gain inferred",
+    "reproduction_command": "python research/cpe45_2026_11_04/experiments.py --check",
+    "limits": "Conditional surrogate; real cycling endpoint transfer failed; not_empirically_validated CPE45; NO_GO",
+    "external_validation": "not_empirically_validated"
   }
 ]

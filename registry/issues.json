@@ -89,6 +89,23 @@
     "title": "TARGET-CPE45: отсутствуют динамическая калибровка и эмпирическая валидация 2700-секундной работоспособности",
     "target_id": "TARGET-CPE45",
     "impact": "Измерительные функции и синтетические тесты не устанавливают достижимость цели, tissue safety, интенсивность, duty cycle, физиологию утомления или восстановление.",
-    "next_action": "Разработать динамическую 2700-секундную модель утомления/восстановления, подобрать независимые данные, калибровать протокол/неопределённости и post-функцию. В текущем задании модель не разработана."
+    "next_action": "Identify context-specific recovery from simultaneous individual PCr–VO2–power data; repeat locked participant holdout before architecture efficacy claims.",
+    "progress_2026_11_04": "Dynamic model implemented and software-verified EXP-0011..0014; participant endpoint transfer negative. Empirical CPE45 validation, central/damage/thermal feedback remain unresolved."
+  },
+  {
+    "id": "ISS-0012",
+    "status": "open",
+    "severity": "high",
+    "title": "CPE45: неоднозначность опубликованных индивидуальных данных и провал переноса",
+    "impact": "SRC-0035 supplement44 vs expected48 rows; no verified pairing; 26 missing mean-power cells. Coupled endpoint RMSE378.54W; no within-bout kinetic traces.",
+    "next_action": "Obtain clarified participant key and simultaneous PCr–VO2–power data; preserve current holdout failure."
+  },
+  {
+    "id": "ISS-0013",
+    "status": "open",
+    "severity": "high",
+    "title": "CPE45: thermal feedback, cold regulation, tissue damage and neural states unidentified",
+    "impact": "One-node heat does not reduce output; sparse-load cooling and no vasomotor regulation limit interpretation; no validated reaction/accuracy/damage model.",
+    "next_action": "Constrain thermal domain using simultaneous temperature/heat exchange measurements; keep these endpoints unknown until calibration."
   }
 ]

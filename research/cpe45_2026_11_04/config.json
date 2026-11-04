@@ -1,0 +1,62 @@
+{
+  "duration_s": 2700,
+  "early_end_s": 300,
+  "late_start_s": 2400,
+  "fatigue_reference_W": 500,
+  "seed": 20261104,
+  "dynamic": {
+    "fast_capacity_J": 8000,
+    "slow_capacity_J": 22000,
+    "fast_recovery_tau_s": 81.657,
+    "slow_recovery_tau_s": 600,
+    "fast_discharge_tau_s": 4,
+    "slow_discharge_tau_s": 30,
+    "recharge_efficiency": 0.8,
+    "oxygen_tau_s": 28,
+    "slow_component_max_W": 170,
+    "slow_component_tau_s": 180,
+    "fatigue_rate_s_inv": 0.001,
+    "fatigue_recovery_tau_s": 300,
+    "fatigue_floor": 0.2,
+    "sweat_tau_s": 180,
+    "sweat_feedback_J_s_kg": 1000000000,
+    "skin_fraction": 0.25,
+    "braking_tau_s": 1
+  },
+  "architectures": {
+    "baseline": {},
+    "I_native_conditional": {"added_contractile_kg": 2, "support_mass_kg": 1, "tendon_area_m2": 0.0001785, "contact_scale": 1.15, "cardiac_output_m3_s": 0.0004791666666666667, "evaporated_water_kg_s": 0.00019},
+    "II_biohybrid_conditional": {"added_contractile_kg": 4, "support_mass_kg": 2, "tendon_area_m2": 0.0002295, "contact_scale": 1.3, "cardiac_output_m3_s": 0.0005416666666666667, "evaporated_water_kg_s": 0.0002375},
+    "III_sensory_unidentified": {"support_mass_kg": 0.5, "prediction_horizon_s": 0.08, "sensor_noise_m": 0.003}
+  },
+  "climates": {
+    "temperate": {"air_K": 298.15, "radiant_K": 298.15, "relative_humidity": 0.5},
+    "hot_dry": {"air_K": 308.15, "radiant_K": 308.15, "relative_humidity": 0.2},
+    "hot_humid": {"air_K": 308.15, "radiant_K": 308.15, "relative_humidity": 0.8}
+  },
+  "protocols": {
+    "mixed": [
+      {"duration_s": 6, "kind": "effort", "task_id": "acceleration_max", "intensity": 1, "brake": false},
+      {"duration_s": 14, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true},
+      {"duration_s": 20, "kind": "effort", "task_id": "submax_065", "intensity": 0.65, "brake": false},
+      {"duration_s": 10, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true},
+      {"duration_s": 3, "kind": "effort", "task_id": "maneuver_reacceleration", "intensity": 1, "brake": false},
+      {"duration_s": 3, "kind": "recovery", "task_id": "maneuver_brake", "intensity": 0, "brake": true},
+      {"duration_s": 3, "kind": "effort", "task_id": "maneuver_reacceleration", "intensity": 1, "brake": false},
+      {"duration_s": 31, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true}
+    ],
+    "short_rest": [
+      {"duration_s": 6, "kind": "effort", "task_id": "acceleration_max", "intensity": 1, "brake": false},
+      {"duration_s": 9, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true}
+    ],
+    "long_rest": [
+      {"duration_s": 6, "kind": "effort", "task_id": "acceleration_max", "intensity": 1, "brake": false},
+      {"duration_s": 39, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true}
+    ],
+    "dense": [
+      {"duration_s": 20, "kind": "effort", "task_id": "submax_065", "intensity": 0.65, "brake": false},
+      {"duration_s": 10, "kind": "recovery", "task_id": "passive_brake", "intensity": 0, "brake": true}
+    ]
+  },
+  "evidence_status": "All 2700 s protocols, architecture uplifts and unmeasured rates are scenarios. fast tau=56.6/ln(2) s is a context-dependent published half-time conversion, not a calibrated universal PCr constant; oxygen tau=28 s is a published moderate exercise group mean, transfer unvalidated. Other dynamic numbers are explicit conditional assumptions, physiological values remain unidentified."
+}

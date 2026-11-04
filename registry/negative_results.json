@@ -40,5 +40,26 @@
     "experiment_id": "EXP-0008",
     "claim": "Добавление только сократительной массы не дало прироста peak COM в данном baseline; +25% плеча также не обходит contact/FV envelope.",
     "context": "Условные контрпримеры для endpoint; не доказательство невозможности иной анатомии."
+  },
+  {
+    "id": "NEG-0007",
+    "experiment_id": "EXP-0011",
+    "status": "model_counterexample",
+    "claim": "Energy/peripheral cycling endpoint transfer fails held participants: RMSE378.54W vs constant115.34W even at best fit fatigue_rate0.",
+    "context": "Preserved failed transfer, not evidence that coupled physiology is impossible."
+  },
+  {
+    "id": "NEG-0008",
+    "experiment_id": "EXP-0011",
+    "status": "model_counterexample",
+    "claim": "PCr monoexponential fitted90s predicts97.10% at360s vs observed85.5%, +11.60pp.",
+    "context": "Same-cohort aggregate temporal holdout; not independent participant validation."
+  },
+  {
+    "id": "NEG-0009",
+    "experiment_id": "EXP-0014",
+    "status": "model_counterexample",
+    "claim": "More conditional contractile/transport/cooling support increases humid stored heat; no thermal motor feedback and implausible sparse-load cooling prevent feasibility claims.",
+    "context": "One-node heat diagnostic; no core temperature or safety prediction."
   }
 ]

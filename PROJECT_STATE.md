@@ -1,57 +1,41 @@
-# SUBJECT-01 — каноническое состояние на 03.11.2026
+# SUBJECT-01 — состояние на 04.11.2026
 
-Источник истины: существующий публичный GitHub G1F12/SUBJECT-01, ветка main.
-Фаза: Foundation → частично калиброванная интегрированная вычислительная модель.
-Решение о PUBLIC: DEC-0005. Новых репозиториев/архивов не создавалось.
+Канонический публичный репозиторий G1F12/SUBJECT-01 (DEC-0005).
+Базовый main:070a7343e522ca9fdbe37d3c0f7e3e0894bc7e30. Новый цикл публикуется
+через research/cpe45-dynamics-20261104; итоговый GitHub HEAD проверять напрямую.
 
-- Foundation EXP-0001..0006 и аудит FND-0007/NEG-0003 сохранены; 13 исходных
-  SHA256 и 7 CSV воспроизводятся. Файлы Foundation не изменены.
-- Новый цикл: EXP-0007..0010, `research/integrated_2026_11_01/REPORT.md`.
-  43 опубликованных количественных агрегата, 10 используемых источников;
-  полные provenance/методики/единицы/SD/SE/IQR: DATA_AUDIT.md и sources.json.
-- Связаны механика, передача мощности, контакт, масса, кислород, энергетика,
-  heat budget, компоненты задержки и условная ошибка предиктора. Не digital twin.
-- Выполнены 18 сценариев, 768 UQ, 7168 Sobol/Jansen evaluations,
-  локальная чувствительность, 162 архитектуры, 84 условно допустимы и 28 Pareto.
-- Сохранены отрицательные результаты: fixed extraction transportability,
-  constant heat loss и muscle-only mass uplift (NEG-0004..0006).
-- Реестры: EXP=10, HYP=5 (все unverified), FND=12, NEG=6, DEC=7,
-  ISS=11, SRC=31. Прежние IDs и imported claims сохранены.
-- Классификация: результаты модели `arithmetic_reproduced`; отдельные агрегаты
-  сверены с источниками. Нет эмпирической валидации интегрированной архитектуры,
-  доказательства радикального усиления или безопасности. **NO_GO** для вмешательств.
-- Полнотекстовая проверка выбранных методик/таблиц доступна частично; полный
-  систематический аудит и exhaustive correction/retraction clearance не завершены.
-  Получены Europe PMC/Crossref notices для 10 используемых работ; ограниченность
-  и найденная Comment in записаны. Это не доказательство отсутствия ретракций.
-- ISS-0001 resolved; ISS-0002..0011 остаются открыты. Явные Ca/Cv constraints
-  реализованы в новой модели, но физиологическая задача ISS-0007 не закрыта.
-- Основные блокеры: нет одновременных индивидуальных anatomical/kinetic/gas данных,
-  не установлен перенос cycling→running, неизвестны fatigue/кости/геометрия,
-  хроническая интеграция нового органа, приборная ошибка и ковариации.
-- Выбор направлений условный: I нативная координация мышцы–передачи–ресурсов;
-  II внутренние параллельные сократительные ветви; III новый внутренний
-  предиктивный сенсорный канал. Эффективность вмешательств не заявлена.
-- **Новая обязательная дополнительная цель TARGET-CPE45:** 2700 s перемежающихся
-  интенсивных усилий/восстановления с сохранением комплексного выхода и отдельной
-  post-функцией. Принята 02.11.2026 (DEC-0007), интегрирована 03.11.2026.
-  Спецификация: research/targets/COMBAT_LIKE_ENDURANCE_45MIN.md и CPE45.json.
-  Нет калиброванных порогов, доказательства достижимости или изменения NO_GO.
-  Прежние EXP-0001..0010/Pareto по этому критерию **not_assessed**.
-- Измерительный модуль tools/cpe45.py: временные ряды, сопоставимые эпизоды,
-  ошибки/latency, наблюдаемое восстановление и отдельное post45. Синтетическая
-  верификация не является эмпирической проверкой человека.
-- **Следующая задача:** динамическая модель утомления и восстановления на 2700 s
-  (ISS-0011); сейчас не выполнена. Прежняя потребность в совместных kinetic/
-  kinematic/gas-exchange данных и независимой проверке переноса сохраняется.
+Foundation EXP-0001..0006 и Integrated EXP-0007..0010 сохранены без изменений:
+13 исходных hashes,7 CSV,45 arithmetic rows и прежние отрицательные результаты.
+Исторические Pareto по CPE45 по-прежнему not_assessed.
 
-Проверки: `python tools/validate_repository.py`, `python tools/reproduce_foundation.py`,
-`python tools/audit_foundation.py`,
-`python research/integrated_2026_11_01/test_model.py` и
-`python research/integrated_2026_11_01/experiments.py --check`;
-`python -m unittest discover -s tests -p test_cpe45.py`; `git diff --check`.
-Точные команды — в отчёте. Python >=3.12, зависимости зафиксированы requirements.txt.
-Публикацию утверждать только после проверки PR, Actions и SHA непосредственно
-на GitHub; SHA содержащего исследование commit: `git log -1 --format=%H -- research/integrated_2026_11_01/REPORT.md`.
+Выполнен EXP-0011..0014: [отчёт](research/cpe45_2026_11_04/REPORT.md),
+[аудит](research/cpe45_2026_11_04/DATA_AUDIT.md).
 
-CPE45: 25 синтетических unit-тестов и CLI-повторение; это верификация измерения, не физиологическая валидация.
+- Раздельная динамика резервов, oxidative/slow kinetics, peripheral state,
+  механики, восстановления и тепла2700s; подключён tools/cpe45.py.
+- 8 первичных источников SRC-0032..0039, ограниченный notice audit; CC BY XLSX v1,
+  44 строки условий,414 MeanP чисел/26 пропусков, исходные bytes и SHA256.
+- 11 fit/10 пригодных holdout участников,99/90 endpoints; первый sprint — вход.
+  Проверка переноса отрицательная: coupled RMSE378.54W, constant115.34W.
+- 15 сценариев,64 epistemic UQ,16 perturbations,4dt,4negative. CSV/JSON/2PNG,
+  trace/episodes/recovery/retention, seed20261104, параметры и hashes сохранены.
+- Baseline:86.38kJ работы, max-task early/late175.86/114.08W, конечные резервы
+  2758/2439J. Это модель, не измерения45-минутной работоспособности человека.
+- I/II/III сравнены в3средах; II больше условная работа, но больше humid heat.
+  III без данных не получает neural benefit. Ни одна архитектура не достигла CPE45.
+- Thermal one-node без motor feedback/cold regulation; реакция/accuracy,
+  coordination/damage/central activation и post45 test неизвестны.
+- 26 новых+25measurement+19integrated=70 unit tests; Foundation checks отдельно.
+  CI включает dynamic invariants и numerical reproduction.
+
+Реестры:EXP14/HYP6/FND16/NEG9/DEC8/ISS13/SRC39. Все HYP unverified.
+ISS-0011 остаётся открытым: код создан, эмпирической CPE45 validation нет.
+ISS-0012 dataset ambiguity/failed transfer; ISS-0013 thermal/neural/damage gaps.
+ISS-0002..0010 сохранены; ISS-0001 resolved. Один агент OpenAI Codex, внешнего
+независимого научного рецензирования нет. Model not_empirically_validated;
+TARGET-CPE45 not_assessed; вмешательства NO_GO.
+
+Следующий приоритет: совместные индивидуальные PCr–VO2–power ряды для
+идентификации восстановления и новый заранее фиксированный participant holdout.
+Команды всех проверок — в REPORT.md и .github/workflows/validate.yml.
+SHA research commit: git log -1 --format=%H -- research/cpe45_2026_11_04/REPORT.md.

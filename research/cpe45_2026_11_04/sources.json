@@ -1,0 +1,262 @@
+[
+  {
+    "id": "SRC-0032",
+    "doi": "10.1113/jphysiol.1995.sp020533",
+    "title": "Recovery of power output and muscle metabolites following 30 s of maximal sprint cycling in man.",
+    "year": {
+      "date-parts": [
+        [
+          1995,
+          1,
+          15
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1113/jphysiol.1995.sp020533",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1113/jphysiol.1995.sp020533",
+    "metadata_sha256": "174ce1b44594807637857ca73d39c29f4c14c38641a68b97fdbf55a4c1f50496",
+    "crossref_url": "https://api.crossref.org/works/10.1113%2Fjphysiol.1995.sp020533",
+    "crossref_sha256": "619726b4fb88a56ab78cb3313774df61c373c03b12000b14e88542cd747c8b8b",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "7714837",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0033",
+    "doi": "10.1152/jappl.1996.80.3.876",
+    "title": "Contribution of phosphocreatine and aerobic metabolism to energy supply during repeated sprint exercise",
+    "year": {
+      "date-parts": [
+        [
+          1996,
+          3,
+          1
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1152/jappl.1996.80.3.876",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1152/jappl.1996.80.3.876",
+    "metadata_sha256": "b515fb11fefec4c668e73d7fee7fc586aeb2a63765fd81c168cabffc7c42ea46",
+    "crossref_url": "https://api.crossref.org/works/10.1152%2Fjappl.1996.80.3.876",
+    "crossref_sha256": "3455db0892e3d86571fff701f638d35cfd6c0b8d48146ef792982e04a32efb03",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "8964751",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0034",
+    "doi": "10.1046/j.1365-201x.1998.00378.x",
+    "title": "Power output and muscle metabolism during and following recovery from 10 and 20 s of maximal sprint exercise in humans",
+    "year": {
+      "date-parts": [
+        [
+          1998,
+          6
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1046/j.1365-201x.1998.00378.x",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1046/j.1365-201x.1998.00378.x",
+    "metadata_sha256": "da15fb60ddcf809fd9d3adb4ee8e98f90da6a4612ae4d6a13419e30ec22dc6dc",
+    "crossref_url": "https://api.crossref.org/works/10.1046%2Fj.1365-201x.1998.00378.x",
+    "crossref_sha256": "430c829434d43d1f871dc0b2375329208bab00ba32c5cf45e94417357fd6be79",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "9715738",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0035",
+    "doi": "10.1371/journal.pone.0276314",
+    "title": "Responses of soccer players performing repeated maximal efforts in simulated conditions of the FIFA World Cup Qatar 2022: A holistic approach",
+    "year": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          9
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1371/journal.pone.0276314",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1371/journal.pone.0276314",
+    "metadata_sha256": "b40ef1a583eaad46f4845493bf44ccf6321e076a9be389015db27bee8269e66c",
+    "crossref_url": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0276314",
+    "crossref_sha256": "104e6c303a7d16d3a5f8fa1e0367df728d64917fda5274b3d5aa8e96f84074ee",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "36490259",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0036",
+    "doi": "10.1152/japplphysiol.00144.2009",
+    "title": "Influence of repeated sprint training on pulmonary O<sub>2</sub> uptake and muscle deoxygenation kinetics in humans",
+    "year": {
+      "date-parts": [
+        [
+          2009,
+          6
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1152/japplphysiol.00144.2009",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1152/japplphysiol.00144.2009",
+    "metadata_sha256": "d70a1acf0426ff3ce473bde3852ad4e1075c699362748778773c5e93b293cc28",
+    "crossref_url": "https://api.crossref.org/works/10.1152%2Fjapplphysiol.00144.2009",
+    "crossref_sha256": "4cd4fb9671ee68ef8c8c749a9cf400c791549bdd0f1d98cd443f4934ba448e35",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "19342439",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0037",
+    "doi": "10.1249/MSS.0000000000000443",
+    "title": "Neuromuscular Fatigability during Repeated-Sprint Exercise in Male Athletes",
+    "year": {
+      "date-parts": [
+        [
+          2015,
+          3
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1249/MSS.0000000000000443",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1249/MSS.0000000000000443",
+    "metadata_sha256": "22fc1f01dc0e9e6261db7a5b1db4e71c34d87fd02f972adc6f90888825cb6c26",
+    "crossref_url": "https://api.crossref.org/works/10.1249%2FMSS.0000000000000443",
+    "crossref_sha256": "51e49955439ae6b8af5d88dfb6c4df79396e4a3c76e026e93d3f086d6feecc63",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "25010404",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0038",
+    "doi": "10.1249/MSS.0000000000000800",
+    "title": "Peripheral and Central Fatigue Development during All-Out Repeated Cycling Sprints",
+    "year": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1249/MSS.0000000000000800",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1249/MSS.0000000000000800",
+    "metadata_sha256": "189d7a21ca1c063544bebdfead88094578b8adbfc53178392099bd5e295b8c12",
+    "crossref_url": "https://api.crossref.org/works/10.1249%2FMSS.0000000000000800",
+    "crossref_sha256": "b2160b5c6692e1d63b4df3574d95b10b82bd03acb797ff0555828fa97a30b3a5",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "26496420",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  },
+  {
+    "id": "SRC-0039",
+    "doi": "10.1007/s00421-011-2019-8",
+    "title": "The effects of a 30-min run on the mechanics of the human Achilles tendon",
+    "year": {
+      "date-parts": [
+        [
+          2011,
+          6,
+          4
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1007/s00421-011-2019-8",
+    "accessed": "2026-11-04",
+    "version": "published indexed record as retrieved",
+    "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s00421-011-2019-8",
+    "metadata_sha256": "6b424c4500824c5f14508baf56bb590c00c49d83da8be3d4f78138b2ff2c00d4",
+    "crossref_url": "https://api.crossref.org/works/10.1007%2Fs00421-011-2019-8",
+    "crossref_sha256": "7bea7c840536aab4fb625bc7e7598c1604ac13182a1b4750decba78d971dcda6",
+    "notice_check": {
+      "crossref_relation": {},
+      "crossref_update_to": [],
+      "europepmc": [
+        {
+          "pmid": "21643918",
+          "commentCorrection": {},
+          "isRetracted": null
+        }
+      ]
+    },
+    "review_depth": "bibliography, abstract and selected accessible methods; not exhaustive Crossmark/reverse notice review"
+  }
+]
