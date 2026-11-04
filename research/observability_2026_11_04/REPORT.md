@@ -213,3 +213,5 @@ cache ипроверяет memberhashes. В results —толькосинтет�
 GitHubPR/CI/mainSHA проверяютсяпослепубликации,изсамогоэтогоотчётанеследуют.
 
 Исправление воспроизводимости CI: после HTTP500 внешнего EuropePMC wrapper-сервиса точный PeerJ DataS3 XLS включён под подтверждённойCCBY4.0 с атрибуцией и проверкой пустыхNamefields. Остальные raw остаютсяignored. Добавлен19-йtest дляSHA256/пустыхNamefields. Научныеoutputs иисторическиелоки не менялись.
+
+CI source replay limitation: run41871865726 also failed on a plantar archive read timeout. Main validation now explicitly checks retained licensed XLS content and archived source-audit hashes offline; it does NOT claim a fresh replay of unavailable raw. Manual workflow source-access.yml retains full live retrieval/content replay. Full content replay passed locally from obtained pinned cache. Scientific numeric replay remains mandatory.

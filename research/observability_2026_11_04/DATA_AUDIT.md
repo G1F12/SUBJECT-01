@@ -67,3 +67,5 @@ sampling interval непосредственно масштабирует τ. П
 ## Проверка CI и стабильность доступа
 
 Первый GitHub push-run41869707575 завершился HTTP500 EuropePMC при повторной сборке PeerJ supplementaryFiles (47.7MB), до проверки численного дизайна. Это отказ сервиса, не несовпадение источника. Повторные publicfile URLs дали403,HTML вместоXLS,404; HTML не признан числовым файлом. Поэтому точный ранее полученный XLS224256bytes с подтверждённойCCBY4.0, атрибуцией, SHA256 и пустымиNamefields сохранён вlicensed_data. CI читает его напрямую и отвергает изменениехэша; исходныйwrapperSHA и recipe сохранены. Изменения научныхуравнений/численныхрезультатов не потребовались.
+
+CI source replay limitation: run41871865726 also failed on a plantar archive read timeout. Main validation now explicitly checks retained licensed XLS content and archived source-audit hashes offline; it does NOT claim a fresh replay of unavailable raw. Manual workflow source-access.yml retains full live retrieval/content replay. Full content replay passed locally from obtained pinned cache. Scientific numeric replay remains mandatory.

@@ -112,3 +112,5 @@
  DEC-0009. CPE45 NOT EXTERNALLY VALIDATED,архитектуры не перерангированы,NO_GO.
 
 - Cycle5 CI access repair: EuropePMC large supplementary archive returned HTTP500. Retained exact224256-byte PeerJ DataS3 XLS under confirmedCCBY4.0 with attribution and SHA256; participant-namefields blank. Added nativefile integrity/privacy check;19newtests. Scientificoutputs unchanged.
+
+CI source replay limitation: run41871865726 also failed on a plantar archive read timeout. Main validation now explicitly checks retained licensed XLS content and archived source-audit hashes offline; it does NOT claim a fresh replay of unavailable raw. Manual workflow source-access.yml retains full live retrieval/content replay. Full content replay passed locally from obtained pinned cache. Scientific numeric replay remains mandatory.

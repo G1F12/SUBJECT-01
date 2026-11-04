@@ -85,7 +85,24 @@ def inspect():
                      scope='supplement contains only PDF, not numeric time series; n5, nominal2s MRS from methods; raw on request')
     return dict(WASF3=wasf,plantar=plantar,peerj=peerj,diagnostics=diagnostics,external_validation=False)
 
-if __name__=='__main__':
+def offline_check():
+    """Verify retained evidence bytes; do not claim unavailable raw were re-downloaded."""
+    manifest=json.loads((BASE/'manifest.json').read_text('utf8'))
+    for rel in ['data_inventory.json','retrieval.json','sources.json','licensed_data/peerj-04-2259-s003.xls','licensed_data/ATTRIBUTION.md']:
+        assert sha((BASE/rel).read_bytes())==manifest[rel],rel
+    x=json.loads((BASE/'data_inventory.json').read_text('utf8'))
+    data=(BASE/'licensed_data/peerj-04-2259-s003.xls').read_bytes()
+    assert sha(data)==x['peerj']['member_sha256']
+    s=xlrd.open_workbook(file_contents=data).sheet_by_index(0)
+    ids={s.cell_value(i,0) for i in range(s.nrows) if re.fullmatch(r'CW\d+-2',str(s.cell_value(i,0)))}
+    assert len(ids)==x['peerj']['participants']==17
+    assert (s.nrows,s.ncols)==(x['peerj']['sheet_rows'],x['peerj']['sheet_columns'])
+    assert not x['external_validation']
+    print('PASS offline: exact licensed XLS content and archived source-audit hashes; other raw files NOT re-fetched')
+
+if __name__=='__main__' and '--check-offline' in sys.argv:
+    offline_check()
+elif __name__=='__main__':
     x=inspect();target=BASE/'data_inventory.json'
     if '--check' in sys.argv:
         from audit import equivalent
