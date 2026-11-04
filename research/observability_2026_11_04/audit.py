@@ -273,6 +273,14 @@ def equivalent(a,b):
     if isinstance(a,(float,int)) and not isinstance(a,bool):return isinstance(b,(float,int)) and math.isclose(a,b,rel_tol=2e-4,abs_tol=2e-5)
     return a==b
 
+def differences(a,b,path=''):
+    if equivalent(a,b):return []
+    if isinstance(a,dict) and isinstance(b,dict) and a.keys()==b.keys():
+        return [v for k in a for v in differences(a[k],b[k],path+'/'+k)]
+    if isinstance(a,list) and isinstance(b,list) and len(a)==len(b):
+        return [v for i,(x,y) in enumerate(zip(a,b)) for v in differences(x,y,path+'/'+str(i))]
+    return [dict(path=path,recomputed=a,archived=b)]
+
 def check():
     manifest=json.loads((BASE/'manifest.json').read_text('utf8'))
     for rel,h in manifest.items():assert hashlib.sha256((BASE/rel).read_bytes()).hexdigest()==h,rel
@@ -285,7 +293,9 @@ def check():
                 if isinstance(x,dict):return {k:strip(v) for k,v in x.items() if k not in ('null_vectors','projected_parameter_correlations')}
                 if isinstance(x,list):return [strip(v) for v in x]
                 return x
-            assert equivalent(strip(a),strip(b)),p.name
+            aa,bb=strip(a),strip(b)
+            if not equivalent(aa,bb):print(json.dumps(dict(file=p.name,differences=differences(aa,bb)[:30]),indent=2),flush=True)
+            assert equivalent(aa,bb),p.name
     print('PASS cycle5 hashes and numerical replay; no new human validation')
 
 if __name__=='__main__':
