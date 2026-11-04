@@ -131,3 +131,5 @@ Profile likelihood для effective recurrence оптимизирует depletio
 Порог3.84 — рабочий one-dimensional Gaussian likelihood support, не эмпирическое
 покрытие при границах/неправильной структуре. Sensitivity cosines отделены от
 pinv parameter correlations; у null parameters marginal CI не рассчитываются.
+
+Cross-platform replay: Linux run41873432421 reproduced all outputs except missing-data nonlinear recovery logparameter8 differed by4.4145e-5, maxrelativeerror by4.0831e-5, nfev49vs53. Solver-only logparameter/maxrelativeerror absolute tolerance is1e-4 (about0.01% parameter precision), with nfev checked as finite-budget1..60 instead of exact iteration parity. Predictions, costs, all remaining numbers, SVD/physics tolerances and original archived outputs unchanged. Regression checks reject1e-3 parameter changes or changedpredictionerror.

@@ -74,6 +74,10 @@ class ObservabilityTests(unittest.TestCase):
         x=json.loads((audit.BASE/'results/stress.json').read_text())['synthetic']['cases'][0]
         for f in x['fits']:
             self.assertAlmostEqual(f['depletion'],.18,places=6);self.assertAlmostEqual(f['tau_s'],60,places=4)
+        a=dict(log_parameter_error=[.075],nfev=53,prediction_RMSE_W=2.)
+        self.assertTrue(audit.recovery_equivalent(a,dict(a,log_parameter_error=[.075044],nfev=49)))
+        self.assertFalse(audit.recovery_equivalent(a,dict(a,log_parameter_error=[.076])))
+        self.assertFalse(audit.recovery_equivalent(a,dict(a,prediction_RMSE_W=3.)))
     def test_status_no_empirical_promotion(self):
         x=json.loads((audit.BASE/'results/summary.json').read_text())
         self.assertFalse(x['new_external_validation']);self.assertTrue(x['NO_GO'])
