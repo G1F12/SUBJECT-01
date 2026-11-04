@@ -238,6 +238,33 @@
       "content_type": "application/zip",
       "sha256": "ee0e1d8352b2a815eb7c83c01e888383490d63c7b986a23f419b553e54da3c1e",
       "cache": "diagnostics_supp.bin"
+    },
+    {
+      "label": "peerj_direct_europepmc",
+      "url": "https://europepmc.org/articles/PMC4963215/bin/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "numeric_obtained": false
+    },
+    {
+      "label": "peerj_direct_pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4963215/bin/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 200,
+      "bytes": 21495,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "b7496bf843b2bf44f61f0f8469909c27e3fc4d6f57d73055791af8d13b867e27",
+      "cache": "peerj_direct_pmc.bin",
+      "numeric_obtained": false
+    },
+    {
+      "label": "peerj_direct_cdn",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4e02/4963215/03caa975a552/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "numeric_obtained": false
     }
   ],
   "inspected": {
@@ -452,5 +479,11 @@
       "query": "phosphocreatine VO2 dataset Figshare Zenodo OSF",
       "conclusion": "API results and exclusions summarized in DATA_AUDIT.md; numericWASF3,plantar,PeerJ obtained"
     }
-  ]
+  ],
+  "ci_access_failure": {
+    "run": "https://github.com/G1F12/SUBJECT-01/actions/runs/41869707575",
+    "HTTP_status": 500,
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4963215/supplementaryFiles",
+    "remedy": "exact licensed DataS3 XLS retained withCCBY4 attribution; byteSHA256 unchanged; no numerical or historical engine edits"
+  }
 }

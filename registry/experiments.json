@@ -356,7 +356,8 @@
     "inputs": "research/observability_2026_11_04/configuration.json",
     "outputs": [
       "research/observability_2026_11_04/data_inventory.json",
-      "research/observability_2026_11_04/retrieval.json"
+      "research/observability_2026_11_04/retrieval.json",
+      "research/observability_2026_11_04/licensed_data/peerj-04-2259-s003.xls"
     ],
     "report": "research/observability_2026_11_04/REPORT.md",
     "method": "Analytic proof + conditional computational design; public numeric content inspection; no human intervention or new independent power test",

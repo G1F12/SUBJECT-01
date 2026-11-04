@@ -14,7 +14,8 @@ def get(label):
     p=CACHE/record['cache']
     if not p.exists():
         CACHE.mkdir(parents=True,exist_ok=True)
-        with urllib.request.urlopen(record['url'],timeout=90) as r:p.write_bytes(r.read())
+        req=urllib.request.Request(record['url'],headers={'User-Agent':'SUBJECT-01 public reproducibility audit'})
+        with urllib.request.urlopen(req,timeout=90) as r:p.write_bytes(r.read())
     data=p.read_bytes()
     # EuropePMC creates wrapper archives: pin individual members below, not ZIP timestamps.
     if not label.endswith('_supp') and sha(data)!=record['sha256']:raise ValueError('source changed '+label)
@@ -69,13 +70,16 @@ def inspect():
         kinematics_time_s=[float(arrays['time'][0]),float(arrays['time'][-1])],kinematics_samples=len(arrays['time']),
         manuscript='one subject; separate MRI,EMG andMRS experiments; prescribed20%MVC; MRS nominal5s,180s load and1500s recovery described; released time subset ends600.26s',
         limitations='No continuous VO2. Energy_exp11points is PCr-derived J/kg with assumed enthalpy21kJ/mol and cell-water conversion. Not independent cost anchor. Separate EMG acquisition; no synchronized absolute jointpower in obtained MATs.')
-    z=zipfile.ZipFile(io.BytesIO(get('peerj_supp')));data=z.read('peerj-04-2259-s003.xls');book=xlrd.open_workbook(file_contents=data);s=book.sheet_by_index(0)
+    native=BASE/'licensed_data/peerj-04-2259-s003.xls'
+    data=native.read_bytes() if native.exists() else zipfile.ZipFile(io.BytesIO(get('peerj_supp'))).read('peerj-04-2259-s003.xls')
+    assert sha(data)=='3e2030f7f62054ff4fd7085496a279b04a7eba2df1e8d00b95e8fa1c66712d92'
+    book=xlrd.open_workbook(file_contents=data);s=book.sheet_by_index(0)
     ids={s.cell_value(i,0) for i in range(s.nrows) if re.fullmatch(r'CW\d+-2',str(s.cell_value(i,0)))}
     peerj=dict(doi='10.7717/peerj.2259',member='peerj-04-2259-s003.xls',member_sha256=sha(data),participants=len(ids),sheet_rows=s.nrows,sheet_columns=s.ncols,
         format='BIFF XLS; mixed raw, repeated sex-group summaries, formulas and figures. 17 unique participant labels, not34 independent people.',
         protocol='25%MVC knee extension every5s for300s;6exercise and6recovery MRS blocks of50s;300s recovery',
         units='signal amplitudes, ratios, pH, model-calculated mmol/kg and kPCr; not independently calibrated total reserve J',
-        limitations='No VO2, no calibrated continuous mechanical W series; coarse50s windows cannot resolve6s effort/recovery; load kg and WE ratio are not watt time series. Participant-name column exists; raw stays ignored.')
+        limitations='No VO2, no calibrated continuous mechanical W series; coarse50s windows cannot resolve6s effort/recovery; load kg and WE ratio are not watt time series. Name column blank; exact XLS redistributed under confirmedCCBY4 with attribution.')
     z=zipfile.ZipFile(io.BytesIO(get('diagnostics_supp')));data=z.read('diagnostics-16-00744-s001.zip');inner=zipfile.ZipFile(io.BytesIO(data))
     diagnostics=dict(doi='10.3390/diagnostics16050744',inner_sha256=sha(data),members=inner.namelist(),numeric_time_series_obtained=False,
                      scope='supplement contains only PDF, not numeric time series; n5, nominal2s MRS from methods; raw on request')

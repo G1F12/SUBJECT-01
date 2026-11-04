@@ -5,7 +5,7 @@
 SHA256 полученных ответов. `sources.json`: DOI/title/year и limited notices.
 `data_inventory.json`: прочитанные числовые members, их SHA256, формат,
 содержимое, временные шкалы и ограничения. `inspect_data.py --check` повторяет
-чтение pinned members. Сырые файлы и имена участников не публикуются.
+чтение pinned members. Один неизменённый PeerJ XLS с подтверждённой CC BY 4.0 включён в licensed_data с атрибуцией; поля имён пустые. Остальные raw не публикуются.
 
 | ID | Источник | Фактически получено | Разрешённый вывод |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Zenodo первые15hits содержали reviews, assay/neural/prosthetic м
 Лицензии: FigshareWASF3v1 явно PublicDomainMark1.0, хотя статья PNAS
 CCBY-NC-ND4.0; права отдельного datarecord не подменяем лицензией статьи.
 PeerJ CCBY4.0. Plantar статьяCCBY, код supplement содержит BSD-style3-clause;
-границы rawdata-license не расширяем автоматически. Все raw в ignored
+границы rawdata-license не расширяем автоматически. Кроме явно лицензированного PeerJ XLS (см. licensed_data/ATTRIBUTION.md), raw в ignored
 `tmp/observability_raw`; в Git только наш audit/recipe/hashes/derived summaries.
 Downloads сохраняют publisher source archives; новый ZIP/репозиторий не создаётся.
 EuropePMC wrapper ZIP может зависеть от упаковки: воспроизводимость проверяет
@@ -63,3 +63,7 @@ sampling interval непосредственно масштабирует τ. П
 данные дают observability kinetics при оговорках, но не идентифицируют η,Cfast,
 окислительный масштаб и энергетическую цену отдыха. Никакого fit D2 по этим
 участникам и никакого искусственного нового holdout не создано.
+
+## Проверка CI и стабильность доступа
+
+Первый GitHub push-run41869707575 завершился HTTP500 EuropePMC при повторной сборке PeerJ supplementaryFiles (47.7MB), до проверки численного дизайна. Это отказ сервиса, не несовпадение источника. Повторные publicfile URLs дали403,HTML вместоXLS,404; HTML не признан числовым файлом. Поэтому точный ранее полученный XLS224256bytes с подтверждённойCCBY4.0, атрибуцией, SHA256 и пустымиNamefields сохранён вlicensed_data. CI читает его напрямую и отвергает изменениехэша; исходныйwrapperSHA и recipe сохранены. Изменения научныхуравнений/численныхрезультатов не потребовались.

@@ -13,7 +13,7 @@
   Dryad401/403 повторён; memberhashes/licenses/recipes сохранены, rawignored.
 - NEG-0013..0015: baselineconfounding, отсутствие jointdata, sensitivity к
   asymptote/sampling/discrepancy, practical inverse error дажеclean.
--18новыхtests, pinnedsource content и computational replay вActions;
+-19новыхtests, pinnedsource content и computational replay вActions;
   все прежние suites/lockedtestresults сохранены. FND21..24,DEC10,ISS16.
 - Результат A/C/D; новой independent empirical validation нет.
   CPE45 NOT EXTERNALLY VALIDATED, NO_GO, I/II/III без нового преимущества.
@@ -110,3 +110,5 @@
 - 24pause/depletioncases,14perturbations,64epistemicUQ,4dt×2structures,2700sstability;
  26новыхtests/CI/reproduction/2PNG. NEG-0010..0012;FND-0017..0020;ISS-0014/15;
  DEC-0009. CPE45 NOT EXTERNALLY VALIDATED,архитектуры не перерангированы,NO_GO.
+
+- Cycle5 CI access repair: EuropePMC large supplementary archive returned HTTP500. Retained exact224256-byte PeerJ DataS3 XLS under confirmedCCBY4.0 with attribution and SHA256; participant-namefields blank. Added nativefile integrity/privacy check;19newtests. Scientificoutputs unchanged.

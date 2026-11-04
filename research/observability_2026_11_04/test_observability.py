@@ -77,5 +77,11 @@ class ObservabilityTests(unittest.TestCase):
     def test_status_no_empirical_promotion(self):
         x=json.loads((audit.BASE/'results/summary.json').read_text())
         self.assertFalse(x['new_external_validation']);self.assertTrue(x['NO_GO'])
+    def test_licensed_native_XLS_integrity_and_blank_names(self):
+        import xlrd
+        p=audit.BASE/'licensed_data/peerj-04-2259-s003.xls'
+        self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),'3e2030f7f62054ff4fd7085496a279b04a7eba2df1e8d00b95e8fa1c66712d92')
+        s=xlrd.open_workbook(p).sheet_by_index(0)
+        self.assertTrue(all(s.cell_value(i,1)=='' for i in list(range(3,20))+list(range(25,35))+list(range(40,47))))
 
 if __name__=='__main__':unittest.main(verbosity=2)

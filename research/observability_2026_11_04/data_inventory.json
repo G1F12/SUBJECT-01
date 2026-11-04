@@ -327,7 +327,7 @@
     "format": "BIFF XLS; mixed raw, repeated sex-group summaries, formulas and figures. 17 unique participant labels, not34 independent people.",
     "protocol": "25%MVC knee extension every5s for300s;6exercise and6recovery MRS blocks of50s;300s recovery",
     "units": "signal amplitudes, ratios, pH, model-calculated mmol/kg and kPCr; not independently calibrated total reserve J",
-    "limitations": "No VO2, no calibrated continuous mechanical W series; coarse50s windows cannot resolve6s effort/recovery; load kg and WE ratio are not watt time series. Participant-name column exists; raw stays ignored."
+    "limitations": "No VO2, no calibrated continuous mechanical W series; coarse50s windows cannot resolve6s effort/recovery; load kg and WE ratio are not watt time series. Name column blank; exact XLS redistributed under confirmedCCBY4 with attribution."
   },
   "diagnostics": {
     "doi": "10.3390/diagnostics16050744",

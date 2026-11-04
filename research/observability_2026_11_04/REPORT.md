@@ -94,7 +94,7 @@ activevolume,pH и timing нужны для интерпретации PCr; twit
 Получены и **прочитаны** PCrFigure1A.xlsx (2 человека,6scans,522relativecells),
 четыре plantarflexionMAT с PCr/Pi/ATP/pH144points и EMG/kinematics одного человека,
 PeerJXLS17 человек,50sMRS blocks. Доступны pinned recipes/memberSHA256; raw
-не публикуются. Дополнительный скачанный Diagnostics supplement содержит только PDF.
+не публикуются, кроме явно лицензированного PeerJ XLS с атрибуцией. Дополнительный скачанный Diagnostics supplement содержит только PDF.
 Dryad3450615 вновь 401/403, ни одной numericcell не получено.
 
 Ни один полученный источник не содержит пригодный synchronized individual
@@ -211,3 +211,5 @@ retrieval.json:inspect_data.py --check скачиваетнужные publicbyte
 cache ипроверяет memberhashes. В results —толькосинтетические outputs; в inventory —
 наш derivedaudit.Исторические lockedtestfiles нетронуты. Итогпроверокв verification.json;
 GitHubPR/CI/mainSHA проверяютсяпослепубликации,изсамогоэтогоотчётанеследуют.
+
+Исправление воспроизводимости CI: после HTTP500 внешнего EuropePMC wrapper-сервиса точный PeerJ DataS3 XLS включён под подтверждённойCCBY4.0 с атрибуцией и проверкой пустыхNamefields. Остальные raw остаютсяignored. Добавлен19-йtest дляSHA256/пустыхNamefields. Научныеoutputs иисторическиелоки не менялись.

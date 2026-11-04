@@ -17,7 +17,7 @@ PeerJXLS17 людей. Нет jointPCr–continuoushumanVO2–mechanicalW. Dryad
 Клеточный OCR не humanVO2; MATparadigm1=0/1 не power. PCr_mmol_l из
 assumedATP8.2 и Energy_exp из PCr — зависимые estimates. ExploratoryPCr fits
 in-sample с timing/asymptote caveats, не новый holdout. SourceSHA/recipes есть;
-rawcache tmp/observability_raw ignored. Не публиковать имена/сырые файлы.
+rawcache tmp/observability_raw ignored; PeerJ XLS с подтверждённой CC BY 4.0 хранится в licensed_data. Не публиковать имена или файлы без подтверждённого права.
 
 FullM5 robustDleader30/60s, Eleader6/30s только в конечной виртуальной сетке.
 Новые syntheticstress/recovery не humanvalidation. Старые test10 и 7 просмотрены

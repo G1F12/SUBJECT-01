@@ -26,14 +26,14 @@ GitHub/remote после PR и CI, не выводится из этой зап�
   plantarflexionMAT1 человек/144MRSpoints; PeerJXLS17 людей/50sblocks.
   Joint synchronized PCr–continuousVO2–mechanicalW не получен. PCr_mmol_l
   с assumedATP8.2mmol/l и PCr-derivedenergy не независимые metabolic anchors.
-  Dryad повторно 401/403. Raw ignored; pinnedURL/memberSHA/recipes в Git.
+  Dryad повторно 401/403. Raw ignored, кроме лицензированного PeerJ XLS; pinnedURL/memberSHA/recipes в Git.
 - Новые exploratoryPCr fits только in-sample; неизвестная asymptote меняетτ.
   Ни один новый D2 physiological coefficient не установлен на людях.
 - Foundation/Integrated/CPE45/Recovery артефакты и lockedtestresults сохранены.
   Старый RMSE378.543770W воспроизведён. Recovery constant126.54W,D2361.71W,
   mono118.29W без подтверждённого преимущества. Старые 10 и 7test просмотрены,
   не используются для новой настройки или independent improvement claim.
-- Все прежние 96unit tests и 18 новых, historical replays, hashes, source-content
+- Все прежние 96unit tests и 19 новых, historical replays, hashes, source-content
   check и Cycle5 numeric replay включены в verify.py/Actions. Фактические
   exitcodes: research/observability_2026_11_04/verification.json.
 

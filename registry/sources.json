@@ -798,7 +798,11 @@
       "path": "research/observability_2026_11_04/sources.json",
       "source_id": "SRC-0045"
     },
-    "limits": "Public methods and actual numeric files where acquired; no exhaustive notices/retraction audit or intervention efficacy verification"
+    "limits": "Public methods and actual numeric files where acquired; no exhaustive notices/retraction audit or intervention efficacy verification",
+    "data_license": "CC BY 4.0, explicit primary article license including Data S3, no separate restriction found",
+    "numeric_artifact": "research/observability_2026_11_04/licensed_data/peerj-04-2259-s003.xls",
+    "numeric_sha256": "3e2030f7f62054ff4fd7085496a279b04a7eba2df1e8d00b95e8fa1c66712d92",
+    "attribution": "research/observability_2026_11_04/licensed_data/ATTRIBUTION.md"
   },
   {
     "id": "SRC-0046",
