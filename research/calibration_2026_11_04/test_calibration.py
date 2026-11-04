@@ -7,6 +7,12 @@ import dataset,models,analysis
 from acquire import BASE,RangeFile
 
 class CalibrationTests(unittest.TestCase):
+    def test_replay_does_not_hide_parameter_changes(self):
+        import reproduce,copy
+        a=json.loads((BASE/'results/parameter_identification.json').read_text('utf8'));b=copy.deepcopy(a)
+        self.assertTrue(reproduce.identification_equal(a,b))
+        b['pulmonary_kinetics'][0]['tau_s']+=2
+        self.assertFalse(reproduce.identification_equal(a,b))
     def test_source_snapshot_integrity(self):
         m=json.loads((BASE/'manifest.json').read_text('utf8'))
         for name in ['development_stage_audit.json','test_stage_audit.json','development_kinetic_inputs.json','cpet_retrieval.json','weee_retrieval.json']:

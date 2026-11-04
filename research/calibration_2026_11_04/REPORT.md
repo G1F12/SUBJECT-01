@@ -86,6 +86,11 @@ incomplete recovery и active rest. Только один development recovery w
 сохраняет обе D2 ambiguities. Плоский профиль означает недостаток информации,
 а не отсутствие физиологического процесса. Две exact symmetries не опровергнуты.
 
+Дополнительный отрицательный численный результат: finite-difference FIM у
+sampled activation knee не regular precision matrix и расходится между
+платформами. Физические fits/test metrics и profile classes воспроизводятся;
+исходные outputs сохранены, условия проверки явно описаны в NUMERICS.md.
+
 ## Решение
 
 A — REAL METABOLIC ANCHOR FOUND только whole-body gas scale;

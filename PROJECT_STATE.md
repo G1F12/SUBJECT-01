@@ -16,7 +16,7 @@ selectedquadratic RMSE26.56W vs constant135.40W vs historic equilibrium40.58W.
 только effective. Gain/offset/timing/volume остаются существенными.
 Старые10+7 и новые13test просмотрены, повторное независимое claim запрещено.
 TARGET-CPE45 NOT EXTERNALLY VALIDATED; interventions NO_GO; архитектуры без новых преимуществ.
-Реестры EXP26/FND28/NEG19/DEC11/ISS17/SRC55. История Cycle5 ниже сохранена.
+Реестры EXP26/FND28/NEG20/DEC11/ISS17/SRC55. История Cycle5 ниже сохранена.
 
 ---
 

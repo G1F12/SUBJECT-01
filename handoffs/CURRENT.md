@@ -29,6 +29,6 @@ NO_GO, архитектурыI/II/III без новых преимуществ. 
 не B localphysparam. Старые Foundation/Integrated/CPE45/Recovery/Observability сохранены.
 verify.py всеchecks, reproduce.py offline, acquire.py --verify-cache native network audit.
 CI numerical replay использует derived REAL snapshots, synthetic only unittest control.
-Registry EXP26/HYP6/FND28/NEG19/DEC11/ISS17/SRC55.
+Registry EXP26/HYP6/FND28/NEG20/DEC11/ISS17/SRC55.
 Следующий приоритет: sameperson synchronizedPCr–VO2/VCO2–W с независимыми activevolume/
 absolutePCrreference/localbaseline, новый preregistered cohort до powervalidation.

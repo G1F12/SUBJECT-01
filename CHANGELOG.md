@@ -123,4 +123,4 @@ CI source replay limitation: run41871865726 also failed on a plantar archive rea
   selected cost predictor26.56W RMSE vs135.40constant and40.58historic equilibrium.
 - No local ATP/baseline anchor or reserve-parameter identification; nine-combination
   quotient, historic negative outcomes and NO_GO preserved. CPE45 remains unvalidated.
-- Native hashes/licenses/retrieval recipes; full legacy and25new tests plus replay.
+- Native hashes/licenses/retrieval recipes; full legacy and26new tests plus replay.

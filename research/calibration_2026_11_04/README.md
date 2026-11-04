@@ -12,8 +12,11 @@ python research/calibration_2026_11_04/verify.py
 verify запускает все Foundation/Integrated/CPE45/Recovery/Observability проверки
 и новые тесты. Логи/exitcodes в verification.json; исторические отчёты не меняются.
 manifest.json фиксирует source snapshots, locks, результаты, код и документы.
-Replay optimizer tolerance .001 для pulmonary fits ниже1s native clock;
-остальные метрики rtol2e−6/atol2e−5, hashes/code locks точные.
+Replay optimizer tolerance .001 для pulmonary parameters ниже1s native clock;
+dimensionless profile objective .01; derivative FIM/SVD в sampled activation knee
+не regular Fisher precision и не сравниваются побитно. Диагноз, исходные CI
+failures и неизменённые outputs описаны в NUMERICS.md. Остальные метрики
+rtol2e−6/atol2e−5, hashes/code locks точные.
 
 Native retrieval отдельно, требует публичной сети и не входит в offline replay:
 

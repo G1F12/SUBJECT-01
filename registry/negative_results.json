@@ -131,5 +131,12 @@
     "status": "model_counterexample",
     "claim": "+15s timing leaves20/216 eligible stages; missingcoverage is not physiology. BUT-CGM CoolDown75W is active. No universally transferable efficiency/ATP reference established.",
     "context": "Preserve prior negative outcomes and locks; no synthetic-human substitution"
+  },
+  {
+    "id": "NEG-0020",
+    "experiment_id": "EXP-0026",
+    "status": "model_counterexample",
+    "claim": "Sampled activation knees make finite-difference pulmonary FIM nonregular and platform-sensitive; profile support/status and locked metrics reproduce. Original diagnostics retained.",
+    "context": "NUMERICS.md; CI41881845684/41882497475; no test or model retuning"
   }
 ]
