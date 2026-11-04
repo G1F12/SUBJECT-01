@@ -2,6 +2,7 @@ name: Validate research repository
 on:
   push:
   pull_request:
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
