@@ -179,5 +179,33 @@
     "status": "arithmetic_reproduced",
     "claim": "Exact nine-combination quotient power parity below1.6e-11W; noiseless nonlinear optimizer still maxparametererror1.2%, illustrating local practical recovery limits. New external validation absent.",
     "limits": "Conditional computation/content inspection, not human augmentation or full CPE45 validation; see Cycle5 report"
+  },
+  {
+    "id": "FND-0025",
+    "experiment_id": "EXP-0023",
+    "status": "arithmetic_reproduced",
+    "claim": "CC BY4 actual numeric files: 135 Lendt CPET members/66 cycling people; WEEE17 people; BUT-CGM one exploratory person531rows. New systemic gas anchor, no joint PCr/local calibration.",
+    "limits": "Conditional systemic measurement results; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and interventions NO_GO"
+  },
+  {
+    "id": "FND-0026",
+    "experiment_id": "EXP-0024",
+    "status": "arithmetic_reproduced",
+    "claim": "Conditional systemic intercept153.853W and slope3.64333W/W; effective efficiency .274474, cluster95%[.268440,.280908]. Pulmonary effective tau finite profiles30/51; no local D2 parameter identified.",
+    "limits": "Conditional systemic measurement results; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and interventions NO_GO"
+  },
+  {
+    "id": "FND-0027",
+    "experiment_id": "EXP-0025",
+    "status": "arithmetic_reproduced",
+    "claim": "Published pre-test lock726772f; new13people56stages: selected quadratic systemic-cost RMSE26.56W vs constant135.40 and fixed historic equilibrium40.58W, paired95% improvement. Not output-power validation.",
+    "limits": "Conditional systemic measurement results; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and interventions NO_GO"
+  },
+  {
+    "id": "FND-0028",
+    "experiment_id": "EXP-0026",
+    "status": "arithmetic_reproduced",
+    "claim": "Unknown gain/offset observation map rank2/4; VO2gain+/-10% changes effective efficiency .2980..2544, offset+/-.1L/min changes intercept+/-27.196W. 9D quotient retained.",
+    "limits": "Conditional systemic measurement results; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and interventions NO_GO"
   }
 ]

@@ -135,5 +135,13 @@
     "title": "PCr/VO2 measurement maps require independent gain, baseline, timing and active-volume calibration",
     "impact": "Full local synthetic rank11 assumes known local oxidativeW and fast-PCr map; ordinary pulmonaryVO2 and ATP-normalizedPCr need additional nuisanceparameters. New independent power test absent.",
     "next_action": "Obtain one synchronized sameparticipant power-continuousVO2-PCr numerical dataset with independent scale and baseline calibration; preregister before newparticipant validation."
+  },
+  {
+    "id": "ISS-0017",
+    "status": "open",
+    "severity": "high",
+    "title": "Systemic gas calibration does not determine local reserve scale or baseline",
+    "impact": "Absolute VO2/VCO2 plus W acquired and systemic-cost transfer tested; localallocation, transport, activevolume, PCrreference remain unobserved.",
+    "next_action": "Acquire sameparticipant synchronized PCr-VO2/VCO2-W with independently calibrated activevolume/absolutePCr and localbaseline; preregister new participants."
   }
 ]

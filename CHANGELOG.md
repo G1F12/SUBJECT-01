@@ -114,3 +114,13 @@
 - Cycle5 CI access repair: EuropePMC large supplementary archive returned HTTP500. Retained exact224256-byte PeerJ DataS3 XLS under confirmedCCBY4.0 with attribution and SHA256; participant-namefields blank. Added nativefile integrity/privacy check;19newtests. Scientificoutputs unchanged.
 
 CI source replay limitation: run41871865726 also failed on a plantar archive read timeout. Main validation now explicitly checks retained licensed XLS content and archived source-audit hashes offline; it does NOT claim a fresh replay of unavailable raw. Manual workflow source-access.yml retains full live retrieval/content replay. Full content replay passed locally from obtained pinned cache. Scientific numeric replay remains mandatory.
+
+## 2026-11-04 — Research Cycle 6 — metabolic anchors
+
+- EXP-0023..0026: real licensed CPET acquisition, systemic measurement map,
+  conditional identification, gain/offset/timing falsification and offline replay.
+- Published prereg0446eaa, pre-testlock726772f; independent13people/56stages:
+  selected cost predictor26.56W RMSE vs135.40constant and40.58historic equilibrium.
+- No local ATP/baseline anchor or reserve-parameter identification; nine-combination
+  quotient, historic negative outcomes and NO_GO preserved. CPE45 remains unvalidated.
+- Native hashes/licenses/retrieval recipes; full legacy and25new tests plus replay.

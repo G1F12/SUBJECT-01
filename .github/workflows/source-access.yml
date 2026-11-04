@@ -13,3 +13,5 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Re-fetch publicly accessible raw and reproduce complete content inspection
         run: python research/observability_2026_11_04/inspect_data.py --check
+      - name: Re-fetch licensed CPET members and verify real measurement summaries without refitting
+        run: python research/calibration_2026_11_04/native_replay.py

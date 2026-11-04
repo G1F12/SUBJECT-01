@@ -1,0 +1,38 @@
+[
+  {
+    "label": "but_license",
+    "url": "https://physionet.org/files/but-cgm/1.0.0/LICENSE.txt",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 14842,
+    "sha256": "9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2",
+    "cache": "but_license.bin"
+  },
+  {
+    "label": "but_checksums",
+    "url": "https://physionet.org/files/but-cgm/1.0.0/SHA256SUMS.txt",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 240780,
+    "sha256": "e340391f80a2aa336e4d3b242eae14a997aed7b914ff35e104b16283a79a86c1",
+    "cache": "but_checksums.bin"
+  },
+  {
+    "label": "but_101_cpet",
+    "url": "https://physionet.org/files/but-cgm/1.0.0/101001/101001_CPET_data.csv",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 167363,
+    "sha256": "bc2277c54b4205c7af93ac689330b1903e0e6cf6a3ba0c5178c5c33bbfe4aeb4",
+    "cache": "but_101_cpet.bin"
+  },
+  {
+    "label": "but_101_summary",
+    "url": "https://physionet.org/files/but-cgm/1.0.0/101001/101001_CPET_summary.csv",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 577,
+    "sha256": "e7be5871c382b8b5c067a688f25e48afbe010b543c2ab5372dc54c6951223051",
+    "cache": "but_101_summary.bin"
+  }
+]

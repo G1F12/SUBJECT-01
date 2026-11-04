@@ -1,0 +1,1687 @@
+{
+  "origin": "REAL independent oxygen-only cohort",
+  "participants": 17,
+  "rows": [
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.22295883333333336,
+      "conditional_cost_W_RER07_to1": [
+        72.60758454955557,
+        77.73831322222222
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.26940233333333335,
+      "conditional_cost_W_RER07_to1": [
+        87.73212706088889,
+        93.93161355555556
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5543351666666665,
+      "conditional_cost_W_RER07_to1": [
+        180.5218339224444,
+        193.27819477777768
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7048948333333331,
+      "conditional_cost_W_RER07_to1": [
+        229.5522919842222,
+        245.77333188888886
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.270788166666667,
+      "conditional_cost_W_RER07_to1": [
+        413.8380968197779,
+        443.08147411111116
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P01",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3271003333333338,
+      "conditional_cost_W_RER07_to1": [
+        432.176416684889,
+        462.71564955555573
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.19112166666666663,
+      "conditional_cost_W_RER07_to1": [
+        62.2396626511111,
+        66.63775444444443
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Stand",
+      "valid_samples_last60": 27,
+      "eligible": false,
+      "vo2_L_min": 0.7443503703703703,
+      "conditional_cost_W_RER07_to1": [
+        242.4011717461728,
+        259.5301624691358
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Cycle1",
+      "valid_samples_last60": 43,
+      "eligible": false,
+      "vo2_L_min": 0.9074251162790696,
+      "conditional_cost_W_RER07_to1": [
+        295.50722376682165,
+        316.38889054263564
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.400331166666667,
+      "conditional_cost_W_RER07_to1": [
+        456.02437930377783,
+        488.2488001111112
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.8212576666666667,
+      "conditional_cost_W_RER07_to1": [
+        593.1010583524444,
+        635.0118397777777
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P02",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.5538865000000002,
+      "conditional_cost_W_RER07_to1": [
+        506.0303901953333,
+        541.7884263333334
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Sit",
+      "valid_samples_last60": 58,
+      "eligible": true,
+      "vo2_L_min": 0.19634499999999996,
+      "conditional_cost_W_RER07_to1": [
+        63.94066552666665,
+        68.45895666666665
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.32018800000000003,
+      "conditional_cost_W_RER07_to1": [
+        104.27071641066668,
+        111.63888266666666
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.4318276666666668,
+      "conditional_cost_W_RER07_to1": [
+        140.6266948457778,
+        150.56391311111113
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7309006666666666,
+      "conditional_cost_W_RER07_to1": [
+        238.0212129697778,
+        254.84069911111112
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.9271803333333334,
+      "conditional_cost_W_RER07_to1": [
+        301.94060239155556,
+        323.27687622222226
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P03",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.43585300000000005,
+      "conditional_cost_W_RER07_to1": [
+        141.93756343066667,
+        151.9674126666667
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.23382416666666667,
+      "conditional_cost_W_RER07_to1": [
+        76.14593105444445,
+        81.52669277777778
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.3824610000000001,
+      "conditional_cost_W_RER07_to1": [
+        124.55020946800003,
+        133.35140200000004
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.590906,
+      "conditional_cost_W_RER07_to1": [
+        192.43129646133335,
+        206.02922533333333
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.8923173333333334,
+      "conditional_cost_W_RER07_to1": [
+        290.58730374755555,
+        311.12131022222223
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.278498,
+      "conditional_cost_W_RER07_to1": [
+        416.34884002399997,
+        445.769636
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P04",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3441838333333336,
+      "conditional_cost_W_RER07_to1": [
+        437.7397381828889,
+        468.6720965555557
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.19655316666666664,
+      "conditional_cost_W_RER07_to1": [
+        64.0084559731111,
+        68.53153744444444
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.49727566666666667,
+      "conditional_cost_W_RER07_to1": [
+        161.94014146977779,
+        173.38344911111113
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7643866666666668,
+      "conditional_cost_W_RER07_to1": [
+        248.9260851377778,
+        266.5161511111111
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.0563773333333333,
+      "conditional_cost_W_RER07_to1": [
+        344.01420836088886,
+        368.32356355555555
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.6608500000000004,
+      "conditional_cost_W_RER07_to1": [
+        540.8635531333334,
+        579.0830333333334
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P05",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.7041858333333333,
+      "conditional_cost_W_RER07_to1": [
+        554.9760694922222,
+        594.1927938888889
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Sit",
+      "valid_samples_last60": 59,
+      "eligible": true,
+      "vo2_L_min": 0.1555359322033898,
+      "conditional_cost_W_RER07_to1": [
+        50.651002156384166,
+        54.23019502824857
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.3227966666666667,
+      "conditional_cost_W_RER07_to1": [
+        105.12024088444446,
+        112.54843777777778
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.334653,
+      "conditional_cost_W_RER07_to1": [
+        108.98131116399999,
+        116.682346
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.6821586666666667,
+      "conditional_cost_W_RER07_to1": [
+        222.14815320711114,
+        237.84598844444446
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7268895,
+      "conditional_cost_W_RER07_to1": [
+        236.714957826,
+        253.44213899999997
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P06",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.8718134999999999,
+      "conditional_cost_W_RER07_to1": [
+        283.91013473799995,
+        303.97230699999994
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.23450549999999998,
+      "conditional_cost_W_RER07_to1": [
+        76.36781043399998,
+        81.764251
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.4629551666666668,
+      "conditional_cost_W_RER07_to1": [
+        150.7635104824445,
+        161.41703477777781
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5748026666666667,
+      "conditional_cost_W_RER07_to1": [
+        187.18717081244444,
+        200.41452977777777
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.056008,
+      "conditional_cost_W_RER07_to1": [
+        343.89393323733333,
+        368.1947893333334
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3048796666666662,
+      "conditional_cost_W_RER07_to1": [
+        424.94015288844435,
+        454.96804377777767
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P07",
+      "phase": "Run2",
+      "valid_samples_last60": 59,
+      "eligible": true,
+      "vo2_L_min": 1.307737118644068,
+      "conditional_cost_W_RER07_to1": [
+        425.8706954596611,
+        455.9643420338984
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.26455350000000005,
+      "conditional_cost_W_RER07_to1": [
+        86.15308185800002,
+        92.24098700000003
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.37112950000000006,
+      "conditional_cost_W_RER07_to1": [
+        120.86005361266668,
+        129.4004856666667
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5072223333333333,
+      "conditional_cost_W_RER07_to1": [
+        165.17931988755558,
+        176.8515202222222
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.8455769999999998,
+      "conditional_cost_W_RER07_to1": [
+        275.3660960759999,
+        294.8245139999999
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.8124514999999997,
+      "conditional_cost_W_RER07_to1": [
+        590.2332890819999,
+        631.9414229999999
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P08",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.7981850000000001,
+      "conditional_cost_W_RER07_to1": [
+        585.58733678,
+        626.96717
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.2172515,
+      "conditional_cost_W_RER07_to1": [
+        70.74896481533332,
+        75.74835633333332
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.6098188333333332,
+      "conditional_cost_W_RER07_to1": [
+        198.5903488962222,
+        212.62349988888886
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.1757473333333335,
+      "conditional_cost_W_RER07_to1": [
+        382.8876059208889,
+        409.94390355555566
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.7517285,
+      "conditional_cost_W_RER07_to1": [
+        570.458560758,
+        610.7693370000001
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Run1",
+      "valid_samples_last60": 3,
+      "eligible": false,
+      "vo2_L_min": 1.3970566666666666,
+      "conditional_cost_W_RER07_to1": [
+        454.9580230977778,
+        487.1070911111111
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P09",
+      "phase": "Run2",
+      "valid_samples_last60": 14,
+      "eligible": false,
+      "vo2_L_min": 1.3104057142857144,
+      "conditional_cost_W_RER07_to1": [
+        426.7397360838096,
+        456.8947923809524
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Sit",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.6622114999999998,
+      "conditional_cost_W_RER07_to1": [
+        215.65226529533328,
+        230.89107633333327
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7832946666666665,
+      "conditional_cost_W_RER07_to1": [
+        255.08356357511104,
+        273.1087404444444
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.8945273333333333,
+      "conditional_cost_W_RER07_to1": [
+        291.3070005608889,
+        311.8918635555555
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.284089833333333,
+      "conditional_cost_W_RER07_to1": [
+        418.1698466442221,
+        447.71932188888877
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P10",
+      "phase": "Run2",
+      "valid_samples_last60": 55,
+      "eligible": true,
+      "vo2_L_min": 1.337369636363636,
+      "conditional_cost_W_RER07_to1": [
+        435.52066314012114,
+        466.29621321212113
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.17214616666666666,
+      "conditional_cost_W_RER07_to1": [
+        56.06020252377777,
+        60.0216301111111
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.36536666666666656,
+      "conditional_cost_W_RER07_to1": [
+        118.98336004444441,
+        127.39117777777774
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5034355,
+      "conditional_cost_W_RER07_to1": [
+        163.9461199406667,
+        175.53117766666668
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.9282748333333333,
+      "conditional_cost_W_RER07_to1": [
+        302.2970314242222,
+        323.6584918888888
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.0232076666666667,
+      "conditional_cost_W_RER07_to1": [
+        333.21235161911113,
+        356.75840644444446
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P11",
+      "phase": "Run2",
+      "valid_samples_last60": 18,
+      "eligible": false,
+      "vo2_L_min": 0.9850644444444444,
+      "conditional_cost_W_RER07_to1": [
+        320.79083330074076,
+        343.4591362962963
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.14278333333333337,
+      "conditional_cost_W_RER07_to1": [
+        46.498058822222234,
+        49.78378888888891
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5712363333333332,
+      "conditional_cost_W_RER07_to1": [
+        186.02577771955552,
+        199.1710682222222
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Cycle1",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3537045000000003,
+      "conditional_cost_W_RER07_to1": [
+        440.8401877126668,
+        471.9916356666668
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.2694055000000004,
+      "conditional_cost_W_RER07_to1": [
+        413.3878249673335,
+        442.5993843333335
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P12",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.6126189999999998,
+      "conditional_cost_W_RER07_to1": [
+        525.1569029053333,
+        562.2664913333333
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.2235521666666667,
+      "conditional_cost_W_RER07_to1": [
+        72.80080631844444,
+        77.94518877777779
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.4878076666666666,
+      "conditional_cost_W_RER07_to1": [
+        158.85684308577774,
+        170.08227311111108
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.8139801666666667,
+      "conditional_cost_W_RER07_to1": [
+        265.0764398491111,
+        283.8077514444445
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.0069718333333333,
+      "conditional_cost_W_RER07_to1": [
+        327.92507672688885,
+        351.0975125555555
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3599590000000001,
+      "conditional_cost_W_RER07_to1": [
+        442.8769948253333,
+        474.17237133333333
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P13",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3037221666666665,
+      "conditional_cost_W_RER07_to1": [
+        424.5632076117778,
+        454.5644621111111
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.21068816666666665,
+      "conditional_cost_W_RER07_to1": [
+        68.61158468644444,
+        73.45994077777776
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Stand",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Cycle1",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Cycle2",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Run1",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P14",
+      "phase": "Run2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5108638333333333,
+      "conditional_cost_W_RER07_to1": [
+        166.3651913562222,
+        178.1211898888889
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.23929100000000006,
+      "conditional_cost_W_RER07_to1": [
+        77.92623084133335,
+        83.43279533333336
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.5256606666666668,
+      "conditional_cost_W_RER07_to1": [
+        171.18384918311114,
+        183.2803524444445
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.4649488333333334,
+      "conditional_cost_W_RER07_to1": [
+        477.0674240028889,
+        510.77882655555555
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 2.2226253333333337,
+      "conditional_cost_W_RER07_to1": [
+        723.8083120515556,
+        774.9553662222223
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Run1",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P15",
+      "phase": "Run2",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Sit",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.2755083333333334,
+      "conditional_cost_W_RER07_to1": [
+        89.72057445555559,
+        96.06057222222225
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.6524141666666665,
+      "conditional_cost_W_RER07_to1": [
+        212.4617179744444,
+        227.47507277777774
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.0997753333333333,
+      "conditional_cost_W_RER07_to1": [
+        358.1469695848889,
+        383.45499955555556
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Cycle2",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Run1",
+      "valid_samples_last60": 0,
+      "eligible": false,
+      "vo2_L_min": null,
+      "conditional_cost_W_RER07_to1": null,
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P16",
+      "phase": "Run2",
+      "valid_samples_last60": 27,
+      "eligible": false,
+      "vo2_L_min": 1.8391462962962963,
+      "conditional_cost_W_RER07_to1": [
+        598.926574071605,
+        641.2490086419753
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Sit",
+      "valid_samples_last60": 55,
+      "eligible": true,
+      "vo2_L_min": 0.24953345454545459,
+      "conditional_cost_W_RER07_to1": [
+        81.26173396218182,
+        87.00399781818183
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Stand",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 0.7578820000000001,
+      "conditional_cost_W_RER07_to1": [
+        246.80781008266666,
+        264.2481906666667
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Cycle1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.3705178333333332,
+      "conditional_cost_W_RER07_to1": [
+        446.31552817488887,
+        477.85388455555557
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Cycle2",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 1.9746311666666663,
+      "conditional_cost_W_RER07_to1": [
+        643.0478543704443,
+        688.4880667777777
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Run1",
+      "valid_samples_last60": 60,
+      "eligible": true,
+      "vo2_L_min": 2.247624666666667,
+      "conditional_cost_W_RER07_to1": [
+        731.9494616151112,
+        783.6718004444446
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    },
+    {
+      "cohort": "WEEE",
+      "participant": "P17",
+      "phase": "Run2",
+      "valid_samples_last60": 28,
+      "eligible": false,
+      "vo2_L_min": 2.1900603571428574,
+      "conditional_cost_W_RER07_to1": [
+        713.2033755852382,
+        763.6010445238097
+      ],
+      "VCO2": "NOT OBSERVED",
+      "mechanical_power_W": "NOT OBSERVED; speedkmh is not W",
+      "PCr": "NOT OBSERVED",
+      "units": "absolute pulmonaryL/min; derivedfuelW boundedonlyunderassumedRERrange; noindividualCPETfusion"
+    }
+  ],
+  "state": "oxygen baseline measured, energy only conditionallybounded; noefficiencyidentification",
+  "data_license": {
+    "id": "cc-by-4.0"
+  },
+  "doi": "10.5281/zenodo.6420886",
+  "source_hashes": [
+    {
+      "member": "dataset/Study_Information.csv",
+      "sha256": "dce08d2722d82a98bc3df361154a12473014356fbbc7c2dd71eedca024369149"
+    },
+    {
+      "member": "dataset/P17/VO2/DataAverage.csv",
+      "sha256": "02106f76b3fda9819085ef1ee3de8d93555ce52c0752d9ff392001df169c17b8"
+    },
+    {
+      "member": "dataset/P10/VO2/DataAverage.csv",
+      "sha256": "2cc81ddcacc58872fe58bd013897a884d2f42d7ad68cd279bd780241c207f3bc"
+    },
+    {
+      "member": "dataset/P11/VO2/DataAverage.csv",
+      "sha256": "aaa99ee5e088e1b43d4fb65259cbfe83a11dbd7ac7a1f2297e197bf95d594568"
+    },
+    {
+      "member": "dataset/P16/VO2/DataAverage.csv",
+      "sha256": "9c2fb5f2aee46988d5265f84ce6c32eb07005a4bc5e2f2d4a37801e7baae92b2"
+    },
+    {
+      "member": "dataset/P05/VO2/DataAverage.csv",
+      "sha256": "2c4aeb25a711ad768e2239bb2f92f02c9eaf26cf4909a3774de906106b107e5d"
+    },
+    {
+      "member": "dataset/P02/VO2/DataAverage.csv",
+      "sha256": "4f596821165839b4858e75ad38885478e10480968ed0cd5270a625d38428ca99"
+    },
+    {
+      "member": "dataset/P03/VO2/DataAverage.csv",
+      "sha256": "860edb0e6b3997d3243dc3a4400a070d1173812404186659ec32471a6482f2a1"
+    },
+    {
+      "member": "dataset/P04/VO2/DataAverage.csv",
+      "sha256": "eaf534fb4b83161e46773e0c2005b80174149a2cc105be6daac8ff5288a43fdd"
+    },
+    {
+      "member": "dataset/P13/VO2/DataAverage.csv",
+      "sha256": "0b75e5015528b923b1dff0183574764c242262f898fa70a8d0059b71789b019a"
+    },
+    {
+      "member": "dataset/P14/VO2/DataAverage.csv",
+      "sha256": "c856afaaec7fbf047bb690f82717ab040b91c956c043a445252939bc2b6c6d40"
+    },
+    {
+      "member": "dataset/P15/VO2/DataAverage.csv",
+      "sha256": "6c2400f68269cd17bd5d0eeef875e1bb6b5a68b6b74e5b249a852aae85383aa9"
+    },
+    {
+      "member": "dataset/P12/VO2/DataAverage.csv",
+      "sha256": "5481a72144bdcf04e42a0bf2478a3516bebaf4adcf47b3d131f4a00c278464fb"
+    },
+    {
+      "member": "dataset/P01/VO2/DataAverage.csv",
+      "sha256": "f4204c05813b84b77cdcba6ea31104f741879dd8ce6db7c73ddaabb9180a5141"
+    },
+    {
+      "member": "dataset/P06/VO2/DataAverage.csv",
+      "sha256": "88c4d1cafb6306a015a16bfd07faf58c52d06bdb8b850e150b06b0e33bed3019"
+    },
+    {
+      "member": "dataset/P08/VO2/DataAverage.csv",
+      "sha256": "04a2ff1b65897fdb6b98e41398a8c4329365df95f4c28bac8108395b3cf533d7"
+    },
+    {
+      "member": "dataset/P09/VO2/DataAverage.csv",
+      "sha256": "8d74f59a23dda52b6449b4918a7c8c485e7c5900f1ce613b2019505246e06c0d"
+    },
+    {
+      "member": "dataset/P07/VO2/DataAverage.csv",
+      "sha256": "e9ba2acdb439946772944556049657957722c5d3e7e7582cdca4db3cd71b244d"
+    }
+  ]
+}

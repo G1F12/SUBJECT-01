@@ -1,36 +1,34 @@
-# SUBJECT-01 — handoff Research Cycle 5
+# SUBJECT-01 — handoff Research Cycle 6
 
-Начать git fetch origin, main/origin/main/GitHubHEAD, Actions и gitstatus.
-Канон PUBLIC G1F12/SUBJECT-01. База 4e900fbb337cf59efff8b75f473528485c7cc045;
-ветка research/observability-design-20261104. ResearchSHA:
-`git log -1 --format=%H -- research/observability_2026_11_04/REPORT.md`.
+Канон G1F12/SUBJECT-01. Начать fetch и сверить main/origin/main/GitHub/Actions/status.
+Cycle6 basea4d3a04; branchresearch/metabolic-anchors-20261104. Итоговый SHA через Git.
+Читать research/calibration_2026_11_04/REPORT.md,MATHEMATICS.md,DATA_AUDIT.md,README.md.
 
-Читать Cycle5 REPORT/MATHEMATICS/DATA_AUDIT/OBSERVABILITY_MATRIX. EXP19..22:
-две точные D2 power-симметрии: scaleη и additiveoxidativebaseline. Честная
-редукция 11→9 mechanical-equivalent combinations, не physiologicalη1/M0.
-Новый localtrace rank9/11 не заменяет старый normalizedbout rank7/11.
-M2/M5 full11 — ideal knownlocalO map. UnknownVO2gain/offset и PCrvolume/ATP
-reference требуют независимой калибровки; обычный VO2 не автоматически достаточен.
+Реальные данные:135Lendt CPETCSV,66cyclingpeople; WEEE17VO2people; BUT-CGM1CPET
+person101531rows. Cohorts НЕ сшиты. SourceCCBY4; rawcache ignored; recipes/memberSHA
+и derived measured snapshots опубликованы. Wholearchive MD5 НЕ проверен.
+Source metadataaudit не exhaustive retractionsreview. Dryad401; requestonlyMRS не получен.
 
-Прочитаны FigsharePCr2 людей 6scans, plantarMAT1 человек 144points,
-PeerJXLS17 людей. Нет jointPCr–continuoushumanVO2–mechanicalW. Dryad401/403.
-Клеточный OCR не humanVO2; MATparadigm1=0/1 не power. PCr_mmol_l из
-assumedATP8.2 и Energy_exp из PCr — зависимые estimates. ExploratoryPCr fits
-in-sample с timing/asymptote caveats, не новый holdout. SourceSHA/recipes есть;
-rawcache tmp/observability_raw ignored; PeerJ XLS с подтверждённой CC BY 4.0 хранится в licensed_data. Не публиковать имена или файлы без подтверждённого права.
+Preregcommit0446eaadcecb7c4ebea3613d20527a6d3fd94897;
+model-lockcommit726772fd50a5e13ea6c71f211dee500f16b4a676 опубликованы до test.
+НЕ менять models.py,dataset.py,model_lock.json,test_stage_audit.json,independent_test.json.
+Test IDs5,10,15,20,25,30,35,40,50,55,60,65,70 теперь просмотрены, как старые10+7.
+Не запускать --test/--lock снова. reproduce.py replay фиксированных outcomes во temp,
+не новая независимая проверка. BUT101exploratory также viewed, остальные не получены.
 
-FullM5 robustDleader30/60s, Eleader6/30s только в конечной виртуальной сетке.
-Новые syntheticstress/recovery не humanvalidation. Старые test10 и 7 просмотрены
-и не годятся для нового independentclaim. Старые RMSE/locks не изменены.
-Не запускать старый pipeline --lock.
+51dev/216stages,13test/56stages; selectedquadratic costRMSE26.56W,constant135.40,
+affine26.40,historicalequilibrium40.58. Affine posttest не выбирать новымwinner.
+Validation только systemic cost при prescribedW, не powerforecast. Historicalequilibrium
+гипотеза systemic=local, не новый честный sprintcomparison. Reduced9D cost NOTDEFINED.
+Условные a153.853,b3.64333,δeff .274474; не localM/η. Pulmonarytau30finite/51fits,
+21boundary/flat. Нет нового PCr/localATP/volume. Rest gaps; BUTCoolDown75W активен.
+Unknowngain/offset rank2/4, timingchangescoverage; обе exactD2 symmetries остаются.
 
-Reproduce: `python research/observability_2026_11_04/verify.py`, `git diff --check`.
-Verification.json фиксирует exitcodes. Audit --check проверяет manifest и
-численное повторение; inspect_data --check скачивает publicpinnednumericmembers
-при отсутствии cache. Не повторять retrieve.py/audit_sources.py поверх snapshots
-без цели нового accessaudit.
-
-Реестры EXP22/HYP6/FND24/NEG15/DEC10/ISS16/SRC49; HYP unverified.
-Решение A/C/D, не B. NOT EXTERNALLY VALIDATED, TARGET-CPE45not_assessed, NO_GO.
-Следующий приоритет: один jointsameparticipant набор с независимыми scale/baseline
-anchors до новой preregisteredvalidation и дальнейшей физиологической настройки.
+9D quotient unchanged. No biological intervention. TARGET-CPE45NOTEXTERNALLYVALIDATED,
+NO_GO, архитектурыI/II/III без новых преимуществ. Cycle6 A(systemic)/C(costonly)/D/E;
+не B localphysparam. Старые Foundation/Integrated/CPE45/Recovery/Observability сохранены.
+verify.py всеchecks, reproduce.py offline, acquire.py --verify-cache native network audit.
+CI numerical replay использует derived REAL snapshots, synthetic only unittest control.
+Registry EXP26/HYP6/FND28/NEG19/DEC11/ISS17/SRC55.
+Следующий приоритет: sameperson synchronizedPCr–VO2/VCO2–W с независимыми activevolume/
+absolutePCrreference/localbaseline, новый preregistered cohort до powervalidation.

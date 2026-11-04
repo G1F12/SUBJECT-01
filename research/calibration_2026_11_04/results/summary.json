@@ -1,0 +1,22 @@
+{
+  "origin": "real human calibration and limited validation",
+  "development_participants": 51,
+  "development_primary_endpoints": 216,
+  "systemic_affine_intercept_W": 153.85300276414077,
+  "systemic_incremental_cost_W_per_W": 3.6433308572400125,
+  "systemic_effective_delta_efficiency": 0.27447411151606066,
+  "individual_efficiency_quantiles": [
+    0.24154835985223508,
+    0.2761760533002297,
+    0.31684008837527156
+  ],
+  "pulmonary_fits": 51,
+  "finite_conditional_tau_profiles": 30,
+  "systemic_metabolic_anchor": true,
+  "local_ATP_anchor": false,
+  "local_rest_anchor": false,
+  "reduced_D2_parameters": 9,
+  "mechanical_power_validation": "NOT DONE",
+  "TARGET_CPE45": "NOT EXTERNALLY VALIDATED",
+  "NO_GO": true
+}

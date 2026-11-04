@@ -1,0 +1,131 @@
+{
+  "gain_offset": [
+    {
+      "test": "O2gain-.1",
+      "intercept_W": 141.26275261802425,
+      "slope_W_per_W": 3.3557388688856933,
+      "delta_eff": 0.2979969655183748,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "O2gain+.1",
+      "intercept_W": 166.44325291025763,
+      "slope_W_per_W": 3.9309228455943304,
+      "delta_eff": 0.2543931894060888,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "bothgain-.05",
+      "intercept_W": 146.16035262593365,
+      "slope_W_per_W": 3.461164314378012,
+      "delta_eff": 0.28892011738532697,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "bothgain+.05",
+      "intercept_W": 161.545652902348,
+      "slope_W_per_W": 3.8254974001020132,
+      "delta_eff": 0.26140391572958155,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "O2offset-.1Lmin",
+      "intercept_W": 126.6570027641408,
+      "slope_W_per_W": 3.643330857240012,
+      "delta_eff": 0.27447411151606066,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "O2offset+.1Lmin",
+      "intercept_W": 181.049002764141,
+      "slope_W_per_W": 3.643330857240012,
+      "delta_eff": 0.27447411151606066,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "CO2offset+.1Lmin",
+      "intercept_W": 161.52366943080756,
+      "slope_W_per_W": 3.6433308572400125,
+      "delta_eff": 0.27447411151606066,
+      "origin": "realdata sensitivity, no new human observations"
+    },
+    {
+      "test": "precise_Weir",
+      "intercept_W": 155.32905044395164,
+      "slope_W_per_W": 3.6777507648233,
+      "delta_eff": 0.2719053203835159,
+      "origin": "realdata sensitivity, no new human observations"
+    }
+  ],
+  "timing": [
+    {
+      "shift_s": -15.0,
+      "stage_count": 216,
+      "intercept_W": 152.09124065258658,
+      "slope_W_per_W": 3.6694719534109224
+    },
+    {
+      "shift_s": -5.0,
+      "stage_count": 217,
+      "intercept_W": 153.64264627663727,
+      "slope_W_per_W": 3.6552231530790773
+    },
+    {
+      "shift_s": 5.0,
+      "stage_count": 155,
+      "intercept_W": 161.2469142755454,
+      "slope_W_per_W": 3.5907606977670343
+    },
+    {
+      "shift_s": 15.0,
+      "stage_count": 20,
+      "intercept_W": 154.73920026673645,
+      "slope_W_per_W": 3.792761111791925
+    }
+  ],
+  "realdesign_gain_offset_rank": 2,
+  "parameters": [
+    "systemicintercept",
+    "systemicslope",
+    "instrumentgain",
+    "instrumentoffset"
+  ],
+  "singular_values": [
+    7242.452220253312,
+    176.33215409693113,
+    4.956841446788418e-14,
+    1.4622705166266977e-15
+  ],
+  "gain_null_residual": 5.684341886080802e-14,
+  "offset_null_residual": 0.0,
+  "active_volume": {
+    "status": "NOT OBSERVED",
+    "factors": [
+      0.5,
+      2.0
+    ],
+    "PCrenergy_conversion_factors": [
+      0.5,
+      2.0
+    ],
+    "claim": "algebraic measurement conversion only; no synthetichumancapacity assigned"
+  },
+  "ATP_reference": {
+    "status": "NOT OBSERVED",
+    "factors": [
+      0.8,
+      1.2
+    ],
+    "chemical_energy_scaling": [
+      0.8,
+      1.2
+    ],
+    "claim": "Cycle5ATPnormalizedPCr is assumption-dependent, not new independent absolute anchor"
+  },
+  "task_mismatch": "standing/sitting baseline transfer tocycling fails to define unloadedcyclingM; see lockedbaseline_slope result",
+  "incomplete_recovery": "gas gaps during most5minrests; recoveryτ NOT OBSERVED, not no-recovery effect",
+  "active_rest": "cadence absent inmostrecoverygaps; onezeroWwindowcadence4.15rpm is not representative passiveRMR",
+  "transport": "unknownlocalallocation,otherconsumers,delay/filter persist despite absolute systemicgas",
+  "structural_error": "quadratic vs affine difference and firsttransitionresiduals; improvedcost fit is not correctedreserve dynamics",
+  "power_vs_absence": "flat or boundarypulmonaryτ profiles markedUNIDENTIFIABLE; insufficientsample/amplitudesignal not evidenceofabsentphysiology"
+}

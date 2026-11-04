@@ -72,7 +72,16 @@ def retrieve_cpet():
     save(BASE/'cpet_retrieval.json',dict(files=files,requests=requests,total_range_bytes=sum(r['bytes'] for r in requests),raw_policy='publicCCBY4; raw cache ignored; no new ZIP created'))
     print('Obtained',len(files),'native CSV members with CRC32/SHA256; rangebytes',sum(r['bytes'] for r in requests))
 
+def verify_native_cache():
+    x=json.loads((BASE/'cpet_retrieval.json').read_text('utf8'))['files']
+    missing=[f['member'] for f in x if not (CACHE/f['cache']).exists()]
+    if missing:extract_members(missing)
+    for f in x:
+        if digest((CACHE/f['cache']).read_bytes())!=f['sha256']:raise ValueError('pinned native member mismatch: '+f['member'])
+    print('PASS',len(x),'native member SHA256; no provenance snapshot overwritten')
+
 if __name__=='__main__':
     import sys
-    if '--cpet' in sys.argv:retrieve_cpet()
+    if '--verify-cache' in sys.argv:verify_native_cache()
+    elif '--cpet' in sys.argv:retrieve_cpet()
     else:list_lendt()

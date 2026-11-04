@@ -1,0 +1,262 @@
+{
+  "files": [
+    {
+      "member": "dataset/Study_Information.csv",
+      "cache": "WEEE_Study_Information.csv_Study_Information.csv",
+      "bytes": 3460,
+      "sha256": "dce08d2722d82a98bc3df361154a12473014356fbbc7c2dd71eedca024369149",
+      "CRC32": 2775370335
+    },
+    {
+      "member": "dataset/P17/VO2/DataAverage.csv",
+      "cache": "WEEE_P17_DataAverage.csv",
+      "bytes": 186240,
+      "sha256": "02106f76b3fda9819085ef1ee3de8d93555ce52c0752d9ff392001df169c17b8",
+      "CRC32": 4194711342
+    },
+    {
+      "member": "dataset/P10/VO2/DataAverage.csv",
+      "cache": "WEEE_P10_DataAverage.csv",
+      "bytes": 140754,
+      "sha256": "2cc81ddcacc58872fe58bd013897a884d2f42d7ad68cd279bd780241c207f3bc",
+      "CRC32": 1437493543
+    },
+    {
+      "member": "dataset/P11/VO2/DataAverage.csv",
+      "cache": "WEEE_P11_DataAverage.csv",
+      "bytes": 186575,
+      "sha256": "aaa99ee5e088e1b43d4fb65259cbfe83a11dbd7ac7a1f2297e197bf95d594568",
+      "CRC32": 414772499
+    },
+    {
+      "member": "dataset/P16/VO2/DataAverage.csv",
+      "cache": "WEEE_P16_DataAverage.csv",
+      "bytes": 151710,
+      "sha256": "9c2fb5f2aee46988d5265f84ce6c32eb07005a4bc5e2f2d4a37801e7baae92b2",
+      "CRC32": 2095413244
+    },
+    {
+      "member": "dataset/P05/VO2/DataAverage.csv",
+      "cache": "WEEE_P05_DataAverage.csv",
+      "bytes": 177156,
+      "sha256": "2c4aeb25a711ad768e2239bb2f92f02c9eaf26cf4909a3774de906106b107e5d",
+      "CRC32": 3588764928
+    },
+    {
+      "member": "dataset/P02/VO2/DataAverage.csv",
+      "cache": "WEEE_P02_DataAverage.csv",
+      "bytes": 213665,
+      "sha256": "4f596821165839b4858e75ad38885478e10480968ed0cd5270a625d38428ca99",
+      "CRC32": 348956199
+    },
+    {
+      "member": "dataset/P03/VO2/DataAverage.csv",
+      "cache": "WEEE_P03_DataAverage.csv",
+      "bytes": 192236,
+      "sha256": "860edb0e6b3997d3243dc3a4400a070d1173812404186659ec32471a6482f2a1",
+      "CRC32": 3638195739
+    },
+    {
+      "member": "dataset/P04/VO2/DataAverage.csv",
+      "cache": "WEEE_P04_DataAverage.csv",
+      "bytes": 186105,
+      "sha256": "eaf534fb4b83161e46773e0c2005b80174149a2cc105be6daac8ff5288a43fdd",
+      "CRC32": 948335691
+    },
+    {
+      "member": "dataset/P13/VO2/DataAverage.csv",
+      "cache": "WEEE_P13_DataAverage.csv",
+      "bytes": 186746,
+      "sha256": "0b75e5015528b923b1dff0183574764c242262f898fa70a8d0059b71789b019a",
+      "CRC32": 1543123934
+    },
+    {
+      "member": "dataset/P14/VO2/DataAverage.csv",
+      "cache": "WEEE_P14_DataAverage.csv",
+      "bytes": 111688,
+      "sha256": "c856afaaec7fbf047bb690f82717ab040b91c956c043a445252939bc2b6c6d40",
+      "CRC32": 682710107
+    },
+    {
+      "member": "dataset/P15/VO2/DataAverage.csv",
+      "cache": "WEEE_P15_DataAverage.csv",
+      "bytes": 187664,
+      "sha256": "6c2400f68269cd17bd5d0eeef875e1bb6b5a68b6b74e5b249a852aae85383aa9",
+      "CRC32": 1611457966
+    },
+    {
+      "member": "dataset/P12/VO2/DataAverage.csv",
+      "cache": "WEEE_P12_DataAverage.csv",
+      "bytes": 201136,
+      "sha256": "5481a72144bdcf04e42a0bf2478a3516bebaf4adcf47b3d131f4a00c278464fb",
+      "CRC32": 716188268
+    },
+    {
+      "member": "dataset/P01/VO2/DataAverage.csv",
+      "cache": "WEEE_P01_DataAverage.csv",
+      "bytes": 185618,
+      "sha256": "f4204c05813b84b77cdcba6ea31104f741879dd8ce6db7c73ddaabb9180a5141",
+      "CRC32": 2066772996
+    },
+    {
+      "member": "dataset/P06/VO2/DataAverage.csv",
+      "cache": "WEEE_P06_DataAverage.csv",
+      "bytes": 193559,
+      "sha256": "88c4d1cafb6306a015a16bfd07faf58c52d06bdb8b850e150b06b0e33bed3019",
+      "CRC32": 1339529383
+    },
+    {
+      "member": "dataset/P08/VO2/DataAverage.csv",
+      "cache": "WEEE_P08_DataAverage.csv",
+      "bytes": 175669,
+      "sha256": "04a2ff1b65897fdb6b98e41398a8c4329365df95f4c28bac8108395b3cf533d7",
+      "CRC32": 2177259298
+    },
+    {
+      "member": "dataset/P09/VO2/DataAverage.csv",
+      "cache": "WEEE_P09_DataAverage.csv",
+      "bytes": 181148,
+      "sha256": "8d74f59a23dda52b6449b4918a7c8c485e7c5900f1ce613b2019505246e06c0d",
+      "CRC32": 211475729
+    },
+    {
+      "member": "dataset/P07/VO2/DataAverage.csv",
+      "cache": "WEEE_P07_DataAverage.csv",
+      "bytes": 184609,
+      "sha256": "e9ba2acdb439946772944556049657957722c5d3e7e7582cdca4db3cd71b244d",
+      "CRC32": 3908214897
+    }
+  ],
+  "requests": [
+    {
+      "start": 651165696,
+      "end": 651557046,
+      "bytes": 391351,
+      "sha256": "25baf97fb78c503d223a5b815472120741005aa396fccef9f02ca8f895cc340e"
+    },
+    {
+      "start": 0,
+      "end": 1048575,
+      "bytes": 1048576,
+      "sha256": "ca3f0369705d374e3755b00fe422d318bbb044625440f81539818f1b62349517"
+    },
+    {
+      "start": 17825792,
+      "end": 18874367,
+      "bytes": 1048576,
+      "sha256": "80ac1eff87654ecfb4c1a37e1b314aa9b032baa529e804a3030eadd1b9b85935"
+    },
+    {
+      "start": 59768832,
+      "end": 60817407,
+      "bytes": 1048576,
+      "sha256": "14bc6cf153dd9b37501692587b669026efcf5891a3bc67c9bfbe91f42b430410"
+    },
+    {
+      "start": 106954752,
+      "end": 108003327,
+      "bytes": 1048576,
+      "sha256": "36e3b31aca0cdd5f6aac1292575be06582161c9b89448a61e748c478fec61f3c"
+    },
+    {
+      "start": 164626432,
+      "end": 165675007,
+      "bytes": 1048576,
+      "sha256": "6e7386745f2a742df7877900c305db7bb9ce8b39c4cb5652b92fdc7a5656f23c"
+    },
+    {
+      "start": 212860928,
+      "end": 213909503,
+      "bytes": 1048576,
+      "sha256": "eea4f902115ea17a730cfce77cad2b4e79babc3811c18f78070d41d61611330c"
+    },
+    {
+      "start": 228589568,
+      "end": 229638143,
+      "bytes": 1048576,
+      "sha256": "09598d5581d2c949f3fb637f691053f776cc87dde3ad90d292eab033d22e5ef7"
+    },
+    {
+      "start": 270532608,
+      "end": 271581183,
+      "bytes": 1048576,
+      "sha256": "f4a405c6a05e62f19b31718604b9628baf5ae07a66fc9ddb283d00e6ab8ddbd0"
+    },
+    {
+      "start": 289406976,
+      "end": 290455551,
+      "bytes": 1048576,
+      "sha256": "4678f5840dbf714a6121c52fc2e9e75da644615cdcc2925723fdc1a335fa005c"
+    },
+    {
+      "start": 319815680,
+      "end": 320864255,
+      "bytes": 1048576,
+      "sha256": "6a121fc99ba55ccdf2973468e7005d94213a9765331b88749274cf35c471c444"
+    },
+    {
+      "start": 353370112,
+      "end": 354418687,
+      "bytes": 1048576,
+      "sha256": "3632ce2527d4434630c51222182a87fd8cca63062a11f3e04356320f30480a1b"
+    },
+    {
+      "start": 390070272,
+      "end": 391118847,
+      "bytes": 1048576,
+      "sha256": "1f6e584586db8c34c15c117cc2b7295a293521570dd0019a93470da62de17bfc"
+    },
+    {
+      "start": 435159040,
+      "end": 436207615,
+      "bytes": 1048576,
+      "sha256": "33fe958334271e951c877f30a5997cabb45bbc319ccd7f2acb00cd35b80b0a74"
+    },
+    {
+      "start": 482344960,
+      "end": 483393535,
+      "bytes": 1048576,
+      "sha256": "c86f05e05c2161abef08d4e58cc219f36d413011f87d82821352716ee80c0f23"
+    },
+    {
+      "start": 512753664,
+      "end": 513802239,
+      "bytes": 1048576,
+      "sha256": "502cf3802f202429e2c5982c4898e594c5123311b7e86ab87d8e50279498789e"
+    },
+    {
+      "start": 544210944,
+      "end": 545259519,
+      "bytes": 1048576,
+      "sha256": "91d64bf067ab22e76d1a38e6693834ede668f299a2224eca0fc4469ddca28849"
+    },
+    {
+      "start": 545259520,
+      "end": 546308095,
+      "bytes": 1048576,
+      "sha256": "07ef30e5fb158bf516cc9ade5bb013c4b56582ac7a31b065ca36f6a2f89bad6d"
+    },
+    {
+      "start": 594542592,
+      "end": 595591167,
+      "bytes": 1048576,
+      "sha256": "44ddd45c476c868a413dcfb579aab8b1b341e71e7b7e5444fdda9ef67d6b5aae"
+    },
+    {
+      "start": 628097024,
+      "end": 629145599,
+      "bytes": 1048576,
+      "sha256": "0d8c242f60b1d52b7284ac5e4dfb50d727a3940dc2651afffb989f6d2e85bcda"
+    },
+    {
+      "start": 629145600,
+      "end": 630194175,
+      "bytes": 1048576,
+      "sha256": "74b0db74d937afb261b9e9d3e5b2c4bf3a68995ec27f4328b86045afe8221233"
+    }
+  ],
+  "doi": "10.5281/zenodo.6420886",
+  "license": {
+    "id": "cc-by-4.0"
+  }
+}

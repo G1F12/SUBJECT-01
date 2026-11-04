@@ -1,0 +1,26 @@
+[
+  {
+    "shift_s": -15.0,
+    "stage_count": 216,
+    "intercept_W": 152.09124065258658,
+    "slope_W_per_W": 3.6694719534109224
+  },
+  {
+    "shift_s": -5.0,
+    "stage_count": 217,
+    "intercept_W": 153.64264627663727,
+    "slope_W_per_W": 3.6552231530790773
+  },
+  {
+    "shift_s": 5.0,
+    "stage_count": 155,
+    "intercept_W": 161.2469142755454,
+    "slope_W_per_W": 3.5907606977670343
+  },
+  {
+    "shift_s": 15.0,
+    "stage_count": 20,
+    "intercept_W": 154.73920026673645,
+    "slope_W_per_W": 3.792761111791925
+  }
+]

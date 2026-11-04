@@ -855,5 +855,83 @@
       "source_id": "SRC-0049"
     },
     "limits": "Public methods and actual numeric files where acquired; no exhaustive notices/retraction audit or intervention efficacy verification"
+  },
+  {
+    "id": "SRC-0050",
+    "doi": "10.1186/s12966-024-01646-y",
+    "title": "Composite activity type and stride-specific energy expenditure estimation model for thigh-worn accelerometry.",
+    "year": 2024,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0050"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0051",
+    "doi": "10.1038/s41597-022-01643-5",
+    "title": "A multidevice and multimodal dataset for human energy expenditure estimation using wearable devices.",
+    "year": 2022,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0051"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0052",
+    "doi": "10.14814/phy2.70528",
+    "title": "Skeletal muscle energetics during submaximal contractions are linked to metabolic performance during ambulatory exercise: A pilot study in male adults.",
+    "year": 2025,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0052"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0053",
+    "doi": "10.1113/jp291176",
+    "title": "Neither intracellular oxygen availability nor mitochondrial coupling explain lower oxidative capacity in older human vastus lateralis muscle in vivo.",
+    "year": 2026,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0053"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0054",
+    "doi": "10.1113/jphysiol.1949.sp004363",
+    "title": "New methods for calculating metabolic rate with special reference to protein metabolism.",
+    "year": 1949,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0054"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0055",
+    "doi": "10.13026/hv8f-3w60",
+    "title": "Brno University of Technology Continuous Glycaemia, ECG, Activity and Food Intake Database (BUT CGM)",
+    "year": 2026,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/calibration_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/calibration_2026_11_04/sources.json",
+      "source_id": "SRC-0055"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
   }
 ]
