@@ -11,6 +11,13 @@ def equal(a,b,rtol=2e-6,atol=2e-5):
     if isinstance(a,(int,float)) and not isinstance(a,bool):return isinstance(b,(int,float)) and math.isclose(a,b,rel_tol=rtol,abs_tol=atol)
     return a==b
 
+def differences(a,b,path=''):
+    if isinstance(a,dict) and isinstance(b,dict):
+        return sum((differences(a[k],b[k],path+'/'+str(k)) for k in a if k in b),[])
+    if isinstance(a,list) and isinstance(b,list) and len(a)==len(b):
+        return sum((differences(x,y,path+'/'+str(k)) for k,(x,y) in enumerate(zip(a,b))),[])
+    return [] if equal(a,b,1e-3,1e-3) else [dict(path=path,replayed=a,archived=b)]
+
 def check():
     m=json.loads((BASE/'manifest.json').read_text('utf8'))
     for r,h in m.items():assert hashlib.sha256((BASE/r).read_bytes()).hexdigest()==h,r
@@ -24,7 +31,9 @@ def check():
             a=json.loads(p.read_text('utf8'));b=json.loads((BASE/'results'/p.name).read_text('utf8'))
             # Pulmonarycurvefit precision is .001s/.001modelunits, below native1sclock;
             # physical identities, metrics and locks retain tighter default tolerance.
-            assert equal(a,b,1e-3,1e-3) if p.name=='parameter_identification.json' else equal(a,b),p.name
+            ok=equal(a,b,1e-3,1e-3) if p.name=='parameter_identification.json' else equal(a,b)
+            if not ok:print(json.dumps(differences(a,b)[:30],indent=2),flush=True)
+            assert ok,p.name
     print('PASS cycle6 source/output hashes, code/developmentlock, realdata identification and fixedtest replay; CPE45 NOT VALIDATED')
 
 if __name__=='__main__':check()
