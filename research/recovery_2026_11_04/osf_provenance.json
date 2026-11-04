@@ -1,0 +1,32 @@
+{
+  "node": "db3sk",
+  "article_doi": "10.1055/a-2940-7047",
+  "pmid": "42712884",
+  "retrieved": "2026-11-04",
+  "files": [
+    {
+      "name": "Power_rawdata.xlsx",
+      "file_id": "678ad7036b3745318d282a33",
+      "version": 1,
+      "modified": "2025-01-17T22:17:39.647991",
+      "download_url": "https://osf.io/download/926uk/",
+      "metadata_url": "https://api.osf.io/v2/files/678ad7036b3745318d282a33/",
+      "bytes": 48430,
+      "sha256": "b5cb03007190a63dae6a118a7a604cd906273f93febf42957a2e7799df16da20",
+      "license": "OSF node_license=null; public read access, redistribution permission not established; raw not committed"
+    },
+    {
+      "name": "VO2_rawdata.xlsx",
+      "file_id": "678ad703a5f92feafa2045e3",
+      "version": 1,
+      "modified": "2025-01-17T22:17:39.677362",
+      "download_url": "https://osf.io/download/6jax2/",
+      "metadata_url": "https://api.osf.io/v2/files/678ad703a5f92feafa2045e3/",
+      "bytes": 35889,
+      "sha256": "d6af12dd8dc43d0b1dac2cc2c957d2f8a433843e9d4cfa7b468ff25ec33c3e8d",
+      "license": "OSF node_license=null; public read access, redistribution permission not established; raw not committed"
+    }
+  ],
+  "preregistration_commit": "9f25664",
+  "attribution": "Jutlah LBL et al., Work-to-rest ratios in repeated sprint assessments: A replication study (2026)"
+}
