@@ -32,3 +32,9 @@ jobs:
         run: python research/recovery_2026_11_04/test_recovery.py
       - name: Reproduce locked independent recovery endpoint and negative diagnostics
         run: python research/recovery_2026_11_04/reproduce.py --check
+      - name: Verify observability symmetries, quotient reduction and isolation from viewed outcomes
+        run: python research/observability_2026_11_04/test_observability.py
+      - name: Verify retained licensed XLS content and archived source audit (offline, not live retrieval)
+        run: python research/observability_2026_11_04/inspect_data.py --check-offline
+      - name: Reproduce conditional measurement design, FIM and synthetic stress results
+        run: python research/observability_2026_11_04/audit.py --check

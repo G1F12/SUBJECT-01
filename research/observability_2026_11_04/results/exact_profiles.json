@@ -1,0 +1,56 @@
+[
+  {
+    "eta_scale": 0.8,
+    "baseline_shift_W": -50,
+    "negative2loglikelihood_difference": 3.5262082463379228e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 0.8,
+    "baseline_shift_W": 0,
+    "negative2loglikelihood_difference": 3.620871554964444e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 0.8,
+    "baseline_shift_W": 100,
+    "negative2loglikelihood_difference": 4.733165431326071e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1,
+    "baseline_shift_W": -50,
+    "negative2loglikelihood_difference": 0.0,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1,
+    "baseline_shift_W": 0,
+    "negative2loglikelihood_difference": 0.0,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1,
+    "baseline_shift_W": 100,
+    "negative2loglikelihood_difference": 1.3173977117190897e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1.2,
+    "baseline_shift_W": -50,
+    "negative2loglikelihood_difference": 3.99952478947053e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1.2,
+    "baseline_shift_W": 0,
+    "negative2loglikelihood_difference": 3.99952478947053e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  },
+  {
+    "eta_scale": 1.2,
+    "baseline_shift_W": 100,
+    "negative2loglikelihood_difference": 3.99952478947053e-28,
+    "origin": "exact conditional synthetic profile path with all transformed nuisance parameters"
+  }
+]

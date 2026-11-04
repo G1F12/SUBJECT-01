@@ -1,0 +1,489 @@
+{
+  "date": "2026-11-04",
+  "scope": "targeted reproducible search, not exhaustive systematic review",
+  "records": [
+    {
+      "label": "europepmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=50&query=phosphocreatine%20AND%20%28oxygen%20OR%20power%29%20AND%20%28data%20OR%20ergometer%29",
+      "request_body": null,
+      "status": 200,
+      "bytes": 350605,
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "45e4afa48e5ed58b076f5e400588c8ff4a5515a764e2b01879fe1f73e99d1f68",
+      "cache": "europepmc.bin"
+    },
+    {
+      "label": "crossref",
+      "url": "https://api.crossref.org/works?rows=15&query=phosphocreatine%20oxygen%20uptake%20power%20data",
+      "request_body": null,
+      "status": 200,
+      "bytes": 108703,
+      "content_type": "application/json",
+      "sha256": "782f48d007e5e06f73dc0874636b970ee3f450dc3806865873c515fcaf79d086",
+      "cache": "crossref.bin"
+    },
+    {
+      "label": "openalex",
+      "url": "https://api.openalex.org/works?per-page=15&search=phosphocreatine%20oxygen%20uptake",
+      "request_body": null,
+      "status": 200,
+      "bytes": 351819,
+      "content_type": "application/json",
+      "sha256": "9e168ae38105b0c41f247bee296e6e1ac0680f250694d173eaa9819118388573",
+      "cache": "openalex.bin"
+    },
+    {
+      "label": "zenodo",
+      "url": "https://zenodo.org/api/records?size=15&q=phosphocreatine%20muscle",
+      "request_body": null,
+      "status": 200,
+      "bytes": 110279,
+      "content_type": "application/json",
+      "sha256": "df9d92ea562a8ad48dc5cbacc0b48f26056ab4a38309cf2750f01ef367b81a03",
+      "cache": "zenodo.bin"
+    },
+    {
+      "label": "figshare_search",
+      "url": "https://api.figshare.com/v2/articles/search",
+      "request_body": {
+        "search_for": "phosphocreatine",
+        "limit": 30
+      },
+      "status": 200,
+      "bytes": 33991,
+      "content_type": "application/json",
+      "sha256": "085d8a113ac2ce11b069ccd3a24d2dee7b59a7fad11c662f6e8571862d503673",
+      "cache": "figshare_search.bin"
+    },
+    {
+      "label": "figshare_WASF3",
+      "url": "https://api.figshare.com/v2/articles/23681013/versions/1",
+      "request_body": null,
+      "status": 200,
+      "bytes": 4523,
+      "content_type": "application/json",
+      "sha256": "0db08dc5e1efb73482d6122b25838ed63f1bebcaa1fd2403c0e862c21749455f",
+      "cache": "figshare_WASF3.bin"
+    },
+    {
+      "label": "osf",
+      "url": "https://api.osf.io/v2/nodes/?filter[title]=phosphocreatine",
+      "request_body": null,
+      "status": 200,
+      "bytes": 128,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "cache": "osf.bin"
+    },
+    {
+      "label": "dryad_metadata",
+      "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.08kprr59v",
+      "request_body": null,
+      "status": 200,
+      "bytes": 6054,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "1242f757e6aa3c0243287ab0e63ed14cb963dfd900d4dcfb8490377f3c6108a7",
+      "cache": "dryad_metadata.bin"
+    },
+    {
+      "label": "dryad_files",
+      "url": "https://datadryad.org/api/v2/versions/348930/files",
+      "request_body": null,
+      "status": 200,
+      "bytes": 2177,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "faf5e9f5192581fca3454bfa67d5d0c80fa429216c9d8f31e53dbb33d7b5a42e",
+      "cache": "dryad_files.bin"
+    },
+    {
+      "label": "dryad_api_download",
+      "url": "https://datadryad.org/api/v2/files/3450615/download",
+      "request_body": null,
+      "status": 401,
+      "error": "HTTP Error 401: Unauthorized",
+      "numeric_obtained": false
+    },
+    {
+      "label": "dryad_public_download",
+      "url": "https://datadryad.org/downloads/file_stream/3450615",
+      "request_body": null,
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "numeric_obtained": false
+    },
+    {
+      "label": "biovis",
+      "url": "https://biovis.net/2025/biovisChallenges_vis/",
+      "request_body": null,
+      "status": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'biovis.net'. (_ssl.c:1010)>",
+      "numeric_obtained": false
+    },
+    {
+      "label": "frontiers_plantar",
+      "url": "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2020.00622/full",
+      "request_body": null,
+      "status": 200,
+      "bytes": 1029754,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "5439ebdc82b3060ed6a86bb8f1e6c9adf0ed4720d8b9c97c0d88686328ea25af",
+      "cache": "frontiers_plantar.bin"
+    },
+    {
+      "label": "frontiers_arm",
+      "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2021.599514/full",
+      "request_body": null,
+      "status": 200,
+      "bytes": 924065,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "27137d510bcf1fd9623698fb29b834e7f5942caa439e6f62204f74b301fa9143",
+      "cache": "frontiers_arm.bin"
+    },
+    {
+      "label": "PMC7332772",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7332772/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 160322,
+      "content_type": "application/xml",
+      "sha256": "36c18b186564773d7448455528dfefc78211e8da561726dbd088baa0418031e7",
+      "cache": "PMC7332772.bin"
+    },
+    {
+      "label": "PMC3560356",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3560356/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 81375,
+      "content_type": "application/xml",
+      "sha256": "34d09f4fb868f2d62f4d7ee5ac66b6959128135e9e2317b00508f49c328c4b74",
+      "cache": "PMC3560356.bin"
+    },
+    {
+      "label": "PMC4963215",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4963215/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 88428,
+      "content_type": "application/xml",
+      "sha256": "82c5f35460fa029320a82aa63c4693f15c4dbe9c2e81513c96b3fac9299454d0",
+      "cache": "PMC4963215.bin"
+    },
+    {
+      "label": "PMC10450651",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10450651/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 128843,
+      "content_type": "application/xml",
+      "sha256": "76a9dbfbcf92e6ce4f2c6831312ea7b61f1e6b9fe41d587a6381a4dc50105eff",
+      "cache": "PMC10450651.bin"
+    },
+    {
+      "label": "PMC13077704",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13077704/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 146481,
+      "content_type": "application/xml",
+      "sha256": "ed4dfbb9e05a38e56fb09a43c8cc099ab8976adad01b27e0efb7dea39640882d",
+      "cache": "PMC13077704.bin"
+    },
+    {
+      "label": "PMC12984577",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12984577/fullTextXML",
+      "request_body": null,
+      "status": 200,
+      "bytes": 150564,
+      "content_type": "application/xml",
+      "sha256": "ce0c9bf90d0c38cfd2fb89c48ece5348e765ad2459e3430fc2914acd8cc202f1",
+      "cache": "PMC12984577.bin"
+    },
+    {
+      "label": "WASF3_numeric",
+      "url": "https://ndownloader.figshare.com/files/41556837",
+      "request_body": null,
+      "status": 200,
+      "bytes": 174701,
+      "content_type": "application/zip",
+      "sha256": "5eba92f26b39bc3286861d0068f8317682a50dda4887535da349069257bab4e7",
+      "cache": "WASF3_numeric.bin"
+    },
+    {
+      "label": "plantar_supp",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7332772/supplementaryFiles",
+      "request_body": null,
+      "status": 200,
+      "bytes": 2812275,
+      "content_type": "application/zip",
+      "sha256": "e49294977541d44566056fe0bd3003c81f258572c3623a7cfd0469eda4d7d0f2",
+      "cache": "plantar_supp.bin"
+    },
+    {
+      "label": "peerj_supp",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4963215/supplementaryFiles",
+      "request_body": null,
+      "status": 200,
+      "bytes": 47692478,
+      "content_type": "application/zip",
+      "sha256": "53dcca636ec00ff825313af4a2ee758c7fe9deba98d1ef36cae0fa3929a68910",
+      "cache": "peerj_supp.bin"
+    },
+    {
+      "label": "diagnostics_supp",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12984577/supplementaryFiles",
+      "request_body": null,
+      "status": 200,
+      "bytes": 948583,
+      "content_type": "application/zip",
+      "sha256": "ee0e1d8352b2a815eb7c83c01e888383490d63c7b986a23f419b553e54da3c1e",
+      "cache": "diagnostics_supp.bin"
+    },
+    {
+      "label": "peerj_direct_europepmc",
+      "url": "https://europepmc.org/articles/PMC4963215/bin/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "numeric_obtained": false
+    },
+    {
+      "label": "peerj_direct_pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4963215/bin/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 200,
+      "bytes": 21495,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "b7496bf843b2bf44f61f0f8469909c27e3fc4d6f57d73055791af8d13b867e27",
+      "cache": "peerj_direct_pmc.bin",
+      "numeric_obtained": false
+    },
+    {
+      "label": "peerj_direct_cdn",
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4e02/4963215/03caa975a552/peerj-04-2259-s003.xls",
+      "request_body": null,
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "numeric_obtained": false
+    }
+  ],
+  "inspected": {
+    "WASF3": {
+      "title": "Primary data for “WASF3 disrupts mitochondrial respiration and may mediate exercise intolerance in myalgic encephalomyelitis/chronic fatigue syndrome”",
+      "doi": "10.25444/nhlbi.23681013.v1",
+      "version": 1,
+      "license": {
+        "value": 40,
+        "name": "Public Domain",
+        "url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "files": [
+        {
+          "id": 41556837,
+          "name": "Primary data for WASF3 in CFS.zip",
+          "size": 174701,
+          "is_link_only": false,
+          "download_url": "https://ndownloader.figshare.com/files/41556837",
+          "supplied_md5": "36e2339d7cca779acad6ab89ec5821cc",
+          "computed_md5": "36e2339d7cca779acad6ab89ec5821cc",
+          "mimetype": "application/zip"
+        }
+      ],
+      "archive_members": [
+        {
+          "name": "Primary data for WASF3 in CFS/",
+          "bytes": 0
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 1/",
+          "bytes": 0
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 1/Figure 1A.xlsx",
+          "bytes": 15983
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 1/Figure 1B.xlsx",
+          "bytes": 11106
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 1/Figure 1C.xlsx",
+          "bytes": 9233
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 1/Figure 1D.xlsx",
+          "bytes": 13150
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/",
+          "bytes": 0
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2B.xlsx",
+          "bytes": 13788
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2D.xlsx",
+          "bytes": 9858
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2E.xlsx",
+          "bytes": 10622
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2F.xlsx",
+          "bytes": 9362
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2G.xlsx",
+          "bytes": 9366
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 2/Figure 2H.xlsx",
+          "bytes": 9370
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 3D.xlsx",
+          "bytes": 9393
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 4B.xlsx",
+          "bytes": 10218
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 5/",
+          "bytes": 0
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 5/Figure 5B.xlsx",
+          "bytes": 10970
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 5/Figure 5C.xlsx",
+          "bytes": 10596
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure 6C.xlsx",
+          "bytes": 12817
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure S12 A&B.xlsx",
+          "bytes": 10772
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure S3 A-C.xlsx",
+          "bytes": 17266
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure S5.xlsx",
+          "bytes": 14182
+        },
+        {
+          "name": "Primary data for WASF3 in CFS/Figure S9B.xlsx",
+          "bytes": 9951
+        }
+      ]
+    },
+    "frontiers_plantar": [],
+    "frontiers_arm": [],
+    "PMC7332772": {
+      "doi": [
+        "10.3389/fbioe.2020.00622"
+      ],
+      "supplements": [
+        "<supplementary-material id=\"SM1\" position=\"float\"><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"Data_Sheet_1.ZIP\" mimetype=\"application\" mime-subtype=\"zip\"><?cloudpmc-path f229/7332772/16e9c5b10e46/Data_Sheet_1.ZIP?><?cloudpmc-bucket app?><?size 2289977?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material1_reqid_\" position=\"float\"><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"Data_Sheet_1.ZIP\" mimetype=\"application\" mime-subtype=\"zip\"><?cloudpmc-path f229/7332772/16e9c5b10e46/Data_Sheet_1.ZIP?><?cloudpmc-bucket app?><?size 2289977?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>"
+      ],
+      "availability": [
+        "<sec id=\"s6\" disp-level=\"1\"><title>Data Availability Statement</title><p>The dynamic datasets generated for this study and the model, including all necessary parameters, are included in the article and the <xref rid=\"SM1\" ref-type=\"supplementary-material\">Supplementary Material</xref>. The original MRS and MRI data will be provided upon request to the authors.</p></sec>",
+        "<sec id=\"_adda93_\" xml:lang=\"en\" sec-type=\"data-availability-statement\" disp-level=\"2\"><title>Data Availability Statement</title><p>The dynamic datasets generated for this study and the model, including all necessary parameters, are included in the article and the <xref rid=\"SM1\" ref-type=\"supplementary-material\">Supplementary Material</xref>. The original MRS and MRI data will be provided upon request to the authors.</p></sec>"
+      ]
+    },
+    "PMC3560356": {
+      "doi": [
+        "10.1038/srep01182"
+      ],
+      "supplements": [],
+      "availability": []
+    },
+    "PMC4963215": {
+      "doi": [
+        "10.7717/peerj.2259"
+      ],
+      "supplements": [
+        "<supplementary-material content-type=\"local-data\" id=\"supp-1\" position=\"float\" orientation=\"portrait\"><object-id pub-id-type=\"doi\">10.7717/peerj.2259/supp-1</object-id><label>Data S1</label><caption><title>Raw <sup>31</sup>P magnetic resonance spectroscopy images and datasource from male group</title><p>Each phase of <sup>31</sup>P magnetic resonance spectroscopy images and datasource from each volunteer in male group.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"peerj-04-2259-s001.zip\" position=\"float\" orientation=\"portrait\"><?suppdata-name peerj-04-2259-s001.zip?><?suppdata-size 28433623?><?suppdata-md5 6d2a0fedbdc2dd7c77edc43313e4a1d3?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type zip?><?suppdata-cloudpmc-urn urn:app:4e02/4963215/6d2a0fedbdc2/peerj-04-2259-s001.zip?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>",
+        "<supplementary-material content-type=\"local-data\" id=\"supp-2\" position=\"float\" orientation=\"portrait\"><object-id pub-id-type=\"doi\">10.7717/peerj.2259/supp-2</object-id><label>Data S2</label><caption><title>Raw <sup>31</sup>P magnetic resonance spectroscopy images and datasource from female group</title><p>Each phase of <sup>31</sup>P magnetic resonance spectroscopy images and datasource from each volunteer in female group.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"peerj-04-2259-s002.zip\" position=\"float\" orientation=\"portrait\"><?suppdata-name peerj-04-2259-s002.zip?><?suppdata-size 18879942?><?suppdata-md5 21f0163291771fb4a8b58b692b3f84b2?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type zip?><?suppdata-cloudpmc-urn urn:app:4e02/4963215/21f016329177/peerj-04-2259-s002.zip?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>",
+        "<supplementary-material content-type=\"local-data\" id=\"supp-3\" position=\"float\" orientation=\"portrait\"><object-id pub-id-type=\"doi\">10.7717/peerj.2259/supp-3</object-id><label>Data S3</label><caption><title>The detail raw data from raw <sup>31</sup>P magnetic resonance spectroscopy images and datasource</title></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"peerj-04-2259-s003.xls\" position=\"float\" orientation=\"portrait\"><?suppdata-name peerj-04-2259-s003.xls?><?suppdata-size 224256?><?suppdata-md5 03caa975a552c1dd7e3d3a2c45e5319a?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.ms-excel?><?suppdata-cloudpmc-urn urn:app:4e02/4963215/03caa975a552/peerj-04-2259-s003.xls?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>"
+      ],
+      "availability": []
+    },
+    "PMC10450651": {
+      "doi": [
+        "10.1073/pnas.2302738120"
+      ],
+      "supplements": [
+        "<supplementary-material position=\"float\" content-type=\"local-data\" orientation=\"portrait\"><caption><p>Appendix 01 (PDF)</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"pnas.2302738120.sapp.pdf\" position=\"float\" orientation=\"portrait\"><?suppdata-name pnas.2302738120.sapp.pdf?><?suppdata-size 1107460?><?suppdata-md5 9ec34149b3abe738f8e9a2f0a9161aad?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:0b96/10450651/9ec34149b3ab/pnas.2302738120.sapp.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material>"
+      ],
+      "availability": []
+    },
+    "PMC13077704": {
+      "doi": [
+        "10.1002/mrm.70337"
+      ],
+      "supplements": [
+        "<supplementary-material id=\"mrm70337-supitem-0001\" position=\"float\"><caption><p>\n<bold>Figure S1:</bold> A photograph depicting the plantar flexion exercise device and its dimensions. The participants dominant foot was placed on the ∼30 cm tall foot pedal, which was attached to the resistance weights (drawn) via ropes and pulleys. The adjustable front and back stops on either side of the foot pedal were optimized for each participant so that each lifted the resistance weights by 5 cm with every plantar flexion. Exercise was performed at a 1 Hz rate guided by a metronome and monitored by a pressure bellow located on the back side of the foot pedal. The exercise rate, weight displacement, and resistance were standardized throughout the entire study, and participants were guided throughout the exercise test for compliance by a study team member.</p><p>\n<bold>Figure S2:</bold> The individual popliteal artery blood flow (BF) measured at rest, during dynamic PFE, and recovery is shown for each of the four PFE foot pedal positions, partially contracted (A), fully contracted (B), partially relaxed (C), fully relaxed (D), and the average of all four pedal positions (E). Data are shown for measurements made using the cine phase‐contrast (conventional) acquisition collected in isolation at rest and the end of recovery, and from the interleaved method throughout rest, dynamic exercise, and initial 3 min of recovery. While there is individual variation, the typical flow response during the final stage of PFE was lower when the calf muscles were fully contracted to cause flexion around the ankle joint (B), as compared to when the foot was in fully relaxed position to cause dorsi flexion around the ankle joint (D), and intermediate for the two positions in between (A and C). As a result, in most participants, popliteal BF increases from the end of PFE to the beginning of recovery once all four foot pedal positions are averaged (E).</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s004.pdf\" mimetype=\"application\" mime-subtype=\"pdf\"><?cloudpmc-path ca6d/13156441/d35f244d7d0d/MRM-96-13-s004.pdf?><?cloudpmc-bucket app?><?size 425619?></media></supplementary-material>",
+        "<supplementary-material id=\"mrm70337-supitem-0002\" position=\"float\"><caption><p>\n<bold>Video S1:</bold> Phase contrast magnitude (top row) and velocity (bottom row) maps are shown as cine videos for the conventional approach (leftmost) and two consecutive 1 min resting stages acquired with the interleaved approach (right two images) in the same representative participant as in Figures <xref rid=\"mrm70337-fig-0002\" ref-type=\"fig\">2</xref>, <xref rid=\"mrm70337-fig-0004\" ref-type=\"fig\">4</xref>, <xref rid=\"mrm70337-fig-0005\" ref-type=\"fig\">5</xref>, and <xref rid=\"mrm70337-fig-0007\" ref-type=\"fig\">7</xref>. The image quality from the interleaved approach is similar to that acquired using the conventional cine phase contrast only approach. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s003.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/e115af904feb/MRM-96-13-s003.mp4?><?cloudpmc-bucket app?><?size 5342055?></media></supplementary-material>",
+        "<supplementary-material id=\"mrm70337-supitem-0003\" position=\"float\"><caption><p>\n<bold>Video S2:</bold> In the same representative individual, phase contrast magnitude (top row) and velocity (bottom row) maps are shown as cine videos reconstructed every 30 s during post‐exercise recovery. The first six pairs of images are reconstructed from the interleaved acquisition followed immediately by four additional conventional phase‐contrast only acquisitions. The image quality is similar between the interleaved and the conventional approaches. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s005.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/6cc28d734a70/MRM-96-13-s005.mp4?><?cloudpmc-bucket app?><?size 8978543?></media></supplementary-material>",
+        "<supplementary-material id=\"mrm70337-supitem-0004\" position=\"float\"><caption><p>\n<bold>Video S3:</bold> Phase contrast magnitude and velocity maps are shown as cine videos during dynamic plantar flexion exercise in the same representative individual. Images are from each PFE stage, beginning with the first PFE stage (leftmost) and finishing with the final PFE stage (rightmost). Each set of five magnitude and velocity maps are repeated below for each of the four foot pedal positions. The velocity maps demonstrate how the popliteal artery blood flow is impacted by the differing foot pedal positions. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s002.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/eb55b69ba760/MRM-96-13-s002.mp4?><?cloudpmc-bucket app?><?size 8616305?></media></supplementary-material>",
+        "<supplementary-material id=\"mrm70337-supitem-0005\" position=\"float\"><caption><p>\n<bold>Video S4:</bold> The phase contrast magnitude (top) and velocity (bottom) map for the same representative participant is shown for a single cardiac phase (phase 9 of 15) animated along pedal positions and exercise stages. This demonstrates the motion occurring during exercise, highlighting the need to resolve foot pedal positions during image reconstruction of dynamic exercise to avoid motion artifacts and to accurately measure popliteal artery blood flow. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s001.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/26491d8eec4a/MRM-96-13-s001.mp4?><?cloudpmc-bucket app?><?size 622684?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material1_reqid_\" position=\"float\"><caption><p>\n<bold>Figure S1:</bold> A photograph depicting the plantar flexion exercise device and its dimensions. The participants dominant foot was placed on the ∼30 cm tall foot pedal, which was attached to the resistance weights (drawn) via ropes and pulleys. The adjustable front and back stops on either side of the foot pedal were optimized for each participant so that each lifted the resistance weights by 5 cm with every plantar flexion. Exercise was performed at a 1 Hz rate guided by a metronome and monitored by a pressure bellow located on the back side of the foot pedal. The exercise rate, weight displacement, and resistance were standardized throughout the entire study, and participants were guided throughout the exercise test for compliance by a study team member.</p><p>\n<bold>Figure S2:</bold> The individual popliteal artery blood flow (BF) measured at rest, during dynamic PFE, and recovery is shown for each of the four PFE foot pedal positions, partially contracted (A), fully contracted (B), partially relaxed (C), fully relaxed (D), and the average of all four pedal positions (E). Data are shown for measurements made using the cine phase‐contrast (conventional) acquisition collected in isolation at rest and the end of recovery, and from the interleaved method throughout rest, dynamic exercise, and initial 3 min of recovery. While there is individual variation, the typical flow response during the final stage of PFE was lower when the calf muscles were fully contracted to cause flexion around the ankle joint (B), as compared to when the foot was in fully relaxed position to cause dorsi flexion around the ankle joint (D), and intermediate for the two positions in between (A and C). As a result, in most participants, popliteal BF increases from the end of PFE to the beginning of recovery once all four foot pedal positions are averaged (E).</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s004.pdf\" mimetype=\"application\" mime-subtype=\"pdf\"><?cloudpmc-path ca6d/13156441/d35f244d7d0d/MRM-96-13-s004.pdf?><?cloudpmc-bucket app?><?size 425619?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material2_reqid_\" position=\"float\"><caption><p>\n<bold>Video S1:</bold> Phase contrast magnitude (top row) and velocity (bottom row) maps are shown as cine videos for the conventional approach (leftmost) and two consecutive 1 min resting stages acquired with the interleaved approach (right two images) in the same representative participant as in Figures <xref rid=\"mrm70337-fig-0002\" ref-type=\"fig\">2</xref>, <xref rid=\"mrm70337-fig-0004\" ref-type=\"fig\">4</xref>, <xref rid=\"mrm70337-fig-0005\" ref-type=\"fig\">5</xref>, and <xref rid=\"mrm70337-fig-0007\" ref-type=\"fig\">7</xref>. The image quality from the interleaved approach is similar to that acquired using the conventional cine phase contrast only approach. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s003.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/e115af904feb/MRM-96-13-s003.mp4?><?cloudpmc-bucket app?><?size 5342055?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material3_reqid_\" position=\"float\"><caption><p>\n<bold>Video S2:</bold> In the same representative individual, phase contrast magnitude (top row) and velocity (bottom row) maps are shown as cine videos reconstructed every 30 s during post‐exercise recovery. The first six pairs of images are reconstructed from the interleaved acquisition followed immediately by four additional conventional phase‐contrast only acquisitions. The image quality is similar between the interleaved and the conventional approaches. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s005.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/6cc28d734a70/MRM-96-13-s005.mp4?><?cloudpmc-bucket app?><?size 8978543?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material4_reqid_\" position=\"float\"><caption><p>\n<bold>Video S3:</bold> Phase contrast magnitude and velocity maps are shown as cine videos during dynamic plantar flexion exercise in the same representative individual. Images are from each PFE stage, beginning with the first PFE stage (leftmost) and finishing with the final PFE stage (rightmost). Each set of five magnitude and velocity maps are repeated below for each of the four foot pedal positions. The velocity maps demonstrate how the popliteal artery blood flow is impacted by the differing foot pedal positions. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s002.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/eb55b69ba760/MRM-96-13-s002.mp4?><?cloudpmc-bucket app?><?size 8616305?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material5_reqid_\" position=\"float\"><caption><p>\n<bold>Video S4:</bold> The phase contrast magnitude (top) and velocity (bottom) map for the same representative participant is shown for a single cardiac phase (phase 9 of 15) animated along pedal positions and exercise stages. This demonstrates the motion occurring during exercise, highlighting the need to resolve foot pedal positions during image reconstruction of dynamic exercise to avoid motion artifacts and to accurately measure popliteal artery blood flow. Negative velocities, shown as darker image intensity, indicate flow in head‐foot direction.</p></caption><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"MRM-96-13-s001.mp4\" mimetype=\"video\" mime-subtype=\"mp4\"><?cloudpmc-path ca6d/13156441/26491d8eec4a/MRM-96-13-s001.mp4?><?cloudpmc-bucket app?><?size 622684?></media></supplementary-material>"
+      ],
+      "availability": [
+        "<sec id=\"mrm70337-sec-0020\" disp-level=\"1\"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec>",
+        "<sec id=\"_adda93_\" xml:lang=\"en\" sec-type=\"data-availability-statement\" disp-level=\"2\"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec>"
+      ]
+    },
+    "PMC12984577": {
+      "doi": [
+        "10.3390/diagnostics16050744"
+      ],
+      "supplements": [
+        "<supplementary-material id=\"diagnostics-16-00744-s001\" position=\"float\"><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"diagnostics-16-00744-s001.zip\" mimetype=\"application\" mime-subtype=\"zip\"><?cloudpmc-path 0bb0/12984577/f9b647de5d79/diagnostics-16-00744-s001.zip?><?cloudpmc-bucket app?><?size 424630?></media></supplementary-material>",
+        "<supplementary-material id=\"db_ds_supplementary-material1_reqid_\" position=\"float\"><media xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"diagnostics-16-00744-s001.zip\" mimetype=\"application\" mime-subtype=\"zip\"><?cloudpmc-path 0bb0/12984577/f9b647de5d79/diagnostics-16-00744-s001.zip?><?cloudpmc-bucket app?><?size 424630?></media></supplementary-material>"
+      ],
+      "availability": [
+        "<sec id=\"notes4\" disp-level=\"1\"><title>Data Availability Statement</title><p>Data in this study are available upon reasonable request to the corresponding author.</p></sec>",
+        "<sec id=\"_adda93_\" xml:lang=\"en\" sec-type=\"data-availability-statement\" disp-level=\"2\"><title>Data Availability Statement</title><p>Data in this study are available upon reasonable request to the corresponding author.</p></sec>"
+      ]
+    }
+  },
+  "policy": "No authentication bypass; unknown-license bytes ignored in Git; archive is downloaded publisher input, no new deliverable ZIP created; no author contact",
+  "web_searches": [
+    {
+      "query": "phosphocreatine oxygen uptake dataset Dryad",
+      "conclusion": "Dryad08kprr59v metadata accessible; raw401/403; no mirror numeric file obtained"
+    },
+    {
+      "query": "phosphocreatine site:physionet.org",
+      "conclusion": "No applicable result returned; not exhaustive PhysioNet inventory"
+    },
+    {
+      "query": "31P MRS Participants1-10",
+      "conclusion": "York/Mendeley DOI10.17632/3r7kmfmpyj.1 is brain photobiomodulation; excluded, no exercise power; raw not downloaded"
+    },
+    {
+      "query": "phosphocreatine VO2 dataset Figshare Zenodo OSF",
+      "conclusion": "API results and exclusions summarized in DATA_AUDIT.md; numericWASF3,plantar,PeerJ obtained"
+    }
+  ],
+  "ci_access_failure": {
+    "run": "https://github.com/G1F12/SUBJECT-01/actions/runs/41869707575",
+    "HTTP_status": 500,
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4963215/supplementaryFiles",
+    "remedy": "exact licensed DataS3 XLS retained withCCBY4 attribution; byteSHA256 unchanged; no numerical or historical engine edits"
+  }
+}

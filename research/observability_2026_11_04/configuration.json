@@ -1,0 +1,131 @@
+{
+  "base_commit": "4e900fbb337cf59efff8b75f473528485c7cc045",
+  "agent": "OpenAI Codex single agent; no external reviewer",
+  "parameters": {
+    "fast_capacity_J": 8000,
+    "slow_capacity_J": 22000,
+    "fast_recovery_tau_s": 81.657,
+    "slow_recovery_tau_s": 600,
+    "fast_discharge_tau_s": 4,
+    "slow_discharge_tau_s": 30,
+    "recharge_efficiency": 0.8,
+    "oxygen_tau_s": 28,
+    "slow_component_max_W": 170,
+    "slow_component_tau_s": 180,
+    "fatigue_rate_s_inv": 0.0,
+    "fatigue_recovery_tau_s": 300,
+    "fatigue_floor": 0.2,
+    "sweat_tau_s": 180,
+    "sweat_feedback_J_s_kg": 1000000000,
+    "skin_fraction": 0.25,
+    "braking_tau_s": 1,
+    "eta": 0.2801624129930391,
+    "maintenance_W": 128.69565217391278,
+    "oxygen_cap_W": 1343.09875,
+    "demand_W": 1000.0,
+    "initial_fraction": 1.0,
+    "fast_power_cap_W": 2000.0,
+    "slow_power_cap_W": 733.3333333333334
+  },
+  "estimated_keys": [
+    "fast_capacity_J",
+    "slow_capacity_J",
+    "fast_power_cap_W",
+    "slow_power_cap_W",
+    "fast_recovery_tau_s",
+    "slow_recovery_tau_s",
+    "eta",
+    "recharge_efficiency",
+    "oxygen_tau_s",
+    "oxygen_cap_W",
+    "maintenance_W"
+  ],
+  "designs": [
+    {
+      "name": "short_long",
+      "effort_s": 3,
+      "rest_s": 90,
+      "repetitions": 6,
+      "demand_W": 1400,
+      "initial_fraction": 1
+    },
+    {
+      "name": "short_incomplete",
+      "effort_s": 6,
+      "rest_s": 12,
+      "repetitions": 10,
+      "demand_W": 1400,
+      "initial_fraction": 1
+    },
+    {
+      "name": "medium_rest",
+      "effort_s": 6,
+      "rest_s": 30,
+      "repetitions": 10,
+      "demand_W": 1400,
+      "initial_fraction": 1
+    },
+    {
+      "name": "long_rest",
+      "effort_s": 6,
+      "rest_s": 180,
+      "repetitions": 5,
+      "demand_W": 1400,
+      "initial_fraction": 1
+    },
+    {
+      "name": "predepleted",
+      "effort_s": 6,
+      "rest_s": 30,
+      "repetitions": 10,
+      "demand_W": 1400,
+      "initial_fraction": 0.35
+    },
+    {
+      "name": "long_effort",
+      "effort_s": 30,
+      "rest_s": 60,
+      "repetitions": 5,
+      "demand_W": 1400,
+      "initial_fraction": 1
+    },
+    {
+      "name": "low_power",
+      "effort_s": 15,
+      "rest_s": 45,
+      "repetitions": 6,
+      "demand_W": 500,
+      "initial_fraction": 1
+    },
+    {
+      "name": "high_power",
+      "effort_s": 15,
+      "rest_s": 45,
+      "repetitions": 6,
+      "demand_W": 1800,
+      "initial_fraction": 1
+    }
+  ],
+  "noise": {
+    "P": 20.0,
+    "O": 40.0,
+    "R": 0.02,
+    "A": 160.0
+  },
+  "eta_anchor_SD": 0.01,
+  "sample_s": 2.0,
+  "dt_s": 0.5,
+  "log_jacobian_eps": 1e-06,
+  "rank_relative_threshold": 1e-06,
+  "robust_factors": [
+    0.8,
+    1,
+    1.2
+  ],
+  "seeds": [
+    20261104,
+    19,
+    51
+  ],
+  "observation_warning": "O is known local oxidative W; PCr is conditional fastreserve map; no human physiological calibration"
+}

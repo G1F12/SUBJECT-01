@@ -1,0 +1,342 @@
+{
+  "WASF3": {
+    "doi": "10.25444/nhlbi.23681013.v1",
+    "member": "Primary data for WASF3 in CFS/Figure 1/Figure 1A.xlsx",
+    "member_sha256": "6812d37b7cfb245b0332b127b4c82a84099aa2df06143d268f994a3e4b43171d",
+    "participants": 2,
+    "scans": 6,
+    "rows_per_curve": 87,
+    "numeric_PCr_cells": 522,
+    "units": "PCr/pre-exercise PCr; dimensionless, not absolute chemical reserve",
+    "sample_s": 7.5,
+    "protocol": "methods: 180s rest,120s foot exercise at30% maximum lifted weight,360s recovery; second scan after25min; S1 visit repeated months later",
+    "timing_caveat": "source index1..87 only; methods duration predicts88 samples. Exploratory recovery mapping index41 onset+7.5s assumed; 29points index41..69 end217.5s, article describes3.75min. No synchronization to human VO2/power.",
+    "fits": [
+      {
+        "series_column": "B",
+        "participant": "S2",
+        "visit": 1,
+        "free_asymptote": false,
+        "tau_s": 29.98371518739999,
+        "asymptote": 1.0,
+        "MAE_relative": 0.004905339676569621,
+        "RMSE_relative": 0.007108688171132335,
+        "bias_relative": -0.0014006041757625297,
+        "n": 29
+      },
+      {
+        "series_column": "B",
+        "participant": "S2",
+        "visit": 1,
+        "free_asymptote": true,
+        "tau_s": 32.499067936153196,
+        "asymptote": 1.0032827258382946,
+        "MAE_relative": 0.0048170516354845575,
+        "RMSE_relative": 0.0067857219670796705,
+        "bias_relative": 1.2710598856960257e-12,
+        "n": 29
+      },
+      {
+        "series_column": "C",
+        "participant": "S2",
+        "visit": 1,
+        "free_asymptote": false,
+        "tau_s": 41.666671345196285,
+        "asymptote": 1.0,
+        "MAE_relative": 0.010269313687683935,
+        "RMSE_relative": 0.0122569191316107,
+        "bias_relative": 0.004840974667357843,
+        "n": 29
+      },
+      {
+        "series_column": "C",
+        "participant": "S2",
+        "visit": 1,
+        "free_asymptote": true,
+        "tau_s": 31.664401488457667,
+        "asymptote": 0.9842337338990117,
+        "MAE_relative": 0.0066088478958911505,
+        "RMSE_relative": 0.008015053210658535,
+        "bias_relative": 1.6069724095463446e-11,
+        "n": 29
+      },
+      {
+        "series_column": "D",
+        "participant": "S1",
+        "visit": 1,
+        "free_asymptote": false,
+        "tau_s": 112.38290017283165,
+        "asymptote": 1.0,
+        "MAE_relative": 0.00852595094580156,
+        "RMSE_relative": 0.011055562434914686,
+        "bias_relative": 0.0006854670910966599,
+        "n": 29
+      },
+      {
+        "series_column": "D",
+        "participant": "S1",
+        "visit": 1,
+        "free_asymptote": true,
+        "tau_s": 79.41480017919571,
+        "asymptote": 0.9679886839104271,
+        "MAE_relative": 0.007775699382685067,
+        "RMSE_relative": 0.00960725266111081,
+        "bias_relative": 8.618814474375383e-13,
+        "n": 29
+      },
+      {
+        "series_column": "E",
+        "participant": "S1",
+        "visit": 1,
+        "free_asymptote": false,
+        "tau_s": 96.99725708461614,
+        "asymptote": 1.0,
+        "MAE_relative": 0.008238176891553105,
+        "RMSE_relative": 0.009828444881147761,
+        "bias_relative": 0.00036746760385521356,
+        "n": 29
+      },
+      {
+        "series_column": "E",
+        "participant": "S1",
+        "visit": 1,
+        "free_asymptote": true,
+        "tau_s": 85.89622417434612,
+        "asymptote": 0.9882397317551559,
+        "MAE_relative": 0.007973412790767293,
+        "RMSE_relative": 0.009581159073751018,
+        "bias_relative": 4.072780427087498e-12,
+        "n": 29
+      },
+      {
+        "series_column": "F",
+        "participant": "S1",
+        "visit": 2,
+        "free_asymptote": false,
+        "tau_s": 163.62111424513756,
+        "asymptote": 1.0,
+        "MAE_relative": 0.010348555261928204,
+        "RMSE_relative": 0.014842538176851125,
+        "bias_relative": 0.0006487103042398178,
+        "n": 29
+      },
+      {
+        "series_column": "F",
+        "participant": "S1",
+        "visit": 2,
+        "free_asymptote": true,
+        "tau_s": 77.26785472123937,
+        "asymptote": 0.9102308671053089,
+        "MAE_relative": 0.007440029353603726,
+        "RMSE_relative": 0.01017030672231963,
+        "bias_relative": 7.576583039120375e-13,
+        "n": 29
+      },
+      {
+        "series_column": "G",
+        "participant": "S1",
+        "visit": 2,
+        "free_asymptote": false,
+        "tau_s": 125.55692279079224,
+        "asymptote": 1.0,
+        "MAE_relative": 0.008300471355969884,
+        "RMSE_relative": 0.009183051278652847,
+        "bias_relative": 0.0008129613295446703,
+        "n": 29
+      },
+      {
+        "series_column": "G",
+        "participant": "S1",
+        "visit": 2,
+        "free_asymptote": true,
+        "tau_s": 79.54807232950903,
+        "asymptote": 0.9496684362126393,
+        "MAE_relative": 0.0035701964222742354,
+        "RMSE_relative": 0.004732714737295426,
+        "bias_relative": 5.112209506294142e-12,
+        "n": 29
+      }
+    ],
+    "interpretation": "exploratory in-sample relative PCr kinetics only; asymptote dependence; no independent test, no physiological D2 fitting; fibroblast OCR is not human pulmonary VO2"
+  },
+  "plantar": {
+    "doi": "10.3389/fbioe.2020.00622",
+    "inner_sha256": "ac3cd2ad9d961347f1e012ee5a847021474198ae69653aa0a867c424c96eb6d1",
+    "participants": 1,
+    "files": {
+      "experimental_data_gm_norm_MVC.mat": {
+        "sha256": "10e7d1d6c4627ddd2083a6ed07099fbfaa900e61a96c480d9571fec6ac04fb21",
+        "variables": {
+          "gm_norm_MVC": {
+            "shape": [
+              1,
+              240001
+            ],
+            "finite": true
+          }
+        }
+      },
+      "experimental_data_energy.mat": {
+        "sha256": "833d7494bf6538b42177eadf3ef2e7cace69ef07809d97e1e6e13a4773006abf",
+        "variables": {
+          "#refs#/b": {
+            "shape": [
+              1,
+              288
+            ],
+            "finite": true
+          },
+          "#refs#/d": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/e": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/f": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/g": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/h": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/i": {
+            "shape": [
+              1,
+              144
+            ],
+            "finite": true
+          },
+          "#refs#/o": {
+            "text": "time_s"
+          },
+          "#refs#/p": {
+            "text": "paradigm1"
+          },
+          "#refs#/q": {
+            "text": "PCr_mmol_l"
+          },
+          "#refs#/r": {
+            "text": "Pi_mmol_l"
+          },
+          "#refs#/s": {
+            "text": "ATP_mmol_l"
+          },
+          "#refs#/t": {
+            "text": "pH"
+          },
+          "#refs#/v": {
+            "text": "Row"
+          },
+          "#refs#/w": {
+            "text": "Variables"
+          },
+          "Energy_exp": {
+            "shape": [
+              11,
+              1
+            ],
+            "finite": true
+          }
+        }
+      },
+      "experimental_data_Time.mat": {
+        "sha256": "dd20d921b24c99dfcfcd0821dfda9eee0c595f16d28b58f26ebba783dadc6b69",
+        "variables": {
+          "time": {
+            "shape": [
+              1,
+              240001
+            ],
+            "finite": true
+          }
+        }
+      },
+      "experimental_data_ankle_angle_60sec.mat": {
+        "sha256": "043a4492207b32d0b690f9f6c1676e9f123682323c1ac93b9e2775bc086abef9",
+        "variables": {
+          "ankle_angle_60sec": {
+            "shape": [
+              1,
+              240001
+            ],
+            "finite": true
+          }
+        }
+      }
+    },
+    "time_points": 144,
+    "time_range_s": [
+      -113.04,
+      600.26
+    ],
+    "sample_interval_range_s": [
+      3.2999999999999545,
+      5.000000000000057
+    ],
+    "PCr_units": "mmol/l calibrated using assumed resting ATP8.2mmol/l; not independently absolute",
+    "stored_labels": [
+      "time_s",
+      "paradigm1",
+      "PCr_mmol_l",
+      "Pi_mmol_l",
+      "ATP_mmol_l",
+      "pH"
+    ],
+    "metadata_verification": "HDF character arrays and table references read; paradigm1 is protocol indicator, not measured power",
+    "paradigm_values": [
+      0.0,
+      1.0
+    ],
+    "kinematics_time_s": [
+      0.0,
+      60.0
+    ],
+    "kinematics_samples": 240001,
+    "manuscript": "one subject; separate MRI,EMG andMRS experiments; prescribed20%MVC; MRS nominal5s,180s load and1500s recovery described; released time subset ends600.26s",
+    "limitations": "No continuous VO2. Energy_exp11points is PCr-derived J/kg with assumed enthalpy21kJ/mol and cell-water conversion. Not independent cost anchor. Separate EMG acquisition; no synchronized absolute jointpower in obtained MATs."
+  },
+  "peerj": {
+    "doi": "10.7717/peerj.2259",
+    "member": "peerj-04-2259-s003.xls",
+    "member_sha256": "3e2030f7f62054ff4fd7085496a279b04a7eba2df1e8d00b95e8fa1c66712d92",
+    "participants": 17,
+    "sheet_rows": 130,
+    "sheet_columns": 229,
+    "format": "BIFF XLS; mixed raw, repeated sex-group summaries, formulas and figures. 17 unique participant labels, not34 independent people.",
+    "protocol": "25%MVC knee extension every5s for300s;6exercise and6recovery MRS blocks of50s;300s recovery",
+    "units": "signal amplitudes, ratios, pH, model-calculated mmol/kg and kPCr; not independently calibrated total reserve J",
+    "limitations": "No VO2, no calibrated continuous mechanical W series; coarse50s windows cannot resolve6s effort/recovery; load kg and WE ratio are not watt time series. Name column blank; exact XLS redistributed under confirmedCCBY4 with attribution."
+  },
+  "diagnostics": {
+    "doi": "10.3390/diagnostics16050744",
+    "inner_sha256": "b05919863ebc04b06718369cf7dcf398bb304a43f31534ee0cb9ec19d023a59c",
+    "members": [
+      "diagnostics-4136844-supplementary.pdf"
+    ],
+    "numeric_time_series_obtained": false,
+    "scope": "supplement contains only PDF, not numeric time series; n5, nominal2s MRS from methods; raw on request"
+  },
+  "external_validation": false
+}

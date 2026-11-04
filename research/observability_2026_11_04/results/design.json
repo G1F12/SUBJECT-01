@@ -1,0 +1,798 @@
+{
+  "common_basis": [
+    [
+      -0.3551159634093254,
+      -0.3551159634093254,
+      0.0,
+      0.0,
+      0.3551159634093254,
+      0.0,
+      0.0,
+      -0.37438724801817774,
+      -0.5562357202295982
+    ],
+    [
+      -0.22153509388722578,
+      -0.22153509388722578,
+      0.0,
+      0.0,
+      0.22153509388722578,
+      0.0,
+      0.0,
+      -0.12212546329510475,
+      0.8159276978301784
+    ],
+    [
+      0.8888878141545528,
+      -0.11111218584544723,
+      0.0,
+      0.0,
+      0.11111218584544723,
+      0.0,
+      0.0,
+      -0.10483735159117487,
+      -0.04562650780574458
+    ],
+    [
+      -0.11111218584544723,
+      0.8888878141545528,
+      0.0,
+      0.0,
+      0.11111218584544723,
+      0.0,
+      0.0,
+      -0.10483735159117487,
+      -0.04562650780574458
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.11111218584544723,
+      0.11111218584544723,
+      0.0,
+      0.0,
+      0.8888878141545528,
+      0.0,
+      0.0,
+      0.10483735159117487,
+      0.04562650780574458
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.09955139460602193,
+      -0.09955139460602193,
+      0.0,
+      0.0,
+      0.09955139460602193,
+      0.0,
+      0.0,
+      0.8969726374217697,
+      -0.13582743159446906
+    ],
+    [
+      0.009539009438914711,
+      0.009539009438914711,
+      0.0,
+      0.0,
+      -0.009539009438914711,
+      0.0,
+      0.0,
+      -0.08594787133496272,
+      0.01301497741112298
+    ]
+  ],
+  "robust": [
+    {
+      "design": "short_long",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 46.28703263211723,
+          "lambda_min": 0.02859110631881603,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 45.75025840235467,
+          "lambda_min": 0.049773462793957765,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 43.13700807373151,
+          "lambda_min": 0.04842362133221594,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        }
+      ],
+      "worst_logdet": 43.13700807373151,
+      "worst_lambda_min": 0.02859110631881603
+    },
+    {
+      "design": "short_incomplete",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 48.137776944653204,
+          "lambda_min": 0.10600710678526243,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 52.43052430063967,
+            "lambda_min": 0.03932894573555949
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 65.674225148225,
+            "lambda_min": 0.13109648578519997
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 61.57966390678523,
+          "lambda_min": 0.28782317156635995,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 67.73601393389069,
+            "lambda_min": 0.07503806191230561
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 80.979714781476,
+            "lambda_min": 0.2501268730410178
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 50.39607761596418,
+          "lambda_min": 0.37887076527991714,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 54.77839480726982,
+            "lambda_min": 0.08847539403313975
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 68.02209565485508,
+            "lambda_min": 0.2949179801104586
+          }
+        }
+      ],
+      "worst_logdet": 48.137776944653204,
+      "worst_lambda_min": 0.10600710678526243
+    },
+    {
+      "design": "medium_rest",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 53.532712269753546,
+          "lambda_min": 1.1957661192450353,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 58.78672206066396,
+            "lambda_min": 0.32953571546557214
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 64.40580392208986,
+            "lambda_min": 0.5492261924426186
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 56.69501918527702,
+          "lambda_min": 1.6542884419886201,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 62.25076130106441,
+            "lambda_min": 0.6043909050005705
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 67.86984316249028,
+            "lambda_min": 1.0073181750009457
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 55.616596881083964,
+          "lambda_min": 2.0589152843024197,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 61.36589309648176,
+            "lambda_min": 0.9460104693527581
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 66.98497495790767,
+            "lambda_min": 1.5766841155879265
+          }
+        }
+      ],
+      "worst_logdet": 53.532712269753546,
+      "worst_lambda_min": 1.1957661192450353
+    },
+    {
+      "design": "long_rest",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 51.03657621007519,
+          "lambda_min": 0.1191503329180433,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 53.715658228864655,
+          "lambda_min": 0.07415218769177098,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 52.879458821424976,
+          "lambda_min": 0.15285568853695422,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        }
+      ],
+      "worst_logdet": 51.03657621007519,
+      "worst_lambda_min": 0.07415218769177098
+    },
+    {
+      "design": "predepleted",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 38.078651768893934,
+          "lambda_min": 0.00011398116505630508,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 34.79027999612152,
+          "lambda_min": 2.7909514940014138e-06,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 44.25901306894714,
+          "lambda_min": 0.009093532360801956,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 36.692663955697085,
+            "lambda_min": 2.8726642226013685e-06
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 42.31174581712328,
+            "lambda_min": 4.787773704336966e-06
+          }
+        }
+      ],
+      "worst_logdet": 34.79027999612152,
+      "worst_lambda_min": 2.7909514940014138e-06
+    },
+    {
+      "design": "long_effort",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 69.21066114128982,
+          "lambda_min": 0.11603249221820539,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 78.97927612774508,
+            "lambda_min": 0.08498264431412357
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 82.14377892471465,
+            "lambda_min": 0.11331019241883131
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 69.83542697781354,
+          "lambda_min": 0.08223487951374654,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 79.73530003536206,
+            "lambda_min": 0.05641861956915651
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 82.8998028323316,
+            "lambda_min": 0.07522482609220793
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 62.87407707839079,
+          "lambda_min": 0.20740800597493178,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 69.19667551186743,
+            "lambda_min": 0.025518991046319876
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 72.361178308837,
+            "lambda_min": 0.03402532139509219
+          }
+        }
+      ],
+      "worst_logdet": 62.87407707839079,
+      "worst_lambda_min": 0.08223487951374654
+    },
+    {
+      "design": "low_power",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 55.305839295916805,
+          "lambda_min": 0.5414240700561966,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 52.786410708399146,
+          "lambda_min": 0.39313112303437747,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 56.85799024215142,
+          "lambda_min": 1.2098234797757275,
+          "full_calibrated_M5": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          },
+          "full_M5_per600s": {
+            "rank": 10,
+            "dimension": 11,
+            "logdet": null,
+            "lambda_min": 0.0
+          }
+        }
+      ],
+      "worst_logdet": 52.786410708399146,
+      "worst_lambda_min": 0.39313112303437747
+    },
+    {
+      "design": "high_power",
+      "corners": [
+        {
+          "factor": 0.8,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 59.13453448911284,
+          "lambda_min": 0.502882497364404,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 62.43669103634329,
+            "lambda_min": 0.011564519171344862
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 68.0557728977692,
+            "lambda_min": 0.019274198618907983
+          }
+        },
+        {
+          "factor": 1.0,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 60.69684457064698,
+          "lambda_min": 0.8801474467939668,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 67.74248426856276,
+            "lambda_min": 0.40825689860387904
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 73.36156612998866,
+            "lambda_min": 0.6804281643398007
+          }
+        },
+        {
+          "factor": 1.2,
+          "rank": 9,
+          "dimension": 9,
+          "logdet": 61.269172388220674,
+          "lambda_min": 1.2505828157941146,
+          "full_calibrated_M5": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 67.75692020672929,
+            "lambda_min": 0.34685017491775266
+          },
+          "full_M5_per600s": {
+            "rank": 11,
+            "dimension": 11,
+            "logdet": 73.37600206815519,
+            "lambda_min": 0.5780836248629201
+          }
+        }
+      ],
+      "worst_logdet": 59.13453448911284,
+      "worst_lambda_min": 0.502882497364404
+    }
+  ],
+  "D_order": [
+    "long_effort",
+    "high_power",
+    "medium_rest",
+    "low_power",
+    "long_rest",
+    "short_incomplete",
+    "short_long",
+    "predepleted"
+  ],
+  "E_order": [
+    "medium_rest",
+    "high_power",
+    "low_power",
+    "short_incomplete",
+    "long_effort",
+    "long_rest",
+    "short_long",
+    "predepleted"
+  ],
+  "full_calibrated_M5_D_order": [
+    "long_effort",
+    "high_power",
+    "medium_rest",
+    "short_incomplete"
+  ],
+  "full_calibrated_M5_E_order": [
+    "medium_rest",
+    "short_incomplete",
+    "long_effort",
+    "high_power"
+  ],
+  "per600s_M5_D_order": [
+    "long_effort",
+    "high_power",
+    "short_incomplete",
+    "medium_rest"
+  ],
+  "per600s_M5_E_order": [
+    "medium_rest",
+    "short_incomplete",
+    "long_effort",
+    "high_power"
+  ],
+  "channel_vs_repeats": [
+    {
+      "configuration": "M1",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 80.47827963527516,
+      "lambda_min": 30.879904939692008
+    },
+    {
+      "configuration": "M1",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 92.95492888535418,
+      "lambda_min": 123.51961975876803
+    },
+    {
+      "configuration": "M2",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 90.96452061775095,
+      "lambda_min": 436.4745461105169
+    },
+    {
+      "configuration": "M2",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 103.44116986782996,
+      "lambda_min": 1745.8981844420675
+    },
+    {
+      "configuration": "M3",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 83.90597738471729,
+      "lambda_min": 31.89913384361563
+    },
+    {
+      "configuration": "M3",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 96.38262663479631,
+      "lambda_min": 127.59653537446252
+    },
+    {
+      "configuration": "M4",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 87.33310932197534,
+      "lambda_min": 75.60785906187947
+    },
+    {
+      "configuration": "M4",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 99.80975857205436,
+      "lambda_min": 302.43143624751787
+    },
+    {
+      "configuration": "M5",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 94.19066760508179,
+      "lambda_min": 436.5734188896008
+    },
+    {
+      "configuration": "M5",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 106.6673168551608,
+      "lambda_min": 1746.2936755584033
+    },
+    {
+      "configuration": "M6",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 94.19980760368132,
+      "lambda_min": 436.6450149771902
+    },
+    {
+      "configuration": "M6",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 106.6696096985694,
+      "lambda_min": 1746.3657711103485
+    },
+    {
+      "configuration": "M7",
+      "repetitions_multiplier": 1,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 94.19980760368132,
+      "lambda_min": 436.6450149771902
+    },
+    {
+      "configuration": "M7",
+      "repetitions_multiplier": 4,
+      "rank": 9,
+      "dimension": 9,
+      "logdet": 106.6696096985694,
+      "lambda_min": 1746.3657711103485
+    }
+  ],
+  "warning": "fixed common quotient, conditional noise and local log coordinates; not determinant of singular full FIM; corners not a physiological prior; durations differ, no universal clinical ranking"
+}

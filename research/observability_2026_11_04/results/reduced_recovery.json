@@ -1,0 +1,157 @@
+{
+  "origin": "SYNTHETIC D2 quotient only; one draw per stress condition, no coverage claim",
+  "truth": {
+    "fast_capacity_J_mechanical_equivalent": 2241.299303944313,
+    "slow_capacity_J_mechanical_equivalent": 6163.5730858468605,
+    "fast_power_cap_W_mechanical_equivalent": 560.3248259860783,
+    "slow_power_cap_W_mechanical_equivalent": 205.45243619489537,
+    "oxidative_excess_cap_mechanical_W": 340.23010223317834,
+    "fast_recovery_tau_s": 81.657,
+    "slow_recovery_tau_s": 600,
+    "recharge_efficiency": 0.8,
+    "oxygen_tau_s": 28
+  },
+  "training_designs": [
+    "medium_rest",
+    "long_effort",
+    "high_power"
+  ],
+  "fits": [
+    {
+      "case": "clean",
+      "log_parameter_error": [
+        -3.817828161077305e-05,
+        0.011988062449061252,
+        -3.818796277809707e-05,
+        0.00010260286808905397,
+        7.404125376839919e-06,
+        5.232252757231682e-06,
+        0.01070138017796187,
+        -0.0004643748060259935,
+        8.046117601400316e-05
+      ],
+      "estimated_combinations": {
+        "fast_capacity_J_mechanical_equivalent": 2241.2137366217303,
+        "slow_capacity_J_mechanical_equivalent": 6237.907054808699,
+        "fast_power_cap_W_mechanical_equivalent": 560.3034287310412,
+        "slow_power_cap_W_mechanical_equivalent": 205.47351728557652,
+        "oxidative_excess_cap_mechanical_W": 340.2326213488382,
+        "fast_recovery_tau_s": 81.65742725118113,
+        "slow_recovery_tau_s": 606.4553068483733,
+        "recharge_efficiency": 0.799628586399413,
+        "oxygen_tau_s": 28.002253003566832
+      },
+      "max_relative_parameter_error": 0.012060207273688173,
+      "prediction_RMSE_W": 0.0149300767876974,
+      "success": true,
+      "nfev": 41,
+      "bound_hit": false,
+      "starts_cost": [
+        0.00032600176959656586,
+        24.922331053188913
+      ]
+    },
+    {
+      "case": "noise20W",
+      "log_parameter_error": [
+        -0.015810337521396527,
+        0.011801491153089785,
+        -0.015811950726259592,
+        0.012261927271047338,
+        0.08787988714466538,
+        -0.0121530853156152,
+        0.03029439677132769,
+        0.19253955243077114,
+        0.14020015714538045
+      ],
+      "estimated_combinations": {
+        "fast_capacity_J_mechanical_equivalent": 2206.1422601647005,
+        "slow_capacity_J_mechanical_equivalent": 6236.743348965764,
+        "fast_power_cap_W_mechanical_equivalent": 551.534675302037,
+        "slow_power_cap_W_mechanical_equivalent": 207.98718773542515,
+        "oxidative_excess_cap_mechanical_W": 371.4826078785153,
+        "fast_recovery_tau_s": 80.6706214243142,
+        "slow_recovery_tau_s": 618.4547646600981,
+        "recharge_efficiency": 0.9698595625105475,
+        "oxygen_tau_s": 32.214113607770976
+      },
+      "max_relative_parameter_error": 0.21232445313818427,
+      "prediction_RMSE_W": 2.0839084084219635,
+      "success": true,
+      "nfev": 26,
+      "bound_hit": false,
+      "starts_cost": [
+        541.6139293836718,
+        563.5144796305614
+      ]
+    },
+    {
+      "case": "missing30pct",
+      "log_parameter_error": [
+        0.021144151555955507,
+        0.03497188737738102,
+        0.009140697089111189,
+        0.019260163303001867,
+        -0.05440691547815754,
+        0.01112590257346984,
+        0.050905822760478975,
+        0.049670586895722624,
+        -0.078064913078091
+      ],
+      "estimated_combinations": {
+        "fast_capacity_J_mechanical_equivalent": 2289.1942406362396,
+        "slow_capacity_J_mechanical_equivalent": 6382.938320671407,
+        "fast_power_cap_W_mechanical_equivalent": 565.4700652038132,
+        "slow_power_cap_W_mechanical_equivalent": 209.44783618682737,
+        "oxidative_excess_cap_mechanical_W": 322.21378199920025,
+        "fast_recovery_tau_s": 82.57058060685517,
+        "slow_recovery_tau_s": 631.3342758507567,
+        "recharge_efficiency": 0.8407398807462032,
+        "oxygen_tau_s": 25.89732281371789
+      },
+      "max_relative_parameter_error": 0.07509561379578966,
+      "prediction_RMSE_W": 2.369200904459926,
+      "success": true,
+      "nfev": 53,
+      "bound_hit": false,
+      "starts_cost": [
+        359.92107299892996,
+        405.4374373100385
+      ]
+    },
+    {
+      "case": "unmodelled_drift",
+      "log_parameter_error": [
+        0.0606103369486124,
+        -0.0009851786396785863,
+        0.012759487384707292,
+        -0.012688162740816356,
+        0.037921165640872834,
+        0.045398952775617805,
+        -0.013530231922155515,
+        -0.3453430819366279,
+        -0.08939595253948616
+      ],
+      "estimated_combinations": {
+        "fast_capacity_J_mechanical_equivalent": 2381.3464929779743,
+        "slow_capacity_J_mechanical_equivalent": 6157.503855427559,
+        "fast_power_cap_W_mechanical_equivalent": 567.520089855682,
+        "slow_power_cap_W_mechanical_equivalent": 202.86209036512003,
+        "oxidative_excess_cap_mechanical_W": 353.3797739889047,
+        "fast_recovery_tau_s": 85.44958050456866,
+        "slow_recovery_tau_s": 591.9365341409099,
+        "recharge_efficiency": 0.5663819340265771,
+        "oxygen_tau_s": 25.60553547582554
+      },
+      "max_relative_parameter_error": 0.2920225824667787,
+      "prediction_RMSE_W": 9.492127333144019,
+      "success": true,
+      "nfev": 50,
+      "bound_hit": false,
+      "starts_cost": [
+        1245.3995720727692,
+        1247.0023877584383
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+# Аналитический аудит D2 — EXP-0019
+
+Объект: неизменённый `recovery_2026_11_04/engine.py`, mode=corrected.
+Не переносим доказательство автоматически на все уравнения Integrated/CPE45.
+Вектор θ=(Cf,Cs,Lf,Ls,τf,τs,η,e,τo,Q,M), 11 положительных параметров.
+Cf,Cs,E имеют J; Lf,Ls,Q,M,O имеют W; τ — s; η,e безразмерны.
+Demand D(t) механический, известный. Начальное O=M, Ei=fiCi, fi известно.
+В основном аудите peripheral fatigue отключено; симметрии сохраняются и с
+наследованным fatigue при том же demand, поскольку его обновление зависит от P.
+
+За шаг h:
+
+```
+R=(Cf-Ef)/τf+(Cs-Es)/τs
+T=min(Q,M+D/η+R/e)
+Onew=T+(O-T)exp(-h/τo)
+X=T h+(O-T)τo(1-exp(-h/τo))             [oxidative input J]
+A=max(0,X-M h)                         [available above baseline]
+Bi=min(Ei,Li h)
+W=min(D h,η(A+Bf+Bs))                  [mechanical J]
+N=max(0,W/η-A)
+wf=min(Bf,N); ws=min(Bs,max(0,N-wf))
+```
+
+При N=0 surplus=A-W/η; пополнение каждого резерва ограничено
+дефицитом Ci−Ei с экспонентой τi и доступным surplus·e. Fast получает приоритет.
+`heat=X+withdraw−recharge−W`, то есть
+X+Einitial−Efinal=W+heat. Это бухгалтерское сохранение энергии, не верификация
+молекулярного содержания резерва или терморегуляции.
+
+## Две точные непрерывные симметрии
+
+S(k): η′=kη; (Ci,Ei,Li,Q,M,O)′=(Ci,Ei,Li,Q,M,O)/k;
+e,τi,τo,D,fi неизменны. T′=T/k, X′=X/k,A′=A/k,
+Bi′=Bi/k, N′=N/k. Следовательно W′=W, все обновления состояний
+эквивариантны. Доказательство индукцией по шагам, включая min-ограничители.
+Необходима допустимость kη≤1. Открытый интервал допустимых k достаточен для
+опровержения структурной идентифицируемости; отсутствие выхода на границу
+не спасает оценку. Отношения Ef/Cf неизменны. e и τ **не** масштабируются.
+
+B(b): M′=M+b, Q′=Q+b, O′=O+b; остальное неизменно. При Q≥M и Oinitial=M
+всегда O≥M. Поэтому T′=T+b, X′=X+b h и A′=A. Мощность и оба резерва
+строго неизменны, хотя абсолютный oxidative input и heat различны.
+Допустимые b сохраняют неотрицательность. Режимы с Q<M в это доказательство
+не входят. Это **новая** найденная симметрия, не просто слабая чувствительность M.
+
+Объединённое преобразование: η′=kη, Ei′=Ei/k, Ci′=Ci/k, Li′=Li/k,
+(Q,M,O)′=(Q,M,O)/k+b. Оно не зависит от effort/rest history. Никакой
+power-only протокол не разрушит эти две неоднозначности. Относительный PCr
+также не разрушает их при observation map r=Ef/Cf. Абсолютный Ef разрушает
+S(k), но сохраняет B(b). Измерение абсолютного O(t) в общих информативных
+режимах отличает и scale, и baseline; один его неизменный отсчёт может оставить
+комбинацию k,b — требуется изменяющийся во времени сигнал или два anchors.
+
+Нормирование всей мощности на первый bout добавляет симметрию общей
+механической амплитуды, **если** demand и все механические масштабы тоже
+неизвестны и масштабируются. При фиксированном известном demand это не
+универсальное дополнительное доказательство. Исторический rank7/11 относится
+к normalized bout means, не к более богатым новым trace observations.
+
+## Редукция без ложной абсолютной физиологии
+
+Достаточные инварианты для вычисления P в D2:
+
+```
+cf=ηCf; cs=ηCs                  [mechanical-equivalent J]
+lf=ηLf; ls=ηLs; q=η(Q−M)        [mechanical-equivalent W]
+τf,τs,e,τo                      [s,s,1,s]
+ef=ηEf; es=ηEs; o=η(O−M)
+```
+
+Девять параметров. Из предыдущих формул получаются те же обновления с
+η=1,M=0,Q=q, capacity=ci, release=li. Это выбор координат, **не** η человека=100%.
+Код reduced_trace реализует именно этот представитель. Ledger сохраняет
+эффективную excess energy; физиологическое тепло, полный metabolic cost и M
+из него не восстанавливаются. Сохраняются bounds, устойчивость и вся мощность
+во всех проверенных протоколах. Ранг9 на богатом общем trace experiment —
+свидетельство локальной идентифицируемости инвариантов в заданной области,
+не доказательство глобальной однозначности всех возможных режимов/структур.
+При inactive release caps, отсутствии истощения или deficit-limited recovery
+дополнительные параметры могут совсем не влиять на output.
+
+## Что означает дополнительное измерение
+
+Relative PCr r=Ef/Cf — явная **условная** связь fast state с PCr. Реальный
+fast reservoir также может содержать ATP и другие вклады; связь нужно проверять.
+Для химической ёмкости необходимо независимо знать baseline concentration,
+объём активной внутриклеточной воды, региональную вовлечённость и mol→J
+конверсию. В общем Ef=g·c(t)·Vactive·ΔG (или подходящая энтальпия для
+соответствующего ledger). Одного mmol/l недостаточно. При неизвестном gVΔG
+его можно масштабировать вместе с Ef; S(k) возвращается. Нормирование PCr на
+предполагаемую ATP8.2mmol/l — дополнительная предпосылка, не новый anchor.
+Поток PCr отражает net buffer change, а не автоматически весь ATP turnover.
+
+Идеальный VO2 канал здесь O(t), уже вW после **известных** caloric equivalent,
+ATP-coupling и local allocation. Реально yVO2=gO+a с delay/filter и иной
+whole-body/local областью. При неизвестном g переход S(k),g′=kg сохраняет y;
+при неизвестном a переход B(b),a′=a−gb сохраняет y. Относительный PCr не
+разрушает обе симметрии. В calibration.json численно проверен gain-null vector.
+Неизвестные transport delay, oxygen stores, other-muscle demand и RER создают
+дополнительные nuisance parameters. Не объявляем M2 реальной полной идентификацией.
+
+η, измеренная через ту же fitted D2, не независимый anchor. Независимая cost/η
+снимает scale, но без абсолютного baseline/oxidative информации сохраняется B(b).
+e и τ не входят в доказанные группы. Они могут быть локально оценимы при
+различимых recharge-limited и deficit-limited участках, но rank deficiency
+конкретного протокола не является их новой точной универсальной симметрией.
+Fast/slow перестановка не считается симметрией из-за приоритетного allocator.
+
+## FIM, likelihood и применимость дизайна
+
+При y=h(θ,u)+ε, ε~N(0,Σ), известной Σ, локально дифференцируемом h:
+logL=−(y−h)ᵀΣ⁻¹(y−h)/2+const; ожидаемая FIM=JᵀΣ⁻¹J.
+Расчёт ведётся в logθ; параметры положительны, единицы сравнения зафиксированы.
+Два exact-null directions делают full determinant power FIM нулевым.
+Для общей девятимерной проекции B, ортогональной аналитическим генераторам,
+F9=(J B)ᵀ(J B). D=logdet(F9), E=λmin(F9) определены только при rank9.
+Это restricted/common-subspace design; для M2..M7 не выдаём его за marginal
+информацию о параметрах при свободных дополнительных nuisance directions.
+Для calibrated M5 дополнительно публикуется **full11** D/E только при rank11.
+Сингулярные варианты получают logdet=null, λmin=0, не pseudodeterminant winner.
+
+Min/max dynamics кусочно гладкие. На границе переключения конечная разность
+может показать ложное направление: при eps1e−3..1e−4 rank10 вместо9; десятое
+singular value линейно уходит к0 при уменьшении eps. Используется eps1e−6,
+ряд1e−3..1e−7 сохранён; точные аналитические симметрии имеют приоритет над SVD.
+FIM — локальная Gaussian approximation, не global profile и не physiological CI.
+Оптимизация ограниченной конечной сетки не устанавливает глобально лучший протокол.
+Profile likelihood для effective recurrence оптимизирует depletion при каждом τ,
+использует известную условную σ=.02 и отдельно показывает истинную flat case d=0.
+Порог3.84 — рабочий one-dimensional Gaussian likelihood support, не эмпирическое
+покрытие при границах/неправильной структуре. Sensitivity cosines отделены от
+pinv parameter correlations; у null parameters marginal CI не рассчитываются.
+
+Cross-platform replay: Linux run41873432421 reproduced all outputs except missing-data nonlinear recovery logparameter8 differed by4.4145e-5, maxrelativeerror by4.0831e-5, nfev49vs53. Solver-only logparameter/maxrelativeerror absolute tolerance is1e-4 (about0.01% parameter precision), with nfev checked as finite-budget1..60 instead of exact iteration parity. Predictions, costs, all remaining numbers, SVD/physics tolerances and original archived outputs unchanged. Regression checks reject1e-3 parameter changes or changedpredictionerror.

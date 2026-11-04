@@ -7,3 +7,5 @@ research/cpe45_2026_11_04/**/*.xlsx -text
 research/cpe45_2026_11_04/data/SRC-*_europepmc.json -text
 research/recovery_2026_11_04/** text eol=lf
 research/recovery_2026_11_04/**/*.png -text
+research/observability_2026_11_04/** text eol=lf
+research/observability_2026_11_04/**/*.xls -text

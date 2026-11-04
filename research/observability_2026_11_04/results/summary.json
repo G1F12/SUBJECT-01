@@ -1,0 +1,37 @@
+{
+  "origin": "conditional computational evidence only",
+  "combined_ranks": {
+    "M1": 9,
+    "M2": 11,
+    "M3": 9,
+    "M4": 10,
+    "M5": 11,
+    "M6": 11,
+    "M7": 11
+  },
+  "D_order": [
+    "long_effort",
+    "high_power",
+    "medium_rest",
+    "low_power",
+    "long_rest",
+    "short_incomplete",
+    "short_long",
+    "predepleted"
+  ],
+  "E_order": [
+    "medium_rest",
+    "high_power",
+    "low_power",
+    "short_incomplete",
+    "long_effort",
+    "long_rest",
+    "short_long",
+    "predepleted"
+  ],
+  "symmetry_max_W": 2.5266899683629163e-11,
+  "reduction_max_W": 1.5717205315013416e-11,
+  "new_external_validation": false,
+  "NO_GO": true,
+  "CPE45": "NOT EXTERNALLY VALIDATED"
+}

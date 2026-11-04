@@ -64,5 +64,12 @@
     "status": "adopted",
     "decision": "Pre-extraction rules and pre-test code/parameter locks govern new power validation; retain constant selected before test, flat recovery profile, all negative transfers and NO_GO. No architecture re-ranking with unvalidated energy module. OSF raw with unknown licence is not redistributed.",
     "basis": "User recovery-cycle directive; commits9f25664/8319168; EXP-0015..0018"
+  },
+  {
+    "id": "DEC-0010",
+    "date": "2026-11-04",
+    "status": "adopted",
+    "decision": "Cycle5 A/C/D: use nine mechanical-equivalent combinations for D2 power-only inference, never interpret gauge eta1/M0 physiologically; retain NO_GO and NOT EXTERNALLY VALIDATED. Two absolute anchors or calibrated dynamic oxidative channel needed to separate scale and baseline.",
+    "basis": "EXP-0019..0022; mathematics and data-access audit"
   }
 ]

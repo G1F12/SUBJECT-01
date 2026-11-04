@@ -82,5 +82,26 @@
     "status": "model_counterexample",
     "claim": "Warminitialoxygen800W worsens old normalizedforecastRMSE to582.94W; timestep reduction and zero intercept do not remove original error.",
     "context": "Rejects these specific model fixes; does not deny real warm-up/BMR effects."
+  },
+  {
+    "id": "NEG-0013",
+    "experiment_id": "EXP-0019",
+    "status": "model_counterexample",
+    "claim": "Relative PCr and protocol changes cannot remove either D2 scale or baseline symmetry; absolute PCr alone leaves baseline unidentifiable.",
+    "context": "Preserves previous negative findings; synthetic stress is not empirical validation"
+  },
+  {
+    "id": "NEG-0014",
+    "experiment_id": "EXP-0020",
+    "status": "model_counterexample",
+    "claim": "Dryad public raw retry401/403; obtained new PCr data lack joint continuous human VO2/power and independent absolute calibration. PCr asymptote constraint shifts S1 tau97..164s vs77..86s exploratory freeasymptote.",
+    "context": "Preserves previous negative findings; synthetic stress is not empirical validation"
+  },
+  {
+    "id": "NEG-0015",
+    "experiment_id": "EXP-0022",
+    "status": "model_counterexample",
+    "claim": "Coarse12s sampling loses local directions; unmodelledpotentiation biases synthetictau to46..51s from60s. Clean nineparameter nonlinear fit still1.2%maxparametererror; modeldiscrepancy drift29.2%.",
+    "context": "Preserves previous negative findings; synthetic stress is not empirical validation"
   }
 ]

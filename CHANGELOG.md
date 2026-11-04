@@ -1,5 +1,23 @@
 # Changelog (append-only research history)
 
+## 2026-11-04 — Research Cycle 5: observability и экспериментальный дизайн
+
+- EXP-0019..0022: scale symmetry и новая additive oxidative-baseline symmetry;
+  power-only reduction11→9 combinations, аналитический вывод из D2.
+-63-cell matrix, M1..M7 Jacobian/SVD/FIM/correlations, profile likelihood,
+  finite-difference convergence и calibration nuisance audit.
+-8virtual protocols, D/E на nonsingular quotient и calibrated full11;
+ 3uncertainty corners, sampling/missing/noise/AR1/timing/discrepancy stress.
+- SRC-0043..0049: прочитаны relativePCr522cells/2людей, plantar144points/
+ 1человек и PeerJXLS17людей. Нет jointcontinuoushumanVO2-power-PCr.
+  Dryad401/403 повторён; memberhashes/licenses/recipes сохранены, rawignored.
+- NEG-0013..0015: baselineconfounding, отсутствие jointdata, sensitivity к
+  asymptote/sampling/discrepancy, practical inverse error дажеclean.
+-19новыхtests, pinnedsource content и computational replay вActions;
+  все прежние suites/lockedtestresults сохранены. FND21..24,DEC10,ISS16.
+- Результат A/C/D; новой independent empirical validation нет.
+  CPE45 NOT EXTERNALLY VALIDATED, NO_GO, I/II/III без нового преимущества.
+
 ## 2026-11-04 — динамический CPE45 и отрицательная проверка переноса
 
 - EXP-0011..0014: 2700-s раздельные energy/oxidative/peripheral/mechanical/
@@ -92,3 +110,7 @@
 - 24pause/depletioncases,14perturbations,64epistemicUQ,4dt×2structures,2700sstability;
  26новыхtests/CI/reproduction/2PNG. NEG-0010..0012;FND-0017..0020;ISS-0014/15;
  DEC-0009. CPE45 NOT EXTERNALLY VALIDATED,архитектуры не перерангированы,NO_GO.
+
+- Cycle5 CI access repair: EuropePMC large supplementary archive returned HTTP500. Retained exact224256-byte PeerJ DataS3 XLS under confirmedCCBY4.0 with attribution and SHA256; participant-namefields blank. Added nativefile integrity/privacy check;19newtests. Scientificoutputs unchanged.
+
+CI source replay limitation: run41871865726 also failed on a plantar archive read timeout. Main validation now explicitly checks retained licensed XLS content and archived source-audit hashes offline; it does NOT claim a fresh replay of unavailable raw. Manual workflow source-access.yml retains full live retrieval/content replay. Full content replay passed locally from obtained pinned cache. Scientific numeric replay remains mandatory.

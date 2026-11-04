@@ -327,5 +327,77 @@
     "reproduction_command": "python research/recovery_2026_11_04/reproduce.py --check",
     "limits": "No physiological recovery identification; physical transfer failed; CPE45 NOT EXTERNALLY VALIDATED; NO_GO",
     "external_validation": "not_empirically_validated_CPE45"
+  },
+  {
+    "id": "EXP-0019",
+    "title": "Независимый вывод симметрий и аудит каналов наблюдения D2",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/observability_2026_11_04/audit.py",
+    "inputs": "research/observability_2026_11_04/configuration.json",
+    "outputs": [
+      "research/observability_2026_11_04/results/measurement_sets.json",
+      "research/observability_2026_11_04/results/symmetry_reduction.json",
+      "research/observability_2026_11_04/results/finite_difference.json",
+      "research/observability_2026_11_04/results/calibration.json"
+    ],
+    "report": "research/observability_2026_11_04/REPORT.md",
+    "method": "Analytic proof + conditional computational design; public numeric content inspection; no human intervention or new independent power test",
+    "reproduction_command": "python research/observability_2026_11_04/verify.py",
+    "limits": "Known observation maps and calibration assumptions; local rank is not global identifiability or human validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0020",
+    "title": "Полученные PCr данные и воспроизводимый аудит публичного доступа",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/observability_2026_11_04/inspect_data.py",
+    "inputs": "research/observability_2026_11_04/configuration.json",
+    "outputs": [
+      "research/observability_2026_11_04/data_inventory.json",
+      "research/observability_2026_11_04/retrieval.json",
+      "research/observability_2026_11_04/licensed_data/peerj-04-2259-s003.xls"
+    ],
+    "report": "research/observability_2026_11_04/REPORT.md",
+    "method": "Analytic proof + conditional computational design; public numeric content inspection; no human intervention or new independent power test",
+    "reproduction_command": "python research/observability_2026_11_04/verify.py",
+    "limits": "Known observation maps and calibration assumptions; local rank is not global identifiability or human validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0021",
+    "title": "Условный D/E/profile optimal experimental design",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/observability_2026_11_04/audit.py",
+    "inputs": "research/observability_2026_11_04/configuration.json",
+    "outputs": [
+      "research/observability_2026_11_04/results/design.json"
+    ],
+    "report": "research/observability_2026_11_04/REPORT.md",
+    "method": "Analytic proof + conditional computational design; public numeric content inspection; no human intervention or new independent power test",
+    "reproduction_command": "python research/observability_2026_11_04/verify.py",
+    "limits": "Known observation maps and calibration assumptions; local rank is not global identifiability or human validation",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0022",
+    "title": "Девятипараметрическая редукция и synthetic robustness audit",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/observability_2026_11_04/audit.py",
+    "inputs": "research/observability_2026_11_04/configuration.json",
+    "outputs": [
+      "research/observability_2026_11_04/results/stress.json",
+      "research/observability_2026_11_04/results/reduced_recovery.json",
+      "research/observability_2026_11_04/results/peripheral.json",
+      "research/observability_2026_11_04/results/summary.json"
+    ],
+    "report": "research/observability_2026_11_04/REPORT.md",
+    "method": "Analytic proof + conditional computational design; public numeric content inspection; no human intervention or new independent power test",
+    "reproduction_command": "python research/observability_2026_11_04/verify.py",
+    "limits": "Known observation maps and calibration assumptions; local rank is not global identifiability or human validation",
+    "external_validation": "not_done"
   }
 ]
