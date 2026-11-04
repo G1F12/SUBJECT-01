@@ -75,8 +75,13 @@
     "related_experiments": [
       "EXP-0011",
       "EXP-0012",
-      "EXP-0013"
+      "EXP-0013",
+      "EXP-0015",
+      "EXP-0016",
+      "EXP-0017",
+      "EXP-0018"
     ],
-    "claim_level": "hypothesis"
+    "claim_level": "hypothesis",
+    "progress_2026_11_04_recovery": "Power-only recovery identification failed; exact scaling confounding established. Context-specific physiological kinetics remain unverified."
   }
 ]

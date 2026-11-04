@@ -1,0 +1,129 @@
+{
+  "preregistration_commit": "9f25664",
+  "source_commit": "c7a7c9caa7f619f64c88b9e0430a6b1f83148807",
+  "seed": 20261104,
+  "development_ids": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20
+  ],
+  "test_ids": [
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21
+  ],
+  "training_observations": 378,
+  "training_sha256": "b6b2842d44d1f126426aa94aeba750a51504f79626d2f7e61895898282ac66f0",
+  "source_metadata_sha256": "367d067f60b141196451f396b0629090332dbc0423520e228543aed8f9ada1be",
+  "code_hashes": {
+    "engine.py": "1711bde73191d16544b585adc3f357a9022c58494bb708209aa61f305068688b",
+    "dataset.py": "3768397848490acd4ce33d0cdaa26fe33d89c8b9a6a867a05058cd6e233d0bf7",
+    "pipeline.py": "90615a08dee7fcf7fc816c6d885a6a8ae529728a9331701398548e24a34c62c2"
+  },
+  "models": {
+    "constant": {},
+    "linear": {
+      "slope": 0.009709676493691347
+    },
+    "monoexponential": {
+      "amplitude": 0.1016740148157363,
+      "tau_reps": 1.0
+    },
+    "D1_existing": {},
+    "D2_corrected": {},
+    "empirical_recovery": {
+      "depletion": 0.0,
+      "tau_s": 1.0
+    },
+    "D4_hybrid_conditional": {
+      "tau_s": 1.0,
+      "interpretation": "effective output recovery imported as conditional stress-test, not identified PCr kinetics"
+    }
+  },
+  "selected_model": "constant",
+  "selection": "grouped leave-one-participant-out RMSE among preregistered eligible models",
+  "D4_status": "diagnostic only; effective output tau is not physical PCr tau",
+  "grouped_cv_scores": [
+    {
+      "model": "constant",
+      "n": 378,
+      "MAE_W": 105.13311958175862,
+      "RMSE_W": 125.13658349343056,
+      "bias_W": -43.885372047115126,
+      "calibration_intercept_W": 422.3695223076263,
+      "calibration_slope": 0.3040871946250812
+    },
+    {
+      "model": "linear",
+      "n": 378,
+      "MAE_W": 109.06102320100567,
+      "RMSE_W": 130.96823035301253,
+      "bias_W": -17.04139459812047,
+      "calibration_intercept_W": 483.09385574454245,
+      "calibration_slope": 0.18338298254973678
+    },
+    {
+      "model": "monoexponential",
+      "n": 378,
+      "MAE_W": 105.58403126482852,
+      "RMSE_W": 128.86617501605755,
+      "bias_W": 8.360329762974738,
+      "calibration_intercept_W": 455.7854990616757,
+      "calibration_slope": 0.22137932949131217
+    },
+    {
+      "model": "D1_existing",
+      "n": 378,
+      "MAE_W": 298.8510678704409,
+      "RMSE_W": 311.53009554886376,
+      "bias_W": -298.46376470658544,
+      "calibration_intercept_W": 353.16777319699605,
+      "calibration_slope": 0.8109017468579292
+    },
+    {
+      "model": "D2_corrected",
+      "n": 378,
+      "MAE_W": 276.305372122476,
+      "RMSE_W": 293.54724875296733,
+      "bias_W": -276.11742495399733,
+      "calibration_intercept_W": 414.2326574088795,
+      "calibration_slope": 0.5568047029389425
+    },
+    {
+      "model": "empirical_recovery",
+      "n": 378,
+      "MAE_W": 105.13311958175862,
+      "RMSE_W": 125.13658349343056,
+      "bias_W": -43.885372047115126,
+      "calibration_intercept_W": 422.3695223076263,
+      "calibration_slope": 0.3040871946250812
+    },
+    {
+      "model": "D4_hybrid_conditional",
+      "n": 378,
+      "MAE_W": 105.07362098469358,
+      "RMSE_W": 127.69685910433347,
+      "bias_W": -56.50240131986552,
+      "calibration_intercept_W": 434.5445618372974,
+      "calibration_slope": 0.2883914585623618
+    }
+  ],
+  "test_status": "NOT_OPENED",
+  "CPE45_status": "not_assessed",
+  "intervention_status": "NO_GO"
+}

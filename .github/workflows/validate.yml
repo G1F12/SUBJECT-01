@@ -28,3 +28,7 @@ jobs:
         run: python research/cpe45_2026_11_04/test_model.py
       - name: Reproduce dynamic CPE45 scenarios and held-participant endpoint errors
         run: python research/cpe45_2026_11_04/experiments.py --check
+      - name: Verify recovery physics, identifiability and locked-test leakage controls
+        run: python research/recovery_2026_11_04/test_recovery.py
+      - name: Reproduce locked independent recovery endpoint and negative diagnostics
+        run: python research/recovery_2026_11_04/reproduce.py --check

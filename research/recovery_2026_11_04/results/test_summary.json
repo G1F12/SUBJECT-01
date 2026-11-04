@@ -1,0 +1,147 @@
+{
+  "selected_model_before_test": "constant",
+  "test_ids": [
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21
+  ],
+  "test_observations": 189,
+  "scores": [
+    {
+      "model": "constant",
+      "n": 189,
+      "MAE_W": 100.94443596623827,
+      "RMSE_W": 126.54135174329362,
+      "bias_W": -62.421844885361594,
+      "calibration_intercept_W": 473.2055875952808,
+      "calibration_slope": 0.309234992446947
+    },
+    {
+      "model": "linear",
+      "n": 189,
+      "MAE_W": 99.5747765947377,
+      "RMSE_W": 123.33468384566892,
+      "bias_W": -33.55112034830028,
+      "calibration_intercept_W": 513.757134902223,
+      "calibration_slope": 0.22988390091156488
+    },
+    {
+      "model": "monoexponential",
+      "n": 189,
+      "MAE_W": 96.56884538166538,
+      "RMSE_W": 118.2948840835763,
+      "bias_W": -5.867729925901922,
+      "calibration_intercept_W": 491.88524701788117,
+      "calibration_slope": 0.2536970508377881
+    },
+    {
+      "model": "D1_existing",
+      "n": 189,
+      "MAE_W": 340.7132108265857,
+      "RMSE_W": 350.699695253071,
+      "bias_W": -340.7132108265857,
+      "calibration_intercept_W": 426.1061840290336,
+      "calibration_slope": 0.7301005245851329
+    },
+    {
+      "model": "D2_corrected",
+      "n": 189,
+      "MAE_W": 347.18317786338906,
+      "RMSE_W": 361.7057380577381,
+      "bias_W": -347.18317786338906,
+      "calibration_intercept_W": 559.9525568657912,
+      "calibration_slope": 0.3134657856274266
+    },
+    {
+      "model": "empirical_recovery",
+      "n": 189,
+      "MAE_W": 100.94443596623827,
+      "RMSE_W": 126.54135174329362,
+      "bias_W": -62.421844885361594,
+      "calibration_intercept_W": 473.2055875952808,
+      "calibration_slope": 0.309234992446947
+    },
+    {
+      "model": "D4_hybrid_conditional",
+      "n": 189,
+      "MAE_W": 108.49291453375767,
+      "RMSE_W": 134.45695547266416,
+      "bias_W": -85.923532226784,
+      "calibration_intercept_W": 477.883217057414,
+      "calibration_slope": 0.31376933340675295
+    }
+  ],
+  "bootstrap": [
+    {
+      "model": "constant",
+      "RMSE_p025_W": 110.11073135874364,
+      "RMSE_p975_W": 150.6508240043268,
+      "paired_RMSE_minus_constant_p025_W": 0.0,
+      "paired_RMSE_minus_constant_p975_W": 0.0,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "linear",
+      "RMSE_p025_W": 105.34654161457564,
+      "RMSE_p975_W": 146.09018645512785,
+      "paired_RMSE_minus_constant_p025_W": -9.466384414529017,
+      "paired_RMSE_minus_constant_p975_W": 4.819510591976629,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "monoexponential",
+      "RMSE_p025_W": 96.34662333241373,
+      "RMSE_p975_W": 141.8172477523402,
+      "paired_RMSE_minus_constant_p025_W": -19.221198031068575,
+      "paired_RMSE_minus_constant_p975_W": 5.006076723033216,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "D1_existing",
+      "RMSE_p025_W": 321.25417514561,
+      "RMSE_p975_W": 381.9142701553227,
+      "paired_RMSE_minus_constant_p025_W": 205.99049907311317,
+      "paired_RMSE_minus_constant_p975_W": 242.22781185300232,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "D2_corrected",
+      "RMSE_p025_W": 314.7960801049765,
+      "RMSE_p975_W": 409.371804768508,
+      "paired_RMSE_minus_constant_p025_W": 197.9613292572433,
+      "paired_RMSE_minus_constant_p975_W": 270.3549449403868,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "empirical_recovery",
+      "RMSE_p025_W": 110.11073135874364,
+      "RMSE_p975_W": 150.6508240043268,
+      "paired_RMSE_minus_constant_p025_W": 0.0,
+      "paired_RMSE_minus_constant_p975_W": 0.0,
+      "resamples": 2000,
+      "participants": 7
+    },
+    {
+      "model": "D4_hybrid_conditional",
+      "RMSE_p025_W": 118.64936022295748,
+      "RMSE_p975_W": 158.53784069666858,
+      "paired_RMSE_minus_constant_p025_W": 4.454489602104831,
+      "paired_RMSE_minus_constant_p975_W": 11.032783234850053,
+      "resamples": 2000,
+      "participants": 7
+    }
+  ],
+  "status": "new independent cohort, locked participant test for power endpoint only; CPE45 NOT EXTERNALLY VALIDATED",
+  "source": "OSF db3sk; no PCr and no continuous VO2",
+  "model_lock_sha256": "c609562ad4182465b3f77730fa9c37816e1ac85b0bc97de274e91a85a64bd934",
+  "raw_data_policy": "unlicensed raw omitted; public retrieval recipe + SHA256; predictions/statistics are our derived research outputs"
+}

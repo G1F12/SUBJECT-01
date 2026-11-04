@@ -1,0 +1,115 @@
+{
+  "dataset_doi": "10.5061/dryad.08kprr59v",
+  "metadata_version": 348930,
+  "returned_file_version": 314619,
+  "files": [
+    {
+      "_links": {
+        "self": {
+          "href": "/api/v2/files/3450614"
+        },
+        "stash:dataset": {
+          "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.08kprr59v"
+        },
+        "stash:version": {
+          "href": "/api/v2/versions/314619"
+        },
+        "stash:files": {
+          "href": "/api/v2/versions/314619/files"
+        },
+        "stash:download": {
+          "href": "/api/v2/files/3450614/download"
+        },
+        "curies": [
+          {
+            "name": "stash",
+            "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+            "templated": "true"
+          }
+        ]
+      },
+      "path": "2024_808F_Ergometer_Design_Dryad.pdf",
+      "size": 880024,
+      "mimeType": "application/pdf",
+      "status": "copied",
+      "digest": "a9a43eda28aa067de15fa7249372e265a7df671f92808898bd809babf2dc5c46",
+      "digestType": "sha-256"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/api/v2/files/3450615"
+        },
+        "stash:dataset": {
+          "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.08kprr59v"
+        },
+        "stash:version": {
+          "href": "/api/v2/versions/314619"
+        },
+        "stash:files": {
+          "href": "/api/v2/versions/314619/files"
+        },
+        "stash:download": {
+          "href": "/api/v2/files/3450615/download"
+        },
+        "curies": [
+          {
+            "name": "stash",
+            "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+            "templated": "true"
+          }
+        ]
+      },
+      "path": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
+      "size": 18136,
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "status": "copied",
+      "digest": "ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf",
+      "digestType": "sha-256"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/api/v2/files/3450628"
+        },
+        "stash:dataset": {
+          "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.08kprr59v"
+        },
+        "stash:version": {
+          "href": "/api/v2/versions/314619"
+        },
+        "stash:files": {
+          "href": "/api/v2/versions/314619/files"
+        },
+        "stash:download": {
+          "href": "/api/v2/files/3450628/download"
+        },
+        "curies": [
+          {
+            "name": "stash",
+            "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+            "templated": "true"
+          }
+        ]
+      },
+      "path": "README.md",
+      "size": 6535,
+      "mimeType": "text/markdown",
+      "status": "created",
+      "digest": "974d55caa7a6be98717b4c49a31bfa08c6bd6c96ba120d63b7053cb70150f0a5",
+      "digestType": "sha-256"
+    }
+  ],
+  "access_attempts": [
+    {
+      "url": "https://datadryad.org/api/v2/files/3450615/download",
+      "HTTP_status": 401,
+      "status": "raw unavailable; no PCr cells inspected"
+    },
+    {
+      "url": "https://datadryad.org/downloads/file_stream/3450615",
+      "HTTP_status": 403,
+      "status": "raw unavailable; no PCr cells inspected"
+    }
+  ]
+}

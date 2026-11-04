@@ -1,0 +1,8 @@
+model,n,MAE_delta_power_W,RMSE_delta_power_W,interpretation
+constant,168,49.6254349291,62.4753678302,"between-consecutive-effort change, not measured PCr recovery"
+linear,168,51.3300067102,64.2259522047,"between-consecutive-effort change, not measured PCr recovery"
+monoexponential,168,51.4576964506,64.4697782179,"between-consecutive-effort change, not measured PCr recovery"
+D1_existing,168,45.7980403392,58.7574317462,"between-consecutive-effort change, not measured PCr recovery"
+D2_corrected,168,62.1265478886,78.5778885748,"between-consecutive-effort change, not measured PCr recovery"
+empirical_recovery,168,49.6254349291,62.4753678302,"between-consecutive-effort change, not measured PCr recovery"
+D4_hybrid_conditional,168,52.1344506522,68.4360545383,"between-consecutive-effort change, not measured PCr recovery"

@@ -1,0 +1,12 @@
+counterfactual,origin,first_nominal_W,late_over_first,MAE_W,RMSE_W,bias_W
+unchanged,"viewed old holdout diagnostic, not new validation",513.120032295,0.698329389658,366.91797989,378.543770039,-366.91797989
+demand_500W,"viewed old holdout diagnostic, not new validation",463.907055919,0.773626159393,274.846036726,291.171077541,-274.846036726
+demand_1500W,"viewed old holdout diagnostic, not new validation",513.120032295,0.698329389658,366.91797989,378.543770039,-366.91797989
+capacity_double,"viewed old holdout diagnostic, not new validation",900.040345981,0.754210807927,295.605939755,310.990264281,-295.605939755
+recovery_fast10s,"viewed old holdout diagnostic, not new validation",513.120032295,0.834993224014,205.754235758,227.920035405,-205.754235758
+recovery_slow800s,"viewed old holdout diagnostic, not new validation",513.120032295,0.347898025144,757.555423519,766.807325594,-757.555423519
+fast_discharge_tau2s,"viewed old holdout diagnostic, not new validation",563.905995426,0.695081529443,374.356332849,385.240510709,-374.356332849
+oxygen_tau10s,"viewed old holdout diagnostic, not new validation",567.137205937,0.714057162682,352.302739565,364.041270379,-352.302739565
+warm_oxygen800W,"viewed old holdout diagnostic, not new validation",680.901883133,0.526253206004,575.728858837,582.938050335,-575.728858837
+maintenance_zero,"viewed old holdout diagnostic, not new validation",517.010284205,0.701097688411,364.060421173,375.742174737,-364.060421173
+release_power_independent_capacity,"viewed old holdout diagnostic, not new validation",615.711671991,0.740603233259,278.721741175,294.476311574,-278.721741175

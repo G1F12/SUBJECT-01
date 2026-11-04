@@ -721,5 +721,44 @@
       "source_id": "SRC-0039"
     },
     "limits": "Primary metadata/abstract and selected methods only; correction/retraction checks limited; no augmentation validation"
+  },
+  {
+    "id": "SRC-0040",
+    "doi": "10.1055/a-2940-7047",
+    "title": "Work-to-rest ratios in repeated sprint assessments: A replication\n                    study",
+    "year": 2026,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/recovery_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/recovery_2026_11_04/sources.json",
+      "source_id": "SRC-0040"
+    },
+    "limits": "Limited notices audit; raw access/units/licence limitations in DATA_AUDIT; no augmentation validation"
+  },
+  {
+    "id": "SRC-0041",
+    "doi": "10.1016/j.dib.2024.111114",
+    "title": "An ergometer dataset to measure muscle bioenergetics with magnetic resonance techniques",
+    "year": 2024,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/recovery_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/recovery_2026_11_04/sources.json",
+      "source_id": "SRC-0041"
+    },
+    "limits": "Limited notices audit; raw access/units/licence limitations in DATA_AUDIT; no augmentation validation"
+  },
+  {
+    "id": "SRC-0042",
+    "doi": "10.3389/fphys.2021.692622",
+    "title": "The Aerobic and Anaerobic Contribution During Repeated 30-s Sprints in Elite Cyclists",
+    "year": 2021,
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/recovery_2026_11_04/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/recovery_2026_11_04/sources.json",
+      "source_id": "SRC-0042"
+    },
+    "limits": "Limited notices audit; raw access/units/licence limitations in DATA_AUDIT; no augmentation validation"
   }
 ]

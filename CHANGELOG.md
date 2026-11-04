@@ -75,3 +75,20 @@
   достижения; прежние EXP-0001..0010, их данные и отрицательные результаты сохранены.
   Исторический Pareto не подтверждает TARGET-CPE45; NO_GO не изменён.
 - Следующая задача: динамическая 2700-секундная модель утомления/восстановления.
+
+## 2026-11-04 — recovery identification и новая независимая фальсификация
+
+- EXP-0015..0018: прежнийRMSE378.543770W воспроизведён,11 контрфактических
+  диагностик, causal matrix; исторические файлы/отрицательные результаты неизменны.
+- Правила9f25664 до extraction; code/parameters8319168 до test. Новая когорта
+ 21человек:14development/7test,378/189endpoints,groupedLOPOCV,2000clusterbootstrap.
+- SRC-0040..0042: реальныеPower/VO2 XLSXv1, pinnedhashes/recipe; OSF licence
+  неизвестна, raw не перепубликуются. VO2extrema не continuouscurve;PCr отсутствует.
+  DryadPCr401/403 зафиксирован, numericcells не получены.
+- Новый test:D1RMSE350.70W,D2 361.71W,constant126.54W; выбранная до testconstant
+  сохранена. D4conditional134.46W тоже хуже; нет успешного physicaltransfer.
+- Exactη–metabolic-scale symmetry,localrank7/11; real recoverytau flat1..600s
+  приdepletion0. Syntheticparameterrecovery отдельно помечена softwarecontrol.
+- 24pause/depletioncases,14perturbations,64epistemicUQ,4dt×2structures,2700sstability;
+ 26новыхtests/CI/reproduction/2PNG. NEG-0010..0012;FND-0017..0020;ISS-0014/15;
+ DEC-0009. CPE45 NOT EXTERNALLY VALIDATED,архитектуры не перерангированы,NO_GO.

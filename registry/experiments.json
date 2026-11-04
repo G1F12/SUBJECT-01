@@ -249,5 +249,83 @@
     "reproduction_command": "python research/cpe45_2026_11_04/experiments.py --check",
     "limits": "Conditional surrogate; real cycling endpoint transfer failed; not_empirically_validated CPE45; NO_GO",
     "external_validation": "not_empirically_validated"
+  },
+  {
+    "id": "EXP-0015",
+    "title": "CPE45: причинно-диагностический аудит прежнего провала",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/recovery_2026_11_04/diagnostics.py",
+    "inputs": "research/recovery_2026_11_04/model_lock.json",
+    "outputs": [
+      "research/recovery_2026_11_04/results/historical_counterfactuals.csv",
+      "research/recovery_2026_11_04/results/convergence.csv"
+    ],
+    "report": "research/recovery_2026_11_04/REPORT.md",
+    "method": "11 fixed counterfactuals on viewed old holdout; original model parity and ledger/units checks",
+    "reproduction_command": "python research/recovery_2026_11_04/reproduce.py --check",
+    "limits": "No physiological recovery identification; physical transfer failed; CPE45 NOT EXTERNALLY VALIDATED; NO_GO",
+    "external_validation": "viewed_historical_diagnostics_only"
+  },
+  {
+    "id": "EXP-0016",
+    "title": "Независимая новая когорта: preregistered grouped power validation",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/recovery_2026_11_04/pipeline.py",
+    "inputs": "research/recovery_2026_11_04/model_lock.json",
+    "outputs": [
+      "research/recovery_2026_11_04/results/development_cv.csv",
+      "research/recovery_2026_11_04/results/test_scores.csv",
+      "research/recovery_2026_11_04/results/test_predictions.csv",
+      "research/recovery_2026_11_04/results/test_participants.csv",
+      "research/recovery_2026_11_04/results/test_protocols.csv",
+      "research/recovery_2026_11_04/results/test_bootstrap.csv",
+      "research/recovery_2026_11_04/results/test_summary.json"
+    ],
+    "report": "research/recovery_2026_11_04/REPORT.md",
+    "method": "21 participants;14dev/7test grouped all3conditions;378/189 endpoints; pre-extraction9f25664 and pre-test8319168 locks;2000clusterbootstrap",
+    "reproduction_command": "python research/recovery_2026_11_04/reproduce.py --check",
+    "limits": "No physiological recovery identification; physical transfer failed; CPE45 NOT EXTERNALLY VALIDATED; NO_GO",
+    "external_validation": "negative_new_cohort_locked_participant_power_test"
+  },
+  {
+    "id": "EXP-0017",
+    "title": "Структурная и практическая неидентифицируемость восстановления",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/recovery_2026_11_04/diagnostics.py",
+    "inputs": "research/recovery_2026_11_04/model_lock.json",
+    "outputs": [
+      "research/recovery_2026_11_04/results/identifiability.json",
+      "research/recovery_2026_11_04/results/recovery_profile.csv",
+      "research/recovery_2026_11_04/results/diagnostic_summary.json",
+      "research/recovery_2026_11_04/results/identifiability.png"
+    ],
+    "report": "research/recovery_2026_11_04/REPORT.md",
+    "method": "11parameter/36output logJacobian rank7; exact eta–metabolic-scale symmetry; flat real recovery profile; synthetic parameter recovery control",
+    "reproduction_command": "python research/recovery_2026_11_04/reproduce.py --check",
+    "limits": "No physiological recovery identification; physical transfer failed; CPE45 NOT EXTERNALLY VALIDATED; NO_GO",
+    "external_validation": "not_physiologically_identified"
+  },
+  {
+    "id": "EXP-0018",
+    "title": "Физически ограниченная альтернативная структура и2700s stability",
+    "status": "arithmetic_reproduced",
+    "research_date": "2026-11-04",
+    "model": "research/recovery_2026_11_04/engine.py",
+    "inputs": "research/recovery_2026_11_04/model_lock.json",
+    "outputs": [
+      "research/recovery_2026_11_04/results/pause_depletion.csv",
+      "research/recovery_2026_11_04/results/sensitivity.csv",
+      "research/recovery_2026_11_04/results/uncertainty.csv",
+      "research/recovery_2026_11_04/results/stability_2700s.csv",
+      "research/recovery_2026_11_04/results/diagnostic_summary.json"
+    ],
+    "report": "research/recovery_2026_11_04/REPORT.md",
+    "method": "24pause/depletion cases,14perturbations,64epistemicUQ,4dt x2structures,150cycles6/12s to2700s; paid recovery",
+    "reproduction_command": "python research/recovery_2026_11_04/reproduce.py --check",
+    "limits": "No physiological recovery identification; physical transfer failed; CPE45 NOT EXTERNALLY VALIDATED; NO_GO",
+    "external_validation": "not_empirically_validated_CPE45"
   }
 ]

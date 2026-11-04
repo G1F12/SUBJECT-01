@@ -1,0 +1,38 @@
+{
+  "development_participants": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20
+  ],
+  "test_ids_from_labels": [
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21
+  ],
+  "max_work_minus_6power_J": 5.9117155615240335e-12,
+  "VO2_sheets": [
+    "MaxVO2_24",
+    "MaxVO2_18",
+    "MaxVO2_12",
+    "MinVO2_24",
+    "MinVO2_18",
+    "MinVO2_12"
+  ],
+  "VO2_scope": "per-bout extrema only; not breath-by-breath or time-integrated oxygen; no PCr",
+  "leakage": "all conditions grouped by WTR prefix; test outcomes not used by development audit"
+}

@@ -67,3 +67,19 @@ python -m unittest discover -s tests -p test_cpe45.py
 python research/cpe45_2026_11_04/test_model.py
 python research/cpe45_2026_11_04/experiments.py --check
 ```
+
+## Recovery identification и независимая фальсификация
+
+[Новый отчёт EXP-0015..0018](research/recovery_2026_11_04/REPORT.md):
+пререгистрация,14development/7новыхtestучастников,идентифицируемость и causal audit.
+Исправленная физическая модель не превзошлаbaseline:RMSE361.71vs126.54W.
+PCr recoverytau не установлена; энергетические параметры имеют scaleconfounding.
+Исторический провал сохранён, CPE45 NOT EXTERNALLY VALIDATED,NO_GO.
+
+```text
+python research/recovery_2026_11_04/test_recovery.py
+python research/recovery_2026_11_04/reproduce.py --check
+```
+
+При отсутствии cache исходные общедоступные OSFfiles скачиваются с проверкой
+SHA256; из-за неустановленной rawлицензии сами XLSX не перепубликуются.

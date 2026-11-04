@@ -1,0 +1,120 @@
+{
+  "physical_defaults": {
+    "fast_capacity_J": {
+      "value": 8000,
+      "unit": "J metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "slow_capacity_J": {
+      "value": 22000,
+      "unit": "J metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fast_recovery_tau_s": {
+      "value": 81.657,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "slow_recovery_tau_s": {
+      "value": 600,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fast_discharge_tau_s": {
+      "value": 4,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "slow_discharge_tau_s": {
+      "value": 30,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "recharge_efficiency": {
+      "value": 0.8,
+      "unit": "1",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "oxygen_tau_s": {
+      "value": 28,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fatigue_rate_s_inv": {
+      "value": 0.001,
+      "unit": "s^-1",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fatigue_recovery_tau_s": {
+      "value": 300,
+      "unit": "s",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fatigue_floor": {
+      "value": 0.2,
+      "unit": "1",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "eta": {
+      "value": 0.2801624129930391,
+      "unit": "1",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "maintenance_W": {
+      "value": 128.69565217391278,
+      "unit": "W metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "oxygen_cap_W": {
+      "value": 1343.09875,
+      "unit": "W metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "demand_W": {
+      "value": 1000.0,
+      "unit": "W external",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "initial_fraction": {
+      "value": 1.0,
+      "unit": "1",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "fast_power_cap_W": {
+      "value": 2000.0,
+      "unit": "W metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    },
+    "slow_power_cap_W": {
+      "value": 733.3333333333334,
+      "unit": "W metabolic-equivalent",
+      "status": "conditional inherited assumption; not identified physiological estimate"
+    }
+  },
+  "inactive_in_cycling_module": [
+    "braking_tau_s",
+    "skin_fraction",
+    "slow_component_max_W",
+    "slow_component_tau_s",
+    "sweat_feedback_J_s_kg",
+    "sweat_tau_s"
+  ],
+  "source": "engine.defaults, archived cpe45/integrated parameters at c7a7c9c",
+  "empirical_fit": "model_lock.json; independent test never retunes",
+  "UQ": "diagnostics.py uses64 independent uniform multipliers .75..1.25 on explicitly listed parameters, seed20261104",
+  "protocol_specific_overrides": {
+    "D1_existing": {
+      "demand_W": 1000,
+      "fatigue_rate_s_inv": 0,
+      "rest_s": "12,18,24 new protocols; 90 historical reproduction"
+    },
+    "D2_corrected": {
+      "demand_W": "measured first-sprint mean W for that participant and condition",
+      "fatigue_rate_s_inv": 0
+    },
+    "D4_hybrid_conditional": {
+      "fast_recovery_tau_s": 1,
+      "status": "unidentified tie-break, diagnostic only, not estimated physiology"
+    }
+  }
+}
