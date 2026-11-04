@@ -8,7 +8,9 @@ from acquire import BASE,RangeFile
 
 class CalibrationTests(unittest.TestCase):
     def test_replay_does_not_hide_parameter_changes(self):
-        import reproduce,copy
+        import importlib.util,copy
+        spec=importlib.util.spec_from_file_location('calibration_replay',BASE/'reproduce.py')
+        reproduce=importlib.util.module_from_spec(spec);spec.loader.exec_module(reproduce)
         a=json.loads((BASE/'results/parameter_identification.json').read_text('utf8'));b=copy.deepcopy(a)
         self.assertTrue(reproduce.identification_equal(a,b))
         b['pulmonary_kinetics'][0]['tau_s']+=2
