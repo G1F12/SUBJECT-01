@@ -124,3 +124,11 @@ CI source replay limitation: run41871865726 also failed on a plantar archive rea
 - No local ATP/baseline anchor or reserve-parameter identification; nine-combination
   quotient, historic negative outcomes and NO_GO preserved. CPE45 remains unvalidated.
 - Native hashes/licenses/retrieval recipes; full legacy and26new tests plus replay.
+
+## 2026-11-07 — Research Cycle 7 — local muscle bridge
+
+- EXP-0027..0031: трёхслойный измерительный мост (Mechanical / Local Muscle / Systemic), оцифрованы парные синхронные ряды ³¹P-MRS, спироэргометрии и механики Moll 2017/2018 (SRC-0056..0057).
+- Доказано сохранение двух фундаментальных симметрий D2: масштаб энергии (RSS < 1.5e-32) и аддитивный сдвиг окислительного расхода (RSS < 7.5e-32). Относительный PCr и системный VO2 не устраняют их без независимых V_active и изолированного локального M_loc.
+- Доказана сильная связь времени восстановления PCr с ацидозом (R²=0.919, p=1.23e-05) и коллинеарность легочной задержки с тканевой постоянной времени (r=-0.704).
+- Выявлен 4.99-кратный диапазон неопределённости абсолютного пула энергии (205-1021 Дж). Калиброванный локальный мост достиг RMSE 0.65 Вт против константы 3.15 Вт; неадаптированная D2 дала 431.36 Вт.
+- 9 новых тестов, воспроизводимость по seed, аудит источников SRC-0056..0062; FND-0029..0032, NEG-0021..0024, DEC-0012, ISS-0018. TARGET-CPE45 остаётся NOT EXTERNALLY VALIDATED; NO_GO.

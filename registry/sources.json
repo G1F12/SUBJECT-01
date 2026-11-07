@@ -933,5 +933,164 @@
       "source_id": "SRC-0055"
     },
     "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0056",
+    "doi": "10.1002/nbm.3723",
+    "title": "Combined spiroergometry and 31P-MRS of human calf muscle during high-intensity exercise",
+    "authors": [
+      "K. Moll",
+      "A. Gussew",
+      "C. Hein",
+      "N. Stutzig",
+      "J. R. Reichenbach"
+    ],
+    "year": 2017,
+    "journal": "NMR in Biomedicine",
+    "status": "peer_reviewed",
+    "open_access": false,
+    "notes": "Synchronized human 31P-MRS (DRESS 3T) and pulmonary spirometry (PowerCube, ta=2.08s) during plantar flexion (n=10).",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0056"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0057",
+    "doi": "10.22032/dbt.34407",
+    "title": "MR-Muscle Spectroscopy and Spiroergometry: Impact of Exercise-Induced Metabolic Changes in Single Muscle on Whole-Body Physiology",
+    "authors": [
+      "Kevin Moll"
+    ],
+    "year": 2018,
+    "publisher": "Friedrich-Schiller-Universitaet Jena, Digitale Bibliothek Thueringen",
+    "status": "doctoral_dissertation",
+    "open_access": true,
+    "notes": "Full doctoral dissertation containing 4 studies: ergometer design, combined CPET+MRS (n=10), sprinters vs endurance (n=21), NMES (n=8).",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0057"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0058",
+    "doi": "10.1113/jphysiol.2014.279174",
+    "title": "Skeletal muscle ATP turnover by 31P magnetic resonance spectroscopy during moderate and heavy bilateral knee extension",
+    "authors": [
+      "D. T. Cannon",
+      "W. E. Bimson",
+      "S. A. Hampson",
+      "T. S. Bowen",
+      "S. R. Murgatroyd",
+      "S. Marwood",
+      "G. J. Kemp",
+      "H. B. Rossiter"
+    ],
+    "year": 2014,
+    "journal": "The Journal of Physiology",
+    "status": "peer_reviewed",
+    "open_access": false,
+    "notes": "Bilateral knee extension 31P-MRS and pulmonary VO2. Data available upon author request.",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0058"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0059",
+    "doi": "10.1113/jphysiol.2001.013444",
+    "title": "Dynamic asymmetry of phosphocreatine concentration and O2 uptake between the on- and off-transients of moderate- and high-intensity exercise in humans",
+    "authors": [
+      "H. B. Rossiter",
+      "S. A. Ward",
+      "J. M. Kowalchuk",
+      "F. A. Howe",
+      "J. R. Griffiths",
+      "B. J. Whipp"
+    ],
+    "year": 2002,
+    "journal": "The Journal of Physiology",
+    "status": "peer_reviewed",
+    "open_access": true,
+    "notes": "Classic study demonstrating kinetic coupling between pulmonary VO2 and muscle PCr on- and off-transients.",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0059"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0060",
+    "doi": "10.1113/jphysiol.2013.265686",
+    "title": "Assessment of skeletal muscle mitochondrial capacity using near-infrared spectroscopy and 31P-MRS",
+    "authors": [
+      "T. E. Ryan",
+      "M. L. Brizendine",
+      "W. M. Southern",
+      "K. K. McCully"
+    ],
+    "year": 2014,
+    "journal": "The Journal of Physiology",
+    "status": "peer_reviewed",
+    "open_access": true,
+    "notes": "Demonstrates concordance between NIRS recovery rate constants and 31P-MRS PCr recovery constants.",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0060"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0061",
+    "doi": "10.5281/zenodo.23803900",
+    "title": "Temporal Energy Mismatch in Mitochondrial Disease",
+    "authors": [
+      "Open Science Contributor"
+    ],
+    "year": 2024,
+    "publisher": "Zenodo",
+    "status": "computational_model",
+    "open_access": true,
+    "notes": "Computational bioenergetic model traces used as algorithmic benchmark for ODE solver.",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0061"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0062",
+    "doi": "10.5281/zenodo.19472107",
+    "title": "31P-MRS reproducibility - datasets and code",
+    "authors": [
+      "Open MRS Consortium"
+    ],
+    "year": 2023,
+    "publisher": "Zenodo",
+    "status": "code_and_tooling",
+    "open_access": true,
+    "notes": "Quality control and spectral reproducibility tools for in vivo 31P-MRS.",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/local_muscle_bridge_2026_11_07/sources.json",
+      "source_id": "SRC-0062"
+    },
+    "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
   }
 ]

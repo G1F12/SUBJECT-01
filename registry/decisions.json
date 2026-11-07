@@ -78,5 +78,12 @@
     "status": "adopted",
     "decision": "Cycle6 A systemic anchor, C limited systemic-cost validation, D/E local partial-identification/access blocker. Keep9D quotient, do not map systemicdeltaefficiency/intercept to D2eta/M. Old10+7 and new13test people viewed; no reuse for independent claims. NO_GO, CPE45 NOT EXTERNALLY VALIDATED.",
     "basis": "EXP-0023..0026; prereg0446eaa and model-lock726772f"
+  },
+  {
+    "id": "DEC-0012",
+    "date": "2026-11-07",
+    "status": "adopted",
+    "decision": "Cycle 7: Принята трехслойная архитектура измерительного моста (Mechanical / Local Muscle / Systemic). Сохранен 9D quotient модели D2. Отклонен перенос системного CPET КПД на локальный миозин. Статус blinded independent validation не заявляется (исследование носит поисково-калибровочный характер). TARGET-CPE45 остается NOT EXTERNALLY VALIDATED; вмешательства NO_GO.",
+    "basis": "EXP-0027..EXP-0031, FND-0029..FND-0032, NEG-0021..NEG-0024, GOVERNANCE hard rules."
   }
 ]

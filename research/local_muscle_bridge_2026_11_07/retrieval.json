@@ -1,0 +1,395 @@
+{
+  "cycle": 7,
+  "date": "2026-11-07",
+  "jobs_total": 18,
+  "obtained_count": 15,
+  "records": [
+    {
+      "label": "moll_crossref",
+      "url": "https://api.crossref.org/works/10.1002/nbm.3723",
+      "status": 200,
+      "bytes": 9390,
+      "content_type": "application/json",
+      "sha256": "a03ac6adc219f99427618f0e8906adeb90b3d2d230f28fb91f4150dd6b7ccf53",
+      "file": "moll_crossref.bin",
+      "obtained": true
+    },
+    {
+      "label": "moll_openalex",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1002/nbm.3723",
+      "status": 200,
+      "bytes": 22348,
+      "content_type": "application/json",
+      "sha256": "61acd0b6cb86a1a00326eb3bacf02836530bbe27bd836b198fcc8c1e1a8f603b",
+      "file": "moll_openalex.bin",
+      "obtained": true
+    },
+    {
+      "label": "moll_europepmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:28340292%20SRC:MED&format=json",
+      "status": 200,
+      "bytes": 916,
+      "content_type": "application/json;charset=UTF-8",
+      "sha256": "f8897f1622fea55e8df59c54417953ff55e8321a3d579ebed4a0358c015fa3e7",
+      "file": "moll_europepmc.bin",
+      "obtained": true
+    },
+    {
+      "label": "moll_dissertation_dbt",
+      "url": "https://www.db-thueringen.de/receive/dbt_mods_00034407",
+      "status": 200,
+      "bytes": 32175,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "82e1d09daf03e3801497686768183c26493dea92f5dcca37b1c68062ef08517e",
+      "file": "moll_dissertation_dbt.bin",
+      "obtained": true
+    },
+    {
+      "label": "cannon2014_crossref",
+      "url": "https://api.crossref.org/works/10.1113/jphysiol.2014.279174",
+      "status": 200,
+      "bytes": 18636,
+      "content_type": "application/json",
+      "sha256": "63d565012dad791123fc11ee1cf9f4070f4da5e3199322b782b536847e01402c",
+      "file": "cannon2014_crossref.bin",
+      "obtained": true
+    },
+    {
+      "label": "cannon2014_pmc_xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4263658/fullTextXML",
+      "status": 500,
+      "error": "HTTP Error 500: ",
+      "obtained": false
+    },
+    {
+      "label": "cannon2014_pmc_supp",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4263658/supplementaryFiles",
+      "status": 200,
+      "bytes": 296,
+      "content_type": "application/xml",
+      "sha256": "8d16ed41776298bb771c181259c6b1a9298eb3976a4579148873cf03929e6c2d",
+      "file": "cannon2014_pmc_supp.bin",
+      "obtained": true
+    },
+    {
+      "label": "cannon2013_crossref",
+      "url": "https://api.crossref.org/works/10.1152/japplphysiol.00613.2013",
+      "status": 200,
+      "bytes": 2805,
+      "content_type": "application/json",
+      "sha256": "6889365ced7d935d2978c5556cad56f55860ccaf85a50b35ae1d20145a5d27aa",
+      "file": "cannon2013_crossref.bin",
+      "obtained": true
+    },
+    {
+      "label": "rossiter2002_crossref",
+      "url": "https://api.crossref.org/works/10.1113/jphysiol.2001.013444",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "obtained": false
+    },
+    {
+      "label": "layec2013_crossref",
+      "url": "https://api.crossref.org/works/10.1152/japplphysiol.00445.2013",
+      "status": 200,
+      "bytes": 11731,
+      "content_type": "application/json",
+      "sha256": "9af7cdf3253b1f846396f44f396f08465b0e8de760dabb852ec25ca650b0b653",
+      "file": "layec2013_crossref.bin",
+      "obtained": true
+    },
+    {
+      "label": "forbes2009_crossref",
+      "url": "https://api.crossref.org/works/10.1152/japplphysiol.91525.2008",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "obtained": false
+    },
+    {
+      "label": "ryan2014_crossref",
+      "url": "https://api.crossref.org/works/10.1113/jphysiol.2013.265686",
+      "status": 200,
+      "bytes": 13874,
+      "content_type": "application/json",
+      "sha256": "4991d561898f8990d515632bc2b7d9d949575202938a839292dd19d46afe3fe3",
+      "file": "ryan2014_crossref.bin",
+      "obtained": true
+    },
+    {
+      "label": "zenodo_31p_mrs_exercise",
+      "url": "https://zenodo.org/api/records?size=15&q=31P-MRS%20exercise",
+      "status": 200,
+      "bytes": 129509,
+      "content_type": "application/json",
+      "sha256": "60be2ce0b4da19b718d42e08e5a0e849e4d1da614d48155763ee6937b620ea45",
+      "file": "zenodo_31p_mrs_exercise.bin",
+      "obtained": true
+    },
+    {
+      "label": "zenodo_pcr_recovery",
+      "url": "https://zenodo.org/api/records?size=15&q=phosphocreatine%20recovery%20kinetics",
+      "status": 200,
+      "bytes": 112534,
+      "content_type": "application/json",
+      "sha256": "d3018f1fecfb6706d27666c928460d1647898e2a68ab18afa520a84676a7ff9f",
+      "file": "zenodo_pcr_recovery.bin",
+      "obtained": true
+    },
+    {
+      "label": "figshare_31p_mrs",
+      "url": "https://api.figshare.com/v2/articles/search",
+      "status": 200,
+      "bytes": 16864,
+      "content_type": "application/json",
+      "sha256": "ec979ad2eb3897097efb151d1f0b0e14cb28883a753546aaab6dead7f88d6e7d",
+      "file": "figshare_31p_mrs.bin",
+      "obtained": true
+    },
+    {
+      "label": "figshare_pcr_kinetics",
+      "url": "https://api.figshare.com/v2/articles/search",
+      "status": 200,
+      "bytes": 8427,
+      "content_type": "application/json",
+      "sha256": "1d5b0fdc83048133b2da87ec2202e9e7681696a4fc75bdc38c152f8f88768f9f",
+      "file": "figshare_pcr_kinetics.bin",
+      "obtained": true
+    },
+    {
+      "label": "osf_pcr_mrs",
+      "url": "https://api.osf.io/v2/nodes/?filter[title]=phosphocreatine",
+      "status": 200,
+      "bytes": 128,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "file": "osf_pcr_mrs.bin",
+      "obtained": true
+    },
+    {
+      "label": "dryad_pcr_search",
+      "url": "https://datadryad.org/api/v2/search?q=phosphocreatine",
+      "status": 200,
+      "bytes": 6114,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "2b4a58b6257f364bc65a152029e8c6666034440125c94514836aaf175cb40365",
+      "file": "dryad_pcr_search.bin",
+      "obtained": true
+    }
+  ],
+  "inspected": {
+    "moll_dissertation": {
+      "pdf_links": [
+        "https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00040610/dissmoll.pdf"
+      ],
+      "servlet_links": [
+        "https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00040610/dissmoll.pdf",
+        "https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00040610/"
+      ],
+      "has_download": true
+    },
+    "cannon2014_supp_json": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><ns4:errorBean xmlns:slx=\"http://www.scholix.org\" xmlns:epmc=\"https://www.europepmc.org/data\" xmlns:ns4=\"http://webservice.cdb.ebi.ac.uk/\"><errCo",
+    "zenodo_31p_mrs_exercise": [
+      {
+        "id": 23803900,
+        "doi": "10.5281/zenodo.23803900",
+        "title": "Temporal Energy Mismatch in Mitochondrial Disease",
+        "files": [
+          "model-results.json",
+          "model-traces.csv",
+          "biological-audit.md",
+          "open-publication-method.json",
+          "manuscript.pdf",
+          "model-sensitivity.csv",
+          "source-PMC6513570.txt",
+          "source-PMC7986184.txt",
+          "figure-1.png",
+          "figure-2.png",
+          "table-1.csv",
+          "claim-check-report.json",
+          "claim-check-report.md",
+          "open-publication-method.md",
+          "manuscript.md",
+          "scientific-review-summary.json",
+          "gemini-review.md",
+          "artifact-validation.json",
+          "figure-3.png",
+          "table-3.csv",
+          "biological-audit.json",
+          "open-publication-protocol.json",
+          "temporal-energy-model.py",
+          "figure_measurements.json",
+          "supplementary-readme.txt",
+          "table-2.csv",
+          "source-PMC3524088.txt",
+          "manuscript.docx",
+          "model-inputs.json"
+        ]
+      },
+      {
+        "id": 999244,
+        "doi": "10.5281/zenodo.999244",
+        "title": "Using a whole-body 31P birdcage transmit coil and 16-element receive array for human cardiac metabolic imaging at 7T",
+        "files": [
+          "bodyCoil.cst",
+          "MR data.zip",
+          "surfaceCoil.cst"
+        ]
+      },
+      {
+        "id": 19472107,
+        "doi": "10.5281/zenodo.19472107",
+        "title": "31P-MRS reproducibility - datasets and code.",
+        "files": [
+          "Dice_CSI.m",
+          "normality_assessment.m",
+          "PowerCurves.m",
+          "z_scored_diffs.m",
+          "CoV_heatmap.m",
+          "BlandAltmanPlots.m",
+          "BoxPlots.m",
+          "ICC_ttest_corr.m"
+        ]
+      },
+      {
+        "id": 23366948,
+        "doi": "10.5281/zenodo.23366948",
+        "title": "АНАЛИЗ УРОВНЯ РАЗВИТИЯ ПРОФЕССИОНАЛЬНО-ПРИКЛАДНОЙ ФИЗИЧЕСКОЙ КУЛЬТУРЫ ЛИЧНОСТИ УЧАЩИХСЯ СТРОИТЕЛЬНОГО ПРОФИЛЯ",
+        "files": [
+          "0006_p26-30.pdf"
+        ]
+      },
+      {
+        "id": 12758355,
+        "doi": "10.1038/s41598-024-54158-x",
+        "title": "Iron-based compounds coordinated with phospho-polymers as biocompatible probes for dual 31P/1H magnetic resonance imaging and spectroscopy",
+        "files": [
+          "41598_2024_Article_54158.pdf"
+        ]
+      }
+    ],
+    "zenodo_pcr_recovery": [
+      {
+        "id": 22282452,
+        "doi": "10.5281/zenodo.22282452",
+        "title": "Exercise Bioenergetics and the ATP–Phosphocreatine System: A Systems-Level Review of ATP Demand, Substrate Kinetics, and Intracellular Regulation",
+        "files": [
+          "IJASTR-6A97F3B5355C8.pdf"
+        ]
+      },
+      {
+        "id": 20474204,
+        "doi": "10.5281/zenodo.20474204",
+        "title": "EFFICACY OF MYOCARDIAL METABOLISM-IMPROVING AGENTS IN CHRONIC PHYSICAL OVEREXERTION SYNDROME",
+        "files": [
+          "327-330.pdf"
+        ]
+      },
+      {
+        "id": 23803900,
+        "doi": "10.5281/zenodo.23803900",
+        "title": "Temporal Energy Mismatch in Mitochondrial Disease",
+        "files": [
+          "model-results.json",
+          "model-traces.csv",
+          "biological-audit.md",
+          "open-publication-method.json",
+          "manuscript.pdf",
+          "model-sensitivity.csv",
+          "source-PMC6513570.txt",
+          "source-PMC7986184.txt",
+          "figure-1.png",
+          "figure-2.png",
+          "table-1.csv",
+          "claim-check-report.json",
+          "claim-check-report.md",
+          "open-publication-method.md",
+          "manuscript.md",
+          "scientific-review-summary.json",
+          "gemini-review.md",
+          "artifact-validation.json",
+          "figure-3.png",
+          "table-3.csv",
+          "biological-audit.json",
+          "open-publication-protocol.json",
+          "temporal-energy-model.py",
+          "figure_measurements.json",
+          "supplementary-readme.txt",
+          "table-2.csv",
+          "source-PMC3524088.txt",
+          "manuscript.docx",
+          "model-inputs.json"
+        ]
+      },
+      {
+        "id": 8094526,
+        "doi": "10.5281/zenodo.8094526",
+        "title": "Enzymes for Producing Creatine Kinase Assay Kit",
+        "files": [
+          "Creatine-Kinase-Assay-Kits-com.pdf"
+        ]
+      },
+      {
+        "id": 3571135,
+        "doi": "10.34049/bcc.51.B.023",
+        "title": "Recovery of bioalcohols with potential as biofuels using an energetically sustainable separation strategy",
+        "files": [
+          "BCC-51-B-IPROPBIO-023-Becerra-Perez-81-84.pdf"
+        ]
+      }
+    ],
+    "figshare_31p_mrs": [
+      {
+        "id": 34679553,
+        "doi": "",
+        "title": "Skeletal muscle, exercise and activity in pulmonary hypertension"
+      },
+      {
+        "id": 34673622,
+        "doi": "",
+        "title": "The role of skeletal muscle energetics in the symptoms and metabolic characteristics of growth hormone deficiency and vitamin D deficiency :a functional MRS approach"
+      },
+      {
+        "id": 34630764,
+        "doi": "10.25405/ncl.34630764.v1",
+        "title": "Supplemental oxygen and muscle metabolism in mitochondrial myopathy patients"
+      },
+      {
+        "id": 34359858,
+        "doi": "10.25405/ncl.34359858.v1",
+        "title": "Skeletal muscle mitochondrial oxidative phosphorylation function in idiopathic pulmonary arterial hypertension: in vivo and in vitro study"
+      },
+      {
+        "id": 34190694,
+        "doi": "10.25405/ncl.34190694.v1",
+        "title": "Compression garments and recovery from eccentric exercise; 31P-MRS study"
+      }
+    ],
+    "figshare_pcr_kinetics": [
+      {
+        "id": 34637955,
+        "doi": "10.25405/ncl.34637955.v1",
+        "title": "Pilot Study of Peripheral Muscle Function in Primary Biliary Cirrhosis: Potential Implications for Fatigue Pathogenesis"
+      },
+      {
+        "id": 31651636,
+        "doi": "",
+        "title": "Short-term training alters the control of mitochondrial respiration rate before maximal oxidative ATP synthesis"
+      },
+      {
+        "id": 31858294,
+        "doi": "10.3389/fnut.2026.1818755.s001",
+        "title": "Supplementary file 1_No ergogeniceffect of β-alanine on repeated sprint ability: a systematic review and multilevel meta-analysis of randomized controlled trials.docx"
+      },
+      {
+        "id": 29720480,
+        "doi": "",
+        "title": "Dietary nitrate accelerates postexercise muscle metabolic recovery and O2 delivery in hypoxia."
+      },
+      {
+        "id": 29696222,
+        "doi": "",
+        "title": "Investigation of metabolic responses to exercise in adolescents and adults during high intensity exercise and recovery"
+      }
+    ]
+  }
+}

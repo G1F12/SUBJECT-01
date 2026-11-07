@@ -1,0 +1,102 @@
+[
+  {
+    "file": "acquire.py",
+    "bytes": 7982,
+    "sha256": "b426fed523ae6313f0c95e7f3bb573c06ed0e39b886d7e0b048220e6ec64d502"
+  },
+  {
+    "file": "candidate_deep_fetch.json",
+    "bytes": 746,
+    "sha256": "8d16255327fe004a34bab2ae5d0bec79ce95857466ffb9b2e60ac3ee527f64b3"
+  },
+  {
+    "file": "DATA_AUDIT.md",
+    "bytes": 10567,
+    "sha256": "741c1a1b9e41e0677a4e3050efaafcfe6687c3ff5af72e765f43624584c521ab"
+  },
+  {
+    "file": "digitize_moll_data.py",
+    "bytes": 10618,
+    "sha256": "6c063428572723cc3dea6c24df38a483e5326b6ba368f4a85de64227441d182c"
+  },
+  {
+    "file": "experiment_results.json",
+    "bytes": 5165,
+    "sha256": "3ae19dfddb5afd147c622fa30fc6f70b75547376ba7c4d731b1eff58e8fc832d"
+  },
+  {
+    "file": "experiments.py",
+    "bytes": 16624,
+    "sha256": "fcf96a5f0726429d737442314e84efcf1b2dd8766b34b6fdfd2bdc92cc3b65cc"
+  },
+  {
+    "file": "fetch_candidate_data.py",
+    "bytes": 2276,
+    "sha256": "f9408524d004916add4bb42db13648aecaa63342aedb998d4cba53b2bef32dee"
+  },
+  {
+    "file": "identifiability.py",
+    "bytes": 12056,
+    "sha256": "599178c03ab0fa23fd7bf8c73149af44b22e4dcb88af3cc15b883af5b4629437"
+  },
+  {
+    "file": "identifiability_results.json",
+    "bytes": 5613,
+    "sha256": "bdc65ef4ae09bc2ea53467e0edd4323dbe4dee058a68bf1334f18738e30b9f1c"
+  },
+  {
+    "file": "LIMITATIONS.md",
+    "bytes": 6083,
+    "sha256": "921a2d39ef19ff05908c8a74cdacf381cf93ba94d83949d1723dd259eff85e2a"
+  },
+  {
+    "file": "MATHEMATICS.md",
+    "bytes": 11478,
+    "sha256": "795995bdf0397437513e5bdce03b801fa7f002381db5a423672a0824c3cdd0d3"
+  },
+  {
+    "file": "MEASUREMENT_MODEL.md",
+    "bytes": 8356,
+    "sha256": "02a31f04318ce91186f11869d29315786c01a7f7299df54a1bddc0fc1eac72ee"
+  },
+  {
+    "file": "moll2018_extracted_measurements.json",
+    "bytes": 10966,
+    "sha256": "9e003e26c05d0e7370bf4a63b3ed2918e34214272ee9aeff5769cf4ae51ba3c0"
+  },
+  {
+    "file": "PLAN.md",
+    "bytes": 11374,
+    "sha256": "d2d5297d9044e5cb68a8c2e5aaee1639d3051eb9c2224f898f31a021f3cbaf31"
+  },
+  {
+    "file": "README.md",
+    "bytes": 3538,
+    "sha256": "fc1e546090b4b7c952939c7e08b8ad193c6aae2bfb0f24866ed57f128aa2a1bb"
+  },
+  {
+    "file": "REPORT.md",
+    "bytes": 13642,
+    "sha256": "457e5092083a020e3e6a7cc51eb3f3197b2941ad3a5ad30c8dc5703b3886991e"
+  },
+  {
+    "file": "retrieval.json",
+    "bytes": 14246,
+    "sha256": "6b805400fe5b2d4cbc8ddd5f8eb74865a83ea5dd5ce561573893b753a64fc3bb"
+  },
+  {
+    "file": "sources.json",
+    "bytes": 2620,
+    "sha256": "3e18fcb2498038bf0acb5fd9f63d9f347036efd07402975c8b92e41c74bd3e16"
+  },
+  {
+    "file": "test_local_bridge.py",
+    "bytes": 6247,
+    "sha256": "352afa2784b3c6c9392be40f79e18a5c943c10a25ae1766aa15483c1e6799fe5"
+  },
+  {
+    "file": "update_registries.py",
+    "bytes": 14874,
+    "sha256": "f7edcc6b9a08832dcd4a8387500b5fbca10ebb5cf5d77a61b4e68c470e361624"
+  }
+]

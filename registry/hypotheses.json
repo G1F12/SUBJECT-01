@@ -79,7 +79,12 @@
       "EXP-0015",
       "EXP-0016",
       "EXP-0017",
-      "EXP-0018"
+      "EXP-0018",
+      "EXP-0027",
+      "EXP-0028",
+      "EXP-0029",
+      "EXP-0030",
+      "EXP-0031"
     ],
     "claim_level": "hypothesis",
     "progress_2026_11_04_recovery": "Power-only recovery identification failed; exact scaling confounding established. Context-specific physiological kinetics remain unverified."

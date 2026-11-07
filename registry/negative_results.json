@@ -138,5 +138,45 @@
     "status": "model_counterexample",
     "claim": "Sampled activation knees make finite-difference pulmonary FIM nonregular and platform-sensitive; profile support/status and locked metrics reproduce. Original diagnostics retained.",
     "context": "NUMERICS.md; CI41881845684/41882497475; no test or model retuning"
+  },
+  {
+    "id": "NEG-0021",
+    "experiment": "EXP-0028",
+    "statement": "Неразделяемость сердечно-легочной транспортной задержки и собственной мышечной кинетики окисления по дыханию через маску: корреляция оценок r = -0.704.",
+    "basis": "EXP-0028 numerical Hessian analysis and profile RSS grid.",
+    "experiment_id": "EXP-0030",
+    "status": "model_counterexample",
+    "claim": "Неразделяемость сердечно-легочной транспортной задержки и собственной мышечной кинетики окисления по дыханию через маску: корреляция оценок r = -0.704.",
+    "context": "EXP-0028 numerical Hessian analysis and profile RSS grid."
+  },
+  {
+    "id": "NEG-0022",
+    "experiment": "EXP-0029",
+    "statement": "Невозможность переноса системной эффективной эффективности CPET (delta_eff=0.2745) на локальный КПД актомиозина из-за 66.3% паразитных системных затрат при изолированном сгибании стопы.",
+    "basis": "EXP-0029 energy partition analysis on Moll 2017 Chapter 3.",
+    "experiment_id": "EXP-0028",
+    "status": "model_counterexample",
+    "claim": "Невозможность переноса системной эффективной эффективности CPET (delta_eff=0.2745) на локальный КПД актомиозина из-за 66.3% паразитных системных затрат при изолированном сгибании стопы.",
+    "context": "EXP-0029 energy partition analysis on Moll 2017 Chapter 3."
+  },
+  {
+    "id": "NEG-0023",
+    "experiment": "EXP-0030",
+    "statement": "Невозможность устранения масштабной симметрии модели D2 по концентрационным данным 31P-MRS без прямой МРТ-волюмометрии активной мышечной массы (разброс неопределенности энергии 4.99x).",
+    "basis": "EXP-0030 analytical and numerical sensitivity propagation.",
+    "experiment_id": "EXP-0029",
+    "status": "model_counterexample",
+    "claim": "Невозможность устранения масштабной симметрии модели D2 по концентрационным данным 31P-MRS без прямой МРТ-волюмометрии активной мышечной массы (разброс неопределенности энергии 4.99x).",
+    "context": "EXP-0030 analytical and numerical sensitivity propagation."
+  },
+  {
+    "id": "NEG-0024",
+    "experiment": "EXP-0027",
+    "statement": "Моноэкспоненциальная модель восстановления PCr неприменима к смешанным мышечным группам при выраженном ацидозе (pH < 6.5), порождая систематическое раннее смещение до 11.4%.",
+    "basis": "EXP-0027 bi-exponential fitting comparison on Moll Chapter 5 NMES data.",
+    "experiment_id": "EXP-0031",
+    "status": "model_counterexample",
+    "claim": "Моноэкспоненциальная модель восстановления PCr неприменима к смешанным мышечным группам при выраженном ацидозе (pH < 6.5), порождая систематическое раннее смещение до 11.4%.",
+    "context": "EXP-0027 bi-exponential fitting comparison on Moll Chapter 5 NMES data."
   }
 ]

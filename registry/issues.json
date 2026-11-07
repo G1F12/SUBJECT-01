@@ -143,5 +143,16 @@
     "title": "Systemic gas calibration does not determine local reserve scale or baseline",
     "impact": "Absolute VO2/VCO2 plus W acquired and systemic-cost transfer tested; localallocation, transport, activevolume, PCrreference remain unobserved.",
     "next_action": "Acquire sameparticipant synchronized PCr-VO2/VCO2-W with independently calibrated activevolume/absolutePCr and localbaseline; preregister new participants."
+  },
+  {
+    "id": "ISS-0018",
+    "date": "2026-11-07",
+    "status": "open",
+    "title": "Volumetric active muscle morphometry (V_active) and isolated local resting baseline (M_loc) required to eliminate remaining D2 symmetries",
+    "description": "Symmetry 1 (energy scale) and Symmetry 2 (additive baseline shift) persist because 31P-MRS measures concentration ratios and pulmonary CPET includes whole-body baseline. Resolving both requires synchronized T2*-MRI volumetry and isolated muscle resting oxygen extraction.",
+    "affected_modules": [
+      "research/local_muscle_bridge_2026_11_07",
+      "tools/cpe45.py"
+    ]
   }
 ]

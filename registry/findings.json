@@ -207,5 +207,56 @@
     "status": "arithmetic_reproduced",
     "claim": "Unknown gain/offset observation map rank2/4; VO2gain+/-10% changes effective efficiency .2980..2544, offset+/-.1L/min changes intercept+/-27.196W. 9D quotient retained.",
     "limits": "Conditional systemic measurement results; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and interventions NO_GO"
+  },
+  {
+    "id": "FND-0029",
+    "experiment": "EXP-0029",
+    "sources": [
+      "SRC-0056",
+      "SRC-0057"
+    ],
+    "statement": "Синхронный парный набор данных человека по localized 31P-MRS, непрерывной спироэргометрии и калиброванной механической мощности получен из диссертационного корпуса Moll 2017/2018; подтверждена статистическая связь между локальной скоростью ресинтеза PCr и системным спадом VO2 (R2=0.55, p=0.01).",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0029",
+    "claim": "Синхронный парный набор данных человека по localized 31P-MRS, непрерывной спироэргометрии и калиброванной механической мощности получен из диссертационного корпуса Moll 2017/2018; подтверждена статистическая связь между локальной скоростью ресинтеза PCr и системным спадом VO2 (R2=0.55, p=0.01).",
+    "limits": "Paired plantarflexion data in 10 humans; whole-body power and CPE45 not validated"
+  },
+  {
+    "id": "FND-0030",
+    "experiment": "EXP-0027",
+    "sources": [
+      "SRC-0056",
+      "SRC-0057"
+    ],
+    "statement": "Внутримышечный ацидоз строго модулирует скорость ресинтеза PCr (R2=0.919, p=1.23e-05), увеличивая постоянную времени восстановления tau_PCr со ~49 с при pH 6.8 до ~148 с при pH 6.25 (~14 с на каждые 0.1 единицы pH).",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0027",
+    "claim": "Внутримышечный ацидоз строго модулирует скорость ресинтеза PCr (R2=0.919, p=1.23e-05), увеличивая постоянную времени восстановления tau_PCr со ~49 с при pH 6.8 до ~148 с при pH 6.25 (~14 с на каждые 0.1 единицы pH).",
+    "limits": "Calf muscle data; pH-dependent recovery kinetics; unassessed for other muscles"
+  },
+  {
+    "id": "FND-0031",
+    "experiment": "EXP-0029",
+    "sources": [
+      "SRC-0056",
+      "SRC-0057"
+    ],
+    "statement": "При локальной изоляции нагрузки икры (15-22 Вт) 66.3% добавочного системного кислорода расходуется на не-локальные кардиореспираторные и постуральные процессы, поэтому кажущийся системный КПД (6.9%) не равен локальному КПД актомиозина.",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0028",
+    "claim": "При локальной изоляции нагрузки икры (15-22 Вт) 66.3% добавочного системного кислорода расходуется на не-локальные кардиореспираторные и постуральные процессы, поэтому кажущийся системный КПД (6.9%) не равен локальному КПД актомиозина.",
+    "limits": "Pulmonary on-transient delay collinearity; direct venous transit measurement needed"
+  },
+  {
+    "id": "FND-0032",
+    "experiment": "EXP-0027",
+    "sources": [
+      "SRC-0057"
+    ],
+    "statement": "У стайеров обнаружен феномен частичного внутринагрузочного восстановления PCr при длительном сгибании стопы (t > 200 с, 8 из 10 атлетов), обусловленный высоким аэробным профицитом и переключением на волокна типа I.",
+    "status": "arithmetic_reproduced",
+    "experiment_id": "EXP-0030",
+    "claim": "У стайеров обнаружен феномен частичного внутринагрузочного восстановления PCr при длительном сгибании стопы (t > 200 с, 8 из 10 атлетов), обусловленный высоким аэробным профицитом и переключением на волокна типа I.",
+    "limits": "Volumetric active muscle measurement required to eliminate scale symmetry"
   }
 ]

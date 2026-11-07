@@ -1,0 +1,79 @@
+[
+  {
+    "id": "SRC-0056",
+    "doi": "10.1002/nbm.3723",
+    "title": "Combined spiroergometry and 31P-MRS of human calf muscle during high-intensity exercise",
+    "year": 2017,
+    "metadata": {
+      "status": 200,
+      "source": "Crossref/Moll dissertation Ch 3"
+    },
+    "scope": "Paired 31P-MRS and breath spirometry data in human plantar flexion"
+  },
+  {
+    "id": "SRC-0057",
+    "doi": "10.22032/dbt.34407",
+    "title": "MR-Muscle Spectroscopy and Spiroergometry: Impact of Exercise-Induced Metabolic Changes in Single Muscle on Whole-Body Physiology",
+    "year": 2018,
+    "metadata": {
+      "status": 200,
+      "source": "Digitale Bibliothek Thueringen"
+    },
+    "scope": "Doctoral dissertation with 4 human exercise studies (ergometer, CPET+MRS, athletes, NMES)"
+  },
+  {
+    "id": "SRC-0058",
+    "doi": "10.1113/jphysiol.2014.279174",
+    "title": "Skeletal muscle ATP turnover by 31P magnetic resonance spectroscopy during moderate and heavy bilateral knee extension",
+    "year": 2014,
+    "metadata": {
+      "status": 200,
+      "source": "Crossref metadata; text closed"
+    },
+    "scope": "Bilateral knee extension 31P-MRS and VO2 turnover study"
+  },
+  {
+    "id": "SRC-0059",
+    "doi": "10.1113/jphysiol.2001.013444",
+    "title": "Dynamic asymmetry of phosphocreatine concentration and O2 uptake between the on- and off-transients of moderate- and high-intensity exercise in humans",
+    "year": 2002,
+    "metadata": {
+      "status": 200,
+      "source": "Crossref/PMC"
+    },
+    "scope": "Kinetic symmetry analysis of muscle PCr and pulmonary VO2 on/off transients"
+  },
+  {
+    "id": "SRC-0060",
+    "doi": "10.1113/jphysiol.2013.265686",
+    "title": "Assessment of skeletal muscle mitochondrial capacity using near-infrared spectroscopy and 31P-MRS",
+    "year": 2014,
+    "metadata": {
+      "status": 200,
+      "source": "Crossref"
+    },
+    "scope": "NIRS and 31P-MRS recovery rate constants comparison"
+  },
+  {
+    "id": "SRC-0061",
+    "doi": "10.5281/zenodo.23803900",
+    "title": "Temporal Energy Mismatch in Mitochondrial Disease",
+    "year": 2024,
+    "metadata": {
+      "status": 200,
+      "source": "Zenodo"
+    },
+    "scope": "Synthetic ODE bioenergetic simulation model traces"
+  },
+  {
+    "id": "SRC-0062",
+    "doi": "10.5281/zenodo.19472107",
+    "title": "31P-MRS reproducibility - datasets and code",
+    "year": 2023,
+    "metadata": {
+      "status": 200,
+      "source": "Zenodo"
+    },
+    "scope": "Spectroscopic reproducibility and quality control algorithms"
+  }
+]
