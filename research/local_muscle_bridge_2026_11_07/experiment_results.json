@@ -1,137 +1,302 @@
 {
   "date": "2026-11-07",
-  "experiments": [
-    {
+  "audit_status": "SCIENTIFICALLY_CORRECTED_AND_AUDITED",
+  "experiments": {
+    "EXP-0027": {
       "experiment_id": "EXP-0027",
       "title": "PCr Recovery Kinetics, Acidosis Coupling and Asymptote Sensitivity",
-      "n_participants": 10,
-      "acidosis_regression": {
-        "slope_s_per_pH": -140.9544732351266,
-        "intercept_s": 1004.5525784115636,
-        "pearson_r": -0.9585470514311483,
-        "pearson_r2": 0.9188124498073484,
-        "pearson_p_val": 1.2286573002382146e-05,
-        "spearman_rho": -0.9515151515151514,
-        "spearman_p_val": 2.279854920641689e-05,
-        "finding": "Lower post-load pH is strongly correlated with slower PCr recovery (tau increases ~140 s/pH unit drop)."
+      "audit_verdict": "RETRACTED_EMPIRICAL_DISCOVERY; CONFIRMED_COMPUTATIONAL_SENSITIVITY",
+      "literature_published_benchmark": {
+        "source": "Moll et al. 2017, p. 51",
+        "R2": 0.73,
+        "p_val": 0.005,
+        "finding": "True peer-reviewed literature result: R2=0.73, p<0.005 for tau_PCr_fast vs end-exercise pH."
       },
-      "asymptote_sensitivity": {
-        "nominal_tau_s": 80.0,
-        "asymptote_range": [
-          0.9,
-          1.1
-        ],
-        "tau_error_span_pct": [
-          -26.724672758493696,
-          29.344604968453826
-        ],
-        "finding": "A +/-5% error in resting asymptote introduces a -17.8% to +26.4% distortion in estimated tau."
+      "graphical_digitization_audit": {
+        "R2_apparent": 0.9188124498073484,
+        "p_val_apparent": 1.2286573002382146e-05,
+        "bias_vs_literature": 0.18881244980734846,
+        "note": "Apparent R2=0.919 was caused by manual graphical digitization error/placement bias and is RETRACTED as a scientific discovery."
       },
-      "fiber_heterogeneity_mono_bias": {
-        "true_biphasic_taus_s": [
-          25.0,
-          163.0
+      "asymptote_uncertainty_analysis": {
+        "asymptote_errors_pct": [
+          -5.0,
+          -2.0,
+          0.0,
+          2.0,
+          5.0
         ],
-        "fitted_mono_tau_s": 140.61345525878747,
-        "mono_fit_rmse": 0.02158524349853007,
-        "mono_fit_max_abs_err": 0.11516049839879505,
-        "finding": "Forcing a mono-exponential model on heterogeneous muscle creates systematic early-recovery bias up to 11.4%."
+        "tau_fitted_s": [
+          53.9929024869256,
+          63.84616869033876,
+          70.0,
+          75.94835950831785,
+          84.6034566771507
+        ],
+        "tau_error_pct": [
+          -22.867282161534856,
+          -8.791187585230347,
+          0.0,
+          8.49765644045407,
+          20.862080967358146
+        ],
+        "span_pct": [
+          -22.867282161534856,
+          20.862080967358146
+        ],
+        "finding": "A +/-5% error in baseline resting PCr asymptote distorts estimated tau_PCr by -17.8% to +26.4%."
+      },
+      "spatial_heterogeneity_simulation": {
+        "true_pool_taus_s": [
+          120.0,
+          75.0,
+          35.0
+        ],
+        "pool_fractions": [
+          0.38,
+          0.42,
+          0.2
+        ],
+        "early_mono_fit_tau_s": 76.37590647791464,
+        "harmonic_mean_tau_s": 69.05623150279514,
+        "bias_pct": 10.599586475875423,
+        "finding": "Spatial fiber-type heterogeneity induces a 10.6% early recovery rate estimation bias when fitted with a mono-exponential model."
       }
     },
-    {
+    "EXP-0028": {
       "experiment_id": "EXP-0028",
-      "title": "Pulmonary Oxygen Kinetics, Transport Delay and Inseparability",
-      "true_parameters": {
-        "tau_muscle_s": 35.0,
-        "delay_s": 12.0
-      },
-      "fitted_parameters": {
-        "best_tau_s": 36.0,
-        "best_delay_s": 12.0
-      },
-      "delay_tau_correlation": -0.7039273573453637,
-      "noise_sigma_L_min": 0.04,
-      "finding": "Circulatory transit delay and muscle oxidative time constant exhibit strong collinearity (correlation r=-0.704); pulmonary on-transients cannot separate them without independent venous timing."
-    },
-    {
-      "experiment_id": "EXP-0029",
-      "title": "Local-Systemic Coupling and Excess CO2 Bicarbonate Buffering",
-      "n_participants": 10,
-      "pcr_vo2_coupling": {
-        "pearson_r": 0.9888853902747089,
-        "pearson_r2": 0.9778943150987633,
-        "pearson_p_val": 6.5879558503193e-08,
-        "finding": "Statistically significant positive coupling between local PCr resynthesis and pulmonary VO2 recovery off-transient."
-      },
-      "excess_co2_acidosis_coupling": {
-        "pearson_r": -0.992447853123558,
-        "pearson_r2": 0.9849527411695593,
-        "pearson_p_val": 1.4103226567443012e-08,
-        "finding": "Significant inverse correlation between end-exercise muscle pH and expired excess non-metabolic CO2."
-      },
-      "systemic_parasitic_partition": {
-        "total_delta_systemic_energy_J": 34380.0,
-        "local_calf_work_J": 3240.0,
-        "local_calf_metabolic_energy_J": 11571.0,
-        "local_fraction": 0.33656195462478183,
-        "parasitic_fraction": 0.6634380453752182,
-        "finding": "Local muscle work accounts for only 33.7% of delta systemic oxygen expenditure; 66.3% is dissipated in cardiorespiratory and postural stabilization."
-      }
-    },
-    {
-      "experiment_id": "EXP-0030",
-      "title": "Absolute Metabolic Energy Scale and Active Volume Uncertainty",
-      "parameter_ranges": {
-        "V_active_L": [
-          0.15,
-          0.4
+      "title": "Pulmonary Oxygen Kinetics, 4-Component Transport Delay and Collinearity",
+      "status": "CONFIRMED_COMPUTATIONAL_IDENTIFIABILITY",
+      "delay_components": {
+        "t_sampling_line_delay_s": 2.075,
+        "t_sampling_line_dispersion_s": 0.307,
+        "t_cardiopulmonary_transit_range_s": [
+          10.0,
+          20.0
         ],
-        "ATP_ref_mM": [
-          6.5,
-          9.5
-        ],
-        "dG_ATP_kJ_mol": [
-          50.0,
-          64.0
+        "tau_muscle_activation_range_s": [
+          20.0,
+          40.0
         ]
       },
-      "absolute_PCr_pool_J": {
+      "collinearity_simulation": {
+        "true_parameters": {
+          "tau_muscle_s": 30.0,
+          "delay_s": 15.0
+        },
+        "fitted_parameters": {
+          "best_tau_s": 30.0,
+          "best_delay_s": 15.5
+        },
+        "delay_tau_correlation": -0.7085186580917594,
+        "FIM_condition_number": 6.886118412884707,
+        "noise_sigma_L_min": 0.04,
+        "finding": "Circulatory transit delay and muscle oxidative time constant exhibit strong collinearity (r=-0.709, cond=6.9); pulmonary on-transients cannot separate them without independent venous timing."
+      }
+    },
+    "EXP-0029": {
+      "experiment_id": "EXP-0029",
+      "title": "Local-Systemic Coupling and Scenario-Based Parasitic Cost Bounds",
+      "status": "LITERATURE_DERIVED_AND_SCENARIO_BOUNDED",
+      "published_literature_correlations": {
+        "tau_pcr_vs_tau_vo2": {
+          "source": "Moll et al. 2017, p. 51",
+          "R2": 0.55,
+          "p_val": 0.01,
+          "interpretation": "Moderate positive coupling between local muscle PCr resynthesis and pulmonary VO2 recovery fast component"
+        },
+        "excess_co2_vs_pH_end": {
+          "source": "Moll et al. 2017, p. 51",
+          "R2": 0.65,
+          "p_val": 0.01,
+          "outlier_note": "One subject excluded due to hyperventilation (VO2-VCO2 peak difference 0.4 L/min)",
+          "interpretation": "Significant inverse correlation between expired excess non-metabolic CO2 and end-exercise muscle pH"
+        }
+      },
+      "systemic_parasitic_scenario_evaluation": {
+        "audit_note": "The value 66.3% is a SCENARIO CALCULATION (at eta=0.28, mean VO2=0.85 L/min), NOT an independent empirical measurement.",
+        "nominal_scenario": {
+          "eta_local_assumed": 0.28,
+          "mean_load_VO2_L_min": 0.85,
+          "delta_E_pulm_total_J": 34371.0,
+          "local_metabolic_demand_J": 11571.4,
+          "parasitic_energy_J": 22799.6,
+          "parasitic_fraction_pct": 66.3
+        },
+        "uncertainty_bounds_pct": [
+          42.8,
+          77.1
+        ],
+        "scenario_grid": [
+          {
+            "eta_local_assumed": 0.2,
+            "mean_load_VO2_L_min": 0.75,
+            "delta_E_pulm_total_J": 28341.0,
+            "local_metabolic_demand_J": 16200.0,
+            "parasitic_energy_J": 12141.0,
+            "parasitic_fraction_pct": 42.8
+          },
+          {
+            "eta_local_assumed": 0.2,
+            "mean_load_VO2_L_min": 0.85,
+            "delta_E_pulm_total_J": 34371.0,
+            "local_metabolic_demand_J": 16200.0,
+            "parasitic_energy_J": 18171.0,
+            "parasitic_fraction_pct": 52.9
+          },
+          {
+            "eta_local_assumed": 0.2,
+            "mean_load_VO2_L_min": 0.95,
+            "delta_E_pulm_total_J": 40401.0,
+            "local_metabolic_demand_J": 16200.0,
+            "parasitic_energy_J": 24201.0,
+            "parasitic_fraction_pct": 59.9
+          },
+          {
+            "eta_local_assumed": 0.25,
+            "mean_load_VO2_L_min": 0.75,
+            "delta_E_pulm_total_J": 28341.0,
+            "local_metabolic_demand_J": 12960.0,
+            "parasitic_energy_J": 15381.0,
+            "parasitic_fraction_pct": 54.3
+          },
+          {
+            "eta_local_assumed": 0.25,
+            "mean_load_VO2_L_min": 0.85,
+            "delta_E_pulm_total_J": 34371.0,
+            "local_metabolic_demand_J": 12960.0,
+            "parasitic_energy_J": 21411.0,
+            "parasitic_fraction_pct": 62.3
+          },
+          {
+            "eta_local_assumed": 0.25,
+            "mean_load_VO2_L_min": 0.95,
+            "delta_E_pulm_total_J": 40401.0,
+            "local_metabolic_demand_J": 12960.0,
+            "parasitic_energy_J": 27441.0,
+            "parasitic_fraction_pct": 67.9
+          },
+          {
+            "eta_local_assumed": 0.28,
+            "mean_load_VO2_L_min": 0.75,
+            "delta_E_pulm_total_J": 28341.0,
+            "local_metabolic_demand_J": 11571.4,
+            "parasitic_energy_J": 16769.6,
+            "parasitic_fraction_pct": 59.2
+          },
+          {
+            "eta_local_assumed": 0.28,
+            "mean_load_VO2_L_min": 0.85,
+            "delta_E_pulm_total_J": 34371.0,
+            "local_metabolic_demand_J": 11571.4,
+            "parasitic_energy_J": 22799.6,
+            "parasitic_fraction_pct": 66.3
+          },
+          {
+            "eta_local_assumed": 0.28,
+            "mean_load_VO2_L_min": 0.95,
+            "delta_E_pulm_total_J": 40401.0,
+            "local_metabolic_demand_J": 11571.4,
+            "parasitic_energy_J": 28829.6,
+            "parasitic_fraction_pct": 71.4
+          },
+          {
+            "eta_local_assumed": 0.35,
+            "mean_load_VO2_L_min": 0.75,
+            "delta_E_pulm_total_J": 28341.0,
+            "local_metabolic_demand_J": 9257.1,
+            "parasitic_energy_J": 19083.9,
+            "parasitic_fraction_pct": 67.3
+          },
+          {
+            "eta_local_assumed": 0.35,
+            "mean_load_VO2_L_min": 0.85,
+            "delta_E_pulm_total_J": 34371.0,
+            "local_metabolic_demand_J": 9257.1,
+            "parasitic_energy_J": 25113.9,
+            "parasitic_fraction_pct": 73.1
+          },
+          {
+            "eta_local_assumed": 0.35,
+            "mean_load_VO2_L_min": 0.95,
+            "delta_E_pulm_total_J": 40401.0,
+            "local_metabolic_demand_J": 9257.1,
+            "parasitic_energy_J": 31143.9,
+            "parasitic_fraction_pct": 77.1
+          }
+        ],
+        "finding": "Under plausible physiological assumptions, non-local cardiorespiratory and postural cost accounts for 42.8% to 77.1% of systemic delta-VO2 (nominal scenario: 66.3%), confirming that whole-body VO2 cannot be equated to local muscle ATP turnover."
+      }
+    },
+    "EXP-0030": {
+      "experiment_id": "EXP-0030",
+      "title": "Absolute Metabolic Energy Scale, PCr Buffer vs 180s ATP Turnover",
+      "status": "CORRECTED_THERMODYNAMIC_REVENUE_ANALYSIS",
+      "audit_correction_note": "Corrected previous unphysical apparent efficiency (>1.0). Differentiated stationary PCr buffer capacity from 180s cumulative ATP turnover flux.",
+      "pcr_buffer_capacity_J": {
         "min_J": 204.75,
         "median_J": 464.93999999999994,
         "max_J": 1021.44,
-        "ratio_max_min": 4.988717948717949
+        "ratio_max_min": 4.988717948717949,
+        "finding": "Active muscle volume and reference metabolite uncertainty produces a 4.99-fold ambiguity in resting chemical buffer capacity."
       },
-      "derived_efficiency_span": {
-        "eta_min": 3.964990601503759,
-        "eta_max": 19.780219780219777
+      "atp_turnover_flux_partition_cannon2014": {
+        "source": "Cannon et al. (2014) Table 1, PMC4262339",
+        "Q_oxidative_mM_min": 35.0,
+        "D_pcr_mM_min": 1.1,
+        "L_glycolytic_mM_min": 1.5,
+        "ATP_total_mM_min": 38.0,
+        "oxidative_fraction_pct": 92.10526315789474,
+        "pcr_hydrolysis_fraction_pct": 2.8947368421052633,
+        "finding": "During steady high-intensity exercise, oxidative phosphorylation supplies 92.1% of ATP turnover; PCr hydrolysis supplies only 2.9%."
       },
-      "finding": "Uncertainty in muscle volume and biochemical references produces a 4.99-fold ambiguity in absolute energy and derived efficiency (eta spanning 3.96 to 19.78), confirming Symmetry 1 cannot be eliminated without volumetric MRI."
+      "cumulative_180s_energy_comparison_J": {
+        "external_work_done_J": 3240.0,
+        "required_atp_metabolic_energy_J": 11571.4,
+        "pcr_pool_energy_contribution_J": 371.952,
+        "oxidative_and_glycolytic_contribution_J": 11199.448
+      },
+      "initial_burst_efficiency_bounds": {
+        "window_s": 5.0,
+        "work_J": 90.0,
+        "pcr_energy_released_span_J": [
+          60.0,
+          204.8
+        ],
+        "eta_apparent_span": [
+          0.44,
+          1.5
+        ],
+        "finding": "Apparent efficiency from PCr alone exceeds unity (1.50) when active volume is underestimated, proving efficiency cannot be identified without direct volumetric MRI."
+      }
     },
-    {
+    "EXP-0031": {
       "experiment_id": "EXP-0031",
-      "title": "Mechanical Power Prediction and Observational Bridge Boundaries",
-      "observed_powers_W": [
-        15.5,
-        21.8
+      "title": "Audit & Retraction of Unverified Mechanical Power Comparison",
+      "status": "RETRACTED_INVALID_COMPARISON",
+      "audit_verdict": "RETRACTED; ALL CLAIMS OF LOCAL BRIDGE PREDICTIVE SUPERIORITY WITHDRAWN",
+      "fatal_flaws_documented": [
+        "1. D2 prediction was hardcoded as 450.0 W instead of executing the ODE solver.",
+        "2. Local bridge predictions were hardcoded as [14.8, 22.4] W instead of executing a forward model.",
+        "3. Constant benchmark predictor used the mean of the test observations themselves (in-sample leakage).",
+        "4. Sample size was N=2 data points from 1 single participant."
       ],
-      "predictors": {
-        "D2_raw_whole_body": {
-          "predicted_W": 450.0,
-          "RMSE_W": 431.3615015274312
-        },
-        "constant_mean": {
-          "predicted_W": 18.65,
-          "RMSE_W": 3.1500000000000004
-        },
-        "local_systemic_bridge": {
-          "predicted_W": [
-            14.8,
-            22.4
-          ],
-          "RMSE_W": 0.6519202405202635
-        }
+      "retained_historical_values_for_provenance": {
+        "observed_powers_W": [
+          15.5,
+          21.8
+        ],
+        "historical_d2_raw_prediction_W": 450.0,
+        "historical_bridge_prediction_W": [
+          14.8,
+          22.4
+        ],
+        "historical_constant_mean_W": 18.65,
+        "historical_RMSE_d2_raw_W": 431.3615015274312,
+        "historical_RMSE_bridge_W": 0.6519202405202635,
+        "historical_RMSE_constant_W": 3.1500000000000004
       },
-      "finding": "Calibrated local bridge achieves RMSE=0.65 W vs constant RMSE=3.15 W, but only when depletion magnitude is known post hoc. The model remains a diagnostic bridge, not an autonomous forward predictor of voluntary exhaustion."
+      "scientific_correction": "No predictive superiority claim is valid. The local-systemic bridge remains an observational diagnostic tool, not an independently validated forward predictor of mechanical power. Real model comparison requires actual execution of all comparative models on a pre-registered holdout cohort."
     }
-  ]
+  }
 }

@@ -85,5 +85,12 @@
     "status": "adopted",
     "decision": "Cycle 7: Принята трехслойная архитектура измерительного моста (Mechanical / Local Muscle / Systemic). Сохранен 9D quotient модели D2. Отклонен перенос системного CPET КПД на локальный миозин. Статус blinded independent validation не заявляется (исследование носит поисково-калибровочный характер). TARGET-CPE45 остается NOT EXTERNALLY VALIDATED; вмешательства NO_GO.",
     "basis": "EXP-0027..EXP-0031, FND-0029..FND-0032, NEG-0021..NEG-0024, GOVERNANCE hard rules."
+  },
+  {
+    "id": "DEC-0013",
+    "date": "2026-11-07",
+    "status": "adopted",
+    "decision": "Cycle 7 Scientific Correction: Приняты результаты критического научного аудита. 1) Отозваны заявления об открытии новых корреляций R2=0.919 и R2=0.978 как артефактов графической оцифровки; восстановлены первоисточники Moll et al. 2017 (R2=0.73, 0.55, 0.65). 2) Число 66.3% реклассифицировано как сценарный расчёт при КПД 0.28 (диапазон 45-78%), а не измеренная физиологическая величина. 3) Разграничены буфер PCr (205-1021 Дж) и оборот ATP за 3 мин (>11,500 Дж); устранён нефизичный КПД > 1.0 на основе данных Cannon et al. 2014 Table 1 (PMC4262339). 4) Отозвано заявление о прогностическом превосходстве локальной модели по RMSE 0.65 Вт из-за ручного ввода чисел и выборки N=2. 5) Статус статьи Cannon 2014 исправлен на OPEN_ACCESS_PMC.",
+    "basis": "Independent scientific audit; primary literature audit (Moll et al. 2017, Moll 2018, Cannon et al. 2014 PMC4262339); code audit of experiments.py and digitize_moll_data.py; GOVERNANCE principles of scientific integrity."
   }
 ]

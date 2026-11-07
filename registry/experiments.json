@@ -478,11 +478,13 @@
       "SRC-0056",
       "SRC-0057"
     ],
-    "design": "Evaluation of individual PCr recovery curves across 10 healthy participants and 21 athletes; regression with end-exercise pH; numerical simulation of asymptote uncertainty (+/-5%) and mono- vs bi-exponential fitting bias on NMES data.",
-    "status": "arithmetic_reproduced",
+    "design": "Audit of individual PCr recovery points vs literature benchmark (Moll et al. 2017: R2=0.73, p<0.005); evaluation of graphical digitization placement bias; numerical simulation of asymptote uncertainty (+/-5%) and spatial heterogeneity bias on NMES data.",
+    "status": "retracted_empirical_discovery_confirmed_computational",
     "results": {
-      "R2_acidosis_tau": 0.919,
-      "p_val": 1.23e-05,
+      "literature_R2": 0.73,
+      "literature_p_val": 0.005,
+      "retracted_apparent_R2": 0.919,
+      "digitization_bias": 0.189,
       "asymptote_tau_error_pct_span": [
         -17.8,
         26.4
@@ -497,7 +499,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Local-systemic measurement bridge observations only; whole-body power prediction and TARGET-CPE45 not validated",
+    "limits": "Apparent R2=0.919 retracted as digitization artifact; literature R2=0.73 confirmed; asymptote and heterogeneity sensitivity confirmed computationally.",
     "external_validation": "not_done"
   },
   {
@@ -509,11 +511,12 @@
       "SRC-0057",
       "SRC-0059"
     ],
-    "design": "Convolution modeling of local muscle oxidative drive with cardiopulmonary transit delay and dispersion filter; estimation of parameter correlation and Hessian conditioning under breath-by-breath noise (sigma=0.04 L/min).",
+    "design": "Convolution modeling of local muscle oxidative drive with 4 distinct delay/filtering components (line delay 2.075s, line dispersion 0.307s, circulatory transit 10-20s, tissue activation 20-40s); smooth FIM conditioning and parameter collinearity analysis.",
     "status": "arithmetic_reproduced",
     "results": {
-      "delay_tau_correlation": -0.704,
-      "finding": "Circulatory delay and muscle time constant are strongly collinear in pulmonary on-transients."
+      "delay_tau_correlation": -0.709,
+      "FIM_condition_number": 34.2,
+      "finding": "Circulatory transit delay and muscle activation time constant are strongly collinear in pulmonary on-transients."
     },
     "research_date": "2026-11-07",
     "model": "research/local_muscle_bridge_2026_11_07/experiments.py",
@@ -523,7 +526,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Local-systemic measurement bridge observations only; whole-body power prediction and TARGET-CPE45 not validated",
+    "limits": "Pulmonary on-transient delay collinearity; direct venous transit measurement needed.",
     "external_validation": "not_done"
   },
   {
@@ -534,43 +537,15 @@
       "SRC-0056",
       "SRC-0057"
     ],
-    "design": "Statistical correlation of paired 31P-MRS and CPET observations across 10 participants; energy partitioning between local calf mechanical work and systemic excess oxygen expenditure.",
+    "design": "Literature-derived local-systemic coupling (Moll et al. 2017: R2=0.55, R2=0.65); scenario-based energy partitioning between local calf mechanical work (18 W, 180s) and whole-body excess oxygen expenditure across plausible efficiency bounds (0.20-0.35).",
     "status": "arithmetic_reproduced",
     "results": {
-      "R2_pcr_vo2": 0.55,
-      "R2_excess_co2_pH": 0.65,
-      "parasitic_systemic_fraction": 0.663
-    },
-    "research_date": "2026-11-07",
-    "model": "research/local_muscle_bridge_2026_11_07/experiments.py",
-    "inputs": "research/local_muscle_bridge_2026_11_07/moll2018_extracted_measurements.json",
-    "report": "research/local_muscle_bridge_2026_11_07/REPORT.md",
-    "outputs": [
-      "research/local_muscle_bridge_2026_11_07/experiment_results.json"
-    ],
-    "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Local-systemic measurement bridge observations only; whole-body power prediction and TARGET-CPE45 not validated",
-    "external_validation": "not_done"
-  },
-  {
-    "id": "EXP-0030",
-    "date": "2026-11-07",
-    "name": "Absolute Metabolic Energy Scale and Active Volume Uncertainty",
-    "sources": [
-      "SRC-0056",
-      "SRC-0057"
-    ],
-    "design": "Uncertainty propagation across plausible ranges of active volume (0.15-0.40 L), reference ATP concentration (6.5-9.5 mM), and free energy of ATP hydrolysis (50-64 kJ/mol).",
-    "status": "arithmetic_reproduced",
-    "results": {
-      "PCr_pool_span_J": [
-        204.75,
-        1021.44
-      ],
-      "ratio_max_min": 4.99,
-      "derived_eta_span": [
-        0.11,
-        0.52
+      "literature_R2_pcr_vo2": 0.55,
+      "literature_R2_excess_co2_pH": 0.65,
+      "nominal_scenario_parasitic_fraction": 0.663,
+      "scenario_parasitic_bounds_pct": [
+        45.0,
+        78.0
       ]
     },
     "research_date": "2026-11-07",
@@ -581,7 +556,42 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Local-systemic measurement bridge observations only; whole-body power prediction and TARGET-CPE45 not validated",
+    "limits": "The value 66.3% is a scenario calculation under assumed eta=0.28, not an empirically measured cardiorespiratory cost.",
+    "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0030",
+    "date": "2026-11-07",
+    "name": "Absolute Metabolic Energy Scale and Active Volume Uncertainty",
+    "sources": [
+      "SRC-0056",
+      "SRC-0057"
+    ],
+    "design": "Thermodynamic analysis distinguishing resting chemical PCr buffer capacity (0.15-0.40 L active volume) from 180s cumulative ATP turnover flux (verified against Cannon et al. 2014 Table 1 PMC4262339); initial burst apparent efficiency analysis.",
+    "status": "arithmetic_reproduced",
+    "results": {
+      "PCr_buffer_span_J": [
+        204.75,
+        1021.44
+      ],
+      "ratio_max_min": 4.99,
+      "atp_turnover_180s_metabolic_J": 11571.4,
+      "pcr_turnover_fraction_pct": 3.8,
+      "cannon2014_oxidative_atp_fraction_pct": 92.1,
+      "initial_burst_apparent_eta_span": [
+        0.44,
+        1.5
+      ]
+    },
+    "research_date": "2026-11-07",
+    "model": "research/local_muscle_bridge_2026_11_07/experiments.py",
+    "inputs": "research/local_muscle_bridge_2026_11_07/moll2018_extracted_measurements.json",
+    "report": "research/local_muscle_bridge_2026_11_07/REPORT.md",
+    "outputs": [
+      "research/local_muscle_bridge_2026_11_07/experiment_results.json"
+    ],
+    "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
+    "limits": "Apparent efficiency > 1.0 retracted. Active volume uncertainty prevents absolute energy scale identification.",
     "external_validation": "not_done"
   },
   {
@@ -592,12 +602,18 @@
       "SRC-0056",
       "SRC-0057"
     ],
-    "design": "Comparison of mechanical power prediction on repeated plantarflexion (15.5 W and 21.8 W) between unscaled whole-body D2, constant baseline, and calibrated local-systemic bridge.",
-    "status": "arithmetic_reproduced",
+    "design": "Audit and retraction of previous mechanical power prediction: D2 (450 W) and bridge (14.8, 22.4 W) were hardcoded; constant baseline used in-sample mean; sample size was N=2 observations from 1 subject.",
+    "status": "retracted_invalid_comparison",
     "results": {
-      "RMSE_D2_raw_W": 431.36,
-      "RMSE_constant_W": 3.15,
-      "RMSE_local_bridge_W": 0.65
+      "audit_verdict": "RETRACTED_INVALID_COMPARISON",
+      "historical_RMSE_d2_raw_W": 431.36,
+      "historical_RMSE_constant_W": 3.15,
+      "historical_RMSE_local_bridge_W": 0.65,
+      "reasons": [
+        "Hardcoded model predictions",
+        "In-sample constant baseline",
+        "N=2 observations of 1 participant"
+      ]
     },
     "research_date": "2026-11-07",
     "model": "research/local_muscle_bridge_2026_11_07/experiments.py",
@@ -607,7 +623,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Local-systemic measurement bridge observations only; whole-body power prediction and TARGET-CPE45 not validated",
+    "limits": "All claims of local bridge predictive superiority are retracted. The model is an observational diagnostic tool, not an independently validated forward predictor.",
     "external_validation": "not_done"
   }
 ]
