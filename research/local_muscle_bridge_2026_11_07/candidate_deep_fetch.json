@@ -1,0 +1,20 @@
+{
+  "moll_dissertation_pdf": {
+    "label": "moll_dissertation_pdf",
+    "url": "https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00040610/dissmoll.pdf",
+    "status": 200,
+    "bytes": 11102292,
+    "sha256": "427923c08acfa5a13826c1234471d8a0464a395c2a4dc524cc0d03d077bf9a7f",
+    "file": "moll_dissertation_pdf.bin",
+    "success": true
+  },
+  "cannon2014_ncbi_pmc_xml": {
+    "label": "cannon2014_ncbi_pmc_xml",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4263658&retmode=xml",
+    "status": 200,
+    "bytes": 11836,
+    "sha256": "9f431fd8dc4f5cd7263214ae2e645025393621ba9c066dc3b49a3a67f1d508b4",
+    "file": "cannon2014_ncbi_pmc_xml.bin",
+    "success": true
+  }
+}

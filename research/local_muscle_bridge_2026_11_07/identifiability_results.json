@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-07",
+  "topologies": {
+    "M1_power_only": {
+      "n_parameters": 7,
+      "effective_rank": 0,
+      "rank_defect": 7,
+      "singular_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "eta_loc",
+        "PCr_rest_mM",
+        "V_active_L",
+        "dG_ATP_kJ_mol",
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M2_power_relPCr": {
+      "n_parameters": 7,
+      "effective_rank": 3,
+      "rank_defect": 4,
+      "singular_values": [
+        0.2557181520580934,
+        0.1633628404451987,
+        0.010351146299443344,
+        1.2144090629451518e-13,
+        3.691713386571662e-14,
+        8.557198027450423e-18,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "dG_ATP_kJ_mol",
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M3_power_relPCr_VO2": {
+      "n_parameters": 7,
+      "effective_rank": 4,
+      "rank_defect": 3,
+      "singular_values": [
+        0.2973379153346572,
+        0.19116950678970104,
+        0.03349653560283228,
+        0.009318983963421018,
+        1.4466172069446793e-13,
+        4.3020380131273167e-14,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M4_power_absPCr": {
+      "n_parameters": 7,
+      "effective_rank": 3,
+      "rank_defect": 4,
+      "singular_values": [
+        13.870955168384423,
+        5.832670436146073,
+        3.827728918905535,
+        3.2467232025841817e-12,
+        8.094343373092171e-13,
+        3.722713038104243e-17,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "dG_ATP_kJ_mol",
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M5_power_absPCr_volume": {
+      "n_parameters": 7,
+      "effective_rank": 4,
+      "rank_defect": 3,
+      "singular_values": [
+        13.878525826583521,
+        5.8358675826673405,
+        3.8298196320787015,
+        0.01904636157177484,
+        3.2484946785028574e-12,
+        7.013372102962245e-13,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M6_power_absPCr_vol_baseline": {
+      "n_parameters": 7,
+      "effective_rank": 3,
+      "rank_defect": 4,
+      "singular_values": [
+        13.877023180738611,
+        5.835222006375722,
+        3.829403403905773,
+        0.0013994684515555146,
+        8.096585763460377e-13,
+        1.5434200666984444e-16,
+        0.0
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "dG_ATP_kJ_mol",
+        "tau_PCr_rec_s",
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    },
+    "M7_fully_anchored": {
+      "n_parameters": 7,
+      "effective_rank": 5,
+      "rank_defect": 2,
+      "singular_values": [
+        16.651303460881742,
+        7.001797953158535,
+        4.5950239039635825,
+        0.06716980197343791,
+        0.0323842630650085,
+        0.0016792450493371134,
+        8.41621995317471e-13
+      ],
+      "condition_number": Infinity,
+      "unidentifiable_directions": [
+        "Q_loc_max_mM_s",
+        "M_loc_mM_s"
+      ]
+    }
+  },
+  "profile_likelihood": {
+    "scale_alphas": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2000000000000002,
+      1.3,
+      1.4,
+      1.5,
+      1.6,
+      1.7000000000000002,
+      1.8,
+      1.9000000000000001,
+      2.0
+    ],
+    "scale_rss_power_relPCr": [
+      0.0,
+      0.0,
+      1.5407439555097887e-32,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.5407439555097887e-32,
+      1.5407439555097887e-32,
+      0.0,
+      0.0,
+      1.5407439555097887e-32,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale_rss_absolute": [
+      0.0,
+      0.0,
+      1.5777218104420236e-29,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.5777218104420236e-29,
+      1.5777218104420236e-29,
+      0.0,
+      0.0,
+      1.5777218104420236e-29,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "shift_deltas": [
+      -0.01,
+      -0.005,
+      0.0,
+      0.004999999999999999,
+      0.01,
+      0.015000000000000001,
+      0.019999999999999997,
+      0.025,
+      0.03,
+      0.034999999999999996,
+      0.04,
+      0.045,
+      0.05
+    ],
+    "shift_rss_recovery": [
+      0.0,
+      0.0,
+      0.0,
+      7.395570986446986e-32,
+      7.400385811307954e-32,
+      7.477423009083443e-32,
+      7.395570986446986e-32,
+      7.395570986446986e-32,
+      7.395570986446986e-32,
+      7.414830285890858e-32,
+      7.414830285890858e-32,
+      7.395570986446986e-32,
+      7.414830285890858e-32
+    ]
+  },
+  "conclusions": {
+    "question_A": "Relative PCr, external power and systemic VO2 cannot determine local muscle contraction cost without V_active and isolated muscle O2 fraction.",
+    "question_B": "Eliminating Symmetry 1 requires calibrated absolute metabolic energy (V_active * [PCr]_abs); eliminating Symmetry 2 requires isolated baseline M_loc or uninhibited Q_max."
+  }
+}

@@ -1,0 +1,185 @@
+"""Digitization and extraction of experimental measurements from
+Kevin Moll's research (Moll et al. 2017, Dissertation 2018, Stutzig et al. 2016/2017).
+Extracts:
+1. Pilot Plantarflexion Ergometer Mechanics & 31P-MRS (Chapter 2, 1 volunteer, 2 load levels).
+2. Combined Spiroergometry & 31P-MRS (Chapter 3, 10 healthy volunteers, paired local-systemic metrics).
+3. Athlete Comparison: Sprinters vs Endurance (Chapter 4, 21 athletes, multi-slice MRS GM/SOL + CPET + Lactate).
+4. NMES & pH Heterogeneity (Chapter 5, 8 subjects, 3-fold Pi split, fiber-type kinetics).
+"""
+from pathlib import Path
+import json
+
+BASE = Path(__file__).resolve().parent
+
+def build_extracted_dataset():
+    data = {
+        'source_doi': '10.1002/nbm.3723',
+        'dissertation_doi': '10.22032/dbt.34407',
+        'authors': ['Kevin Moll', 'Alexander Gussew', 'Christian Hein', 'Norman Stutzig', 'Juergen R. Reichenbach'],
+        'institution': 'Medical Physics Group, Institute of Diagnostic and Interventional Radiology, Jena University Hospital',
+        'scanner': 'Siemens Magnetom Tim Trio (3T) / Magnetom PRISMA fit (3T)',
+        'coil': 'Double-tuned 1H/31P surface loop coil (RAPID Biomedical)',
+        'spirometer': 'Ganshorn PowerCube (5m sampling line, delay ta=2.075s, t10-90=0.307s)',
+        'target_muscles': ['m. gastrocnemius medialis (GM)', 'm. soleus (SOL)'],
+
+        # Chapter 2 Pilot Data (Table 2-1)
+        'chapter2_ergometer_pilot': {
+            'n_subjects': 1,
+            'repetitions_per_condition': 3,
+            'exercise': 'Plantar flexion at 1 Hz, 35 deg deflection, 3 min duration',
+            'conditions': [
+                {
+                    'load_level': '15% FMVC',
+                    'power_W': {'mean': 15.5, 'min': 14.4, 'max': 16.5},
+                    'cadence_Hz': {'mean': 0.92, 'min': 0.91, 'max': 0.94},
+                    'pH_rest': {'mean': 6.93, 'min': 6.93, 'max': 6.97},
+                    'pH_load': {'mean': 6.77, 'min': 6.77, 'max': 6.84},
+                    'delta_pH': 0.16,
+                    'tau_PCr_depletion_s': {'mean': 56.2, 'min': 49.5, 'max': 61.1},
+                    'tau_Pi_accumulation_s': {'mean': 43.6, 'min': 36.7, 'max': 49.1}
+                },
+                {
+                    'load_level': '25% FMVC',
+                    'power_W': {'mean': 21.8, 'min': 21.5, 'max': 22.2},
+                    'cadence_Hz': {'mean': 0.95, 'min': 0.94, 'max': 0.97},
+                    'pH_rest': {'mean': 6.92, 'min': 6.87, 'max': 6.92},
+                    'pH_load': {'mean': 6.55, 'min': 6.51, 'max': 6.59},
+                    'delta_pH': 0.37,
+                    'tau_PCr_depletion_s': {'mean': 23.5, 'min': 19.3, 'max': 25.9},
+                    'tau_Pi_accumulation_s': {'mean': 25.0, 'min': 23.9, 'max': 26.3}
+                }
+            ]
+        },
+
+        # Chapter 3 Combined Spiroergometry & 31P-MRS (Table 3-1, Table 3-2, Fig 3-5)
+        'chapter3_combined_study': {
+            'n_subjects': 10,
+            'demographics': 'Healthy males, age 29 +/- 5 yrs',
+            'protocol': 'Right calf plantar flexion, 80 bpm, 25 deg, 0.6 bar resistance, peak force 163 +/- 23 N, 10 min rest, 3 min load, 20 min recovery',
+            'mean_parameters': {
+                'pH_rest': {'mean': 7.03, 'sd': 0.02},
+                'pH_load_end': {'mean': 6.45, 'sd': 0.22},
+                'tau_PCr_fast_s': {'mean': 93.0, 'sd': 39.0},
+                'tau_PCr_slow_s': {'mean': 460.0, 'sd': 241.0},
+                'f_PCr_fast': {'mean': 0.71, 'sd': 0.10},
+                'VO2_rest_L_min': {'mean': 0.28, 'sd': 0.05},
+                'VCO2_rest_L_min': {'mean': 0.22, 'sd': 0.05},
+                'VO2_load_L_min': {'mean': 1.05, 'sd': 0.30},
+                'VCO2_load_L_min': {'mean': 1.11, 'sd': 0.33},
+                'VE_rest_L_min': {'mean': 7.6, 'sd': 1.8},
+                'VE_load_L_min': {'mean': 29.8, 'sd': 8.1},
+                'excess_CO2_L': {'mean': 2.24, 'sd': 1.67},
+                'tau_VO2_fast_s': {'mean': 56.0, 'sd': 10.0},
+                'tau_VO2_slow_s': {'mean': 330.0, 'sd': 153.0},
+                'tau_VCO2_fast_s': {'mean': 86.0, 'sd': 33.0},
+                'tau_VCO2_slow_s': {'mean': 260.0, 'sd': 105.0},
+                'f_VO2_fast': {'mean': 0.93, 'sd': 0.13},
+                'f_VCO2_fast': {'mean': 0.86, 'sd': 0.15}
+            },
+            # Individual data points digitized from Figure 3-5 scatter plots (N=10)
+            # Coordinates (pH_end, tau_PCr_fast_s, tau_VO2_fast_s, excess_CO2_L)
+            'individual_participants': [
+                {'subject_id': 1, 'pH_end': 6.12, 'tau_PCr_fast_s': 135.0, 'tau_VO2_fast_s': 70.0, 'excess_CO2_L': 4.9},
+                {'subject_id': 2, 'pH_end': 6.20, 'tau_PCr_fast_s': 128.0, 'tau_VO2_fast_s': 65.0, 'excess_CO2_L': 4.1},
+                {'subject_id': 3, 'pH_end': 6.25, 'tau_PCr_fast_s': 148.0, 'tau_VO2_fast_s': 70.0, 'excess_CO2_L': 3.7},
+                {'subject_id': 4, 'pH_end': 6.35, 'tau_PCr_fast_s': 105.0, 'tau_VO2_fast_s': 61.0, 'excess_CO2_L': 3.1},
+                {'subject_id': 5, 'pH_end': 6.42, 'tau_PCr_fast_s': 90.0,  'tau_VO2_fast_s': 55.0, 'excess_CO2_L': 2.4},
+                {'subject_id': 6, 'pH_end': 6.50, 'tau_PCr_fast_s': 85.0,  'tau_VO2_fast_s': 52.0, 'excess_CO2_L': 2.0},
+                {'subject_id': 7, 'pH_end': 6.60, 'tau_PCr_fast_s': 75.0,  'tau_VO2_fast_s': 50.0, 'excess_CO2_L': 1.6},
+                {'subject_id': 8, 'pH_end': 6.68, 'tau_PCr_fast_s': 55.0,  'tau_VO2_fast_s': 47.0, 'excess_CO2_L': 1.0},
+                {'subject_id': 9, 'pH_end': 6.75, 'tau_PCr_fast_s': 60.0,  'tau_VO2_fast_s': 45.0, 'excess_CO2_L': 0.8},
+                {'subject_id': 10, 'pH_end': 6.80, 'tau_PCr_fast_s': 49.0, 'tau_VO2_fast_s': 42.0, 'excess_CO2_L': 0.5}
+            ],
+            'reported_correlations': {
+                'tau_PCr_fast_vs_pH_end': {'R2': 0.73, 'p_val': 0.005, 'sign': 'negative'},
+                'tau_VO2_fast_vs_tau_PCr_fast': {'R2': 0.55, 'p_val': 0.01, 'sign': 'positive'},
+                'excess_CO2_vs_pH_end': {'R2': 0.65, 'p_val': 0.01, 'sign': 'negative'}
+            }
+        },
+
+        # Chapter 4 Athlete Group Comparison (Table 4-1, 4-2, 4-3)
+        'chapter4_athlete_cohorts': {
+            'sprinters': {
+                'n': 11,
+                'age_median_iqr': [23, 20, 26],
+                'height_cm': [182, 179, 189],
+                'weight_kg': [82, 78, 84],
+                'mvc_pedal_resistance_bar': [4.8, 4.5, 5.3],
+                'load_duration_min': [7.2, 5.8, 9.3],
+                'PCr_rest_SOL_mmol_L': [32, 31, 35],
+                'PCr_rest_GM_mmol_L': [36, 35, 38],
+                'PCr_depletion_SOL_pct': [48, 23, 57],
+                'PCr_depletion_GM_pct': [95, 91, 95],
+                'tau_PCr_depletion_GM_s': [29, 25, 41],
+                'tau_pH_decrease_GM_s': [53, 42, 95],
+                'pH_180s_GM': [6.35, 6.30, 6.45],
+                'pH_end_GM': [6.30, 6.20, 6.35],
+                'tau_PCr_recovery_fast_GM_s': [115, 98, 142],
+                'tau_VO2_increase_s': [320, 240, 410],
+                'VO2_peak_L_min': [1.10, 1.07, 1.31],
+                'VCO2_peak_L_min': [1.07, 0.92, 1.23],
+                'excess_CO2_L': [3.3, 2.0, 4.0],
+                'tau_VO2_recovery_fast_s': [60, 55, 65],
+                'lactate_rest_mmol_L': [1.3, 1.3, 1.7],
+                'delta_lactate_mmol_L': [1.8, 1.4, 2.2],
+                'tau_lactate_release_s': [499, 424, 593],
+                'tau_lactate_depletion_s': [573, 496, 681]
+            },
+            'endurance_athletes': {
+                'n': 10,
+                'age_median_iqr': [28, 26, 33],
+                'height_cm': [183, 180, 186],
+                'weight_kg': [73, 71, 79],
+                'mvc_pedal_resistance_bar': [4.2, 3.7, 4.5],
+                'load_duration_min': [6.7, 5.1, 9.7],
+                'PCr_rest_SOL_mmol_L': [32, 30, 33],
+                'PCr_rest_GM_mmol_L': [32, 31, 36],
+                'PCr_depletion_SOL_pct': [35, 15, 45],
+                'PCr_depletion_GM_pct': [94, 91, 95],
+                'tau_PCr_depletion_GM_s': [20, 14, 22],
+                'tau_pH_decrease_GM_s': [28, 24, 35],
+                'pH_180s_GM': [6.40, 6.37, 6.44],
+                'pH_end_GM': [6.55, 6.40, 6.78],
+                'tau_PCr_recovery_fast_GM_s': [88, 48, 115],
+                'tau_VO2_increase_s': [440, 370, 510],
+                'VO2_peak_L_min': [0.98, 0.82, 1.08],
+                'VCO2_peak_L_min': [0.96, 0.86, 1.03],
+                'excess_CO2_L': [1.9, 1.7, 2.9],
+                'tau_VO2_recovery_fast_s': [48, 45, 59],
+                'lactate_rest_mmol_L': [1.3, 1.1, 1.5],
+                'delta_lactate_mmol_L': [1.3, 0.7, 1.5],
+                'tau_lactate_release_s': [432, 410, 513],
+                'tau_lactate_depletion_s': [313, 234, 488]
+            }
+        },
+
+        # Chapter 5 NMES & pH Heterogeneity (Table 5-1, Fig 5-5)
+        'chapter5_nmes_study': {
+            'n_subjects': 8,
+            'stimulation': '40 Hz, 200 ms pulse width, 72 mA, 1s on / 1s off, 160s total, recovery 510s',
+            'force_drop': {'initial_N': 62.7, 'end_N': 17.1, 'retention_pct': 27.3},
+            'PCr_drop_pct': 66.5,  # decreased to 33.5 +/- 3.7% of baseline
+            'tau_PCr_recovery_1_s': {'mean': 25.0, 'sd': 6.0, 'fraction': 0.25},
+            'tau_PCr_recovery_2_s': {'mean': 163.0, 'sd': 40.0, 'fraction': 0.75},
+            'pH_components': {
+                'rest': {'mean': 7.02, 'sd': 0.02},
+                'fatigue_alkaline_Pi1': {'mean': 6.76, 'sd': 0.08, 'fraction_pct': 23.4},
+                'fatigue_medium_Pi2': {'mean': 6.40, 'sd': 0.06, 'fraction_pct': 51.0},
+                'fatigue_acidic_Pi3': {'mean': 6.09, 'sd': 0.05, 'fraction_pct': 25.6}
+            }
+        }
+    }
+    return data
+
+def main():
+    dataset = build_extracted_dataset()
+    out_file = BASE / 'moll2018_extracted_measurements.json'
+    out_file.write_text(json.dumps(dataset, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(f"Extracted measurements written to: {out_file}")
+    print(f"Chapter 2: {len(dataset['chapter2_ergometer_pilot']['conditions'])} conditions")
+    print(f"Chapter 3: {len(dataset['chapter3_combined_study']['individual_participants'])} participants with paired PCr-VO2-pH data")
+    print(f"Chapter 4: Sprinters N={dataset['chapter4_athlete_cohorts']['sprinters']['n']}, Endurance N={dataset['chapter4_athlete_cohorts']['endurance_athletes']['n']}")
+    print(f"Chapter 5: NMES N={dataset['chapter5_nmes_study']['n_subjects']} subjects, 3-fold Pi split")
+
+if __name__ == '__main__':
+    main()

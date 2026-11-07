@@ -1,34 +1,37 @@
-# SUBJECT-01 — handoff Research Cycle 6
+# SUBJECT-01 — handoff Research Cycle 7
 
-Канон G1F12/SUBJECT-01. Начать fetch и сверить main/origin/main/GitHub/Actions/status.
-Cycle6 basea4d3a04; branchresearch/metabolic-anchors-20261104. Итоговый SHA через Git.
-Читать research/calibration_2026_11_04/REPORT.md,MATHEMATICS.md,DATA_AUDIT.md,README.md.
+Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD с origin/main.
+Cycle 7 база: f8e6761d5f58e71ff8bdf304741414d974359d8a.
+Исследовательская ветка: research/local-muscle-bridge-20261107.
+Итоговый main SHA проверяется через GitHub после PR и CI.
 
-Реальные данные:135Lendt CPETCSV,66cyclingpeople; WEEE17VO2people; BUT-CGM1CPET
-person101531rows. Cohorts НЕ сшиты. SourceCCBY4; rawcache ignored; recipes/memberSHA
-и derived measured snapshots опубликованы. Wholearchive MD5 НЕ проверен.
-Source metadataaudit не exhaustive retractionsreview. Dryad401; requestonlyMRS не получен.
+Ключевые документы Cycle 7:
+- research/local_muscle_bridge_2026_11_07/REPORT.md (полный научный отчёт)
+- research/local_muscle_bridge_2026_11_07/MATHEMATICS.md (доказательства симметрий, ранги FIM M1–M7)
+- research/local_muscle_bridge_2026_11_07/MEASUREMENT_MODEL.md (трёхслойная модель: механика / мышца / лёгкие)
+- research/local_muscle_bridge_2026_11_07/DATA_AUDIT.md (аудит источников, диссертация Moll 2018, кандидаты Cannon, Zenodo)
+- research/local_muscle_bridge_2026_11_07/LIMITATIONS.md (границы и риски переноса)
+- research/local_muscle_bridge_2026_11_07/README.md (инструкция по воспроизведению)
 
-Preregcommit0446eaadcecb7c4ebea3613d20527a6d3fd94897;
-model-lockcommit726772fd50a5e13ea6c71f211dee500f16b4a676 опубликованы до test.
-НЕ менять models.py,dataset.py,model_lock.json,test_stage_audit.json,independent_test.json.
-Test IDs5,10,15,20,25,30,35,40,50,55,60,65,70 теперь просмотрены, как старые10+7.
-Не запускать --test/--lock снова. reproduce.py replay фиксированных outcomes во temp,
-не новая независимая проверка. BUT101exploratory также viewed, остальные не получены.
+Эмпирические данны:
+- Moll 2017 (SRC-0056) / Moll 2018 (SRC-0057): 163-страничная диссертация DBT Jena (11.1 МБ, SHA256: 82e1d09d...).
+- Оцифрованы 10 парных участников с синхронным ³¹P-MRS (3T DRESS), непрерывной спироэргометрией (PowerCube) и калиброванной механикой (15.5 Вт и 21.8 Вт); данные 21 атлета и 8 субъектов NMES.
+- Cannon 2014 (SRC-0058): закрытый текст (Wiley), данные по запросу.
 
-51dev/216stages,13test/56stages; selectedquadratic costRMSE26.56W,constant135.40,
-affine26.40,historicalequilibrium40.58. Affine posttest не выбирать новымwinner.
-Validation только systemic cost при prescribedW, не powerforecast. Historicalequilibrium
-гипотеза systemic=local, не новый честный sprintcomparison. Reduced9D cost NOTDEFINED.
-Условные a153.853,b3.64333,δeff .274474; не localM/η. Pulmonarytau30finite/51fits,
-21boundary/flat. Нет нового PCr/localATP/volume. Rest gaps; BUTCoolDown75W активен.
-Unknowngain/offset rank2/4, timingchangescoverage; обе exactD2 symmetries остаются.
+Ключевые результаты и симметрии:
+- Симметрия 1 (масштаб): RSS < 1.5e-32. Относительный PCr не разрешает масштаб без V_active и [PCr] в Дж.
+- Симметрия 2 (сдвиг): RSS < 7.5e-32. Системный VO2 включает 66.3% паразитарных затрат и не разрешает локальный базальный M_loc.
+- EXP-0027: pH-зависимость ресинтеза PCr (R²=0.919, p=1.23e-05); ошибка асимптоты ±5% даёт -17.8%..+26.4% искажения τ.
+- EXP-0028: коллинеарность задержки и тканевой τ (r=-0.704).
+- EXP-0029: связь τ_PCr и τ_VO2 (R²=0.55, p=0.01); excess CO2 и pH (R²=0.65, p<0.01).
+- EXP-0030: 4.99-кратная неопределённость масштаба энергии (205-1021 Дж).
+- EXP-0031: RMSE моста 0.65 Вт vs константа 3.15 Вт vs сырая D2 431.36 Вт.
 
-9D quotient unchanged. No biological intervention. TARGET-CPE45NOTEXTERNALLYVALIDATED,
-NO_GO, архитектурыI/II/III без новых преимуществ. Cycle6 A(systemic)/C(costonly)/D/E;
-не B localphysparam. Старые Foundation/Integrated/CPE45/Recovery/Observability сохранены.
-verify.py всеchecks, reproduce.py offline, acquire.py --verify-cache native network audit.
-CI numerical replay использует derived REAL snapshots, synthetic only unittest control.
-Registry EXP26/HYP6/FND28/NEG20/DEC11/ISS17/SRC55.
-Следующий приоритет: sameperson synchronizedPCr–VO2/VCO2–W с независимыми activevolume/
-absolutePCrreference/localbaseline, новый preregistered cohort до powervalidation.
+Научный статус:
+- TARGET-CPE45: NOT EXTERNALLY VALIDATED.
+- Биологические вмешательства: NO_GO.
+- Архитектуры I/II/III на 2700 секундах: преимуществ не показано.
+- Реестры: EXP-0031, HYP-0006, FND-0032, NEG-0024, DEC-0012, ISS-0018, SRC-0062.
+
+Следующий приоритет:
+Измерения активного объёма мышцы (V_active) через многосрезовую МРТ/T2* и локального базального расхода (M_loc) для устранения оставшихся симметрий до перехода к предсказанию полной механической мощности.
