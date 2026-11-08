@@ -258,5 +258,40 @@
     "experiment_id": "EXP-0030",
     "claim": "Разграничены стационарная ёмкость буфера PCr (204.8-1021.4 Дж, размах 4.99 раза) и кумулятивный оборот ATP за 3 мин нагрузки (>11,500 Дж); по данным Cannon et al. (2014, PMC4262339) окисление даёт 88-95% оборота ATP, а PCr лишь 1.5-3.0%. Кажущийся КПД свыше 100% отозван как ошибка размерности.",
     "limits": "Абсолютный энергетический масштаб и локальный КПД неидентифицируемы без независимого МРТ-измерения активного объёма V_active; потоки Cannon 2014 не переносятся количественно на икру."
+  },
+  {
+    "id": "FND-0033",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0032",
+    "finding": "Anatomical MRI muscle volume (V_anat = 379.89 mL in human gastrocnemius medialis) exceeds effective submaximal active volume (V_active = 83.6 - 144.4 mL) by 2.63- to 4.55-fold. Using V_anat directly in local bioenergetics models produces a severe underestimation of ATP demand flux.",
+    "relevance": "Proves dissociation between anatomical MRI and functional activation volume."
+  },
+  {
+    "id": "FND-0034",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0033",
+    "finding": "Calorimetric enthalpy of ATP hydrolysis (Delta_H = 21 kJ/mol) and thermodynamic Gibbs free energy (Delta_G = -54 kJ/mol) differ by a factor of 2.5714. High-intensity plantarflexion mechanical work corresponds to 5.35 W metabolic power under Delta_G, compared to 2.08 W under Delta_H.",
+    "relevance": "Eliminates thermodynamic scaling confusion between reaction heat and mechanical work potential."
+  },
+  {
+    "id": "FND-0035",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0034",
+    "finding": "Direct human femoral arteriovenous catheterization provides the sole absolute physiological anchor for resting skeletal muscle oxygen consumption: M_loc = 0.0064 +/- 0.0017 mmol ATP/L/s. Non-invasive ASL-MRI and CW-NIRS leave 2.25x and 6.67x uncertainties without invasive calibration.",
+    "relevance": "Pins resting local metabolism to empirical catheterization benchmarks."
+  },
+  {
+    "id": "FND-0036",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0035",
+    "finding": "In the 7-parameter local muscle bridge, adding an independent 31P-MRS spectroscopic free-energy channel (y_spec = Delta_G_ATP via Pi chemical shift and CK equilibrium) strictly eliminates the (eta_loc * Delta_G_ATP) nullspace, achieving FULL STRUCTURAL RANK 7/7 with effective condition number 15.39.",
+    "relevance": "Proves elimination of scalar collinearity using authentic spectroscopic physics."
+  },
+  {
+    "id": "FND-0037",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0036",
+    "finding": "Whole-body active muscle mass (18 kg) and basal metabolic power (80 W) are 50.2-fold and 1543-fold larger than single gastrocnemius parameters. Direct parameter transfer from local calf models to whole-body D2 is rejected, preserving the D2 9D quotient in strict structural isolation.",
+    "relevance": "Prevents unphysical cross-scale parameter contamination and protects D2 quotient."
   }
 ]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "SRC-0063",
+    "name": "Franke et al. 2020 (PMC7332772)",
+    "title": "Energy Expenditure of Dynamic Submaximal Human Plantarflexion Movements: Model Prediction and Validation by in-vivo Magnetic Resonance Spectroscopy",
+    "doi": "10.3389/fbioe.2020.00622",
+    "pmc": "PMC7332772",
+    "year": 2020,
+    "license": "CC BY 4.0",
+    "verified_channels": [
+      "3D T1-weighted MRI gastrocnemius medialis volumetry (379.89 mL)",
+      "Dynamic 31P-MRS energy accumulation (11 points, TR=5 s, GM)",
+      "High-density kinematics (ankle angle) and sEMG (normalized MVC)"
+    ],
+    "verification_status": "metadata_and_scope_checked_only",
+    "role": "Single-subject multi-modal anatomical MRI, dynamic 31P-MRS, and sEMG benchmark for active muscle volume and metabolic scaling"
+  },
+  {
+    "id": "SRC-0064",
+    "name": "Sleigh et al. 2013 (PMC3560356)",
+    "title": "Integrating muscle cell biochemistry and whole-body physiology in humans: 31P-MRS data from the InSight trial",
+    "doi": "10.1038/srep01182",
+    "pmc": "PMC3560356",
+    "year": 2013,
+    "license": "CC BY-NC-ND 3.0",
+    "verified_channels": [
+      "Resting 31P-MRS PCr/gamma-ATP ratio (4.1 +/- 0.03)",
+      "Resting Pi/gamma-ATP ratio (0.47 +/- 0.007)",
+      "Absolute concentration calibration cohort (n=89)"
+    ],
+    "verification_status": "metadata_and_scope_checked_only",
+    "role": "Empirical reference distribution for human skeletal muscle resting phosphagen concentrations and ratios across a large cohort (n=89)"
+  },
+  {
+    "id": "SRC-0065",
+    "name": "Meyerspeer et al. 2021 (PMC8359288)",
+    "title": "31P magnetic resonance spectroscopy in skeletal muscle: Experts' consensus recommendations",
+    "doi": "10.1002/nbm.4246",
+    "pmc": "PMC8359288",
+    "year": 2021,
+    "license": "CC BY 4.0",
+    "verified_channels": [
+      "Standardized 31P-MRS quantitation units and pH calculation",
+      "Creatine kinase equilibrium and free ADP estimation",
+      "Recommended reporting norms for resting metabolites and oxidative fluxes"
+    ],
+    "verification_status": "metadata_and_scope_checked_only",
+    "role": "International consensus standard for absolute 31P-MRS quantification, metabolite bounds, and thermodynamic calculation"
+  },
+  {
+    "id": "SRC-0066",
+    "name": "Andersen & Saltin 1985 / Radegran & Saltin 1998",
+    "title": "Maximal and resting blood flow and oxygen uptake in human quadriceps / calf muscle by direct arterial-venous catheterization",
+    "doi": "10.1113/jphysiol.1985.sp015864",
+    "year": 1985,
+    "license": "Closed / Peer-reviewed literature reference",
+    "verified_channels": [
+      "Resting human femoral blood flow (2.0 - 3.5 mL/100g/min)",
+      "Arteriovenous oxygen difference (Ca - Cv)O2 (50 - 65 mL O2/L)",
+      "Resting muscle VO2 (0.12 - 0.25 mL O2/100g/min = 0.006 - 0.015 mmol ATP/L/s)"
+    ],
+    "verification_status": "metadata_and_scope_checked_only",
+    "role": "Invasive human physiological gold standard for resting local skeletal muscle oxygen consumption (M_loc) and blood flow"
+  },
+  {
+    "id": "SRC-0067",
+    "name": "Ryan et al. 2014 / McManus 2018 (MCMITO)",
+    "title": "Non-invasive assessment of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: arterial occlusion and scattering corrections",
+    "doi": "10.1113/jphysiol.2013.265686",
+    "zenodo": "10.5281/zenodo.1218967",
+    "year": 2014,
+    "license": "Open access / CC BY",
+    "verified_channels": [
+      "NIRS vascular occlusion test (VOT) recovery slopes",
+      "Adipose tissue thickness (ATT) attenuation correction",
+      "Tissue blood volume calibration algorithms"
+    ],
+    "verification_status": "metadata_and_scope_checked_only",
+    "role": "Methodological benchmark for NIRS vascular occlusion testing and analysis of uncalibrated gain/offset limitations for M_loc"
+  }
+]

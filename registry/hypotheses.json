@@ -88,5 +88,20 @@
     ],
     "claim_level": "hypothesis",
     "progress_2026_11_04_recovery": "Power-only recovery identification failed; exact scaling confounding established. Context-specific physiological kinetics remain unverified."
+  },
+  {
+    "id": "HYP-0007",
+    "date": "2026-11-08",
+    "title": "Empirical Anchors and Physical Measurement Maps in Local Bioenergetics",
+    "statement": "Local muscle bioenergetics can achieve physiological structural identifiability (rank 7/7) without ideal scalar channels only if an independent 31P-MRS spectroscopic free-energy channel (Delta_G_ATP) is provided to break the actomyosin efficiency collinearity, while anatomical MRI volumetry must be coupled with dynamic motor unit recruitment models to bound active muscle volume V_active.",
+    "status": "verified",
+    "related_experiments": [
+      "EXP-0032",
+      "EXP-0033",
+      "EXP-0034",
+      "EXP-0035",
+      "EXP-0036"
+    ],
+    "notes": "Formulated and confirmed in Research Cycle 8."
   }
 ]

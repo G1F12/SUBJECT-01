@@ -43,3 +43,7 @@ jobs:
         run: python research/observability_2026_11_04/audit.py --check
       - name: Verify real-data calibration, measurement maps and locked-test isolation
         run: python -m unittest discover -s research/calibration_2026_11_04 -p test_calibration.py
+      - name: Verify Cycle 7 local muscle bridge identifiability and data audit
+        run: python -m unittest discover -s research/local_muscle_bridge_2026_11_07 -p test_local_bridge.py
+      - name: Verify Cycle 8 empirical anchors, measurement maps and thermodynamic scaling
+        run: python -m unittest discover -s research/empirical_anchors_2026_11_08 -p test_empirical_anchors.py

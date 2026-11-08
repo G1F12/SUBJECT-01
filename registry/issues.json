@@ -154,5 +154,13 @@
       "research/local_muscle_bridge_2026_11_07",
       "tools/cpe45.py"
     ]
+  },
+  {
+    "id": "ISS-0019",
+    "date": "2026-11-08",
+    "title": "Dynamic Motor Unit Recruitment Modeling for In-Vivo Active Volume Calibration",
+    "description": "While anatomical MRI provides high-precision V_anat (379.89 mL), dynamic active volume V_active varies between 83.6 and 144.4 mL depending on pedal torque and cadence. Cycle 9 must design a formal synthetic confidence ensemble or multi-channel sEMG/T2* inversion protocol to bound V_active without ad-hoc constants.",
+    "status": "open",
+    "priority": "high"
   }
 ]
