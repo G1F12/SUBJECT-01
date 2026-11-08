@@ -1,6 +1,58 @@
 {
-  "model_name": "Biophysical Motor Unit Recruitment & Volume Conduction Model",
-  "n_units": 500,
+  "model_name": "Biophysical Motor Unit Recruitment & Volume Conductor Simulation Model",
+  "data_type": "SYNTHETIC",
+  "validation_status": "COMPUTATIONAL_SIMULATION_HYPOTHESIS",
+  "scientific_classification": "THEORETICAL_BIOPHYSICAL_SIMULATION_NOT_DIRECTLY_MEASURED",
+  "scenario_parameters": {
+    "n_units": 500,
+    "threshold_distribution": "Fuglevand exponential (t_min=0.01, t_max=0.75)",
+    "innervation_size_distribution": "exponential (s_min=1.0, s_max=50.0)",
+    "subcutaneous_fat_range_mm": [
+      3.0,
+      10.0
+    ],
+    "fatigue_force_perturbation_scenario_percent": -35.0,
+    "muap_fatigue_broadening_factor": 0.4
+  },
+  "simulation_derived_outputs": {
+    "franke_operating_point_analysis": {
+      "target_measured_semg_rms": 0.127,
+      "nominal_scenario_5mm_fat": {
+        "neural_drive": 0.02,
+        "a_eff_active_volume_fraction": 0.018,
+        "force_norm_mvc": 0.0055,
+        "n_active_units": 81,
+        "phase_cancellation_percent": 13.96
+      },
+      "thin_fat_3mm_scenario": {
+        "neural_drive": 0.02,
+        "a_eff_active_volume_fraction": 0.018,
+        "force_norm_mvc": 0.0055
+      },
+      "thick_fat_10mm_scenario": {
+        "neural_drive": 0.54,
+        "a_eff_active_volume_fraction": 0.7372,
+        "force_norm_mvc": 0.4843
+      },
+      "uncertainty_span_a_eff": [
+        0.018,
+        0.7372
+      ],
+      "uncertainty_ratio_a_eff": 40.96
+    },
+    "fatigue_dissociation": {
+      "drive": 0.3,
+      "fresh_force_mvc": 0.2106,
+      "fatigued_force_mvc": 0.1369,
+      "force_change_percent": -35.0,
+      "fresh_semg_rms_norm": 0.5539,
+      "fatigued_semg_rms_norm": 0.6314,
+      "semg_rms_change_percent": 14.0,
+      "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force in this forward simulation scenario, demonstrating that single-channel sEMG RMS cannot be treated as a monotonic proxy for metabolic activation without high-density multi-channel arrays and subcutaneous morphometry."
+    },
+    "observed_rms_increase_under_fatigue_scenario_percent": 14.0,
+    "active_fraction_sensitivity_span_ratio": 40.96
+  },
   "franke_point_analysis": {
     "target_measured_semg_rms": 0.127,
     "nominal_scenario_5mm_fat": {
@@ -34,7 +86,7 @@
     "fresh_semg_rms_norm": 0.5539,
     "fatigued_semg_rms_norm": 0.6314,
     "semg_rms_change_percent": 14.0,
-    "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force, demonstrating the total failure of scalar sEMG RMS as a monotonic proxy for metabolic activation."
+    "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force in this forward simulation scenario, demonstrating that single-channel sEMG RMS cannot be treated as a monotonic proxy for metabolic activation without high-density multi-channel arrays and subcutaneous morphometry."
   },
   "drive_sweep_sample": [
     {

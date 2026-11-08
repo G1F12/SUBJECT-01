@@ -35,45 +35,110 @@
   "experiments": {
     "EXP-0037": {
       "experiment_id": "EXP-0037",
-      "title": "Empirical Acquisition of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+      "title": "Empirical Acquisition Audit of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
       "datasets": {
         "rehman_2024_31p_mrs": {
+          "source_id": "SRC-0069",
           "pmcid": "PMC11617988",
-          "muscle": "Quadriceps femoris (vastus lateralis / rectus femoris)",
-          "protocol": "Dynamic knee extensions on non-magnetic ergometer at 1 Hz, 42 s exercise, 360 s recovery, 5-10% MVC",
+          "muscle": "Quadriceps femoris",
+          "protocol": "In-bore knee extension ergometer (Siemens 3T)",
           "trials_n": 3,
           "mean_pcr_drop_percent": 27.2,
-          "mean_tau_rec_s": 39.41,
-          "ph_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED"
+          "mean_tau_rec_s": 39.406666666666666,
+          "ph_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED",
+          "data_type": "LITERATURE_REPORTED_VALUE",
+          "raw_download_status": "RAW_TIMESERIES_UNAVAILABLE",
+          "raw_download_blocker": "Dryad download (2024_829_Ergometer_Dryad_Raw_V3.xlsx) blocked by AWS WAF interactive bot challenge (HTTP 403 Forbidden)"
         },
         "hug_2021_hd_semg": {
+          "source_id": "SRC-0068",
           "figshare_doi": "10.6084/m9.figshare.13695937",
           "muscles": [
-            "Gastrocnemius Medialis (GM)",
-            "Gastrocnemius Lateralis (GL)",
-            "Tibialis Anterior (TA)"
+            "Gastrocnemius Medialis",
+            "Gastrocnemius Lateralis",
+            "Tibialis Anterior",
+            "Vastus Lateralis"
           ],
           "grid_channels": 64,
           "sampling_hz": 2048,
+          "data_type": "LITERATURE_REPORTED_VALUE",
+          "independent_subjects_n": 1,
+          "raters_n": 8,
+          "note_on_subjects": "Published discharge rates are literature aggregate values from 8 operators analyzing 1 individual recording dataset (8 raters != 8 subjects).",
           "inter_operator_agreement": 0.996,
           "gastrocnemius_medialis_rates_hz": {
             "10_mvc": 9.8,
             "30_mvc": 12.6,
             "50_mvc": 15.4,
             "70_mvc": 19.8
-          }
+          },
+          "raw_download_status": "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE",
+          "raw_download_blocker": "Figshare storage (Experimental_data_Raw.zip, 444 MB) blocked by Cloudflare R2 bot challenge (HTTP 403 Forbidden)"
         },
         "mri_volumetry": {
-          "quadriceps_mean_mL": 2340.0,
-          "gastrocnemius_mean_mL": 342.5,
-          "volume_scaling_ratio": 6.83
+          "franke_2020_single_subject_gastrocnemius_mL": 379.89,
+          "franke_source": "VERIFIED_PRIMARY_3D_SEGMENTATION_MAT_FILE",
+          "cohort_tables_status": "RETRACTED_UNVERIFIED_COHORT_DISTRIBUTIONS",
+          "retraction_note": "SRC-0070 (MuscleMap Zenodo 10077847 is software code/weights without verified cohort table) and SRC-0071 (Cenni Figshare 5971480 is unresolvable) have been retracted from EMPIRICALLY_BOUNDED_DISTRIBUTION status."
         }
       },
-      "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED"
+      "validation_status": "PUBLISHED_LITERATURE_AGGREGATES_AUDITED"
     },
     "EXP-0038": {
       "experiment_id": "EXP-0038",
-      "title": "Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+      "title": "Biophysical Forward Simulation Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+      "data_type": "SYNTHETIC",
+      "validation_status": "COMPUTATIONAL_SIMULATION_HYPOTHESIS",
+      "scenario_parameters": {
+        "n_units": 500,
+        "threshold_distribution": "Fuglevand exponential (t_min=0.01, t_max=0.75)",
+        "innervation_size_distribution": "exponential (s_min=1.0, s_max=50.0)",
+        "subcutaneous_fat_range_mm": [
+          3.0,
+          10.0
+        ],
+        "fatigue_force_perturbation_scenario_percent": -35.0,
+        "muap_fatigue_broadening_factor": 0.4
+      },
+      "simulation_derived_outputs": {
+        "franke_operating_point_analysis": {
+          "target_measured_semg_rms": 0.127,
+          "nominal_scenario_5mm_fat": {
+            "neural_drive": 0.02,
+            "a_eff_active_volume_fraction": 0.018,
+            "force_norm_mvc": 0.0055,
+            "n_active_units": 81,
+            "phase_cancellation_percent": 13.96
+          },
+          "thin_fat_3mm_scenario": {
+            "neural_drive": 0.02,
+            "a_eff_active_volume_fraction": 0.018,
+            "force_norm_mvc": 0.0055
+          },
+          "thick_fat_10mm_scenario": {
+            "neural_drive": 0.54,
+            "a_eff_active_volume_fraction": 0.7372,
+            "force_norm_mvc": 0.4843
+          },
+          "uncertainty_span_a_eff": [
+            0.018,
+            0.7372
+          ],
+          "uncertainty_ratio_a_eff": 40.96
+        },
+        "fatigue_dissociation": {
+          "drive": 0.3,
+          "fresh_force_mvc": 0.2106,
+          "fatigued_force_mvc": 0.1369,
+          "force_change_percent": -35.0,
+          "fresh_semg_rms_norm": 0.5539,
+          "fatigued_semg_rms_norm": 0.6314,
+          "semg_rms_change_percent": 14.0,
+          "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force in this forward simulation scenario, demonstrating that single-channel sEMG RMS cannot be treated as a monotonic proxy for metabolic activation without high-density multi-channel arrays and subcutaneous morphometry."
+        },
+        "observed_rms_increase_under_fatigue_scenario_percent": 14.0,
+        "active_fraction_sensitivity_span_ratio": 40.96
+      },
       "franke_operating_point_analysis": {
         "target_measured_semg_rms": 0.127,
         "nominal_scenario_5mm_fat": {
@@ -107,14 +172,13 @@
         "fresh_semg_rms_norm": 0.5539,
         "fatigued_semg_rms_norm": 0.6314,
         "semg_rms_change_percent": 14.0,
-        "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force, demonstrating the total failure of scalar sEMG RMS as a monotonic proxy for metabolic activation."
+        "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force in this forward simulation scenario, demonstrating that single-channel sEMG RMS cannot be treated as a monotonic proxy for metabolic activation without high-density multi-channel arrays and subcutaneous morphometry."
       },
       "core_findings": [
-        "At 12.7% measured sEMG RMS, variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in true active muscle volume fraction a_eff (0.018 to 0.737).",
-        "During muscle fatigue, sEMG RMS paradoxically increases by +14.0% while mechanical twitch force drops by -35.0% due to conduction velocity slowing and intracellular action potential widening.",
+        "At 12.7% measured sEMG RMS, variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in true active muscle volume fraction a_eff (0.018 to 0.737) in forward simulation.",
+        "During simulated muscle fatigue, sEMG RMS paradoxically increases by +14.0% while mechanical twitch force drops by -35.0% due to conduction velocity slowing and intracellular action potential widening.",
         "Single-channel sEMG RMS is structurally unidentifiable with respect to active muscle volume fraction without high-density multi-channel arrays and independent subcutaneous tissue morphometry."
-      ],
-      "validation_status": "MATHEMATICALLY_AND_BIOPHYSICALLY_PROVEN"
+      ]
     },
     "EXP-0039": {
       "experiment_id": "EXP-0039",
@@ -153,101 +217,95 @@
     },
     "EXP-0040": {
       "experiment_id": "EXP-0040",
-      "title": "Independent Cross-Subject Validation (LOSO) of Local Bioenergetic Model vs Physiological Baselines",
+      "title": "Leave-One-Subject-Out (LOSO) Cross-Validation Algorithm Demonstration on Synthetic Benchmarks",
+      "data_type": "SYNTHETIC",
+      "validation_status": "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED",
+      "empirical_validation_status": "BLOCKED_PENDING_RAW_DATA",
+      "retraction_note": "Previous claims of empirical cross-subject human validation are retracted. The evaluation was performed on synthetic exponential curves generated via np.random.RandomState, not real human raw time series.",
       "cross_subject_loso_summary": {
-        "validation_design": "Leave-One-Subject-Out (LOSO) Cross-Subject Bioenergetic Validation",
-        "participants": [
-          {
-            "id": "SUBJ_FRANKE_01",
-            "muscle": "Gastrocnemius Medialis (Calf)",
-            "tau_s": 24.3,
-            "n_points": 28
+        "experiment_id": "EXP-0040",
+        "validation_design": "SYNTHETIC_DEMONSTRATION_LOSO_ALGORITHM_ONLY",
+        "data_type": "SYNTHETIC",
+        "source_provenance": "Generated via numpy random state and published exponential rate constants",
+        "validation_status": "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED",
+        "empirical_validation_blocker": "Real raw spectral time-series are unavailable programmatically from Dryad (HTTP 403 WAF barrier). No real empirical continuous time-series exists for out-of-sample testing.",
+        "synthetic_metrics_retained_for_historical_record": {
+          "fold_1_synthetic_quad_test": {
+            "M0_null": {
+              "rmse_mM": 5.193,
+              "mae_mM": 4.977,
+              "r2": -5.95
+            },
+            "M1_transferred": {
+              "rmse_mM": 0.838,
+              "mae_mM": 0.678,
+              "r2": 0.819
+            },
+            "M1_in_sample": {
+              "rmse_mM": 0.545,
+              "mae_mM": 0.445,
+              "r2": 0.923
+            },
+            "M2_transferred": {
+              "rmse_mM": 0.798,
+              "mae_mM": 0.648,
+              "r2": 0.836
+            },
+            "synthetic_rmse_degradation_percent": 53.8
           },
-          {
-            "id": "SUBJ_REHMAN_01",
-            "muscle": "Quadriceps femoris (Thigh)",
-            "tau_s": 39.22,
-            "n_points": 61
-          }
-        ],
-        "models_evaluated": {
-          "M0": "Null Empirical Baseline (Constant Training Mean)",
-          "M1": "Standard Physiological Monoexponential Model (Kemp 1993)",
-          "M2": "LocalBioenergeticBridge (Coupled ATP turnover & oxidative recovery)"
+          "fold_2_synthetic_calf_test": {
+            "M0_null": {
+              "rmse_mM": 6.299,
+              "mae_mM": 4.809,
+              "r2": -1.393
+            },
+            "M1_transferred": {
+              "rmse_mM": 2.424,
+              "mae_mM": 2.17,
+              "r2": 0.646
+            },
+            "M1_in_sample": {
+              "rmse_mM": 0.838,
+              "mae_mM": 0.731,
+              "r2": 0.958
+            },
+            "M2_transferred": {
+              "rmse_mM": 2.208,
+              "mae_mM": 1.954,
+              "r2": 0.706
+            },
+            "synthetic_rmse_degradation_percent": 189.3
+          },
+          "overall_synthetic_cross_rmse": 1.631,
+          "in_sample_synthetic_rmse": 0.692
         },
-        "fold_1_train_calf_test_quad": {
-          "training_subject": "SUBJ_FRANKE_01 (Calf)",
-          "test_subject": "SUBJ_REHMAN_01 (Quad)",
-          "M0_null_baseline": {
-            "rmse_mM": 5.193,
-            "mae_mM": 4.976,
-            "r2": -5.952
-          },
-          "M1_transferred_kemp": {
-            "rmse_mM": 0.837,
-            "mae_mM": 0.677,
-            "r2": 0.819
-          },
-          "M1_in_sample_benchmark": {
-            "rmse_mM": 0.544,
-            "mae_mM": 0.444,
-            "r2": 0.924
-          },
-          "M2_transferred_local_bridge": {
-            "rmse_mM": 0.797,
-            "mae_mM": 0.648,
-            "r2": 0.836
-          },
-          "cross_subject_rmse_degradation_percent": 53.9
-        },
-        "fold_2_train_quad_test_calf": {
-          "training_subject": "SUBJ_REHMAN_01 (Quad)",
-          "test_subject": "SUBJ_FRANKE_01 (Calf)",
-          "M0_null_baseline": {
-            "rmse_mM": 6.298,
-            "mae_mM": 4.808,
-            "r2": -1.392
-          },
-          "M1_transferred_kemp": {
-            "rmse_mM": 2.424,
-            "mae_mM": 2.17,
-            "r2": 0.646
-          },
-          "M1_in_sample_benchmark": {
-            "rmse_mM": 0.838,
-            "mae_mM": 0.731,
-            "r2": 0.958
-          },
-          "M2_transferred_local_bridge": {
-            "rmse_mM": 2.208,
-            "mae_mM": 1.954,
-            "r2": 0.706
-          },
-          "cross_subject_rmse_degradation_percent": 189.3
-        },
-        "overall_cross_subject_rmse_mean": 1.631,
-        "in_sample_rmse_mean": 0.691,
-        "epistemic_conclusion": "Direct transfer of local recovery kinetics across independent human muscles degrades predictive RMSE by 120-160% compared to in-sample fits. Cross-muscle transfer without explicit fiber-type and mitochondrial scaling operators is empirically invalid."
-      },
-      "validation_status": "INDEPENDENT_HUMAN_DATA_TESTED"
+        "epistemic_warning": "DO NOT INTERPRET THESE METRICS AS EMPIRICAL EVIDENCE. They illustrate the mathematical behavior of parameter transfer between two different kinetic rates (tau=24.3 s vs tau=39.2 s) on synthetic data."
+      }
     },
     "EXP-0041": {
       "experiment_id": "EXP-0041",
       "title": "SUBJECT-01 Integration: Functional Power, Recovery Limits, and TARGET-CPE45 Boundaries",
-      "quantitative_energetic_bounds": {
-        "calf_fast_energy_reserve_work_potential_J": 621.5,
-        "quadriceps_fast_energy_reserve_work_potential_J": 4245.7,
-        "whole_body_cpe45_2700s_energy_budget_at_250W_J": 675000.0,
-        "calf_pcr_contribution_percent": 0.092,
-        "quadriceps_pcr_contribution_percent": 0.629,
-        "recovery_time_constants_s": {
-          "calf_gastrocnemius_tau_s": 24.3,
-          "quadriceps_tau_s": 39.2,
-          "mitochondrial_resynthesis_ratio_calf_vs_quad": 1.61
-        }
+      "cpe45_energy_accounting": {
+        "external_mechanical_work_kJ": 675.0,
+        "external_work_description": "250 W maintained over 2700 s (45 minutes) = 675 kJ. Illustrative test scenario.",
+        "whole_body_metabolic_expenditure_nominal_kJ": 3375.0,
+        "whole_body_metabolic_expenditure_span_kJ": [
+          2934.8,
+          3750.0
+        ],
+        "assumed_gross_mechanical_efficiency_eta_gross": 0.2,
+        "local_pcr_chemical_buffer_work_capacity_kJ": {
+          "active_calf_volume_scenario_kJ": [
+            0.106,
+            0.389
+          ],
+          "anatomical_whole_gm_kJ": 0.621
+        },
+        "local_pcr_hydrolysis_reaction_enthalpy_delta_R_H_kJ_mol": 21.0,
+        "local_heat_dissipation_capacity_anat_kJ": 0.242,
+        "scaling_barrier_explanation": "Local single-muscle PCr buffer is a rapid transient energy store (duration ~5-30 s). 45-minute continuous endurance work requires systemic aerobic ATP resynthesis (metabolic expenditure ~3375 kJ), constrained by cardiac output, pulmonary gas exchange, and whole-body vascular distribution. Local MRS kinetics cannot be scaled to whole-body critical power without an independent cardiorespiratory model."
       },
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
-      "scaling_operator_verdict": "Local calf and quadriceps kinetic models cannot be scaled to 2700-second whole-body CPE45 without an independent cardiac output, pulmonary ventilation, and multi-muscle activation operator.",
       "biological_interventions": "NO_GO_MAINTAINED"
     }
   }

@@ -53,63 +53,78 @@ def run_all_experiments():
     # -----------------------------------------------------------------
     # EXP-0037: Empirical Acquisition of HD-sEMG & 31P-MRS
     # -----------------------------------------------------------------
-    print("\n--- Running EXP-0037: Empirical Acquisition ---")
+    print("\n--- Running EXP-0037: Empirical Acquisition Audit ---")
     rehman_data = extract_rehman_2024()
     hug_data = extract_hug_2021()
     anat_data = extract_anatomical_volumetry()
     
     exp_0037 = {
         "experiment_id": "EXP-0037",
-        "title": "Empirical Acquisition of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+        "title": "Empirical Acquisition Audit of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
         "datasets": {
             "rehman_2024_31p_mrs": {
+                "source_id": "SRC-0069",
                 "pmcid": rehman_data["pmcid"],
                 "muscle": rehman_data["muscle_group"],
                 "protocol": rehman_data["protocol"],
                 "trials_n": len(rehman_data["trials"]),
                 "mean_pcr_drop_percent": round(rehman_data["aggregate_statistics"]["pcr_depletion_mean"] * 100, 1),
                 "mean_tau_rec_s": rehman_data["aggregate_statistics"]["tau_rec_mean_s"],
-                "ph_status": rehman_data["aggregate_statistics"]["acidosis_status"]
+                "ph_status": rehman_data["aggregate_statistics"]["acidosis_status"],
+                "data_type": "LITERATURE_REPORTED_VALUE",
+                "raw_download_status": "RAW_TIMESERIES_UNAVAILABLE",
+                "raw_download_blocker": "Dryad download (2024_829_Ergometer_Dryad_Raw_V3.xlsx) blocked by AWS WAF interactive bot challenge (HTTP 403 Forbidden)"
             },
             "hug_2021_hd_semg": {
+                "source_id": "SRC-0068",
                 "figshare_doi": hug_data["figshare_doi"],
                 "muscles": hug_data["muscles_studied"],
                 "grid_channels": 64,
                 "sampling_hz": 2048,
+                "data_type": "LITERATURE_REPORTED_VALUE",
+                "independent_subjects_n": 1,
+                "raters_n": 8,
+                "note_on_subjects": "Published discharge rates are literature aggregate values from 8 operators analyzing 1 individual recording dataset (8 raters != 8 subjects).",
                 "inter_operator_agreement": hug_data["inter_operator_agreement_median"],
                 "gastrocnemius_medialis_rates_hz": {
                     "10_mvc": hug_data["discharge_characteristics_by_intensity"]["gastrocnemius_medialis"]["10_percent_mvc"]["mean_discharge_rate_hz"],
                     "30_mvc": hug_data["discharge_characteristics_by_intensity"]["gastrocnemius_medialis"]["30_percent_mvc"]["mean_discharge_rate_hz"],
                     "50_mvc": hug_data["discharge_characteristics_by_intensity"]["gastrocnemius_medialis"]["50_percent_mvc"]["mean_discharge_rate_hz"],
                     "70_mvc": hug_data["discharge_characteristics_by_intensity"]["gastrocnemius_medialis"]["70_percent_mvc"]["mean_discharge_rate_hz"]
-                }
+                },
+                "raw_download_status": "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE",
+                "raw_download_blocker": "Figshare storage (Experimental_data_Raw.zip, 444 MB) blocked by Cloudflare R2 bot challenge (HTTP 403 Forbidden)"
             },
             "mri_volumetry": {
-                "quadriceps_mean_mL": 2340.0,
-                "gastrocnemius_mean_mL": 342.5,
-                "volume_scaling_ratio": anat_data["scaling_ratio_quadriceps_to_gastrocnemius"]
+                "franke_2020_single_subject_gastrocnemius_mL": 379.89,
+                "franke_source": "VERIFIED_PRIMARY_3D_SEGMENTATION_MAT_FILE",
+                "cohort_tables_status": "RETRACTED_UNVERIFIED_COHORT_DISTRIBUTIONS",
+                "retraction_note": "SRC-0070 (MuscleMap Zenodo 10077847 is software code/weights without verified cohort table) and SRC-0071 (Cenni Figshare 5971480 is unresolvable) have been retracted from EMPIRICALLY_BOUNDED_DISTRIBUTION status."
             }
         },
-        "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED"
+        "validation_status": "PUBLISHED_LITERATURE_AGGREGATES_AUDITED"
     }
 
     # -----------------------------------------------------------------
     # EXP-0038: Biophysical Recruitment & Volume Conduction Model
     # -----------------------------------------------------------------
-    print("\n--- Running EXP-0038: Biophysical Recruitment Model ---")
+    print("\n--- Running EXP-0038: Biophysical Recruitment Forward Simulation ---")
     rec_results = run_recruitment_experiments()
     
     exp_0038 = {
         "experiment_id": "EXP-0038",
-        "title": "Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+        "title": "Biophysical Forward Simulation Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+        "data_type": "SYNTHETIC",
+        "validation_status": "COMPUTATIONAL_SIMULATION_HYPOTHESIS",
+        "scenario_parameters": rec_results["scenario_parameters"],
+        "simulation_derived_outputs": rec_results["simulation_derived_outputs"],
         "franke_operating_point_analysis": rec_results["franke_point_analysis"],
         "fatigue_force_emg_dissociation": rec_results["fatigue_dissociation"],
         "core_findings": [
-            "At 12.7% measured sEMG RMS, variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in true active muscle volume fraction a_eff (0.018 to 0.737).",
-            "During muscle fatigue, sEMG RMS paradoxically increases by +14.0% while mechanical twitch force drops by -35.0% due to conduction velocity slowing and intracellular action potential widening.",
+            "At 12.7% measured sEMG RMS, variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in true active muscle volume fraction a_eff (0.018 to 0.737) in forward simulation.",
+            "During simulated muscle fatigue, sEMG RMS paradoxically increases by +14.0% while mechanical twitch force drops by -35.0% due to conduction velocity slowing and intracellular action potential widening.",
             "Single-channel sEMG RMS is structurally unidentifiable with respect to active muscle volume fraction without high-density multi-channel arrays and independent subcutaneous tissue morphometry."
-        ],
-        "validation_status": "MATHEMATICALLY_AND_BIOPHYSICALLY_PROVEN"
+        ]
     }
 
     # -----------------------------------------------------------------
@@ -131,48 +146,63 @@ def run_all_experiments():
     # -----------------------------------------------------------------
     # EXP-0040: Independent Cross-Subject Validation (LOSO)
     # -----------------------------------------------------------------
-    print("\n--- Running EXP-0040: LOSO Cross-Validation ---")
+    print("\n--- Running EXP-0040: LOSO Cross-Validation Algorithm Evaluation ---")
     loso_results = run_loso_cross_validation()
     
     exp_0040 = {
         "experiment_id": "EXP-0040",
-        "title": "Independent Cross-Subject Validation (LOSO) of Local Bioenergetic Model vs Physiological Baselines",
-        "cross_subject_loso_summary": loso_results,
-        "validation_status": "INDEPENDENT_HUMAN_DATA_TESTED"
+        "title": "Leave-One-Subject-Out (LOSO) Cross-Validation Algorithm Demonstration on Synthetic Benchmarks",
+        "data_type": "SYNTHETIC",
+        "validation_status": "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED",
+        "empirical_validation_status": "BLOCKED_PENDING_RAW_DATA",
+        "retraction_note": "Previous claims of empirical cross-subject human validation are retracted. The evaluation was performed on synthetic exponential curves generated via np.random.RandomState, not real human raw time series.",
+        "cross_subject_loso_summary": loso_results
     }
 
     # -----------------------------------------------------------------
     # EXP-0041: SUBJECT-01 Integration & TARGET-CPE45 Boundaries
     # -----------------------------------------------------------------
-    print("\n--- Running EXP-0041: SUBJECT-01 Integration ---")
-    # Quantitative bounding of macro-energetics:
-    # Fast energy pool (PCr + initial ATP buffer):
-    # For calf (GM, 342.5 mL): 0.3425 L * 33.6 mM * 54 J/mmol = 621.5 J work potential
-    # For quadriceps (2340 mL): 2.340 L * 33.6 mM * 54 J/mmol = 4245.7 J work potential
-    # Ratio = 6.83-fold
-    # Whole body critical power (CP) in 2700 s CPE45 test (~200-300 W):
-    # Total energy expended over 2700 s at 250 W = 675,000 J (675 kJ).
-    # Local calf PCr pool (0.62 kJ) represents 0.09% of total CPE45 energy budget!
-    # Quadriceps PCr pool (4.25 kJ) represents 0.63% of total CPE45 energy budget!
-    # Conclusion: Single-muscle PCr buffer is purely a transient sprint/acceleration buffer (0-30 s);
-    # sustaining 2700 s is 99.3% oxidative whole-body systemic flux.
+    print("\n--- Running EXP-0041: SUBJECT-01 Integration & CPE45 Energy Accounting ---")
+    # Rigorous physical and physiological energy accounting:
+    # 1. External mechanical work: 250 W * 2700 s = 675,000 J (675 kJ).
+    #    This is an illustrative 45-minute critical power endurance test scenario.
+    # 2. Whole-body metabolic chemical energy expenditure:
+    #    Assuming human gross mechanical efficiency eta_gross ~ 20% (0.18 - 0.23):
+    #    E_met = W_mech / eta_gross = 675 kJ / 0.20 = 3375 kJ.
+    # 3. Local chemical phosphocreatine (PCr) buffer capacity:
+    #    Active calf muscle volume scenario (V_active = 83.6 - 144.4 mL):
+    #    Work potential (-dG_ATP = 50 - 64 kJ/mol, [PCr] = 25.4 - 42.1 mM):
+    #    E_pcr_active = 0.106 - 0.389 kJ (0.1 - 0.4 kJ).
+    #    Whole anatomical gastrocnemius medialis (342.5 mL at 33.6 mM and 54 kJ/mol):
+    #    E_pcr_anat = 0.621 kJ.
+    # 4. Calorimetric heat dissipation from PCr hydrolysis:
+    #    Reaction enthalpy Delta_R H = 21.0 kJ/mol (Kodama 1985).
+    #    Q_heat_anat = 0.3425 L * 0.0336 mol/L * 21.0 kJ/mol = 0.242 kJ.
+    # 5. Scientific verdict on scaling:
+    #    Taking the ratio of single-muscle local PCr buffer to whole-body 45-min external work
+    #    is physically invalid. Local PCr is a high-power transient buffer (~5-30 s) that handles
+    #    cross-bridge turnover at muscle onset. In contrast, 45-minute whole-body endurance requires
+    #    continuous multi-muscle oxidative ATP resynthesis powered by systemic oxygen transport
+    #    (cardiac output Q, pulmonary ventilation VE, VO2max, hemoglobin transport) and carbohydrate/fat oxidation.
+    #    Local single-muscle MRS kinetics cannot predict whole-body CPE45 without a systemic cardiorespiratory model.
     exp_0041 = {
         "experiment_id": "EXP-0041",
         "title": "SUBJECT-01 Integration: Functional Power, Recovery Limits, and TARGET-CPE45 Boundaries",
-        "quantitative_energetic_bounds": {
-            "calf_fast_energy_reserve_work_potential_J": 621.5,
-            "quadriceps_fast_energy_reserve_work_potential_J": 4245.7,
-            "whole_body_cpe45_2700s_energy_budget_at_250W_J": 675000.0,
-            "calf_pcr_contribution_percent": 0.092,
-            "quadriceps_pcr_contribution_percent": 0.629,
-            "recovery_time_constants_s": {
-                "calf_gastrocnemius_tau_s": 24.3,
-                "quadriceps_tau_s": 39.2,
-                "mitochondrial_resynthesis_ratio_calf_vs_quad": round(39.2 / 24.3, 2) # 1.61
-            }
+        "cpe45_energy_accounting": {
+            "external_mechanical_work_kJ": 675.0,
+            "external_work_description": "250 W maintained over 2700 s (45 minutes) = 675 kJ. Illustrative test scenario.",
+            "whole_body_metabolic_expenditure_nominal_kJ": 3375.0,
+            "whole_body_metabolic_expenditure_span_kJ": [2934.8, 3750.0], # at eta_gross 0.18 - 0.23
+            "assumed_gross_mechanical_efficiency_eta_gross": 0.20,
+            "local_pcr_chemical_buffer_work_capacity_kJ": {
+                "active_calf_volume_scenario_kJ": [0.106, 0.389],
+                "anatomical_whole_gm_kJ": 0.621
+            },
+            "local_pcr_hydrolysis_reaction_enthalpy_delta_R_H_kJ_mol": 21.0,
+            "local_heat_dissipation_capacity_anat_kJ": 0.242,
+            "scaling_barrier_explanation": "Local single-muscle PCr buffer is a rapid transient energy store (duration ~5-30 s). 45-minute continuous endurance work requires systemic aerobic ATP resynthesis (metabolic expenditure ~3375 kJ), constrained by cardiac output, pulmonary gas exchange, and whole-body vascular distribution. Local MRS kinetics cannot be scaled to whole-body critical power without an independent cardiorespiratory model."
         },
         "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
-        "scaling_operator_verdict": "Local calf and quadriceps kinetic models cannot be scaled to 2700-second whole-body CPE45 without an independent cardiac output, pulmonary ventilation, and multi-muscle activation operator.",
         "biological_interventions": "NO_GO_MAINTAINED"
     }
 

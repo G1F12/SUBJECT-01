@@ -2,7 +2,7 @@
 ## EMPIRICAL HUMAN DATASETS, RECRUITMENT OBSERVABILITY, AND PREFLIGHT RESOLUTIONS
 
 Дата аудита: 2026-11-08  
-Область: эмпирические измерения двигательных единиц (HD-sEMG), динамической магнитно-резонансной спектроскопии ($^{31}\text{P}$-MRS), анатомической томографии (3D MRI) и термодинамическая калибровка.
+Область: эмпирические измерения двигательных единиц (HD-sEMG), динамической магнитно-резонансной спектроскопии ($^{31}\text{P}$-MRS), анатомической томографии (3D MRI), термодинамическая калибровка и строгий аудит первичных источников.
 
 ---
 
@@ -17,14 +17,14 @@
    - *Физический смысл*: чистое выделение теплоты при изотермическом распаде PCr и сопряжённом ресинтезе ATP в мышечной ткани.
    - *Область применения*: термокалориметрия, тепловыделение и тепловой баланс мышцы:
      $$\dot{Q}_{\text{heat}} = v_{\text{ATP}} \cdot (-\Delta_R H_{\text{CK}})$$
-   - *Энтальпийная ёмкость пула*: $E_{\text{heat}} = V_{\text{active}} \cdot [\text{PCr}] \cdot (-\Delta_R H_{\text{CK}})$. Для номинального объёма $V_{\text{anat}} = 380\text{ мл}$ и $[\text{PCr}] = 33.6\text{ мМ}$ составляет $268.1\text{ Дж}$.
+   - *Энтальпийная ёмкость пула*: $E_{\text{heat}} = V_{\text{active}} \cdot [\text{PCr}] \cdot (-\Delta_R H_{\text{CK}})$. Для номинального анатомического объёма $V_{\text{anat}} = 380\text{ мл}$ и $[\text{PCr}] = 33.6\text{ мМ}$ составляет $268.1\text{ Дж}$.
 
 2. **Свободная энергия Гиббса гидролиза ATP ($\Delta G_{\text{ATP}} \approx -50.0\dots -64.0\text{ кДж/моль}$, номинально $-54.0\text{ кДж/моль}$)**:
    - *Первоисточник*: Meyerspeer et al. (2021), Kushmerick (1998).
    - *Физический смысл*: максимальная термодинамическая работа, доступная для совершения актомиозиновыми поперечными мостиками и ионными насосами ($-\Delta G = -\Delta H + T\Delta S$).
    - *Область применения*: механическая мощность и электромеханическое сопряжение:
      $$P_{\text{mech}} = \eta_{\text{loc}} \cdot v_{\text{ATP}} \cdot (-\Delta G_{\text{ATP}})$$
-   - *Потенциальная ёмкость механической работы*: $E_{\text{work,max}} = V_{\text{active}} \cdot [\text{PCr}] \cdot (-\Delta G_{\text{ATP}})$. Для номинального объёма $V_{\text{anat}} = 380\text{ мл}$ составляет $689.5\text{ Дж}$.
+   - *Потенциальная ёмкость механической работы*: $E_{\text{work,max}} = V_{\text{active}} \cdot [\text{PCr}] \cdot (-\Delta G_{\text{ATP}})$. Для номинального анатомического объёма $V_{\text{anat}} = 380\text{ мл}$ составляет $689.5\text{ Дж}$.
 
 3. **Согласование**:
    - Отношение $\frac{-\Delta G_{\text{ATP}}}{-\Delta_R H_{\text{CK}}} = \frac{54.0}{21.0} \approx 2.5714$ отражает термодинамический вклад энтропийного слагаемого $T\Delta S$.
@@ -46,25 +46,53 @@
 
 ---
 
-## 2. Реестр новых эмпирических источников Cycle 9
+## 2. Реестр новых источников Cycle 9 и статус доступности первичных данных
 
-| ID | Название источника | DOI / Репозиторий | Тип данных | Число людей | Статус верификации |
+| ID | Название источника | DOI / Репозиторий | Тип данных | Первичная доступность (Raw Data) | Статус верификации |
 |---|---|---|---|---|---|
-| SRC-0068 | Hug et al. (2021) / Figshare HD-sEMG | DOI: 10.1016/j.jelekin.2021.102548, Figshare: 10.6084/m9.figshare.13695937 | 64-канальная HD-sEMG сетка (2048 Гц), спайковые поезда ДЕ (gCKC) GM, GL, TA при 10, 30, 50, 70% MVC | $n=8$ операторов / когорта добровольцев | metadata_and_scope_checked_only |
-| SRC-0069 | Rehman et al. (2024) / Dryad 31P-MRS | DOI: 10.1016/j.dib.2024.111114, Dryad: 10.5061/dryad.08kprr59v, PMC11617988 | Динамическая $^{31}\text{P}$-MRS (TR=1 с, кадр 6 с) квадрицепса на немагнитном эргометре 3T Siemens, 3 повторных триала, нейтральный pH | $n=1$ человек (3 полных триала) | metadata_and_scope_checked_only |
-| SRC-0070 | MuscleMap Open Dataset (2023–2024) | Zenodo: 10.5281/zenodo.10077847 / GitHub MuscleMap | 3D Dixon / T1-MRI маски сегментации индивидуальных объёмов мышц голени и бедра | $n=48$ здоровых людей | metadata_and_scope_checked_only |
-| SRC-0071 | Cenni et al. (2018–2020) / Figshare Calf Volumetry | Figshare: 10.6084/m9.figshare.5971480 | Анатомические объёмы мышц голени и толщина подкожного жирового слоя (SAT) по 3D MRI и УЗИ | $n=16$ участников | metadata_and_scope_checked_only |
-| SRC-0072 | Radegran & Saltin (1998) | DOI: 10.1152/ajpheart.1998.274.1.H314 | Допплерография бедренного кровотока в покое ($\approx 250\text{ мл/мин}$) и на первой секунде сокращений | $n=7$ здоровых людей | metadata_and_scope_checked_only |
+| SRC-0068 | Hug et al. (2021) / Figshare HD-sEMG | DOI: 10.1016/j.jelekin.2021.102548, Figshare: 10.6084/m9.figshare.13695937 | Литературные агрегаты частот разряда ДЕ по 8 операторам ($n=1$ записанный испытуемый) | Заблокировано (Cloudflare R2, HTTP 403) | `PUBLISHED_LITERATURE_RATES_SEPARATED` |
+| SRC-0069 | Rehman et al. (2024) / Dryad 31P-MRS | DOI: 10.1016/j.dib.2024.111114, Dryad: 10.5061/dryad.08kprr59v, PMC11617988 | Опубликованные кинетические константы в Таблице 1 (3 триала, $\tau = 39.2\text{ с}$, $\text{pH} = 7.01$) | Заблокировано (AWS WAF challenge, HTTP 403) | `PUBLISHED_AGGREGATE_METRICS_ONLY` / `RAW_TIMESERIES_UNAVAILABLE` |
+| SRC-0070 | MuscleMap Open Dataset (2023–2024) | Zenodo: 10.5281/zenodo.10077847 | Репозиторий кода и весов нейросети, без подтверждённой открытой таблицы когорты | Отсутствует когортная таблица | `UNVERIFIED_PRIMARY_TABLES_RETRACTED` |
+| SRC-0071 | Cenni et al. (2018–2020) / Figshare Calf Volumetry | Figshare: 10.6084/m9.figshare.5971480 | Идентификатор неразрешим как открытый архив датасета | Неразрешимый URL | `UNVERIFIED_PRIMARY_TABLES_RETRACTED` |
+| SRC-0072 | Radegran & Saltin (1998) | DOI: 10.1152/ajpheart.1998.274.1.H314 | Допплерография бедренного кровотока в покое ($\approx 250\text{ мл/мин}$) | Статья рецензируемого журнала | `metadata_and_scope_checked_only` |
 
 ---
 
-## 3. Криптографические хеши и артефакты данных
+## 3. Аудит блокировок доступа к raw data (HTTP Audit)
 
-| Файл / Артефакт | Путь к файлу | Размер, байт | SHA256 |
-|---|---|---|---|
-| Rehman 2024 PMC XML | `research/empirical_recruitment_2026_11_08/pmc11617988.xml` | 42,708 | `835dbe48440f1b7139108c7a17673b1bb0664efc8c9d692fd01431a3276d5d2c` |
-| Empirical Datasets JSON | `research/empirical_recruitment_2026_11_08/empirical_datasets_cycle9.json` | 7,096 | генерируется динамически |
-| Biophysical Recruitment JSON | `research/empirical_recruitment_2026_11_08/recruitment_biophysical_results.json` | 5,597 | генерируется динамически |
-| Identifiability Results JSON | `research/empirical_recruitment_2026_11_08/identifiability_recruitment_results.json` | 1,377 | генерируется динамически |
-| LOSO Validation JSON | `research/empirical_recruitment_2026_11_08/validation_loso_results.json` | 2,252 | генерируется динамически |
-| Master Experiment Results JSON | `research/empirical_recruitment_2026_11_08/experiment_results.json` | 11,574 | генерируется динамически |
+### 3.1. Rehman et al. 2024 (Dryad)
+- Целевой файл: `2024_829_Ergometer_Dryad_Raw_V3.xlsx` (18 КБ).
+- Dryad Share URL: `https://datadryad.org/stash/share/LKj22wpyxIQguzk5GCQgsMBwY6hccwEKj77L2nXXXb0`.
+- Ответ сервера: **HTTP 403 Forbidden**. Сервер возвращает страницу Anubis/AWS WAF (`<title>Validating...</title>`) с требованием прохождения интерактивного капча-челленджа в браузере.
+- Программное автоматическое извлечение непрерывных временных рядов спектров блокировано.
+- Согласно протоколу integrity gate, статус источника строго установлен как **`RAW_TIMESERIES_UNAVAILABLE`**. Генерация искусственных рядов взамен реальных категорически запрещена.
+
+### 3.2. Hug et al. 2021 (Figshare)
+- Целевой файл: `Experimental_data_Raw.zip` (444 МБ) и `Experimental_data_edited.zip` (3.7 ГБ).
+- Ответ сервера: **HTTP 403 Forbidden** с заголовком блокировки хранилища Cloudflare R2 (`CF-RAY` block).
+- В открытом доступе опубликованы сводные характеристики согласия операторов (99.6%) и средние частоты разряда ДЕ при 10–70% MVC.
+- **Эпистемическое разграничение**: 8 операторов, анализировавших одну запись, представляют 8 операторов-оценщиков, а не 8 независимых биологических испытуемых. Статус: **`RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE / PUBLISHED_LITERATURE_RATES_SEPARATED`**.
+
+### 3.3. Аудит МРТ-волюметрии
+- Franke et al. 2020: объём икроножной мышцы $V_{\text{anat}} = 379.89\text{ мл}$ верифицирован по первичному MAT-файлу 3D сегментации VIBE Subject 01.
+- Источники SRC-0070 (MuscleMap) и SRC-0071 (Cenni) не содержат верифицированных таблиц первичных измерений; статус `EMPIRICALLY_BOUNDED_DISTRIBUTION` отозван.
+
+---
+
+## 4. Ретракция синтетической валидации LOSO
+
+В скрипте `validation_loso.py` ранее использовались функции `generate_rehman_time_series()` и `generate_franke_time_series()`, которые генерировали экспоненциальные кривые с добавлением нормального шума через `np.random.RandomState(42)` и `np.random.RandomState(123)`.
+- Утверждения о независимой эмпирической валидации человека с RMSE 0.837 мМ и 2.424 мМ признаны **научно некорректными** и **полностью отозваны**.
+- Эксперимент EXP-0040 и вывод FND-0040 переведены в статус **`SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED`**.
+- Независимая эмпирическая валидация переведена в статус **`BLOCKED_PENDING_RAW_DATA`**.
+
+---
+
+## 5. Постоянный инструмент контроля происхождения данных (Data Provenance Gate)
+
+В репозиторий установлен инструмент `tools/verify_data_provenance.py`, интегрированный в общий скрипт проверки `tools/validate_repository.py`.
+- Обязательные поля для каждого набора наблюдений:
+  `source_id`, `dataset_id`, `source_url_or_doi`, `independent_participants_n`, `data_type`, `source_file`, `sha256`, `number_of_real_observations`, `measurement_units`, `validation_status`.
+- Допустимые типы данных: `RAW_HUMAN_OBSERVATION`, `LITERATURE_REPORTED_VALUE`, `COMPUTATIONAL_SIMULATION`, `SYNTHETIC`.
+- **Правило запрета**: запрещено присваивать статус `EXTERNALLY_VALIDATED` или `EMPIRICALLY_VALIDATED` наборам с `data_type == 'SYNTHETIC'` или при отсутствии реальных наблюдений.
+- **Контроль валидационных скриптов**: запрещено генерировать синтетические векторы истинных значений ($y_{\text{true}}$) через генераторы случайных чисел или аналитические функции, выдавая их за измерения человека.

@@ -1,17 +1,30 @@
 {
   "cycle": 9,
   "date": "2026-11-08",
-  "description": "Multi-modal empirical datasets for human motor unit recruitment, dynamic 31P-MRS bioenergetics, and MRI muscle volumetry",
-  "rehman_2024_quadriceps_31p_mrs": {
-    "dataset_name": "Rehman et al. (2024) 31P-MRS Ergometer Dynamics",
+  "description": "Rigorous data provenance audit for Cycle 9 human measurements",
+  "rehman_2024_audit": {
+    "source_id": "SRC-0069",
+    "dataset_id": "DRYAD_08KPRR59V_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.1016/j.dib.2024.111114",
     "pmcid": "PMC11617988",
-    "doi": "10.1016/j.dib.2024.111114",
+    "muscle_group": "Quadriceps femoris",
+    "protocol": "In-bore knee extension ergometer (Siemens 3T)",
     "dryad_doi": "10.5061/dryad.08kprr59v",
     "dryad_share_url": "https://datadryad.org/stash/share/LKj22wpyxIQguzk5GCQgsMBwY6hccwEKj77L2nXXXb0",
-    "source_xml_sha256": "835dbe48440f1b7139108c7a17673b1bb0664efc8c9d692fd01431a3276d5d2c",
-    "n_subjects": 1,
-    "muscle_group": "Quadriceps femoris (vastus lateralis / rectus femoris)",
-    "protocol": "Dynamic knee extensions on non-magnetic ergometer at 1 Hz, 42 s exercise, 360 s recovery, 5-10% MVC",
+    "data_type": "LITERATURE_REPORTED_VALUE",
+    "raw_timeseries_status": "RAW_TIMESERIES_UNAVAILABLE",
+    "raw_download_audit": {
+      "target_file": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
+      "http_status": 403,
+      "error_type": "AWS_WAF_BOT_CHALLENGE",
+      "alternative_public_mirrors": null,
+      "conclusion": "Continuous spectral time-series are unavailable programmatically. Published Table 1 provides 3 scalar rate constants only."
+    },
+    "source_file": "research/empirical_recruitment_2026_11_08/pmc11617988.xml",
+    "sha256": "835dbe48440f1b7139108c7a17673b1bb0664efc8c9d692fd01431a3276d5d2c",
+    "independent_participants_n": 1,
+    "measurement_units": "rate constant k in min^-1; pH unitless; PCr depletion fraction",
+    "number_of_real_observations": 3,
     "trials": [
       {
         "trial_id": 1,
@@ -20,9 +33,7 @@
         "tau_rec_s": 41.96,
         "ph_control": 6.97,
         "ph_end_exercise": 6.98,
-        "ph_end_recovery": 6.92,
-        "delta_ph_exercise": 0.01,
-        "is_acidotic": false
+        "ph_end_recovery": 6.92
       },
       {
         "trial_id": 2,
@@ -31,9 +42,7 @@
         "tau_rec_s": 37.04,
         "ph_control": 7.02,
         "ph_end_exercise": 7.02,
-        "ph_end_recovery": 7.0,
-        "delta_ph_exercise": 0.0,
-        "is_acidotic": false
+        "ph_end_recovery": 7.0
       },
       {
         "trial_id": 3,
@@ -42,182 +51,103 @@
         "tau_rec_s": 39.22,
         "ph_control": 7.01,
         "ph_end_exercise": 7.03,
-        "ph_end_recovery": 6.99,
-        "delta_ph_exercise": 0.02,
-        "is_acidotic": false
+        "ph_end_recovery": 6.99
       }
     ],
     "aggregate_statistics": {
       "pcr_depletion_mean": 0.272,
-      "pcr_depletion_sd": 0.038,
-      "k_rec_mean_min_minus_1": 1.5267,
-      "k_rec_sd_min_minus_1": 0.1,
-      "tau_rec_mean_s": 39.41,
-      "tau_rec_sd_s": 2.47,
-      "ph_control_mean": 7.0,
-      "ph_end_exercise_mean": 7.01,
+      "tau_rec_mean_s": 39.406666666666666,
       "acidosis_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED"
-    }
-  },
-  "hug_2021_calf_hd_semg_motor_units": {
-    "dataset_name": "Hug et al. (2021) Lower-Limb HD-sEMG Motor Unit Decomposition",
-    "doi": "10.1016/j.jelekin.2021.102548",
-    "figshare_doi": "10.6084/m9.figshare.13695937",
-    "figshare_files": {
-      "Experimental_data_Raw.zip": {
-        "id": 26360410,
-        "size_bytes": 444354375
-      },
-      "Experimental_data_edited.zip": {
-        "id": 26475950,
-        "size_bytes": 3764571318
-      }
     },
+    "validation_status": "PUBLISHED_AGGREGATE_METRICS_ONLY"
+  },
+  "hug_2021_audit": {
+    "source_id": "SRC-0068",
+    "dataset_id": "FIGSHARE_13695937_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.1016/j.jelekin.2021.102548",
+    "figshare_doi": "10.6084/m9.figshare.13695937",
     "muscles_studied": [
-      "Gastrocnemius Medialis (GM)",
-      "Gastrocnemius Lateralis (GL)",
-      "Tibialis Anterior (TA)"
+      "Gastrocnemius Medialis",
+      "Gastrocnemius Lateralis",
+      "Tibialis Anterior",
+      "Vastus Lateralis"
     ],
-    "intensity_levels_percent_mvc": [
-      10,
-      30,
-      50,
-      70
-    ],
-    "grid_hardware": "64-channel array (13x5 with 1 missing corner, 8 mm IED), OT Bioelettronica, sampling 2048 Hz",
-    "decomposition_method": "Gradient Convolutive Kernel Compensation (gCKC / DEMUSE) + multi-operator editing",
+    "data_type": "LITERATURE_REPORTED_VALUE",
+    "raw_archive_status": "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE",
+    "raw_download_audit": {
+      "target_file": "Experimental_data_Raw.zip (444 MB)",
+      "http_status": 403,
+      "error_type": "CLOUDFLARE_R2_STORAGE_BLOCK",
+      "conclusion": "Raw 64-channel signals and decomposed IPT files are protected by Cloudflare CDN challenge. Published literature provides summary inter-operator agreement (99.6%) and discharge rates across 8 raters."
+    },
+    "source_file": "registry/sources.json",
+    "sha256": "N/A_PUBLISHED_LITERATURE",
+    "independent_participants_n": 1,
+    "rater_operators_n": 8,
     "inter_operator_agreement_median": 0.996,
+    "measurement_units": "Discharge rate in Hz; MVC percentage in %",
+    "number_of_real_observations": 8,
     "discharge_characteristics_by_intensity": {
       "gastrocnemius_medialis": {
         "10_percent_mvc": {
-          "recruited_units_fraction_estimated": [
-            0.08,
-            0.14
-          ],
           "mean_discharge_rate_hz": 9.8,
-          "discharge_rate_sd_hz": 1.4,
-          "discharge_rate_range_hz": [
-            7.5,
-            12.2
-          ]
+          "sd_hz": 1.4
         },
         "30_percent_mvc": {
-          "recruited_units_fraction_estimated": [
-            0.24,
-            0.36
-          ],
           "mean_discharge_rate_hz": 12.6,
-          "discharge_rate_sd_hz": 1.8,
-          "discharge_rate_range_hz": [
-            8.8,
-            16.5
-          ]
+          "sd_hz": 1.8
         },
         "50_percent_mvc": {
-          "recruited_units_fraction_estimated": [
-            0.48,
-            0.62
-          ],
           "mean_discharge_rate_hz": 15.4,
-          "discharge_rate_sd_hz": 2.3,
-          "discharge_rate_range_hz": [
-            10.2,
-            21.0
-          ]
+          "sd_hz": 2.3
         },
         "70_percent_mvc": {
-          "recruited_units_fraction_estimated": [
-            0.7,
-            0.84
-          ],
           "mean_discharge_rate_hz": 19.8,
-          "discharge_rate_sd_hz": 3.1,
-          "discharge_rate_range_hz": [
-            12.5,
-            27.5
-          ]
-        }
-      },
-      "gastrocnemius_lateralis": {
-        "10_percent_mvc": {
-          "mean_discharge_rate_hz": 9.4,
-          "discharge_rate_sd_hz": 1.5
-        },
-        "30_percent_mvc": {
-          "mean_discharge_rate_hz": 12.1,
-          "discharge_rate_sd_hz": 1.9
-        },
-        "50_percent_mvc": {
-          "mean_discharge_rate_hz": 14.8,
-          "discharge_rate_sd_hz": 2.4
-        },
-        "70_percent_mvc": {
-          "mean_discharge_rate_hz": 18.9,
-          "discharge_rate_sd_hz": 3.2
+          "sd_hz": 3.1
         }
       }
     },
-    "critical_physiological_insight": "In human calf muscles, motor unit recruitment threshold distribution is heavily skewed: >60% of units are recruited by 50% MVC, with higher forces generated predominantly by rate coding acceleration. Surface EMG RMS does NOT scale linearly with recruitment due to non-uniform depth weighting and progressive phase cancellation."
+    "validation_status": "PUBLISHED_LITERATURE_RATES_SEPARATED",
+    "epistemic_warning": "Eight operators analyzing the same recorded trials do NOT constitute eight independent human participants."
   },
-  "anatomical_mri_volumetry": {
-    "dataset_name": "Human Calf & Quadriceps Anatomical MRI Volumetry Benchmark",
-    "sources": [
+  "mri_volumetry_audit": {
+    "sources_audit": [
       {
-        "id": "SRC-0063",
+        "source_id": "SRC-0063",
         "citation": "Franke et al. (2020) PMC7332772",
+        "data_type": "RAW_HUMAN_OBSERVATION",
         "muscle": "Gastrocnemius Medialis",
-        "n": 1,
-        "V_anat_mL": 379.89
+        "independent_participants_n": 1,
+        "V_anat_mL": 379.89,
+        "verification_status": "VERIFIED_PRIMARY_MEASUREMENT",
+        "provenance": "3D T1-MRI VIBE segmentation of Subject 01 right calf."
       },
       {
-        "id": "SRC-0070",
-        "citation": "MuscleMap / Zenodo 10.5281/zenodo.10077847",
-        "muscle": "Gastrocnemius Medialis",
-        "n": 48,
-        "V_anat_mean_mL": 342.5,
-        "V_anat_sd_mL": 58.2,
-        "V_anat_span_mL": [
-          228.0,
-          485.0
-        ]
-      },
-      {
-        "id": "SRC-0070",
-        "citation": "MuscleMap / Zenodo 10.5281/zenodo.10077847",
-        "muscle": "Soleus",
-        "n": 48,
-        "V_anat_mean_mL": 580.4,
-        "V_anat_sd_mL": 92.1,
-        "V_anat_span_mL": [
-          390.0,
-          795.0
-        ]
-      },
-      {
-        "id": "SRC-0071",
-        "citation": "Cenni et al. / Figshare 10.6084/m9.figshare.5971480",
-        "muscle": "Gastrocnemius Medialis",
-        "n": 16,
-        "V_anat_mean_mL": 331.2,
-        "V_anat_sd_mL": 52.4,
-        "V_anat_span_mL": [
-          245.0,
-          435.0
-        ]
-      },
-      {
-        "id": "SRC-0069",
-        "citation": "Rehman et al. (2024) PMC11617988 / Andersen & Saltin 1985",
+        "source_id": "SRC-0066",
+        "citation": "Andersen & Saltin (1985) J Physiol 366:233-249",
+        "data_type": "LITERATURE_REPORTED_VALUE",
         "muscle": "Quadriceps femoris",
-        "n": 8,
-        "V_anat_mean_mL": 2340.0,
-        "V_anat_sd_mL": 290.0,
-        "V_anat_span_mL": [
-          1850.0,
-          2850.0
-        ]
+        "independent_participants_n": 8,
+        "V_anat_mL_estimate": 2170.0,
+        "verification_status": "ESTIMATED_FROM_QUADRICEPS_MASS",
+        "provenance": "Table 1 quadriceps mass ~2.3 kg (density 1.06 g/mL -> ~2170 mL)."
+      },
+      {
+        "source_id": "SRC-0070",
+        "citation": "MuscleMap Zenodo 10.5281/zenodo.10077847",
+        "data_type": "SYNTHETIC",
+        "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "audit_verdict": "Zenodo 10077847 contains deep learning model weights and template files, not a verified open cohort table of n=48 subjects with mean 342.5 mL. Retracted from empirical anchors."
+      },
+      {
+        "source_id": "SRC-0071",
+        "citation": "Cenni et al. Figshare 10.6084/m9.figshare.5971480",
+        "data_type": "SYNTHETIC",
+        "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "audit_verdict": "Figshare ID 5971480 is invalid/unresolvable as a public dataset archive. Retracted from empirical anchors."
       }
     ],
-    "scaling_ratio_quadriceps_to_gastrocnemius": 6.83
+    "scaling_ratio_quadriceps_to_gastrocnemius": 5.71,
+    "verdict": "Only Franke et al. 2020 (Subject 01, V_anat = 379.89 mL) is a verified primary volumetric measurement. Cohort distributions from SRC-0070 and SRC-0071 are retracted; status EMPIRICALLY_BOUNDED_DISTRIBUTION is removed."
   }
 }

@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """
 SUBJECT-01 — Research Cycle 9
-Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering,
+Biophysical Forward Simulation Model of Motor Unit Recruitment, Volume Conductor Filtering,
 Subcutaneous Adipose Tissue (SAT) Attenuation, and sEMG / Force Observability.
+
+NOTE ON SCIENTIFIC CLASSIFICATION:
+This module implements a theoretical forward biophysical simulation hypothesis (Fuglevand MU pool
+combined with Campbell asynchronous summation and volume conductor attenuation).
+It is a COMPUTATIONAL SIMULATION HYPOTHESIS, NOT an empirical direct measurement.
+All outputs (+14% sEMG RMS during fatigue scenario, 40.9x sensitivity span across 3-10 mm fat)
+are model-derived theoretical consequences under specified parameter scenarios.
 """
 
 import numpy as np
@@ -217,7 +224,7 @@ def run_recruitment_experiments():
     rms_fresh_norm = rms_fresh / rms_max_nom
     
     # In fatigued muscle, twitch force drops by 35%, but conduction velocity slowing broadens MUAP
-    f_fatigued = f_fresh * 0.65 # 35% force loss
+    f_fatigued = f_fresh * 0.65 # 35% force loss (scenario parameter)
     rms_fatigued, _, _ = pool.compute_semg_signal(rts, act_m, fatigue_drop=0.40)
     rms_fatigued_norm = rms_fatigued / rms_max_nom
     
@@ -229,12 +236,28 @@ def run_recruitment_experiments():
         "fresh_semg_rms_norm": round(float(rms_fresh_norm), 4),
         "fatigued_semg_rms_norm": round(float(rms_fatigued_norm), 4),
         "semg_rms_change_percent": round(float((rms_fatigued_norm - rms_fresh_norm) / rms_fresh_norm * 100), 1),
-        "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force, demonstrating the total failure of scalar sEMG RMS as a monotonic proxy for metabolic activation."
+        "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force in this forward simulation scenario, demonstrating that single-channel sEMG RMS cannot be treated as a monotonic proxy for metabolic activation without high-density multi-channel arrays and subcutaneous morphometry."
     }
     
     out = {
-        "model_name": "Biophysical Motor Unit Recruitment & Volume Conduction Model",
-        "n_units": pool.n_units,
+        "model_name": "Biophysical Motor Unit Recruitment & Volume Conductor Simulation Model",
+        "data_type": "SYNTHETIC",
+        "validation_status": "COMPUTATIONAL_SIMULATION_HYPOTHESIS",
+        "scientific_classification": "THEORETICAL_BIOPHYSICAL_SIMULATION_NOT_DIRECTLY_MEASURED",
+        "scenario_parameters": {
+            "n_units": pool.n_units,
+            "threshold_distribution": "Fuglevand exponential (t_min=0.01, t_max=0.75)",
+            "innervation_size_distribution": "exponential (s_min=1.0, s_max=50.0)",
+            "subcutaneous_fat_range_mm": [3.0, 10.0],
+            "fatigue_force_perturbation_scenario_percent": -35.0,
+            "muap_fatigue_broadening_factor": 0.40
+        },
+        "simulation_derived_outputs": {
+            "franke_operating_point_analysis": franke_point_analysis,
+            "fatigue_dissociation": fatigue_dissociation,
+            "observed_rms_increase_under_fatigue_scenario_percent": 14.0,
+            "active_fraction_sensitivity_span_ratio": franke_point_analysis["uncertainty_ratio_a_eff"]
+        },
         "franke_point_analysis": franke_point_analysis,
         "fatigue_dissociation": fatigue_dissociation,
         "drive_sweep_sample": drive_results[::5] # Every 5th point for compact reporting
