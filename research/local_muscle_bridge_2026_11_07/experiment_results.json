@@ -44,7 +44,7 @@
           -22.867282161534856,
           20.862080967358146
         ],
-        "finding": "A +/-5% error in baseline resting PCr asymptote distorts estimated tau_PCr by -17.8% to +26.4%."
+        "finding": "A +/-5% error in baseline resting PCr asymptote distorts estimated tau_PCr by -22.9% to +20.9%."
       },
       "spatial_heterogeneity_simulation": {
         "true_pool_taus_s": [
@@ -242,13 +242,15 @@
       },
       "atp_turnover_flux_partition_cannon2014": {
         "source": "Cannon et al. (2014) Table 1, PMC4262339",
+        "exercise_modality": "Bilateral knee extension (quadriceps femoris), NOT plantarflexion (calf)",
+        "cross_study_isolation_warning": "Qualitative proof of oxidative dominance in dynamic steady-state; quantitative fluxes (mM/min) cannot be directly transferred to calf plantarflexion.",
         "Q_oxidative_mM_min": 35.0,
         "D_pcr_mM_min": 1.1,
         "L_glycolytic_mM_min": 1.5,
         "ATP_total_mM_min": 38.0,
         "oxidative_fraction_pct": 92.10526315789474,
         "pcr_hydrolysis_fraction_pct": 2.8947368421052633,
-        "finding": "During steady high-intensity exercise, oxidative phosphorylation supplies 92.1% of ATP turnover; PCr hydrolysis supplies only 2.9%."
+        "finding": "During steady high-intensity bilateral knee extension, oxidative phosphorylation supplies 92.1% of ATP turnover; PCr hydrolysis supplies only 2.9%."
       },
       "cumulative_180s_energy_comparison_J": {
         "external_work_done_J": 3240.0,
@@ -267,7 +269,19 @@
           0.44,
           1.5
         ],
-        "finding": "Apparent efficiency from PCr alone exceeds unity (1.50) when active volume is underestimated, proving efficiency cannot be identified without direct volumetric MRI."
+        "apparent_ratio_diagnostic_note": "The apparent ratio W_ext / Delta_E_PCr (0.44 to 1.50) is a DIAGNOSTIC ARTIFACT of an incomplete energy balance (omitted early oxidative/glycolytic resynthesis) and volume underestimation (V_active=0.15 L), NOT a physiologically permissible range of efficiency (which is biophysically bounded to 0.25-0.30). Values > 1.0 violate energy conservation.",
+        "finding": "Apparent ratio from PCr alone exceeds unity (1.50) when active volume is underestimated, proving efficiency cannot be identified without direct volumetric MRI."
+      },
+      "energy_identifiability_bounds_without_new_data": {
+        "identifiable_constraints": [
+          "Static resting PCr buffer capacity is bounded to 204.8 - 1021.4 J (4.99-fold span) given anatomical gastrocnemius volume bounds (0.15 - 0.40 L) and [ATP]_ref bounds (6.5 - 9.5 mM).",
+          "External work over 180 s (3240 J) exceeds resting PCr buffer capacity by 3.2 to 15.8 times, proving continuous dynamic exercise cannot be powered solely by PCr buffer depletion."
+        ],
+        "unidentifiable_without_new_data": [
+          "True local actomyosin efficiency eta_local cannot be identified without synchronous volumetric MRI and complete ATP turnover fluxes.",
+          "Quantitative ATP turnover rates (mM/min) for calf plantarflexion cannot be transferred from knee-extension studies without independent calf data.",
+          "Non-local cardiorespiratory oxygen cost fraction cannot be determined beyond a scenario sensitivity grid (42.8% to 77.1%) without venous catheterization or isolated limb blood flow measurements."
+        ]
       }
     },
     "EXP-0031": {
