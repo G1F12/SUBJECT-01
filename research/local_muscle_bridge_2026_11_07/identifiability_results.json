@@ -1,8 +1,11 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "topologies": {
     "M1_power_only": {
       "n_parameters": 7,
+      "channels": [
+        "P_ext_W"
+      ],
       "effective_rank": 0,
       "rank_defect": 7,
       "singular_values": [
@@ -14,137 +17,332 @@
         0.0,
         0.0
       ],
+      "fim_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": Infinity,
+      "nullspace_basis": [
+        {
+          "eta_loc": 1.0
+        },
+        {
+          "PCr_rest_mM": 1.0
+        },
+        {
+          "V_active_L": 1.0
+        },
+        {
+          "dG_ATP_kJ_mol": 1.0
+        },
+        {
+          "tau_PCr_rec_s": 1.0
+        },
+        {
+          "Q_loc_max_mM_s": 1.0
+        },
+        {
+          "M_loc_mM_s": 1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "eta_loc",
-        "PCr_rest_mM",
-        "V_active_L",
-        "dG_ATP_kJ_mol",
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "unconstrained: eta_loc",
+        "unconstrained: PCr_rest_mM",
+        "unconstrained: V_active_L",
+        "unconstrained: dG_ATP_kJ_mol",
+        "unconstrained: tau_PCr_rec_s",
+        "unconstrained: Q_loc_max_mM_s",
+        "unconstrained: M_loc_mM_s"
       ]
     },
     "M2_power_relPCr": {
       "n_parameters": 7,
+      "channels": [
+        "P_ext_W",
+        "PCr_relative"
+      ],
       "effective_rank": 3,
       "rank_defect": 4,
       "singular_values": [
-        0.2557181520580934,
-        0.1633628404451987,
-        0.010351146299443344,
-        1.2144090629451518e-13,
-        3.691713386571662e-14,
-        8.557198027450423e-18,
+        0.2388065355149582,
+        0.15255903284385583,
+        0.009666585521926414,
+        1.1340955603504086e-13,
+        3.4475440504704444e-14,
+        1.581094440472344e-17,
         0.0
       ],
+      "fim_eigenvalues": [
+        2075.8396351295146,
+        847.1830094819974,
+        3.401320673758618,
+        4.681654194025946e-22,
+        -7.555822137996807e-53,
+        -1.0564605137959465e-14,
+        -5.693695475925034e-14
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": 24.704331738780027,
+      "nullspace_basis": [
+        {
+          "M_loc_mM_s": 0.9999982843618844
+        },
+        {
+          "eta_loc": 0.8164951801064588,
+          "V_active_L": -0.4082442153283423,
+          "dG_ATP_kJ_mol": -0.4082509647760546
+        },
+        {
+          "V_active_L": -0.7071087295727028,
+          "dG_ATP_kJ_mol": 0.7071048327842862
+        },
+        {
+          "Q_loc_max_mM_s": -1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "dG_ATP_kJ_mol",
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "unconstrained: M_loc_mM_s",
+        "multi-parameter manifold: eta_loc + dG_ATP_kJ_mol + V_active_L",
+        "coupled product/ratio: V_active_L - dG_ATP_kJ_mol",
+        "unconstrained: Q_loc_max_mM_s"
       ]
     },
     "M3_power_relPCr_VO2": {
       "n_parameters": 7,
+      "channels": [
+        "P_ext_W",
+        "PCr_relative",
+        "VO2_pulm_L_min"
+      ],
       "effective_rank": 4,
       "rank_defect": 3,
       "singular_values": [
-        0.2973379153346572,
-        0.19116950678970104,
-        0.03349653560283228,
-        0.009318983963421018,
-        1.4466172069446793e-13,
-        4.3020380131273167e-14,
+        0.2599737195413436,
+        0.17306102946225585,
+        0.07342707110363536,
+        0.007711144110991361,
+        1.4788238897865465e-13,
+        6.64860522896033e-14,
         0.0
       ],
+      "fim_eigenvalues": [
+        2267.890352399972,
+        987.3070743975367,
+        131.62544719736042,
+        2.155675878955273,
+        6.526224048319724e-22,
+        0.0,
+        -2.456888793798264e-14
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": 33.71402684211031,
+      "nullspace_basis": [
+        {
+          "M_loc_mM_s": 0.9999997625027551
+        },
+        {
+          "eta_loc": -0.7071066132515399,
+          "dG_ATP_kJ_mol": 0.7071066132497306
+        },
+        {
+          "Q_loc_max_mM_s": -1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "unconstrained: M_loc_mM_s",
+        "coupled product/ratio: eta_loc - dG_ATP_kJ_mol",
+        "unconstrained: Q_loc_max_mM_s"
       ]
     },
     "M4_power_absPCr": {
       "n_parameters": 7,
+      "channels": [
+        "P_ext_W",
+        "PCr_mM"
+      ],
       "effective_rank": 3,
       "rank_defect": 4,
       "singular_values": [
-        13.870955168384423,
-        5.832670436146073,
-        3.827728918905535,
-        3.2467232025841817e-12,
-        8.094343373092171e-13,
-        3.722713038104243e-17,
+        0.45859028170456567,
+        0.19283502440399425,
+        0.12654927233926397,
+        1.0734053204596641e-13,
+        2.675401639294689e-14,
+        1.4590150697012595e-17,
         0.0
       ],
+      "fim_eigenvalues": [
+        9832.55540838468,
+        1738.5554332507477,
+        748.748581955693,
+        4.691870725114179e-13,
+        5.386959222197987e-22,
+        0.0,
+        -8.993488676078852e-14
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": 3.623808128071556,
+      "nullspace_basis": [
+        {
+          "M_loc_mM_s": 0.9999993771383542
+        },
+        {
+          "eta_loc": 0.8164960679376124,
+          "V_active_L": -0.40832166257588437,
+          "dG_ATP_kJ_mol": -0.40817440535974375
+        },
+        {
+          "V_active_L": -0.7070642678444101,
+          "dG_ATP_kJ_mol": 0.7071492868619849
+        },
+        {
+          "Q_loc_max_mM_s": -1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "dG_ATP_kJ_mol",
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "unconstrained: M_loc_mM_s",
+        "multi-parameter manifold: eta_loc + V_active_L + dG_ATP_kJ_mol",
+        "coupled product/ratio: dG_ATP_kJ_mol - V_active_L",
+        "unconstrained: Q_loc_max_mM_s"
       ]
     },
     "M5_power_absPCr_volume": {
       "n_parameters": 7,
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "V_active"
+      ],
       "effective_rank": 4,
       "rank_defect": 3,
       "singular_values": [
-        13.878525826583521,
-        5.8358675826673405,
-        3.8298196320787015,
-        0.01904636157177484,
-        3.2484946785028574e-12,
-        7.013372102962245e-13,
+        1.00756410202336,
+        0.4549693562536062,
+        0.16155201991320034,
+        0.12338363540657668,
+        1.0734051561678945e-13,
+        2.317240985935327e-14,
         0.0
       ],
+      "fim_eigenvalues": [
+        9834.704728272409,
+        1787.9503800012033,
+        752.722130728465,
+        100.73218458900728,
+        5.386959222198147e-22,
+        0.0,
+        -7.105426818905082e-15
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": 8.166108079918468,
+      "nullspace_basis": [
+        {
+          "M_loc_mM_s": -0.9999995478155489
+        },
+        {
+          "eta_loc": -0.7071064614447147,
+          "dG_ATP_kJ_mol": 0.7071064614429969
+        },
+        {
+          "Q_loc_max_mM_s": 1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "unconstrained: M_loc_mM_s",
+        "coupled product/ratio: eta_loc - dG_ATP_kJ_mol",
+        "unconstrained: Q_loc_max_mM_s"
       ]
     },
     "M6_power_absPCr_vol_baseline": {
       "n_parameters": 7,
-      "effective_rank": 3,
-      "rank_defect": 4,
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "V_active",
+        "M_loc"
+      ],
+      "effective_rank": 5,
+      "rank_defect": 2,
       "singular_values": [
-        13.877023180738611,
-        5.835222006375722,
-        3.829403403905773,
-        0.0013994684515555146,
-        8.096585763460377e-13,
-        1.5434200666984444e-16,
+        1.0075641020233599,
+        0.9999999999998436,
+        0.45496935625360624,
+        0.1615520199132004,
+        0.12338363540657674,
+        2.3172624219178428e-14,
         0.0
       ],
+      "fim_eigenvalues": [
+        9834.704728272409,
+        1787.9503800012023,
+        752.7221307284653,
+        100.73218458900726,
+        56.249999999982386,
+        -3.5901936308711595e-30,
+        -7.101957910649048e-15
+      ],
       "condition_number": Infinity,
+      "effective_condition_number": 8.166108079918462,
+      "nullspace_basis": [
+        {
+          "eta_loc": -0.7071067811874064,
+          "dG_ATP_kJ_mol": 0.7071067811856885
+        },
+        {
+          "Q_loc_max_mM_s": -1.0
+        }
+      ],
       "unidentifiable_directions": [
-        "dG_ATP_kJ_mol",
-        "tau_PCr_rec_s",
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "coupled product/ratio: eta_loc - dG_ATP_kJ_mol",
+        "unconstrained: Q_loc_max_mM_s"
       ]
     },
     "M7_fully_anchored": {
       "n_parameters": 7,
-      "effective_rank": 5,
-      "rank_defect": 2,
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "VO2_pulm_L_min",
+        "V_active",
+        "Q_loc_max",
+        "M_loc"
+      ],
+      "effective_rank": 6,
+      "rank_defect": 1,
       "singular_values": [
-        16.651303460881742,
-        7.001797953158535,
-        4.5950239039635825,
-        0.06716980197343791,
-        0.0323842630650085,
-        0.0016792450493371134,
-        8.41621995317471e-13
+        1.0115562031052836,
+        0.9999999999998436,
+        0.9999999999991497,
+        0.46536972758792144,
+        0.17028038225114803,
+        0.13147606613753768,
+        6.390814036431681e-14
+      ],
+      "fim_eigenvalues": [
+        10082.542187744057,
+        1798.5660563895926,
+        876.562977171871,
+        180.99278687411623,
+        143.9999999997551,
+        56.24999999998241,
+        -1.2434021501194514e-13
       ],
       "condition_number": Infinity,
+      "effective_condition_number": 7.693842939041774,
+      "nullspace_basis": [
+        {
+          "eta_loc": -0.7071067811874132,
+          "dG_ATP_kJ_mol": 0.7071067811856819
+        }
+      ],
       "unidentifiable_directions": [
-        "Q_loc_max_mM_s",
-        "M_loc_mM_s"
+        "coupled product/ratio: eta_loc - dG_ATP_kJ_mol"
       ]
     }
   },

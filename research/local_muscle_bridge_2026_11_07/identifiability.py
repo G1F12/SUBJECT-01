@@ -9,7 +9,6 @@ Computes:
 from pathlib import Path
 import json
 import numpy as np
-from scipy.optimize import minimize
 
 BASE = Path(__file__).resolve().parent
 
@@ -37,7 +36,7 @@ class LocalBridgeModel:
     def simulate(self, t_grid, P_ext_profile):
         """Simulate time courses of local PCr, local oxidative flux, and pulmonary VO2.
         t_grid: array of time points in seconds (uniform dt).
-        P_ext_profile: external mechanical power in Watts at each t.
+        P_ext_profile: external mechanical power in Watts at each t (prescribed driving input).
         """
         dt = t_grid[1] - t_grid[0]
         n_steps = len(t_grid)
@@ -107,6 +106,40 @@ class LocalBridgeModel:
             'VO2_pulm_L_min': VO2_pulm
         }
 
+# Characteristic physical magnitudes for scale-normalized Jacobian
+CHANNEL_SCALES = {
+    'P_ext_W': 20.0,
+    'PCr_relative': 1.0,
+    'PCr_mM': 34.0,
+    'VO2_pulm_L_min': 0.30,
+    'V_active': 0.25,
+    'M_loc': 0.015,
+    'Q_loc_max': 0.60
+}
+
+# Measurement standard deviations for Fisher Information Matrix (FIM)
+CHANNEL_SIGMAS = {
+    'P_ext_W': 1.0,           # 1 W ergometer precision
+    'PCr_relative': 0.05,     # 5% MRS relative precision
+    'PCr_mM': 1.5,            # 1.5 mM MRS absolute concentration precision
+    'VO2_pulm_L_min': 0.02,   # 20 mL/min metabolic cart precision
+    'V_active': 0.02,         # 20 mL MRI segmentation uncertainty
+    'M_loc': 0.002,           # 0.002 mM/s resting A-V / NIRS uncertainty
+    'Q_loc_max': 0.05         # 0.05 mM/s recovery kinetics fit uncertainty
+}
+
+# Explicit observation channel mappings for topologies M1-M7
+# Structured dict avoids fragile substring matching bugs (e.g. '_vol_' vs 'volume')
+TOPOLOGY_CHANNELS = {
+    'M1_power_only': ['P_ext_W'],
+    'M2_power_relPCr': ['P_ext_W', 'PCr_relative'],
+    'M3_power_relPCr_VO2': ['P_ext_W', 'PCr_relative', 'VO2_pulm_L_min'],
+    'M4_power_absPCr': ['P_ext_W', 'PCr_mM'],
+    'M5_power_absPCr_volume': ['P_ext_W', 'PCr_mM', 'V_active'],
+    'M6_power_absPCr_vol_baseline': ['P_ext_W', 'PCr_mM', 'V_active', 'M_loc'],
+    'M7_fully_anchored': ['P_ext_W', 'PCr_mM', 'VO2_pulm_L_min', 'V_active', 'Q_loc_max', 'M_loc']
+}
+
 def analyze_identifiability():
     """Computes Jacobian, SVD ranks, and Nullspaces across observation topologies M1-M7."""
     t_grid = np.linspace(0, 180, 91) # 180 s protocol, dt=2 s
@@ -121,78 +154,101 @@ def analyze_identifiability():
     p_values = np.array([base_model.p[k] for k in param_names])
     n_params = len(param_names)
 
-    # Topology observation mappings
-    # M1: P_ext only (structural trivial)
-    # M2: P_ext + PCr_relative
-    # M3: P_ext + PCr_relative + VO2_pulm
-    # M4: P_ext + PCr_mM (absolute conc without volume)
-    # M5: P_ext + PCr_mM + V_active (calibrated volume)
-    # M6: P_ext + PCr_mM + V_active + M_loc (baseline anchored)
-    # M7: P_ext + PCr_mM + V_active + Q_loc_max + M_loc (fully anchored)
-
-    topologies = ['M1_power_only', 'M2_power_relPCr', 'M3_power_relPCr_VO2',
-                  'M4_power_absPCr', 'M5_power_absPCr_volume', 'M6_power_absPCr_vol_baseline', 'M7_fully_anchored']
+    def eval_channel(params_dict, channel_name):
+        """Extracts observation channel vector from simulation or direct parameter measurement."""
+        m = LocalBridgeModel(params_dict)
+        sim = m.simulate(t_grid, P_profile)
+        if channel_name in sim:
+            return np.asarray(sim[channel_name], dtype=float)
+        elif channel_name == 'V_active':
+            return np.array([params_dict['V_active_L']], dtype=float)
+        elif channel_name == 'M_loc':
+            return np.array([params_dict['M_loc_mM_s']], dtype=float)
+        elif channel_name == 'Q_loc_max':
+            return np.array([params_dict['Q_loc_max_mM_s']], dtype=float)
+        else:
+            raise ValueError(f"Unknown observation channel: {channel_name}")
 
     results = {}
 
-    for top in topologies:
-        # Build composite output vector for each topology
-        def get_output(params):
-            p_dict = dict(zip(param_names, params))
-            m = LocalBridgeModel(p_dict)
-            sim = m.simulate(t_grid, P_profile)
-            outs = []
-            if 'power' in top:
-                outs.append(sim['P_ext_W'])
-            if 'relPCr' in top:
-                outs.append(sim['PCr_relative'])
-            if 'VO2' in top:
-                outs.append(sim['VO2_pulm_L_min'])
-            if 'absPCr' in top:
-                outs.append(sim['PCr_mM'])
-            if 'volume' in top:
-                # direct measurement of V_active
-                outs.append(np.array([params[2]]))
-            if 'baseline' in top:
-                # direct measurement of M_loc
-                outs.append(np.array([params[6]]))
-            if 'fully_anchored' in top:
-                outs.append(sim['PCr_mM'])
-                outs.append(sim['VO2_pulm_L_min'])
-                outs.append(np.array([params[2]])) # V_active
-                outs.append(np.array([params[5]])) # Q_loc_max
-                outs.append(np.array([params[6]])) # M_loc
-            return np.concatenate(outs)
-
-        y0 = get_output(p_values)
-        m_dim = len(y0)
-        J = np.zeros((m_dim, n_params))
+    for top_name, channels in TOPOLOGY_CHANNELS.items():
+        blocks_norm = []
+        blocks_fim = []
         eps = 1e-4
 
-        for j in range(n_params):
-            p_plus = p_values.copy()
-            p_minus = p_values.copy()
-            h = eps * max(1e-3, abs(p_values[j]))
-            p_plus[j] += h
-            p_minus[j] -= h
-            J[:, j] = (get_output(p_plus) - get_output(p_minus)) / (2.0 * h)
+        for ch in channels:
+            p_dict_0 = dict(zip(param_names, p_values))
+            y_nom = eval_channel(p_dict_0, ch)
+            N_k = len(y_nom)
+            J_k = np.zeros((N_k, n_params))
 
-        # Scale-normalized Jacobian for dimensionally fair SVD
-        J_norm = J * (p_values / np.maximum(1e-6, np.std(y0) + 1e-3))
+            for j in range(n_params):
+                p_plus = p_values.copy()
+                p_minus = p_values.copy()
+                h = eps * max(1e-3, abs(p_values[j]))
+                p_plus[j] += h
+                p_minus[j] -= h
+
+                yp = eval_channel(dict(zip(param_names, p_plus)), ch)
+                ym = eval_channel(dict(zip(param_names, p_minus)), ch)
+                J_k[:, j] = (yp - ym) / (2.0 * h)
+
+            # Channel-scale normalization: dimensionless RMS sensitivity per relative parameter variation
+            blocks_norm.append(J_k * (p_values / CHANNEL_SCALES[ch]) / np.sqrt(N_k))
+            # FIM weighting: J_k * p / sigma_k
+            blocks_fim.append(J_k * (p_values / CHANNEL_SIGMAS[ch]))
+
+        J_norm = np.vstack(blocks_norm)
         U, S, Vt = np.linalg.svd(J_norm, full_matrices=False)
 
-        # Numerical rank threshold
-        rank_tol = 1e-3 * S[0]
+        # Numerical rank: threshold at 1e-4 (zero singular values are < 1e-12)
+        rank_tol = 1e-4
         eff_rank = int(np.sum(S > rank_tol))
         null_dim = n_params - eff_rank
 
-        results[top] = {
+        # Fisher Information Matrix (FIM)
+        J_fim = np.vstack(blocks_fim)
+        FIM = J_fim.T @ J_fim
+        eigvals = np.sort(np.linalg.eigvalsh(FIM))[::-1]
+
+        # Condition numbers
+        cond_number = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
+        cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+
+        # Nullspace basis vectors (rows of Vt corresponding to zero singular values)
+        null_basis = Vt[eff_rank:] if null_dim > 0 else np.zeros((0, n_params))
+        nullspace_dict = []
+        unidentifiable_descriptions = []
+
+        if null_dim > 0:
+            for k in range(null_dim):
+                vec = null_basis[k]
+                vec_dict = {param_names[idx]: float(vec[idx]) for idx in range(n_params) if abs(vec[idx]) > 0.05}
+                nullspace_dict.append(vec_dict)
+
+                # Generate interpretable description
+                active_params = sorted(vec_dict.items(), key=lambda x: abs(x[1]), reverse=True)
+                if len(active_params) == 1:
+                    unidentifiable_descriptions.append(f"unconstrained: {active_params[0][0]}")
+                elif len(active_params) == 2:
+                    p1, w1 = active_params[0]
+                    p2, w2 = active_params[1]
+                    sign = "-" if w1 * w2 < 0 else "+"
+                    unidentifiable_descriptions.append(f"coupled product/ratio: {p1} {sign} {p2}")
+                else:
+                    unidentifiable_descriptions.append("multi-parameter manifold: " + " + ".join([f"{p}" for p, _ in active_params]))
+
+        results[top_name] = {
             'n_parameters': n_params,
+            'channels': channels,
             'effective_rank': eff_rank,
             'rank_defect': null_dim,
             'singular_values': [float(x) for x in S],
-            'condition_number': float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf'),
-            'unidentifiable_directions': param_names[eff_rank:] if null_dim > 0 else []
+            'fim_eigenvalues': [float(x) for x in eigvals],
+            'condition_number': cond_number,
+            'effective_condition_number': cond_eff,
+            'nullspace_basis': nullspace_dict,
+            'unidentifiable_directions': unidentifiable_descriptions
         }
 
     return results
@@ -258,7 +314,7 @@ def main():
     profiles = compute_profile_likelihood()
 
     output = {
-        'date': '2026-11-07',
+        'date': '2026-11-08',
         'topologies': top_results,
         'profile_likelihood': profiles,
         'conclusions': {
@@ -271,7 +327,7 @@ def main():
     out_file.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(f"Identifiability analysis complete. Results written to: {out_file}")
     for top, res in top_results.items():
-        print(f"  {top:30s} | Rank: {res['effective_rank']}/{res['n_parameters']} | Defect: {res['rank_defect']} | Cond: {res['condition_number']:.2e}")
+        print(f"  {top:30s} | Rank: {res['effective_rank']}/{res['n_parameters']} | Defect: {res['rank_defect']} | CondEff: {res['effective_condition_number']:.2f}")
 
 if __name__ == '__main__':
     main()

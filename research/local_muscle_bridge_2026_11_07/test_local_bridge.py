@@ -7,6 +7,7 @@ Verifies:
 5. Correct literature provenance: Moll et al. 2017 (R2=0.73, 0.55, 0.65) and Cannon et al. 2014 (PMC4262339 Table 1).
 6. Formal retraction of EXP-0031 predictive claims, unverified eyeball correlations (R2=0.919, 0.978), and unverified slope (14 s / 0.1 pH).
 7. Absolute numerical single-source-of-truth consistency across REPORT.md, registries, and experiment_results.json.
+8. Identifiability pipeline: exact 7-parameter computed ranks (M1=0/7 .. M7=6/7), monotonicity, structured channels, and nullspace structure.
 """
 import unittest
 from pathlib import Path
@@ -16,7 +17,7 @@ import numpy as np
 BASE = Path(__file__).resolve().parent
 REPO_ROOT = BASE.parents[1]
 
-from identifiability import LocalBridgeModel
+from identifiability import LocalBridgeModel, analyze_identifiability, TOPOLOGY_CHANNELS
 from experiments import load_moll_data, run_exp_a, run_exp_b, run_exp_c, run_exp_d, run_exp_e
 
 class TestLocalMuscleBridgeConsistencyAudit(unittest.TestCase):
@@ -141,7 +142,7 @@ class TestLocalMuscleBridgeConsistencyAudit(unittest.TestCase):
         self.assertIn('10.6%', finding_het)
 
     def test_exp_b_4component_delays_and_collinearity(self):
-        """EXP-B: Verify 4 distinct delays and negative collinearity between delay and tau."""
+        """EXP-B: Verify 4 distinct delays, FIM condition number 6.89, and structural identifiability."""
         res_b = run_exp_b(self.data)
         delays = res_b['delay_components']
         self.assertAlmostEqual(delays['t_sampling_line_delay_s'], 2.075, places=3)
@@ -198,6 +199,77 @@ class TestLocalMuscleBridgeConsistencyAudit(unittest.TestCase):
         hist = res_e['retained_historical_values_for_provenance']
         self.assertIn('historical_RMSE_bridge_W', hist)
         self.assertAlmostEqual(hist['historical_RMSE_bridge_W'], 0.65, places=1)
+
+    def test_identifiability_pipeline_ranks_and_monotonicity(self):
+        """Verify explicit structured topologies, exact 7-parameter ranks, and monotonicity."""
+        results = analyze_identifiability()
+
+        # Check all topologies exist
+        expected_topologies = [
+            'M1_power_only', 'M2_power_relPCr', 'M3_power_relPCr_VO2',
+            'M4_power_absPCr', 'M5_power_absPCr_volume', 'M6_power_absPCr_vol_baseline', 'M7_fully_anchored'
+        ]
+        for top in expected_topologies:
+            self.assertIn(top, results)
+            self.assertEqual(results[top]['n_parameters'], 7)
+            self.assertIsInstance(results[top]['channels'], list)
+
+        # M1 power only: prescribed ergometer input, zero parameter sensitivity
+        self.assertEqual(results['M1_power_only']['effective_rank'], 0)
+        self.assertEqual(results['M1_power_only']['rank_defect'], 7)
+        self.assertEqual(results['M1_power_only']['condition_number'], float('inf'))
+
+        # Exact computed ranks over 7 parameters:
+        self.assertEqual(results['M2_power_relPCr']['effective_rank'], 3)
+        self.assertEqual(results['M3_power_relPCr_VO2']['effective_rank'], 4)
+        self.assertEqual(results['M4_power_absPCr']['effective_rank'], 3)
+        self.assertEqual(results['M5_power_absPCr_volume']['effective_rank'], 4)
+        self.assertEqual(results['M6_power_absPCr_vol_baseline']['effective_rank'], 5)
+        self.assertEqual(results['M7_fully_anchored']['effective_rank'], 6)
+
+        # Monotonicity checks:
+        # Branch 1 (relative PCr): M1 -> M2 -> M3
+        self.assertLessEqual(results['M1_power_only']['effective_rank'], results['M2_power_relPCr']['effective_rank'])
+        self.assertLessEqual(results['M2_power_relPCr']['effective_rank'], results['M3_power_relPCr_VO2']['effective_rank'])
+        # Branch 2 (absolute PCr): M4 -> M5 -> M6 -> M7
+        self.assertLessEqual(results['M4_power_absPCr']['effective_rank'], results['M5_power_absPCr_volume']['effective_rank'])
+        self.assertLessEqual(results['M5_power_absPCr_volume']['effective_rank'], results['M6_power_absPCr_vol_baseline']['effective_rank'])
+        self.assertLessEqual(results['M6_power_absPCr_vol_baseline']['effective_rank'], results['M7_fully_anchored']['effective_rank'])
+
+        # M7 structural nullspace: exactly 1 defect spanning eta_loc - dG_ATP_kJ_mol
+        self.assertEqual(results['M7_fully_anchored']['rank_defect'], 1)
+        m7_null = results['M7_fully_anchored']['nullspace_basis'][0]
+        self.assertIn('eta_loc', m7_null)
+        self.assertIn('dG_ATP_kJ_mol', m7_null)
+        self.assertAlmostEqual(abs(m7_null['eta_loc']), abs(m7_null['dG_ATP_kJ_mol']), places=5)
+
+        # M7 condition number: well-conditioned on the 6 identifiable dimensions
+        self.assertLess(results['M7_fully_anchored']['effective_condition_number'], 10.0)
+
+    def test_identifiability_results_file_and_math_doc_consistency(self):
+        """Verify identifiability_results.json and MATHEMATICS.md strictly report exact computed ranks."""
+        res_file = BASE / 'identifiability_results.json'
+        data = json.loads(res_file.read_text('utf-8'))
+        topologies = data['topologies']
+
+        self.assertEqual(topologies['M1_power_only']['effective_rank'], 0)
+        self.assertEqual(topologies['M2_power_relPCr']['effective_rank'], 3)
+        self.assertEqual(topologies['M3_power_relPCr_VO2']['effective_rank'], 4)
+        self.assertEqual(topologies['M4_power_absPCr']['effective_rank'], 3)
+        self.assertEqual(topologies['M5_power_absPCr_volume']['effective_rank'], 4)
+        self.assertEqual(topologies['M6_power_absPCr_vol_baseline']['effective_rank'], 5)
+        self.assertEqual(topologies['M7_fully_anchored']['effective_rank'], 6)
+
+        # MATHEMATICS.md must contain exact 7-parameter table without fictitious 9/9 claims
+        math_doc = (BASE / 'MATHEMATICS.md').read_text('utf-8')
+        self.assertIn('M1: Только мощность', math_doc)
+        self.assertIn('| **0** | 7 | 7 |', math_doc)
+        self.assertIn('| **3** | 7 | 4 |', math_doc)
+        self.assertIn('| **4** | 7 | 3 |', math_doc)
+        self.assertIn('| **5** | 7 | 2 |', math_doc)
+        self.assertIn('| **6** | 7 | 1 |', math_doc)
+        self.assertNotIn('ПОЛНЫЙ РАНГ 9/9!', math_doc)
+        self.assertNotIn('| 9 | 9 | 0 |', math_doc)
 
     def test_report_and_registries_strict_numerical_crosscheck(self):
         """Verify numerical single source of truth across REPORT.md, registries, and experiment_results.json."""
