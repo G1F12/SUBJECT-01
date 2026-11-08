@@ -1180,7 +1180,8 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0068"
     },
-    "provenance_notes": "64-channel HD-sEMG matrices recorded on human Gastrocnemius Medialis, Lateralis, and Tibialis Anterior at 10%, 30%, 50%, 70% MVC. Motor unit spike trains decomposed via gCKC and edited by 8 independent operators (99.6% inter-operator agreement)."
+    "provenance_notes": "Published literature discharge rates across 8 rater operators analyzing 1 human subject recording dataset (8 raters != 8 independent human subjects; inter-operator agreement 99.6%). Raw 64-channel archives on Figshare (444 MB) are blocked by Cloudflare R2 bot challenge (HTTP 403 Forbidden).",
+    "data_type": "LITERATURE_REPORTED_VALUE"
   },
   {
     "id": "SRC-0069",
@@ -1196,7 +1197,8 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0069"
     },
-    "provenance_notes": "Dynamic 31P-MRS (TR=1s, 6 transients -> 6s resolution) with non-magnetic knee-extensor ergometer inside Siemens 3T Prisma/Trio scanner. Individual trial time series of PCr, Pi, ATP, and pH across 3 repeated trials at 5-10% MVC in human quadriceps."
+    "provenance_notes": "Published Data in Brief summary Table 1 listing 3 recovery rate constants in human quadriceps. Continuous raw time series on Dryad (2024_829_Ergometer_Dryad_Raw_V3.xlsx) are blocked by AWS WAF interactive bot challenge (HTTP 403 Forbidden). Status: RAW_TIMESERIES_UNAVAILABLE.",
+    "data_type": "LITERATURE_REPORTED_VALUE"
   },
   {
     "id": "SRC-0070",
@@ -1210,7 +1212,8 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0070"
     },
-    "provenance_notes": "Segmented 3D Dixon / T1-MRI individual muscle volumes across healthy human cohorts (n=48) for lower leg muscles: Gastrocnemius Medialis (342.5 +- 58.2 mL), Soleus (580.4 +- 92.1 mL), and Tibialis Anterior."
+    "provenance_notes": "MuscleMap Zenodo 10077847 contains deep learning framework weights and templates, not an open verified cohort table (n=48, 342.5 mL). Status EMPIRICALLY_BOUNDED_DISTRIBUTION retracted.",
+    "data_type": "SYNTHETIC"
   },
   {
     "id": "SRC-0071",
@@ -1224,7 +1227,8 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0071"
     },
-    "provenance_notes": "Individual anatomical calf muscle volumes and subcutaneous adipose tissue thicknesses from MRI and 3D ultrasound in human participants (n=16), providing subcutaneous fat thickness distributions (3 to 11 mm)."
+    "provenance_notes": "Cenni et al. Figshare 5971480 is an unresolvable ID as a public dataset archive. Retracted from empirical anchors.",
+    "data_type": "SYNTHETIC"
   },
   {
     "id": "SRC-0072",

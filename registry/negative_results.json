@@ -212,7 +212,7 @@
     "date": "2026-11-08",
     "experiment_id": "EXP-0038",
     "hypothesis": "Surface EMG RMS amplitude monotonically tracks active muscle volume fraction a_eff during dynamic contractions.",
-    "result": "Refuted: SAT thickness variation (3 to 10 mm) creates a 40.9-fold uncertainty ridge, and fatigue causes an inverse dissociation (+14% RMS at -35% force).",
+    "result": "Refuted in forward simulation: Subcutaneous adipose tissue variation (3 to 10 mm) creates a 40.9-fold uncertainty ridge, and fatigue causes an inverse dissociation (+14% RMS at -35% force) under simulated conditions.",
     "impact": "Eliminates scalar sEMG amplitude as a direct physiological anchor for active tissue volume."
   },
   {
@@ -227,8 +227,16 @@
     "id": "NEG-0031",
     "date": "2026-11-08",
     "experiment_id": "EXP-0040",
-    "hypothesis": "Local oxidative recovery time constants (tau_PCr) are universal across human skeletal muscle groups and can be directly transferred between calf and thigh.",
-    "result": "Refuted: Cross-muscle transfer between gastrocnemius (tau = 24.3 s) and quadriceps (tau = 39.2 s) degrades predictive RMSE by up to +189.3%.",
-    "impact": "Blocks uncalibrated cross-muscle kinetic transfer and confirms the necessity of muscle-specific scaling."
+    "hypothesis": "Empirical cross-subject and cross-muscle validation of local bioenergetics model can be achieved without verified raw human time-series.",
+    "result": "Refuted: Programmatic raw data acquisition from Dryad (Rehman 2024) and Figshare (Hug 2021) returned HTTP 403 Forbidden. Previous LOSO validation results were based on synthetic exponential series generated with np.random.RandomState. Status reclassified to SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED, and empirical validation is BLOCKED_PENDING_RAW_DATA.",
+    "impact": "Prohibits labeling synthetic algorithmic demonstrations as empirical human validation."
+  },
+  {
+    "id": "NEG-0032",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0037",
+    "hypothesis": "Automated scripts can retrieve continuous open raw human 31P-MRS time-series from Dryad and raw HD-sEMG archives from Figshare.",
+    "result": "Refuted: Programmatic downloads failed with HTTP 403 Forbidden due to AWS WAF interactive bot challenge on Dryad and Cloudflare R2 CDN protection on Figshare.",
+    "impact": "Requires formal provenance gating and prevents synthetic data generation from masquerading as unretrieved raw empirical data."
   }
 ]

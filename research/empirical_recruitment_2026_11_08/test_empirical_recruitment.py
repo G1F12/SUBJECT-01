@@ -2,15 +2,23 @@
 """
 SUBJECT-01 — Research Cycle 9
 Regression Test Battery for Empirical Data Acquisition, Recruitment Observability,
-and Independent Validation Design.
+and Independent Validation Design (with Data Provenance Gate Verification).
 """
 
 import unittest
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CYCLE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / 'tools'))
+
+from verify_data_provenance import (
+    audit_dataset_provenance_records,
+    audit_registry_experiments,
+    audit_validation_scripts
+)
 
 class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
     
@@ -49,17 +57,24 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         self.assertEqual(rehman['trials_n'], 3)
         self.assertAlmostEqual(rehman['mean_tau_rec_s'], 39.41, places=1)
         self.assertEqual(rehman['ph_status'], "NON_ACIDOTIC_OXIDATIVE_DOMINATED")
+        self.assertEqual(rehman['raw_download_status'], "RAW_TIMESERIES_UNAVAILABLE")
         
         hug = exp37['datasets']['hug_2021_hd_semg']
         self.assertEqual(hug['grid_channels'], 64)
         self.assertEqual(hug['inter_operator_agreement'], 0.996)
+        self.assertEqual(hug['independent_subjects_n'], 1)
+        self.assertEqual(hug['raters_n'], 8)
         rates = hug['gastrocnemius_medialis_rates_hz']
         self.assertLess(rates['10_mvc'], rates['30_mvc'])
         self.assertLess(rates['30_mvc'], rates['70_mvc'])
+        self.assertEqual(hug['raw_download_status'], "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE")
         
-    def test_04_exp0038_biophysical_recruitment_and_fatigue_dissociation(self):
-        """Verify recruitment model: 40.9x span from fat thickness and force-sEMG dissociation."""
+    def test_04_exp0038_biophysical_recruitment_forward_simulation(self):
+        """Verify recruitment model: forward simulation hypothesis, 40.9x span, and force-sEMG dissociation."""
         exp38 = self.exp_results['experiments']['EXP-0038']
+        self.assertEqual(exp38['data_type'], "SYNTHETIC")
+        self.assertEqual(exp38['validation_status'], "COMPUTATIONAL_SIMULATION_HYPOTHESIS")
+        
         franke_analysis = exp38['franke_operating_point_analysis']
         self.assertEqual(franke_analysis['target_measured_semg_rms'], 0.127)
         self.assertGreater(franke_analysis['uncertainty_ratio_a_eff'], 40.0)
@@ -82,37 +97,46 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         self.assertEqual(l4['status'], "NOT_EMPIRICALLY_IDENTIFIED_CROSS_STUDY_DISCONNECTION")
         self.assertIn("No human subject currently exists", l4['blocker'])
         
-    def test_06_exp0040_independent_cross_subject_loso_validation(self):
-        """Verify Leave-One-Subject-Out validation and cross-muscle performance degradation."""
+    def test_06_exp0040_loso_synthetic_demonstration_and_empirical_blocker(self):
+        """Verify EXP-0040 is reclassified to synthetic demonstration and empirical validation is blocked."""
         exp40 = self.exp_results['experiments']['EXP-0040']
+        self.assertEqual(exp40['data_type'], "SYNTHETIC")
+        self.assertEqual(exp40['validation_status'], "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED")
+        self.assertEqual(exp40['empirical_validation_status'], "BLOCKED_PENDING_RAW_DATA")
+        self.assertIn("retracted", exp40['retraction_note'].lower())
+        
         loso = exp40['cross_subject_loso_summary']
-        f1 = loso['fold_1_train_calf_test_quad']
-        f2 = loso['fold_2_train_quad_test_calf']
+        self.assertIn("synthetic_metrics_retained_for_historical_record", loso)
         
-        # In-sample fits have high R2
-        self.assertGreater(f1['M1_in_sample_benchmark']['r2'], 0.90)
-        self.assertGreater(f2['M1_in_sample_benchmark']['r2'], 0.90)
-        
-        # Cross-subject transfer causes substantial degradation
-        self.assertGreater(f1['cross_subject_rmse_degradation_percent'], 50.0)
-        self.assertGreater(f2['cross_subject_rmse_degradation_percent'], 150.0)
-        self.assertGreater(loso['overall_cross_subject_rmse_mean'], loso['in_sample_rmse_mean'] * 2.0)
-        
-    def test_07_exp0041_subject01_integration_and_target_cpe45_boundaries(self):
-        """Verify macro-energy limits, 0.09% calf contribution to CPE45, and NO_GO status."""
+    def test_07_exp0041_cpe45_energy_accounting_and_target_boundaries(self):
+        """Verify physical CPE45 energy accounting: 675 kJ external work, ~3375 kJ metabolic expenditure, 0.1-0.6 kJ PCr, 21 kJ/mol enthalpy."""
         exp41 = self.exp_results['experiments']['EXP-0041']
-        bounds = exp41['quantitative_energetic_bounds']
-        self.assertAlmostEqual(bounds['calf_pcr_contribution_percent'], 0.092, places=3)
-        self.assertAlmostEqual(bounds['quadriceps_pcr_contribution_percent'], 0.629, places=3)
+        accounting = exp41['cpe45_energy_accounting']
+        self.assertAlmostEqual(accounting['external_mechanical_work_kJ'], 675.0, places=1)
+        self.assertAlmostEqual(accounting['whole_body_metabolic_expenditure_nominal_kJ'], 3375.0, places=1)
+        self.assertAlmostEqual(accounting['assumed_gross_mechanical_efficiency_eta_gross'], 0.20, places=2)
+        self.assertAlmostEqual(accounting['local_pcr_chemical_buffer_work_capacity_kJ']['anatomical_whole_gm_kJ'], 0.621, places=3)
+        self.assertAlmostEqual(accounting['local_pcr_hydrolysis_reaction_enthalpy_delta_R_H_kJ_mol'], 21.0, places=1)
         self.assertEqual(exp41['target_cpe45_status'], "NOT EXTERNALLY VALIDATED")
         self.assertEqual(exp41['biological_interventions'], "NO_GO_MAINTAINED")
         
-    def test_08_report_and_audit_consistency(self):
-        """Ensure numerical consistency between text reports and experiment results."""
+    def test_08_permanent_data_provenance_gate(self):
+        """Verify automated data provenance gate passes with zero violations."""
+        p1 = audit_dataset_provenance_records()
+        self.assertEqual(p1, [], f"Dataset provenance errors: {p1}")
+        
+        p2 = audit_registry_experiments()
+        self.assertEqual(p2, [], f"Registry experiment errors: {p2}")
+        
+        p3 = audit_validation_scripts()
+        self.assertEqual(p3, [], f"Validation script errors: {p3}")
+        
+    def test_09_report_and_audit_consistency(self):
+        """Ensure numerical and source consistency across reports."""
         self.assertIn("39.2", self.report_text)
         self.assertIn("64", self.report_text)
-        self.assertIn("120", self.report_text)
-        self.assertIn("0.092", self.report_text)
+        self.assertIn("675", self.report_text)
+        self.assertIn("3375", self.report_text)
         self.assertIn("SRC-0068", self.audit_text)
         self.assertIn("SRC-0069", self.audit_text)
         self.assertIn("SRC-0070", self.audit_text)

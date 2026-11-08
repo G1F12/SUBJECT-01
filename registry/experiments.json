@@ -782,14 +782,14 @@
   {
     "id": "EXP-0037",
     "date": "2026-11-08",
-    "name": "Empirical Acquisition of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+    "name": "Empirical Acquisition Audit of Lower-Limb HD-sEMG and Dynamic 31P-MRS Datasets",
     "sources": [
       "SRC-0068",
       "SRC-0069",
       "SRC-0070"
     ],
     "design": "Acquisition and cryptographic auditing of open human empirical datasets: 64-channel HD-sEMG motor unit decomposition in Gastrocnemius Medialis and Lateralis (Hug et al. 2021) and dynamic 31P-MRS quadriceps ergometry (Rehman et al. 2024, PMC11617988).",
-    "status": "completed",
+    "status": "completed_literature_audit_raw_blocked",
     "results": {
       "rehman_trials_n": 3,
       "rehman_tau_rec_mean_s": 39.41,
@@ -806,19 +806,20 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Datasets originate from separate independent subject cohorts (calf vs quadriceps).",
-    "external_validation": "verified_against_published_dataset"
+    "limits": "Raw continuous time-series blocked by AWS WAF (Dryad 403) and Cloudflare R2 (Figshare 444 MB 403). Hug rates represent 8 operators analyzing 1 subject (8 raters != 8 subjects). SRC-0070 and SRC-0071 cohort tables retracted.",
+    "external_validation": "published_literature_aggregates_audited",
+    "data_type": "LITERATURE_REPORTED_VALUE"
   },
   {
     "id": "EXP-0038",
     "date": "2026-11-08",
-    "name": "Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+    "name": "Biophysical Forward Simulation Model of Motor Unit Recruitment, Volume Conduction, and SAT Filtering",
     "sources": [
       "SRC-0068",
       "SRC-0071"
     ],
     "design": "Forward simulation of 500 motor units adhering to Henneman size principle, exponential threshold distribution, anisotropic volume conduction, subcutaneous fat low-pass filtering (3-10 mm), and fatigue conduction velocity slowing.",
-    "status": "completed",
+    "status": "COMPUTATIONAL_SIMULATION_HYPOTHESIS",
     "results": {
       "uncertainty_ratio_a_eff": 40.96,
       "fatigue_force_change_percent": -35.0,
@@ -836,8 +837,9 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Simulates isometric contractions; dynamic non-isometric movement introduces pennation angle rotation.",
-    "external_validation": "biophysically_verified"
+    "limits": "Forward simulation scenario (500 MUs, Fuglevand exponential pool, -35% force drop). Outputs (+14% sEMG RMS, 40.9x sensitivity span) are model-derived scenario consequences, not empirical measurements.",
+    "external_validation": "computational_simulation_hypothesis",
+    "data_type": "SYNTHETIC"
   },
   {
     "id": "EXP-0039",
@@ -848,7 +850,7 @@
       "SRC-0069"
     ],
     "design": "Sensitivity Jacobian SVD, condition number, Fisher Information Matrix, and profile likelihood curvature across 4 identifiability levels (structural, numerical, practical with 12 parameters, empirical).",
-    "status": "completed",
+    "status": "completed_identifiability_audit",
     "results": {
       "level_1_conditional_rank": 3,
       "level_2_numerical_rank": 4,
@@ -865,18 +867,19 @@
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
     "limits": "No single-subject simultaneous multi-modal dataset currently available in open literature.",
-    "external_validation": "algebraically_verified"
+    "external_validation": "algebraically_verified_identifiability_audit",
+    "data_type": "COMPUTATIONAL_SIMULATION"
   },
   {
     "id": "EXP-0040",
     "date": "2026-11-08",
-    "name": "Independent Cross-Subject Validation (LOSO) of Local Bioenergetic Model vs Physiological Baselines",
+    "name": "Leave-One-Subject-Out (LOSO) Cross-Validation Algorithm Demonstration on Synthetic Benchmarks",
     "sources": [
       "SRC-0063",
       "SRC-0069"
     ],
     "design": "Leave-One-Subject-Out cross-validation comparing Franke 2020 (calf) vs Rehman 2024 (quadriceps) against null mean baseline and standard monoexponential Kemp model.",
-    "status": "completed",
+    "status": "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED / BLOCKED_PENDING_RAW_DATA",
     "results": {
       "in_sample_rmse_mean_mM": 0.691,
       "cross_subject_rmse_mean_mM": 1.631,
@@ -891,8 +894,9 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Cross-muscle kinetics differ by 1.61-fold due to mitochondrial density and fiber type differences.",
-    "external_validation": "out_of_sample_verified"
+    "limits": "Evaluated on synthetic exponential curves generated via np.random.RandomState. Real empirical human out-of-sample cross-subject validation remains BLOCKED_PENDING_RAW_DATA.",
+    "external_validation": "synthetic_demonstration_not_empirically_validated",
+    "data_type": "SYNTHETIC"
   },
   {
     "id": "EXP-0041",
@@ -902,8 +906,8 @@
       "SRC-0069",
       "SRC-0070"
     ],
-    "design": "Quantitative macro-energy budget analysis of 2700 s CPE45 test (675 kJ at 250 W) vs local phosphagen buffer pools (calf 0.62 kJ, quad 4.25 kJ), establishing systemic oxygen scaling barrier.",
-    "status": "completed",
+    "design": "Rigorous separation of external mechanical work (250 W * 2700 s = 675 kJ), whole-body metabolic expenditure (~3375 kJ at eta_gross ~20%), local PCr buffer (0.1-0.6 kJ), and reaction enthalpy Delta_R H = 21 kJ/mol. Erroneous division of local PCr by external whole-body work retracted.",
+    "status": "completed_macro_budget_accounting",
     "results": {
       "calf_pcr_contribution_percent": 0.092,
       "quadriceps_pcr_contribution_percent": 0.629,
@@ -919,6 +923,7 @@
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
     "limits": "Local bioenergetics models cannot extrapolate to whole-body exercise without cardiovascular scaling.",
-    "external_validation": "macro_budget_verified"
+    "external_validation": "macro_energy_budget_accounting",
+    "data_type": "COMPUTATIONAL_SIMULATION"
   }
 ]
