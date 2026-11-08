@@ -56,7 +56,8 @@ out_data = {
     'subject_info': {
         'n': 1,
         'exercise_modality': 'Dynamic submaximal plantarflexion (1 Hz metronome, 60 s active phase)',
-        'target_muscle': 'M. gastrocnemius medialis (right calf)'
+        'target_muscle': 'M. gastrocnemius medialis (right calf)',
+        'experimental_separation_note': 'In Franke 2020, 3D MRI, sEMG+kinematics, and 31P-MRS were recorded in separate experimental trials, not simultaneously.'
     },
     'mri_anatomical_parameters': {
         'sequence': '3D T1-weighted VIBE, isotropic 0.8 mm^3, 160 sagittal slices',
@@ -82,9 +83,17 @@ out_data = {
         'linear_fit_rate_ci95_J_per_kg_s': 1.8,
         'assumed_enthalpy_Delta_H_kJ_mol': 21.0,
         'thermodynamic_work_Delta_G_ATP_nominal_kJ_mol': 54.0,
-        'water_conversion_L_per_kg': 0.68
+        'water_conversion_L_per_kg': 0.68,
+        'energy_definition_caveat': 'Energy in Franke et al. was computed via cross-bridge model heat/work decomposition; multiplying by 54/21 is not a trivial conversion to true total metabolic power without auditing model equations.'
     },
-    'semg_activation_statistics': emg_stats,
+    'semg_activation_statistics': {
+        **emg_stats,
+        'hardware_sampling_rate_hz': 2000,
+        'supplementary_grid_sampling_rate_hz': 4000,
+        'grid_time_step_s': 0.00025,
+        'sampling_note': 'Hardware sEMG acquisition was at 2000 Hz; the 240,001 points in supplementary MAT file reflect 4 kHz upsampling / interpolation.',
+        'physiological_interpretation': 'sEMG RMS (12.7%) is a normalized surface electrical signal, not a direct measurement of recruited fiber fraction or active 3D muscle volume.'
+    },
     'kinematics_ankle_angle_statistics': ang_stats
 }
 

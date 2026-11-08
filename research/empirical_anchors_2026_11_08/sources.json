@@ -10,14 +10,19 @@
     "verified_channels": [
       "3D T1-weighted MRI gastrocnemius medialis volumetry (379.89 mL)",
       "Dynamic 31P-MRS energy accumulation (11 points, TR=5 s, GM)",
-      "High-density kinematics (ankle angle) and sEMG (normalized MVC)"
+      "Kinematics and sEMG (normalized MVC, recorded outside magnet at 2 kHz, MAT file interpolated to 4 kHz)"
     ],
     "verification_status": "metadata_and_scope_checked_only",
-    "role": "Single-subject multi-modal anatomical MRI, dynamic 31P-MRS, and sEMG benchmark for active muscle volume and metabolic scaling"
+    "role": "Single-subject multi-modal anatomical MRI, dynamic 31P-MRS, and sEMG benchmark for active muscle volume and metabolic scaling",
+    "methodological_caveats": [
+      "3D MRI, sEMG+kinematics, and 31P-MRS were acquired in separate trials, not simultaneously.",
+      "Hardware sEMG acquisition was at 2000 Hz; 240,001 points in supplementary MAT file reflect 4 kHz upsampling / interpolation.",
+      "sEMG RMS (12.7%) is a normalized surface electrical amplitude, NOT an empirical measurement of recruited fiber fraction or active 3D muscle volume."
+    ]
   },
   {
     "id": "SRC-0064",
-    "name": "Sleigh et al. 2013 (PMC3560356)",
+    "name": "Edwards et al. 2013 (PMC3560356)",
     "title": "Integrating muscle cell biochemistry and whole-body physiology in humans: 31P-MRS data from the InSight trial",
     "doi": "10.1038/srep01182",
     "pmc": "PMC3560356",
@@ -29,14 +34,15 @@
       "Absolute concentration calibration cohort (n=89)"
     ],
     "verification_status": "metadata_and_scope_checked_only",
-    "role": "Empirical reference distribution for human skeletal muscle resting phosphagen concentrations and ratios across a large cohort (n=89)"
+    "role": "Empirical reference distribution for human skeletal muscle resting phosphagen concentrations and ratios across a large cohort (n=89)",
+    "first_author_note": "Primary first author is Edwards, L. M. (Edwards et al., 2013; Caudwell Xtreme Everest InSight trial), not Sleigh et al."
   },
   {
     "id": "SRC-0065",
-    "name": "Meyerspeer et al. 2021 (PMC8359288)",
+    "name": "Meyerspeer et al. 2021 (PMC8243949)",
     "title": "31P magnetic resonance spectroscopy in skeletal muscle: Experts' consensus recommendations",
     "doi": "10.1002/nbm.4246",
-    "pmc": "PMC8359288",
+    "pmc": "PMC8243949",
     "year": 2021,
     "license": "CC BY 4.0",
     "verified_channels": [
@@ -50,17 +56,18 @@
   {
     "id": "SRC-0066",
     "name": "Andersen & Saltin 1985 / Radegran & Saltin 1998",
-    "title": "Maximal and resting blood flow and oxygen uptake in human quadriceps / calf muscle by direct arterial-venous catheterization",
-    "doi": "10.1113/jphysiol.1985.sp015864",
+    "title": "Maximal perfusion of skeletal muscle in man",
+    "doi": "10.1113/jphysiol.1985.sp015794",
     "year": 1985,
     "license": "Closed / Peer-reviewed literature reference",
     "verified_channels": [
-      "Resting human femoral blood flow (2.0 - 3.5 mL/100g/min)",
+      "Resting human femoral blood flow in quadriceps (2.0 - 3.5 mL/100g/min)",
       "Arteriovenous oxygen difference (Ca - Cv)O2 (50 - 65 mL O2/L)",
-      "Resting muscle VO2 (0.12 - 0.25 mL O2/100g/min = 0.006 - 0.015 mmol ATP/L/s)"
+      "Resting quadriceps muscle VO2 (0.12 - 0.25 mL O2/100g/min = 0.006 - 0.015 mmol ATP/L/s)"
     ],
     "verification_status": "metadata_and_scope_checked_only",
-    "role": "Invasive human physiological gold standard for resting local skeletal muscle oxygen consumption (M_loc) and blood flow"
+    "role": "Invasive human physiological gold standard for resting quadriceps skeletal muscle oxygen consumption (M_loc) and blood flow",
+    "provenance_caveat": "Values (flow 2.4 mL/100g/min, (Ca - Cv)O2 = 58 mL/L, M_loc = 0.0064 mmol ATP/L/s) are invasive whole-quadriceps benchmarks during knee extension, NOT measured resting baseline for gastrocnemius medialis. Calf application is MODEL_ASSUMED_QUADRICEPS_TRANSFER."
   },
   {
     "id": "SRC-0067",

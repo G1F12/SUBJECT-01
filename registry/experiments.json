@@ -637,14 +637,15 @@
     "status": "completed",
     "results": {
       "V_anat_mL": 379.89,
-      "V_active_bounds_mL": [
+      "V_active_scenario_bounds_mL": [
         83.6,
         144.4
       ],
       "flux_distortion_factor": [
         2.63,
         4.55
-      ]
+      ],
+      "active_volume_status": "SCENARIO_HYPOTHESIS"
     },
     "research_date": "2026-11-08",
     "model": "research/empirical_anchors_2026_11_08/experiments.py",
@@ -654,7 +655,7 @@
       "research/empirical_anchors_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
-    "limits": "Anatomical MRI volume is an upper bound on active tissue mass, not an instantaneous recruitment measurement.",
+    "limits": "Anatomical MRI volume is an upper bound on active tissue mass, not an instantaneous recruitment measurement; sEMG RMS (12.7%) does not measure recruited fiber fraction; V_active in [83.6, 144.4] mL is a scenario hypothesis.",
     "external_validation": "verified_against_published_dataset"
   },
   {
@@ -673,8 +674,8 @@
       "thermodynamic_work_power_W_kg": 14.91,
       "thermodynamic_work_power_total_W": 5.35,
       "pcr_buffer_pool_capacity_bounds_J": [
-        111.2,
-        945.8
+        111.4,
+        947.0
       ]
     },
     "research_date": "2026-11-08",
@@ -685,7 +686,7 @@
       "research/empirical_anchors_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
-    "limits": "Buffer capacity exhibits an 8.5-fold span due to concentration, volume, and free-energy uncertainties.",
+    "limits": "Absolute phosphagen concentration requires assumed [ATP]_ref; buffer capacity has an 8.50-fold span (111.4 to 947.0 J); 54/21 is a thermodynamic potential ratio, not an automatic metabolic power conversion.",
     "external_validation": "verified_against_published_dataset"
   },
   {
@@ -699,13 +700,14 @@
     "design": "Comparative bounding of resting skeletal muscle VO2 (M_loc) using femoral catheterization (Andersen & Saltin 1985), perfusion ASL-MRI, and continuous-wave NIRS vascular occlusion testing.",
     "status": "completed",
     "results": {
-      "M_loc_catheter_nominal_mM_s": 0.00636,
+      "M_loc_catheter_nominal_mM_s": 0.0064,
       "M_loc_catheter_span_mM_s": [
         0.0046,
         0.009
       ],
       "asl_uncertainty_ratio": 2.25,
-      "nirs_uncertainty_ratio": 6.67
+      "nirs_uncertainty_ratio": 6.67,
+      "calf_status": "MODEL_ASSUMED_QUADRICEPS_TRANSFER"
     },
     "research_date": "2026-11-08",
     "model": "research/empirical_anchors_2026_11_08/experiments.py",
@@ -715,7 +717,7 @@
       "research/empirical_anchors_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
-    "limits": "Invasive catheterization is the sole direct anchor; non-invasive ASL and NIRS cannot isolate M_loc without uncalibrated nuisance parameters.",
+    "limits": "Catheterization benchmark (Andersen & Saltin 1985) was measured in human quadriceps; transfer to gastrocnemius is MODEL_ASSUMED_QUADRICEPS_TRANSFER; ASL and NIRS leave 2.25x and 6.67x ambiguities.",
     "external_validation": "literature_verified"
   },
   {
@@ -730,10 +732,13 @@
     "design": "Jacobian SVD rank analysis of coupled local bridge across physical measurement topologies P1-P8, demonstrating the breaking of the (eta_loc * dG_ATP) collinearity via independent 31P-MRS spectroscopic free-energy channel.",
     "status": "completed",
     "results": {
-      "P7_rank": 6,
-      "P8_rank": 7,
-      "P8_condition_number_effective": 15.39,
-      "nullspace_dim_P8": 0
+      "level_1_conditional_rank": 7,
+      "level_1_p7_rank": 6,
+      "level_1_p8_rank": 7,
+      "level_1_condition_number": 15.39,
+      "level_2_practical_rank": 7,
+      "level_2_rank_defect": 4,
+      "level_3_status": "NOT_EMPIRICALLY_IDENTIFIED"
     },
     "research_date": "2026-11-08",
     "model": "research/empirical_anchors_2026_11_08/identifiability_physical.py",
@@ -743,7 +748,7 @@
       "research/empirical_anchors_2026_11_08/identifiability_physical_results.json"
     ],
     "reproduction_command": "python research/empirical_anchors_2026_11_08/identifiability_physical.py",
-    "limits": "Full rank 7/7 requires localized spectroscopic Pi chemical shift and CK equilibrium ADP calculation.",
+    "limits": "Identifiability resolves into 3 levels: Level 1 (conditional full rank 7/7 with frozen calibrations); Level 2 (practical rank defect = 4 with unknown nuisance parameters a_eff, g_nirs, b_nirs, k_spec); Level 3 (NOT_EMPIRICALLY_IDENTIFIED without simultaneous human multimodal protocol).",
     "external_validation": "mathematically_and_empirically_proved"
   },
   {

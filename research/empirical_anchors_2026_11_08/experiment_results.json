@@ -1,6 +1,6 @@
 {
   "cycle": 8,
-  "date": "2026-11-08",
+  "revision": "cycle8_validity_repair_20261108",
   "status": "COMPUTED_AND_VERIFIED",
   "experiments": {
     "EXP-0032": {
@@ -8,6 +8,12 @@
       "title": "Anatomical MRI Muscle Volumetry vs Dynamic Functional Recruitment",
       "source": "Franke et al. (2020) Front. Bioeng. Biotechnol. 8:622, PMC7332772",
       "doi": "10.3389/fbioe.2020.00622",
+      "methodological_audit": {
+        "experimental_separation": "In Franke et al. (2020), 3D MRI, sEMG+kinematics, and 31P-MRS were recorded in separate experimental trials, not simultaneously.",
+        "semg_sampling": "Hardware acquisition was 2000 Hz; 240,001 points in supplementary MAT file reflect 4 kHz interpolation/upsampling.",
+        "recruitment_validity": "sEMG RMS (12.7%) is a normalized surface electrical amplitude, NOT an empirical measurement of recruited fiber fraction.",
+        "active_volume_status": "SCENARIO_HYPOTHESIS"
+      },
       "mri_measured_parameters": {
         "muscle_name": "M. gastrocnemius medialis",
         "sequence": "3D T1-weighted VIBE, isotropic 0.8 mm^3, 160 sagittal slices",
@@ -21,25 +27,26 @@
       "semg_activation_metrics": {
         "mean_normalized_MVC": 0.06775118593002784,
         "rms_normalized_MVC": 0.1269962943176007,
-        "active_submaximal_burst_range": [
+        "hypothetical_recruitment_burst_range": [
           0.22,
           0.38
         ]
       },
       "active_volume_bounds_L": {
         "min_L": 0.0835758,
-        "nom_L": 0.12061155562078331,
-        "max_L": 0.1443582
+        "nom_L": 0.120615075,
+        "max_L": 0.1443582,
+        "classification": "SCENARIO_HYPOTHESIS_NOT_EMPIRICALLY_MEASURED"
       },
       "flux_distortion_audit": {
-        "nominal_underestimation_ratio": 3.149698203001528,
+        "nominal_underestimation_ratio": 3.1496062992125986,
         "range_underestimation_ratio": [
           2.6315789473684212,
           4.545454545454545
         ],
-        "finding": "Anatomical MRI accurately measures V_anat (379.89 mL), but true submaximal active volume is restricted to 83.6 - 144.4 mL (nominal 120.6 mL). Substituting V_anat for V_active produces a 2.63- to 4.55-fold underestimation of local ATP demand flux."
+        "finding": "Anatomical MRI accurately measures V_anat (379.89 mL), but true submaximal active volume is restricted to hypothetical scenario bounds 83.6 - 144.4 mL (nominal 120.6 mL). Substituting V_anat for V_active produces a 2.63- to 4.55-fold underestimation of local ATP demand flux, but V_active remains an uncalibrated scenario variable."
       },
-      "negative_result": "Anatomical MRI alone cannot determine V_active without an independent, dynamic recruitment model."
+      "negative_result": "Anatomical MRI alone cannot determine V_active without an independent, dynamic recruitment model; sEMG RMS cannot be equated to recruited fiber fraction."
     },
     "EXP-0033": {
       "experiment_id": "EXP-0033",
@@ -49,19 +56,20 @@
         "SRC-0064",
         "SRC-0065"
       ],
-      "empirical_phosphagen_distribution_sleigh2013": {
+      "empirical_phosphagen_quantification_edwards2013": {
         "cohort_n": 89,
-        "pcr_to_gamma_atp_ratio": 4.1,
-        "atp_reference_nominal_mM": 8.2,
-        "atp_reference_span_mM": [
+        "measured_pcr_to_gamma_atp_ratio": 4.1,
+        "assumed_atp_reference_nominal_mM": 8.2,
+        "assumed_atp_reference_span_mM": [
           6.5,
           9.5
         ],
-        "pcr_rest_nominal_mM": 33.62,
-        "pcr_rest_span_mM": [
+        "implied_pcr_rest_nominal_mM": 33.62,
+        "implied_pcr_rest_span_mM": [
           26.65,
           38.949999999999996
-        ]
+        ],
+        "absolute_concentration_status": "REQUIRES_ASSUMED_ATP_REFERENCE"
       },
       "enthalpy_vs_gibbs_comparison": {
         "delta_H_reaction_heat_kJ_mol": 21.0,
@@ -72,14 +80,14 @@
         "molar_ATP_turnover_rate_mM_s": 0.4061624649859944,
         "thermodynamic_work_power_W_kg": 14.914285714285715,
         "thermodynamic_work_power_total_W": 5.349754285714286,
-        "finding": "Calorimetric enthalpy (Delta_H=21 kJ/mol) measures reaction heat release, while cross-bridge thermodynamic work capacity is governed by Delta_G (-54 kJ/mol). Confusing Delta_H and Delta_G causes an immediate 2.57-fold scaling discrepancy in metabolic power balance."
+        "energy_definition_caveat": "The ratio 54/21 (2.57) illustrates the fundamental difference between reaction enthalpy and Gibbs free energy, but does NOT automatically convert measured heat into true metabolic power without auditing the energy equations of the underlying cross-bridge model."
       },
       "pcr_buffer_pool_capacity_bounds_J": {
-        "min_J": 111.39699999999999,
-        "nom_J": 217.8576,
-        "max_J": 947.0147199999999,
-        "ratio_max_min": 8.501258741258741,
-        "finding": "Combined concentration ([PCr] in [26.6, 38.9] mM), active volume (0.084 - 0.380 L), and thermodynamic potential (-50 to -64 kJ/mol) uncertainties generate an 8.50-fold ambiguity (111.2 J to 945.8 J) in static resting PCr buffer capacity."
+        "min_J": 111.4,
+        "nom_J": 217.9,
+        "max_J": 947.0,
+        "ratio_max_min": 8.5,
+        "finding": "Combined concentration ([PCr] in [26.7, 39.0] mM), active volume (0.084 - 0.380 L), and thermodynamic potential (-50 to -64 kJ/mol) uncertainties generate an 8.50-fold ambiguity (111.4 J to 947.0 J) in static resting PCr buffer capacity."
       },
       "negative_result": "Absolute phosphagen energy scale cannot be identified without simultaneously pinning [ATP]_ref, recruitment fraction, and thermodynamic potential Delta_G_ATP."
     },
@@ -90,7 +98,9 @@
         "SRC-0066",
         "SRC-0067"
       ],
-      "invasive_catheterization_gold_standard": {
+      "invasive_catheterization_literature_benchmark": {
+        "source_study": "Andersen & Saltin (1985) J Physiol 366:233-249",
+        "muscle_studied": "Human quadriceps femoris (knee extension)",
         "flow_resting_mL_100g_min": 2.4,
         "av_o2_difference_mL_L": 58.0,
         "resting_vo2_muscle_mL_100g_min": 0.1392,
@@ -100,7 +110,8 @@
           0.0046,
           0.009
         ],
-        "finding": "Direct femoral arterial-venous catheterization provides the sole absolute human anchor for resting skeletal muscle oxygen consumption: M_loc = 0.0064 +/- 0.0017 mmol ATP/L/s."
+        "transfer_to_calf_status": "MODEL_ASSUMED_QUADRICEPS_TRANSFER",
+        "finding": "Femoral arterial-venous catheterization provides an invasive gold standard for resting quadriceps oxygen consumption (M_loc = 0.0064 +/- 0.0017 mmol ATP/L/s), but its transfer to gastrocnemius medialis is an unverified cross-muscle assumption."
       },
       "asl_mri_perfusion_evaluation": {
         "measured_quantity": "Perfusion flow (mL/100g/min)",
@@ -130,23 +141,14 @@
         "uncertainty_ratio": 6.666666666666667,
         "finding": "Continuous-wave NIRS vascular occlusion testing yields a relative kinetics surrogate; uncalibrated optical pathlength and skinfold thickness induce a 6.67-fold ambiguity in molar ATP baseline flux."
       },
-      "negative_result": "Non-invasive ASL and NIRS cannot identify M_loc without invasive calibration phantoms or direct blood gas verification."
+      "negative_result": "Non-invasive ASL and NIRS cannot identify M_loc without invasive calibration phantoms or direct blood gas verification; catheterization data from quadriceps cannot be treated as measured calf baseline."
     },
     "EXP-0035": {
       "experiment_id": "EXP-0035",
-      "title": "Measurement Map Identifiability vs Ideal Channels",
-      "status": "RIGOROUSLY_PROVED_MATHEMATICALLY_AND_NUMERICALLY",
-      "rank_comparison_summary": {
-        "ideal_ranks": {
-          "M1_power_only": 0,
-          "M2_power_relPCr": 3,
-          "M3_power_relPCr_VO2": 4,
-          "M4_power_absPCr": 3,
-          "M5_power_absPCr_volume_ideal": 4,
-          "M6_power_absPCr_vol_base_ideal": 5,
-          "M7_fully_anchored_ideal": 6
-        },
-        "physical_ranks": {
+      "title": "Measurement Map Identifiability vs Ideal Channels (3-Level Resolution)",
+      "status": "REPAIRED_AND_RIGOROUSLY_CLASSIFIED",
+      "rank_progression_summary": {
+        "level_1_conditional_ranks": {
           "P1_ergometer_input": 0,
           "P2_ergometer_relPCr": 3,
           "P3_ergometer_relPCr_pulmVO2": 4,
@@ -156,37 +158,122 @@
           "P7_physical_without_spec": 6,
           "P8_physical_with_spectroscopy": 7
         },
+        "level_1_p7_rank": 6,
+        "level_1_p8_rank": 7,
+        "level_1_p8_condition": 15.390876185128148,
+        "level_2_practical_total_parameters": 11,
+        "level_2_practical_effective_rank": 7,
+        "level_2_practical_nullspace_dim": 4,
+        "level_3_empirical_status": "NOT_EMPIRICALLY_IDENTIFIED"
+      },
+      "level_1_conditional_audit": {
         "p7_rank": 6,
+        "p7_nullspace_dim": 1,
         "p8_rank": 7,
-        "p8_condition_effective": 15.390876185128148,
-        "p8_singular_values": [
-          1.0053006477551176,
-          1.0004016553762358,
-          1.0000000000005662,
-          0.9999999999991497,
-          0.42944117934104226,
-          0.13423880189600954,
-          0.06531796082711111
-        ]
+        "p8_nullspace_dim": 0,
+        "p8_condition_number": 15.390876185128148,
+        "finding": "When nuisance parameters (a_eff, g_nirs, b_nirs, k_spec) are conditionally frozen, P7 has rank 6/7 (nullspace in eta_loc and dG_ATP), and P8 reaches CONDITIONAL FULL RANK 7/7 with condition number 15.39 upon adding the spectroscopic free energy channel."
       },
-      "nullspace_resolution_audit": {
-        "p7_nullspace_dimension": 1,
-        "p7_nullspace_vectors": [
-          {
-            "eta_loc": 0.7071067811871159,
-            "PCr_rest_mM": 0.0,
-            "V_active_L": -5.551115123125783e-17,
-            "dG_ATP_kJ_mol": -0.7071067811859792,
-            "tau_PCr_rec_s": -4.895172808772053e-16,
-            "Q_loc_max_mM_s": 0.0,
-            "M_loc_mM_s": 0.0
-          }
+      "level_2_practical_audit": {
+        "total_parameters": 11,
+        "effective_rank": 7,
+        "nullspace_dim": 4,
+        "singular_values": [
+          1.416076530702099,
+          1.4143554764214752,
+          1.4142135623725465,
+          0.4300402957717135,
+          0.13486486087069466,
+          0.09349409476773407,
+          0.024507467887720673,
+          3.259694663831363e-15,
+          0.0,
+          0.0,
+          0.0
         ],
-        "p8_nullspace_dimension": 0,
-        "p8_nullspace_vectors": [],
-        "finding": "In configuration P7, SVD rank is strictly 6/7 due to collinearity between eta_loc and dG_ATP. Introducing the independent 31P-MRS spectroscopic free-energy channel (y_spec = dG_ATP via Pi chemical shift and CK equilibrium) strictly eliminates the nullspace, restoring FULL RANK 7/7 with condition number kappa_eff = 15.39."
+        "parameter_diagnosis": {
+          "eta_loc": {
+            "index": 0,
+            "is_target_parameter": true,
+            "nominal_value": 0.28,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "PCr_rest_mM": {
+            "index": 1,
+            "is_target_parameter": true,
+            "nominal_value": 33.6,
+            "status": "PRACTICALLY_IDENTIFIABLE"
+          },
+          "V_active_L": {
+            "index": 2,
+            "is_target_parameter": true,
+            "nominal_value": 0.12,
+            "status": "PRACTICALLY_IDENTIFIABLE"
+          },
+          "dG_ATP_kJ_mol": {
+            "index": 3,
+            "is_target_parameter": true,
+            "nominal_value": 54.0,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "tau_PCr_rec_s": {
+            "index": 4,
+            "is_target_parameter": true,
+            "nominal_value": 70.0,
+            "status": "PRACTICALLY_IDENTIFIABLE"
+          },
+          "Q_loc_max_mM_s": {
+            "index": 5,
+            "is_target_parameter": true,
+            "nominal_value": 0.6,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "M_loc_mM_s": {
+            "index": 6,
+            "is_target_parameter": true,
+            "nominal_value": 0.008,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "a_eff": {
+            "index": 7,
+            "is_target_parameter": false,
+            "nominal_value": 0.3157894736842105,
+            "status": "PRACTICALLY_IDENTIFIABLE"
+          },
+          "g_nirs": {
+            "index": 8,
+            "is_target_parameter": false,
+            "nominal_value": 18.75,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "b_nirs": {
+            "index": 9,
+            "is_target_parameter": false,
+            "nominal_value": 0.0,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          },
+          "k_spec": {
+            "index": 10,
+            "is_target_parameter": false,
+            "nominal_value": 1.0,
+            "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+          }
+        },
+        "finding": "When nuisance parameters are treated as unknown, the 11D system exhibits rank defect = 4. V_active is collinear with a_eff, M_loc is collinear with g_nirs and b_nirs, and dG_ATP is collinear with k_spec. These parameters form unidentifiable flat ridges in profile likelihood."
       },
-      "negative_result": "Ideal scalar channels (y = theta_j) in Cycle 7 masked real physical identifiability defects; physical MRI and NIRS channels alone do not break parameter symmetries without spectroscopic potential anchoring."
+      "level_3_empirical_audit": {
+        "classification": "NOT_EMPIRICALLY_IDENTIFIED",
+        "status": "NOT_EMPIRICALLY_IDENTIFIED",
+        "reason": "No simultaneous multimodal dataset exists in the human literature combining 3D MRI volumetry, dynamic in-magnet sEMG, calibrated 31P-MRS, and localized oxygen consumption/catheterization for the same individual.",
+        "multi_cohort_disconnection": {
+          "franke2020_mri_semg": "n=1, sEMG recorded outside magnet at 2 kHz (upsampled to 4 kHz in MAT); separate dynamic 31P-MRS trial inside magnet.",
+          "edwards2013_insight": "n=89 resting 31P-MRS cohort; provides PCr/ATP ratio distribution, but absolute concentration requires assumed [ATP]_ref.",
+          "andersen_saltin1985": "Femoral catheterization in human quadriceps during knee extensions; never measured in calf gastrocnemius.",
+          "ryan2014_mcmito": "Continuous-wave NIRS VOT recovery slopes uncalibrated for adipose tissue thickness and absolute molar flux."
+        },
+        "synthesis_verdict": "Cycle 8 empirical anchors represent an uncalibrated multi-study physiological scenario synthesis, not a jointly identified human observation map."
+      },
+      "negative_result": "Ideal scalar channels (y = theta_j) and frozen nuisance constants in previous analyses masked real physical identifiability defects; without simultaneous multimodal human calibrations, the 7-parameter local energy bridge is practically unidentifiable."
     },
     "EXP-0036": {
       "experiment_id": "EXP-0036",
@@ -198,7 +285,7 @@
         "basal_metabolic_power_ratio": 1543.2098765432097,
         "local_GM_maximal_aerobic_power_W": 3.888,
         "local_GM_resting_power_W": 0.051840000000000004,
-        "finding": "Local gastrocnemius bioenergetics operate on 0.05 W basal and 3.89 W maximal oxidative scales, compared to 80 W basal and 1200 W maximal scales for whole-body exercise. Direct parameter substitution into D2 without whole-body recruitment scaling causes catastrophic dimensional failure (exhaustion at 20 W in <15 s)."
+        "finding": "Local gastrocnemius bioenergetics operate on 0.05 W basal and 3.89 W maximal oxidative scales, compared to 80 W basal and 1200 W maximal scales for whole-body exercise. Direct parameter substitution into D2 without whole-body recruitment scaling causes catastrophic dimensional failure."
       },
       "d2_quotient_preservation": {
         "action": "RETAIN_9D_QUOTIENT",

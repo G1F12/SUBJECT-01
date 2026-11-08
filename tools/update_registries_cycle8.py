@@ -58,7 +58,7 @@ new_exps = [
             'ratio_delta_G_to_delta_H': 2.5714,
             'thermodynamic_work_power_W_kg': 14.91,
             'thermodynamic_work_power_total_W': 5.35,
-            'pcr_buffer_pool_capacity_bounds_J': [111.2, 945.8]
+            'pcr_buffer_pool_capacity_bounds_J': [111.4, 947.0]
         },
         'research_date': '2026-11-08',
         'model': 'research/empirical_anchors_2026_11_08/experiments.py',
@@ -285,7 +285,7 @@ new_srcs = [
     },
     {
         'id': 'SRC-0064',
-        'name': 'Sleigh et al. (2013)',
+        'name': 'Edwards et al. (2013)',
         'type': 'peer_reviewed_article_pmc',
         'doi': '10.1038/srep01182',
         'pmc': 'PMC3560356',
@@ -302,7 +302,7 @@ new_srcs = [
         'name': 'Meyerspeer et al. (2021)',
         'type': 'consensus_recommendations_pmc',
         'doi': '10.1002/nbm.4246',
-        'pmc': 'PMC8359288',
+        'pmc': 'PMC8243949',
         'title': '31P magnetic resonance spectroscopy in skeletal muscle: Experts\' consensus recommendations',
         'verification': 'metadata_and_scope_checked_only',
         'audit_report': 'research/empirical_anchors_2026_11_08/DATA_AUDIT.md',
@@ -315,7 +315,7 @@ new_srcs = [
         'id': 'SRC-0066',
         'name': 'Andersen & Saltin (1985) / Radegran & Saltin (1998)',
         'type': 'peer_reviewed_physiological_landmark',
-        'doi': '10.1113/jphysiol.1985.sp015864',
+        'doi': '10.1113/jphysiol.1985.sp015794',
         'title': 'Maximal and resting blood flow and oxygen uptake in human quadriceps / calf muscle by direct arterial-venous catheterization',
         'verification': 'metadata_and_scope_checked_only',
         'audit_report': 'research/empirical_anchors_2026_11_08/DATA_AUDIT.md',
