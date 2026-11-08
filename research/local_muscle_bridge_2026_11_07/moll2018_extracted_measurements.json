@@ -1,13 +1,22 @@
 {
   "metadata": {
     "audit_date": "2026-11-07",
-    "audit_cycle": "Cycle 7 Scientific Correction",
-    "description": "Extracted and verified experimental measurements from Kevin Moll (2017, 2018) and David Cannon et al. (2014)",
+    "audit_cycle": "Cycle 7 Final Consistency Audit",
+    "description": "Extracted and verified experimental measurements from Kevin Moll (2017, 2018) and Daniel T. Cannon et al. (2014)",
     "data_categories": {
       "PUBLISHED_TABLE_DATA": "Exact numbers transcribed from published tables in peer-reviewed literature or doctoral dissertation",
       "PUBLISHED_STATISTICAL_CORRELATIONS": "Exact statistical coefficients (R2, p-values) published by study authors",
       "APPROXIMATE_GRAPHICAL_DIGITIZATION": "Visual estimates from published figures; APPROXIMATE ONLY; not primary numerical tables",
       "PMC_FULL_TEXT_TABLE": "Verified numbers from PMC open access full text (PMC4262339)"
+    },
+    "physiological_concept_separation": {
+      "atp_turnover": "Instantaneous rate of actomyosin and ion transport ATPase consumption (mM/min or mmol/s). In steady-state exercise, matched by total resynthesis rate: ATP_turnover = Q_ox + L_glyc + D_pcr.",
+      "atp_resynthesis": "Biochemical replenishment pathways of ATP: mitochondrial oxidative phosphorylation (Q), anaerobic glycolysis (L), and net creatine kinase flux (D).",
+      "pcr_pool_capacity": "Static total resting chemical stock of phosphocreatine: [PCr]_rest * V_active * dG_PCr (205-1021 J in human gastrocnemius). This is a capacity stock, not a continuous power flux.",
+      "net_pcr_depletion": "Net difference between pre-exercise and end-exercise [PCr]: Delta[PCr] ~ 20-25 mM (60-85% depletion).",
+      "chemical_free_energy": "Thermodynamic Gibbs free energy of hydrolysis: dG_ATP ~ -50 to -64 kJ/mol, dG_PCr ~ -34 to -45 kJ/mol.",
+      "external_mechanical_work": "Integrated power delivered to the ergometer: W_ext = integral P(t) dt (e.g. 18 W * 180 s = 3240 J).",
+      "whole_body_metabolic_cost": "Total systemic energy consumed across all organ systems (locomotor muscle, diaphragm, intercostals, myocardium, postural stabilizers): integral Delta_VO2 * kappa_O2 dt (~34 kJ)."
     },
     "line_count_note": "File contains structured JSON records across multiple studies. It does NOT represent hundreds of independent participant cohorts."
   },
@@ -449,6 +458,7 @@
       }
     },
     "exercise": "Bilateral knee extension inside 1.5T scanner, 40 rpm, moderate (90% GET) and heavy (GET + 50% Delta) constant work rates",
+    "cross_study_isolation_warning": "STUDY ISOLATION: Cannon et al. (2014) investigated bilateral knee extension (quadriceps femoris), NOT plantarflexion (calf/gastrocnemius). The quantitative ATP turnover flux rates (mM/min) and oxidative fractions cannot be quantitatively transferred or equated to Moll's plantarflexion cohort due to differences in muscle group, mass, fiber composition, and biomechanics. It serves solely as a qualitative/mechanistic demonstration that steady dynamic exercise ATP turnover is predominantly sustained by oxidative phosphorylation rather than PCr buffer depletion.",
     "atp_turnover_rates_mM_per_min": {
       "moderate_3min": {
         "Q_oxidative": {

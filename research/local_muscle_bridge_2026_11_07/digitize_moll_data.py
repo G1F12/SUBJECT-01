@@ -21,13 +21,22 @@ def build_extracted_dataset():
     data = {
         'metadata': {
             'audit_date': '2026-11-07',
-            'audit_cycle': 'Cycle 7 Scientific Correction',
-            'description': 'Extracted and verified experimental measurements from Kevin Moll (2017, 2018) and David Cannon et al. (2014)',
+            'audit_cycle': 'Cycle 7 Final Consistency Audit',
+            'description': 'Extracted and verified experimental measurements from Kevin Moll (2017, 2018) and Daniel T. Cannon et al. (2014)',
             'data_categories': {
                 'PUBLISHED_TABLE_DATA': 'Exact numbers transcribed from published tables in peer-reviewed literature or doctoral dissertation',
                 'PUBLISHED_STATISTICAL_CORRELATIONS': 'Exact statistical coefficients (R2, p-values) published by study authors',
                 'APPROXIMATE_GRAPHICAL_DIGITIZATION': 'Visual estimates from published figures; APPROXIMATE ONLY; not primary numerical tables',
                 'PMC_FULL_TEXT_TABLE': 'Verified numbers from PMC open access full text (PMC4262339)'
+            },
+            'physiological_concept_separation': {
+                'atp_turnover': 'Instantaneous rate of actomyosin and ion transport ATPase consumption (mM/min or mmol/s). In steady-state exercise, matched by total resynthesis rate: ATP_turnover = Q_ox + L_glyc + D_pcr.',
+                'atp_resynthesis': 'Biochemical replenishment pathways of ATP: mitochondrial oxidative phosphorylation (Q), anaerobic glycolysis (L), and net creatine kinase flux (D).',
+                'pcr_pool_capacity': 'Static total resting chemical stock of phosphocreatine: [PCr]_rest * V_active * dG_PCr (205-1021 J in human gastrocnemius). This is a capacity stock, not a continuous power flux.',
+                'net_pcr_depletion': 'Net difference between pre-exercise and end-exercise [PCr]: Delta[PCr] ~ 20-25 mM (60-85% depletion).',
+                'chemical_free_energy': 'Thermodynamic Gibbs free energy of hydrolysis: dG_ATP ~ -50 to -64 kJ/mol, dG_PCr ~ -34 to -45 kJ/mol.',
+                'external_mechanical_work': 'Integrated power delivered to the ergometer: W_ext = integral P(t) dt (e.g. 18 W * 180 s = 3240 J).',
+                'whole_body_metabolic_cost': 'Total systemic energy consumed across all organ systems (locomotor muscle, diaphragm, intercostals, myocardium, postural stabilizers): integral Delta_VO2 * kappa_O2 dt (~34 kJ).'
             },
             'line_count_note': 'File contains structured JSON records across multiple studies. It does NOT represent hundreds of independent participant cohorts.'
         },
@@ -181,6 +190,7 @@ def build_extracted_dataset():
             'doi': '10.1113/jphysiol.2014.279174',
             'participants': {'n': 14, 'males': 13, 'females': 1, 'age_years': {'mean': 27.0, 'sd': 8.0}, 'mass_kg': {'mean': 75.0, 'sd': 12.0}},
             'exercise': 'Bilateral knee extension inside 1.5T scanner, 40 rpm, moderate (90% GET) and heavy (GET + 50% Delta) constant work rates',
+            'cross_study_isolation_warning': 'STUDY ISOLATION: Cannon et al. (2014) investigated bilateral knee extension (quadriceps femoris), NOT plantarflexion (calf/gastrocnemius). The quantitative ATP turnover flux rates (mM/min) and oxidative fractions cannot be quantitatively transferred or equated to Moll\'s plantarflexion cohort due to differences in muscle group, mass, fiber composition, and biomechanics. It serves solely as a qualitative/mechanistic demonstration that steady dynamic exercise ATP turnover is predominantly sustained by oxidative phosphorylation rather than PCr buffer depletion.',
             'atp_turnover_rates_mM_per_min': {
                 'moderate_3min': {'Q_oxidative': {'mean': 23.0, 'sd': 14.0}, 'D_PCr': {'mean': 0.6, 'sd': 1.2}, 'L_glycolytic': {'mean': 1.0, 'sd': 1.3}, 'ATP_tot': {'mean': 24.0, 'sd': 14.0}},
                 'moderate_8min': {'Q_oxidative': {'mean': 17.0, 'sd': 13.0}, 'D_PCr': {'mean': 0.2, 'sd': 1.0}, 'L_glycolytic': {'mean': 0.3, 'sd': 0.6}, 'ATP_tot': {'mean': 17.0, 'sd': 14.0}},
@@ -196,7 +206,7 @@ def main():
     print("Building extracted experimental dataset...")
     data = build_extracted_dataset()
     out_file = BASE / 'moll2018_extracted_measurements.json'
-    out_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
+    out_file.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     print(f"Dataset successfully written to {out_file} ({out_file.stat().st_size} bytes)")
 
 if __name__ == '__main__':

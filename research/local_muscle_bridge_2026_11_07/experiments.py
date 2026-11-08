@@ -103,7 +103,7 @@ def run_exp_a(data):
             'tau_fitted_s': tau_fitted,
             'tau_error_pct': tau_err_pct,
             'span_pct': [min(tau_err_pct), max(tau_err_pct)],
-            'finding': 'A +/-5% error in baseline resting PCr asymptote distorts estimated tau_PCr by -17.8% to +26.4%.'
+            'finding': f'A +/-5% error in baseline resting PCr asymptote distorts estimated tau_PCr by {min(tau_err_pct):.1f}% to +{max(tau_err_pct):.1f}%.'
         },
         'spatial_heterogeneity_simulation': {
             'true_pool_taus_s': [tau1, tau2, tau3],
@@ -319,13 +319,15 @@ def run_exp_d(data):
         },
         'atp_turnover_flux_partition_cannon2014': {
             'source': 'Cannon et al. (2014) Table 1, PMC4262339',
+            'exercise_modality': 'Bilateral knee extension (quadriceps femoris), NOT plantarflexion (calf)',
+            'cross_study_isolation_warning': 'Qualitative proof of oxidative dominance in dynamic steady-state; quantitative fluxes (mM/min) cannot be directly transferred to calf plantarflexion.',
             'Q_oxidative_mM_min': Q_rate,
             'D_pcr_mM_min': D_rate,
             'L_glycolytic_mM_min': L_rate,
             'ATP_total_mM_min': ATP_tot_rate,
             'oxidative_fraction_pct': oxidative_fraction_pct,
             'pcr_hydrolysis_fraction_pct': pcr_fraction_pct,
-            'finding': f'During steady high-intensity exercise, oxidative phosphorylation supplies {oxidative_fraction_pct:.1f}% of ATP turnover; PCr hydrolysis supplies only {pcr_fraction_pct:.1f}%.'
+            'finding': f'During steady high-intensity bilateral knee extension, oxidative phosphorylation supplies {oxidative_fraction_pct:.1f}% of ATP turnover; PCr hydrolysis supplies only {pcr_fraction_pct:.1f}%.'
         },
         'cumulative_180s_energy_comparison_J': {
             'external_work_done_J': 3240.0,
@@ -338,7 +340,19 @@ def run_exp_d(data):
             'work_J': 90.0,
             'pcr_energy_released_span_J': [float(round(E_pcr_5s_min, 1)), float(round(E_pcr_5s_max, 1))],
             'eta_apparent_span': [float(round(eta_initial_apparent_min, 2)), float(round(eta_initial_apparent_max, 2))],
-            'finding': 'Apparent efficiency from PCr alone exceeds unity (1.50) when active volume is underestimated, proving efficiency cannot be identified without direct volumetric MRI.'
+            'apparent_ratio_diagnostic_note': 'The apparent ratio W_ext / Delta_E_PCr (0.44 to 1.50) is a DIAGNOSTIC ARTIFACT of an incomplete energy balance (omitted early oxidative/glycolytic resynthesis) and volume underestimation (V_active=0.15 L), NOT a physiologically permissible range of efficiency (which is biophysically bounded to 0.25-0.30). Values > 1.0 violate energy conservation.',
+            'finding': 'Apparent ratio from PCr alone exceeds unity (1.50) when active volume is underestimated, proving efficiency cannot be identified without direct volumetric MRI.'
+        },
+        'energy_identifiability_bounds_without_new_data': {
+            'identifiable_constraints': [
+                'Static resting PCr buffer capacity is bounded to 204.8 - 1021.4 J (4.99-fold span) given anatomical gastrocnemius volume bounds (0.15 - 0.40 L) and [ATP]_ref bounds (6.5 - 9.5 mM).',
+                'External work over 180 s (3240 J) exceeds resting PCr buffer capacity by 3.2 to 15.8 times, proving continuous dynamic exercise cannot be powered solely by PCr buffer depletion.'
+            ],
+            'unidentifiable_without_new_data': [
+                'True local actomyosin efficiency eta_local cannot be identified without synchronous volumetric MRI and complete ATP turnover fluxes.',
+                'Quantitative ATP turnover rates (mM/min) for calf plantarflexion cannot be transferred from knee-extension studies without independent calf data.',
+                'Non-local cardiorespiratory oxygen cost fraction cannot be determined beyond a scenario sensitivity grid (42.8% to 77.1%) without venous catheterization or isolated limb blood flow measurements.'
+            ]
         }
     }
 

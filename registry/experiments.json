@@ -486,10 +486,10 @@
       "retracted_apparent_R2": 0.919,
       "digitization_bias": 0.189,
       "asymptote_tau_error_pct_span": [
-        -17.8,
-        26.4
+        -22.9,
+        20.9
       ],
-      "mono_fit_heterogeneity_max_error_pct": 11.4
+      "mono_fit_heterogeneity_max_error_pct": 10.6
     },
     "research_date": "2026-11-07",
     "model": "research/local_muscle_bridge_2026_11_07/experiments.py",
@@ -499,7 +499,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Apparent R2=0.919 retracted as digitization artifact; literature R2=0.73 confirmed; asymptote and heterogeneity sensitivity confirmed computationally.",
+    "limits": "Apparent R2=0.919 and slope ~14s/0.1pH retracted as digitization artifacts; literature R2=0.73 confirmed; asymptote sensitivity (-22.9%..+20.9%) and heterogeneity (10.6%) confirmed computationally.",
     "external_validation": "not_done"
   },
   {
@@ -515,7 +515,7 @@
     "status": "arithmetic_reproduced",
     "results": {
       "delay_tau_correlation": -0.709,
-      "FIM_condition_number": 34.2,
+      "FIM_condition_number": 6.89,
       "finding": "Circulatory transit delay and muscle activation time constant are strongly collinear in pulmonary on-transients."
     },
     "research_date": "2026-11-07",
@@ -544,8 +544,8 @@
       "literature_R2_excess_co2_pH": 0.65,
       "nominal_scenario_parasitic_fraction": 0.663,
       "scenario_parasitic_bounds_pct": [
-        45.0,
-        78.0
+        42.8,
+        77.1
       ]
     },
     "research_date": "2026-11-07",
@@ -556,7 +556,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "The value 66.3% is a scenario calculation under assumed eta=0.28, not an empirically measured cardiorespiratory cost.",
+    "limits": "The value 66.3% is a nominal scenario calculation (grid 42.8% to 77.1% at eta=0.20-0.35), not an empirically measured cardiorespiratory cost.",
     "external_validation": "not_done"
   },
   {
@@ -571,8 +571,8 @@
     "status": "arithmetic_reproduced",
     "results": {
       "PCr_buffer_span_J": [
-        204.75,
-        1021.44
+        204.8,
+        1021.4
       ],
       "ratio_max_min": 4.99,
       "atp_turnover_180s_metabolic_J": 11571.4,
@@ -591,7 +591,7 @@
       "research/local_muscle_bridge_2026_11_07/experiment_results.json"
     ],
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
-    "limits": "Apparent efficiency > 1.0 retracted. Active volume uncertainty prevents absolute energy scale identification.",
+    "limits": "Apparent efficiency > 1.0 retracted. Ratio 0.44-1.50 is a diagnostic artifact of incomplete energy balance and volume underestimation, not true efficiency. Cannon 2014 demonstrates oxidative dominance during knee extension; rates cannot be quantitatively transferred to calf.",
     "external_validation": "not_done"
   },
   {
