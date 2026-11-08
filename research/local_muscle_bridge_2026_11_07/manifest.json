@@ -11,13 +11,13 @@
   },
   {
     "file": "DATA_AUDIT.md",
-    "bytes": 12674,
-    "sha256": "3bc10034b13bec5a077cdf69ecb59be768894c458229f761dc133bd8d471c246"
+    "bytes": 14718,
+    "sha256": "ae0985cc2a2b06b5a47e6079bc92751c712679238b71afc2ee656d363b531cfa"
   },
   {
     "file": "digitize_moll_data.py",
-    "bytes": 15246,
-    "sha256": "bd377655c3f3dd5a358e617d76a19647412aca11968b387cfd8c51afafb42728"
+    "bytes": 15459,
+    "sha256": "beee979f334a864b98e360f744625d326e3c21cde24cc6a2462b7753982013af"
   },
   {
     "file": "experiment_results.json",
@@ -36,28 +36,28 @@
   },
   {
     "file": "identifiability.py",
-    "bytes": 12333,
-    "sha256": "3260eb6f732e57139e6ee2ee9a3ecc10ead39abaf1a0f7ae2013bdbf7dbd6412"
+    "bytes": 14772,
+    "sha256": "2f1e4c60763d673052685871d1f501e5b105f047e12e987e2e96338c98e5ea0f"
   },
   {
     "file": "identifiability_results.json",
-    "bytes": 5613,
-    "sha256": "bdc65ef4ae09bc2ea53467e0edd4323dbe4dee058a68bf1334f18738e30b9f1c"
+    "bytes": 10875,
+    "sha256": "0167b2695818d6dc3e7823c2cb57619b8b01bedf5eea591593968fbc0bf06337"
   },
   {
     "file": "LIMITATIONS.md",
-    "bytes": 8739,
-    "sha256": "dc112817bb5d6ae20540595cd409718eebfb30d485a5870d0049be7e9ad3eee5"
+    "bytes": 10246,
+    "sha256": "7da52ecebda5997951a9d3434f172c7b24bbd8f20d30aa61fa3b221c385daa8d"
   },
   {
     "file": "MATHEMATICS.md",
-    "bytes": 11152,
-    "sha256": "f08d955f6c7c8bea1f1e94cf946af1a0565ce0e72fd5df8720d3da38502ec430"
+    "bytes": 19969,
+    "sha256": "670810d3cec1c13e982ecbef0d587d6419ab23f79ff9e833e409b9ec69207f91"
   },
   {
     "file": "MEASUREMENT_MODEL.md",
-    "bytes": 10358,
-    "sha256": "a7fa671af06eb3ee562ad004df87f5209279bc72212a8165f6b5065d08ed9f89"
+    "bytes": 13922,
+    "sha256": "9711c3f76b9ab9200da7ff402642f918502dc565f12fcf27bf898390bb845570"
   },
   {
     "file": "moll2018_extracted_measurements.json",
@@ -76,8 +76,8 @@
   },
   {
     "file": "REPORT.md",
-    "bytes": 22556,
-    "sha256": "27cddf9bd7590d745089ace8b824cce42dd27d2414ad7a5adb051090dee3ea0f"
+    "bytes": 24942,
+    "sha256": "359e9ef87d54c15b7a44cdcd3838007d68056641b3ae04c1e3c0d8ce12975b6d"
   },
   {
     "file": "retrieval.json",
@@ -91,8 +91,8 @@
   },
   {
     "file": "test_local_bridge.py",
-    "bytes": 13904,
-    "sha256": "7f1de100af9c87fcfdc867da977a00079fdf37765e4e965bcf778ca9cddd2c6e"
+    "bytes": 18486,
+    "sha256": "825d6bd915a55811a7f7fd9d598c868bb3961683229b63f69ed8482ba43d436e"
   },
   {
     "file": "update_registries.py",
