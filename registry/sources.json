@@ -1151,7 +1151,8 @@
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0066"
     },
-    "provenance_caveat": "Values (flow 2.4 mL/100g/min, (Ca - Cv)O2 = 58 mL/L, M_loc = 0.0064 mmol ATP/L/s) are invasive whole-quadriceps benchmarks during knee extension, NOT measured resting baseline for gastrocnemius medialis. Calf application is MODEL_ASSUMED_QUADRICEPS_TRANSFER."
+    "provenance_caveat": "Values (flow 2.4 mL/100g/min, (Ca - Cv)O2 = 58 mL/L, M_loc = 0.0064 mmol ATP/L/s) are secondary literature review extrapolations from whole-limb flow and a-v difference. Andersen & Saltin 1985 Table 2 starts at 10 W and has NO resting 0 W row; sitting resting femoral vein flow is reported in text (p. 237) as 0.15 to 0.40 L/min. Status downgraded to DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION.",
+    "status": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE"
   },
   {
     "id": "SRC-0067",
@@ -1165,5 +1166,78 @@
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0067"
     }
+  },
+  {
+    "id": "SRC-0068",
+    "name": "Hug et al. (2021) / Figshare HD-sEMG Motor Units",
+    "type": "peer_reviewed_dataset_and_article",
+    "doi": "10.1016/j.jelekin.2021.102548",
+    "figshare_doi": "10.6084/m9.figshare.13695937",
+    "title": "Analysis of motor unit spike trains estimated from high-density surface electromyography is highly reliable across operators",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_recruitment_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_recruitment_2026_11_08/sources.json",
+      "source_id": "SRC-0068"
+    },
+    "provenance_notes": "64-channel HD-sEMG matrices recorded on human Gastrocnemius Medialis, Lateralis, and Tibialis Anterior at 10%, 30%, 50%, 70% MVC. Motor unit spike trains decomposed via gCKC and edited by 8 independent operators (99.6% inter-operator agreement)."
+  },
+  {
+    "id": "SRC-0069",
+    "name": "Rehman et al. (2024) / Dryad 31P-MRS Ergometer",
+    "type": "peer_reviewed_data_in_brief",
+    "doi": "10.1016/j.dib.2024.111114",
+    "pmc": "PMC11617988",
+    "dryad_doi": "10.5061/dryad.08kprr59v",
+    "title": "An ergometer dataset to measure muscle bioenergetics with magnetic resonance techniques",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_recruitment_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_recruitment_2026_11_08/sources.json",
+      "source_id": "SRC-0069"
+    },
+    "provenance_notes": "Dynamic 31P-MRS (TR=1s, 6 transients -> 6s resolution) with non-magnetic knee-extensor ergometer inside Siemens 3T Prisma/Trio scanner. Individual trial time series of PCr, Pi, ATP, and pH across 3 repeated trials at 5-10% MVC in human quadriceps."
+  },
+  {
+    "id": "SRC-0070",
+    "name": "MuscleMap Open Dataset (2023–2024)",
+    "type": "open_science_consortium_dataset",
+    "doi": "10.5281/zenodo.10077847",
+    "title": "MuscleMap: An open-source framework and benchmark dataset for automated deep-learning quantitative muscle MRI segmentation",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_recruitment_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_recruitment_2026_11_08/sources.json",
+      "source_id": "SRC-0070"
+    },
+    "provenance_notes": "Segmented 3D Dixon / T1-MRI individual muscle volumes across healthy human cohorts (n=48) for lower leg muscles: Gastrocnemius Medialis (342.5 +- 58.2 mL), Soleus (580.4 +- 92.1 mL), and Tibialis Anterior."
+  },
+  {
+    "id": "SRC-0071",
+    "name": "Cenni et al. (2018–2020) / Figshare Calf Volumetry",
+    "type": "peer_reviewed_dataset_archive",
+    "doi": "10.6084/m9.figshare.5971480",
+    "title": "Multi-modality lower leg imaging dataset: MRI and 3D ultrasound calf muscle volumetry and morphometry",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_recruitment_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_recruitment_2026_11_08/sources.json",
+      "source_id": "SRC-0071"
+    },
+    "provenance_notes": "Individual anatomical calf muscle volumes and subcutaneous adipose tissue thicknesses from MRI and 3D ultrasound in human participants (n=16), providing subcutaneous fat thickness distributions (3 to 11 mm)."
+  },
+  {
+    "id": "SRC-0072",
+    "name": "Radegran & Saltin (1998)",
+    "type": "peer_reviewed_article",
+    "doi": "10.1152/ajpheart.1998.274.1.H314",
+    "title": "Muscle blood flow at onset of dynamic exercise in humans",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_recruitment_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_recruitment_2026_11_08/sources.json",
+      "source_id": "SRC-0072"
+    },
+    "provenance_notes": "Direct Doppler ultrasound and thermodilution resting femoral blood flow measurements in humans: resting blood flow is ~250 mL/min per leg (~10-11 mL/100g/min quadriceps, ~2.5 mL/100g/min whole limb), documenting primary origin of classical resting hyperemia baselines."
   }
 ]

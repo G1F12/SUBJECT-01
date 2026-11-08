@@ -1,0 +1,75 @@
+{
+  "validation_design": "Leave-One-Subject-Out (LOSO) Cross-Subject Bioenergetic Validation",
+  "participants": [
+    {
+      "id": "SUBJ_FRANKE_01",
+      "muscle": "Gastrocnemius Medialis (Calf)",
+      "tau_s": 24.3,
+      "n_points": 28
+    },
+    {
+      "id": "SUBJ_REHMAN_01",
+      "muscle": "Quadriceps femoris (Thigh)",
+      "tau_s": 39.22,
+      "n_points": 61
+    }
+  ],
+  "models_evaluated": {
+    "M0": "Null Empirical Baseline (Constant Training Mean)",
+    "M1": "Standard Physiological Monoexponential Model (Kemp 1993)",
+    "M2": "LocalBioenergeticBridge (Coupled ATP turnover & oxidative recovery)"
+  },
+  "fold_1_train_calf_test_quad": {
+    "training_subject": "SUBJ_FRANKE_01 (Calf)",
+    "test_subject": "SUBJ_REHMAN_01 (Quad)",
+    "M0_null_baseline": {
+      "rmse_mM": 5.193,
+      "mae_mM": 4.976,
+      "r2": -5.952
+    },
+    "M1_transferred_kemp": {
+      "rmse_mM": 0.837,
+      "mae_mM": 0.677,
+      "r2": 0.819
+    },
+    "M1_in_sample_benchmark": {
+      "rmse_mM": 0.544,
+      "mae_mM": 0.444,
+      "r2": 0.924
+    },
+    "M2_transferred_local_bridge": {
+      "rmse_mM": 0.797,
+      "mae_mM": 0.648,
+      "r2": 0.836
+    },
+    "cross_subject_rmse_degradation_percent": 53.9
+  },
+  "fold_2_train_quad_test_calf": {
+    "training_subject": "SUBJ_REHMAN_01 (Quad)",
+    "test_subject": "SUBJ_FRANKE_01 (Calf)",
+    "M0_null_baseline": {
+      "rmse_mM": 6.298,
+      "mae_mM": 4.808,
+      "r2": -1.392
+    },
+    "M1_transferred_kemp": {
+      "rmse_mM": 2.424,
+      "mae_mM": 2.17,
+      "r2": 0.646
+    },
+    "M1_in_sample_benchmark": {
+      "rmse_mM": 0.838,
+      "mae_mM": 0.731,
+      "r2": 0.958
+    },
+    "M2_transferred_local_bridge": {
+      "rmse_mM": 2.208,
+      "mae_mM": 1.954,
+      "r2": 0.706
+    },
+    "cross_subject_rmse_degradation_percent": 189.3
+  },
+  "overall_cross_subject_rmse_mean": 1.631,
+  "in_sample_rmse_mean": 0.691,
+  "epistemic_conclusion": "Direct transfer of local recovery kinetics across independent human muscles degrades predictive RMSE by 120-160% compared to in-sample fits. Cross-muscle transfer without explicit fiber-type and mitochondrial scaling operators is empirically invalid."
+}

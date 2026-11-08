@@ -99,5 +99,13 @@
     "title": "Adoption of Physical Measurement Maps, Spectroscopic Rank Resolution, and Macro-Model Isolation",
     "decision": "1. Adopt physical measurement maps replacing theoretical ideal scalar channels. 2. Acknowledge that anatomical MRI volume V_anat is an upper bound on active volume, while V_active is a scenario hypothesis. 3. Formally distinguish 3 levels of identifiability: Conditional Mathematical Full Rank (7/7 under frozen calibrations), Practical Identifiability Defect (rank defect = 4 under unknown nuisance parameters), and Empirical Identifiability Status (NOT_EMPIRICALLY_IDENTIFIED on real human data). 4. Enforce structural isolation of D2 9D quotient against local single-muscle parameter transfer. 5. Maintain TARGET-CPE45 status as NOT EXTERNALLY VALIDATED and interventions as NO_GO.",
     "rationale": "Results and scientific validity corrections of Research Cycle 8 (EXP-0032..0036)."
+  },
+  {
+    "id": "DEC-0015",
+    "date": "2026-11-08",
+    "title": "Adoption of Multi-Modal HD-sEMG Recruitment Model, Downgrade of Andersen & Saltin 1985 Resting Table, and Enforcement of Cross-Muscle Transfer Barrier",
+    "decision": "Formalized preflight reconciliation of PCr energy capacity (dG_ATP=54 kJ/mol for work vs dH_CK=21 kJ/mol for heat); downgraded Andersen & Saltin 1985 resting values to secondary literature extrapolations; adopted high-density EMG motor unit decomposition and adipose morphometry as mandatory conditions for active volume identifiability; and maintained TARGET-CPE45 as NOT EXTERNALLY VALIDATED with strict NO_GO on biological interventions.",
+    "rationale": "Scalar sEMG RMS has a >40-fold uncertainty span and inverts during fatigue; cross-muscle transfer degrades prediction RMSE by up to 189%; and calf PCr buffer accounts for <0.1% of a 2700 s whole-body endurance budget.",
+    "supersedes": []
   }
 ]

@@ -293,5 +293,37 @@
     "experiment_id": "EXP-0036",
     "finding": "Whole-body active muscle mass (18 kg) and basal metabolic power (80 W) are 50.2-fold and 1543-fold larger than single gastrocnemius parameters. Direct parameter transfer from local calf models to whole-body D2 is rejected, preserving the D2 9D quotient in strict structural isolation.",
     "relevance": "Prevents unphysical cross-scale parameter contamination and protects D2 quotient."
+  },
+  {
+    "id": "FND-0038",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0037",
+    "finding": "Open empirical 64-channel HD-sEMG decomposition (Hug et al. 2021) reveals motor unit discharge rates in human Gastrocnemius Medialis scaling from 9.8 Hz (10% MVC) to 19.8 Hz (70% MVC) with 99.6% inter-operator agreement, while dynamic 31P-MRS (Rehman et al. 2024) demonstrates non-acidotic human quadriceps recovery kinetics with tau = 39.2 +- 2.5 s and end-exercise pH = 7.01 +- 0.03.",
+    "confidence": "high",
+    "notes": "Provides independent human empirical foundations for calf recruitment and quadriceps oxidative recovery."
+  },
+  {
+    "id": "FND-0039",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0038",
+    "finding": "Single-channel sEMG RMS is structurally unidentifiable with respect to active muscle volume fraction a_eff: variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in a_eff (0.018 to 0.737) at identical measured RMS (12.7%), while fatigue-induced conduction velocity slowing causes a +14.0% RMS increase despite a -35.0% loss of mechanical twitch force.",
+    "confidence": "high",
+    "notes": "Refutes the use of scalar sEMG RMS as a quantitative proxy for active motor unit recruitment fraction."
+  },
+  {
+    "id": "FND-0040",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0040",
+    "finding": "Leave-One-Subject-Out cross-validation demonstrates severe generalization degradation when transferring local recovery kinetics across different human muscle groups: transferring calf kinetics (tau = 24.3 s) to quadriceps increases prediction RMSE by +53.9%, while transferring quadriceps kinetics (tau = 39.2 s) to calf increases RMSE by +189.3% (overall cross-subject RMSE = 1.631 mM vs in-sample 0.691 mM).",
+    "confidence": "high",
+    "notes": "Empirically disproves cross-muscle kinetic universality without explicit fiber-type scaling."
+  },
+  {
+    "id": "FND-0041",
+    "date": "2026-11-08",
+    "experiment_id": "EXP-0041",
+    "finding": "The maximum free-energy capacity of the human gastrocnemius PCr pool (0.62 kJ) accounts for only 0.092% of the total energy budget of a 2700-second critical power test at 250 W (675 kJ), while the quadriceps PCr pool (4.25 kJ) accounts for 0.629%, proving that local phosphagen depletion is strictly a transient sprint mechanism incapable of determining long-duration whole-body power without cardiovascular and pulmonary coupling.",
+    "confidence": "high",
+    "notes": "Enforces structural separation between local muscle bridge and systemic TARGET-CPE45."
   }
 ]

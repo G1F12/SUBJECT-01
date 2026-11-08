@@ -1,0 +1,161 @@
+{
+  "model_name": "Biophysical Motor Unit Recruitment & Volume Conduction Model",
+  "n_units": 500,
+  "franke_point_analysis": {
+    "target_measured_semg_rms": 0.127,
+    "nominal_scenario_5mm_fat": {
+      "neural_drive": 0.02,
+      "a_eff_active_volume_fraction": 0.018,
+      "force_norm_mvc": 0.0055,
+      "n_active_units": 81,
+      "phase_cancellation_percent": 13.96
+    },
+    "thin_fat_3mm_scenario": {
+      "neural_drive": 0.02,
+      "a_eff_active_volume_fraction": 0.018,
+      "force_norm_mvc": 0.0055
+    },
+    "thick_fat_10mm_scenario": {
+      "neural_drive": 0.54,
+      "a_eff_active_volume_fraction": 0.7372,
+      "force_norm_mvc": 0.4843
+    },
+    "uncertainty_span_a_eff": [
+      0.018,
+      0.7372
+    ],
+    "uncertainty_ratio_a_eff": 40.96
+  },
+  "fatigue_dissociation": {
+    "drive": 0.3,
+    "fresh_force_mvc": 0.2106,
+    "fatigued_force_mvc": 0.1369,
+    "force_change_percent": -35.0,
+    "fresh_semg_rms_norm": 0.5539,
+    "fatigued_semg_rms_norm": 0.6314,
+    "semg_rms_change_percent": 14.0,
+    "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force, demonstrating the total failure of scalar sEMG RMS as a monotonic proxy for metabolic activation."
+  },
+  "drive_sweep_sample": [
+    {
+      "neural_drive": 0.02,
+      "n_active_units": 81,
+      "fraction_units_recruited": 0.162,
+      "a_eff_active_volume_fraction": 0.018,
+      "force_norm_mvc": 0.0055,
+      "semg_rms_norm_nominal_fat_5mm": 0.1149,
+      "semg_rms_norm_thin_fat_3mm": 0.2407,
+      "semg_rms_norm_thick_fat_10mm": 0.0199,
+      "phase_cancellation_percent": 13.96,
+      "divergence_a_eff_minus_semg_rms": -0.097
+    },
+    {
+      "neural_drive": 0.12,
+      "n_active_units": 288,
+      "fraction_units_recruited": 0.576,
+      "a_eff_active_volume_fraction": 0.1734,
+      "force_norm_mvc": 0.0646,
+      "semg_rms_norm_nominal_fat_5mm": 0.3888,
+      "semg_rms_norm_thin_fat_3mm": 0.827,
+      "semg_rms_norm_thick_fat_10mm": 0.0655,
+      "phase_cancellation_percent": 36.67,
+      "divergence_a_eff_minus_semg_rms": -0.2155
+    },
+    {
+      "neural_drive": 0.22,
+      "n_active_units": 358,
+      "fraction_units_recruited": 0.716,
+      "a_eff_active_volume_fraction": 0.3149,
+      "force_norm_mvc": 0.1391,
+      "semg_rms_norm_nominal_fat_5mm": 0.5002,
+      "semg_rms_norm_thin_fat_3mm": 1.0627,
+      "semg_rms_norm_thick_fat_10mm": 0.0844,
+      "phase_cancellation_percent": 44.09,
+      "divergence_a_eff_minus_semg_rms": -0.1853
+    },
+    {
+      "neural_drive": 0.32,
+      "n_active_units": 401,
+      "fraction_units_recruited": 0.802,
+      "a_eff_active_volume_fraction": 0.4493,
+      "force_norm_mvc": 0.2295,
+      "semg_rms_norm_nominal_fat_5mm": 0.5666,
+      "semg_rms_norm_thin_fat_3mm": 1.1994,
+      "semg_rms_norm_thick_fat_10mm": 0.0962,
+      "phase_cancellation_percent": 49.17,
+      "divergence_a_eff_minus_semg_rms": -0.1173
+    },
+    {
+      "neural_drive": 0.42,
+      "n_active_units": 432,
+      "fraction_units_recruited": 0.864,
+      "a_eff_active_volume_fraction": 0.5784,
+      "force_norm_mvc": 0.3353,
+      "semg_rms_norm_nominal_fat_5mm": 0.6433,
+      "semg_rms_norm_thin_fat_3mm": 1.3615,
+      "semg_rms_norm_thick_fat_10mm": 0.1093,
+      "phase_cancellation_percent": 53.14,
+      "divergence_a_eff_minus_semg_rms": -0.0648
+    },
+    {
+      "neural_drive": 0.52,
+      "n_active_units": 457,
+      "fraction_units_recruited": 0.914,
+      "a_eff_active_volume_fraction": 0.708,
+      "force_norm_mvc": 0.4572,
+      "semg_rms_norm_nominal_fat_5mm": 0.7266,
+      "semg_rms_norm_thin_fat_3mm": 1.5387,
+      "semg_rms_norm_thick_fat_10mm": 0.1234,
+      "phase_cancellation_percent": 56.43,
+      "divergence_a_eff_minus_semg_rms": -0.0186
+    },
+    {
+      "neural_drive": 0.62,
+      "n_active_units": 477,
+      "fraction_units_recruited": 0.954,
+      "a_eff_active_volume_fraction": 0.8317,
+      "force_norm_mvc": 0.5927,
+      "semg_rms_norm_nominal_fat_5mm": 0.798,
+      "semg_rms_norm_thin_fat_3mm": 1.6905,
+      "semg_rms_norm_thick_fat_10mm": 0.1354,
+      "phase_cancellation_percent": 59.23,
+      "divergence_a_eff_minus_semg_rms": 0.0336
+    },
+    {
+      "neural_drive": 0.72,
+      "n_active_units": 495,
+      "fraction_units_recruited": 0.99,
+      "a_eff_active_volume_fraction": 0.9608,
+      "force_norm_mvc": 0.7457,
+      "semg_rms_norm_nominal_fat_5mm": 0.8892,
+      "semg_rms_norm_thin_fat_3mm": 1.8869,
+      "semg_rms_norm_thick_fat_10mm": 0.1504,
+      "phase_cancellation_percent": 61.69,
+      "divergence_a_eff_minus_semg_rms": 0.0715
+    },
+    {
+      "neural_drive": 0.82,
+      "n_active_units": 500,
+      "fraction_units_recruited": 1.0,
+      "a_eff_active_volume_fraction": 1.0,
+      "force_norm_mvc": 0.8751,
+      "semg_rms_norm_nominal_fat_5mm": 0.9374,
+      "semg_rms_norm_thin_fat_3mm": 1.99,
+      "semg_rms_norm_thick_fat_10mm": 0.1584,
+      "phase_cancellation_percent": 63.74,
+      "divergence_a_eff_minus_semg_rms": 0.0626
+    },
+    {
+      "neural_drive": 0.92,
+      "n_active_units": 500,
+      "fraction_units_recruited": 1.0,
+      "a_eff_active_volume_fraction": 1.0,
+      "force_norm_mvc": 0.9555,
+      "semg_rms_norm_nominal_fat_5mm": 0.9752,
+      "semg_rms_norm_thin_fat_3mm": 2.0711,
+      "semg_rms_norm_thick_fat_10mm": 0.1647,
+      "phase_cancellation_percent": 65.46,
+      "divergence_a_eff_minus_semg_rms": 0.0248
+    }
+  ]
+}

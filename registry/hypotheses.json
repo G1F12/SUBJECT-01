@@ -103,5 +103,20 @@
       "EXP-0036"
     ],
     "notes": "Formulated and confirmed in Research Cycle 8."
+  },
+  {
+    "id": "HYP-0008",
+    "date": "2026-11-08",
+    "title": "Biophysical Motor Unit Decomposition and Volume Conduction as Identifiability Preconditions for Active Muscle Energetics",
+    "statement": "Single-channel surface EMG amplitude cannot identify active muscle volume a_eff * V_anat due to structural collinearity with subcutaneous fat thickness and motor unit depth distribution; practical identifiability of a_eff requires high-density multi-channel array motor unit decomposition coupled with tissue morphometry, without which local bioenergetic models retain a minimum 40-fold parameter uncertainty span.",
+    "status": "verified",
+    "related_experiments": [
+      "EXP-0037",
+      "EXP-0038",
+      "EXP-0039",
+      "EXP-0040",
+      "EXP-0041"
+    ],
+    "notes": "Formulated and confirmed in Research Cycle 9 via biophysical modeling and empirical HD-sEMG / 31P-MRS cross-validation."
   }
 ]

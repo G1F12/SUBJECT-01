@@ -778,5 +778,147 @@
     "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
     "limits": "Direct parameter substitution into D2 causes severe dimensional breakdown; local single-muscle observations cannot validate whole-body combat endurance.",
     "external_validation": "policy_confirmed"
+  },
+  {
+    "id": "EXP-0037",
+    "date": "2026-11-08",
+    "name": "Empirical Acquisition of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+    "sources": [
+      "SRC-0068",
+      "SRC-0069",
+      "SRC-0070"
+    ],
+    "design": "Acquisition and cryptographic auditing of open human empirical datasets: 64-channel HD-sEMG motor unit decomposition in Gastrocnemius Medialis and Lateralis (Hug et al. 2021) and dynamic 31P-MRS quadriceps ergometry (Rehman et al. 2024, PMC11617988).",
+    "status": "completed",
+    "results": {
+      "rehman_trials_n": 3,
+      "rehman_tau_rec_mean_s": 39.41,
+      "rehman_ph_control_mean": 7.0,
+      "rehman_ph_exercise_mean": 7.01,
+      "hug_grid_channels": 64,
+      "hug_inter_operator_agreement": 0.996
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_recruitment_2026_11_08/experiments.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/pmc11617988.xml",
+    "report": "research/empirical_recruitment_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
+    "limits": "Datasets originate from separate independent subject cohorts (calf vs quadriceps).",
+    "external_validation": "verified_against_published_dataset"
+  },
+  {
+    "id": "EXP-0038",
+    "date": "2026-11-08",
+    "name": "Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+    "sources": [
+      "SRC-0068",
+      "SRC-0071"
+    ],
+    "design": "Forward simulation of 500 motor units adhering to Henneman size principle, exponential threshold distribution, anisotropic volume conduction, subcutaneous fat low-pass filtering (3-10 mm), and fatigue conduction velocity slowing.",
+    "status": "completed",
+    "results": {
+      "uncertainty_ratio_a_eff": 40.96,
+      "fatigue_force_change_percent": -35.0,
+      "fatigue_semg_rms_change_percent": 14.0,
+      "phase_cancellation_range_percent": [
+        13.96,
+        27.8
+      ]
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_recruitment_2026_11_08/experiments.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/recruitment_biophysical_results.json",
+    "report": "research/empirical_recruitment_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
+    "limits": "Simulates isometric contractions; dynamic non-isometric movement introduces pennation angle rotation.",
+    "external_validation": "biophysically_verified"
+  },
+  {
+    "id": "EXP-0039",
+    "date": "2026-11-08",
+    "name": "Real-Data Identifiability and Profile Likelihood of Local Energy Model with Recruitment Nuisance Parameters",
+    "sources": [
+      "SRC-0068",
+      "SRC-0069"
+    ],
+    "design": "Sensitivity Jacobian SVD, condition number, Fisher Information Matrix, and profile likelihood curvature across 4 identifiability levels (structural, numerical, practical with 12 parameters, empirical).",
+    "status": "completed",
+    "results": {
+      "level_1_conditional_rank": 3,
+      "level_2_numerical_rank": 4,
+      "level_3_effective_rank": 5,
+      "level_3_rank_defect": 7,
+      "level_4_empirical_status": "NOT_EMPIRICALLY_IDENTIFIED_CROSS_STUDY_DISCONNECTION"
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_recruitment_2026_11_08/experiments.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/identifiability_recruitment_results.json",
+    "report": "research/empirical_recruitment_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
+    "limits": "No single-subject simultaneous multi-modal dataset currently available in open literature.",
+    "external_validation": "algebraically_verified"
+  },
+  {
+    "id": "EXP-0040",
+    "date": "2026-11-08",
+    "name": "Independent Cross-Subject Validation (LOSO) of Local Bioenergetic Model vs Physiological Baselines",
+    "sources": [
+      "SRC-0063",
+      "SRC-0069"
+    ],
+    "design": "Leave-One-Subject-Out cross-validation comparing Franke 2020 (calf) vs Rehman 2024 (quadriceps) against null mean baseline and standard monoexponential Kemp model.",
+    "status": "completed",
+    "results": {
+      "in_sample_rmse_mean_mM": 0.691,
+      "cross_subject_rmse_mean_mM": 1.631,
+      "fold_1_degradation_percent": 53.9,
+      "fold_2_degradation_percent": 189.3
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_recruitment_2026_11_08/experiments.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/validation_loso_results.json",
+    "report": "research/empirical_recruitment_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
+    "limits": "Cross-muscle kinetics differ by 1.61-fold due to mitochondrial density and fiber type differences.",
+    "external_validation": "out_of_sample_verified"
+  },
+  {
+    "id": "EXP-0041",
+    "date": "2026-11-08",
+    "name": "SUBJECT-01 Integration: Functional Power, Recovery Limits, and TARGET-CPE45 Boundaries",
+    "sources": [
+      "SRC-0069",
+      "SRC-0070"
+    ],
+    "design": "Quantitative macro-energy budget analysis of 2700 s CPE45 test (675 kJ at 250 W) vs local phosphagen buffer pools (calf 0.62 kJ, quad 4.25 kJ), establishing systemic oxygen scaling barrier.",
+    "status": "completed",
+    "results": {
+      "calf_pcr_contribution_percent": 0.092,
+      "quadriceps_pcr_contribution_percent": 0.629,
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+      "biological_interventions": "NO_GO_MAINTAINED"
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_recruitment_2026_11_08/experiments.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/experiment_results.json",
+    "report": "research/empirical_recruitment_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
+    "limits": "Local bioenergetics models cannot extrapolate to whole-body exercise without cardiovascular scaling.",
+    "external_validation": "macro_budget_verified"
   }
 ]

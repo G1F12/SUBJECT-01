@@ -1,0 +1,32 @@
+{
+  "level_1_structural_conditional_rank": {
+    "n_params": 7,
+    "rank": 3,
+    "effective_rank": 3,
+    "condition_number": Infinity,
+    "status": "CONDITIONAL_FULL_RANK_UNDER_FROZEN_CALIBRATION"
+  },
+  "level_2_numerical_rank_with_recruitment": {
+    "n_params": 8,
+    "rank": 4,
+    "effective_rank": 3,
+    "condition_number": Infinity,
+    "status": "RANK_DEFICIENT_COLLINEAR_V_ANAT_A_EFF",
+    "nullspace_principal_component": "V_anat_L vs a_eff"
+  },
+  "level_3_practical_identifiability_with_nuisances": {
+    "n_params": 12,
+    "rank": 6,
+    "effective_rank": 5,
+    "rank_defect": 7,
+    "condition_number": Infinity,
+    "profile_likelihood_curvature_a_eff": 14400.000001502995,
+    "is_flat_profile_ridge": false,
+    "status": "PRACTICALLY_UNIDENTIFIABLE_UNDER_NUISANCE_UNCERTAINTY"
+  },
+  "level_4_empirical_identifiability": {
+    "status": "NOT_EMPIRICALLY_IDENTIFIED_CROSS_STUDY_DISCONNECTION",
+    "blocker": "No human subject currently exists in open literature with simultaneous 31P-MRS, calibrated HD-sEMG motor unit decomposition, MRI adipose morphometry, and microvascular blood flow.",
+    "minimal_sufficient_experimental_design": "Simultaneous 3T 31P-MRS + 64-channel HD-sEMG + B-mode ultrasound fat thickness + arterial occlusion NIRS on single human subject during identical dynamic contraction protocol."
+  }
+}
