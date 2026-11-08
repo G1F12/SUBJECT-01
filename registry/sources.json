@@ -1107,11 +1107,12 @@
     "review_provenance": {
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0063"
-    }
+    },
+    "methodological_caveats": "3D MRI, sEMG (2 kHz outside magnet, upsampled to 4 kHz in MAT), and 31P-MRS were recorded in separate trials. sEMG RMS (12.7%) is surface electrical activity, not active motor unit volume fraction."
   },
   {
     "id": "SRC-0064",
-    "name": "Sleigh et al. (2013)",
+    "name": "Edwards et al. (2013)",
     "type": "peer_reviewed_article_pmc",
     "doi": "10.1038/srep01182",
     "pmc": "PMC3560356",
@@ -1121,14 +1122,15 @@
     "review_provenance": {
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0064"
-    }
+    },
+    "author_note": "Primary first author is Edwards, L. M. (Caudwell Xtreme Everest / InSight trial), not Sleigh et al."
   },
   {
     "id": "SRC-0065",
     "name": "Meyerspeer et al. (2021)",
     "type": "consensus_recommendations_pmc",
     "doi": "10.1002/nbm.4246",
-    "pmc": "PMC8359288",
+    "pmc": "PMC8243949",
     "title": "31P magnetic resonance spectroscopy in skeletal muscle: Experts' consensus recommendations",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
@@ -1141,14 +1143,15 @@
     "id": "SRC-0066",
     "name": "Andersen & Saltin (1985) / Radegran & Saltin (1998)",
     "type": "peer_reviewed_physiological_landmark",
-    "doi": "10.1113/jphysiol.1985.sp015864",
-    "title": "Maximal and resting blood flow and oxygen uptake in human quadriceps / calf muscle by direct arterial-venous catheterization",
+    "doi": "10.1113/jphysiol.1985.sp015794",
+    "title": "Maximal perfusion of skeletal muscle in man",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
     "review_provenance": {
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0066"
-    }
+    },
+    "provenance_caveat": "Values (flow 2.4 mL/100g/min, (Ca - Cv)O2 = 58 mL/L, M_loc = 0.0064 mmol ATP/L/s) are invasive whole-quadriceps benchmarks during knee extension, NOT measured resting baseline for gastrocnemius medialis. Calf application is MODEL_ASSUMED_QUADRICEPS_TRANSFER."
   },
   {
     "id": "SRC-0067",

@@ -183,21 +183,21 @@
     "id": "NEG-0025",
     "date": "2026-11-08",
     "experiment_id": "EXP-0032",
-    "negative_result": "Anatomical MRI volumetry alone cannot determine active muscle volume V_active. Without an explicit motor unit recruitment model, V_active remains an unobserved latent parameter.",
+    "negative_result": "Anatomical MRI volumetry alone cannot determine active muscle volume V_active. sEMG RMS = 12.7% does not measure recruited fiber fraction; without solving the ill-posed neuromuscular inverse problem, V_active remains an unobserved latent scenario variable.",
     "impact": "Rejects assumption that V_active equals V_anat from 3D MRI."
   },
   {
     "id": "NEG-0026",
     "date": "2026-11-08",
     "experiment_id": "EXP-0033",
-    "negative_result": "Absolute phosphagen energy scale cannot be identified from 31P-MRS peak ratios alone without external phantom calibration or assumed [ATP]_ref, inducing an 8.5-fold span in resting chemical buffer capacity.",
+    "negative_result": "Absolute phosphagen energy scale cannot be identified from 31P-MRS peak ratios alone without external phantom calibration or assumed [ATP]_ref, inducing an 8.50-fold span in resting chemical buffer capacity (111.4 to 947.0 J).",
     "impact": "Prevents overconfident claims of exact chemical pool quantification."
   },
   {
     "id": "NEG-0027",
     "date": "2026-11-08",
     "experiment_id": "EXP-0034",
-    "negative_result": "Continuous-wave NIRS vascular occlusion testing and arterial spin labeling (ASL) MRI cannot independently isolate M_loc without unknown optical pathlength and venous extraction calibration.",
+    "negative_result": "Non-invasive continuous-wave NIRS vascular occlusion testing and arterial spin labeling (ASL) MRI cannot independently isolate M_loc without unknown optical pathlength and venous extraction calibration; catheterization data from quadriceps cannot be treated as measured calf baseline.",
     "impact": "Disqualifies uncalibrated optical and perfusion surrogates as absolute metabolic anchors."
   },
   {

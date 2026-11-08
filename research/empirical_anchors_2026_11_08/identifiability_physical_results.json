@@ -1,8 +1,7 @@
 {
   "cycle": 8,
-  "date": "2026-11-08",
-  "status": "REPRODUCED_PHYSICAL_MEASUREMENT_MODEL",
-  "parameter_names": [
+  "revision": "cycle8_validity_repair_20261108",
+  "target_parameter_names": [
     "eta_loc",
     "PCr_rest_mM",
     "V_active_L",
@@ -10,6 +9,12 @@
     "tau_PCr_rec_s",
     "Q_loc_max_mM_s",
     "M_loc_mM_s"
+  ],
+  "nuisance_parameter_names": [
+    "a_eff",
+    "g_nirs",
+    "b_nirs",
+    "k_spec"
   ],
   "idealized_topologies_cycle7": {
     "M1_power_only": {
@@ -102,7 +107,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 1.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M2_power_relPCr": {
       "channels": [
@@ -168,7 +174,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M3_power_relPCr_VO2": {
       "channels": [
@@ -226,7 +233,8 @@
           "Q_loc_max_mM_s": 1.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M4_power_absPCr": {
       "channels": [
@@ -292,7 +300,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M5_power_absPCr_volume_ideal": {
       "channels": [
@@ -350,7 +359,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M6_power_absPCr_vol_base_ideal": {
       "channels": [
@@ -400,7 +410,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "M7_fully_anchored_ideal": {
       "channels": [
@@ -443,7 +454,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     }
   },
   "physical_topologies_cycle8": {
@@ -537,7 +549,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 1.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P2_ergometer_relPCr": {
       "channels": [
@@ -603,7 +616,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P3_ergometer_relPCr_pulmVO2": {
       "channels": [
@@ -661,7 +675,8 @@
           "Q_loc_max_mM_s": 1.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P4_ergometer_absPCr": {
       "channels": [
@@ -727,7 +742,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P5_ergometer_absPCr_mriAnat": {
       "channels": [
@@ -785,7 +801,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P6_ergometer_absPCr_mri_uncalNIRS": {
       "channels": [
@@ -835,7 +852,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P7_physical_without_spec": {
       "channels": [
@@ -878,7 +896,8 @@
           "Q_loc_max_mM_s": 0.0,
           "M_loc_mM_s": 0.0
         }
-      ]
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     },
     "P8_physical_with_spectroscopy": {
       "channels": [
@@ -912,7 +931,664 @@
         117.53962312626695,
         28.44444444447665
       ],
-      "nullspace_basis": []
+      "nullspace_basis": [],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
     }
+  },
+  "level_1_conditional_mathematical_identifiability": {
+    "P1_ergometer_input": {
+      "channels": [
+        "P_ext_W"
+      ],
+      "effective_rank": 0,
+      "nullspace_dim": 7,
+      "condition_number_all": Infinity,
+      "condition_number_effective": Infinity,
+      "singular_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 1.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 1.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 1.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 1.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 1.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 1.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P2_ergometer_relPCr": {
+      "channels": [
+        "P_ext_W",
+        "PCr_relative"
+      ],
+      "effective_rank": 3,
+      "nullspace_dim": 4,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 15.319789798421612,
+      "singular_values": [
+        0.1526122538878619,
+        0.137593489270528,
+        0.009961772054051646,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        847.7742013370895,
+        689.1236457428565,
+        3.6122232494303903,
+        3.689499724523907e-14,
+        0.0,
+        0.0,
+        -1.6466893592140818e-14
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 1.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 2.626815880129517e-16,
+          "V_active_L": 0.7071067811865475,
+          "dG_ATP_kJ_mol": -0.7071067811865475,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.8164965809280713,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": -0.4082482904635177,
+          "dG_ATP_kJ_mol": -0.4082482904635176,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P3_ergometer_relPCr_pulmVO2": {
+      "channels": [
+        "P_ext_W",
+        "PCr_relative",
+        "VO2_pulm_L_min"
+      ],
+      "effective_rank": 4,
+      "nullspace_dim": 3,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 20.212230800303722,
+      "singular_values": [
+        0.1592440387566678,
+        0.1431004062011445,
+        0.040019994710156145,
+        0.007878597881153963,
+        3.1438250044206418e-15,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        882.7728648775905,
+        725.81342002248,
+        35.72806408539891,
+        2.2225847438933686,
+        2.6933900293712498e-14,
+        0.0,
+        0.0
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": -0.7071067811869917,
+          "PCr_rest_mM": 1.2212453270876722e-15,
+          "V_active_L": -7.521760991835436e-15,
+          "dG_ATP_kJ_mol": 0.7071067811861029,
+          "tau_PCr_rec_s": 4.732542482899227e-17,
+          "Q_loc_max_mM_s": -0.0,
+          "M_loc_mM_s": -0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 1.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P4_ergometer_absPCr": {
+      "channels": [
+        "P_ext_W",
+        "PCr_mM"
+      ],
+      "effective_rank": 3,
+      "nullspace_dim": 4,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 3.890967336178701,
+      "singular_values": [
+        0.42749229096687236,
+        0.13468525595423217,
+        0.1098678693578318,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        8344.37866240197,
+        828.2806981276343,
+        551.1614497804969,
+        7.963687046128328e-13,
+        0.0,
+        0.0,
+        -4.304391956965393e-13
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 1.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": -0.7071067811865472,
+          "dG_ATP_kJ_mol": 0.7071067811865475,
+          "tau_PCr_rec_s": 2.914335439641036e-16,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.8164965809281647,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": -0.4082482904634245,
+          "dG_ATP_kJ_mol": -0.40824829046342437,
+          "tau_PCr_rec_s": -4.163336342344337e-17,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P5_ergometer_absPCr_mriAnat": {
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "V_anat_mri"
+      ],
+      "effective_rank": 4,
+      "nullspace_dim": 3,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 10.949394073505237,
+      "singular_values": [
+        1.0024169455299472,
+        0.4270485038447748,
+        0.13179213660828146,
+        0.09154999252018362,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        8345.598510013693,
+        1022.7001096072935,
+        738.8452010793301,
+        258.45476738697397,
+        0.0,
+        0.0,
+        -3.669694589249075e-14
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 1.0
+        },
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.7071067811871171,
+          "PCr_rest_mM": 1.1102230246251565e-16,
+          "V_active_L": -1.1102230246251565e-16,
+          "dG_ATP_kJ_mol": -0.7071067811859777,
+          "tau_PCr_rec_s": 3.2959746043559335e-17,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P6_ergometer_absPCr_mri_uncalNIRS": {
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "V_anat_mri",
+        "NIRS_slope_uncal"
+      ],
+      "effective_rank": 5,
+      "nullspace_dim": 2,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 10.949394073505237,
+      "singular_values": [
+        1.0024169455299472,
+        1.0000000000000748,
+        0.4270485038447748,
+        0.13179213660828146,
+        0.09154999252018362,
+        0.0,
+        0.0
+      ],
+      "fim_eigenvalues": [
+        8345.598510013693,
+        1022.7001096072935,
+        738.8452010793301,
+        258.45476738697397,
+        56.25000000000842,
+        0.0,
+        -3.669694589249075e-14
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 0.0,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": 0.0,
+          "dG_ATP_kJ_mol": 0.0,
+          "tau_PCr_rec_s": 0.0,
+          "Q_loc_max_mM_s": 1.0,
+          "M_loc_mM_s": 0.0
+        },
+        {
+          "eta_loc": 0.7071067811871171,
+          "PCr_rest_mM": 1.1102230246251565e-16,
+          "V_active_L": -1.1102230246251565e-16,
+          "dG_ATP_kJ_mol": -0.7071067811859777,
+          "tau_PCr_rec_s": 3.2959746043559335e-17,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P7_physical_without_spec": {
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "VO2_pulm_L_min",
+        "V_anat_mri",
+        "M_loc_catheter",
+        "Q_loc_max_rec"
+      ],
+      "effective_rank": 6,
+      "nullspace_dim": 1,
+      "condition_number_all": Infinity,
+      "condition_number_effective": 10.938175609084098,
+      "singular_values": [
+        1.0033085910918342,
+        1.0000000000005662,
+        0.9999999999991497,
+        0.42984779073693347,
+        0.13538198096996382,
+        0.09172540530969275,
+        3.998301110205379e-15
+      ],
+      "fim_eigenvalues": [
+        8399.42280176137,
+        1032.3865295057428,
+        776.0161588075695,
+        263.7999614125954,
+        143.9999999997551,
+        28.44444444447665,
+        -2.1758558798221814e-13
+      ],
+      "nullspace_basis": [
+        {
+          "eta_loc": 0.7071067811871159,
+          "PCr_rest_mM": 0.0,
+          "V_active_L": -5.551115123125783e-17,
+          "dG_ATP_kJ_mol": -0.7071067811859792,
+          "tau_PCr_rec_s": -4.895172808772053e-16,
+          "Q_loc_max_mM_s": 0.0,
+          "M_loc_mM_s": 0.0
+        }
+      ],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    },
+    "P8_physical_with_spectroscopy": {
+      "channels": [
+        "P_ext_W",
+        "PCr_mM",
+        "VO2_pulm_L_min",
+        "V_anat_mri",
+        "M_loc_catheter",
+        "Q_loc_max_rec",
+        "dG_spec_channel"
+      ],
+      "effective_rank": 7,
+      "nullspace_dim": 0,
+      "condition_number_all": 15.390876185128148,
+      "condition_number_effective": 15.390876185128148,
+      "singular_values": [
+        1.0053006477551176,
+        1.0004016553762358,
+        1.0000000000005662,
+        0.9999999999991497,
+        0.42944117934104226,
+        0.13423880189600954,
+        0.06531796082711111
+      ],
+      "fim_eigenvalues": [
+        8400.81724351476,
+        1206.0635796173106,
+        776.462143099409,
+        699.7428621299649,
+        143.9999999997551,
+        117.53962312626695,
+        28.44444444447665
+      ],
+      "nullspace_basis": [],
+      "classification": "CONDITIONAL_MATHEMATICAL_RANK"
+    }
+  },
+  "level_2_practical_identifiability_with_nuisance": {
+    "classification": "PRACTICAL_IDENTIFIABILITY_DEFECT",
+    "total_parameters": 11,
+    "target_parameters_count": 7,
+    "nuisance_parameters_count": 4,
+    "channels": [
+      "P_ext_W",
+      "PCr_mM",
+      "VO2_pulm_L_min",
+      "V_anat_mri",
+      "NIRS_slope_uncal",
+      "dG_spec_channel"
+    ],
+    "effective_rank": 7,
+    "nullspace_dim": 4,
+    "condition_number_all": Infinity,
+    "condition_number_effective": 57.78142961116012,
+    "singular_values": [
+      1.416076530702099,
+      1.4143554764214752,
+      1.4142135623725465,
+      0.4300402957717135,
+      0.13486486087069466,
+      0.09349409476773407,
+      0.024507467887720673,
+      3.259694663831363e-15,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fim_eigenvalues": [
+      8401.103036595958,
+      1671.080259314941,
+      1360.1467040261268,
+      796.816814985607,
+      329.4012454434612,
+      112.4999999999127,
+      12.855181735795702,
+      2.0932094934303962e-13,
+      1.5897992655139398e-13,
+      0.0,
+      -1.4817923901695346e-14
+    ],
+    "nullspace_basis": [
+      {
+        "eta_loc": -0.5773502691902402,
+        "PCr_rest_mM": 2.220446049250313e-16,
+        "V_active_L": -6.522560269672795e-15,
+        "dG_ATP_kJ_mol": 0.5773502691893183,
+        "tau_PCr_rec_s": -2.03667378101402e-16,
+        "Q_loc_max_mM_s": 1.6653345369377348e-16,
+        "M_loc_mM_s": 0.0,
+        "a_eff": -6.675215935558754e-15,
+        "g_nirs": 0.0,
+        "b_nirs": 0.0,
+        "k_spec": -0.5773502691893184
+      },
+      {
+        "eta_loc": 0.0,
+        "PCr_rest_mM": -8.822829544954273e-18,
+        "V_active_L": -1.0133575627542722e-16,
+        "dG_ATP_kJ_mol": 1.1462475051032912e-16,
+        "tau_PCr_rec_s": -5.440388036826432e-17,
+        "Q_loc_max_mM_s": -0.9986931152131695,
+        "M_loc_mM_s": 0.03613904831212784,
+        "a_eff": -1.7061488375224412e-16,
+        "g_nirs": -0.036139048312161276,
+        "b_nirs": 0.0,
+        "k_spec": -1.8387038209566066e-16
+      },
+      {
+        "eta_loc": 0.0,
+        "PCr_rest_mM": 0.0,
+        "V_active_L": 0.0,
+        "dG_ATP_kJ_mol": 0.0,
+        "tau_PCr_rec_s": 0.0,
+        "Q_loc_max_mM_s": 0.0,
+        "M_loc_mM_s": 0.0,
+        "a_eff": 0.0,
+        "g_nirs": 0.0,
+        "b_nirs": 1.0,
+        "k_spec": 0.0
+      },
+      {
+        "eta_loc": 0.0,
+        "PCr_rest_mM": -3.322082879262668e-18,
+        "V_active_L": 9.755846507459239e-17,
+        "dG_ATP_kJ_mol": -9.222852880424415e-17,
+        "tau_PCr_rec_s": -9.546763255257749e-18,
+        "Q_loc_max_mM_s": 0.051108332254291344,
+        "M_loc_mM_s": 0.7061826740912234,
+        "a_eff": 9.755082934798439e-17,
+        "g_nirs": -0.7061826740918768,
+        "b_nirs": 0.0,
+        "k_spec": 9.2129786193065e-17
+      }
+    ],
+    "parameter_diagnosis": {
+      "eta_loc": {
+        "index": 0,
+        "is_target_parameter": true,
+        "nominal_value": 0.28,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "PCr_rest_mM": {
+        "index": 1,
+        "is_target_parameter": true,
+        "nominal_value": 33.6,
+        "status": "PRACTICALLY_IDENTIFIABLE"
+      },
+      "V_active_L": {
+        "index": 2,
+        "is_target_parameter": true,
+        "nominal_value": 0.12,
+        "status": "PRACTICALLY_IDENTIFIABLE"
+      },
+      "dG_ATP_kJ_mol": {
+        "index": 3,
+        "is_target_parameter": true,
+        "nominal_value": 54.0,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "tau_PCr_rec_s": {
+        "index": 4,
+        "is_target_parameter": true,
+        "nominal_value": 70.0,
+        "status": "PRACTICALLY_IDENTIFIABLE"
+      },
+      "Q_loc_max_mM_s": {
+        "index": 5,
+        "is_target_parameter": true,
+        "nominal_value": 0.6,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "M_loc_mM_s": {
+        "index": 6,
+        "is_target_parameter": true,
+        "nominal_value": 0.008,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "a_eff": {
+        "index": 7,
+        "is_target_parameter": false,
+        "nominal_value": 0.3157894736842105,
+        "status": "PRACTICALLY_IDENTIFIABLE"
+      },
+      "g_nirs": {
+        "index": 8,
+        "is_target_parameter": false,
+        "nominal_value": 18.75,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "b_nirs": {
+        "index": 9,
+        "is_target_parameter": false,
+        "nominal_value": 0.0,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      },
+      "k_spec": {
+        "index": 10,
+        "is_target_parameter": false,
+        "nominal_value": 1.0,
+        "status": "STRUCTURALLY_UNIDENTIFIABLE_OR_FLAT"
+      }
+    },
+    "finding": "When nuisance parameters (a_eff, g_nirs, b_nirs, k_spec) are unknown, the full 11D system has effective rank 7/11 (rank defect = 4). Parameters V_active, M_loc, and dG_ATP become unidentifiable ridges in profile likelihood without independent calibrations."
+  },
+  "level_3_empirical_identifiability_human_data": {
+    "classification": "NOT_EMPIRICALLY_IDENTIFIED",
+    "status": "NOT_EMPIRICALLY_IDENTIFIED",
+    "reason": "No simultaneous multimodal dataset exists in the human literature combining 3D MRI volumetry, dynamic in-magnet sEMG, calibrated 31P-MRS, and localized oxygen consumption/catheterization for the same individual.",
+    "multi_cohort_disconnection": {
+      "franke2020_mri_semg": "n=1, sEMG recorded outside magnet at 2 kHz (upsampled to 4 kHz in MAT); separate dynamic 31P-MRS trial inside magnet.",
+      "edwards2013_insight": "n=89 resting 31P-MRS cohort; provides PCr/ATP ratio distribution, but absolute concentration requires assumed [ATP]_ref.",
+      "andersen_saltin1985": "Femoral catheterization in human quadriceps during knee extensions; never measured in calf gastrocnemius.",
+      "ryan2014_mcmito": "Continuous-wave NIRS VOT recovery slopes uncalibrated for adipose tissue thickness and absolute molar flux."
+    },
+    "synthesis_verdict": "Cycle 8 empirical anchors represent an uncalibrated multi-study physiological scenario synthesis, not a jointly identified human observation map."
   }
 }

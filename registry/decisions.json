@@ -97,7 +97,7 @@
     "id": "DEC-0014",
     "date": "2026-11-08",
     "title": "Adoption of Physical Measurement Maps, Spectroscopic Rank Resolution, and Macro-Model Isolation",
-    "decision": "1. Adopt physical measurement maps (P1-P8) replacing theoretical ideal scalar channels. 2. Acknowledge that anatomical MRI volume V_anat is an upper bound on active volume V_active. 3. Formally recognize that independent 31P-MRS spectroscopic free-energy channels break the (eta_loc * Delta_G_ATP) collinearity (full rank 7/7). 4. Enforce structural isolation of D2 9D quotient against local single-muscle parameter transfer. 5. Maintain TARGET-CPE45 status as NOT EXTERNALLY VALIDATED and interventions as NO_GO.",
-    "rationale": "Results of Research Cycle 8 (EXP-0032..0036)."
+    "decision": "1. Adopt physical measurement maps replacing theoretical ideal scalar channels. 2. Acknowledge that anatomical MRI volume V_anat is an upper bound on active volume, while V_active is a scenario hypothesis. 3. Formally distinguish 3 levels of identifiability: Conditional Mathematical Full Rank (7/7 under frozen calibrations), Practical Identifiability Defect (rank defect = 4 under unknown nuisance parameters), and Empirical Identifiability Status (NOT_EMPIRICALLY_IDENTIFIED on real human data). 4. Enforce structural isolation of D2 9D quotient against local single-muscle parameter transfer. 5. Maintain TARGET-CPE45 status as NOT EXTERNALLY VALIDATED and interventions as NO_GO.",
+    "rationale": "Results and scientific validity corrections of Research Cycle 8 (EXP-0032..0036)."
   }
 ]
