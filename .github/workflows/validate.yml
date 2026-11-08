@@ -47,3 +47,5 @@ jobs:
         run: python -m unittest discover -s research/local_muscle_bridge_2026_11_07 -p test_local_bridge.py
       - name: Verify Cycle 8 empirical anchors, measurement maps and thermodynamic scaling
         run: python -m unittest discover -s research/empirical_anchors_2026_11_08 -p test_empirical_anchors.py
+      - name: Verify Cycle 9 empirical recruitment, volume conduction and LOSO validation
+        run: python -m unittest discover -s research/empirical_recruitment_2026_11_08 -p test_empirical_recruitment.py

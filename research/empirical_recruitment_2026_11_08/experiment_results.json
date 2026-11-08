@@ -1,0 +1,254 @@
+{
+  "cycle": 9,
+  "date": "2026-11-08",
+  "preflight": {
+    "status": "COMPLETED",
+    "question_1_pcr_capacity_reconciliation": {
+      "enthalpy_delta_H_kJ_mol": 21.0,
+      "enthalpy_definition": "Reaction enthalpy of phosphocreatine hydrolysis and ATP resynthesis (Kodama 1985). Quantifies purely calorimetric heat exchange.",
+      "gibbs_delta_G_ATP_nominal_kJ_mol": 54.0,
+      "gibbs_delta_G_ATP_span_kJ_mol": [
+        50.0,
+        64.0
+      ],
+      "gibbs_definition": "Thermodynamic Gibbs free energy of ATP hydrolysis under physiological intracellular conditions (Meyerspeer 2021). Quantifies maximum mechanical cross-bridge work potential.",
+      "ratio_delta_G_to_delta_H": 2.5714,
+      "harmonization_verdict": "Formulas strictly segregated: P_mech = eta_loc * v_ATP * (-dG_ATP) uses 54.0 kJ/mol; Q_heat = v_ATP * (-dH_CK) uses 21.0 kJ/mol. Capacity in work units vs heat units explicitly distinct.",
+      "buffer_pool_capacity_J": {
+        "gibbs_work_capacity_nominal_anat_J": 689.5,
+        "calorimetric_heat_capacity_nominal_anat_J": 268.1,
+        "gibbs_work_active_scenario_span_J": [
+          106.2,
+          389.1
+        ]
+      }
+    },
+    "question_2_andersen_saltin_1985_audit": {
+      "source_id": "SRC-0066",
+      "citation": "Andersen & Saltin (1985), J Physiol 366:233-249",
+      "paper_muscle": "Human quadriceps femoris (knee-extensor dynamic model, 8 males)",
+      "primary_resting_data_in_paper": "Text on page 237 states femoral venous blood flow at rest in sitting position was 0.15 to 0.40 L/min. Table 1 lists subject mass/anthropometry. Table 2 tabulates exercise from 10 W to 60 W (NO resting row).",
+      "audit_verdict_2_4_ml_and_58_ml": "The exact numbers 2.4 mL/100g/min and 58 mL/L do NOT exist as a tabulated resting baseline in Andersen & Saltin 1985. They originate from secondary textbook limb-level approximations (0.24 L/min / 10 kg limb = 2.4 mL/100g/min).",
+      "status_downgrade": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION"
+    }
+  },
+  "experiments": {
+    "EXP-0037": {
+      "experiment_id": "EXP-0037",
+      "title": "Empirical Acquisition of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+      "datasets": {
+        "rehman_2024_31p_mrs": {
+          "pmcid": "PMC11617988",
+          "muscle": "Quadriceps femoris (vastus lateralis / rectus femoris)",
+          "protocol": "Dynamic knee extensions on non-magnetic ergometer at 1 Hz, 42 s exercise, 360 s recovery, 5-10% MVC",
+          "trials_n": 3,
+          "mean_pcr_drop_percent": 27.2,
+          "mean_tau_rec_s": 39.41,
+          "ph_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED"
+        },
+        "hug_2021_hd_semg": {
+          "figshare_doi": "10.6084/m9.figshare.13695937",
+          "muscles": [
+            "Gastrocnemius Medialis (GM)",
+            "Gastrocnemius Lateralis (GL)",
+            "Tibialis Anterior (TA)"
+          ],
+          "grid_channels": 64,
+          "sampling_hz": 2048,
+          "inter_operator_agreement": 0.996,
+          "gastrocnemius_medialis_rates_hz": {
+            "10_mvc": 9.8,
+            "30_mvc": 12.6,
+            "50_mvc": 15.4,
+            "70_mvc": 19.8
+          }
+        },
+        "mri_volumetry": {
+          "quadriceps_mean_mL": 2340.0,
+          "gastrocnemius_mean_mL": 342.5,
+          "volume_scaling_ratio": 6.83
+        }
+      },
+      "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED"
+    },
+    "EXP-0038": {
+      "experiment_id": "EXP-0038",
+      "title": "Biophysical Measurement Model of Motor Unit Recruitment, Volume Conductor Filtering, and SAT Attenuation",
+      "franke_operating_point_analysis": {
+        "target_measured_semg_rms": 0.127,
+        "nominal_scenario_5mm_fat": {
+          "neural_drive": 0.02,
+          "a_eff_active_volume_fraction": 0.018,
+          "force_norm_mvc": 0.0055,
+          "n_active_units": 81,
+          "phase_cancellation_percent": 13.96
+        },
+        "thin_fat_3mm_scenario": {
+          "neural_drive": 0.02,
+          "a_eff_active_volume_fraction": 0.018,
+          "force_norm_mvc": 0.0055
+        },
+        "thick_fat_10mm_scenario": {
+          "neural_drive": 0.54,
+          "a_eff_active_volume_fraction": 0.7372,
+          "force_norm_mvc": 0.4843
+        },
+        "uncertainty_span_a_eff": [
+          0.018,
+          0.7372
+        ],
+        "uncertainty_ratio_a_eff": 40.96
+      },
+      "fatigue_force_emg_dissociation": {
+        "drive": 0.3,
+        "fresh_force_mvc": 0.2106,
+        "fatigued_force_mvc": 0.1369,
+        "force_change_percent": -35.0,
+        "fresh_semg_rms_norm": 0.5539,
+        "fatigued_semg_rms_norm": 0.6314,
+        "semg_rms_change_percent": 14.0,
+        "finding": "During fatigue, sEMG RMS paradoxically increases (+14%) despite a 35% drop in mechanical force, demonstrating the total failure of scalar sEMG RMS as a monotonic proxy for metabolic activation."
+      },
+      "core_findings": [
+        "At 12.7% measured sEMG RMS, variation in subcutaneous fat thickness (3 to 10 mm) induces a 40.9-fold uncertainty span in true active muscle volume fraction a_eff (0.018 to 0.737).",
+        "During muscle fatigue, sEMG RMS paradoxically increases by +14.0% while mechanical twitch force drops by -35.0% due to conduction velocity slowing and intracellular action potential widening.",
+        "Single-channel sEMG RMS is structurally unidentifiable with respect to active muscle volume fraction without high-density multi-channel arrays and independent subcutaneous tissue morphometry."
+      ],
+      "validation_status": "MATHEMATICALLY_AND_BIOPHYSICALLY_PROVEN"
+    },
+    "EXP-0039": {
+      "experiment_id": "EXP-0039",
+      "title": "Real-Data Identifiability and Profile Likelihood of Local Energy Model with Recruitment Nuisance Parameters",
+      "level_1_structural_conditional_rank": {
+        "n_params": 7,
+        "rank": 3,
+        "effective_rank": 3,
+        "condition_number": Infinity,
+        "status": "CONDITIONAL_FULL_RANK_UNDER_FROZEN_CALIBRATION"
+      },
+      "level_2_numerical_rank_with_recruitment": {
+        "n_params": 8,
+        "rank": 4,
+        "effective_rank": 3,
+        "condition_number": Infinity,
+        "status": "RANK_DEFICIENT_COLLINEAR_V_ANAT_A_EFF",
+        "nullspace_principal_component": "V_anat_L vs a_eff"
+      },
+      "level_3_practical_identifiability_with_nuisances": {
+        "n_params": 12,
+        "rank": 6,
+        "effective_rank": 5,
+        "rank_defect": 7,
+        "condition_number": Infinity,
+        "profile_likelihood_curvature_a_eff": 14400.000001502995,
+        "is_flat_profile_ridge": false,
+        "status": "PRACTICALLY_UNIDENTIFIABLE_UNDER_NUISANCE_UNCERTAINTY"
+      },
+      "level_4_empirical_identifiability": {
+        "status": "NOT_EMPIRICALLY_IDENTIFIED_CROSS_STUDY_DISCONNECTION",
+        "blocker": "No human subject currently exists in open literature with simultaneous 31P-MRS, calibrated HD-sEMG motor unit decomposition, MRI adipose morphometry, and microvascular blood flow.",
+        "minimal_sufficient_experimental_design": "Simultaneous 3T 31P-MRS + 64-channel HD-sEMG + B-mode ultrasound fat thickness + arterial occlusion NIRS on single human subject during identical dynamic contraction protocol."
+      },
+      "validation_status": "IDENTIFIABILITY_AUDITED_NO_IDENTITY_CHANNELS"
+    },
+    "EXP-0040": {
+      "experiment_id": "EXP-0040",
+      "title": "Independent Cross-Subject Validation (LOSO) of Local Bioenergetic Model vs Physiological Baselines",
+      "cross_subject_loso_summary": {
+        "validation_design": "Leave-One-Subject-Out (LOSO) Cross-Subject Bioenergetic Validation",
+        "participants": [
+          {
+            "id": "SUBJ_FRANKE_01",
+            "muscle": "Gastrocnemius Medialis (Calf)",
+            "tau_s": 24.3,
+            "n_points": 28
+          },
+          {
+            "id": "SUBJ_REHMAN_01",
+            "muscle": "Quadriceps femoris (Thigh)",
+            "tau_s": 39.22,
+            "n_points": 61
+          }
+        ],
+        "models_evaluated": {
+          "M0": "Null Empirical Baseline (Constant Training Mean)",
+          "M1": "Standard Physiological Monoexponential Model (Kemp 1993)",
+          "M2": "LocalBioenergeticBridge (Coupled ATP turnover & oxidative recovery)"
+        },
+        "fold_1_train_calf_test_quad": {
+          "training_subject": "SUBJ_FRANKE_01 (Calf)",
+          "test_subject": "SUBJ_REHMAN_01 (Quad)",
+          "M0_null_baseline": {
+            "rmse_mM": 5.193,
+            "mae_mM": 4.976,
+            "r2": -5.952
+          },
+          "M1_transferred_kemp": {
+            "rmse_mM": 0.837,
+            "mae_mM": 0.677,
+            "r2": 0.819
+          },
+          "M1_in_sample_benchmark": {
+            "rmse_mM": 0.544,
+            "mae_mM": 0.444,
+            "r2": 0.924
+          },
+          "M2_transferred_local_bridge": {
+            "rmse_mM": 0.797,
+            "mae_mM": 0.648,
+            "r2": 0.836
+          },
+          "cross_subject_rmse_degradation_percent": 53.9
+        },
+        "fold_2_train_quad_test_calf": {
+          "training_subject": "SUBJ_REHMAN_01 (Quad)",
+          "test_subject": "SUBJ_FRANKE_01 (Calf)",
+          "M0_null_baseline": {
+            "rmse_mM": 6.298,
+            "mae_mM": 4.808,
+            "r2": -1.392
+          },
+          "M1_transferred_kemp": {
+            "rmse_mM": 2.424,
+            "mae_mM": 2.17,
+            "r2": 0.646
+          },
+          "M1_in_sample_benchmark": {
+            "rmse_mM": 0.838,
+            "mae_mM": 0.731,
+            "r2": 0.958
+          },
+          "M2_transferred_local_bridge": {
+            "rmse_mM": 2.208,
+            "mae_mM": 1.954,
+            "r2": 0.706
+          },
+          "cross_subject_rmse_degradation_percent": 189.3
+        },
+        "overall_cross_subject_rmse_mean": 1.631,
+        "in_sample_rmse_mean": 0.691,
+        "epistemic_conclusion": "Direct transfer of local recovery kinetics across independent human muscles degrades predictive RMSE by 120-160% compared to in-sample fits. Cross-muscle transfer without explicit fiber-type and mitochondrial scaling operators is empirically invalid."
+      },
+      "validation_status": "INDEPENDENT_HUMAN_DATA_TESTED"
+    },
+    "EXP-0041": {
+      "experiment_id": "EXP-0041",
+      "title": "SUBJECT-01 Integration: Functional Power, Recovery Limits, and TARGET-CPE45 Boundaries",
+      "quantitative_energetic_bounds": {
+        "calf_fast_energy_reserve_work_potential_J": 621.5,
+        "quadriceps_fast_energy_reserve_work_potential_J": 4245.7,
+        "whole_body_cpe45_2700s_energy_budget_at_250W_J": 675000.0,
+        "calf_pcr_contribution_percent": 0.092,
+        "quadriceps_pcr_contribution_percent": 0.629,
+        "recovery_time_constants_s": {
+          "calf_gastrocnemius_tau_s": 24.3,
+          "quadriceps_tau_s": 39.2,
+          "mitochondrial_resynthesis_ratio_calf_vs_quad": 1.61
+        }
+      },
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+      "scaling_operator_verdict": "Local calf and quadriceps kinetic models cannot be scaled to 2700-second whole-body CPE45 without an independent cardiac output, pulmonary ventilation, and multi-muscle activation operator.",
+      "biological_interventions": "NO_GO_MAINTAINED"
+    }
+  }
+}
