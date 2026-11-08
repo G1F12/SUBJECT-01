@@ -1094,5 +1094,73 @@
       "source_id": "SRC-0062"
     },
     "limits": "Actual numeric files only where documented; no exhaustive notices/retraction review or local physiological validation"
+  },
+  {
+    "id": "SRC-0063",
+    "name": "Franke et al. (2020)",
+    "type": "peer_reviewed_article_pmc",
+    "doi": "10.3389/fbioe.2020.00622",
+    "pmc": "PMC7332772",
+    "title": "Energy Expenditure of Dynamic Submaximal Human Plantarflexion Movements: Model Prediction and Validation by in-vivo Magnetic Resonance Spectroscopy",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_anchors_2026_11_08/sources.json",
+      "source_id": "SRC-0063"
+    }
+  },
+  {
+    "id": "SRC-0064",
+    "name": "Sleigh et al. (2013)",
+    "type": "peer_reviewed_article_pmc",
+    "doi": "10.1038/srep01182",
+    "pmc": "PMC3560356",
+    "title": "Integrating muscle cell biochemistry and whole-body physiology in humans: 31P-MRS data from the InSight trial",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_anchors_2026_11_08/sources.json",
+      "source_id": "SRC-0064"
+    }
+  },
+  {
+    "id": "SRC-0065",
+    "name": "Meyerspeer et al. (2021)",
+    "type": "consensus_recommendations_pmc",
+    "doi": "10.1002/nbm.4246",
+    "pmc": "PMC8359288",
+    "title": "31P magnetic resonance spectroscopy in skeletal muscle: Experts' consensus recommendations",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_anchors_2026_11_08/sources.json",
+      "source_id": "SRC-0065"
+    }
+  },
+  {
+    "id": "SRC-0066",
+    "name": "Andersen & Saltin (1985) / Radegran & Saltin (1998)",
+    "type": "peer_reviewed_physiological_landmark",
+    "doi": "10.1113/jphysiol.1985.sp015864",
+    "title": "Maximal and resting blood flow and oxygen uptake in human quadriceps / calf muscle by direct arterial-venous catheterization",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_anchors_2026_11_08/sources.json",
+      "source_id": "SRC-0066"
+    }
+  },
+  {
+    "id": "SRC-0067",
+    "name": "Ryan et al. (2014) / McManus (2018 MCMITO)",
+    "type": "methodological_benchmark_zenodo",
+    "doi": "10.1113/jphysiol.2013.265686",
+    "title": "Non-invasive assessment of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: arterial occlusion and scattering corrections",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/empirical_anchors_2026_11_08/DATA_AUDIT.md",
+    "review_provenance": {
+      "path": "research/empirical_anchors_2026_11_08/sources.json",
+      "source_id": "SRC-0067"
+    }
   }
 ]

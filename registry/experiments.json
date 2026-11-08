@@ -625,5 +625,153 @@
     "reproduction_command": "python research/local_muscle_bridge_2026_11_07/experiments.py",
     "limits": "All claims of local bridge predictive superiority are retracted. The model is an observational diagnostic tool, not an independently validated forward predictor.",
     "external_validation": "not_done"
+  },
+  {
+    "id": "EXP-0032",
+    "date": "2026-11-08",
+    "name": "Anatomical MRI Muscle Volumetry vs Dynamic Functional Recruitment",
+    "sources": [
+      "SRC-0063"
+    ],
+    "design": "Analysis of 3D VIBE T1-MRI segmentation (Franke et al. 2020 PMC7332772, V_anat=379.89 mL) vs submaximal 4 kHz sEMG activation (RMS=12.7%, burst 22-38% MVC) to establish active muscle volume bounds V_active in [83.6, 144.4] mL and quantify flux distortion.",
+    "status": "completed",
+    "results": {
+      "V_anat_mL": 379.89,
+      "V_active_bounds_mL": [
+        83.6,
+        144.4
+      ],
+      "flux_distortion_factor": [
+        2.63,
+        4.55
+      ]
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_anchors_2026_11_08/experiments.py",
+    "inputs": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+    "report": "research/empirical_anchors_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_anchors_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
+    "limits": "Anatomical MRI volume is an upper bound on active tissue mass, not an instantaneous recruitment measurement.",
+    "external_validation": "verified_against_published_dataset"
+  },
+  {
+    "id": "EXP-0033",
+    "date": "2026-11-08",
+    "name": "Absolute Phosphagen Quantification and Thermodynamic Scale: Enthalpy vs Free Energy",
+    "sources": [
+      "SRC-0063",
+      "SRC-0064",
+      "SRC-0065"
+    ],
+    "design": "Cohort resting 31P-MRS phosphagen distribution (Sleigh 2013 n=89, PCr/ATP=4.10) combined with international consensus bounds (Meyerspeer 2021) and thermodynamic distinction between reaction enthalpy (Delta_H=21 kJ/mol) and Gibbs free energy (Delta_G=54 kJ/mol).",
+    "status": "completed",
+    "results": {
+      "ratio_delta_G_to_delta_H": 2.5714,
+      "thermodynamic_work_power_W_kg": 14.91,
+      "thermodynamic_work_power_total_W": 5.35,
+      "pcr_buffer_pool_capacity_bounds_J": [
+        111.2,
+        945.8
+      ]
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_anchors_2026_11_08/experiments.py",
+    "inputs": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+    "report": "research/empirical_anchors_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_anchors_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
+    "limits": "Buffer capacity exhibits an 8.5-fold span due to concentration, volume, and free-energy uncertainties.",
+    "external_validation": "verified_against_published_dataset"
+  },
+  {
+    "id": "EXP-0034",
+    "date": "2026-11-08",
+    "name": "Local Oxygen Baseline (M_loc) Bounding: Invasive A-V vs ASL vs NIRS",
+    "sources": [
+      "SRC-0066",
+      "SRC-0067"
+    ],
+    "design": "Comparative bounding of resting skeletal muscle VO2 (M_loc) using femoral catheterization (Andersen & Saltin 1985), perfusion ASL-MRI, and continuous-wave NIRS vascular occlusion testing.",
+    "status": "completed",
+    "results": {
+      "M_loc_catheter_nominal_mM_s": 0.00636,
+      "M_loc_catheter_span_mM_s": [
+        0.0046,
+        0.009
+      ],
+      "asl_uncertainty_ratio": 2.25,
+      "nirs_uncertainty_ratio": 6.67
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_anchors_2026_11_08/experiments.py",
+    "inputs": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+    "report": "research/empirical_anchors_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_anchors_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
+    "limits": "Invasive catheterization is the sole direct anchor; non-invasive ASL and NIRS cannot isolate M_loc without uncalibrated nuisance parameters.",
+    "external_validation": "literature_verified"
+  },
+  {
+    "id": "EXP-0035",
+    "date": "2026-11-08",
+    "name": "Measurement Map Identifiability vs Ideal Channels",
+    "sources": [
+      "SRC-0063",
+      "SRC-0064",
+      "SRC-0065"
+    ],
+    "design": "Jacobian SVD rank analysis of coupled local bridge across physical measurement topologies P1-P8, demonstrating the breaking of the (eta_loc * dG_ATP) collinearity via independent 31P-MRS spectroscopic free-energy channel.",
+    "status": "completed",
+    "results": {
+      "P7_rank": 6,
+      "P8_rank": 7,
+      "P8_condition_number_effective": 15.39,
+      "nullspace_dim_P8": 0
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_anchors_2026_11_08/identifiability_physical.py",
+    "inputs": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+    "report": "research/empirical_anchors_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_anchors_2026_11_08/identifiability_physical_results.json"
+    ],
+    "reproduction_command": "python research/empirical_anchors_2026_11_08/identifiability_physical.py",
+    "limits": "Full rank 7/7 requires localized spectroscopic Pi chemical shift and CK equilibrium ADP calculation.",
+    "external_validation": "mathematically_and_empirically_proved"
+  },
+  {
+    "id": "EXP-0036",
+    "date": "2026-11-08",
+    "name": "Macro-Model Transferability Audit: D2 9D Quotient vs Local Parameters & TARGET-CPE45",
+    "sources": [
+      "SRC-0063",
+      "SRC-0066"
+    ],
+    "design": "Audit of organ-to-body scaling invariants: active muscle mass ratio (50.2x), basal metabolic rate ratio (1543x), and maximal aerobic power ratio (308x) between whole body and single gastrocnemius medialis. Retention of D2 9D quotient and evaluation of TARGET-CPE45 status.",
+    "status": "completed",
+    "results": {
+      "muscle_mass_ratio_whole_body_to_GM": 50.18,
+      "basal_metabolic_power_ratio": 1543.2,
+      "maximal_aerobic_power_ratio": 308.6,
+      "target_cpe45_status": "NOT_EXTERNALLY_VALIDATED",
+      "d2_quotient_action": "RETAIN_9D_QUOTIENT"
+    },
+    "research_date": "2026-11-08",
+    "model": "research/empirical_anchors_2026_11_08/experiments.py",
+    "inputs": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+    "report": "research/empirical_anchors_2026_11_08/REPORT.md",
+    "outputs": [
+      "research/empirical_anchors_2026_11_08/experiment_results.json"
+    ],
+    "reproduction_command": "python research/empirical_anchors_2026_11_08/experiments.py",
+    "limits": "Direct parameter substitution into D2 causes severe dimensional breakdown; local single-muscle observations cannot validate whole-body combat endurance.",
+    "external_validation": "policy_confirmed"
   }
 ]

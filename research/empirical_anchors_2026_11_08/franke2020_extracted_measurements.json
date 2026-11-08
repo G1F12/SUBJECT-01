@@ -1,0 +1,78 @@
+{
+  "source": "Franke et al. (2020) Front. Bioeng. Biotechnol. 8:622, PMC7332772",
+  "doi": "10.3389/fbioe.2020.00622",
+  "subject_info": {
+    "n": 1,
+    "exercise_modality": "Dynamic submaximal plantarflexion (1 Hz metronome, 60 s active phase)",
+    "target_muscle": "M. gastrocnemius medialis (right calf)"
+  },
+  "mri_anatomical_parameters": {
+    "sequence": "3D T1-weighted VIBE, isotropic 0.8 mm^3, 160 sagittal slices",
+    "software": "OsiriX MD (manual segmentation)",
+    "volume_m3": 0.00037989,
+    "volume_L": 0.37989,
+    "volume_mL": 379.89,
+    "muscle_mass_kg": 0.3587,
+    "muscle_density_kg_m3": 1059.7,
+    "optimal_fiber_length_m": 0.0574,
+    "tendon_slack_length_m": 0.2573,
+    "pennation_angle_deg": 27.0,
+    "lever_arm_m": -0.064,
+    "pcsa_m2": 0.005898,
+    "pcsa_cm2": 58.98,
+    "f_max_isometric_N": 1474.4
+  },
+  "mrs_dynamic_energy_accumulation": {
+    "sequence": "MUSCLE (TR=5 s, 16 mm slice, OVS, GM localization)",
+    "time_points_s": [
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0
+    ],
+    "energy_exp_J_per_kg": [
+      0.0,
+      24.281938634090068,
+      60.27791140045187,
+      98.71541975474494,
+      107.82781760479074,
+      117.76740237533971,
+      131.01573482789584,
+      141.80918996799306,
+      152.22907682141405,
+      168.23914625048485,
+      155.41774898270359
+    ],
+    "linear_fit_rate_early_burst_J_per_kg_s": 5.8,
+    "linear_fit_rate_ci95_J_per_kg_s": 1.8,
+    "assumed_enthalpy_Delta_H_kJ_mol": 21.0,
+    "thermodynamic_work_Delta_G_ATP_nominal_kJ_mol": 54.0,
+    "water_conversion_L_per_kg": 0.68
+  },
+  "semg_activation_statistics": {
+    "count": 240001,
+    "min": 0.0,
+    "max": 1.5050858627662214,
+    "mean": 0.06775118593002784,
+    "std": 0.10741431736727401,
+    "rms": 0.1269962943176007,
+    "median": 0.020104532110143486,
+    "p25": 0.004131068241810305,
+    "p75": 0.08633932625383539
+  },
+  "kinematics_ankle_angle_statistics": {
+    "count": 240001,
+    "min_deg": 1.5039767061658198,
+    "max_deg": 19.932636954548023,
+    "mean_deg": 8.005664363287362,
+    "std_deg": 5.170474916950266,
+    "rom_deg": 18.428660248382204
+  }
+}
