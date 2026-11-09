@@ -1,3 +1,45 @@
+# SUBJECT-01 — состояние после EXP-0042 Final Numerical Lock & Cycle 10 Multi-Subject CPET Validation (EXP-0043), 09.11.2026
+
+База: 7ee8c127dad2a56bef4427c8e9e5777bdc385b8c;
+Ветка: feature/exp-0042-lock-and-cycle10-data-acquisition (слияние в main).
+
+Ключевые артефакты Cycle 10:
+- [Отчёт по валидации CPET PhysioNet ACTES (N=18)](research/cpet_cycloergometer_2026_11_09/CPET_VALIDATION_REPORT.md),
+- [Канонический JSON валидации ACTES (EXP-0043)](research/cpet_cycloergometer_2026_11_09/actes_validation_results.json),
+- [Систематический рейтинг и аудит датасетов](research/cpet_cycloergometer_2026_11_09/DATASET_RANKING.md),
+- [Матрица остаточных барьеров и неидентифицируемости M3](research/cpet_cycloergometer_2026_11_09/REMAINING_BARRIERS_MATRIX.md),
+- [Движок мультисубъектной валидации CPET](tools/evaluate_actes_models.py),
+- [Тесты валидации ACTES CPET](tests/test_actes_cpet_validation.py),
+- [Реестр эмпирических датасетов Cycle 10](research/cpet_cycloergometer_2026_11_09/empirical_datasets_cycle10.json),
+- [Канонический отчёт валидации Rehman 2024 (EXP-0042 Locked)](research/empirical_recruitment_2026_11_08/REAL_DATA_VALIDATION_REPORT.md),
+- [Канонический JSON валидации Rehman (EXP-0042 Locked)](research/empirical_recruitment_2026_11_08/rehman2024_validation_results.json),
+- [Генератор структурных таблиц Rehman](tools/generate_rehman_report_tables.py),
+- [Сквозной аудит Evidence Gate V2](tools/verify_data_provenance.py).
+
+Главные итоги:
+1. **EXP-0042 Final Numerical Lock**:
+   - Канонические значения базового PCr зафиксированы: Trial 1 = $2481.43 \pm 74.26$, Trial 2 = $1679.00 \pm 38.71$, Trial 3 = $1675.57 \pm 34.21$.
+   - Канонические значения M2 $k$: Trial 1 = $1.2979\text{ мин}^{-1}$, Trial 2 = $1.1469\text{ мин}^{-1}$, Trial 3 = $0.9696\text{ мин}^{-1}$.
+   - Примитивный `assertIn` заменён глубоким структурным парсером Markdown $\leftrightarrow$ JSON с 3 негативными тестами на перестановку строк, подмену метрик и посторонние цифры в тексте.
+   - Статус: `EXP-0042_NUMERICALLY_LOCKED`.
+2. **Cycle 10 Data Acquisition (PhysioNet ACTES Cycloergometer, SRC-0073)**:
+   - Преодолён барьер единичного субъекта ($N=1$): получен датасет из $N = 18$ независимых спортсменов-подростков (фехтование, гребля на байдарках, триатлон).
+   - 52,062 синхронизированных beat-to-beat наблюдений механической мощности ($P_{\text{mech}}$ в Вт), потребления кислорода ($\dot{V}\text{O}_2$ в л/мин) и кардиоинтервалов ($RR$ в мс).
+   - Полное байтовое совпадение SHA256: `test_measure.csv` (`14a9df02...`), `subject-info.csv` (`5ac7cdd4...`), `LICENSE.txt` (`86c0ad30...`). Лицензия ODC-By v1.0.
+3. **Первая независимая мультисубъектная верификация (EXP-0043)**:
+   - Проведён строгий Leave-One-Subject-Out (LOSO) кросс-валидационный тест на всех 18 участниках без утечки таргета.
+   - Динамическая биоэнергетическая ОДУ с аллометрическим масштабированием по массе тела ($P/M \to \dot{V}\text{O}_2/M$) показала кросс-субъектный $R^2_{\text{LOSO}} = 0.7371 \pm 0.1770$ (RMSE $= 0.290 \pm 0.059\text{ л/мин}$), значительно превосходя эмпирическую статическую линейную M1 ($R^2 = 0.4045$, RMSE $= 0.416\text{ л/мин}$) и константную M0 ($R^2 = -0.8343$, RMSE $= 0.773\text{ л/мин}$).
+4. **Матрица остаточных барьеров (`REMAINING_BARRIERS_MATRIX`)**:
+   - Валидация макроскопического аэробного сопряжения ($\dot{E}_{\text{met}} = P_{\text{mech}} / \eta$) НЕ означает валидацию внутриклеточных микросостояний ([PCr], [Pi], [ATP], pH) и рекрутирования двигательных единиц.
+   - В силу проблемы «многие-к-одному» (entanglement fallacy), системный $\dot{V}\text{O}_2$ не идентифицирует компартментные профили.
+5. **Незыблемые эпистемические инварианты**:
+   - `TARGET-CPE45`: **`NOT EXTERNALLY VALIDATED`** (15-минутный ступенчатый тест до отказа не валидирует 45-минутный экстремальный стресс).
+   - Биологические вмешательства: **`NO_GO`**.
+   - Реестры: HYP=8, EXP=43, FND=43, NEG=36, DEC=17, ISS=19, SRC=73.
+   - Тесты: 74/74 PASS (включая 13 тестов Rehman и 7 тестов ACTES CPET), Evidence Gate V2 (8/8 негативных проверок).
+
+---
+
 # SUBJECT-01 — состояние после EXP-0042 Scientific Corrigendum & Model Integrity, 09.11.2026
 
 База b98c3eb68654dc8f22ce1dd64be70c3b45528623;

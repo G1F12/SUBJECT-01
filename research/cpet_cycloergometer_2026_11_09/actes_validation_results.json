@@ -1,0 +1,821 @@
+{
+  "experiment_id": "EXP-0043",
+  "dataset_id": "SRC-0073_PHYSIONET_ACTES_CYCLOERGOMETER",
+  "cycle": 10,
+  "date": "2026-11-09",
+  "governing_standard": "EVIDENCE_GATE_V2",
+  "cohort_description": {
+    "source_id": "SRC-0073",
+    "doi": "10.13026/2qs3-kh43",
+    "archive": "PhysioNet / Open AWS S3",
+    "n_biological_participants": 18,
+    "sports": [
+      "fencing",
+      "kayak",
+      "triathlon"
+    ],
+    "age_range_years": [
+      12,
+      18
+    ],
+    "total_records": 52062
+  },
+  "loso_cross_validation": {
+    "n_folds": 18,
+    "validation_strategy": "LEAVE_ONE_SUBJECT_OUT_CROSS_VALIDATION_STRICT",
+    "M0_null_summary": {
+      "rmse_mean": 0.7725399106679802,
+      "rmse_sd": 0.16160932365735386,
+      "mae_mean": 0.6403012959367449,
+      "mae_sd": 0.14210955033982306,
+      "r_squared_mean": -0.8342816826863341,
+      "r_squared_sd": 1.2893736263066313,
+      "bias_mean": 0.06796516551836296,
+      "bias_sd": 0.4286586149197989
+    },
+    "M1_empirical_linear_summary": {
+      "rmse_mean": 0.4158100408543596,
+      "rmse_sd": 0.08033275118362962,
+      "mae_mean": 0.3131318935585401,
+      "mae_sd": 0.07855279257825262,
+      "r_squared_mean": 0.4044527075005011,
+      "r_squared_sd": 0.5860135609465699,
+      "bias_mean": 0.026611814090598398,
+      "bias_sd": 0.23714587033617232
+    },
+    "M2_dynamic_pop_summary": {
+      "rmse_mean": 0.317249640749585,
+      "rmse_sd": 0.07982963707803581,
+      "mae_mean": 0.26734101703708135,
+      "mae_sd": 0.08293552661698188,
+      "r_squared_mean": 0.6058778482302619,
+      "r_squared_sd": 0.4935515634562798,
+      "bias_mean": 0.034285858460836684,
+      "bias_sd": 0.23665653046948687
+    },
+    "M2_dynamic_allometric_summary": {
+      "rmse_mean": 0.29028815100801847,
+      "rmse_sd": 0.05856664834126835,
+      "mae_mean": 0.2409031250459917,
+      "mae_sd": 0.05044227062549502,
+      "r_squared_mean": 0.7371410157161766,
+      "r_squared_sd": 0.17701573602564624,
+      "bias_mean": 0.01219408026665767,
+      "bias_sd": 0.17747565703022275
+    },
+    "M2_dynamic_calibrated_base_summary": {
+      "rmse_mean": 0.4001765355048152,
+      "rmse_sd": 0.1667976194215515,
+      "mae_mean": 0.35120481187525804,
+      "mae_sd": 0.16119611975037268,
+      "r_squared_mean": 0.5937807086148639,
+      "r_squared_sd": 0.16945231180118914,
+      "bias_mean": -0.3186508792230416,
+      "bias_sd": 0.19127480381957251
+    },
+    "folds": [
+      {
+        "test_subject_id": 1,
+        "sport": "fencing",
+        "weight_kg": 53.7,
+        "p_max_w": 170.0,
+        "vo2_max_l_min": 1.789775482,
+        "n_records": 2403,
+        "M0_null": {
+          "rmse": 0.7150687729219074,
+          "mae": 0.6147622274605523,
+          "r_squared": -2.6941684540324977,
+          "bias": 0.6106633255294016
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.396723767369565,
+          "mae": 0.3616796445298013,
+          "r_squared": -0.13709698676535798,
+          "bias": 0.3372515916332882
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.36879058905285333,
+          "mae": 0.3458751917239272,
+          "r_squared": 0.01739101770454754,
+          "bias": 0.34584549687341826
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.23727953059388493,
+          "mae": 0.20856906307404185,
+          "r_squared": 0.5932368341205051,
+          "bias": 0.20203697527533832
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.14199765486398297,
+          "mae": 0.10663921769785858,
+          "r_squared": 0.8543255410861875,
+          "bias": -0.06136728053728451
+        }
+      },
+      {
+        "test_subject_id": 2,
+        "sport": "fencing",
+        "weight_kg": 56.2,
+        "p_max_w": 140.0,
+        "vo2_max_l_min": 1.959790682,
+        "n_records": 2000,
+        "M0_null": {
+          "rmse": 0.6877638253227083,
+          "mae": 0.5331287062761357,
+          "r_squared": -0.8877854830059135,
+          "bias": 0.4716469472954969
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.2959755113122557,
+          "mae": 0.20667906129218605,
+          "r_squared": 0.6503886346093779,
+          "bias": 0.09268609578438361
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.21744486581025155,
+          "mae": 0.1562959652379978,
+          "r_squared": 0.8112998266574089,
+          "bias": 0.09721262134179325
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.21272404102822356,
+          "mae": 0.17854550304997133,
+          "r_squared": 0.8194044135116288,
+          "bias": -0.006632954403008583
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.4035224245718672,
+          "mae": 0.36318044406228417,
+          "r_squared": 0.35015567261145464,
+          "bias": -0.3535510871334761
+        }
+      },
+      {
+        "test_subject_id": 3,
+        "sport": "fencing",
+        "weight_kg": 89.9,
+        "p_max_w": 305.0,
+        "vo2_max_l_min": 3.455253083,
+        "n_records": 3443,
+        "M0_null": {
+          "rmse": 0.8953623661383403,
+          "mae": 0.7704030039281107,
+          "r_squared": -0.12729439676439291,
+          "bias": -0.30087410102483575
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4862744847719802,
+          "mae": 0.24181334904661797,
+          "r_squared": 0.6674915849992735,
+          "bias": -0.08316669471344831
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.2624261434803243,
+          "mae": 0.18371862634436772,
+          "r_squared": 0.9031602025289478,
+          "bias": -0.07358513328354642
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.3392189965114756,
+          "mae": 0.26561134057192654,
+          "r_squared": 0.8381919939456132,
+          "bias": 0.19715328805052948
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.382417039516617,
+          "mae": 0.30737163727002687,
+          "r_squared": 0.7943568980745808,
+          "bias": -0.28773265920130725
+        }
+      },
+      {
+        "test_subject_id": 4,
+        "sport": "fencing",
+        "weight_kg": 76.5,
+        "p_max_w": 305.0,
+        "vo2_max_l_min": 3.43716963,
+        "n_records": 3694,
+        "M0_null": {
+          "rmse": 0.6751733992658864,
+          "mae": 0.5404357299738806,
+          "r_squared": -0.007832772870578264,
+          "bias": -0.05952218314034028
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.5022377309914671,
+          "mae": 0.3917351521879508,
+          "r_squared": 0.44233100124224956,
+          "bias": 0.1907566348800331
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.3562138891985372,
+          "mae": 0.2866530009323207,
+          "r_squared": 0.719469860285004,
+          "bias": 0.202907530270386
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.40441584065655883,
+          "mae": 0.327505899656805,
+          "r_squared": 0.6384118858363617,
+          "bias": 0.29991840678973736
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.32150751741209843,
+          "mae": 0.2503118546689846,
+          "r_squared": 0.7714716448956408,
+          "bias": -0.13285411071912892
+        }
+      },
+      {
+        "test_subject_id": 5,
+        "sport": "fencing",
+        "weight_kg": 76.4,
+        "p_max_w": 275.0,
+        "vo2_max_l_min": 3.386348798,
+        "n_records": 3594,
+        "M0_null": {
+          "rmse": 0.8948440254642551,
+          "mae": 0.7528686180511822,
+          "r_squared": -0.15460011447168664,
+          "bias": -0.32744355768409467
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4626474483556707,
+          "mae": 0.27483635536325207,
+          "r_squared": 0.6913706294753177,
+          "bias": -0.2118500896548131
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.31162116388626887,
+          "mae": 0.25066597069912433,
+          "r_squared": 0.8599797653308744,
+          "bias": -0.20370340160308398
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.2821840997138358,
+          "mae": 0.21930719374626528,
+          "r_squared": 0.885184112216002,
+          "bias": -0.09250317407796022
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.5336432800777076,
+          "mae": 0.4839090137144533,
+          "r_squared": 0.589381038355643,
+          "bias": -0.47870917728296053
+        }
+      },
+      {
+        "test_subject_id": 6,
+        "sport": "fencing",
+        "weight_kg": 65.6,
+        "p_max_w": 245.0,
+        "vo2_max_l_min": 3.415759029,
+        "n_records": 2683,
+        "M0_null": {
+          "rmse": 0.7463293563956421,
+          "mae": 0.6322453596283178,
+          "r_squared": -0.10004720872389594,
+          "bias": -0.22507504788652152
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.3870486950600279,
+          "mae": 0.2637057991853891,
+          "r_squared": 0.7041432452276079,
+          "bias": -0.20170304615655982
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.28054951691262325,
+          "mae": 0.2422134225259257,
+          "r_squared": 0.8445576603327483,
+          "bias": -0.19322381266050365
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.31612426945463756,
+          "mae": 0.2705131481902438,
+          "r_squared": 0.8026369029629055,
+          "bias": -0.2113777818272502
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.49431412979611294,
+          "mae": 0.45811292528143077,
+          "r_squared": 0.5174344400631599,
+          "bias": -0.45052621372706336
+        }
+      },
+      {
+        "test_subject_id": 7,
+        "sport": "fencing",
+        "weight_kg": 49.8,
+        "p_max_w": 170.0,
+        "vo2_max_l_min": 1.658511158,
+        "n_records": 2207,
+        "M0_null": {
+          "rmse": 0.7646063573782874,
+          "mae": 0.7027890478906524,
+          "r_squared": -5.397175106390579,
+          "bias": 0.7023070688128799
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.5030219171928307,
+          "mae": 0.4549298802381408,
+          "r_squared": -1.7687659506382505,
+          "bias": 0.40129101217222896
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.4487691702097277,
+          "mae": 0.40587590457879114,
+          "r_squared": -1.2037303709809266,
+          "bias": 0.40567003356790277
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.2819703592492863,
+          "mae": 0.2289164998504679,
+          "r_squared": 0.12999981588920273,
+          "bias": 0.21689988165864435
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.1951736389941832,
+          "mae": 0.1632202224527369,
+          "r_squared": 0.5831740502496141,
+          "bias": -0.035597153853751895
+        }
+      },
+      {
+        "test_subject_id": 8,
+        "sport": "fencing",
+        "weight_kg": 51.2,
+        "p_max_w": 170.0,
+        "vo2_max_l_min": 1.994150607,
+        "n_records": 2121,
+        "M0_null": {
+          "rmse": 0.6792837466922074,
+          "mae": 0.5445652056746566,
+          "r_squared": -0.9690230060236129,
+          "bias": 0.4765328804624068
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.3570228898546442,
+          "mae": 0.2984450001360283,
+          "r_squared": 0.4560731897082999,
+          "bias": 0.1937095775910773
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.25721228652996514,
+          "mae": 0.21495578605244767,
+          "r_squared": 0.7176864233512112,
+          "bias": 0.20092148354495626
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.1764715822559439,
+          "mae": 0.13658400027832873,
+          "r_squared": 0.8671082859269852,
+          "bias": 0.028873146606277527
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.34150126737187764,
+          "mae": 0.3032365726219114,
+          "r_squared": 0.5023397156229729,
+          "bias": -0.30138745465684524
+        }
+      },
+      {
+        "test_subject_id": 9,
+        "sport": "fencing",
+        "weight_kg": 57.1,
+        "p_max_w": 200.0,
+        "vo2_max_l_min": 1.742767259,
+        "n_records": 2823,
+        "M0_null": {
+          "rmse": 0.7069587294872427,
+          "mae": 0.5691027853413814,
+          "r_squared": -1.759287715882945,
+          "bias": 0.5645000735884032
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4392356399589053,
+          "mae": 0.3973089087057003,
+          "r_squared": -0.06513341226724578,
+          "bias": 0.32086825049826323
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.3674010688605132,
+          "mae": 0.33075899316210217,
+          "r_squared": 0.25477108816150307,
+          "bias": 0.3262940364004904
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.2733308966014058,
+          "mae": 0.23475925859802996,
+          "r_squared": 0.5875357461499335,
+          "bias": 0.22190069561889653
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.18410995507185704,
+          "mae": 0.14894956186558092,
+          "r_squared": 0.812861386035243,
+          "bias": -0.07335344809372041
+        }
+      },
+      {
+        "test_subject_id": 10,
+        "sport": "fencing",
+        "weight_kg": 58.8,
+        "p_max_w": 200.0,
+        "vo2_max_l_min": 2.352912441,
+        "n_records": 2635,
+        "M0_null": {
+          "rmse": 0.609025774027219,
+          "mae": 0.4940901939162494,
+          "r_squared": -0.39997131847118195,
+          "bias": 0.32552963262718365
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.3944581081843881,
+          "mae": 0.33701285190771246,
+          "r_squared": 0.4127141075612244,
+          "bias": 0.15591693693782605
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.26455019151279563,
+          "mae": 0.2357608029118416,
+          "r_squared": 0.7358418867409882,
+          "bias": 0.16498417241880098
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.22311491308638978,
+          "mae": 0.18234065086034457,
+          "r_squared": 0.8121094261647203,
+          "bias": 0.07744298704479916
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.3629931629080265,
+          "mae": 0.30285874881265934,
+          "r_squared": 0.502669970270911,
+          "bias": -0.2983236659020414
+        }
+      },
+      {
+        "test_subject_id": 11,
+        "sport": "kayak",
+        "weight_kg": 84.8,
+        "p_max_w": 335.0,
+        "vo2_max_l_min": 3.35392245,
+        "n_records": 3854,
+        "M0_null": {
+          "rmse": 0.8878593692712083,
+          "mae": 0.7297255369203212,
+          "r_squared": -0.3816366982866404,
+          "bias": -0.4666296350969201
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4142238153582499,
+          "mae": 0.2595675428088297,
+          "r_squared": 0.6992707817481514,
+          "bias": -0.13808245164664099
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.26983111789935876,
+          "mae": 0.20893572119980178,
+          "r_squared": 0.8723885740847523,
+          "bias": -0.12937716817208195
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.23890052847576151,
+          "mae": 0.18394633236461785,
+          "r_squared": 0.8999678237713926,
+          "bias": 0.0692711536895061
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.3806923542922963,
+          "mae": 0.3246697757725576,
+          "r_squared": 0.7459882506031899,
+          "bias": -0.2980877187574501
+        }
+      },
+      {
+        "test_subject_id": 12,
+        "sport": "kayak",
+        "weight_kg": 86.0,
+        "p_max_w": 305.0,
+        "vo2_max_l_min": 3.868312719,
+        "n_records": 3648,
+        "M0_null": {
+          "rmse": 1.1745683241663807,
+          "mae": 0.9717101409296238,
+          "r_squared": -0.5125781165857277,
+          "bias": -0.6837532578737497
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.6010314332951653,
+          "mae": 0.45678242908278555,
+          "r_squared": 0.6039448953337525,
+          "bias": -0.40831889414576195
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.49422626804530234,
+          "mae": 0.4393199473090461,
+          "r_squared": 0.7321985695493838,
+          "bias": -0.39888506570160587
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.36591383240898023,
+          "mae": 0.2988931216980097,
+          "r_squared": 0.8532024193677618,
+          "bias": -0.17237680801382532
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.7121190909882165,
+          "mae": 0.6553623635510023,
+          "r_squared": 0.4440106133983105,
+          "bias": -0.6495870160060706
+        }
+      },
+      {
+        "test_subject_id": 13,
+        "sport": "kayak",
+        "weight_kg": 83.9,
+        "p_max_w": 320.0,
+        "vo2_max_l_min": 4.576773815,
+        "n_records": 3637,
+        "M0_null": {
+          "rmse": 1.1238121306535689,
+          "mae": 0.9267285120403624,
+          "r_squared": -0.39170352015692234,
+          "bias": -0.596209772117385
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4931268302996423,
+          "mae": 0.3661555536991211,
+          "r_squared": 0.7320359337412231,
+          "bias": -0.2987821202562871
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.40182944396821973,
+          "mae": 0.34628332228630054,
+          "r_squared": 0.8220726103678498,
+          "bias": -0.2891180903432105
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.32647318184098467,
+          "mae": 0.2560788343279876,
+          "r_squared": 0.8825496491882736,
+          "bias": -0.091231813028772
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.6801771066085199,
+          "mae": 0.6264797532255174,
+          "r_squared": 0.4901959102113024,
+          "bias": -0.6202928860451602
+        }
+      },
+      {
+        "test_subject_id": 14,
+        "sport": "kayak",
+        "weight_kg": 62.3,
+        "p_max_w": 230.0,
+        "vo2_max_l_min": 2.482935327,
+        "n_records": 2808,
+        "M0_null": {
+          "rmse": 0.5954689387742829,
+          "mae": 0.48077844536981656,
+          "r_squared": -0.48400802671819365,
+          "bias": 0.3400691762941325
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.4041230546466986,
+          "mae": 0.3421632184396696,
+          "r_squared": 0.316489360610114,
+          "bias": 0.2779867575295513
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.3431725927691974,
+          "mae": 0.2932729600621364,
+          "r_squared": 0.5071177062067307,
+          "bias": 0.2880982889381467
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.2932638691947061,
+          "mae": 0.24471812097293233,
+          "r_squared": 0.6400558286308875,
+          "bias": 0.2360094614007572
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.19028929795119856,
+          "mae": 0.14673257029461254,
+          "r_squared": 0.8484532061752417,
+          "bias": -0.03798963774392269
+        }
+      },
+      {
+        "test_subject_id": 15,
+        "sport": "kayak",
+        "weight_kg": 63.5,
+        "p_max_w": 215.0,
+        "vo2_max_l_min": 2.99370073,
+        "n_records": 2691,
+        "M0_null": {
+          "rmse": 0.6927994019176534,
+          "mae": 0.595624642759033,
+          "r_squared": -0.0037952576449529207,
+          "bias": -0.04259960441287738
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.38143502418176867,
+          "mae": 0.2544717520982253,
+          "r_squared": 0.6957214989401564,
+          "bias": -0.15331022023580917
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.27903971672004557,
+          "mae": 0.23246931258870743,
+          "r_squared": 0.8371595941544769,
+          "bias": -0.14371894334540977
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.3206471052881789,
+          "mae": 0.26994249383753693,
+          "r_squared": 0.7849770684716533,
+          "bias": -0.1778617446801612
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.5167259254632827,
+          "mae": 0.46557087336834657,
+          "r_squared": 0.44159328148296495,
+          "bias": -0.45803673784425175
+        }
+      },
+      {
+        "test_subject_id": 16,
+        "sport": "kayak",
+        "weight_kg": 70.4,
+        "p_max_w": 230.0,
+        "vo2_max_l_min": 3.451168752,
+        "n_records": 2840,
+        "M0_null": {
+          "rmse": 0.8013159316115882,
+          "mae": 0.6781846070851867,
+          "r_squared": -0.06541067262952516,
+          "bias": -0.198549850066451
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.38440275945416646,
+          "mae": 0.3187803901755389,
+          "r_squared": 0.7548214448391027,
+          "bias": -0.2154817390481649
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.3719782420937001,
+          "mae": 0.3274382076433216,
+          "r_squared": 0.7704144429876228,
+          "bias": -0.21253004490460395
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.37204914540042483,
+          "mae": 0.3284365600304207,
+          "r_squared": 0.7703269113809407,
+          "bias": -0.16743029024309006
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.661371161176671,
+          "mae": 0.592831262621655,
+          "r_squared": 0.274228356918949,
+          "bias": -0.5866967020805655
+        }
+      },
+      {
+        "test_subject_id": 17,
+        "sport": "triathlon",
+        "weight_kg": 39.9,
+        "p_max_w": 185.0,
+        "vo2_max_l_min": 2.205941909,
+        "n_records": 2410,
+        "M0_null": {
+          "rmse": 0.6480509082124343,
+          "mae": 0.5134699361752909,
+          "r_squared": -0.3583222403815294,
+          "bias": 0.33284696417359705
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.2964590761838121,
+          "mae": 0.19337587614838117,
+          "r_squared": 0.7157411031333645,
+          "bias": 0.08043985659308123
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.19901655272915783,
+          "mae": 0.14020676701831994,
+          "r_squared": 0.8718959196358183,
+          "bias": 0.0863187111603796
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.30761575374031586,
+          "mae": 0.2769252927305764,
+          "r_squared": 0.6939434274683487,
+          "bias": -0.2287201077427405
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.3658425997570191,
+          "mae": 0.3224966869381428,
+          "r_squared": 0.567114425513747,
+          "bias": -0.31887950613541444
+        }
+      },
+      {
+        "test_subject_id": 18,
+        "sport": "triathlon",
+        "weight_kg": 39.7,
+        "p_max_w": 200.0,
+        "vo2_max_l_min": 2.204237816,
+        "n_records": 2571,
+        "M0_null": {
+          "rmse": 0.6074270343228304,
+          "mae": 0.4748106274406543,
+          "r_squared": -0.32243017931323936,
+          "bias": 0.29993391985020695
+        },
+        "M1_empirical_linear": {
+          "rmse": 0.2851325489072338,
+          "mae": 0.21693131900839072,
+          "r_squared": 0.7086076735106572,
+          "bias": 0.1388011958685235
+        },
+        "M2_dynamic_pop": {
+          "rmse": 0.21642071381368755,
+          "mae": 0.1714384043909856,
+          "r_squared": 0.832126491045773,
+          "bias": 0.14303473779283232
+        },
+        "M2_dynamic_allometric": {
+          "rmse": 0.2534887726433389,
+          "mae": 0.22466293698934395,
+          "r_squared": 0.7696957378880644,
+          "bias": -0.18187787731783986
+        },
+        "M2_dynamic_calibrated_base": {
+          "rmse": 0.3347800322651392,
+          "mae": 0.29975312953488403,
+          "r_squared": 0.5982983534984377,
+          "bias": -0.29274337029433456
+        }
+      }
+    ]
+  },
+  "parameter_identifiability_audit": {
+    "identified_parameters": [
+      {
+        "parameter": "macroscopic_gross_efficiency_eta_gross",
+        "domain": "Whole-body aerobic metabolism",
+        "status": "IDENTIFIED_WITH_CROSS_SUBJECT_GENERALIZABILITY",
+        "estimated_range": [
+          0.18,
+          0.28
+        ]
+      },
+      {
+        "parameter": "pulmonary_vo2_kinetics_tau_s",
+        "domain": "Cardiorespiratory phase II response",
+        "status": "IDENTIFIED_PHYSIOLOGICALLY",
+        "nominal_value": 35.0
+      },
+      {
+        "parameter": "allometric_body_mass_scaling_exponent",
+        "domain": "Biomechanical metabolic work scaling",
+        "status": "IDENTIFIED_SIGNIFICANT_IMPROVEMENT",
+        "r2_boost": 0.1312631674859147
+      }
+    ],
+    "strictly_unidentifiable_parameters": [
+      {
+        "parameter": "intracellular_PCr_concentration_mM",
+        "reason": "ACTES provides pulmonary breath exchange, not in-bore localized 31P-MRS."
+      },
+      {
+        "parameter": "cytosolic_pH_and_proton_turnover",
+        "reason": "No magnetic resonance chemical shift or muscle biopsy available."
+      },
+      {
+        "parameter": "motor_unit_recruitment_and_discharge_rates",
+        "reason": "No high-density surface EMG or needle EMG recorded in ACTES."
+      },
+      {
+        "parameter": "quadriceps_anatomical_muscle_volume_and_PCSA",
+        "reason": "No 3D MRI segmentation available (Franke 2020 single-subject anchor remains un-cross-validated)."
+      },
+      {
+        "parameter": "systemic_endurance_TARGET_CPE45",
+        "reason": "ACTES protocol is graded incremental test to exhaustion (~15 min), not 45-min constant extreme stress."
+      }
+    ]
+  },
+  "overall_conclusions": {
+    "validation_verdict": "MACROSCOPIC_AEROBIC_COUPLING_VALIDATED_CROSS_SUBJECT_N18",
+    "cross_subject_loso_r2_allometric": 0.7371410157161766,
+    "cross_subject_loso_rmse_allometric": 0.29028815100801847,
+    "m0_r2": -0.8342816826863341,
+    "m1_r2": 0.4044527075005011,
+    "m2_pop_r2": 0.6058778482302619,
+    "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+    "biological_intervention_status": "NO_GO",
+    "barriers_matrix_path": "research/cpet_cycloergometer_2026_11_09/REMAINING_BARRIERS_MATRIX.md"
+  }
+}

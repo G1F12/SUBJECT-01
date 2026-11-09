@@ -1,0 +1,31 @@
+[
+  {
+    "id": "SRC-0073",
+    "name": "Prieur et al. (2020) / PhysioNet ACTES Cycloergometer",
+    "type": "open_access_dataset",
+    "doi": "10.13026/2qs3-kh43",
+    "physionet_url": "https://physionet.org/content/actes-cycloergometer-exercise/1.0.0/",
+    "title": "Cardiorespiratory measurement from graded cycloergometer exercise testing",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpet_cycloergometer_2026_11_09/DATASET_RANKING.md",
+    "review_provenance": {
+      "path": "research/cpet_cycloergometer_2026_11_09/sources.json",
+      "source_id": "SRC-0073"
+    },
+    "provenance_notes": "Synchronous beat-to-beat mechanical power (Watts), pulmonary VO2 (L/min), and cardiac RR intervals during graded incremental cycloergometer exercise across N=18 independent adolescent athletes (52,062 total records). Downloaded from PhysioNet AWS S3 open mirror; SHA256 checksums verified against official SHA256SUMS.txt.",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "local_files": [
+      {
+        "file": "research/cpet_cycloergometer_2026_11_09/test_measure.csv",
+        "sha256": "14a9df027caf00ee1dc39f1493e708c27a7da88794ff69a59442326ef7aa0516",
+        "size_bytes": 1588131
+      },
+      {
+        "file": "research/cpet_cycloergometer_2026_11_09/subject-info.csv",
+        "sha256": "5ac7cdd41d9112c48121998f19927318bd6dc2241ead97a6baa5e9ae8b60c203",
+        "size_bytes": 590
+      }
+    ]
+  }
+]

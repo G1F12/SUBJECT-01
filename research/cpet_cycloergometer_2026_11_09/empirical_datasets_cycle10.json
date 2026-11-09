@@ -1,0 +1,64 @@
+{
+  "cycle": 10,
+  "date": "2026-11-09",
+  "description": "Evidence Gate V2 empirical dataset audit for Cycle 10 multi-subject CPET benchmark.",
+  "actes_cycloergometer_audit": {
+    "source_id": "SRC-0073",
+    "dataset_id": "PHYSIONET_ACTES_CYCLOERGOMETER_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.13026/2qs3-kh43",
+    "physionet_url": "https://physionet.org/content/actes-cycloergometer-exercise/1.0.0/",
+    "title": "Cardiorespiratory measurement from graded cycloergometer exercise testing",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "source_file": "research/cpet_cycloergometer_2026_11_09/test_measure.csv",
+    "sha256": "14a9df027caf00ee1dc39f1493e708c27a7da88794ff69a59442326ef7aa0516",
+    "size_bytes": 1588131,
+    "subject_info_file": "research/cpet_cycloergometer_2026_11_09/subject-info.csv",
+    "subject_info_sha256": "5ac7cdd41d9112c48121998f19927318bd6dc2241ead97a6baa5e9ae8b60c203",
+    "subject_info_size_bytes": 590,
+    "license_file": "research/cpet_cycloergometer_2026_11_09/LICENSE.txt",
+    "license_sha256": "86c0ad300f6d380591298bc03652e30b81f65954bbf22435812bcfd46812ab06",
+    "license_type": "Open Data Commons Attribution License v1.0 (ODC-By v1.0)",
+    "n_biological_participants": 18,
+    "independent_participants_n": 18,
+    "n_operators": 1,
+    "n_records": 52062,
+    "number_of_real_observations": 52062,
+    "measurement_units": "time in s; RR interval in ms; VO2 in L/min; mechanical power in Watts",
+    "cross_subject_loso_eligibility": "ELIGIBLE_MULTI_SUBJECT_COHORT_N18",
+    "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "source_observation_ids": [
+      "ACTES_CYCLOERGOMETER_SUBJECT_01",
+      "ACTES_CYCLOERGOMETER_SUBJECT_02",
+      "ACTES_CYCLOERGOMETER_SUBJECT_03",
+      "ACTES_CYCLOERGOMETER_SUBJECT_04",
+      "ACTES_CYCLOERGOMETER_SUBJECT_05",
+      "ACTES_CYCLOERGOMETER_SUBJECT_06",
+      "ACTES_CYCLOERGOMETER_SUBJECT_07",
+      "ACTES_CYCLOERGOMETER_SUBJECT_08",
+      "ACTES_CYCLOERGOMETER_SUBJECT_09",
+      "ACTES_CYCLOERGOMETER_SUBJECT_10",
+      "ACTES_CYCLOERGOMETER_SUBJECT_11",
+      "ACTES_CYCLOERGOMETER_SUBJECT_12",
+      "ACTES_CYCLOERGOMETER_SUBJECT_13",
+      "ACTES_CYCLOERGOMETER_SUBJECT_14",
+      "ACTES_CYCLOERGOMETER_SUBJECT_15",
+      "ACTES_CYCLOERGOMETER_SUBJECT_16",
+      "ACTES_CYCLOERGOMETER_SUBJECT_17",
+      "ACTES_CYCLOERGOMETER_SUBJECT_18"
+    ],
+    "epistemic_scope": {
+      "observable_domains": [
+        "Whole-body pulmonary oxygen uptake kinetics (VO2 in L/min)",
+        "Beat-to-beat mechanical crank power output (Watts)",
+        "Cardiac RR interval time series (ms)",
+        "Macroscopic gross metabolic efficiency (eta_gross = P_mech / E_met)"
+      ],
+      "unobservable_domains": [
+        "Intracellular phosphate metabolites ([PCr], [Pi], [ATP])",
+        "Intramuscular cytosolic pH dynamics",
+        "Individual motor unit recruitment and discharge rate distribution",
+        "Quadriceps anatomical muscle volume or PCSA"
+      ]
+    }
+  }
+}

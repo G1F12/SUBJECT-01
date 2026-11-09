@@ -45,9 +45,9 @@ Data were acquired with $TR = 6.0\text{ s}$ ($0.1\text{ min}$ per spectrum) over
 
 ### Reconciled Protocol Landmarks:
 - **Baseline Control Period**: Spectra 2 through 8 ($t = 12.0\text{ s}$ to $48.0\text{ s}$).
-  - Trial 1: $\text{PCr}_{\text{rest}} = 2481.43 \pm 78.41$.
-  - Trial 2: $\text{PCr}_{\text{rest}} = 1678.86 \pm 41.51$.
-  - Trial 3: $\text{PCr}_{\text{rest}} = 1675.57 \pm 38.65$.
+  - Trial 1: $\text{PCr}_{\text{rest}} = 2481.43 \pm 74.26$.
+  - Trial 2: $\text{PCr}_{\text{rest}} = 1679.00 \pm 38.71$.
+  - Trial 3: $\text{PCr}_{\text{rest}} = 1675.57 \pm 34.21$.
 - **Nominal Exercise Interval**: $t = 48.0\text{ s}$ to $90.0\text{ s}$ ($42\text{ s}$ dynamic knee kicking at 1 Hz).
   - Status: `INFERRED_TIMING_ASSUMPTION` (auditory cue; no TTL pulse in raw MRS).
 - **Nominal Exercise Stop**: $t = 90.0\text{ s}$ (Spectrum 15).
@@ -60,9 +60,9 @@ Data were acquired with $TR = 6.0\text{ s}$ ($0.1\text{ min}$ per spectrum) over
 
 | Trial ID | Baseline PCr Mean | PCr at 90s Stop | Drop at 90s (%) | Actual Nadir Time | Nadir PCr | Drop at Nadir (%) | Published Drop (%) | Post-Stop Lag (s) | Timing Verdict |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Trial 1** | $2481.43 \pm 78.41$ | **$1920$** | $22.62\%$ | **$144.0\text{ s}$** (Spec 24) | **$1670$** | **$32.70\%$** | $31.6\%$ | $+54.0\text{ s}$ | `EXTENDED_DEPLETION_PHASE` |
-| **Trial 2** | $1678.86 \pm 41.51$ | **$1291$** | $23.10\%$ | **$108.0\text{ s}$** (Spec 18) | **$1245$** | **$25.85\%$** | $25.2\%$ | $+18.0\text{ s}$ | `CONGRUENT_WITH_TABLE1` |
-| **Trial 3** | $1675.57 \pm 38.65$ | **$1277$** | $23.79\%$ | **$108.0\text{ s}$** (Spec 18) | **$1231$** | **$26.53\%$** | $24.8\%$ | $+18.0\text{ s}$ | `CONGRUENT_WITH_TABLE1` |
+| **Trial 1** | $2481.43 \pm 74.26$ | **$1920$** | $22.63\%$ | **$144.0\text{ s}$** (Spec 24) | **$1670$** | **$32.70\%$** | $31.6\%$ | $+54.0\text{ s}$ | `EXTENDED_DEPLETION_PHASE` |
+| **Trial 2** | $1679.00 \pm 38.71$ | **$1291$** | $23.11\%$ | **$108.0\text{ s}$** (Spec 18) | **$1245$** | **$25.85\%$** | $25.2\%$ | $+18.0\text{ s}$ | `CONGRUENT_WITH_TABLE1` |
+| **Trial 3** | $1675.57 \pm 34.21$ | **$1277$** | $23.79\%$ | **$108.0\text{ s}$** (Spec 18) | **$1231$** | **$26.53\%$** | $24.8\%$ | $+18.0\text{ s}$ | `CONGRUENT_WITH_TABLE1` |
 
 ### Timing Audit Rulings:
 1. `timing_synchronization_status`: `INFERRED_TIMING_ASSUMPTION`.
@@ -148,11 +148,11 @@ $$\text{pH} = 6.75 + \log_{10}\left(\frac{\delta_o - 3.290}{5.805 - \delta_o}\ri
 
 ### In-Sample Fit Results (Strictly Labeled: `IN_SAMPLE_FIT_NOT_VALIDATION`):
 
-| Trial ID | M0 RMSE | M0 MAE | M0 $R^2$ | M1 RMSE | M1 MAE | M1 $R^2$ | M1 $k$ ($\text{min}^{-1}$) | M2 RMSE | M2 MAE | M2 $R^2$ | M2 $k$ ($\text{min}^{-1}$) | M2 $\tau$ (s) |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Trial 1** | **$230.88$** | $139.20$ | **$-0.553$** | **$26.05$** | $21.34$ | **$0.9802$** | $1.393$ | **$31.72$** | $25.70$ | **$0.9707$** | $1.298$ | $46.2$ |
-| **Trial 2** | **$120.21$** | $87.55$ | **$-1.130$** | **$15.73$** | $12.63$ | **$0.9635$** | $1.686$ | **$37.67$** | $33.21$ | **$0.7909$** | $1.147$ | $52.3$ |
-| **Trial 3** | **$141.69$** | $99.23$ | **$-0.962$** | **$14.70$** | $11.50$ | **$0.9789$** | $1.480$ | **$32.80$** | $28.70$ | **$0.8948$** | $0.970$ | $61.9$ |
+| Trial ID | M0 RMSE | M0 MAE | M0 $R^2$ | M1 RMSE | M1 MAE | M1 $R^2$ | M1 $k$ ($\text{min}^{-1}$) | M1 $\tau$ (s) | M2 RMSE | M2 MAE | M2 $R^2$ | M2 $k$ ($\text{min}^{-1}$) | M2 $\tau$ (s) |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Trial 1** | **$230.88$** | $139.20$ | **$-0.5530$** | **$26.05$** | $21.34$ | **$0.9802$** | $1.3932$ | $43.1$ | **$31.72$** | $25.70$ | **$0.9707$** | $1.2979$ | $46.2$ |
+| **Trial 2** | **$120.21$** | $87.55$ | **$-1.1297$** | **$15.73$** | $12.63$ | **$0.9635$** | $1.6863$ | $35.6$ | **$37.67$** | $33.21$ | **$0.7909$** | $1.1469$ | $52.3$ |
+| **Trial 3** | **$141.69$** | $99.23$ | **$-0.9625$** | **$14.70$** | $11.50$ | **$0.9789$** | $1.4805$ | $40.5$ | **$32.80$** | $28.70$ | **$0.8948$** | $0.9696$ | $61.9$ |
 
 *Note on M0 $R^2$*: $R^2 < 0.0$ because predicting $\text{PCr}_{\text{rest}}$ on recovery data yields larger squared error than predicting the slice mean $\bar{y}$.
 
@@ -171,7 +171,7 @@ $$\text{pH} = 6.75 + \log_{10}\left(\frac{\delta_o - 3.290}{5.805 - \delta_o}\ri
 | **Trial 2** | **Trial 3** | $1.147$ | $52.43$ | $49.84$ | $0.7313$ | **$35.47$** | $30.13$ | **$0.8770$** |
 | **Trial 3** | **Trial 1** | $0.970$ | $36.91$ | $29.97$ | $0.9603$ | **$56.28$** | $42.43$ | **$0.9077$** |
 | **Trial 3** | **Trial 2** | $0.970$ | $41.08$ | $36.54$ | $0.7512$ | **$39.54$** | $34.99$ | **$0.7696$** |
-| **Mean** | — | — | **$43.58$** | $38.59$ | **$0.8268$** | **$41.13$** | $34.37$ | **$0.8566$** |
+| **Mean** | — | — | **$43.58$** | $38.58$ | **$0.8268$** | **$41.13$** | $34.37$ | **$0.8566$** |
 
 *Scenario A Verdict*: Confirms technical test-retest reproducibility of the recovery rate parameter. M2 constrained baseline outperforms M1 (mean $R^2 = 0.8566$ vs $0.8268$).
 

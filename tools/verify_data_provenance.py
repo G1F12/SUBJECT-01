@@ -69,6 +69,7 @@ def audit_dataset_provenance_records(custom_data=None):
     
     if custom_data is None:
         c9_datasets_file = ROOT / 'research' / 'empirical_recruitment_2026_11_08' / 'empirical_datasets_cycle9.json'
+        c10_datasets_file = ROOT / 'research' / 'cpet_cycloergometer_2026_11_09' / 'empirical_datasets_cycle10.json'
         if not c9_datasets_file.is_file():
             problems.append(f"Missing empirical datasets file: {c9_datasets_file}")
             return problems
@@ -77,6 +78,16 @@ def audit_dataset_provenance_records(custom_data=None):
         except Exception as e:
             problems.append(f"Failed to parse {c9_datasets_file}: {e}")
             return problems
+
+        if c10_datasets_file.is_file():
+            try:
+                c10_data = json.loads(c10_datasets_file.read_text(encoding='utf-8'))
+                for k, v in c10_data.items():
+                    if k not in ('cycle', 'date', 'description'):
+                        data[f"c10_{k}"] = v
+            except Exception as e:
+                problems.append(f"Failed to parse {c10_datasets_file}: {e}")
+                return problems
     else:
         data = custom_data
         
@@ -457,6 +468,22 @@ def audit_negative_tests():
         bad_json.write_text('{"bad_value": Infinity}', encoding='utf-8')
         p7 = audit_strict_json_rfc8259(custom_dir=tmpdir)
         results['strict_json_inf_caught'] = any("RFC 8259 violation" in err for err in p7)
+
+    # Negative Test 8: Tampered SHA256 on ACTES original binary dataset
+    fake_data_8 = {
+        "actes_tampered_audit": {
+            "source_id": "SRC-0073",
+            "dataset_id": "TEST_DATASET_8",
+            "data_type": "ORIGINAL_BINARY_FILE",
+            "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+            "source_file": "research/cpet_cycloergometer_2026_11_09/test_measure.csv",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "n_biological_participants": 18,
+            "source_observation_ids": ["OBS_TEST"]
+        }
+    }
+    p8 = audit_dataset_provenance_records(fake_data_8)
+    results['actes_tampered_sha_caught'] = any("SHA256 mismatch" in err for err in p8)
 
     return results
 

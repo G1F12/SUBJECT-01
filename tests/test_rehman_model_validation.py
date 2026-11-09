@@ -31,6 +31,12 @@ from evaluate_rehman_models import (
     run_full_validation,
     VALIDATION_RESULTS_JSON
 )
+from generate_rehman_report_tables import (
+    parse_markdown_timing_table,
+    parse_markdown_insample_table,
+    parse_markdown_transfer_table,
+    verify_structural_consistency
+)
 from process_rehman_xlsx import LosoProhibitedError, validate_cross_subject_loso_applicability
 
 
@@ -256,51 +262,168 @@ class TestRehmanModelValidation(unittest.TestCase):
         self.assertEqual(concl["m3_status"], "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS")
 
     def test_report_markdown_json_consistency(self):
-        """Automated Corrigendum Test: Verifies that REAL_DATA_VALIDATION_REPORT.md matches canonical JSON."""
+        """
+        Automated Structural Consistency Test (Replaces substring assertIn):
+        Parses Markdown tables into structured dictionaries by trial_id, metric_id, and model_id,
+        and verifies 1:1 mathematical alignment with rehman2024_validation_results.json.
+        """
         report_path = CYCLE9_DIR / "REAL_DATA_VALIDATION_REPORT.md"
         self.assertTrue(report_path.is_file(), "REAL_DATA_VALIDATION_REPORT.md must exist")
         text = report_path.read_text(encoding='utf-8')
         
-        # 1. Verified PCr values at 90s (1920, 1291, 1277)
-        self.assertIn("1920", text, "Report must record Trial 1 PCr@90s = 1920")
-        self.assertIn("1291", text, "Report must record Trial 2 PCr@90s = 1291")
-        self.assertIn("1277", text, "Report must record Trial 3 PCr@90s = 1277")
+        json_path = VALIDATION_RESULTS_JSON
+        self.assertTrue(json_path.is_file(), "Canonical JSON must exist")
+        data = json.loads(json_path.read_text(encoding='utf-8'))
         
-        # 2. Verified PCr values at nadir (1670, 1245, 1231)
-        self.assertIn("1670", text, "Report must record Trial 1 Nadir PCr = 1670")
-        self.assertIn("1245", text, "Report must record Trial 2 Nadir PCr = 1245")
-        self.assertIn("1231", text, "Report must record Trial 3 Nadir PCr = 1231")
+        # 1. Full structural comparison across all table cells
+        errors = verify_structural_consistency(text, data)
+        self.assertEqual(errors, [], f"Structural table-to-JSON discrepancies found:\n" + "\n".join(errors))
         
-        # 3. Verified in-sample RMSEs
-        self.assertIn("230.88", text, "Report must record M0 T1 RMSE = 230.88")
-        self.assertIn("120.21", text, "Report must record M0 T2 RMSE = 120.21")
-        self.assertIn("141.69", text, "Report must record M0 T3 RMSE = 141.69")
-        self.assertIn("26.05", text, "Report must record M1 T1 RMSE = 26.05")
-        self.assertIn("15.73", text, "Report must record M1 T2 RMSE = 15.73")
-        self.assertIn("14.70", text, "Report must record M1 T3 RMSE = 14.70")
-        self.assertIn("31.72", text, "Report must record M2 T1 RMSE = 31.72")
-        self.assertIn("37.67", text, "Report must record M2 T2 RMSE = 37.67")
-        self.assertIn("32.80", text, "Report must record M2 T3 RMSE = 32.80")
+        # 2. Structural parsing and explicit field checks
+        timing_table = parse_markdown_timing_table(text)
+        insample_table = parse_markdown_insample_table(text)
+        transfer_table = parse_markdown_transfer_table(text)
         
-        # 4. M0 R2 is negative (not 0.000)
-        self.assertIn("-0.553", text, "Report must record negative M0 T1 R2")
-        self.assertIn("-1.130", text, "Report must record negative M0 T2 R2")
-        self.assertIn("-0.962", text, "Report must record negative M0 T3 R2")
+        # Check canonical baseline values (mean and SD per trial)
+        self.assertAlmostEqual(timing_table[1]["baseline_mean"], 2481.43, places=2)
+        self.assertAlmostEqual(timing_table[1]["baseline_sd"], 74.26, places=2)
+        self.assertAlmostEqual(timing_table[2]["baseline_mean"], 1679.00, places=2)
+        self.assertAlmostEqual(timing_table[2]["baseline_sd"], 38.71, places=2)
+        self.assertAlmostEqual(timing_table[3]["baseline_mean"], 1675.57, places=2)
+        self.assertAlmostEqual(timing_table[3]["baseline_sd"], 34.21, places=2)
         
-        # 5. Verified minimum pH and retracted statement
+        # Check stop and nadir PCr values
+        self.assertEqual(timing_table[1]["pcr_stop"], 1920.0)
+        self.assertEqual(timing_table[2]["pcr_stop"], 1291.0)
+        self.assertEqual(timing_table[3]["pcr_stop"], 1277.0)
+        self.assertEqual(timing_table[1]["nadir_pcr"], 1670.0)
+        self.assertEqual(timing_table[2]["nadir_pcr"], 1245.0)
+        self.assertEqual(timing_table[3]["nadir_pcr"], 1231.0)
+        self.assertEqual(timing_table[1]["nadir_time_s"], 144.0)
+        self.assertEqual(timing_table[2]["nadir_time_s"], 108.0)
+        self.assertEqual(timing_table[3]["nadir_time_s"], 108.0)
+        
+        # Check in-sample model metrics (M0, M1, M2)
+        # M0 (null constant)
+        self.assertAlmostEqual(insample_table[1]["M0"]["rmse"], 230.88, places=2)
+        self.assertAlmostEqual(insample_table[2]["M0"]["rmse"], 120.21, places=2)
+        self.assertAlmostEqual(insample_table[3]["M0"]["rmse"], 141.69, places=2)
+        self.assertLess(insample_table[1]["M0"]["r2"], 0.0)
+        self.assertLess(insample_table[2]["M0"]["r2"], 0.0)
+        self.assertLess(insample_table[3]["M0"]["r2"], 0.0)
+        
+        # M1 (empirical monoexponential)
+        self.assertAlmostEqual(insample_table[1]["M1"]["rmse"], 26.05, places=2)
+        self.assertAlmostEqual(insample_table[2]["M1"]["rmse"], 15.73, places=2)
+        self.assertAlmostEqual(insample_table[3]["M1"]["rmse"], 14.70, places=2)
+        self.assertAlmostEqual(insample_table[1]["M1"]["k"], 1.393, places=3)
+        self.assertAlmostEqual(insample_table[2]["M1"]["k"], 1.686, places=3)
+        self.assertAlmostEqual(insample_table[3]["M1"]["k"], 1.480, places=3)
+        
+        # M2 (canonical constrained baseline k and tau)
+        self.assertAlmostEqual(insample_table[1]["M2"]["rmse"], 31.72, places=2)
+        self.assertAlmostEqual(insample_table[2]["M2"]["rmse"], 37.67, places=2)
+        self.assertAlmostEqual(insample_table[3]["M2"]["rmse"], 32.80, places=2)
+        self.assertAlmostEqual(insample_table[1]["M2"]["k"], 1.298, places=3)
+        self.assertAlmostEqual(insample_table[2]["M2"]["k"], 1.147, places=3)
+        self.assertAlmostEqual(insample_table[3]["M2"]["k"], 0.970, places=3)
+        self.assertAlmostEqual(insample_table[1]["M2"]["tau"], 46.2, places=1)
+        self.assertAlmostEqual(insample_table[2]["M2"]["tau"], 52.3, places=1)
+        self.assertAlmostEqual(insample_table[3]["M2"]["tau"], 61.9, places=1)
+        
+        # Check transfer table pairs
+        self.assertIn((1, 2), transfer_table)
+        self.assertIn((1, 3), transfer_table)
+        self.assertIn((2, 1), transfer_table)
+        self.assertIn((2, 3), transfer_table)
+        self.assertIn((3, 1), transfer_table)
+        self.assertIn((3, 2), transfer_table)
+        self.assertAlmostEqual(transfer_table[(1, 2)]["calibrated_k"], 1.298, places=3)
+        self.assertAlmostEqual(transfer_table[(2, 1)]["calibrated_k"], 1.147, places=3)
+        self.assertAlmostEqual(transfer_table[(3, 1)]["calibrated_k"], 0.970, places=3)
+        
+        # Check pH audit and governance statuses in text
         self.assertIn("6.7932", text, "Report must record min pH = 6.7932")
         self.assertIn("6.8840", text, "Report must record min pH = 6.8840")
         self.assertIn("6.8911", text, "Report must record min pH = 6.8911")
         self.assertIn("RETRACTED", text, "Report must record formal retraction of pH >= 6.86 throughout")
-        
-        # 6. M2 reclassification and M3 status
         self.assertIn("CONSTRAINED_MONOEXPONENTIAL_BASELINE", text)
         self.assertIn("M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS", text)
-        
-        # 7. Scenarios: Conditional reconstruction vs Prospective prediction
         self.assertIn("CONDITIONAL_TRAJECTORY_RECONSTRUCTION", text)
         self.assertIn("PROSPECTIVE_PREDICTION_BLOCKED", text)
         self.assertIn("INFERRED_TIMING_ASSUMPTION", text)
+
+    def test_negative_structural_consistency_trial_permutation(self):
+        """
+        Negative Test 1: Permutation of values between trials.
+        Demonstrates that swapping Trial 1 and Trial 2 rows in the Markdown table
+        FAILS structural comparison even though all numbers still exist in the document
+        (which previously tricked simple substring assertIn checks).
+        """
+        report_path = CYCLE9_DIR / "REAL_DATA_VALIDATION_REPORT.md"
+        text = report_path.read_text(encoding='utf-8')
+        data = json.loads(VALIDATION_RESULTS_JSON.read_text(encoding='utf-8'))
+        
+        # Swap Trial 1 and Trial 2 lines in the Timing Table
+        tampered_text = text.replace(
+            "| **Trial 1** | $2481.43 \\pm 74.26$",
+            "| **Trial 1** | $1679.00 \\pm 38.71$"
+        ).replace(
+            "| **Trial 2** | $1679.00 \\pm 38.71$",
+            "| **Trial 2** | $2481.43 \\pm 74.26$"
+        )
+        
+        # Verify that substring assertIn would PASS on both numbers:
+        self.assertIn("2481.43", tampered_text)
+        self.assertIn("1679.00", tampered_text)
+        
+        # BUT structural consistency MUST fail with an explicit mismatch:
+        errors = verify_structural_consistency(tampered_text, data)
+        self.assertTrue(len(errors) > 0, "Structural verification must fail on permuted trial values")
+        self.assertTrue(any("Trial 1 baseline mean" in e for e in errors))
+
+    def test_negative_structural_consistency_unrelated_text_number(self):
+        """
+        Negative Test 2: Placing correct number in unrelated text while table has corrupted value.
+        Demonstrates that changing a table cell (Trial 1 nadir PCr = 9999) while placing
+        '1670' elsewhere in prose FAILS structural check (catching table corruption).
+        """
+        report_path = CYCLE9_DIR / "REAL_DATA_VALIDATION_REPORT.md"
+        text = report_path.read_text(encoding='utf-8')
+        data = json.loads(VALIDATION_RESULTS_JSON.read_text(encoding='utf-8'))
+        
+        # Corrupt table cell in Trial 1 nadir PCr, but add '1670' to a comment paragraph
+        tampered_text = text.replace(
+            "| **$144.0\\text{ s}$** (Spec 24) | **$1670$** |",
+            "| **$144.0\\text{ s}$** (Spec 24) | **$9999$** |"
+        ) + "\n\nUnrelated paragraph preserving number 1670 in prose."
+        
+        # Substring assertIn passes:
+        self.assertIn("1670", tampered_text)
+        
+        # Structural verification fails:
+        errors = verify_structural_consistency(tampered_text, data)
+        self.assertTrue(len(errors) > 0, "Structural verification must fail on corrupted table cell")
+        self.assertTrue(any("Trial 1 nadir PCr" in e for e in errors))
+
+    def test_negative_structural_consistency_metric_swap(self):
+        """
+        Negative Test 3: Swapping M1 RMSE and M2 RMSE in In-Sample table.
+        Demonstrates that column confusion within the same trial FAILS structural check.
+        """
+        report_path = CYCLE9_DIR / "REAL_DATA_VALIDATION_REPORT.md"
+        text = report_path.read_text(encoding='utf-8')
+        data = json.loads(VALIDATION_RESULTS_JSON.read_text(encoding='utf-8'))
+        
+        # Swap M1 RMSE (26.05) and M2 RMSE (31.72) in Trial 1 row
+        tampered_text = text.replace(
+            "| **$26.05$** | $21.34$ | **$0.9802$** | $1.3932$ | $43.1$ | **$31.72$** |",
+            "| **$31.72$** | $21.34$ | **$0.9802$** | $1.3932$ | $43.1$ | **$26.05$** |"
+        )
+        
+        errors = verify_structural_consistency(tampered_text, data)
+        self.assertTrue(len(errors) > 0, "Structural verification must fail on swapped metric columns")
+        self.assertTrue(any("M1 RMSE" in e or "M2 RMSE" in e for e in errors))
 
 
 if __name__ == '__main__':
