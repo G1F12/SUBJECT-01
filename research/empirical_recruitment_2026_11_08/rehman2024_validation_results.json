@@ -11,6 +11,9 @@
   },
   "stage_1_protocol_timing_audit": {
     "status": "PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED",
+    "timing_synchronization_status": "INFERRED_TIMING_ASSUMPTION",
+    "timing_synchronization_audit": "The nominal 42-second exercise window (t = 48.0s to 90.0s) is based on the verbal/auditory protocol description in Rehman et al. 2024. No hardware TTL trigger pulse or digital event marker was recorded synchronously in the MRS data stream or in the Dryad spreadsheet. The observed PCr nadir is treated strictly as an empirical spectral minimum, separate from unverified mechanical cessation.",
+    "perfusion_disclaimer": "The post-stop depletion (lag of +18s to +54s) is documented strictly as an empirical delay in recovery onset without speculating on ischemic or hyperemic mechanisms, as no perfusion, Doppler blood flow, or arterial occlusion data were collected in this study.",
     "nominal_vs_actual_conclusion": "Nominal protocol specifies 42 s exercise (48s to 90s). However, in actual data, PCr continues to decrease beyond 90s: in Trials 2 and 3, nadir occurs at 108s (+18s lag); in Trial 1, an extended depletion/plateau phase continues until 144s (+54s lag). Published Table 1 PCr drop percentages (31.6%, 25.2%, 24.8%) and rate constants k (1.43, 1.62, 1.53 min^-1) strictly correspond to fitting from actual nadir, NOT from nominal 90s.",
     "trials": {
       "1": {
@@ -30,6 +33,7 @@
           "pi_sd": 46.57770164441554
         },
         "nominal_protocol": {
+          "timing_status": "INFERRED_TIMING_ASSUMPTION",
           "exercise_start_s": 48.0,
           "exercise_duration_s": 42.0,
           "exercise_stop_s": 90.0,
@@ -37,6 +41,7 @@
           "pcr_drop_at_stop_pct": 22.6252158894646
         },
         "actual_biochemical_nadir": {
+          "nadir_status": "OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP",
           "nadir_time_s": 144.0,
           "nadir_spectrum": 24,
           "nadir_pcr": 1670.0,
@@ -68,6 +73,7 @@
           "pi_sd": 24.468923699255754
         },
         "nominal_protocol": {
+          "timing_status": "INFERRED_TIMING_ASSUMPTION",
           "exercise_start_s": 48.0,
           "exercise_duration_s": 42.0,
           "exercise_stop_s": 90.0,
@@ -75,6 +81,7 @@
           "pcr_drop_at_stop_pct": 23.10899344848124
         },
         "actual_biochemical_nadir": {
+          "nadir_status": "OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP",
           "nadir_time_s": 108.0,
           "nadir_spectrum": 18,
           "nadir_pcr": 1245.0,
@@ -106,6 +113,7 @@
           "pi_sd": 12.024379995896433
         },
         "nominal_protocol": {
+          "timing_status": "INFERRED_TIMING_ASSUMPTION",
           "exercise_start_s": 48.0,
           "exercise_duration_s": 42.0,
           "exercise_stop_s": 90.0,
@@ -113,6 +121,7 @@
           "pcr_drop_at_stop_pct": 23.787194134197293
         },
         "actual_biochemical_nadir": {
+          "nadir_status": "OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP",
           "nadir_time_s": 108.0,
           "nadir_spectrum": 18,
           "nadir_pcr": 1231.0,
@@ -458,11 +467,28 @@
     "mean_offset_delta_ph": -0.061007571749065806,
     "sd_offset_delta_ph": 0.008247753740555107,
     "offset_summary": "Calculated pH is systematically -0.061 +/- 0.008 pH units below published Table 1.",
+    "calculated_ph_ranges": {
+      "trial_1": [
+        6.7932,
+        6.9778
+      ],
+      "trial_2": [
+        6.884,
+        7.0077
+      ],
+      "trial_3": [
+        6.8911,
+        7.0228
+      ],
+      "global_min_ph": 6.7932,
+      "global_max_ph": 7.0228
+    },
+    "retraction_statement": "The prior assertion 'pH >= 6.86 throughout' is formally RETRACTED as superseded. Actual minimum computed pH in Trial 1 drops to 6.7932 (moderate localized acidification).",
     "physical_investigation": {
-      "factor_1_henderson_hasselbalch_pk": "Rehman Fig. 7 cites pK = 6.75 with delta_A = 3.290 and delta_B = 5.805 ppm. In physiological literature (Moon 1973, Dawson 1977), pK at 37 C and physiological ionic strength ranges from 6.75 to 6.80. A pK shift of +0.05..+0.06 exactly accounts for the discrepancy.",
+      "factor_1_henderson_hasselbalch_pk": "Rehman Fig. 7 cites pK = 6.75 with delta_A = 3.290 and delta_B = 5.805 ppm. In physiological literature (Moon 1973, Dawson 1977), pK at 37 C and physiological ionic strength ranges from 6.75 to 6.80. A pK shift of +0.05..+0.06 accounts for the discrepancy.",
       "factor_2_jmrui_chemical_shift_referencing": "In jMRUI AMARES peak fitting, PCr is typically referenced to 0.00 ppm rather than -2.54 ppm. If delta_o in the authors' analysis script was computed from unrounded jMRUI chemical shifts with an internal zero reference, a ~0.08 ppm difference in peak assignment shifts calculated pH by ~0.06.",
       "factor_3_spreadsheet_rounding": "The published Dryad spreadsheet rounds chemical shifts to 2 decimal places (-2.54, 2.26, 2.31). Sub-ppm precision in original FID spectra fitting is lost during Excel export.",
-      "epistemic_ruling": "Per scientific integrity guidelines, NO artificial empirical correction factor (+0.055) is added to the code. Status PH_CALIBRATION_PARTIAL is retained. The qualitative biological invariant is confirmed: muscle pH remains non-acidotic (>= 6.86) throughout, establishing that mitochondrial recovery kinetics are oxidative and uninhibited by severe acidosis."
+      "epistemic_ruling": "Per scientific integrity guidelines, NO artificial empirical correction factor (+0.055) is added to the code. Status PH_CALIBRATION_PARTIAL is retained. Neither pure aerobic metabolism nor complete absence of proton accumulation can be claimed solely from relative PCr and Pi peaks without independent blood lactate and acid-base measurements."
     },
     "trials": {
       "1": {
@@ -470,7 +496,9 @@
         "calculated_ph": {
           "control_mean": 6.912481071096458,
           "end_exercise_nadir": 6.91962521680645,
-          "end_recovery": 6.8628742252069195
+          "end_recovery": 6.8628742252069195,
+          "min_ph": 6.793206025921694,
+          "max_ph": 6.977845476081905
         },
         "published_table1_ph": {
           "control": 6.97,
@@ -488,7 +516,9 @@
         "calculated_ph": {
           "control_mean": 6.960006535928057,
           "end_exercise_nadir": 6.955804384826499,
-          "end_recovery": 6.91962521680645
+          "end_recovery": 6.91962521680645,
+          "min_ph": 6.8840183944602185,
+          "max_ph": 7.00769197922672
         },
         "published_table1_ph": {
           "control": 7.02,
@@ -506,7 +536,9 @@
         "calculated_ph": {
           "control_mean": 6.955858841969005,
           "end_exercise_nadir": 6.977845476081906,
-          "end_recovery": 6.926810885536662
+          "end_recovery": 6.926810885536662,
+          "min_ph": 6.891100396150725,
+          "max_ph": 7.022835795025385
         },
         "published_table1_ph": {
           "control": 7.01,
@@ -538,12 +570,29 @@
           "r_squared": 0.9802336994498704,
           "k_min_minus_1": 1.3932033790697844
         },
-        "M2_physiological_ode_model": {
+        "M2_constrained_monoexponential_baseline": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
           "rmse": 31.719752709468636,
           "mae": 25.695671478869592,
           "r_squared": 0.9706862102737707,
           "k_min_minus_1": 1.297870667195272,
-          "tau_s": 46.229567796351674
+          "tau_s": 46.229567796351674,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M2_physiological_ode_model": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
+          "rmse": 31.719752709468636,
+          "mae": 25.695671478869592,
+          "r_squared": 0.9706862102737707,
+          "k_min_minus_1": 1.297870667195272,
+          "tau_s": 46.229567796351674,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M3_full_physiological_ode": {
+          "status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+          "reason": "Rehman 2024 provides relative 31P-MRS peak areas only; mechanical pedal power (W), pedal torque, quadriceps PCSA, muscle volume, cardiac output, and VO2 are absent in the raw dataset. Full physiological state evaluation cannot be executed without unobserved boundary conditions."
         }
       },
       "2": {
@@ -560,12 +609,29 @@
           "r_squared": 0.9635483349758112,
           "k_min_minus_1": 1.6863244804718167
         },
-        "M2_physiological_ode_model": {
+        "M2_constrained_monoexponential_baseline": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
           "rmse": 37.671449473787874,
           "mae": 33.214634663985464,
           "r_squared": 0.7908569054671779,
           "k_min_minus_1": 1.1468668990141329,
-          "tau_s": 52.31644583305793
+          "tau_s": 52.31644583305793,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M2_physiological_ode_model": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
+          "rmse": 37.671449473787874,
+          "mae": 33.214634663985464,
+          "r_squared": 0.7908569054671779,
+          "k_min_minus_1": 1.1468668990141329,
+          "tau_s": 52.31644583305793,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M3_full_physiological_ode": {
+          "status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+          "reason": "Rehman 2024 provides relative 31P-MRS peak areas only; mechanical pedal power (W), pedal torque, quadriceps PCSA, muscle volume, cardiac output, and VO2 are absent in the raw dataset. Full physiological state evaluation cannot be executed without unobserved boundary conditions."
         }
       },
       "3": {
@@ -582,12 +648,29 @@
           "r_squared": 0.9788698848867743,
           "k_min_minus_1": 1.4804503465650756
         },
-        "M2_physiological_ode_model": {
+        "M2_constrained_monoexponential_baseline": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
           "rmse": 32.79890755630439,
           "mae": 28.704936614222362,
           "r_squared": 0.894839519083447,
           "k_min_minus_1": 0.9696331561947614,
-          "tau_s": 61.87907211781477
+          "tau_s": 61.87907211781477,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M2_physiological_ode_model": {
+          "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+          "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
+          "rmse": 32.79890755630439,
+          "mae": 28.704936614222362,
+          "r_squared": 0.894839519083447,
+          "k_min_minus_1": 0.9696331561947614,
+          "tau_s": 61.87907211781477,
+          "scope_limits": "Constrained monoexponential relaxation baseline only. Energy balance, O2 delivery, active muscle volume, ATP turnover, and motor recruitment are NOT validated."
+        },
+        "M3_full_physiological_ode": {
+          "status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+          "reason": "Rehman 2024 provides relative 31P-MRS peak areas only; mechanical pedal power (W), pedal torque, quadriceps PCSA, muscle volume, cardiac output, and VO2 are absent in the raw dataset. Full physiological state evaluation cannot be executed without unobserved boundary conditions."
         }
       }
     },
@@ -595,7 +678,10 @@
       {
         "train_trial": 1,
         "test_trial": 2,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 1.297870667195272,
         "M1_transfer": {
           "rmse": 39.74998652885594,
@@ -611,7 +697,10 @@
       {
         "train_trial": 1,
         "test_trial": 3,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 1.297870667195272,
         "M1_transfer": {
           "rmse": 43.090251567747536,
@@ -627,7 +716,10 @@
       {
         "train_trial": 2,
         "test_trial": 1,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 1.1468668990141329,
         "M1_transfer": {
           "rmse": 48.198394842331155,
@@ -643,7 +735,10 @@
       {
         "train_trial": 2,
         "test_trial": 3,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 1.1468668990141329,
         "M1_transfer": {
           "rmse": 52.43055496780417,
@@ -659,7 +754,10 @@
       {
         "train_trial": 3,
         "test_trial": 1,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 0.9696331561947614,
         "M1_transfer": {
           "rmse": 36.90796455158991,
@@ -675,7 +773,10 @@
       {
         "train_trial": 3,
         "test_trial": 2,
+        "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
         "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+        "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
         "transfer_rate_constant_k_min": 0.9696331561947614,
         "M1_transfer": {
           "rmse": 41.08424614815638,
@@ -689,12 +790,31 @@
         }
       }
     ],
+    "transfer_scenarios": {
+      "scenario_A_conditional_trajectory_reconstruction": {
+        "status": "VALIDATED_TECHNICAL_REPRODUCIBILITY",
+        "m2_transfer_r_squared_mean": 0.8565515692369797,
+        "m2_transfer_r_squared_min": 0.7695851267812625,
+        "m2_transfer_r_squared_max": 0.9602558781815221,
+        "m2_transfer_rmse_mean": 41.125990891019555,
+        "m1_transfer_r_squared_mean": 0.8267982162511304,
+        "m1_transfer_rmse_mean": 43.57689976774751,
+        "conclusion": "Under identical initial conditions (known nadir and baseline), M2 constrained monoexponential achieves mean transfer R2 = 0.8566 vs M1 mean transfer R2 = 0.8268, confirming test-retest reproducibility of the single rate parameter."
+      },
+      "scenario_B_prospective_prediction": {
+        "status": "PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS",
+        "forecast_origin_time_s": 90.0,
+        "blocking_reason": "At the nominal stop of exercise (t = 90.0 s), PCr continues depleting for an unobserved lag duration (+18s in Trials 2/3, +54s in Trial 1) to an unobserved nadir depth. Forward forecasting prior to observing nadir without mechanical work rate or blood flow measurements is mathematically undefined and cannot be evaluated without leakage of future test points."
+      }
+    },
     "transfer_summary": {
       "m2_transfer_r_squared_mean": 0.8565515692369797,
       "m2_transfer_r_squared_min": 0.7695851267812625,
       "m2_transfer_r_squared_max": 0.9602558781815221,
       "m2_transfer_rmse_mean": 41.125990891019555,
-      "evaluation": "Physiological model M2 demonstrates excellent intra-subject generalization (transfer R2 = 0.8566, range [0.7696, 0.9603]), retaining over 75-96% of variance across repeated trials of the same participant. This verifies technical test-retest reproducibility of the bioenergetic rate parameter."
+      "m2_classification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+      "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+      "evaluation": "Constrained monoexponential baseline M2 demonstrates excellent intra-subject reconstruction (transfer R2 = 0.8566, range [0.7696, 0.9603]), retaining 77-96% of variance across repeated trials of the same participant. This verifies technical test-retest reproducibility of the recovery rate parameter."
     },
     "cross_subject_loso_policy": {
       "permitted": false,
@@ -723,10 +843,11 @@
         "identifiability_status": "IDENTIFIED_RELATIVE_METRIC",
         "basis": "(PCr_rest - PCr_nadir) / PCr_rest (dimensionless ratio independent of gain)."
       },
-      "intracellular_non_acidotic_status": {
-        "value": "pH >= 6.86 throughout exercise and recovery",
-        "identifiability_status": "IDENTIFIED_FROM_CHEMICAL_SHIFTS",
-        "basis": "Pi and PCr chemical shift delta_o via Henderson-Hasselbalch equation."
+      "intracellular_ph_dynamics": {
+        "value": "Calculated pH range: 6.7932 to 7.0228 (Trial 1 min: 6.7932, Trial 2 min: 6.8840, Trial 3 min: 6.8911)",
+        "identifiability_status": "PARTIALLY_CALIBRATED_RELATIVE_METRIC",
+        "basis": "Pi and PCr chemical shift delta_o via Henderson-Hasselbalch equation (PMC11617988 Fig. 7). Prior claim 'pH >= 6.86 throughout' retracted as superseded.",
+        "retraction_statement": "The prior claim 'pH >= 6.86 throughout' is formally retracted as superseded. Minimum calculated pH reaches 6.7932 in Trial 1."
       }
     },
     "strictly_unidentifiable_parameters": {
@@ -799,7 +920,14 @@
     "published_tau_mean_s": 39.4,
     "repeatability_cv_pct": 9.9,
     "transfer_r_squared_m2_mean": 0.8565515692369797,
+    "m2_reclassification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+    "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+    "prospective_prediction_status": "PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS",
     "ph_status": "PH_CALIBRATION_PARTIAL",
+    "ph_calculated_range": [
+      6.7932,
+      7.0228
+    ],
     "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
     "biological_intervention_status": "NO_GO"
   }

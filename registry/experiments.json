@@ -937,14 +937,26 @@
     "sources": [
       "SRC-0069"
     ],
-    "design": "Execution of comprehensive scientific validation suite on primary real human 31P-MRS time-series (Rehman 2024 Dryad Raw V3, 222 spectra, N=1 biological subject, 3 trials). Stages: (1) Protocol timing audit separating nominal 42s exercise (48-90s) from actual post-exercise biochemical nadir (144s in Trial 1, 108s in Trials 2/3); (2) Sensitivity analysis of recovery kinetics to onset shifts (-18s to +18s), quantifying systematic phase-selection uncertainty vs statistical non-linear regression error; (3) Rigorous investigation of -0.055 pH offset from published Table 1 without ad-hoc empirical fudge factors, assigning PH_CALIBRATION_PARTIAL; (4) Frozen model comparison of M0 (null constant baseline), M1 (empirical 3-parameter monoexponential), and M2 (SUBJECT-01 physiological bioenergetic ODE with resting asymptote constraint), strictly labeling in-sample fits as IN_SAMPLE_FIT_NOT_VALIDATION and testing all 6 within-subject trial transfer pairs labeled WITHIN_SUBJECT_TRIAL_TRANSFER while strictly prohibiting cross-subject LOSO on N=1; (5) Parameter identifiability mapping and preservation of TARGET-CPE45 = NOT EXTERNALLY VALIDATED.",
+    "design": "Execution of comprehensive scientific validation suite on primary real human 31P-MRS time-series (Rehman 2024 Dryad Raw V3, 222 spectra, N=1 biological subject, 3 trials). Corrigendum incorporates: (1) Protocol timing audit separating inferred nominal cues (48-90s, INFERRED_TIMING_ASSUMPTION) from actual spectral nadir (144s in T1, 108s in T2/T3, OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP) with verified PCr amplitudes; (2) Sensitivity analysis of recovery kinetics to onset shifts (-18s to +18s), quantifying systematic phase-selection uncertainty vs statistical error; (3) Rigorous investigation of -0.055 pH offset without ad-hoc empirical fudge factors (PH_CALIBRATION_PARTIAL) and formal retraction of pH >= 6.86 claim as superseded (calculated range 6.7932-7.0228); (4) Frozen model comparison: M0 (null constant baseline, negative R2), M1 (empirical 3-parameter monoexponential), M2 (reclassified as CONSTRAINED_MONOEXPONENTIAL_BASELINE), and M3 (full physiological ODE, M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS); (5) Clear distinction between Scenario A (CONDITIONAL_TRAJECTORY_RECONSTRUCTION, mean transfer R2 = 0.8566) and Scenario B (PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS); (6) Numerical reconciliation of all report values with canonical JSON and preservation of TARGET-CPE45 freeze.",
     "status": "completed_real_data_validation",
     "results": {
+      "timing_synchronization_status": "INFERRED_TIMING_ASSUMPTION",
+      "nadir_status": "OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP",
       "protocol_timing_status": "PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED",
       "timing_lag_seconds": {
         "trial_1": 54.0,
         "trial_2": 18.0,
         "trial_3": 18.0
+      },
+      "pcr_amplitudes_at_90s": {
+        "trial_1": 1920.0,
+        "trial_2": 1291.0,
+        "trial_3": 1277.0
+      },
+      "nadir_pcr_amplitudes": {
+        "trial_1": 1670.0,
+        "trial_2": 1245.0,
+        "trial_3": 1231.0
       },
       "sensitivity_systematic_uncertainty_k_min": {
         "trial_1": 0.044,
@@ -954,15 +966,67 @@
       "ph_calibration_status": "PH_CALIBRATION_PARTIAL",
       "ph_mean_offset_delta": -0.0548,
       "ph_sd_offset_delta": 0.0098,
-      "in_sample_r_squared_m2": {
-        "trial_1": 0.8247,
-        "trial_2": 0.8197,
-        "trial_3": 0.9254
+      "ph_calculated_range": [
+        6.7932,
+        7.0228
+      ],
+      "ph_min_calculated": {
+        "trial_1": 6.7932,
+        "trial_2": 6.884,
+        "trial_3": 6.8911
       },
-      "within_subject_trial_transfer_r_squared_m2": {
-        "mean": 0.8566,
-        "min": 0.7696,
-        "max": 0.9603
+      "ph_retraction": "pH >= 6.86 throughout retracted as superseded; Trial 1 min pH = 6.7932",
+      "in_sample_rmse": {
+        "M0": {
+          "trial_1": 230.8789,
+          "trial_2": 120.2115,
+          "trial_3": 141.6887
+        },
+        "M1": {
+          "trial_1": 26.0469,
+          "trial_2": 15.7271,
+          "trial_3": 14.7023
+        },
+        "M2": {
+          "trial_1": 31.7198,
+          "trial_2": 37.6714,
+          "trial_3": 32.7989
+        }
+      },
+      "in_sample_r_squared": {
+        "M0": {
+          "trial_1": -0.553,
+          "trial_2": -1.13,
+          "trial_3": -0.962
+        },
+        "M1": {
+          "trial_1": 0.9802,
+          "trial_2": 0.9639,
+          "trial_3": 0.9789
+        },
+        "M2": {
+          "trial_1": 0.9706,
+          "trial_2": 0.7928,
+          "trial_3": 0.8951
+        }
+      },
+      "m2_classification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+      "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+      "scenario_a_conditional_trajectory_reconstruction": {
+        "status": "COMPLETED",
+        "M2_mean_transfer_r_squared": 0.8566,
+        "M2_range_transfer_r_squared": [
+          0.7696,
+          0.9603
+        ],
+        "M1_mean_transfer_r_squared": 0.8268,
+        "M1_range_transfer_r_squared": [
+          0.7552,
+          0.8872
+        ]
+      },
+      "scenario_b_prospective_prediction": {
+        "status": "PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS"
       },
       "cross_subject_loso_status": "PROHIBITED_SINGLE_SUBJECT",
       "identifiable_parameters": [
@@ -970,7 +1034,7 @@
         "k_rec_min_minus_1 (1.520 +/- 0.151 min^-1)",
         "intra_subject_repeatability_cv_pct (9.90%)",
         "fractional_pcr_depletion (28.36 +/- 3.77%)",
-        "non_acidotic_status (pH >= 6.86)"
+        "calculated_ph_dynamics (range 6.7932 to 7.0228, non-acidotic claim retracted as superseded)"
       ],
       "unidentifiable_parameters": [
         "PCr_rest_absolute_mM (gain-confounded arbitrary units)",

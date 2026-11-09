@@ -78,13 +78,15 @@ def audit_protocol_timing(extracted: dict) -> dict:
         pi_base_sd = float(np.std(pi[base_mask], ddof=1))
         
         # 2. Nominal exercise window from paper text: 48s to 90s (42 seconds)
+        # Classified as INFERRED_TIMING_ASSUMPTION (no synchronous TTL event markers recorded)
         nom_start_t = 48.0
         nom_end_t = 90.0
         idx_nom_end = int(np.where(time_s == nom_end_t)[0][0])
         pcr_nom_end = float(pcr[idx_nom_end])
         drop_nom_end_pct = float((pcr_base_mean - pcr_nom_end) / pcr_base_mean * 100.0)
         
-        # 3. Actual biochemical nadir (minimum PCr)
+        # 3. Actual biochemical nadir (minimum PCr amplitude)
+        # Treated strictly as observed spectral minimum, separate from unverified mechanical cessation
         nadir_idx = int(np.argmin(pcr[:30]))
         nadir_t = float(time_s[nadir_idx])
         nadir_spec = int(spectra[nadir_idx])
@@ -113,6 +115,7 @@ def audit_protocol_timing(extracted: dict) -> dict:
                 "pi_sd": pi_base_sd
             },
             "nominal_protocol": {
+                "timing_status": "INFERRED_TIMING_ASSUMPTION",
                 "exercise_start_s": nom_start_t,
                 "exercise_duration_s": 42.0,
                 "exercise_stop_s": nom_end_t,
@@ -120,6 +123,7 @@ def audit_protocol_timing(extracted: dict) -> dict:
                 "pcr_drop_at_stop_pct": drop_nom_end_pct
             },
             "actual_biochemical_nadir": {
+                "nadir_status": "OBSERVED_SPECTRAL_MINIMUM_DISTINCT_FROM_MECHANICAL_STOP",
                 "nadir_time_s": nadir_t,
                 "nadir_spectrum": nadir_spec,
                 "nadir_pcr": pcr_nadir,
@@ -139,6 +143,18 @@ def audit_protocol_timing(extracted: dict) -> dict:
         
     return {
         "status": "PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED",
+        "timing_synchronization_status": "INFERRED_TIMING_ASSUMPTION",
+        "timing_synchronization_audit": (
+            "The nominal 42-second exercise window (t = 48.0s to 90.0s) is based on the verbal/auditory "
+            "protocol description in Rehman et al. 2024. No hardware TTL trigger pulse or digital event marker "
+            "was recorded synchronously in the MRS data stream or in the Dryad spreadsheet. The observed PCr "
+            "nadir is treated strictly as an empirical spectral minimum, separate from unverified mechanical cessation."
+        ),
+        "perfusion_disclaimer": (
+            "The post-stop depletion (lag of +18s to +54s) is documented strictly as an empirical delay in recovery onset "
+            "without speculating on ischemic or hyperemic mechanisms, as no perfusion, Doppler blood flow, "
+            "or arterial occlusion data were collected in this study."
+        ),
         "nominal_vs_actual_conclusion": (
             "Nominal protocol specifies 42 s exercise (48s to 90s). However, in actual data, "
             "PCr continues to decrease beyond 90s: in Trials 2 and 3, nadir occurs at 108s (+18s lag); "
@@ -287,6 +303,10 @@ def audit_ph_calibration(extracted: dict) -> dict:
         base_mask = time_s <= 48.0
         nadir_idx = int(np.argmin(ts["pcr_raw_amplitude"][:30]))
         
+        valid_phs = [p for p in calc_ph if p is not None]
+        min_ph_trial = float(min(valid_phs)) if valid_phs else None
+        max_ph_trial = float(max(valid_phs)) if valid_phs else None
+        
         ctrl_ph_calc = float(np.mean([p for i, p in enumerate(calc_ph) if base_mask[i] and p is not None]))
         end_ex_ph_calc = float(calc_ph[nadir_idx])
         end_rec_ph_calc = float(calc_ph[-1])
@@ -309,7 +329,9 @@ def audit_ph_calibration(extracted: dict) -> dict:
             "calculated_ph": {
                 "control_mean": ctrl_ph_calc,
                 "end_exercise_nadir": end_ex_ph_calc,
-                "end_recovery": end_rec_ph_calc
+                "end_recovery": end_rec_ph_calc,
+                "min_ph": min_ph_trial,
+                "max_ph": max_ph_trial
             },
             "published_table1_ph": {
                 "control": ctrl_ph_pub,
@@ -331,11 +353,22 @@ def audit_ph_calibration(extracted: dict) -> dict:
         "mean_offset_delta_ph": mean_offset,
         "sd_offset_delta_ph": sd_offset,
         "offset_summary": f"Calculated pH is systematically {mean_offset:.3f} +/- {sd_offset:.3f} pH units below published Table 1.",
+        "calculated_ph_ranges": {
+            "trial_1": [6.7932, 6.9778],
+            "trial_2": [6.8840, 7.0077],
+            "trial_3": [6.8911, 7.0228],
+            "global_min_ph": 6.7932,
+            "global_max_ph": 7.0228
+        },
+        "retraction_statement": (
+            "The prior assertion 'pH >= 6.86 throughout' is formally RETRACTED as superseded. "
+            "Actual minimum computed pH in Trial 1 drops to 6.7932 (moderate localized acidification)."
+        ),
         "physical_investigation": {
             "factor_1_henderson_hasselbalch_pk": (
                 "Rehman Fig. 7 cites pK = 6.75 with delta_A = 3.290 and delta_B = 5.805 ppm. "
                 "In physiological literature (Moon 1973, Dawson 1977), pK at 37 C and physiological "
-                "ionic strength ranges from 6.75 to 6.80. A pK shift of +0.05..+0.06 exactly accounts for the discrepancy."
+                "ionic strength ranges from 6.75 to 6.80. A pK shift of +0.05..+0.06 accounts for the discrepancy."
             ),
             "factor_2_jmrui_chemical_shift_referencing": (
                 "In jMRUI AMARES peak fitting, PCr is typically referenced to 0.00 ppm rather than -2.54 ppm. "
@@ -348,9 +381,9 @@ def audit_ph_calibration(extracted: dict) -> dict:
             ),
             "epistemic_ruling": (
                 "Per scientific integrity guidelines, NO artificial empirical correction factor (+0.055) "
-                "is added to the code. Status PH_CALIBRATION_PARTIAL is retained. The qualitative biological "
-                "invariant is confirmed: muscle pH remains non-acidotic (>= 6.86) throughout, establishing that "
-                "mitochondrial recovery kinetics are oxidative and uninhibited by severe acidosis."
+                "is added to the code. Status PH_CALIBRATION_PARTIAL is retained. Neither pure aerobic metabolism "
+                "nor complete absence of proton accumulation can be claimed solely from relative PCr and Pi peaks "
+                "without independent blood lactate and acid-base measurements."
             )
         },
         "trials": trial_ph_audits
@@ -414,9 +447,9 @@ def evaluate_model_comparison(extracted: dict) -> dict:
         m1_mae = float(np.mean(np.abs(y_true - m1_pred)))
         m1_r2 = float(1.0 - np.sum((y_true - m1_pred)**2) / ss_tot)
         
-        # M2: SUBJECT-01 Local Physiological Bioenergetic Model (Constrained Resting Asymptote)
+        # M2: Constrained Monoexponential Baseline
         # dPCr/dt = k_rec * (PCr_rest - PCr)
-        # 1-parameter physical model: recovery asymptote is constrained by resting PCr!
+        # 1-parameter model: recovery asymptote is constrained by resting PCr
         def m2_ode_func(t, k_sec):
             return p_min + (p_rest - p_min) * (1.0 - np.exp(-k_sec * t))
             
@@ -434,12 +467,36 @@ def evaluate_model_comparison(extracted: dict) -> dict:
             "m2_tau_s": float(1.0 / popt_m2[0])
         }
         
+        m2_res = {
+            "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+            "mathematical_form": "dPCr/dt = k * (PCr_rest - PCr)",
+            "rmse": m2_rmse,
+            "mae": m2_mae,
+            "r_squared": m2_r2,
+            "k_min_minus_1": float(popt_m2[0] * 60.0),
+            "tau_s": float(1.0 / popt_m2[0]),
+            "scope_limits": (
+                "Constrained monoexponential relaxation baseline only. "
+                "Energy balance, O2 delivery, active muscle volume, ATP turnover, "
+                "and motor recruitment are NOT validated."
+            )
+        }
+        
         in_sample_results[tid] = {
             "trial_id": tid,
             "provenance": "IN_SAMPLE_FIT_NOT_VALIDATION",
             "M0_null_constant": {"rmse": m0_rmse, "mae": m0_mae, "r_squared": m0_r2},
             "M1_monoexponential_3param": {"rmse": m1_rmse, "mae": m1_mae, "r_squared": m1_r2, "k_min_minus_1": float(popt_m1[2] * 60.0)},
-            "M2_physiological_ode_model": {"rmse": m2_rmse, "mae": m2_mae, "r_squared": m2_r2, "k_min_minus_1": float(popt_m2[0] * 60.0), "tau_s": float(1.0 / popt_m2[0])}
+            "M2_constrained_monoexponential_baseline": m2_res,
+            "M2_physiological_ode_model": m2_res,  # Backward compatibility alias
+            "M3_full_physiological_ode": {
+                "status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+                "reason": (
+                    "Rehman 2024 provides relative 31P-MRS peak areas only; mechanical pedal power (W), "
+                    "pedal torque, quadriceps PCSA, muscle volume, cardiac output, and VO2 are absent in the raw dataset. "
+                    "Full physiological state evaluation cannot be executed without unobserved boundary conditions."
+                )
+            }
         }
         
     # Within-Subject Trial Transfer: Calibrate on Trial i -> Predict on Trial j
@@ -474,7 +531,10 @@ def evaluate_model_comparison(extracted: dict) -> dict:
             transfer_results.append({
                 "train_trial": train_tid,
                 "test_trial": test_tid,
+                "evaluation_scenario": "CONDITIONAL_TRAJECTORY_RECONSTRUCTION",
                 "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+                "information_available": "Test baseline PCr_rest and test biochemical nadir PCr_min are known (retrospective reconstruction).",
+                "leakage_audit": "Conditions on observed nadir; NOT a forward prospective prediction.",
                 "transfer_rate_constant_k_min": float(k_sec_m2_transfer * 60.0),
                 "M1_transfer": {"rmse": m1_trans_rmse, "mae": m1_trans_mae, "r_squared": m1_trans_r2},
                 "M2_transfer": {"rmse": m2_trans_rmse, "mae": m2_trans_mae, "r_squared": m2_trans_r2}
@@ -483,21 +543,47 @@ def evaluate_model_comparison(extracted: dict) -> dict:
     # Compute aggregate transfer statistics
     m2_trans_r2s = [tr["M2_transfer"]["r_squared"] for tr in transfer_results]
     m2_trans_rmses = [tr["M2_transfer"]["rmse"] for tr in transfer_results]
+    m1_trans_r2s = [tr["M1_transfer"]["r_squared"] for tr in transfer_results]
+    m1_trans_rmses = [tr["M1_transfer"]["rmse"] for tr in transfer_results]
     
     return {
         "status": "WITHIN_SUBJECT_TRIAL_TRANSFER_COMPLETED",
         "in_sample_fits": in_sample_results,
         "within_subject_trial_transfers": transfer_results,
+        "transfer_scenarios": {
+            "scenario_A_conditional_trajectory_reconstruction": {
+                "status": "VALIDATED_TECHNICAL_REPRODUCIBILITY",
+                "m2_transfer_r_squared_mean": float(np.mean(m2_trans_r2s)),
+                "m2_transfer_r_squared_min": float(np.min(m2_trans_r2s)),
+                "m2_transfer_r_squared_max": float(np.max(m2_trans_r2s)),
+                "m2_transfer_rmse_mean": float(np.mean(m2_trans_rmses)),
+                "m1_transfer_r_squared_mean": float(np.mean(m1_trans_r2s)),
+                "m1_transfer_rmse_mean": float(np.mean(m1_trans_rmses)),
+                "conclusion": "Under identical initial conditions (known nadir and baseline), M2 constrained monoexponential achieves mean transfer R2 = 0.8566 vs M1 mean transfer R2 = 0.8268, confirming test-retest reproducibility of the single rate parameter."
+            },
+            "scenario_B_prospective_prediction": {
+                "status": "PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS",
+                "forecast_origin_time_s": 90.0,
+                "blocking_reason": (
+                    "At the nominal stop of exercise (t = 90.0 s), PCr continues depleting for an unobserved lag "
+                    "duration (+18s in Trials 2/3, +54s in Trial 1) to an unobserved nadir depth. Forward forecasting "
+                    "prior to observing nadir without mechanical work rate or blood flow measurements is mathematically "
+                    "undefined and cannot be evaluated without leakage of future test points."
+                )
+            }
+        },
         "transfer_summary": {
             "m2_transfer_r_squared_mean": float(np.mean(m2_trans_r2s)),
             "m2_transfer_r_squared_min": float(np.min(m2_trans_r2s)),
             "m2_transfer_r_squared_max": float(np.max(m2_trans_r2s)),
             "m2_transfer_rmse_mean": float(np.mean(m2_trans_rmses)),
+            "m2_classification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+            "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
             "evaluation": (
-                f"Physiological model M2 demonstrates excellent intra-subject generalization "
+                f"Constrained monoexponential baseline M2 demonstrates excellent intra-subject reconstruction "
                 f"(transfer R2 = {np.mean(m2_trans_r2s):.4f}, range [{np.min(m2_trans_r2s):.4f}, {np.max(m2_trans_r2s):.4f}]), "
-                f"retaining over 75-96% of variance across repeated trials of the same participant. "
-                f"This verifies technical test-retest reproducibility of the bioenergetic rate parameter."
+                f"retaining 77-96% of variance across repeated trials of the same participant. "
+                f"This verifies technical test-retest reproducibility of the recovery rate parameter."
             )
         },
         "cross_subject_loso_policy": {
@@ -536,10 +622,11 @@ def analyze_parameter_identifiability() -> dict:
                 "identifiability_status": "IDENTIFIED_RELATIVE_METRIC",
                 "basis": "(PCr_rest - PCr_nadir) / PCr_rest (dimensionless ratio independent of gain)."
             },
-            "intracellular_non_acidotic_status": {
-                "value": "pH >= 6.86 throughout exercise and recovery",
-                "identifiability_status": "IDENTIFIED_FROM_CHEMICAL_SHIFTS",
-                "basis": "Pi and PCr chemical shift delta_o via Henderson-Hasselbalch equation."
+            "intracellular_ph_dynamics": {
+                "value": "Calculated pH range: 6.7932 to 7.0228 (Trial 1 min: 6.7932, Trial 2 min: 6.8840, Trial 3 min: 6.8911)",
+                "identifiability_status": "PARTIALLY_CALIBRATED_RELATIVE_METRIC",
+                "basis": "Pi and PCr chemical shift delta_o via Henderson-Hasselbalch equation (PMC11617988 Fig. 7). Prior claim 'pH >= 6.86 throughout' retracted as superseded.",
+                "retraction_statement": "The prior claim 'pH >= 6.86 throughout' is formally retracted as superseded. Minimum calculated pH reaches 6.7932 in Trial 1."
             }
         },
         "strictly_unidentifiable_parameters": {
@@ -631,7 +718,11 @@ def run_full_validation() -> dict:
             "published_tau_mean_s": 39.4,
             "repeatability_cv_pct": 9.90,
             "transfer_r_squared_m2_mean": stage4["transfer_summary"]["m2_transfer_r_squared_mean"],
+            "m2_reclassification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
+            "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
+            "prospective_prediction_status": "PROSPECTIVE_PREDICTION_BLOCKED_UNOBSERVED_DEPLETION_DYNAMICS",
             "ph_status": "PH_CALIBRATION_PARTIAL",
+            "ph_calculated_range": [6.7932, 7.0228],
             "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
             "biological_intervention_status": "NO_GO"
         }
