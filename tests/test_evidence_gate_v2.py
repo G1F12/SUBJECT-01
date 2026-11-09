@@ -17,6 +17,7 @@ from verify_data_provenance import (
     audit_registry_experiments,
     audit_validation_scripts,
     audit_structured_experiment_results,
+    audit_strict_json_rfc8259,
     audit_negative_tests
 )
 
@@ -41,6 +42,11 @@ class TestEvidenceGateV2(unittest.TestCase):
         """Verify cross-cycle structured experiment results and CPE45 energy bounds."""
         problems = audit_structured_experiment_results()
         self.assertEqual(problems, [], f"Structured results violations: {problems}")
+
+    def test_positive_strict_json(self):
+        """Verify repository JSON files strictly adhere to RFC 8259 (no Infinity/NaN)."""
+        problems = audit_strict_json_rfc8259()
+        self.assertEqual(problems, [], f"Strict JSON RFC 8259 violations: {problems}")
         
     def test_negative_battery_wrong_sha256(self):
         """Negative test: Intentionally wrong SHA256 must be detected."""
@@ -66,6 +72,16 @@ class TestEvidenceGateV2(unittest.TestCase):
         """Negative test: Equating raters with independent biological subjects must be blocked."""
         neg_results = audit_negative_tests()
         self.assertTrue(neg_results.get('conflated_participants_caught', False))
+
+    def test_negative_battery_tampered_published_table_sha(self):
+        """Negative test: Tampered SHA256 on PUBLISHED_TABLE_DATA must be detected."""
+        neg_results = audit_negative_tests()
+        self.assertTrue(neg_results.get('tampered_published_table_sha_caught', False))
+
+    def test_negative_battery_strict_json(self):
+        """Negative test: Non-standard token Infinity in JSON must be detected."""
+        neg_results = audit_negative_tests()
+        self.assertTrue(neg_results.get('strict_json_inf_caught', False))
 
 if __name__ == '__main__':
     unittest.main()

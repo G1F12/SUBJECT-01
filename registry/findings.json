@@ -322,7 +322,7 @@
     "id": "FND-0041",
     "date": "2026-11-08",
     "experiment_id": "EXP-0041",
-    "finding": "Physical and physiological energy accounting for the 2700-second CPE45 test at 250 W strictly separates external mechanical work (675 kJ), whole-body gross metabolic chemical expenditure (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol), oxidative resynthesis (~3300 kJ), anaerobic glycolysis (~75 kJ), local active calf PCr buffer (0.11-0.39 kJ work potential; 0.62 kJ whole GM), and heat enthalpy (21 kJ/mol). Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is prohibited as a category error. TARGET-CPE45 remains NOT EXTERNALLY VALIDATED; interventions NO_GO.",
+    "finding": "Physical and physiological energy accounting for the 2700-second CPE45 test at 250 W strictly separates external mechanical work (675 kJ), whole-body gross metabolic chemical expenditure (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol), oxidative resynthesis (~3300 kJ), anaerobic glycolysis (~75 kJ), local active calf PCr buffer (0.11-0.39 kJ work potential; 0.62 kJ whole GM), and heat enthalpy (21 kJ/mol). The 3300 kJ oxidative resynthesis and 75 kJ glycolysis figures are documented as ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED (not empirically measured in CPE45). Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is prohibited as a category error. TARGET-CPE45 remains NOT EXTERNALLY VALIDATED; interventions NO_GO.",
     "confidence": "high",
     "notes": "Enforces structural separation between local muscle bridge and systemic TARGET-CPE45."
   }

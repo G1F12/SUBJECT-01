@@ -1,44 +1,45 @@
-# SUBJECT-01 — handoff Research Cycle 9 (Final Source Repair, Evidence Gate V2 & Real Data Unlock)
+# SUBJECT-01 — handoff Research Cycle 9 (CI Failure, Strict JSON & Real-Data Pipeline Repair)
 
 Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD с origin/main.
-Cycle 9 Final база: 95640071c38b25d2abb7c908892d5a74e3452184.
-Ветка цикла: fix/cycle9-final-source-repair-and-evidence-gate-v2.
+База: 19402484b0295c46ae03d5dab47a363f89cf5795.
+Ветка: fix/ci-failure-and-real-data-pipeline-repair.
 Итоговый main SHA фиксируется после локального merge и пуша.
 
-Ключевые документы Cycle 9:
+Ключевые документы и инструменты:
 - research/empirical_recruitment_2026_11_08/REPORT.md (полный научный отчёт Cycle 9 с обязательной таблицей достоверности CLAIM / REAL MEASUREMENT / MODEL ASSUMPTION / VALIDATION STATUS и ответами на 9 вопросов)
 - research/empirical_recruitment_2026_11_08/MATHEMATICS.md (биофизика рекрутирования 500 ДЕ по Ханнеману, объёмный проводник, фильтр SAT, 4 уровня идентифицируемости)
 - research/empirical_recruitment_2026_11_08/MEASUREMENT_MODEL.md (физические измерительные карты для HD-sEMG, 31P-MRS, 3D MRI, NIRS)
-- research/empirical_recruitment_2026_11_08/DATA_AUDIT.md (метрология и аудит источников SRC-0068..0072, фиксация HTTP 403 WAF/CDN блокировок Dryad и Figshare, ретракция фейкового LOSO, исправление частот Hug по Таблице 2 и когорты Andersen по PMID 4057091)
+- research/empirical_recruitment_2026_11_08/DATA_AUDIT.md (метрология и аудит источников SRC-0068..0072, фиксация HTTP 403 WAF/CDN блокировок Dryad и Figshare, канонические байтовые хеши, исправление частот Hug по Таблице 2 и когорты Andersen по PMID 4057091)
 - research/empirical_recruitment_2026_11_08/LIMITATIONS.md (барьер доступности первичных данных, физический баланс CPE45, статус TARGET-CPE45 и NO_GO)
-- tools/verify_data_provenance.py (постоянный автоматический гейт Evidence Gate V2 со сквозным контролем SHA256 и отрицательными тестами)
-- tools/process_rehman_xlsx.py (автономный инструмент owner-assisted загрузки и обработки XLSX Rehman et al. 2024 с расчётом моноэкспоненциальной кинетики)
-- tests/test_evidence_gate_v2.py (9 юнит-тестов Evidence Gate V2, включая 5 отрицательных тестов на повреждение данных)
+- tools/verify_data_provenance.py (постоянный автоматический гейт Evidence Gate V2 со сквозным контролем SHA256, аудитом строгого JSON RFC 8259 и 7 отрицательными тестами)
+- tools/process_rehman_xlsx.py (автономный инструмент owner-assisted загрузки и обработки XLSX Rehman et al. 2024 с расчётом моноэкспоненциальной кинетики и проверкой SHA256)
+- tools/rehman_ooxml.py (модуль чтения и записи OOXML XLSX на стандартной библиотеке Python без сторонних зависимостей)
+- tests/test_rehman_xlsx_processor.py (8 юнит-тестов процессора Rehman XLSX, включая 5 отрицательных тестов на повреждение данных)
+- tests/test_evidence_gate_v2.py (12 юнит-тестов Evidence Gate V2, включая 7 отрицательных тестов на повреждение данных)
 - research/empirical_recruitment_2026_11_08/test_empirical_recruitment.py (9 юнит-тестов регрессионной и научной достоверности Cycle 9)
 
-Результаты Cycle 9 Final Source Repair & Real Data Unlock:
-1. TASK A — Исправление первоисточника Hug et al. 2021 (SRC-0068, DOI 10.1016/j.jelekin.2021.102548, bioRxiv 10.1101/2021.02.19.431376):
-   - По Таблице 2 установлены официальные частоты разряда ДЕ:
-     GM: 10% MVC = 8.1 ± 1.1 имп./с; 30% MVC = 8.1 ± 1.0 имп./с; 50% MVC = 7.6 ± 1.2 имп./с; 70% MVC = 12.2 ± 0.6 имп./с.
-     GL: 10% MVC = 8.1 ± 0.9 имп./с; 30% MVC = 8.2 ± 1.3 имп./с; 50% MVC = 11.3 ± 1.3 имп./с; 70% MVC = 14.0 ± 1.5 имп./с.
-   - Неподтверждённые частоты (9.8, 12.6, 15.4, 19.8 Гц) отозваны (NEG-0033).
-   - Число биологических участников переведено в UNKNOWN (данные объединены из двух разных исследований Del Vecchio 2019 и Hug 2021; 8 операторов != 8 испытуемых).
-2. TASK B — Получение и пайплайн Rehman et al. 2024 (SRC-0069, Dryad doi:10.5061/dryad.08kprr59v):
-   - Файл `2024_829_Ergometer_Dryad_Raw_V3.xlsx` (18,136 байт, SHA256 `ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf`).
-   - Зафиксировано объективное препятствие: прямой поток защищён AWS WAF / Anubis BotStopper JS-челленджем (HTTP 403), REST API требует Bearer OAuth token (HTTP 401). Автоматический обход средств защиты запрещён.
-   - Подготовлен owner-assisted инструмент `tools/process_rehman_xlsx.py`: пользователь скачивает файл браузером в репозиторий или Downloads, после чего скрипт автоматически валидирует SHA256, извлекает 3 триала по 75 спектров (6 с), фитит моноэкспоненту восстановления PCr и сохраняет проверенные метрики.
-   - Введён строгий запрет кросс-субъектного LOSO при одном участнике ($N=1$).
-3. TASK C — Evidence Gate V2:
-   - Обновлён `tools/verify_data_provenance.py`: физическая проверка существования `source_file`, байтовый пересчёт SHA256, запрет dummy-хеша `N/A`, строгое разделение `n_biological_participants`, `n_operators`, `n_trials`, `n_records`, запрет `EXTERNALLY_VALIDATED` для синтетических данных, аудит скриптов.
-   - Созданы unit-тесты `tests/test_evidence_gate_v2.py` (9 тестов, в т.ч. 5 negative tests: bad SHA256, missing file, synthetic y_true, dummy hash, conflated participants).
-4. TASK D — Финальная научная согласованность:
-   - Andersen & Saltin 1985 (SRC-0066, PMID 4057091): строго подтверждено 5 участников-мужчин (не 8).
-   - Сохранено отсутствие прямого покоя GM (DOWNGRADED_NOT_PRIMARY_RESTING_TABLE).
-   - Введён запрет категорической ошибки `category_error_static_pcr_to_external_work_prohibited = True`: запрещено делать вывод о >99% окислительном обеспечении сопоставлением статического буфера PCr одной мышцы (0.62 кДж) с общей внешней работой 45 минут (675 кДж).
-   - Утверждено пятиуровневое разделение: механическая работа (675 кДж), валовой метаболизм (~3375 кДж), оборот АТФ (~62.5 моль АТФ), окислительный ресинтез (~3300 кДж / 61.1 моль), гликолиз (~75 кДж / 1.4 моль) и локальный буфер PCr (0.11-0.62 кДж).
+Результаты ремонта CI, байтового происхождения и строгого JSON:
+1. CI Failure & Byte Provenance Repair (GitHub Actions run 42654714327):
+   - Устранена первопричина падения шага Structural and hash audit: настроен `.gitattributes` с явным правилом `text eol=lf` для всех репозиторных файлов при сохранении `-text` для бинарных CSV.
+   - Franke 2020 JSON приведен к каноническим LF байтам: 3049 байт, SHA256 `0345c4a8b36c95d9641c52bc96b759a43e6f899d186159606481060fbb437fa2`, тип `DERIVED_EXTRACTION_JSON`.
+   - Rehman 2024 XML: 42824 байта, SHA256 `d8f1df9664c94b4846da3c015ced45310bc17ea1f48b58ce287c61db6bd1ed2c`, тип `PUBLISHED_TABLE_DATA`.
+2. Завершение процессора сырых данных Rehman 2024 (`tools/process_rehman_xlsx.py`):
+   - Реализован легковесный OOXML движок `tools/rehman_ooxml.py` (zipfile + xml.etree).
+   - При отсутствии файла возвращает `PENDING_RAW_DATA` (без ложного PASS).
+   - При наличии файла выполняет валидацию байтового SHA256 (`ae7876d1...`), парсинг 3 триалов по 75 спектральных точек (6 с), моноэкспоненциальный фит кинетики PCr/Pi с 95% ДИ, сопоставление с опубликованными $k = 1.43, 1.62, 1.53\text{ мин}^{-1}$ и оценку test-retest repeatability. Метод LOSO при $N=1$ строго запрещён.
+   - Добавлены тесты `tests/test_rehman_xlsx_processor.py` (8 тестов) и шаг в `.github/workflows/validate.yml`.
+3. Модернизация Evidence Gate V2 (`tools/verify_data_provenance.py`):
+   - Сквозная проверка байтового хеша SHA256 для любого локального файла независимо от категории данных.
+   - Введены типы: `ORIGINAL_BINARY_FILE`, `DERIVED_EXTRACTION_JSON`, `PUBLISHED_TABLE_DATA`, `LITERATURE_REFERENCE_WITHOUT_FILE`, `SYNTHETIC_MODEL_SIMULATION`.
+   - Устранены токены `Infinity`, `-Infinity`, `NaN` во всех JSON-файлах репозитория по RFC 8259 (неопределённые числа обусловленности заменены на `null` со статусом `"INFINITE"`).
+   - Отрицательная батарея расширена до 7 тестов (добавлены подмена хеша в таблице и строгий аудит JSON).
+4. Уточнение статуса научных утверждений TARGET-CPE45:
+   - Значения 3300 кДж окислительного ресинтеза и 75 кДж гликолитического вклада строго задокументированы как `ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED`.
+   - Аэробная фракция зафиксирована как `measured_empirical_aerobic_fraction: null`, статус: `NOT_EMPIRICALLY_MEASURED_IN_CPE45`.
+   - `TARGET-CPE45` сохраняет статус `NOT EXTERNALLY VALIDATED`, биологические вмешательства — `NO_GO`.
 
 Научный статус:
 - TARGET-CPE45: NOT EXTERNALLY VALIDATED.
 - Биологические вмешательства: NO_GO.
 - Реестры: HYP=8, EXP=41, FND=41, NEG=34, DEC=15, ISS=19, SRC=72.
-- Тесты: 180/180 PASS (все тестовые наборы репозитория).
+- Тесты: 188/188 PASS (все тестовые наборы репозитория, включая 8 тестов процессора Rehman и 12 тестов Evidence Gate V2).

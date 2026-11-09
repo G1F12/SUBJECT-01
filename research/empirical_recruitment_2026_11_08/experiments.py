@@ -214,6 +214,7 @@ def run_all_experiments():
         "data_type": "COMPUTATIONAL_SIMULATION",
         "validation_status": "COMPLETED_MACRO_BUDGET_ACCOUNTING",
         "cpe45_energy_accounting": {
+            "scenario_status": "ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED",
             "external_mechanical_work_kJ": 675.0,
             "external_work_description": "250 W maintained over 2700 s (45 minutes) = 675 kJ. Illustrative test scenario.",
             "whole_body_metabolic_cost_nominal_kJ": 3375.0,
@@ -222,6 +223,9 @@ def run_all_experiments():
             "whole_body_atp_turnover_moles": 62.5,
             "oxidative_resynthesis_nominal_kJ": 3300.0,
             "glycolysis_contribution_nominal_kJ": 75.0,
+            "measured_empirical_aerobic_fraction": None,
+            "measured_aerobic_fraction_status": "NOT_EMPIRICALLY_MEASURED_IN_CPE45",
+            "scenario_assumptions": "Theoretical scenario balance calculated at assumed nominal gross efficiency eta_gross = 20% and standard literature endurance partitioning. Not empirically measured in CPE45.",
             "local_pcr_chemical_buffer_work_capacity_kJ": {
                 "active_calf_volume_scenario_kJ": [0.106, 0.389],
                 "anatomical_whole_gm_kJ": 0.621
@@ -256,7 +260,7 @@ def run_all_experiments():
     }
 
     out_file = CYCLE_DIR / 'experiment_results.json'
-    out_file.write_text(json.dumps(all_results, indent=2, ensure_ascii=False), encoding='utf-8')
+    out_file.write_text(json.dumps(all_results, indent=2, ensure_ascii=False, allow_nan=False) + '\n', encoding='utf-8', newline='\n')
     print(f"\nSuccessfully executed all Cycle 9 experiments!")
     print(f"Results written to: {out_file} ({out_file.stat().st_size} bytes)")
     return all_results

@@ -32,6 +32,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 ALLOWED_DATA_TYPES = {
+    # Evidence Gate V2 Categories:
+    'ORIGINAL_BINARY_FILE',
+    'DERIVED_EXTRACTION_JSON',
+    'PUBLISHED_TABLE_DATA',
+    'LITERATURE_REFERENCE_WITHOUT_FILE',
+    'SYNTHETIC_MODEL_SIMULATION',
+    # Backward compatibility:
     'RAW_HUMAN_OBSERVATION',
     'LITERATURE_REPORTED_VALUE',
     'COMPUTATIONAL_SIMULATION',
@@ -90,10 +97,10 @@ def audit_dataset_provenance_records(custom_data=None):
         status = rec.get('validation_status', '')
         
         # Rule: synthetic data cannot claim positive empirical validation
-        if dtype == 'SYNTHETIC':
+        if dtype in ('SYNTHETIC', 'SYNTHETIC_MODEL_SIMULATION'):
             for forbidden in DISALLOWED_EMPIRICAL_STATUSES_FOR_SYNTHETIC:
                 if forbidden in status.upper() and f"NOT_{forbidden}" not in status.upper():
-                    problems.append(f"Dataset {name} cannot have empirical status '{status}' with data_type 'SYNTHETIC'")
+                    problems.append(f"Dataset {name} cannot have empirical status '{status}' with data_type '{dtype}'")
                     
         # Rule: distinct participant and operator fields
         if 'n_biological_participants' not in rec and 'independent_participants_n' not in rec:
@@ -117,28 +124,40 @@ def audit_dataset_provenance_records(custom_data=None):
         source_file = rec.get('source_file')
         recorded_sha = rec.get('sha256')
         
-        if dtype == 'RAW_HUMAN_OBSERVATION' or (source_file and dtype != 'LITERATURE_REPORTED_VALUE'):
+        # Datasets requiring a local file
+        if dtype in ('ORIGINAL_BINARY_FILE', 'DERIVED_EXTRACTION_JSON', 'RAW_HUMAN_OBSERVATION'):
             if not source_file:
                 problems.append(f"Dataset {name} has data_type '{dtype}' but missing source_file")
+
+        # Datasets prohibited from claiming a local file
+        if dtype == 'LITERATURE_REFERENCE_WITHOUT_FILE':
+            if source_file is not None:
+                problems.append(f"Dataset {name} is LITERATURE_REFERENCE_WITHOUT_FILE but has source_file: {source_file}")
+            if recorded_sha is not None:
+                problems.append(f"Dataset {name} is LITERATURE_REFERENCE_WITHOUT_FILE but asserts sha256: {recorded_sha}")
+
+        # Invariant: If a record references an existing local file and asserts a SHA256,
+        # byte hash MUST be verified regardless of data_type category!
+        if source_file:
+            p = ROOT / source_file
+            if not p.is_file():
+                problems.append(f"Dataset {name} source_file does not exist on disk: {source_file}")
             else:
-                p = ROOT / source_file
-                if not p.is_file():
-                    problems.append(f"Dataset {name} source_file does not exist on disk: {source_file}")
-                else:
-                    computed_sha = compute_file_sha256(p)
-                    if not recorded_sha:
-                        problems.append(f"Dataset {name} missing sha256 for local file: {source_file}")
-                    elif recorded_sha.upper() in FORBIDDEN_DUMMY_HASHES:
-                        problems.append(f"Dataset {name} has forbidden dummy hash '{recorded_sha}' for real file {source_file}")
-                    elif computed_sha.lower() != recorded_sha.lower():
-                        problems.append(f"Dataset {name} byte SHA256 mismatch: recorded '{recorded_sha}', computed '{computed_sha}'")
-        elif dtype == 'LITERATURE_REPORTED_VALUE':
-            # Literature results must not have dummy hash strings pretending to be file checksums
-            if recorded_sha and recorded_sha.upper() in FORBIDDEN_DUMMY_HASHES:
-                problems.append(f"Dataset {name} has forbidden dummy hash '{recorded_sha}'. Literature entries must use null/separate storage category.")
+                computed_sha = compute_file_sha256(p)
+                if not recorded_sha:
+                    problems.append(f"Dataset {name} missing sha256 for local file: {source_file}")
+                elif recorded_sha.upper() in FORBIDDEN_DUMMY_HASHES:
+                    problems.append(f"Dataset {name} has forbidden dummy hash '{recorded_sha}' for real file {source_file}")
+                elif computed_sha.lower() != recorded_sha.lower():
+                    problems.append(f"Dataset {name} byte SHA256 mismatch: recorded '{recorded_sha}', computed '{computed_sha}'")
+        elif recorded_sha:
+            if recorded_sha.upper() in FORBIDDEN_DUMMY_HASHES:
+                problems.append(f"Dataset {name} has forbidden dummy hash '{recorded_sha}'. Literature entries without files must use null.")
+            else:
+                problems.append(f"Dataset {name} asserts sha256 '{recorded_sha}' but has no source_file on disk")
 
         # Rule: Observation IDs citation
-        if dtype in ('RAW_HUMAN_OBSERVATION', 'LITERATURE_REPORTED_VALUE'):
+        if dtype in ('ORIGINAL_BINARY_FILE', 'DERIVED_EXTRACTION_JSON', 'PUBLISHED_TABLE_DATA', 'RAW_HUMAN_OBSERVATION', 'LITERATURE_REPORTED_VALUE'):
             if not rec.get('source_observation_ids') and not rec.get('observation_id') and not rec.get('provenance'):
                 problems.append(f"Dataset {name} missing source observation identifiers")
 
@@ -277,6 +296,38 @@ def audit_structured_experiment_results():
 
     return problems
 
+def audit_strict_json_rfc8259(custom_dir=None):
+    """
+    Global strict JSON audit per RFC 8259.
+    Ensures no Infinity, -Infinity, or NaN tokens exist in JSON files across the repository.
+    """
+    problems = []
+    base_dir = Path(custom_dir) if custom_dir else ROOT
+    for p in base_dir.rglob('*.json'):
+        p_str = p.as_posix()
+        # Skip git metadata, cache, and non-project directories
+        if '/.git/' in p_str or '/aegis_survivability/' in p_str or '/.gemini/' in p_str or '/__pycache__/' in p_str:
+            continue
+        try:
+            raw_text = p.read_text(encoding='utf-8')
+        except Exception as e:
+            problems.append(f"Cannot read {p}: {e}")
+            continue
+            
+        if 'Infinity' in raw_text or 'NaN' in raw_text:
+            rel_name = p.relative_to(ROOT) if ROOT in p.parents else p.name
+            problems.append(f"RFC 8259 violation in {rel_name}: contains non-standard tokens (Infinity or NaN)")
+            continue
+            
+        try:
+            parsed = json.loads(raw_text)
+            json.dumps(parsed, allow_nan=False)
+        except Exception as e:
+            rel_name = p.relative_to(ROOT) if ROOT in p.parents else p.name
+            problems.append(f"Strict JSON validation failure in {rel_name}: {e}")
+            
+    return problems
+
 def audit_negative_tests():
     """
     Negative test battery: Deliberately constructs invalid inputs and asserts that
@@ -379,6 +430,34 @@ def audit_negative_tests():
     p5 = audit_dataset_provenance_records(fake_data_5)
     results['conflated_participants_caught'] = any("must classify biological participants as UNKNOWN" in err for err in p5)
 
+    # Negative Test 6: Tampered SHA256 on PUBLISHED_TABLE_DATA with source_file
+    fake_data_6 = {
+        "rehman_table_audit": {
+            "source_id": "SRC-0069",
+            "dataset_id": "TEST_DATASET_6",
+            "source_url_or_doi": "https://doi.org/10.1016/j.dib.2024.111114",
+            "data_type": "PUBLISHED_TABLE_DATA",
+            "validation_status": "PUBLISHED_TABLE_TEST",
+            "source_file": "research/empirical_recruitment_2026_11_08/pmc11617988.xml",
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111", # Tampered!
+            "n_biological_participants": 1,
+            "n_operators": 1,
+            "n_trials": 3,
+            "n_records": 3,
+            "source_observation_ids": ["OBS_TEST"]
+        }
+    }
+    p6 = audit_dataset_provenance_records(fake_data_6)
+    results['tampered_published_table_sha_caught'] = any("SHA256 mismatch" in err for err in p6)
+
+    # Negative Test 7: Strict JSON non-standard token Infinity
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmpdir:
+        bad_json = Path(tmpdir) / 'bad.json'
+        bad_json.write_text('{"bad_value": Infinity}', encoding='utf-8')
+        p7 = audit_strict_json_rfc8259(custom_dir=tmpdir)
+        results['strict_json_inf_caught'] = any("RFC 8259 violation" in err for err in p7)
+
     return results
 
 def run_evidence_gate():
@@ -424,11 +503,20 @@ def run_evidence_gate():
         for p in p4:
             print(f"[FAIL] {p}")
 
-    # 5. Negative test battery
+    # 5. Global RFC 8259 Strict JSON Audit
+    p5 = audit_strict_json_rfc8259()
+    all_problems.extend(p5)
+    if not p5:
+        print("[PASS] Global strict JSON RFC 8259 audit: Zero Infinity/NaN tokens detected.")
+    else:
+        for p in p5:
+            print(f"[FAIL] {p}")
+
+    # 6. Negative test battery
     neg_tests = audit_negative_tests()
     all_neg_passed = all(neg_tests.values())
     if all_neg_passed:
-        print(f"[PASS] Negative test battery verified ({len(neg_tests)}/5 corruption patterns caught):")
+        print(f"[PASS] Negative test battery verified ({len(neg_tests)}/{len(neg_tests)} corruption patterns caught):")
         for tname in neg_tests:
             print(f"       + {tname}: EXPECTED FAIL CONFIRMED")
     else:

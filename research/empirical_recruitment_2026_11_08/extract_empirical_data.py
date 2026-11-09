@@ -65,7 +65,7 @@ def audit_rehman_2024():
         "protocol": "In-bore knee extension ergometer (Siemens 3T)",
         "dryad_doi": "10.5061/dryad.08kprr59v",
         "dryad_share_url": "https://datadryad.org/stash/share/LKj22wpyxIQguzk5GCQgsMBwY6hccwEKj77L2nXXXb0",
-        "data_type": "RAW_HUMAN_OBSERVATION" if has_raw_xlsx and is_expected else "LITERATURE_REPORTED_VALUE",
+        "data_type": "ORIGINAL_BINARY_FILE" if has_raw_xlsx and is_expected else "PUBLISHED_TABLE_DATA",
         "raw_timeseries_status": "RAW_TIMESERIES_ACQUIRED_AND_VERIFIED" if has_raw_xlsx and is_expected else "RAW_TIMESERIES_UNAVAILABLE",
         "raw_download_audit": {
             "target_file": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
@@ -79,12 +79,14 @@ def audit_rehman_2024():
         "source_file": "research/empirical_recruitment_2026_11_08/2024_829_Ergometer_Dryad_Raw_V3.xlsx" if has_raw_xlsx and is_expected else "research/empirical_recruitment_2026_11_08/pmc11617988.xml",
         "sha256": sha256,
         "n_biological_participants": 1,
+        "independent_participants_n": 1,
         "n_operators": 1,
         "n_trials": 3,
         "n_records": 225 if has_raw_xlsx and is_expected else 3,
-        "independent_participants_n": 1,
-        "measurement_units": "rate constant k in min^-1; pH unitless; PCr depletion fraction; temporal resolution 6s",
+        "n_spectra": 225 if has_raw_xlsx and is_expected else 75,
+        "n_motor_units": None,
         "number_of_real_observations": 225 if has_raw_xlsx and is_expected else 3,
+        "measurement_units": "rate constant k in min^-1; pH unitless; PCr depletion fraction; temporal resolution 6s",
         "source_observation_ids": ["PMC11617988_TABLE1_TRIAL1", "PMC11617988_TABLE1_TRIAL2", "PMC11617988_TABLE1_TRIAL3"],
         "trials": trials_aggregate,
         "aggregate_statistics": {
@@ -115,7 +117,7 @@ def audit_hug_2021():
         "preprint_doi": "10.1101/2021.02.19.431376",
         "figshare_doi": "10.6084/m9.figshare.13695937",
         "muscles_studied": ["Gastrocnemius Medialis", "Gastrocnemius Lateralis", "Tibialis Anterior"],
-        "data_type": "LITERATURE_REPORTED_VALUE",
+        "data_type": "LITERATURE_REFERENCE_WITHOUT_FILE",
         "storage_type": "LITERATURE_CITATION",
         "raw_source_file": None,
         "source_file": None,
@@ -141,6 +143,8 @@ def audit_hug_2021():
         "inter_operator_icc": "> 0.99 for discharge rate and recruitment time",
         "n_trials": 11,
         "n_records": 126,
+        "n_spectra": None,
+        "n_motor_units": 126,
         "number_of_real_observations": 126,
         "measurement_units": "Discharge rate in pps (pulses per second / Hz); MVC percentage in %; PNR in dB",
         "source_observation_ids": [
@@ -193,7 +197,7 @@ def audit_hug_2021():
 def audit_mri_volumetry():
     """Audit MRI volumetry and hemodynamic benchmark sources."""
     franke_file = "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json"
-    franke_sha = "c08748c08d2649cb69a535c1914c3844fb8497288aebb2d006274fdcddfcba83"
+    franke_sha = "0345c4a8b36c95d9641c52bc96b759a43e6f899d186159606481060fbb437fa2"
     
     return {
         "sources_audit": [
@@ -201,7 +205,7 @@ def audit_mri_volumetry():
                 "source_id": "SRC-0063",
                 "dataset_id": "FRANKE_2020_MRI_VOLUMETRY",
                 "citation": "Franke et al. (2020) PMC7332772",
-                "data_type": "RAW_HUMAN_OBSERVATION",
+                "data_type": "DERIVED_EXTRACTION_JSON",
                 "muscle": "Gastrocnemius Medialis",
                 "source_file": franke_file,
                 "sha256": franke_sha,
@@ -209,6 +213,9 @@ def audit_mri_volumetry():
                 "n_operators": 1,
                 "n_trials": 1,
                 "n_records": 1,
+                "n_spectra": None,
+                "n_motor_units": None,
+                "number_of_real_observations": 1,
                 "independent_participants_n": 1,
                 "V_anat_mL": 379.89,
                 "verification_status": "VERIFIED_PRIMARY_MEASUREMENT",
@@ -221,7 +228,7 @@ def audit_mri_volumetry():
                 "dataset_id": "ANDERSEN_SALTIN_1985_BENCHMARK",
                 "citation": "Andersen & Saltin (1985) J Physiol 366:233-249",
                 "pmid": "4057091",
-                "data_type": "LITERATURE_REPORTED_VALUE",
+                "data_type": "LITERATURE_REFERENCE_WITHOUT_FILE",
                 "storage_type": "LITERATURE_CITATION",
                 "muscle": "Quadriceps femoris",
                 "source_file": None,
@@ -230,6 +237,9 @@ def audit_mri_volumetry():
                 "n_operators": 2,
                 "n_trials": 6,
                 "n_records": 5,
+                "n_spectra": None,
+                "n_motor_units": None,
+                "number_of_real_observations": 5,
                 "independent_participants_n": 5,
                 "V_anat_mL_estimate": 2170.0,
                 "verification_status": "ESTIMATED_FROM_QUADRICEPS_MASS",
@@ -243,11 +253,16 @@ def audit_mri_volumetry():
                 "source_id": "SRC-0070",
                 "dataset_id": "MUSCLEMAP_ZENODO_10077847",
                 "citation": "MuscleMap Zenodo 10.5281/zenodo.10077847",
-                "data_type": "SYNTHETIC",
+                "data_type": "SYNTHETIC_MODEL_SIMULATION",
+                "source_file": None,
+                "sha256": None,
                 "n_biological_participants": 0,
                 "n_operators": 0,
                 "n_trials": 0,
                 "n_records": 0,
+                "n_spectra": None,
+                "n_motor_units": None,
+                "number_of_real_observations": 0,
                 "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
                 "validation_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
                 "source_observation_ids": ["RETRACTED_DEEP_LEARNING_TEMPLATE_WEIGHTS"],
@@ -257,11 +272,16 @@ def audit_mri_volumetry():
                 "source_id": "SRC-0071",
                 "dataset_id": "CENNI_FIGSHARE_5971480",
                 "citation": "Cenni et al. Figshare 10.6084/m9.figshare.5971480",
-                "data_type": "SYNTHETIC",
+                "data_type": "SYNTHETIC_MODEL_SIMULATION",
+                "source_file": None,
+                "sha256": None,
                 "n_biological_participants": 0,
                 "n_operators": 0,
                 "n_trials": 0,
                 "n_records": 0,
+                "n_spectra": None,
+                "n_motor_units": None,
+                "number_of_real_observations": 0,
                 "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
                 "validation_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
                 "source_observation_ids": ["RETRACTED_UNRESOLVABLE_FIGSHARE_ID"],
@@ -293,7 +313,7 @@ def main():
     }
     
     out_file = OUT_DIR / 'empirical_datasets_cycle9.json'
-    out_file.write_text(json.dumps(out_data, indent=2, ensure_ascii=False), encoding='utf-8')
+    out_file.write_text(json.dumps(out_data, indent=2, ensure_ascii=False, allow_nan=False) + '\n', encoding='utf-8', newline='\n')
     print(f"Saved: {out_file} ({out_file.stat().st_size} bytes)")
 
 if __name__ == '__main__':

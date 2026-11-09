@@ -906,11 +906,15 @@
       "SRC-0069",
       "SRC-0070"
     ],
-    "design": "Rigorous separation of external mechanical work (250 W * 2700 s = 675 kJ), whole-body metabolic cost (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol ATP), oxidative resynthesis (~3300 kJ), anaerobic glycolysis (~75 kJ), local single-muscle PCr buffer (0.1-0.6 kJ), and reaction enthalpy Delta_R H = 21 kJ/mol. Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is strictly prohibited as a category error.",
+    "design": "Rigorous physical separation of external mechanical work (250 W * 2700 s = 675 kJ), whole-body metabolic cost (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol ATP), oxidative resynthesis (~3300 kJ, ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED), anaerobic glycolysis (~75 kJ, ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED), local single-muscle PCr buffer (0.1-0.6 kJ), and reaction enthalpy Delta_R H = 21 kJ/mol. Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is strictly prohibited as a category error.",
     "status": "completed_macro_budget_accounting",
     "results": {
-      "calf_pcr_contribution_percent": 0.092,
-      "quadriceps_pcr_contribution_percent": 0.629,
+      "scenario_status": "ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED",
+      "oxidative_resynthesis_nominal_kJ": 3300.0,
+      "glycolysis_contribution_nominal_kJ": 75.0,
+      "measured_empirical_aerobic_fraction": null,
+      "measured_aerobic_fraction_status": "NOT_EMPIRICALLY_MEASURED_IN_CPE45",
+      "scenario_assumptions": "Theoretical scenario balance calculated at assumed nominal gross efficiency eta_gross = 20% and standard literature endurance partitioning. Not empirically measured in CPE45.",
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
       "biological_interventions": "NO_GO_MAINTAINED"
     },

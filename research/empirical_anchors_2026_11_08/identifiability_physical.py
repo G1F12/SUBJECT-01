@@ -7,7 +7,7 @@ Rigorous 3-level identifiability analysis:
 3. EMPIRICAL IDENTIFIABILITY WITH ACTUAL HUMAN DATA (multi-cohort empirical audit).
 """
 from pathlib import Path
-import json
+import json, math
 import numpy as np
 
 BASE = Path(__file__).resolve().parent
@@ -251,8 +251,13 @@ def analyze_conditional_identifiability(topologies):
         FIM = J_fim.T @ J_fim
         eigvals = np.sort(np.linalg.eigvalsh(FIM))[::-1]
 
-        cond_number = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
-        cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+        raw_cond = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
+        raw_cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+
+        cond_num = float(raw_cond) if math.isfinite(raw_cond) else None
+        cond_num_status = "FINITE" if math.isfinite(raw_cond) else "INFINITE"
+        cond_eff = float(raw_cond_eff) if math.isfinite(raw_cond_eff) else None
+        cond_eff_status = "FINITE" if math.isfinite(raw_cond_eff) else "INFINITE"
 
         null_basis = Vt[eff_rank:] if null_dim > 0 else np.zeros((0, n_params))
         nullspace_dict = []
@@ -263,8 +268,10 @@ def analyze_conditional_identifiability(topologies):
             'channels': channels,
             'effective_rank': eff_rank,
             'nullspace_dim': null_dim,
-            'condition_number_all': cond_number,
+            'condition_number_all': cond_num,
+            'condition_number_all_status': cond_num_status,
             'condition_number_effective': cond_eff,
+            'condition_number_effective_status': cond_eff_status,
             'singular_values': [float(s) for s in S],
             'fim_eigenvalues': [float(e) for e in eigvals],
             'nullspace_basis': nullspace_dict,
@@ -303,8 +310,13 @@ def analyze_practical_identifiability_with_nuisance():
     FIM = J_fim.T @ J_fim
     eigvals = np.sort(np.linalg.eigvalsh(FIM))[::-1]
 
-    cond_number = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
-    cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+    raw_cond = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
+    raw_cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+
+    cond_num = float(raw_cond) if math.isfinite(raw_cond) else None
+    cond_num_status = "FINITE" if math.isfinite(raw_cond) else "INFINITE"
+    cond_eff = float(raw_cond_eff) if math.isfinite(raw_cond_eff) else None
+    cond_eff_status = "FINITE" if math.isfinite(raw_cond_eff) else "INFINITE"
 
     null_basis = Vt[eff_rank:] if null_dim > 0 else np.zeros((0, n_params))
     nullspace_dict = []
@@ -336,8 +348,10 @@ def analyze_practical_identifiability_with_nuisance():
         'channels': channels,
         'effective_rank': eff_rank,
         'nullspace_dim': null_dim,
-        'condition_number_all': cond_number,
+        'condition_number_all': cond_num,
+        'condition_number_all_status': cond_num_status,
         'condition_number_effective': cond_eff,
+        'condition_number_effective_status': cond_eff_status,
         'singular_values': [float(s) for s in S],
         'fim_eigenvalues': [float(e) for e in eigvals],
         'nullspace_basis': nullspace_dict,
@@ -379,7 +393,7 @@ def run_pipeline():
     }
 
     out_file = BASE / 'identifiability_physical_results.json'
-    out_file.write_text(json.dumps(combined, indent=2), encoding='utf-8')
+    out_file.write_text(json.dumps(combined, indent=2, ensure_ascii=False, allow_nan=False), encoding='utf-8', newline='\n')
     print(f'Wrote corrected physical identifiability results to {out_file}')
     return combined
 
