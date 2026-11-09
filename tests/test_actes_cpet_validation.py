@@ -31,6 +31,12 @@ from evaluate_actes_models import (
     run_full_actes_validation,
     simulate_first_order_ode,
 )
+from generate_actes_report_tables import (
+    REPORT_MD,
+    RESULTS_JSON,
+    parse_actes_markdown_table,
+    verify_actes_structural_consistency,
+)
 
 
 class TestActesCPETValidation(unittest.TestCase):
@@ -153,6 +159,60 @@ class TestActesCPETValidation(unittest.TestCase):
         self.assertIn("quadriceps_anatomical_muscle_volume_and_PCSA", unident_params)
         self.assertIn("systemic_endurance_TARGET_CPE45", unident_params)
 
+    def test_parameter_identifiability_and_metrology_audit(self):
+        """
+        Verify rectified parameter identifiability statuses:
+        - eta_gross reclassified as workload-dependent (not slope)
+        - eta_delta identified from incremental slope
+        - tau audited via nested CV
+        - allometric mass exponent fixed at 1.0
+        - metrological discrepancy (L/min vs mL/min) documented
+        """
+        ident = self.results["parameter_identifiability_audit"]
+        ident_params = {p["parameter"]: p for p in ident["identified_parameters"]}
+
+        self.assertIn("macroscopic_gross_efficiency_eta_gross", ident_params)
+        self.assertEqual(
+            ident_params["macroscopic_gross_efficiency_eta_gross"]["status"],
+            "PARAMETER_RECLASSIFIED_WORKLOAD_DEPENDENT_NOT_REGRESSION_SLOPE",
+        )
+
+        self.assertIn("delta_efficiency_eta_delta", ident_params)
+        self.assertEqual(
+            ident_params["delta_efficiency_eta_delta"]["status"],
+            "IDENTIFIED_INCREMENTAL_MACROSCOPIC_COUPLING",
+        )
+        self.assertGreater(ident_params["delta_efficiency_eta_delta"]["estimated_value"], 0.20)
+        self.assertLess(ident_params["delta_efficiency_eta_delta"]["estimated_value"], 0.45)
+
+        self.assertIn("pulmonary_vo2_kinetics_tau_s", ident_params)
+        self.assertEqual(
+            ident_params["pulmonary_vo2_kinetics_tau_s"]["status"],
+            "PARAMETER_A_PRIORI_FIXED_PREVIOUSLY_NOW_NESTED_CV_AUDITED",
+        )
+
+        self.assertIn("allometric_body_mass_scaling_exponent", ident_params)
+        self.assertEqual(
+            ident_params["allometric_body_mass_scaling_exponent"]["status"],
+            "PARAMETER_CONSTRAINED_LINEAR_SCALING_EXPONENT_FIXED_AT_1",
+        )
+
+        # Statistical reliability audit verification
+        self.assertIn("statistical_reliability_audit", self.results)
+        stats = self.results["statistical_reliability_audit"]
+        self.assertEqual(stats["bootstrap_n_replications"], 2000)
+        self.assertIn("m4_allometric_r2_95ci", stats)
+        self.assertIn("m4_allometric_rmse_95ci", stats)
+        self.assertEqual(stats["heterogeneous_mass_degradation"]["n_degraded_subjects"], 7)
+
+        # Metrological verification
+        self.assertIn("metrological_verification", self.results)
+        metro = self.results["metrological_verification"]
+        self.assertEqual(
+            metro["dataset_unit_audit"]["audit_verdict"],
+            "DOCUMENTED_METROLOGICAL_DISCREPANCY_VERIFIED_IN_RAW_BYTES",
+        )
+
     def test_negative_tampered_hash_caught(self):
         """Negative test: Tampered hash for test_measure.csv is detected."""
         corrupted_hash = "0000000000000000000000000000000000000000000000000000000000000000"
@@ -179,6 +239,67 @@ class TestActesCPETValidation(unittest.TestCase):
         # Performance on shuffled workload must be completely degraded (near zero R2 vs true >0.60)
         self.assertLess(metrics_shuffled["r_squared"], 0.05)
         self.assertGreater(metrics_shuffled["rmse"], 0.35)
+
+    def test_cpet_report_markdown_json_structural_consistency(self):
+        """
+        Verify deep structural consistency of all 72 cells
+        (18 participants x 4 models x 2 metrics) between CPET_VALIDATION_REPORT.md
+        and canonical actes_validation_results.json at tolerance <= 0.001.
+        """
+        rep_text = REPORT_MD.read_text(encoding="utf-8")
+        js_data = json.loads(RESULTS_JSON.read_text(encoding="utf-8"))
+        errors = verify_actes_structural_consistency(rep_text, js_data, tol=0.001)
+        self.assertEqual(len(errors), 0, f"Structural consistency errors found: {errors}")
+
+    def test_negative_structural_consistency_subject_permutation(self):
+        """Negative test: Swapping two participant rows in Markdown table triggers failure."""
+        rep_text = REPORT_MD.read_text(encoding="utf-8")
+        js_data = json.loads(RESULTS_JSON.read_text(encoding="utf-8"))
+
+        # Swap Subj 01 and Subj 02
+        tampered = (
+            rep_text.replace("**Subj 01**", "__PLACEHOLDER__")
+            .replace("**Subj 02**", "**Subj 01**")
+            .replace("__PLACEHOLDER__", "**Subj 02**")
+        )
+        errors = verify_actes_structural_consistency(tampered, js_data, tol=0.001)
+        self.assertGreater(len(errors), 0, "Subject permutation must be detected as an error")
+
+    def test_negative_structural_consistency_model_swap(self):
+        """Negative test: Swapping model columns in Markdown table triggers failure."""
+        rep_text = REPORT_MD.read_text(encoding="utf-8")
+        js_data = json.loads(RESULTS_JSON.read_text(encoding="utf-8"))
+
+        # Swap M1 RMSE ($0.397$) and M2 Pop RMSE ($0.369$) for Subj 01
+        tampered = (
+            rep_text.replace("$0.397$", "__PLACEHOLDER__")
+            .replace("$0.369$", "$0.397$")
+            .replace("__PLACEHOLDER__", "$0.369$")
+        )
+        errors = verify_actes_structural_consistency(tampered, js_data, tol=0.001)
+        self.assertGreater(len(errors), 0, "Model metric swap must be detected as an error")
+
+    def test_negative_structural_consistency_metric_swap(self):
+        """Negative test: Swapping RMSE and R2 values within a cell triggers failure."""
+        rep_text = REPORT_MD.read_text(encoding="utf-8")
+        js_data = json.loads(RESULTS_JSON.read_text(encoding="utf-8"))
+
+        # For Subj 01, M1 has RMSE $0.397$ and R2 $-0.1371$
+        tampered = rep_text.replace(
+            "$0.397$ | $-0.1371$", "$-0.1371$ | $0.397$"
+        )
+        errors = verify_actes_structural_consistency(tampered, js_data, tol=0.001)
+        self.assertGreater(len(errors), 0, "Metric RMSE <-> R2 swap must be detected as an error")
+
+    def test_negative_structural_consistency_r2_sign_inversion(self):
+        """Negative test: Inverting the algebraic sign of an R2 value triggers failure."""
+        rep_text = REPORT_MD.read_text(encoding="utf-8")
+        js_data = json.loads(RESULTS_JSON.read_text(encoding="utf-8"))
+
+        # For Subj 01, M2 Allometric R2 is 0.5932; invert to -0.5932
+        tampered = rep_text.replace("0.5932", "-0.5932")
+        errors = verify_actes_structural_consistency(tampered, js_data, tol=0.001)
+        self.assertGreater(len(errors), 0, "R2 sign inversion must be detected as an error")
 
 
 if __name__ == "__main__":

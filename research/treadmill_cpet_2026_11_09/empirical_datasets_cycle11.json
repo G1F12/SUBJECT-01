@@ -1,0 +1,54 @@
+{
+  "cycle": 11,
+  "date": "2026-11-09",
+  "description": "Evidence Gate V2 empirical dataset audit for Cycle 11 multi-subject treadmill CPET benchmark.",
+  "malaga_treadmill_audit": {
+    "source_id": "SRC-0074",
+    "dataset_id": "PHYSIONET_MALAGA_TREADMILL_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.13026/7ezk-j442",
+    "physionet_url": "https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/",
+    "title": "A collection of maximal cardiorespiratory exercise tests on treadmill",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "source_file": "research/treadmill_cpet_2026_11_09/test_measure.csv",
+    "sha256": "3b5ed5586dc7412ccdfb26f804e29c06482a2a1df2060399c2731ebc68d4613d",
+    "size_bytes": 23145166,
+    "subject_info_file": "research/treadmill_cpet_2026_11_09/subject-info.csv",
+    "subject_info_sha256": "e9ca5ba20eb1272df56c11d3e584ec3997d5484454812bd94966e58082415f16",
+    "subject_info_size_bytes": 33045,
+    "license_file": "research/treadmill_cpet_2026_11_09/LICENSE.txt",
+    "license_sha256": "92905d58fa4b1d55f2ad00ece3a8282073565d228ce888a18274ca6e556e7361",
+    "license_type": "Open Data Commons Attribution License v1.0 (ODC-By v1.0)",
+    "n_biological_participants": 857,
+    "independent_participants_n": 857,
+    "n_operators": 1,
+    "n_trials": 992,
+    "n_records": 575087,
+    "number_of_real_observations": 575087,
+    "measurement_units": "time in s; Speed in km/h; HR in bpm; VO2 in mL/min; VCO2 in mL/min; RR in 1/min; VE in L/min",
+    "cross_subject_loso_eligibility": "ELIGIBLE_MULTI_SUBJECT_COHORT_N857",
+    "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "source_observation_ids": [
+      "MALAGA_TREADMILL_TEST_001_TO_992",
+      "MALAGA_TREADMILL_SUBJECT_001_TO_857"
+    ],
+    "epistemic_scope": {
+      "observable_domains": [
+        "whole_body_pulmonary_vo2_ml_min",
+        "whole_body_pulmonary_vco2_ml_min",
+        "respiratory_exchange_ratio_rer",
+        "oxycaloric_equivalent_kj_per_l",
+        "cardiorespiratory_response_delay_tau",
+        "allometric_body_mass_scaling_ml_min_per_kg",
+        "treadmill_locomotion_speed_km_h"
+      ],
+      "unobservable_domains_strictly_blocked": [
+        "intracellular_PCr_concentration_mM",
+        "cytosolic_pH_and_proton_turnover",
+        "motor_unit_recruitment_and_discharge_rates",
+        "quadriceps_anatomical_muscle_volume_and_PCSA",
+        "endurance_survival_TARGET_CPE45",
+        "biological_interventions_NO_GO"
+      ]
+    }
+  }
+}

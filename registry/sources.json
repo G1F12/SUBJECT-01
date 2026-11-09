@@ -1276,5 +1276,57 @@
         "size_bytes": 590
       }
     ]
+  },
+  {
+    "id": "SRC-0074",
+    "name": "Ramos-Jimenez et al. / PhysioNet Malaga Treadmill CPET",
+    "type": "open_access_dataset",
+    "doi": "10.13026/7ezk-j442",
+    "physionet_url": "https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/",
+    "title": "A collection of maximal cardiorespiratory exercise tests on treadmill",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/treadmill_cpet_2026_11_09/TREADMILL_CPET_REPORT.md",
+    "review_provenance": {
+      "path": "research/treadmill_cpet_2026_11_09/sources.json",
+      "source_id": "SRC-0074"
+    },
+    "provenance_notes": "Continuous breath-by-breath VO2 (mL/min), VCO2 (mL/min), HR, and treadmill speed (km/h) across N=992 maximal incremental exercise tests on N=857 independent participants (575,087 total observations). Downloaded from PhysioNet AWS S3 open mirror; SHA256 checksums verified against official SHA256SUMS.txt.",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "local_files": [
+      {
+        "file": "research/treadmill_cpet_2026_11_09/test_measure.csv",
+        "sha256": "3b5ed5586dc7412ccdfb26f804e29c06482a2a1df2060399c2731ebc68d4613d",
+        "size_bytes": 23145166
+      },
+      {
+        "file": "research/treadmill_cpet_2026_11_09/subject-info.csv",
+        "sha256": "e9ca5ba20eb1272df56c11d3e584ec3997d5484454812bd94966e58082415f16",
+        "size_bytes": 33045
+      },
+      {
+        "file": "research/treadmill_cpet_2026_11_09/LICENSE.txt",
+        "sha256": "92905d58fa4b1d55f2ad00ece3a8282073565d228ce888a18274ca6e556e7361",
+        "size_bytes": 14700
+      }
+    ]
+  },
+  {
+    "id": "SRC-0075",
+    "name": "Hug et al. (2015) / Dryad Individual Muscle Architecture & Torque",
+    "type": "peer_reviewed_dataset_archive",
+    "doi": "10.5061/dryad.h3b27",
+    "dryad_url": "https://datadryad.org/stash/dataset/doi:10.5061/dryad.h3b27",
+    "pmc_id": "PMC4685812",
+    "title": "Data from: Individual muscle contribution to knee flexion and extension torque",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/treadmill_cpet_2026_11_09/TREADMILL_CPET_REPORT.md",
+    "review_provenance": {
+      "path": "research/treadmill_cpet_2026_11_09/sources.json",
+      "source_id": "SRC-0075"
+    },
+    "provenance_notes": "Dryad data package containing 5 raw XLSX files across N=21 participants (Muscle_Architecture.xlsx, Torque_and_VA.xlsx, EMG.xlsx, etc.). Package metadata and PMC publication verified; automated unattended CLI downloads are blocked by Dryad Cloudflare/Anubis BotStopper interactive challenge (HTTP 401 on API / interactive HTML challenge on file stream). Retained as verified metadata anchor.",
+    "data_type": "ACCESS_RESTRICTED_BOT_CHALLENGE",
+    "status": "METADATA_VERIFIED_AUTOMATED_DOWNLOAD_BLOCKED"
   }
 ]
