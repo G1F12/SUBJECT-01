@@ -8,3 +8,5 @@ __pycache__/
 scratch/
 tmp/
 *.log
+# Raw binary data archives pending distribution license clearance
+2024_829_Ergometer_Dryad_Raw_V3.xlsx
