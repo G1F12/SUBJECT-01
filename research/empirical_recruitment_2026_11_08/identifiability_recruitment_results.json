@@ -3,14 +3,14 @@
     "n_params": 7,
     "rank": 3,
     "effective_rank": 3,
-    "condition_number": Infinity,
+    "condition_number": null,
     "status": "CONDITIONAL_FULL_RANK_UNDER_FROZEN_CALIBRATION"
   },
   "level_2_numerical_rank_with_recruitment": {
     "n_params": 8,
     "rank": 4,
     "effective_rank": 3,
-    "condition_number": Infinity,
+    "condition_number": null,
     "status": "RANK_DEFICIENT_COLLINEAR_V_ANAT_A_EFF",
     "nullspace_principal_component": "V_anat_L vs a_eff"
   },
@@ -19,7 +19,7 @@
     "rank": 6,
     "effective_rank": 5,
     "rank_defect": 7,
-    "condition_number": Infinity,
+    "condition_number": null,
     "profile_likelihood_curvature_a_eff": 14400.000001502995,
     "is_flat_profile_ridge": false,
     "status": "PRACTICALLY_UNIDENTIFIABLE_UNDER_NUISANCE_UNCERTAINTY"

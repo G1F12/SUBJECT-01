@@ -26,8 +26,10 @@
         0.0,
         0.0
       ],
-      "condition_number": Infinity,
-      "effective_condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
+      "effective_condition_number": null,
+      "effective_condition_number_status": "INFINITE",
       "nullspace_basis": [
         {
           "eta_loc": 1.0
@@ -87,8 +89,10 @@
         -1.0564605137959465e-14,
         -5.693695475925034e-14
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 24.704331738780027,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "M_loc_mM_s": 0.9999982843618844
@@ -140,8 +144,10 @@
         0.0,
         -2.456888793798264e-14
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 33.71402684211031,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "M_loc_mM_s": 0.9999997625027551
@@ -186,8 +192,10 @@
         0.0,
         -8.993488676078852e-14
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 3.623808128071556,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "M_loc_mM_s": 0.9999993771383542
@@ -239,8 +247,10 @@
         0.0,
         -7.105426818905082e-15
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 8.166108079918468,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "M_loc_mM_s": -0.9999995478155489
@@ -287,8 +297,10 @@
         -3.5901936308711595e-30,
         -7.101957910649048e-15
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 8.166108079918462,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "eta_loc": -0.7071067811874064,
@@ -333,8 +345,10 @@
         56.24999999998241,
         -1.2434021501194514e-13
       ],
-      "condition_number": Infinity,
+      "condition_number": null,
+      "condition_number_status": "INFINITE",
       "effective_condition_number": 7.693842939041774,
+      "effective_condition_number_status": "FINITE",
       "nullspace_basis": [
         {
           "eta_loc": -0.7071067811874132,

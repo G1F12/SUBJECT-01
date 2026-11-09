@@ -12,7 +12,7 @@ Separates strictly:
 """
 
 import numpy as np
-import json
+import json, math
 from pathlib import Path
 
 OUT_DIR = Path(__file__).resolve().parent
@@ -145,7 +145,9 @@ def compute_jacobian_and_svd(param_names, free_params_dict, t_grid, P_mech_W=35.
     
     # Effective rank using 1% threshold
     eff_rank = int(np.sum(S > (0.01 * S[0])))
-    cond_num = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
+    raw_c = float(S[0] / S[-1]) if S[-1] > 1e-12 else None
+    cond_num = raw_c if (raw_c is not None and math.isfinite(raw_c)) else None
+    cond_status = 'FINITE' if cond_num is not None else 'INFINITE'
     
     return {
         'param_names': param_names,
@@ -236,7 +238,7 @@ def analyze_identifiability():
     }
     
     out_file = OUT_DIR / 'identifiability_recruitment_results.json'
-    out_file.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding='utf-8')
+    out_file.write_text(json.dumps(out, indent=2, ensure_ascii=False, allow_nan=False), encoding='utf-8', newline='\n')
     print(f"Saved: {out_file} ({out_file.stat().st_size} bytes)")
     return out
 

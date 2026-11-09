@@ -54,7 +54,7 @@
           "mean_pcr_drop_percent": 27.2,
           "mean_tau_rec_s": 39.406666666666666,
           "ph_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED",
-          "data_type": "LITERATURE_REPORTED_VALUE",
+          "data_type": "PUBLISHED_TABLE_DATA",
           "raw_download_status": "RAW_TIMESERIES_UNAVAILABLE",
           "raw_download_blocker": "Continuous spectral time-series are unavailable programmatically due to AWS WAF/Anubis challenge. Published Table 1 provides 3 scalar rate constants."
         },
@@ -217,14 +217,14 @@
         "n_params": 7,
         "rank": 3,
         "effective_rank": 3,
-        "condition_number": Infinity,
+        "condition_number": null,
         "status": "CONDITIONAL_FULL_RANK_UNDER_FROZEN_CALIBRATION"
       },
       "level_2_numerical_rank_with_recruitment": {
         "n_params": 8,
         "rank": 4,
         "effective_rank": 3,
-        "condition_number": Infinity,
+        "condition_number": null,
         "status": "RANK_DEFICIENT_COLLINEAR_V_ANAT_A_EFF",
         "nullspace_principal_component": "V_anat_L vs a_eff"
       },
@@ -233,7 +233,7 @@
         "rank": 6,
         "effective_rank": 5,
         "rank_defect": 7,
-        "condition_number": Infinity,
+        "condition_number": null,
         "profile_likelihood_curvature_a_eff": 14400.000001502995,
         "is_flat_profile_ridge": false,
         "status": "PRACTICALLY_UNIDENTIFIABLE_UNDER_NUISANCE_UNCERTAINTY"
@@ -317,6 +317,7 @@
       "data_type": "COMPUTATIONAL_SIMULATION",
       "validation_status": "COMPLETED_MACRO_BUDGET_ACCOUNTING",
       "cpe45_energy_accounting": {
+        "scenario_status": "ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED",
         "external_mechanical_work_kJ": 675.0,
         "external_work_description": "250 W maintained over 2700 s (45 minutes) = 675 kJ. Illustrative test scenario.",
         "whole_body_metabolic_cost_nominal_kJ": 3375.0,
@@ -328,6 +329,9 @@
         "whole_body_atp_turnover_moles": 62.5,
         "oxidative_resynthesis_nominal_kJ": 3300.0,
         "glycolysis_contribution_nominal_kJ": 75.0,
+        "measured_empirical_aerobic_fraction": null,
+        "measured_aerobic_fraction_status": "NOT_EMPIRICALLY_MEASURED_IN_CPE45",
+        "scenario_assumptions": "Theoretical scenario balance calculated at assumed nominal gross efficiency eta_gross = 20% and standard literature endurance partitioning. Not empirically measured in CPE45.",
         "local_pcr_chemical_buffer_work_capacity_kJ": {
           "active_calf_volume_scenario_kJ": [
             0.106,

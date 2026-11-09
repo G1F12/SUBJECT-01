@@ -7,7 +7,7 @@ Computes:
 5. Noise sensitivity and instrumental delay uncertainty propagation.
 """
 from pathlib import Path
-import json
+import json, math
 import numpy as np
 
 BASE = Path(__file__).resolve().parent
@@ -212,8 +212,12 @@ def analyze_identifiability():
         eigvals = np.sort(np.linalg.eigvalsh(FIM))[::-1]
 
         # Condition numbers
-        cond_number = float(S[0] / S[-1]) if S[-1] > 1e-12 else float('inf')
-        cond_eff = float(S[0] / S[eff_rank - 1]) if eff_rank > 0 else float('inf')
+        raw_cond = float(S[0] / S[-1]) if S[-1] > 1e-12 else None
+        cond_number = raw_cond if (raw_cond is not None and math.isfinite(raw_cond)) else None
+        cond_status = "FINITE" if cond_number is not None else "INFINITE"
+        raw_eff = float(S[0] / S[eff_rank - 1]) if (eff_rank > 0 and S[eff_rank - 1] > 1e-12) else None
+        cond_eff = raw_eff if (raw_eff is not None and math.isfinite(raw_eff)) else None
+        cond_eff_status = "FINITE" if cond_eff is not None else "INFINITE"
 
         # Nullspace basis vectors (rows of Vt corresponding to zero singular values)
         null_basis = Vt[eff_rank:] if null_dim > 0 else np.zeros((0, n_params))
@@ -246,7 +250,9 @@ def analyze_identifiability():
             'singular_values': [float(x) for x in S],
             'fim_eigenvalues': [float(x) for x in eigvals],
             'condition_number': cond_number,
+            'condition_number_status': cond_status,
             'effective_condition_number': cond_eff,
+            'effective_condition_number_status': cond_eff_status,
             'nullspace_basis': nullspace_dict,
             'unidentifiable_directions': unidentifiable_descriptions
         }
@@ -324,10 +330,11 @@ def main():
     }
 
     out_file = BASE / 'identifiability_results.json'
-    out_file.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    out_file.write_text(json.dumps(output, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8', newline='\n')
     print(f"Identifiability analysis complete. Results written to: {out_file}")
     for top, res in top_results.items():
-        print(f"  {top:30s} | Rank: {res['effective_rank']}/{res['n_parameters']} | Defect: {res['rank_defect']} | CondEff: {res['effective_condition_number']:.2f}")
+        cond_str = f"{res['effective_condition_number']:.2f}" if res['effective_condition_number'] is not None else 'INFINITE'
+        print(f"  {top:30s} | Rank: {res['effective_rank']}/{res['n_parameters']} | Defect: {res['rank_defect']} | CondEff: {cond_str}")
 
 if __name__ == '__main__':
     main()

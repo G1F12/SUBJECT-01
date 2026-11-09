@@ -265,3 +265,29 @@ CI source replay limitation: run41871865726 also failed on a plantar archive rea
   * Реестры: HYP=8, EXP=41, FND=41, NEG=34, DEC=15, ISS=19, SRC=72.
   * Новые отрицательные результаты: NEG-0033 (ретракция неподтверждённых частот Hug и слияния операторов с участниками), NEG-0034 (запрет категориальной ошибки сопоставления локального PCr с внешней работой 45 минут).
   * Тесты: 180/180 PASS (все тестовые наборы репозитория, включая 9 тестов Evidence Gate V2).
+
+## 2026-11-09 — Research Cycle 9 — CI Failure, Strict JSON & Real-Data Pipeline Repair
+
+- CI Failure & Byte Provenance Repair (GitHub Actions run 42654714327):
+  * Выявлена первопричина падения шага `Structural and hash audit`: расхождение окончаний строк CRLF на Windows и LF в Git/Linux из-за отсутствия конфигурации `.gitattributes` для Циклов 7, 8, 9, `registry/`, `tools/`, `tests/`.
+  * `.gitattributes` дополнен правилом `* text eol=lf` для всех репозиторных текстовых файлов с сохранением binary-маркировки (`-text`) для исторических CSV Foundation.
+  * Файлы приведены к каноническим байтам:
+    - Franke 2020 JSON: 3049 байт (LF), SHA256 `0345c4a8b36c95d9641c52bc96b759a43e6f899d186159606481060fbb437fa2`, классифицирован как `DERIVED_EXTRACTION_JSON` (извлечённые координаты 3D МРТ-сегментации, а не сырой MAT-файл).
+    - Rehman 2024 XML: 42824 байта (LF), SHA256 `d8f1df9664c94b4846da3c015ced45310bc17ea1f48b58ce287c61db6bd1ed2c`, классифицирован как `PUBLISHED_TABLE_DATA`.
+
+- Завершение процессора сырых данных Rehman 2024 (`tools/process_rehman_xlsx.py`):
+  * Разработан легковесный OOXML-модуль `tools/rehman_ooxml.py` на базе `zipfile` и `xml.etree.ElementTree` (zero external dependencies, независим от отсутствующего `openpyxl`).
+  * При отсутствии оригинального файла возвращает `PENDING_RAW_DATA` (без ложного PASS).
+  * При наличии файла выполняет: проверку байтового SHA256 (`ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf`), разбор структуры листов и колонок, извлечение 3 триалов по 75 спектральных точек (разрешение 6 с), моноэкспоненциальный фит кинетики PCr и Pi с 95% доверительными интервалами, сравнение с опубликованными Table 1 константами $k = 1.43, 1.62, 1.53\text{ мин}^{-1}$, оценку внутрисубъектной воспроизводимости (repeatability CV%) и строгий запрет кросс-субъектного LOSO при $N=1$.
+  * Создан полный тестовый набор `tests/test_rehman_xlsx_processor.py` (8 тестов, включая негативные проверки на пустую книгу, повреждённые колонки, неверный хеш и неполные триалы). Тест добавлен в `.github/workflows/validate.yml`.
+
+- Модернизация Evidence Gate V2 (`tools/verify_data_provenance.py`):
+  * Установлено правило сквозной верификации байтового хеша: если запись ссылается на локальный файл и указывает SHA256, байтовый хеш проверяется независимо от категории данных.
+  * Введены типизированные категории: `ORIGINAL_BINARY_FILE`, `DERIVED_EXTRACTION_JSON`, `PUBLISHED_TABLE_DATA`, `LITERATURE_REFERENCE_WITHOUT_FILE`, `SYNTHETIC_MODEL_SIMULATION`.
+  * Реализован глобальный аудит на соответствие RFC 8259: токены `Infinity`, `-Infinity` и `NaN` устранены во всех JSON-файлах репозитория (неопределённые числа обусловленности заменены на `null` со статусом `"INFINITE"`).
+  * Отрицательная батарея тестов расширена до 7 проверок (добавлены подмена хеша в `PUBLISHED_TABLE_DATA` и обнаружение невалидных токенов JSON).
+
+- Уточнение статуса научных утверждений TARGET-CPE45:
+  * Значения 3300 кДж окислительного ресинтеза и 75 кДж гликолитического вклада строго задокументированы как `ESTIMATED_SCENARIO_BALANCE_NOT_MEASURED` (сценарный расчёт при допущении $\eta_{\text{gross}} = 20\%$, а не эмпирическое измерение в CPE45).
+  * Аэробная фракция зафиксирована как `measured_empirical_aerobic_fraction: null`, статус: `NOT_EMPIRICALLY_MEASURED_IN_CPE45`.
+  * Статус `TARGET-CPE45` неизменен: `NOT EXTERNALLY VALIDATED`, биологические вмешательства — `NO_GO`.

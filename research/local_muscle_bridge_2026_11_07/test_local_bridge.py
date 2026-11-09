@@ -217,7 +217,8 @@ class TestLocalMuscleBridgeConsistencyAudit(unittest.TestCase):
         # M1 power only: prescribed ergometer input, zero parameter sensitivity
         self.assertEqual(results['M1_power_only']['effective_rank'], 0)
         self.assertEqual(results['M1_power_only']['rank_defect'], 7)
-        self.assertEqual(results['M1_power_only']['condition_number'], float('inf'))
+        self.assertIsNone(results['M1_power_only']['condition_number'])
+        self.assertEqual(results['M1_power_only']['condition_number_status'], 'INFINITE')
 
         # Exact computed ranks over 7 parameters:
         self.assertEqual(results['M2_power_relPCr']['effective_rank'], 3)
