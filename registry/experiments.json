@@ -929,5 +929,70 @@
     "limits": "TARGET-CPE45 remains NOT EXTERNALLY VALIDATED. Biological interventions maintain NO_GO. Local single-muscle PCr buffer cannot predict whole-body endurance without an independent systemic cardiorespiratory model.",
     "external_validation": "macro_energy_budget_accounting",
     "data_type": "COMPUTATIONAL_SIMULATION"
+  },
+  {
+    "id": "EXP-0042",
+    "date": "2026-11-09",
+    "name": "Rehman 2024 31P-MRS Real Data: Protocol Timing Reconstruction, Kinetics Sensitivity, Partial pH Audit, and Within-Subject Model Transfer",
+    "sources": [
+      "SRC-0069"
+    ],
+    "design": "Execution of comprehensive scientific validation suite on primary real human 31P-MRS time-series (Rehman 2024 Dryad Raw V3, 222 spectra, N=1 biological subject, 3 trials). Stages: (1) Protocol timing audit separating nominal 42s exercise (48-90s) from actual post-exercise biochemical nadir (144s in Trial 1, 108s in Trials 2/3); (2) Sensitivity analysis of recovery kinetics to onset shifts (-18s to +18s), quantifying systematic phase-selection uncertainty vs statistical non-linear regression error; (3) Rigorous investigation of -0.055 pH offset from published Table 1 without ad-hoc empirical fudge factors, assigning PH_CALIBRATION_PARTIAL; (4) Frozen model comparison of M0 (null constant baseline), M1 (empirical 3-parameter monoexponential), and M2 (SUBJECT-01 physiological bioenergetic ODE with resting asymptote constraint), strictly labeling in-sample fits as IN_SAMPLE_FIT_NOT_VALIDATION and testing all 6 within-subject trial transfer pairs labeled WITHIN_SUBJECT_TRIAL_TRANSFER while strictly prohibiting cross-subject LOSO on N=1; (5) Parameter identifiability mapping and preservation of TARGET-CPE45 = NOT EXTERNALLY VALIDATED.",
+    "status": "completed_real_data_validation",
+    "results": {
+      "protocol_timing_status": "PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED",
+      "timing_lag_seconds": {
+        "trial_1": 54.0,
+        "trial_2": 18.0,
+        "trial_3": 18.0
+      },
+      "sensitivity_systematic_uncertainty_k_min": {
+        "trial_1": 0.044,
+        "trial_2": 0.172,
+        "trial_3": 0.117
+      },
+      "ph_calibration_status": "PH_CALIBRATION_PARTIAL",
+      "ph_mean_offset_delta": -0.0548,
+      "ph_sd_offset_delta": 0.0098,
+      "in_sample_r_squared_m2": {
+        "trial_1": 0.8247,
+        "trial_2": 0.8197,
+        "trial_3": 0.9254
+      },
+      "within_subject_trial_transfer_r_squared_m2": {
+        "mean": 0.8566,
+        "min": 0.7696,
+        "max": 0.9603
+      },
+      "cross_subject_loso_status": "PROHIBITED_SINGLE_SUBJECT",
+      "identifiable_parameters": [
+        "tau_PCr_rec_s (39.72 +/- 3.81 s)",
+        "k_rec_min_minus_1 (1.520 +/- 0.151 min^-1)",
+        "intra_subject_repeatability_cv_pct (9.90%)",
+        "fractional_pcr_depletion (28.36 +/- 3.77%)",
+        "non_acidotic_status (pH >= 6.86)"
+      ],
+      "unidentifiable_parameters": [
+        "PCr_rest_absolute_mM (gain-confounded arbitrary units)",
+        "active_muscle_volume_V_active (scale symmetry)",
+        "absolute_ATP_turnover_J_ATP (volume/concentration confounded)",
+        "local_actomyosin_efficiency_eta_loc (pedal force unrecorded)",
+        "maximal_oxidative_capacity_Q_max (submaximal linear regime)",
+        "systemic_endurance_TARGET_CPE45 (localized knee kick cannot validate 45-min whole-body endurance)"
+      ],
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+      "biological_interventions": "NO_GO_MAINTAINED"
+    },
+    "research_date": "2026-11-09",
+    "model": "tools/evaluate_rehman_models.py",
+    "inputs": "research/empirical_recruitment_2026_11_08/rehman2024_extracted_timeseries.json",
+    "report": "research/empirical_recruitment_2026_11_08/REAL_DATA_VALIDATION_REPORT.md",
+    "outputs": [
+      "research/empirical_recruitment_2026_11_08/rehman2024_validation_results.json"
+    ],
+    "reproduction_command": "python tools/evaluate_rehman_models.py",
+    "limits": "Dataset provides N=1 biological participant (3 repeated trials of localized single-leg knee extensions). Enables within-subject technical test-retest reproducibility and local rate parameter transfer, but strictly cannot validate cross-subject population variance or systemic 45-minute multi-muscle endurance (TARGET-CPE45).",
+    "external_validation": "within_subject_trial_transfer",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

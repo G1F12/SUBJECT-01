@@ -107,5 +107,13 @@
     "decision": "Formalized preflight reconciliation of PCr energy capacity (dG_ATP=54 kJ/mol for work vs dH_CK=21 kJ/mol for heat); downgraded Andersen & Saltin 1985 resting values to secondary literature extrapolations; adopted high-density EMG motor unit decomposition and adipose morphometry as mandatory conditions for active volume identifiability; and maintained TARGET-CPE45 as NOT EXTERNALLY VALIDATED with strict NO_GO on biological interventions.",
     "rationale": "Scalar sEMG RMS has a >40-fold uncertainty span and inverts during fatigue; cross-muscle transfer degrades prediction RMSE by up to 189%; and calf PCr buffer accounts for <0.1% of a 2700 s whole-body endurance budget.",
     "supersedes": []
+  },
+  {
+    "id": "DEC-0016",
+    "date": "2026-11-09",
+    "title": "Scientific Freeze of Rehman 2024 N=1 Empirical Benchmark: Prohibition of Cross-Subject LOSO, Rejection of Empirical pH Fudge Factors, and Preservation of TARGET-CPE45 Freeze",
+    "decision": "Enacted scientific freeze on the Rehman et al. 2024 primary 31P-MRS benchmark: (1) Formally accepted within-subject trial transfer (M2 mean transfer R2 = 0.8566) as proof of technical test-retest reproducibility for local recovery kinetics; (2) Strictly prohibited cross-subject Leave-One-Subject-Out (LOSO) validation and population extrapolation due to single-participant (N=1) cohort constraint; (3) Rejected any ad-hoc empirical correction (+0.055) to force pH alignment with published Table 1, retaining status PH_CALIBRATION_PARTIAL; (4) Froze absolute resting PCr concentration, active muscle volume, and ATP turnover as strictly unidentifiable from relative MRS amplitudes; (5) Preserved TARGET-CPE45 as NOT EXTERNALLY VALIDATED with strict NO_GO on biological interventions.",
+    "rationale": "Single-participant localized exercise cannot validate multi-subject population variance or systemic 45-minute endurance; scientific integrity requires transparent documentation of timing lags and spectroscopic calibration uncertainties without artificial fudge factors.",
+    "supersedes": []
   }
 ]
