@@ -70,6 +70,7 @@ def audit_dataset_provenance_records(custom_data=None):
     if custom_data is None:
         c9_datasets_file = ROOT / 'research' / 'empirical_recruitment_2026_11_08' / 'empirical_datasets_cycle9.json'
         c10_datasets_file = ROOT / 'research' / 'cpet_cycloergometer_2026_11_09' / 'empirical_datasets_cycle10.json'
+        c11_datasets_file = ROOT / 'research' / 'treadmill_cpet_2026_11_09' / 'empirical_datasets_cycle11.json'
         if not c9_datasets_file.is_file():
             problems.append(f"Missing empirical datasets file: {c9_datasets_file}")
             return problems
@@ -87,6 +88,16 @@ def audit_dataset_provenance_records(custom_data=None):
                         data[f"c10_{k}"] = v
             except Exception as e:
                 problems.append(f"Failed to parse {c10_datasets_file}: {e}")
+                return problems
+
+        if c11_datasets_file.is_file():
+            try:
+                c11_data = json.loads(c11_datasets_file.read_text(encoding='utf-8'))
+                for k, v in c11_data.items():
+                    if k not in ('cycle', 'date', 'description'):
+                        data[f"c11_{k}"] = v
+            except Exception as e:
+                problems.append(f"Failed to parse {c11_datasets_file}: {e}")
                 return problems
     else:
         data = custom_data
@@ -484,6 +495,22 @@ def audit_negative_tests():
     }
     p8 = audit_dataset_provenance_records(fake_data_8)
     results['actes_tampered_sha_caught'] = any("SHA256 mismatch" in err for err in p8)
+
+    # Negative Test 9: Tampered SHA256 on Malaga Treadmill CPET original binary dataset
+    fake_data_9 = {
+        "malaga_tampered_audit": {
+            "source_id": "SRC-0074",
+            "dataset_id": "TEST_DATASET_9",
+            "data_type": "ORIGINAL_BINARY_FILE",
+            "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+            "source_file": "research/treadmill_cpet_2026_11_09/test_measure.csv",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "n_biological_participants": 857,
+            "source_observation_ids": ["OBS_TEST"]
+        }
+    }
+    p9 = audit_dataset_provenance_records(fake_data_9)
+    results['malaga_tampered_sha_caught'] = any("SHA256 mismatch" in err for err in p9)
 
     return results
 

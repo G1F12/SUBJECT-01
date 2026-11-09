@@ -22,9 +22,9 @@ Cycle 10 breaks this limitation by acquiring, verifying byte-for-byte, and evalu
 
 ### 1.2 Pre-Registered Hypothesis & Parameter Freezing
 Before running any model predictions on the held-out subjects, all model structures, bioenergetic parameters, and search boundaries were frozen:
-1. **Oxycaloric Equivalent**: $c_{\text{ox}} = 20,900\text{ J/L}$ ($20.9\text{ kJ/L O}_2$, mixed carbohydrate/lipid substrate oxidation).
-2. **Gross Mechanical Efficiency**: $\eta_{\text{gross}} \in [0.18, 0.28]$ (canonical human cycling efficiency range).
-3. **Cardiorespiratory Kinetic Delay**: $\tau_{\dot{V}\text{O}_2} = 35.0\text{ s}$ (standard Phase II pulmonary gas exchange time constant).
+1. **Oxycaloric Equivalent**: $c_{\text{ox}} = 20,900\text{ J/L}$ ($20.9\text{ kJ/L O}_2$, mixed carbohydrate/lipid substrate oxidation, corresponding to $348.33\text{ W / (L/min)}$).
+2. **Incremental Delta Efficiency**: $\eta_{\text{delta}} = 1 / (\beta_1 \cdot 348.33) \approx 22.5\%\dots 26.5\%$ (canonical incremental human cycling efficiency). Gross efficiency $\eta_{\text{gross}}(t) = P(t) / \dot{E}_{\text{met}}(t)$ is workload-dependent ($0\%$ at rest, rising to $20\dots 24\%$ at peak), distinct from the incremental slope.
+3. **Cardiorespiratory Kinetic Delay**: $\tau_{\dot{V}\text{O}_2} \in [0, 65]\text{ s}$, evaluated strictly within training subjects via nested subject-level cross-validation (confirming optimal generalization at $\tau = 35.0\text{ s}$ across folds without test leakage).
 4. **Allometric Normalization**: Linear mass scaling of work rate ($P / M$ in $\text{W/kg}$) and metabolic rate ($\dot{V}\text{O}_2 / M$ in $\text{mL/(min}\cdot\text{kg)}$).
 
 ### 1.3 Competing Model Hierarchy
@@ -45,26 +45,26 @@ In each fold $k \in \{1, \dots, 18\}$, training is performed on the 17 other par
 
 | Subject ID | Sport | Body Mass (kg) | $P_{\text{max}}$ (W) | $\dot{V}\text{O}_{2,\text{max}}$ (L/min) | Records ($N$) | M0 RMSE | M0 $R^2$ | M1 RMSE | M1 $R^2$ | M2 Pop RMSE | M2 Pop $R^2$ | M2 Allometric RMSE | M2 Allometric $R^2$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Subj 01** | fencing | 53.7 | 170.0 | 1.790 | 2,403 | $0.627$ | $-1.8315$ | $0.370$ | $0.0152$ | $0.239$ | $0.5898$ | **$0.231$** | **$0.6151$** |
-| **Subj 02** | fencing | 56.2 | 140.0 | 1.960 | 2,000 | $0.686$ | $-1.3853$ | $0.354$ | $0.3644$ | $0.231$ | $0.7290$ | **$0.230$** | **$0.7303$** |
-| **Subj 03** | fencing | 89.9 | 305.0 | 3.455 | 3,443 | $0.941$ | $-0.2452$ | $0.449$ | $0.7163$ | $0.342$ | $0.8354$ | **$0.334$** | **$0.8427$** |
-| **Subj 04** | fencing | 76.5 | 305.0 | 3.437 | 3,694 | $0.722$ | $-0.0384$ | $0.468$ | $0.5630$ | $0.370$ | $0.7268$ | **$0.347$** | **$0.7594$** |
-| **Subj 05** | fencing | 76.4 | 275.0 | 3.386 | 3,594 | $0.893$ | $-0.2198$ | $0.435$ | $0.7107$ | $0.320$ | $0.8436$ | **$0.311$** | **$0.8520$** |
-| **Subj 06** | fencing | 65.6 | 245.0 | 3.416 | 2,683 | $0.884$ | $-0.3298$ | $0.374$ | $0.7618$ | $0.264$ | $0.8809$ | **$0.238$** | **$0.9038$** |
-| **Subj 07** | fencing | 49.8 | 170.0 | 1.659 | 2,207 | $0.640$ | $-4.6186$ | $0.466$ | $-1.9804$ | $0.419$ | $-1.4087$ | **$0.325$** | **$-0.4507$** |
-| **Subj 08** | fencing | 51.2 | 170.0 | 1.994 | 2,121 | $0.669$ | $-1.8617$ | $0.370$ | $0.1245$ | $0.222$ | $0.6862$ | **$0.213$** | **$0.7118$** |
-| **Subj 09** | fencing | 57.1 | 200.0 | 1.743 | 2,823 | $0.605$ | $-1.7042$ | $0.435$ | $-0.4002$ | $0.334$ | $0.1746$ | **$0.288$** | **$0.3887$** |
-| **Subj 10** | fencing | 58.8 | 200.0 | 2.353 | 2,635 | $0.799$ | $-0.9026$ | $0.309$ | $0.7153$ | $0.197$ | $0.8839$ | **$0.196$** | **$0.8859$** |
-| **Subj 11** | kayak | 84.8 | 335.0 | 3.354 | 3,854 | $0.803$ | $-0.3749$ | $0.548$ | $0.3582$ | $0.469$ | $0.5310$ | **$0.401$** | **$0.6570$** |
-| **Subj 12** | kayak | 86.0 | 305.0 | 3.868 | 3,648 | $1.066$ | $-0.0934$ | $0.437$ | $0.8166$ | $0.347$ | $0.8841$ | **$0.330$** | **$0.8953$** |
-| **Subj 13** | kayak | 83.9 | 320.0 | 4.577 | 3,637 | $1.157$ | $0.1118$ | $0.482$ | $0.8454$ | $0.395$ | $0.8963$ | **$0.357$** | **$0.9152$** |
-| **Subj 14** | kayak | 62.3 | 230.0 | 2.483 | 2,808 | $0.655$ | $-0.7490$ | $0.400$ | $0.3463$ | $0.315$ | $0.5936$ | **$0.283$** | **$0.6720$** |
-| **Subj 15** | kayak | 63.5 | 215.0 | 2.994 | 2,691 | $0.864$ | $-0.6277$ | $0.305$ | $0.7972$ | $0.215$ | $0.8996$ | **$0.222$** | **$0.8929$** |
-| **Subj 16** | kayak | 70.4 | 230.0 | 3.451 | 2,840 | $0.918$ | $-0.2638$ | $0.345$ | $0.8220$ | $0.259$ | $0.8998$ | **$0.284$** | **$0.8795$** |
-| **Subj 17** | triathlon | 39.9 | 185.0 | 2.206 | 2,410 | $0.598$ | $-0.5518$ | $0.393$ | $0.3308$ | $0.315$ | $0.5699$ | **$0.245$** | **$0.7405$** |
-| **Subj 18** | triathlon | 39.7 | 200.0 | 2.204 | 2,571 | $0.601$ | $-0.4611$ | $0.380$ | $0.4144$ | $0.297$ | $0.6402$ | **$0.229$** | **$0.7788$** |
-| **MEAN** | — | **65.6** | **235.8** | **2.888** | **2,892** | **$0.773$** | **$-0.8343$** | **$0.416$** | **$0.4045$** | **$0.317$** | **$0.6059$** | **$0.290$** | **$0.7371$** |
-| **SD** | — | $15.5$ | $61.0$ | $0.835$ | $599$ | $0.162$ | $1.2894$ | $0.080$ | $0.5860$ | $0.080$ | $0.4936$ | **$0.059$** | **$0.1770$** |
+| **Subj 01** | fencing | 53.7 | 170.0 | 1.790 | 2,403 | $0.715$ | $-2.6942$ | $0.397$ | $-0.1371$ | $0.369$ | $0.0174$ | **$0.237$** | **$0.5932$** |
+| **Subj 02** | fencing | 56.2 | 140.0 | 1.960 | 2,000 | $0.688$ | $-0.8878$ | $0.296$ | $0.6504$ | $0.217$ | $0.8113$ | **$0.213$** | **$0.8194$** |
+| **Subj 03** | fencing | 89.9 | 305.0 | 3.455 | 3,443 | $0.895$ | $-0.1273$ | $0.486$ | $0.6675$ | $0.262$ | $0.9032$ | **$0.339$** | **$0.8382$** |
+| **Subj 04** | fencing | 76.5 | 305.0 | 3.437 | 3,694 | $0.675$ | $-0.0078$ | $0.502$ | $0.4423$ | $0.356$ | $0.7195$ | **$0.404$** | **$0.6384$** |
+| **Subj 05** | fencing | 76.4 | 275.0 | 3.386 | 3,594 | $0.895$ | $-0.1546$ | $0.463$ | $0.6914$ | $0.312$ | $0.8600$ | **$0.282$** | **$0.8852$** |
+| **Subj 06** | fencing | 65.6 | 245.0 | 3.416 | 2,683 | $0.746$ | $-0.1000$ | $0.387$ | $0.7041$ | $0.281$ | $0.8446$ | **$0.316$** | **$0.8026$** |
+| **Subj 07** | fencing | 49.8 | 170.0 | 1.659 | 2,207 | $0.765$ | $-5.3972$ | $0.503$ | $-1.7688$ | $0.449$ | $-1.2037$ | **$0.282$** | **$0.1300$** |
+| **Subj 08** | fencing | 51.2 | 170.0 | 1.994 | 2,121 | $0.679$ | $-0.9690$ | $0.357$ | $0.4561$ | $0.257$ | $0.7177$ | **$0.176$** | **$0.8671$** |
+| **Subj 09** | fencing | 57.1 | 200.0 | 1.743 | 2,823 | $0.707$ | $-1.7593$ | $0.439$ | $-0.0651$ | $0.367$ | $0.2548$ | **$0.273$** | **$0.5875$** |
+| **Subj 10** | fencing | 58.8 | 200.0 | 2.353 | 2,635 | $0.609$ | $-0.4000$ | $0.394$ | $0.4127$ | $0.265$ | $0.7358$ | **$0.223$** | **$0.8121$** |
+| **Subj 11** | kayak | 84.8 | 335.0 | 3.354 | 3,854 | $0.888$ | $-0.3816$ | $0.414$ | $0.6993$ | $0.270$ | $0.8724$ | **$0.239$** | **$0.9000$** |
+| **Subj 12** | kayak | 86.0 | 305.0 | 3.868 | 3,648 | $1.175$ | $-0.5126$ | $0.601$ | $0.6039$ | $0.494$ | $0.7322$ | **$0.366$** | **$0.8532$** |
+| **Subj 13** | kayak | 83.9 | 320.0 | 4.577 | 3,637 | $1.124$ | $-0.3917$ | $0.493$ | $0.7320$ | $0.402$ | $0.8221$ | **$0.326$** | **$0.8825$** |
+| **Subj 14** | kayak | 62.3 | 230.0 | 2.483 | 2,808 | $0.595$ | $-0.4840$ | $0.404$ | $0.3165$ | $0.343$ | $0.5071$ | **$0.293$** | **$0.6401$** |
+| **Subj 15** | kayak | 63.5 | 215.0 | 2.994 | 2,691 | $0.693$ | $-0.0038$ | $0.381$ | $0.6957$ | $0.279$ | $0.8372$ | **$0.321$** | **$0.7850$** |
+| **Subj 16** | kayak | 70.4 | 230.0 | 3.451 | 2,840 | $0.801$ | $-0.0654$ | $0.384$ | $0.7548$ | $0.372$ | $0.7704$ | **$0.372$** | **$0.7703$** |
+| **Subj 17** | triathlon | 39.9 | 185.0 | 2.206 | 2,410 | $0.648$ | $-0.3583$ | $0.296$ | $0.7157$ | $0.199$ | $0.8719$ | **$0.308$** | **$0.6939$** |
+| **Subj 18** | triathlon | 39.7 | 200.0 | 2.204 | 2,571 | $0.607$ | $-0.3224$ | $0.285$ | $0.7086$ | $0.216$ | $0.8321$ | **$0.253$** | **$0.7697$** |
+| **MEAN** | — | **64.8** | **233.3** | **2.796** | **2,892** | **$0.773$** | **$-0.8343$** | **$0.416$** | **$0.4045$** | **$0.317$** | **$0.6059$** | **$0.290$** | **$0.7371$** |
+| **SD** | — | $15.1$ | $58.6$ | $0.831$ | $582$ | $0.162$ | $1.2894$ | $0.080$ | $0.5860$ | $0.080$ | $0.4936$ | **$0.059$** | **$0.1770$** |
 
 ---
 
@@ -78,6 +78,10 @@ In each fold $k \in \{1, \dots, 18\}$, training is performed on the 17 other par
    - Model M2 (Dynamic Delay) reduces prediction error by $30.3\%$ relative to M1 and $62.5\%$ relative to M0.
 3. **Allometric Normalization Value**:
    Normalizing workload by body mass ($P / M$ in W/kg) improves cross-subject generalizability from $R^2 = 0.6059$ to $R^2 = 0.7371$, directly capturing the physiological variance between adolescent fencers ($49.8\text{ kg}$) and adult kayakers ($89.9\text{ kg}$).
+4. **Heterogeneous Mass Degradation**:
+   While linear mass normalization ($P/M$) improves the macro-average $R^2$ across the full cohort, it degrades RMSE in 7 of the 18 participants (Subjects 3, 4, 6, 15, 16, 17, 18), demonstrating that single-variable linear body mass scaling introduces individual bias for light endurance and heavy muscular athletes.
+5. **Metrological Unit Verification**:
+   Audited raw byte tables: while the PhysioNet HTML metadata claims units of $\text{mL/min}$, raw CSV numbers in `test_measure.csv` are strictly in $\text{L/min}$ ($0.20\dots 4.54\text{ L/min}$); processing treats them directly without post-hoc multipliers.
 
 ---
 

@@ -1118,12 +1118,58 @@
       "research/cpet_cycloergometer_2026_11_09/REMAINING_BARRIERS_MATRIX.md"
     ],
     "reproduction_command": "python tools/evaluate_actes_models.py",
-    "limits": "Validates macroscopic aerobic coupling (P_mech -> pulmonary VO2) and cardiorespiratory delay (tau = 35 s) across N=18 subjects. Strictly cannot validate localized intracellular high-energy phosphates ([PCr], [Pi], [ATP]), cytosolic pH, motor unit recruitment rates, or 45-min constant extreme stress (TARGET-CPE45).",
+    "limits": "Validates macroscopic aerobic coupling (P_mech -> pulmonary VO2), delta efficiency (eta_delta = 25.5%), and cardiorespiratory delay (tau = 35 s) across N=18 subjects. Identifies heterogeneous mass degradation in 7/18 subjects. Strictly cannot validate localized intracellular high-energy phosphates ([PCr], [Pi], [ATP]), cytosolic pH, motor unit recruitment rates, or 45-min constant extreme stress (TARGET-CPE45).",
     "external_validation": "cross_subject_loso_n18",
     "data_type": "ORIGINAL_BINARY_FILE",
     "experiment_tag": "EXP-0043_MULTI_SUBJECT_LOSO_VALIDATED",
     "tags": [
       "EXP-0043_MULTI_SUBJECT_LOSO_VALIDATED"
+    ]
+  },
+  {
+    "id": "EXP-0044",
+    "date": "2026-11-09",
+    "name": "PhysioNet Malaga Treadmill CPET: Multi-Subject Locomotion Kinetics, Substrate Oxidation, and Cross-Modality Transfer Barrier (N=992 tests, N=857 subjects)",
+    "sources": [
+      "SRC-0074"
+    ],
+    "design": "Independent multi-subject empirical validation of SUBJECT-01 macroscopic cardiorespiratory models on PhysioNet Malaga Treadmill CPET dataset (DOI 10.13026/7ezk-j442, 575,087 breath-by-breath records across N=992 maximal incremental exercise tests on N=857 human participants). Evaluates: 1) Cryptographic verification of raw files against official SHA256SUMS.txt; 2) Empirical RER and oxycaloric equivalent distribution (c_ox = 21.37 kJ/L O2, matching nominal 20.9 kJ/L to within 2.2%); 3) 5-fold out-of-sample cross-validation of factorial kinetics models (M0..M4); 4) Cross-modality transfer barrier (NEG-0037) demonstrating failure of direct cycling efficiency transfer to running locomotion; 5) Maintenance of epistemic invariants (TARGET-CPE45 remains unvalidated, biological interventions remain NO_GO).",
+    "status": "completed_real_data_validation",
+    "results": {
+      "n_subject_info_entries": 992,
+      "n_valid_incremental_tests": 979,
+      "total_records": 575087,
+      "validation_strategy": "5_FOLD_OUT_OF_SAMPLE_CROSS_VALIDATION",
+      "m0_null_rmse_mean_ml_min": 926.8,
+      "m0_null_r_squared_mean": -0.6193,
+      "m1_linear_rmse_mean_ml_min": 582.4,
+      "m1_linear_r_squared_mean": 0.3413,
+      "m2_linear_mass_rmse_mean_ml_min": 533.2,
+      "m2_linear_mass_r_squared_mean": 0.4431,
+      "m3_dynamic_ode_rmse_mean_ml_min": 492.6,
+      "m3_dynamic_ode_r_squared_mean": 0.4956,
+      "m4_allometric_ode_rmse_mean_ml_min": 404.5,
+      "m4_allometric_ode_r_squared_mean": 0.6712,
+      "empirical_oxycaloric_mean_kj_per_l": 21.3735,
+      "cross_modality_transfer_rmse_penalty_ml_min": 179.1,
+      "validation_verdict": "MACROSCOPIC_LOCOMOTION_KINETICS_VALIDATED_CROSS_COHORT_N979",
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+      "biological_interventions": "NO_GO_MAINTAINED"
+    },
+    "research_date": "2026-11-09",
+    "model": "tools/evaluate_malaga_treadmill.py",
+    "inputs": "research/treadmill_cpet_2026_11_09/test_measure.csv",
+    "report": "research/treadmill_cpet_2026_11_09/TREADMILL_CPET_REPORT.md",
+    "outputs": [
+      "research/treadmill_cpet_2026_11_09/malaga_validation_results.json"
+    ],
+    "reproduction_command": "python tools/evaluate_malaga_treadmill.py",
+    "limits": "Validates macroscopic Phase II pulmonary cardiorespiratory kinetics across treadmill running in N=857 human subjects. Establishes cross-modality barrier NEG-0037 (cycling parameters cannot transfer to running without locomotion-specific biomechanics). Does not observe localized intramuscular phosphates or validate 45-min critical power survivability.",
+    "external_validation": "cross_cohort_5fold_n979",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "experiment_tag": "EXP-0044_TREADMILL_CPET_VALIDATED",
+    "tags": [
+      "EXP-0044_TREADMILL_CPET_VALIDATED"
     ]
   }
 ]

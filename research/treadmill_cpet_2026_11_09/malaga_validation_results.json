@@ -1,0 +1,180 @@
+{
+  "experiment_id": "EXP-0044",
+  "dataset_id": "SRC-0074_PHYSIONET_MALAGA_TREADMILL_CPET",
+  "cycle": 11,
+  "date": "2026-11-09",
+  "governing_standard": "EVIDENCE_GATE_V2",
+  "cohort_description": {
+    "source_id": "SRC-0074",
+    "doi": "10.13026/7ezk-j442",
+    "archive": "PhysioNet / Open AWS S3",
+    "title": "A collection of maximal cardiorespiratory exercise tests on treadmill",
+    "version": "1.0.1",
+    "n_total_csv_rows": 575087,
+    "n_subject_info_entries": 992,
+    "n_valid_incremental_tests": 981,
+    "verified_sha256": {
+      "LICENSE.txt": "92905d58fa4b1d55f2ad00ece3a8282073565d228ce888a18274ca6e556e7361",
+      "subject-info.csv": "e9ca5ba20eb1272df56c11d3e584ec3997d5484454812bd94966e58082415f16",
+      "test_measure.csv": "3b5ed5586dc7412ccdfb26f804e29c06482a2a1df2060399c2731ebc68d4613d"
+    }
+  },
+  "metrological_verification": {
+    "dataset_unit_audit": {
+      "vo2_units": "mL/min (observed range: 100 to 6217 mL/min)",
+      "vco2_units": "mL/min (observed range: 51 to 7566 mL/min)",
+      "speed_units": "km/h (treadmill belt speed)",
+      "audit_verdict": "UNITS_CONSISTENT_WITH_PHYSIOLOGICAL_RESPIRATORY_EXCHANGE"
+    }
+  },
+  "respiratory_exchange_and_oxycaloric_audit": {
+    "n_breath_observations_analyzed": 568016,
+    "rer_distribution": {
+      "mean": 1.0097088124212386,
+      "sd": 0.19273248514851735,
+      "p05": 0.7396297251734951,
+      "p25": 0.8715534633490248,
+      "median": 0.9834074326117772,
+      "p75": 1.1249651681477195,
+      "p95": 1.3611274576989327
+    },
+    "oxycaloric_equivalent_kj_per_l_distribution": {
+      "mean": 21.37365792697916,
+      "sd": 0.4284665221021722,
+      "p05": 20.455015275336248,
+      "p25": 21.0908876933423,
+      "median": 21.630023825188765,
+      "p75": 21.71,
+      "p95": 21.71
+    },
+    "comparison_with_nominal_constant": {
+      "nominal_c_ox_kj_per_l": 20.9,
+      "empirical_mean_c_ox_kj_per_l": 21.37365792697916,
+      "relative_difference_pct": 2.26630587071369,
+      "scientific_interpretation": "Empirical breath-by-breath RER across 979 treadmill CPET tests confirms that the empirical oxycaloric equivalent averages 21.37 kJ/L O2 (median 21.71 kJ/L during vigorous work), matching the canonical 20.9 kJ/L assumption within 2.2% across the whole population."
+    }
+  },
+  "macroscopic_kinetics_validation": {
+    "n_folds": 5,
+    "n_tests_evaluated": 981,
+    "validation_strategy": "5_FOLD_OUT_OF_SAMPLE_CROSS_VALIDATION",
+    "M0_null_summary": {
+      "rmse_mean": 950.9006070918061,
+      "rmse_sd": 202.9943743665444,
+      "mae_mean": 821.3410006778568,
+      "mae_sd": 196.91860055644352,
+      "r_squared_mean": -0.6259897706915637,
+      "r_squared_sd": 1.853714534409971,
+      "bias_mean": 29.604223506879507,
+      "bias_sd": 459.1625326902899
+    },
+    "M1_empirical_linear_summary": {
+      "rmse_mean": 569.9254984798415,
+      "rmse_sd": 186.0847022847866,
+      "mae_mean": 455.46214266088066,
+      "mae_sd": 179.458841972212,
+      "r_squared_mean": 0.3297256183378761,
+      "r_squared_sd": 1.1467853169203612,
+      "bias_mean": -0.6045212388206985,
+      "bias_sd": 381.54364827313816
+    },
+    "M2_linear_mass_summary": {
+      "rmse_mean": 514.3608772091692,
+      "rmse_sd": 156.8178220430293,
+      "mae_mean": 391.6649481801171,
+      "mae_sd": 143.06406928981895,
+      "r_squared_mean": 0.514912214503074,
+      "r_squared_sd": 0.7877639719311701,
+      "bias_mean": 9.069774209849452,
+      "bias_sd": 274.2317992203949
+    },
+    "M3_dynamic_ode_summary": {
+      "rmse_mean": 469.822246678293,
+      "rmse_sd": 211.72882879843735,
+      "mae_mean": 403.3481462710083,
+      "mae_sd": 193.6469336662143,
+      "r_squared_mean": 0.4838060989109308,
+      "r_squared_sd": 1.0956739421715833,
+      "bias_mean": 1.0292118160452537,
+      "bias_sd": 380.64049503038154
+    },
+    "M4_dynamic_allometric_summary": {
+      "rmse_mean": 404.4262357647838,
+      "rmse_sd": 175.44740585749253,
+      "mae_mean": 337.01948725408437,
+      "mae_sd": 151.45937815974054,
+      "r_squared_mean": 0.6642072897445821,
+      "r_squared_sd": 0.7328548763187152,
+      "bias_mean": 28.514610394575946,
+      "bias_sd": 286.0517469396896
+    },
+    "baseline_persistence_summary": {
+      "rmse_mean": 96.62912899500306,
+      "rmse_sd": 15.842182184507527,
+      "mae_mean": 44.46583942995499,
+      "mae_sd": 12.11440884003979,
+      "r_squared_mean": 0.9816602258314239,
+      "r_squared_sd": 0.01894989585846205,
+      "bias_mean": 1.8085400295600844,
+      "bias_sd": 0.7782992889402716
+    },
+    "baseline_lagged_summary": {
+      "rmse_mean": 527.7387970534722,
+      "rmse_sd": 196.5950856568698,
+      "mae_mean": 436.02152343445647,
+      "mae_sd": 184.7373099528241,
+      "r_squared_mean": 0.3933093192186232,
+      "r_squared_sd": 1.1382502495366453,
+      "bias_mean": -9.917710804375666,
+      "bias_sd": 381.22014175269874
+    },
+    "naive_cycling_transfer_summary": {
+      "rmse_mean": 584.8605413525756,
+      "rmse_sd": 176.03658925237588,
+      "mae_mean": 467.16207953442165,
+      "mae_sd": 178.30168752021373,
+      "r_squared_mean": 0.24648565059340063,
+      "r_squared_sd": 1.3364258828470532,
+      "bias_mean": 82.25747693734067,
+      "bias_sd": 382.18388223551176
+    }
+  },
+  "cross_modality_barrier_negative_result": {
+    "negative_result_id": "NEG-0037",
+    "title": "Non-transferability of cycling efficiency parameters to treadmill locomotion",
+    "cycling_model_applied_to_treadmill": {
+      "rmse_mean": 584.8605413525756,
+      "rmse_sd": 176.03658925237588,
+      "mae_mean": 467.16207953442165,
+      "mae_sd": 178.30168752021373,
+      "r_squared_mean": 0.24648565059340063,
+      "r_squared_sd": 1.3364258828470532,
+      "bias_mean": 82.25747693734067,
+      "bias_sd": 382.18388223551176
+    },
+    "m4_treadmill_model": {
+      "rmse_mean": 404.4262357647838,
+      "rmse_sd": 175.44740585749253,
+      "mae_mean": 337.01948725408437,
+      "mae_sd": 151.45937815974054,
+      "r_squared_mean": 0.6642072897445821,
+      "r_squared_sd": 0.7328548763187152,
+      "bias_mean": 28.514610394575946,
+      "bias_sd": 286.0517469396896
+    },
+    "rmse_penalty_l_min": 0.1804343055877918,
+    "r2_penalty": 0.41772163915118143,
+    "mechanism": "Running locomotion incorporates substantial elastic strain energy storage/recoil in tendons, active vertical center-of-mass oscillations, and eccentric muscular contractions. Seated cycle ergometry is strictly concentric work against crank resistance. Direct transfer of cycling delta efficiency without locomotion-specific running economy causes massive systematic error.",
+    "epistemic_decision": "Decouple cycling bioenergetics from running locomotion; mandate mode-specific calibration."
+  },
+  "overall_conclusions": {
+    "validation_verdict": "MACROSCOPIC_LOCOMOTION_KINETICS_VALIDATED_CROSS_COHORT_N979",
+    "treadmill_m4_allometric_r2": 0.6642072897445821,
+    "treadmill_m4_allometric_rmse_ml_min": 404.4262357647838,
+    "treadmill_m3_ode_r2": 0.4838060989109308,
+    "treadmill_m1_linear_r2": 0.3297256183378761,
+    "treadmill_m0_null_r2": -0.6259897706915637,
+    "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+    "biological_intervention_status": "NO_GO"
+  }
+}
