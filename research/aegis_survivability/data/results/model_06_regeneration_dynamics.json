@@ -1,0 +1,170 @@
+{
+  "model_id": "MODEL-06",
+  "description": "Regeneration Dynamics, Functional Neurotization & Oncogenic Constraints",
+  "defect_evaluations": [
+    {
+      "defect": "Deep Dermal Abrasion / Laceration",
+      "phenotype_results": [
+        {
+          "phenotype": "Standard Adult Human (Fibrotic Repair)",
+          "defect": "Deep Dermal Abrasion / Laceration",
+          "wound_closure_days": 18.8,
+          "volumetric_structural_regrowth_days": 254.9,
+          "functional_neurotization_days": 22.2,
+          "scarless_regeneration": false,
+          "residual_fibrosis_fraction": 0.85,
+          "oncogenic_risk_tier": "STANDARD_HOMEOSTATIC_BASELINE",
+          "oncogenic_rationale": "Normal human basal turnover without increased mitotic load.",
+          "ten_year_oncogenic_risk_pct": 3.44
+        },
+        {
+          "phenotype": "Acomys-Inspired Scar-Free Dermal Regenerator",
+          "defect": "Deep Dermal Abrasion / Laceration",
+          "wound_closure_days": 6.2,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 21.3,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "MODERATE_ELEVATED_RISK",
+          "oncogenic_rationale": "Elevated somatic cycling requiring stringent cell cycle checkpoints.",
+          "ten_year_oncogenic_risk_pct": 8.32
+        },
+        {
+          "phenotype": "Theoretical Axolotl-Grade Epimorphic Organism",
+          "defect": "Deep Dermal Abrasion / Laceration",
+          "wound_closure_days": 3.3,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 20.3,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "CRITICAL_HYPERPLASTIC_HAZARD",
+          "oncogenic_rationale": "Unconstrained epimorphic dedifferentiation with standard human DNA repair carries severe risk of teratoma and early malignant transformation.",
+          "ten_year_oncogenic_risk_pct": 99.61
+        },
+        {
+          "phenotype": "Engineered Genome-Stabilized Epimorphic Organism",
+          "defect": "Deep Dermal Abrasion / Laceration",
+          "wound_closure_days": 3.3,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 20.3,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "THEORETICAL_MITIGATION_UNVALIDATED",
+          "oncogenic_rationale": "Hypothesized Peto-like tumor suppression (e.g. 10-20x TP53 copies like Loxodonta africana). Exact quantitative risk reduction in human tissue is mathematically unconstrained.",
+          "ten_year_oncogenic_risk_pct": 6.14
+        }
+      ]
+    },
+    {
+      "defect": "Deep Penetrating Muscle Wound",
+      "phenotype_results": [
+        {
+          "phenotype": "Standard Adult Human (Fibrotic Repair)",
+          "defect": "Deep Penetrating Muscle Wound",
+          "wound_closure_days": 10.0,
+          "volumetric_structural_regrowth_days": 254.9,
+          "functional_neurotization_days": 55.5,
+          "scarless_regeneration": false,
+          "residual_fibrosis_fraction": 0.85,
+          "oncogenic_risk_tier": "STANDARD_HOMEOSTATIC_BASELINE",
+          "oncogenic_rationale": "Normal human basal turnover without increased mitotic load.",
+          "ten_year_oncogenic_risk_pct": 3.44
+        },
+        {
+          "phenotype": "Acomys-Inspired Scar-Free Dermal Regenerator",
+          "defect": "Deep Penetrating Muscle Wound",
+          "wound_closure_days": 3.3,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 48.0,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "MODERATE_ELEVATED_RISK",
+          "oncogenic_rationale": "Elevated somatic cycling requiring stringent cell cycle checkpoints.",
+          "ten_year_oncogenic_risk_pct": 8.32
+        },
+        {
+          "phenotype": "Theoretical Axolotl-Grade Epimorphic Organism",
+          "defect": "Deep Penetrating Muscle Wound",
+          "wound_closure_days": 1.8,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 38.5,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "CRITICAL_HYPERPLASTIC_HAZARD",
+          "oncogenic_rationale": "Unconstrained epimorphic dedifferentiation with standard human DNA repair carries severe risk of teratoma and early malignant transformation.",
+          "ten_year_oncogenic_risk_pct": 99.61
+        },
+        {
+          "phenotype": "Engineered Genome-Stabilized Epimorphic Organism",
+          "defect": "Deep Penetrating Muscle Wound",
+          "wound_closure_days": 1.8,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 38.5,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "THEORETICAL_MITIGATION_UNVALIDATED",
+          "oncogenic_rationale": "Hypothesized Peto-like tumor suppression (e.g. 10-20x TP53 copies like Loxodonta africana). Exact quantitative risk reduction in human tissue is mathematically unconstrained.",
+          "ten_year_oncogenic_risk_pct": 6.14
+        }
+      ]
+    },
+    {
+      "defect": "Extensive Blast/Crush Soft Tissue Defect",
+      "phenotype_results": [
+        {
+          "phenotype": "Standard Adult Human (Fibrotic Repair)",
+          "defect": "Extensive Blast/Crush Soft Tissue Defect",
+          "wound_closure_days": 62.5,
+          "volumetric_structural_regrowth_days": "PERMANENT_DEFICIT",
+          "functional_neurotization_days": 118.0,
+          "scarless_regeneration": false,
+          "residual_fibrosis_fraction": 0.85,
+          "oncogenic_risk_tier": "STANDARD_HOMEOSTATIC_BASELINE",
+          "oncogenic_rationale": "Normal human basal turnover without increased mitotic load.",
+          "ten_year_oncogenic_risk_pct": 3.44
+        },
+        {
+          "phenotype": "Acomys-Inspired Scar-Free Dermal Regenerator",
+          "defect": "Extensive Blast/Crush Soft Tissue Defect",
+          "wound_closure_days": 20.8,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 98.0,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "MODERATE_ELEVATED_RISK",
+          "oncogenic_rationale": "Elevated somatic cycling requiring stringent cell cycle checkpoints.",
+          "ten_year_oncogenic_risk_pct": 8.32
+        },
+        {
+          "phenotype": "Theoretical Axolotl-Grade Epimorphic Organism",
+          "defect": "Extensive Blast/Crush Soft Tissue Defect",
+          "wound_closure_days": 11.1,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 72.5,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "CRITICAL_HYPERPLASTIC_HAZARD",
+          "oncogenic_rationale": "Unconstrained epimorphic dedifferentiation with standard human DNA repair carries severe risk of teratoma and early malignant transformation.",
+          "ten_year_oncogenic_risk_pct": 99.61
+        },
+        {
+          "phenotype": "Engineered Genome-Stabilized Epimorphic Organism",
+          "defect": "Extensive Blast/Crush Soft Tissue Defect",
+          "wound_closure_days": 11.1,
+          "volumetric_structural_regrowth_days": 63.7,
+          "functional_neurotization_days": 72.5,
+          "scarless_regeneration": true,
+          "residual_fibrosis_fraction": 0.0,
+          "oncogenic_risk_tier": "THEORETICAL_MITIGATION_UNVALIDATED",
+          "oncogenic_rationale": "Hypothesized Peto-like tumor suppression (e.g. 10-20x TP53 copies like Loxodonta africana). Exact quantitative risk reduction in human tissue is mathematically unconstrained.",
+          "ten_year_oncogenic_risk_pct": 6.14
+        }
+      ]
+    }
+  ],
+  "fundamental_biological_boundaries": {
+    "closure_vs_function_dichotomy": "Wound surface closure (epithelial migration) occurs in days (3.3 - 20 days), but functional neuromuscular recovery is strictly bound by axon regeneration velocity (1.0 - 2.2 mm/day). For a 120 mm deep nerve lesion, functional reinnervation takes at least 72 - 118 days. Instantaneous combat regeneration is biologically impossible.",
+    "fibrosis_control": "In Acomys spiny mice, TGF-beta3 dominance and early M2 macrophage resolution allow scar-free dermal healing with hair follicle neogenesis (Seifert et al. 2012). However, transferring this pathway to human adults is an UNPROVEN HYPOTHESIS: human Phase III clinical trials with recombinant TGF-beta3 (avotermin) failed to show robust efficacy, indicating that rodent autotomy mechanisms cannot be directly equated with therapeutic human scarless regeneration.",
+    "oncogenesis_tradeoff_petos_paradox": "Unrestrained epimorphic blastema cycling imposes massive cumulative mitotic loads. In mammalian systems, this presents severe risks of genomic instability and neoplastic transformation unless counterbalanced by robust multi-layer tumor suppressor pathways. While elephants expanded TP53 copies (~20 copies / 40 alleles) and retrogene LIF6, directly extrapolating this to calculate precise numerical cancer probabilities in modified humans is scientifically unvalidated and mathematically unconstrained at present. Peto's paradox remains an open quantitative problem."
+  }
+}

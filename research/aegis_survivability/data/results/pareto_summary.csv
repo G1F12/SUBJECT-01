@@ -1,0 +1,6 @@
+Arch_ID,Name,Total_Mass_kg,Puncture_Depth_300N_mm,Cutting_Resistance_N,Sprint_Vmax_m_s,CPE45_Work_Net_kJ,Free_Sweat_Skin_Pct,Heat_Dissipation_W,Skin_Closure_Days,Return_90pct_Days,Epistemic_Uncertainty,On_Pareto_Frontier
+ARCH-0,Baseline Unmodified Human,75.0,32.0,18.0,9.85,88.94,100.0,780.0,15.0,365.0,1.0,True
+ARCH-1,Heavy Shell Bio-Armor (Osteoderms + Dense Keratin),89.8,0.8,285.0,7.42,25.58,25.0,220.0,120.0,365.0,2.5,True
+ARCH-2,Flexible Viscoelastic Composite,81.8,8.5,115.0,8.75,49.79,55.0,450.0,28.0,210.0,3.5,False
+ARCH-3,Hyper-Regenerative Light Architecture,75.8,28.0,22.0,9.78,88.25,95.0,740.0,5.0,95.0,4.0,True
+ARCH-4,Balanced Adaptive Architecture (Selective FGM Plating),79.2,3.5,165.0,9.35,65.76,75.0,600.0,8.0,110.0,2.8,True

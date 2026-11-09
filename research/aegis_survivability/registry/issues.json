@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ISS-0020",
+    "issue": "High-velocity rifle penetration vs biological areal density limits",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "impact": "Arresting 7.62x39mm or 5.56x45mm rifle projectiles requires areal density > 25 kg/m^2. A biological organism cannot carry this weight over full torso without severe locomotor collapse."
+  },
+  {
+    "id": "ISS-0021",
+    "issue": "Major conduit vascular transection remains unsolvable by biochemistry alone",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "Transection of abdominal aorta or proximal femoral artery loses >1.5 L/min under high shear stress; biological survival requires active mechanical vascular clamping or external tourniquets."
+  },
+  {
+    "id": "ISS-0022",
+    "issue": "Axon regeneration velocity biological rate limit (1-2 mm/day)",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "Functional motor re-innervation after severe nerve laceration takes months. No known molecular mechanism can accelerate tubulin transport by an order of magnitude without axonal death."
+  },
+  {
+    "id": "ISS-0023",
+    "issue": "Thermoregulation during prolonged high-intensity combat exertion in humid ambient conditions",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "In hot/humid environments (wet-bulb > 30 C), evaporative sweat dissipation drops sharply; even zoned armor (30% occlusion) may cause core temperature accumulation during sustained running."
+  },
+  {
+    "id": "ISS-0024",
+    "issue": "Mineral turnover and calcium-phosphate dietary metabolic demands of osteoderm armor",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "Maintaining and repairing 7-10 kg of mineralized osteoderms requires massive calcium, phosphate, and vitamin D metabolic mobilization, straining parathyroid and renal regulation."
+  },
+  {
+    "id": "ISS-0025",
+    "issue": "Developmental and ontogenetic morphogenesis of rigid subdermal plates",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "How rigid osteoderms grow during embryogenesis and childhood without restricting organismal growth requires coordinated sutural expansion and osteoclast remodeling."
+  },
+  {
+    "id": "ISS-0026",
+    "issue": "Absence of empirical in vivo ballistic impact data on living bioengineered dermal composites",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "Current tissue mechanics and wave attenuation models are derived from excised animal carapaces and finite element analogs; in vivo dynamic biological validation is currently prohibited (NO_GO)."
+  },
+  {
+    "id": "ISS-0027",
+    "issue": "Discrepancy between Mode I crack propagation (48.6 N) and blunt guillotine wedging (680 N) for FGM biomaterials",
+    "severity": "high",
+    "status": "resolved",
+    "impact": "Resolved by updating MODEL-12 and MODEL-14 to explicitly calculate both regimes and document draw slicing reduction (32.4 N)."
+  },
+  {
+    "id": "ISS-0028",
+    "issue": "Unsubstantiated claim of 92% muscle force recovery in 5 days post PEG-fusion and rodent-human equivalence in VML",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved by formal retraction (INV-0013, NEG-0051), calibration with human clinical trials (SRC-0099, SRC-0100, SRC-0101, SRC-0102), and updated MODEL-13."
+  },
+  {
+    "id": "ISS-0029",
+    "issue": "Epistemic discrepancies in VML volume recovery metrics, Atkins slicing factor multiplier, and thermoregulatory flux definitions",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 4B by formal retractions (INV-0015, INV-0016), independent 3-track external validation gate (EXP-0059), knife/scalpel geometric distinction in MODEL-12, and unified first-law energy balance in MODEL-14."
+  },
+  {
+    "id": "ISS-0030",
+    "issue": "Forensic discovery of synthetic clinical records, biomaterials data leakage, and premature whole-body biohybrid claims",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 4C by authentic data reconstruction (PMC5744714), LOPO-CV evaluation, true prediction error re-calculation (9.15%), and formal downgrading of validation verdicts in DEC-0029."
+  }
+]

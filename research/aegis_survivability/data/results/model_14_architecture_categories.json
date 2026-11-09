@@ -1,0 +1,254 @@
+{
+  "ARCH-BIO-4": {
+    "temperate": {
+      "architecture_id": "ARCH-BIO-4",
+      "architecture_name": "Endogenous Selective FGM & Keratin Shield",
+      "category": "ARCH-BIO",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "temperate",
+      "total_mass_kg": 82.2,
+      "locomotion": {
+        "speed_retention_pct": 90.3,
+        "accel_retention_pct": 94.9,
+        "effective_latency_ms": 212.9,
+        "operating_tendon_stress_mpa": 56.1,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1227.2,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 11.5,
+        "heat_production_w": 977.2,
+        "dry_dissipation_actual_w": 388.5,
+        "evap_dissipation_actual_w": 588.6,
+        "evap_capacity_w": 810.0,
+        "effective_dissipation_w": 977.2,
+        "net_heat_storage_w": 0.0,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.0,
+        "time_to_39_5c_min": "SUSTAINABLE",
+        "time_to_40_0c_min": "SUSTAINABLE",
+        "reaches_hyperthermia_in_cpe45": false,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "COMPATIBLE_WITH_SUBJECT01"
+    },
+    "hot_humid": {
+      "architecture_id": "ARCH-BIO-4",
+      "architecture_name": "Endogenous Selective FGM & Keratin Shield",
+      "category": "ARCH-BIO",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "hot_humid",
+      "total_mass_kg": 82.2,
+      "locomotion": {
+        "speed_retention_pct": 90.3,
+        "accel_retention_pct": 94.9,
+        "effective_latency_ms": 212.9,
+        "operating_tendon_stress_mpa": 56.1,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1227.2,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 11.5,
+        "heat_production_w": 977.2,
+        "dry_dissipation_actual_w": 18.5,
+        "evap_dissipation_actual_w": 255.0,
+        "evap_capacity_w": 340.0,
+        "effective_dissipation_w": 273.5,
+        "net_heat_storage_w": 703.7,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.1476,
+        "time_to_39_5c_min": 16.9,
+        "time_to_40_0c_min": 20.3,
+        "reaches_hyperthermia_in_cpe45": true,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "THERMAL_OR_MASS_BOTTLENECK"
+    }
+  },
+  "ARCH-HYBRID-A": {
+    "temperate": {
+      "architecture_id": "ARCH-HYBRID-A",
+      "architecture_name": "Internal Biohybrid Subdermal Micro-Armor & Synthetic Fascia",
+      "category": "ARCH-HYBRID",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "temperate",
+      "total_mass_kg": 81.8,
+      "locomotion": {
+        "speed_retention_pct": 93.0,
+        "accel_retention_pct": 95.4,
+        "effective_latency_ms": 212.9,
+        "operating_tendon_stress_mpa": 56.0,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1215.7,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 0.0,
+        "heat_production_w": 965.7,
+        "dry_dissipation_actual_w": 476.6,
+        "evap_dissipation_actual_w": 489.1,
+        "evap_capacity_w": 810.0,
+        "effective_dissipation_w": 965.7,
+        "net_heat_storage_w": 0.0,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.0,
+        "time_to_39_5c_min": "SUSTAINABLE",
+        "time_to_40_0c_min": "SUSTAINABLE",
+        "reaches_hyperthermia_in_cpe45": false,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "COMPATIBLE_WITH_SUBJECT01"
+    },
+    "hot_humid": {
+      "architecture_id": "ARCH-HYBRID-A",
+      "architecture_name": "Internal Biohybrid Subdermal Micro-Armor & Synthetic Fascia",
+      "category": "ARCH-HYBRID",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "hot_humid",
+      "total_mass_kg": 81.8,
+      "locomotion": {
+        "speed_retention_pct": 93.0,
+        "accel_retention_pct": 95.4,
+        "effective_latency_ms": 212.9,
+        "operating_tendon_stress_mpa": 56.0,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1215.7,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 0.0,
+        "heat_production_w": 965.7,
+        "dry_dissipation_actual_w": 22.7,
+        "evap_dissipation_actual_w": 312.8,
+        "evap_capacity_w": 340.0,
+        "effective_dissipation_w": 335.5,
+        "net_heat_storage_w": 630.2,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.1328,
+        "time_to_39_5c_min": 18.8,
+        "time_to_40_0c_min": 22.6,
+        "reaches_hyperthermia_in_cpe45": true,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "THERMAL_OR_MASS_BOTTLENECK"
+    }
+  },
+  "ARCH-SPEC-1": {
+    "temperate": {
+      "architecture_id": "ARCH-SPEC-1",
+      "architecture_name": "Speculative Enzymatic Graphene Composite & Vascular Radiator",
+      "category": "ARCH-SPEC",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "temperate",
+      "total_mass_kg": 80.5,
+      "locomotion": {
+        "speed_retention_pct": 96.0,
+        "accel_retention_pct": 96.9,
+        "effective_latency_ms": 212.8,
+        "operating_tendon_stress_mpa": 55.7,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1237.7,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 22.0,
+        "heat_production_w": 987.7,
+        "dry_dissipation_actual_w": 440.3,
+        "evap_dissipation_actual_w": 547.3,
+        "evap_capacity_w": 810.0,
+        "effective_dissipation_w": 987.7,
+        "net_heat_storage_w": 0.0,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.0,
+        "time_to_39_5c_min": "SUSTAINABLE",
+        "time_to_40_0c_min": "SUSTAINABLE",
+        "reaches_hyperthermia_in_cpe45": false,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "COMPATIBLE_WITH_SUBJECT01"
+    },
+    "hot_humid": {
+      "architecture_id": "ARCH-SPEC-1",
+      "architecture_name": "Speculative Enzymatic Graphene Composite & Vascular Radiator",
+      "category": "ARCH-SPEC",
+      "host_system": "Muscle Architecture A (Coordinated Evidence-Based)",
+      "climate": "hot_humid",
+      "total_mass_kg": 80.5,
+      "locomotion": {
+        "speed_retention_pct": 96.0,
+        "accel_retention_pct": 96.9,
+        "effective_latency_ms": 212.8,
+        "operating_tendon_stress_mpa": 55.7,
+        "tendon_status": "SAFE"
+      },
+      "thermal_and_cpe45": {
+        "w_mech_w": 250.0,
+        "metabolic_power_w": 1237.7,
+        "bmr_w": 128.7,
+        "tissue_maintenance_w": 22.0,
+        "heat_production_w": 987.7,
+        "dry_dissipation_actual_w": 21.0,
+        "evap_dissipation_actual_w": 289.0,
+        "evap_capacity_w": 340.0,
+        "effective_dissipation_w": 310.0,
+        "net_heat_storage_w": 677.7,
+        "energy_balance_residual_w": 0.0,
+        "first_law_conserved": true,
+        "heating_rate_k_min": 0.1451,
+        "time_to_39_5c_min": 17.2,
+        "time_to_40_0c_min": 20.7,
+        "reaches_hyperthermia_in_cpe45": true,
+        "thermodynamic_status": "EXPLORATORY_THERMODYNAMIC_MODEL",
+        "validation_breakdown": {
+          "tier_1_energy_conservation": "EXACT_1ST_LAW_CONSERVED",
+          "tier_2_heat_transfer_physics": "CONVECTIVE_AND_EVAPORATIVE_FLUX_CALCULATED",
+          "tier_3_physiological_strain": "SWEAT_RATE_CEILING_AND_CARDIAC_BURDEN_CONSTRAINED",
+          "tier_4_external_validation": "EXPLORATORY_NUMERICAL_UNVALIDATED"
+        }
+      },
+      "feasibility_verdict": "THERMAL_OR_MASS_BOTTLENECK"
+    }
+  }
+}

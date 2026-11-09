@@ -1,0 +1,316 @@
+{
+  "model_id": "MODEL-01",
+  "description": "Tissue Mechanics & Puncture/Cut Resistance",
+  "scenarios": {
+    "human_baseline": {
+      "sharp_puncture": {
+        "peak_puncture_force_n": 28.68,
+        "total_puncture_work_j": 0.031,
+        "total_thickness_mm": 6.02,
+        "total_areal_density_kg_m2": 5.802,
+        "layers": [
+          {
+            "name": "Human Stratum Corneum",
+            "thickness_mm": 0.02,
+            "f_puncture_n": 1.564,
+            "work_j": 0.0,
+            "areal_density_kg_m2": 0.022
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 28.676,
+            "work_j": 0.0287,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 1.255,
+            "work_j": 0.0025,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "utility_puncture": {
+        "peak_puncture_force_n": 122.79,
+        "total_puncture_work_j": 0.135,
+        "total_thickness_mm": 6.02,
+        "total_areal_density_kg_m2": 5.802,
+        "layers": [
+          {
+            "name": "Human Stratum Corneum",
+            "thickness_mm": 0.02,
+            "f_puncture_n": 22.429,
+            "work_j": 0.0002,
+            "areal_density_kg_m2": 0.022
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 122.793,
+            "work_j": 0.1228,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 5.828,
+            "work_j": 0.0117,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "cut_resistance": {
+        "f_cut_n": 212.525,
+        "f_cut_fracture_n": 63.445,
+        "f_cut_friction_n": 149.08,
+        "specific_cut_energy_j_m": 212.525
+      },
+      "sensitivity": {
+        "thickness_mm": 0.6458,
+        "youngs_modulus_mpa": -0.3145,
+        "tensile_strength_mpa": 0.9771,
+        "fracture_toughness_j_m2": 0.3208,
+        "hardness_vickers_hv": 0.0237
+      }
+    },
+    "keratin_pangolin_analogue": {
+      "sharp_puncture": {
+        "peak_puncture_force_n": 71.26,
+        "total_puncture_work_j": 0.12,
+        "total_thickness_mm": 8.5,
+        "total_areal_density_kg_m2": 9.03,
+        "layers": [
+          {
+            "name": "Pangolin Scale Beta-Keratin",
+            "thickness_mm": 2.5,
+            "f_puncture_n": 71.263,
+            "work_j": 0.0891,
+            "areal_density_kg_m2": 3.25
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 28.676,
+            "work_j": 0.0287,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 1.255,
+            "work_j": 0.0025,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "utility_puncture": {
+        "peak_puncture_force_n": 462.97,
+        "total_puncture_work_j": 0.713,
+        "total_thickness_mm": 8.5,
+        "total_areal_density_kg_m2": 9.03,
+        "layers": [
+          {
+            "name": "Pangolin Scale Beta-Keratin",
+            "thickness_mm": 2.5,
+            "f_puncture_n": 462.972,
+            "work_j": 0.5787,
+            "areal_density_kg_m2": 3.25
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 122.793,
+            "work_j": 0.1228,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 5.828,
+            "work_j": 0.0117,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "cut_resistance": {
+        "f_cut_n": 685.277,
+        "f_cut_fracture_n": 135.287,
+        "f_cut_friction_n": 549.99,
+        "specific_cut_energy_j_m": 685.277
+      },
+      "sensitivity": {
+        "thickness_mm": 0.5237,
+        "youngs_modulus_mpa": -0.2554,
+        "tensile_strength_mpa": 0.792,
+        "fracture_toughness_j_m2": 0.2599,
+        "hardness_vickers_hv": 0.2082
+      }
+    },
+    "mineralized_osteoderm": {
+      "sharp_puncture": {
+        "peak_puncture_force_n": 33.8,
+        "total_puncture_work_j": 0.065,
+        "total_thickness_mm": 8.0,
+        "total_areal_density_kg_m2": 9.48,
+        "layers": [
+          {
+            "name": "Armadillo Mineralized Osteoderm",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 33.803,
+            "work_j": 0.0338,
+            "areal_density_kg_m2": 3.7
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 28.676,
+            "work_j": 0.0287,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 1.255,
+            "work_j": 0.0025,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "utility_puncture": {
+        "peak_puncture_force_n": 499.14,
+        "total_puncture_work_j": 0.634,
+        "total_thickness_mm": 8.0,
+        "total_areal_density_kg_m2": 9.48,
+        "layers": [
+          {
+            "name": "Armadillo Mineralized Osteoderm",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 499.136,
+            "work_j": 0.4991,
+            "areal_density_kg_m2": 3.7
+          },
+          {
+            "name": "Human Reticular Dermis",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 122.793,
+            "work_j": 0.1228,
+            "areal_density_kg_m2": 2.1
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 5.828,
+            "work_j": 0.0117,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "cut_resistance": {
+        "f_cut_n": 140.654,
+        "f_cut_fracture_n": 16.421,
+        "f_cut_friction_n": 124.233,
+        "specific_cut_energy_j_m": 140.654
+      },
+      "sensitivity": {
+        "thickness_mm": 0.0674,
+        "youngs_modulus_mpa": -0.0337,
+        "tensile_strength_mpa": 0.1024,
+        "fracture_toughness_j_m2": 0.0337,
+        "hardness_vickers_hv": 0.897
+      }
+    },
+    "bioengineered_composite": {
+      "sharp_puncture": {
+        "peak_puncture_force_n": 155.0,
+        "total_puncture_work_j": 0.346,
+        "total_thickness_mm": 10.0,
+        "total_areal_density_kg_m2": 12.18,
+        "layers": [
+          {
+            "name": "Armadillo Mineralized Osteoderm",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 33.803,
+            "work_j": 0.0338,
+            "areal_density_kg_m2": 3.7
+          },
+          {
+            "name": "Bioengineered Cross-linked Collagen Mat",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 155.001,
+            "work_j": 0.31,
+            "areal_density_kg_m2": 4.8
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 1.255,
+            "work_j": 0.0025,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "utility_puncture": {
+        "peak_puncture_force_n": 684.7,
+        "total_puncture_work_j": 1.88,
+        "total_thickness_mm": 10.0,
+        "total_areal_density_kg_m2": 12.18,
+        "layers": [
+          {
+            "name": "Armadillo Mineralized Osteoderm",
+            "thickness_mm": 2.0,
+            "f_puncture_n": 499.136,
+            "work_j": 0.4991,
+            "areal_density_kg_m2": 3.7
+          },
+          {
+            "name": "Bioengineered Cross-linked Collagen Mat",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 684.7,
+            "work_j": 1.3694,
+            "areal_density_kg_m2": 4.8
+          },
+          {
+            "name": "Human Hypodermis (Adipose)",
+            "thickness_mm": 4.0,
+            "f_puncture_n": 5.828,
+            "work_j": 0.0117,
+            "areal_density_kg_m2": 3.68
+          }
+        ]
+      },
+      "cut_resistance": {
+        "f_cut_n": 1347.334,
+        "f_cut_fracture_n": 477.703,
+        "f_cut_friction_n": 869.632,
+        "specific_cut_energy_j_m": 1347.334
+      },
+      "sensitivity": {
+        "thickness_mm": 0.6382,
+        "youngs_modulus_mpa": -0.3115,
+        "tensile_strength_mpa": 0.9652,
+        "fracture_toughness_j_m2": 0.3165,
+        "hardness_vickers_hv": 0.0347
+      }
+    }
+  },
+  "verdict": {
+    "regime_classification": "BLUNT_PUNCH_AND_GUILLOTINE_WEDGING",
+    "clinical_caveat": "Calculated forces (~28.7N puncture, ~212N cut) overestimate sharp surgical needle insertion (1.5-3.5N) and slicing scalpel cuts (0.5-2.5N) by ~8-10x due to neglecting Mode-I tip crack wedging and lateral draw slicing ratios. Valid as blunt/spike bounds.",
+    "cut_resistance_status": "CONFIRMED_HIGH_BLUNT_BOUND",
+    "guaranteed_800n_status": "REFUTED_DEPENDENT_ON_SLICING_AND_SHARPNESS",
+    "slicing_draw_reduction": {
+      "slice_to_push_ratio": 4.0,
+      "blade_edge_radius_um": 0.5,
+      "f_push_normal_n": 167.47,
+      "f_slice_lateral_n": 187.57,
+      "guillotine_reference_n": 1347.33,
+      "force_reduction_pct": 87.6,
+      "guaranteed_800n_valid": false,
+      "scientific_caveat": "Guaranteed cut resistance >800 N is FALSE under slicing draw (xi > 2) and sharp edges (r_edge < 1 um). Real cutting force drops to 15-60 N for scalpels and utility razors."
+    },
+    "puncture_resistance_status": "CONFIRMED_HIGH_BLUNT_BOUND",
+    "human_vs_bioengineered_gain_ratio": 5.4
+  }
+}

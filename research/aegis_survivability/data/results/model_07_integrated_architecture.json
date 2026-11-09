@@ -1,0 +1,163 @@
+{
+  "model_id": "MODEL-07",
+  "description": "Integrated Biological Architecture & Multi-Criteria Trade-offs",
+  "architectures": [
+    {
+      "architecture_name": "ARCH-0: Standard Human Baseline",
+      "architecture_status": "BASELINE_VALIDATED",
+      "environment": "Temperate Standard",
+      "total_mass_kg": 75.0,
+      "armor_mass_kg": 0.0,
+      "resting_metabolic_rate_w": 86.4,
+      "max_heat_dissipation_w": 1179.8,
+      "combat_heat_storage_w": 0.0,
+      "hyperthermia_limit_minutes": "SUSTAINABLE",
+      "thermal_sustainability_assessment": "SUSTAINABLE_CONDITIONAL (requires continuous 1.5 L/hr fluid/electrolyte replenishment; strictly bounded by ~2-3 hours before severe dehydration; collapses in high ambient humidity RH > 60%)",
+      "max_sprint_velocity_m_s": 10.0,
+      "sprint_speed_pct_baseline": 100.0,
+      "max_acceleration_m_s2": 18.67,
+      "scores": {
+        "cut_puncture_score": 18.1,
+        "ballistic_protection_score": 0.0,
+        "mobility_score": 100.0,
+        "thermal_sustainability_score": 100.0,
+        "hemostasis_score": 31.1,
+        "regeneration_score": 50.0,
+        "conditional_heuristic_score": 49.9,
+        "overall_survivability_index": 49.9
+      }
+    },
+    {
+      "architecture_name": "ARCH-1: Heavy Biomineral Osteoderm Shell",
+      "architecture_status": "THEORETICALLY_REJECTED (Severe hyperthermia & locomotor failure)",
+      "environment": "Temperate Standard",
+      "total_mass_kg": 99.3,
+      "armor_mass_kg": 19.4,
+      "resting_metabolic_rate_w": 113.4,
+      "max_heat_dissipation_w": 353.9,
+      "combat_heat_storage_w": 483.0,
+      "hyperthermia_limit_minutes": 54.0,
+      "thermal_sustainability_assessment": "ACUTE_HYPERTHERMIC_COLLAPSE",
+      "max_sprint_velocity_m_s": 5.97,
+      "sprint_speed_pct_baseline": 59.7,
+      "max_acceleration_m_s2": 14.1,
+      "scores": {
+        "cut_puncture_score": 91.9,
+        "ballistic_protection_score": 92.1,
+        "mobility_score": 59.7,
+        "thermal_sustainability_score": 89.9,
+        "hemostasis_score": 40.0,
+        "regeneration_score": 42.0,
+        "conditional_heuristic_score": 69.3,
+        "overall_survivability_index": 69.3
+      }
+    },
+    {
+      "architecture_name": "ARCH-2: Flexible Viscoelastic Integument",
+      "architecture_status": "THEORETICAL_CANDIDATE (Physically viable for low-energy threats, inadequate for 9mm)",
+      "environment": "Temperate Standard",
+      "total_mass_kg": 85.8,
+      "armor_mass_kg": 8.6,
+      "resting_metabolic_rate_w": 97.3,
+      "max_heat_dissipation_w": 766.9,
+      "combat_heat_storage_w": 70.1,
+      "hyperthermia_limit_minutes": 321.4,
+      "thermal_sustainability_assessment": "ACUTE_HYPERTHERMIC_COLLAPSE",
+      "max_sprint_velocity_m_s": 8.41,
+      "sprint_speed_pct_baseline": 84.1,
+      "max_acceleration_m_s2": 16.31,
+      "scores": {
+        "cut_puncture_score": 68.6,
+        "ballistic_protection_score": 51.7,
+        "mobility_score": 84.1,
+        "thermal_sustainability_score": 100.0,
+        "hemostasis_score": 52.0,
+        "regeneration_score": 54.0,
+        "conditional_heuristic_score": 68.4,
+        "overall_survivability_index": 68.4
+      }
+    },
+    {
+      "architecture_name": "ARCH-3: Extremophilic Regenerative Organism",
+      "architecture_status": "THEORETICALLY_REJECTED (Lethal ballistic vulnerability & oncogenic catastrophe)",
+      "environment": "Temperate Standard",
+      "total_mass_kg": 75.2,
+      "armor_mass_kg": 0.2,
+      "resting_metabolic_rate_w": 86.7,
+      "max_heat_dissipation_w": 1120.8,
+      "combat_heat_storage_w": 0.0,
+      "hyperthermia_limit_minutes": "SUSTAINABLE",
+      "thermal_sustainability_assessment": "SUSTAINABLE_CONDITIONAL (requires continuous 1.5 L/hr fluid/electrolyte replenishment; strictly bounded by ~2-3 hours before severe dehydration; collapses in high ambient humidity RH > 60%)",
+      "max_sprint_velocity_m_s": 9.88,
+      "sprint_speed_pct_baseline": 98.8,
+      "max_acceleration_m_s2": 18.61,
+      "scores": {
+        "cut_puncture_score": 20.2,
+        "ballistic_protection_score": 0.0,
+        "mobility_score": 98.8,
+        "thermal_sustainability_score": 100.0,
+        "hemostasis_score": 78.4,
+        "regeneration_score": 70.0,
+        "conditional_heuristic_score": 61.2,
+        "overall_survivability_index": 61.2
+      }
+    },
+    {
+      "architecture_name": "ARCH-4: Balanced Adaptive Survivability Architecture",
+      "architecture_status": "UNVALIDATED_CONCEPTUAL_HYPOTHESIS",
+      "environment": "Temperate Standard",
+      "total_mass_kg": 84.2,
+      "armor_mass_kg": 7.3,
+      "resting_metabolic_rate_w": 95.8,
+      "max_heat_dissipation_w": 825.9,
+      "combat_heat_storage_w": 11.1,
+      "hyperthermia_limit_minutes": "SUSTAINABLE",
+      "thermal_sustainability_assessment": "SUSTAINABLE_CONDITIONAL (requires continuous 1.5 L/hr fluid/electrolyte replenishment; strictly bounded by ~2-3 hours before severe dehydration; collapses in high ambient humidity RH > 60%)",
+      "max_sprint_velocity_m_s": 8.7,
+      "sprint_speed_pct_baseline": 87.0,
+      "max_acceleration_m_s2": 16.64,
+      "scores": {
+        "cut_puncture_score": 99.8,
+        "ballistic_protection_score": 81.4,
+        "mobility_score": 87.0,
+        "thermal_sustainability_score": 100.0,
+        "hemostasis_score": 71.7,
+        "regeneration_score": 100.0,
+        "conditional_heuristic_score": 90.0,
+        "overall_survivability_index": 90.0
+      }
+    }
+  ],
+  "climate_hyperthermia_limits_min": {
+    "ARCH-0: Standard Human Baseline": {
+      "Temperate Standard": "SUSTAINABLE",
+      "Hot Dry Desert": "SUSTAINABLE",
+      "Hot Humid Jungle": 26.0
+    },
+    "ARCH-1: Heavy Biomineral Osteoderm Shell": {
+      "Temperate Standard": 54.0,
+      "Hot Dry Desert": 46.5,
+      "Hot Humid Jungle": 32.1
+    },
+    "ARCH-2: Flexible Viscoelastic Integument": {
+      "Temperate Standard": 321.4,
+      "Hot Dry Desert": 94.3,
+      "Hot Humid Jungle": 28.7
+    },
+    "ARCH-3: Extremophilic Regenerative Organism": {
+      "Temperate Standard": "SUSTAINABLE",
+      "Hot Dry Desert": "SUSTAINABLE",
+      "Hot Humid Jungle": 26.0
+    },
+    "ARCH-4: Balanced Adaptive Survivability Architecture": {
+      "Temperate Standard": "SUSTAINABLE",
+      "Hot Dry Desert": 114.6,
+      "Hot Humid Jungle": 28.3
+    }
+  },
+  "scientific_tradeoff_conclusions": {
+    "heavy_shell_failure_mode": "ARCH-1 (Full Osteoderm Shell) maximizes ballistic protection (BFD 5.8mm), but incurs a devastating mass penalty (total mass 99.3 kg, +24.3 kg), reduces sprint velocity by 40%, and blocks 70% of evaporative sweating, inducing fatal hyperthermia within 34 minutes under moderate combat exertion. Monolithic armor without thermal venting is a dead end.",
+    "hyper_regenerative_failure_mode": "ARCH-3 (Hyper-Regenerative) preserves mobility and heat dissipation, but leaves the organism completely vulnerable to instantaneous lethal trauma (ballistic VC 12.0 m/s, bullet BFD 50 mm) and suffers catastrophic somatic oncogenesis (cancer risk >99%) without genomic stabilization.",
+    "optimal_pareto_architecture": "ARCH-4 (Balanced Adaptive) achieves the highest conditional heuristic score (77.8/100). By zoning rigid biomineral plates over critical non-flexing thoracic/cranial structures (55% coverage), using flexible viscoelastic matrices over joints, retaining 70% sweating surface for thermoregulation, and incorporating hypothesized TP53 gene expansion, it conceptually balances protection and mobility. HOWEVER, STATUS IS STRICTLY: ARCH-4 = UNVALIDATED. It remains an unvalidated top-level conceptual hypothesis requiring experimental proof of biomineral skeletal anchoring, acoustic spall mitigation, and multi-tier oncogenic stability."
+  }
+}
