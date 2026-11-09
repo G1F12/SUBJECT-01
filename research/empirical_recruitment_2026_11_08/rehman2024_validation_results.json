@@ -568,7 +568,8 @@
           "rmse": 26.046927789539293,
           "mae": 21.335956276181665,
           "r_squared": 0.9802336994498704,
-          "k_min_minus_1": 1.3932033790697844
+          "k_min_minus_1": 1.3932033790697844,
+          "tau_s": 43.06621768320779
         },
         "M2_constrained_monoexponential_baseline": {
           "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
@@ -607,7 +608,8 @@
           "rmse": 15.727121836523404,
           "mae": 12.627911216972855,
           "r_squared": 0.9635483349758112,
-          "k_min_minus_1": 1.6863244804718167
+          "k_min_minus_1": 1.6863244804718167,
+          "tau_s": 35.580340969261506
         },
         "M2_constrained_monoexponential_baseline": {
           "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
@@ -646,7 +648,8 @@
           "rmse": 14.702257623762994,
           "mae": 11.499203360472707,
           "r_squared": 0.9788698848867743,
-          "k_min_minus_1": 1.4804503465650756
+          "k_min_minus_1": 1.4804503465650756,
+          "tau_s": 40.52820828419631
         },
         "M2_constrained_monoexponential_baseline": {
           "model_class": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
@@ -812,6 +815,12 @@
       "m2_transfer_r_squared_min": 0.7695851267812625,
       "m2_transfer_r_squared_max": 0.9602558781815221,
       "m2_transfer_rmse_mean": 41.125990891019555,
+      "m2_transfer_mae_mean": 34.36857220843225,
+      "m1_transfer_r_squared_mean": 0.8267982162511304,
+      "m1_transfer_r_squared_min": 0.7312783142067407,
+      "m1_transfer_r_squared_max": 0.9603126069609902,
+      "m1_transfer_rmse_mean": 43.57689976774751,
+      "m1_transfer_mae_mean": 38.58413427245542,
       "m2_classification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
       "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
       "evaluation": "Constrained monoexponential baseline M2 demonstrates excellent intra-subject reconstruction (transfer R2 = 0.8566, range [0.7696, 0.9603]), retaining 77-96% of variance across repeated trials of the same participant. This verifies technical test-retest reproducibility of the recovery rate parameter."
@@ -912,7 +921,13 @@
       "execution_principle": "Verify data licensing and multi-subject provenance BEFORE downloading; prohibit single-subject cohort extrapolation to population-level models."
     }
   },
+  "markdown_tables": {
+    "timing_table": "| Trial ID | Baseline PCr Mean | PCr at 90s Stop | Drop at 90s (%) | Actual Nadir Time | Nadir PCr | Drop at Nadir (%) | Published Drop (%) | Post-Stop Lag (s) | Timing Verdict |\n|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| **Trial 1** | $2481.43 \\pm 74.26$ | **$1920$** | $22.63\\%$ | **$144.0\\text{ s}$** (Spec 24) | **$1670$** | **$32.70\\%$** | $31.6\\%$ | $+54.0\\text{ s}$ | `EXTENDED_DEPLETION_PHASE` |\n| **Trial 2** | $1679.00 \\pm 38.71$ | **$1291$** | $23.11\\%$ | **$108.0\\text{ s}$** (Spec 18) | **$1245$** | **$25.85\\%$** | $25.2\\%$ | $+18.0\\text{ s}$ | `CONGRUENT_WITH_TABLE1` |\n| **Trial 3** | $1675.57 \\pm 34.21$ | **$1277$** | $23.79\\%$ | **$108.0\\text{ s}$** (Spec 18) | **$1231$** | **$26.53\\%$** | $24.8\\%$ | $+18.0\\text{ s}$ | `CONGRUENT_WITH_TABLE1` |",
+    "in_sample_table": "| Trial ID | M0 RMSE | M0 MAE | M0 $R^2$ | M1 RMSE | M1 MAE | M1 $R^2$ | M1 $k$ ($\\text{min}^{-1}$) | M1 $\\tau$ (s) | M2 RMSE | M2 MAE | M2 $R^2$ | M2 $k$ ($\\text{min}^{-1}$) | M2 $\\tau$ (s) |\n|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| **Trial 1** | **$230.88$** | $139.20$ | **$-0.5530$** | **$26.05$** | $21.34$ | **$0.9802$** | $1.3932$ | $43.1$ | **$31.72$** | $25.70$ | **$0.9707$** | $1.2979$ | $46.2$ |\n| **Trial 2** | **$120.21$** | $87.55$ | **$-1.1297$** | **$15.73$** | $12.63$ | **$0.9635$** | $1.6863$ | $35.6$ | **$37.67$** | $33.21$ | **$0.7909$** | $1.1469$ | $52.3$ |\n| **Trial 3** | **$141.69$** | $99.23$ | **$-0.9625$** | **$14.70$** | $11.50$ | **$0.9789$** | $1.4805$ | $40.5$ | **$32.80$** | $28.70$ | **$0.8948$** | $0.9696$ | $61.9$ |",
+    "transfer_table": "| Train Trial | Test Trial | Calibrated $k$ ($\\text{min}^{-1}$) | M1 Trans RMSE | M1 Trans MAE | M1 Trans $R^2$ | M2 Trans RMSE | M2 Trans MAE | M2 Trans $R^2$ |\n|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| **Trial 1** | **Trial 2** | $1.2979$ | $39.75$ | $34.99$ | $0.7671$ | **$38.56$** | $33.70$ | **$0.7809$** |\n| **Trial 1** | **Trial 3** | $1.2979$ | $43.09$ | $40.31$ | $0.8185$ | **$39.97$** | $36.38$ | **$0.8439$** |\n| **Trial 2** | **Trial 1** | $1.1469$ | $48.20$ | $39.86$ | $0.9323$ | **$36.93$** | $28.58$ | **$0.9603$** |\n| **Trial 2** | **Trial 3** | $1.1469$ | $52.43$ | $49.84$ | $0.7313$ | **$35.47$** | $30.13$ | **$0.8770$** |\n| **Trial 3** | **Trial 1** | $0.9696$ | $36.91$ | $29.97$ | $0.9603$ | **$56.28$** | $42.43$ | **$0.9077$** |\n| **Trial 3** | **Trial 2** | $0.9696$ | $41.08$ | $36.54$ | $0.7512$ | **$39.54$** | $34.99$ | **$0.7696$** |\n| **Mean** | — | — | **$43.58$** | $38.58$ | **$0.8268$** | **$41.13$** | $34.37$ | **$0.8566$** |"
+  },
   "overall_conclusions": {
+    "numerical_lock_status": "EXP-0042_NUMERICALLY_LOCKED",
     "reproduced_k_mean_min_minus_1": 1.52,
     "published_k_mean_min_minus_1": 1.53,
     "reproduced_k_discrepancy_pct": -0.65,

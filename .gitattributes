@@ -19,6 +19,10 @@ research/empirical_anchors_2026_11_08/**/*.png -text
 research/empirical_recruitment_2026_11_08/** text eol=lf
 research/empirical_recruitment_2026_11_08/**/*.png -text
 research/empirical_recruitment_2026_11_08/**/*.xlsx -text
+research/cpet_cycloergometer_2026_11_09/** text eol=lf
+research/cpet_cycloergometer_2026_11_09/*.csv -text
+research/cpet_cycloergometer_2026_11_09/*.pdf -text
+research/cpet_cycloergometer_2026_11_09/*.txt -text
 registry/** text eol=lf
 tools/** text eol=lf
 tests/** text eol=lf

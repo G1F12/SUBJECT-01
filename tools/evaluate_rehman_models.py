@@ -486,7 +486,13 @@ def evaluate_model_comparison(extracted: dict) -> dict:
             "trial_id": tid,
             "provenance": "IN_SAMPLE_FIT_NOT_VALIDATION",
             "M0_null_constant": {"rmse": m0_rmse, "mae": m0_mae, "r_squared": m0_r2},
-            "M1_monoexponential_3param": {"rmse": m1_rmse, "mae": m1_mae, "r_squared": m1_r2, "k_min_minus_1": float(popt_m1[2] * 60.0)},
+            "M1_monoexponential_3param": {
+                "rmse": m1_rmse,
+                "mae": m1_mae,
+                "r_squared": m1_r2,
+                "k_min_minus_1": float(popt_m1[2] * 60.0),
+                "tau_s": float(1.0 / popt_m1[2])
+            },
             "M2_constrained_monoexponential_baseline": m2_res,
             "M2_physiological_ode_model": m2_res,  # Backward compatibility alias
             "M3_full_physiological_ode": {
@@ -577,6 +583,12 @@ def evaluate_model_comparison(extracted: dict) -> dict:
             "m2_transfer_r_squared_min": float(np.min(m2_trans_r2s)),
             "m2_transfer_r_squared_max": float(np.max(m2_trans_r2s)),
             "m2_transfer_rmse_mean": float(np.mean(m2_trans_rmses)),
+            "m2_transfer_mae_mean": float(np.mean([tr["M2_transfer"]["mae"] for tr in transfer_results])),
+            "m1_transfer_r_squared_mean": float(np.mean(m1_trans_r2s)),
+            "m1_transfer_r_squared_min": float(np.min(m1_trans_r2s)),
+            "m1_transfer_r_squared_max": float(np.max(m1_trans_r2s)),
+            "m1_transfer_rmse_mean": float(np.mean(m1_trans_rmses)),
+            "m1_transfer_mae_mean": float(np.mean([tr["M1_transfer"]["mae"] for tr in transfer_results])),
             "m2_classification": "CONSTRAINED_MONOEXPONENTIAL_BASELINE",
             "m3_status": "M3_NOT_EXECUTABLE_ON_AVAILABLE_OBSERVATIONS",
             "evaluation": (
@@ -684,6 +696,87 @@ def analyze_parameter_identifiability() -> dict:
     }
 
 
+def generate_timing_table(stage1: dict) -> str:
+    lines = [
+        "| Trial ID | Baseline PCr Mean | PCr at 90s Stop | Drop at 90s (%) | Actual Nadir Time | Nadir PCr | Drop at Nadir (%) | Published Drop (%) | Post-Stop Lag (s) | Timing Verdict |",
+        "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|",
+    ]
+    for tid in [1, 2, 3]:
+        t_data = stage1["trials"][tid]
+        base = t_data["resting_baseline"]
+        nom = t_data["nominal_protocol"]
+        nad = t_data["actual_biochemical_nadir"]
+        rec = t_data["recovery_onset"]
+        verdict = "EXTENDED_DEPLETION_PHASE" if t_data["timing_verdict"] == "EXTENDED_DEPLETION_PHASE_IDENTIFIED" else "CONGRUENT_WITH_TABLE1"
+        line = (
+            f"| **Trial {tid}** | ${base['pcr_mean']:.2f} \\pm {base['pcr_sd']:.2f}$ | "
+            f"**${int(round(nom['pcr_at_stop']))}$** | ${nom['pcr_drop_at_stop_pct']:.2f}\\%$ | "
+            f"**${nad['nadir_time_s']:.1f}\\text{{ s}}$** (Spec {nad['nadir_spectrum']}) | "
+            f"**${int(round(nad['nadir_pcr']))}$** | **${nad['pcr_drop_at_nadir_pct']:.2f}\\%$** | "
+            f"${nad['published_table1_drop_pct']:.1f}\\%$ | "
+            f"${'+' if rec['lag_from_nominal_stop_s'] > 0 else ''}{rec['lag_from_nominal_stop_s']:.1f}\\text{{ s}}$ | "
+            f"`{verdict}` |"
+        )
+        lines.append(line)
+    return "\n".join(lines)
+
+
+def generate_in_sample_table(stage4: dict) -> str:
+    lines = [
+        "| Trial ID | M0 RMSE | M0 MAE | M0 $R^2$ | M1 RMSE | M1 MAE | M1 $R^2$ | M1 $k$ ($\\text{min}^{-1}$) | M1 $\\tau$ (s) | M2 RMSE | M2 MAE | M2 $R^2$ | M2 $k$ ($\\text{min}^{-1}$) | M2 $\\tau$ (s) |",
+        "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|",
+    ]
+    for tid in [1, 2, 3]:
+        fit = stage4["in_sample_fits"][tid]
+        m0 = fit["M0_null_constant"]
+        m1 = fit["M1_monoexponential_3param"]
+        m2 = fit["M2_constrained_monoexponential_baseline"]
+        line = (
+            f"| **Trial {tid}** | **${m0['rmse']:.2f}$** | ${m0['mae']:.2f}$ | **${m0['r_squared']:.4f}$** | "
+            f"**${m1['rmse']:.2f}$** | ${m1['mae']:.2f}$ | **${m1['r_squared']:.4f}$** | "
+            f"${m1['k_min_minus_1']:.4f}$ | ${m1['tau_s']:.1f}$ | "
+            f"**${m2['rmse']:.2f}$** | ${m2['mae']:.2f}$ | **${m2['r_squared']:.4f}$** | "
+            f"${m2['k_min_minus_1']:.4f}$ | ${m2['tau_s']:.1f}$ |"
+        )
+        lines.append(line)
+    return "\n".join(lines)
+
+
+def generate_transfer_table(stage4: dict) -> str:
+    lines = [
+        "| Train Trial | Test Trial | Calibrated $k$ ($\\text{min}^{-1}$) | M1 Trans RMSE | M1 Trans MAE | M1 Trans $R^2$ | M2 Trans RMSE | M2 Trans MAE | M2 Trans $R^2$ |",
+        "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|",
+    ]
+    for tr in stage4["within_subject_trial_transfers"]:
+        train_t = tr["train_trial"]
+        test_t = tr["test_trial"]
+        k_cal = tr["transfer_rate_constant_k_min"]
+        m1 = tr["M1_transfer"]
+        m2 = tr["M2_transfer"]
+        line = (
+            f"| **Trial {train_t}** | **Trial {test_t}** | ${k_cal:.4f}$ | "
+            f"${m1['rmse']:.2f}$ | ${m1['mae']:.2f}$ | ${m1['r_squared']:.4f}$ | "
+            f"**${m2['rmse']:.2f}$** | ${m2['mae']:.2f}$ | **${m2['r_squared']:.4f}$** |"
+        )
+        lines.append(line)
+    summ = stage4["transfer_summary"]
+    line_mean = (
+        f"| **Mean** | — | — | "
+        f"**${summ['m1_transfer_rmse_mean']:.2f}$** | ${summ['m1_transfer_mae_mean']:.2f}$ | **${summ['m1_transfer_r_squared_mean']:.4f}$** | "
+        f"**${summ['m2_transfer_rmse_mean']:.2f}$** | ${summ['m2_transfer_mae_mean']:.2f}$ | **${summ['m2_transfer_r_squared_mean']:.4f}$** |"
+    )
+    lines.append(line_mean)
+    return "\n".join(lines)
+
+
+def generate_markdown_tables(stage1: dict, stage4: dict) -> dict:
+    return {
+        "timing_table": generate_timing_table(stage1),
+        "in_sample_table": generate_in_sample_table(stage4),
+        "transfer_table": generate_transfer_table(stage4)
+    }
+
+
 def run_full_validation() -> dict:
     """Execute complete validation pipeline and generate canonical validation artifact."""
     extracted = load_extracted_timeseries()
@@ -693,6 +786,8 @@ def run_full_validation() -> dict:
     stage3 = audit_ph_calibration(extracted)
     stage4 = evaluate_model_comparison(extracted)
     stage5 = analyze_parameter_identifiability()
+    
+    markdown_tables = generate_markdown_tables(stage1, stage4)
     
     master_artifact = {
         "title": "SUBJECT-01 — Scientific Validation & Freeze on Rehman 2024 Real Data",
@@ -710,7 +805,9 @@ def run_full_validation() -> dict:
         "stage_3_ph_calibration_audit": stage3,
         "stage_4_model_comparison_and_transfer": stage4,
         "stage_5_identifiability_and_scientific_integration": stage5,
+        "markdown_tables": markdown_tables,
         "overall_conclusions": {
+            "numerical_lock_status": "EXP-0042_NUMERICALLY_LOCKED",
             "reproduced_k_mean_min_minus_1": 1.520,
             "published_k_mean_min_minus_1": 1.53,
             "reproduced_k_discrepancy_pct": -0.65,

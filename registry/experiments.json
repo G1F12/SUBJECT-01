@@ -1045,7 +1045,27 @@
         "systemic_endurance_TARGET_CPE45 (localized knee kick cannot validate 45-min whole-body endurance)"
       ],
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
-      "biological_interventions": "NO_GO_MAINTAINED"
+      "biological_interventions": "NO_GO_MAINTAINED",
+      "canonical_baseline_pcr": {
+        "trial_1": {
+          "mean": 2481.4286,
+          "sd": 74.2582
+        },
+        "trial_2": {
+          "mean": 1679.0,
+          "sd": 38.7126
+        },
+        "trial_3": {
+          "mean": 1675.5714,
+          "sd": 34.2143
+        }
+      },
+      "canonical_m2_k_min_minus_1": {
+        "trial_1": 1.2978707,
+        "trial_2": 1.1468669,
+        "trial_3": 0.9696332
+      },
+      "numerical_lock_tag": "EXP-0042_NUMERICALLY_LOCKED"
     },
     "research_date": "2026-11-09",
     "model": "tools/evaluate_rehman_models.py",
@@ -1057,6 +1077,53 @@
     "reproduction_command": "python tools/evaluate_rehman_models.py",
     "limits": "Dataset provides N=1 biological participant (3 repeated trials of localized single-leg knee extensions). Enables within-subject technical test-retest reproducibility and local rate parameter transfer, but strictly cannot validate cross-subject population variance or systemic 45-minute multi-muscle endurance (TARGET-CPE45).",
     "external_validation": "within_subject_trial_transfer",
-    "data_type": "DERIVED_EXTRACTION_JSON"
+    "data_type": "DERIVED_EXTRACTION_JSON",
+    "experiment_tag": "EXP-0042_NUMERICALLY_LOCKED",
+    "tags": [
+      "EXP-0042_NUMERICALLY_LOCKED"
+    ]
+  },
+  {
+    "id": "EXP-0043",
+    "date": "2026-11-09",
+    "name": "PhysioNet ACTES Cycloergometer Multi-Subject Graded CPET: Strict Leave-One-Subject-Out Cross-Validation of Macroscopic Aerobic Coupling (N=18)",
+    "sources": [
+      "SRC-0073"
+    ],
+    "design": "First independent multi-subject empirical validation of SUBJECT-01 macroscopic aerobic bioenergetic models on PhysioNet ACTES cycloergometer dataset (DOI 10.13026/2qs3-kh43, 52,062 synchronized beat-to-beat records across N=18 adolescent athletes). Strictly pre-registered and frozen parameters (eta_gross in [0.18, 0.28], c_ox = 20,900 J/L, tau = 35.0 s). Strict Leave-One-Subject-Out (LOSO) cross-validation across all 18 participants with zero test outcome leakage. Model comparison: M0 (null mean), M1 (empirical static linear), M2 Pop (dynamic first-order ODE with physiological delay), and M2 Allometric (dynamic ODE with body-mass normalization). Parameter identifiability analysis mapping observable macro-metabolic parameters vs strictly unidentifiable micro-compartment states.",
+    "status": "completed_real_data_validation",
+    "results": {
+      "n_biological_participants": 18,
+      "total_records": 52062,
+      "validation_strategy": "LEAVE_ONE_SUBJECT_OUT_CROSS_VALIDATION_STRICT",
+      "m0_null_loso_rmse_mean": 0.7725399106679802,
+      "m0_null_loso_r_squared_mean": -0.8342816826863341,
+      "m1_linear_loso_rmse_mean": 0.4158100408543596,
+      "m1_linear_loso_r_squared_mean": 0.4044527075005011,
+      "m2_pop_loso_rmse_mean": 0.317249640749585,
+      "m2_pop_loso_r_squared_mean": 0.6058778482302619,
+      "m2_allometric_loso_rmse_mean": 0.29028815100801847,
+      "m2_allometric_loso_r_squared_mean": 0.7371410157161766,
+      "m2_allometric_loso_r_squared_sd": 0.17701573602564624,
+      "validation_verdict": "MACROSCOPIC_AEROBIC_COUPLING_VALIDATED_CROSS_SUBJECT_N18",
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+      "biological_interventions": "NO_GO_MAINTAINED"
+    },
+    "research_date": "2026-11-09",
+    "model": "tools/evaluate_actes_models.py",
+    "inputs": "research/cpet_cycloergometer_2026_11_09/test_measure.csv",
+    "report": "research/cpet_cycloergometer_2026_11_09/CPET_VALIDATION_REPORT.md",
+    "outputs": [
+      "research/cpet_cycloergometer_2026_11_09/actes_validation_results.json",
+      "research/cpet_cycloergometer_2026_11_09/REMAINING_BARRIERS_MATRIX.md"
+    ],
+    "reproduction_command": "python tools/evaluate_actes_models.py",
+    "limits": "Validates macroscopic aerobic coupling (P_mech -> pulmonary VO2) and cardiorespiratory delay (tau = 35 s) across N=18 subjects. Strictly cannot validate localized intracellular high-energy phosphates ([PCr], [Pi], [ATP]), cytosolic pH, motor unit recruitment rates, or 45-min constant extreme stress (TARGET-CPE45).",
+    "external_validation": "cross_subject_loso_n18",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "experiment_tag": "EXP-0043_MULTI_SUBJECT_LOSO_VALIDATED",
+    "tags": [
+      "EXP-0043_MULTI_SUBJECT_LOSO_VALIDATED"
+    ]
   }
 ]
