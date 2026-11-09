@@ -1,3 +1,42 @@
+# SUBJECT-01 — состояние после Rehman 2024 Real XLSX Format Hotfix, 09.11.2026
+
+База 5f2846cbf025efe7a747dbcf6a2355dedabcb5b6;
+ветка fix/rehman-real-xlsx-format-hotfix.
+[Отчёт EXP-0037..0041](research/empirical_recruitment_2026_11_08/REPORT.md),
+[математика и биофизика рекрутирования](research/empirical_recruitment_2026_11_08/MATHEMATICS.md),
+[модель физических измерений](research/empirical_recruitment_2026_11_08/MEASUREMENT_MODEL.md),
+[метрология и аудит данных](research/empirical_recruitment_2026_11_08/DATA_AUDIT.md),
+[ограничения и межмышечные барьеры](research/empirical_recruitment_2026_11_08/LIMITATIONS.md),
+[сквозной гейт Evidence Gate V2](tools/verify_data_provenance.py),
+[пайплайн обработки Rehman XLSX](tools/process_rehman_xlsx.py),
+[модуль OOXML stdlib](tools/rehman_ooxml.py),
+[тесты процессора Rehman XLSX](tests/test_rehman_xlsx_processor.py),
+[набор тестов Evidence Gate V2](tests/test_evidence_gate_v2.py),
+[извлечённый канонический временной ряд Rehman 2024](research/empirical_recruitment_2026_11_08/rehman2024_extracted_timeseries.json),
+[reproduction](research/empirical_recruitment_2026_11_08/README.md).
+
+Адаптация процессора к реальному формату Dryad XLSX и извлечение временных рядов:
+- Файл `2024_829_Ergometer_Dryad_Raw_V3.xlsx` (18,136 байт, SHA256 `ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf`) получен по owner-assisted протоколу.
+- Реализован разбор структуры листа `2024_829_DiB_Raw` с 18 колонками, сгруппированными тремя блоками по 6 колонок (`1.*`, `2.*`, `3.*`).
+- Извлечены 222 спектра (3 триала по 74 валидные точки с шагом 6.0 с, диапазон 12.0–450.0 с; предскановый спектр 1 исключён).
+- Фит кинетики восстановления фосфокреатина:
+  * Trial 1: $k = 1.393 \pm 0.119\text{ мин}^{-1}$ (опубликовано $1.43$, расхождение $-2.57\%$), $\tau = 43.07\text{ с}$, $R^2 = 0.9802$, RMSE = $26.05$, надир в спектре 24 ($144\text{ с}$).
+  * Trial 2: $k = 1.686 \pm 0.180\text{ мин}^{-1}$ (опубликовано $1.62$, расхождение $+4.09\%$), $\tau = 35.58\text{ с}$, $R^2 = 0.9635$, RMSE = $15.73$, надир в спектре 18 ($108\text{ с}$).
+  * Trial 3: $k = 1.480 \pm 0.121\text{ мин}^{-1}$ (опубликовано $1.53$, расхождение $-3.24\%$), $\tau = 40.53\text{ с}$, $R^2 = 0.9789$, RMSE = $14.70$, надир в спектре 18 ($108\text{ с}$).
+  * Среднее: $k = 1.520 \pm 0.151\text{ мин}^{-1}$ (опубликовано $1.53 \pm 0.10\text{ мин}^{-1}$, расхождение $-0.65\%$), $\tau = 39.72\text{ с}$, CV% = $9.90\%$ (опубликованная ошибка: $\pm 6.5\%$).
+- Внутриклеточный pH рассчитан из химических сдвигов ($\delta_o = \delta_{\text{Pi}} - \delta_{\text{PCr}}$) по уравнению PMC11617988 Fig. 7 без искусственных констант (покой $6.91\dots 6.96$, конец нагрузки $6.92\dots 6.98$, конец восстановления $6.86\dots 6.93$).
+- Канонический артефакт извлечения `rehman2024_extracted_timeseries.json` сохранён в репозитории (SHA256: `af6a396b006a6cb791844742085701c6782b4eb706a8f768b1bd87dfa7e8de5b`, 41,368 байт). Бинарный XLSX файл оставлен в `.gitignore` до разрешения лицензии.
+- Батарея тестов `tests/test_rehman_xlsx_processor.py` расширена до 17 тестов (100% PASS).
+- Кросс-субъектный LOSO на когорте $N=1$ строго запрещён.
+
+Научный статус:
+- TARGET-CPE45: NOT EXTERNALLY VALIDATED.
+- Биологические вмешательства: NO_GO.
+- Реестры: HYP=8, EXP=41, FND=41, NEG=34, DEC=15, ISS=19, SRC=72.
+- Тесты: 197/197 PASS (все тестовые наборы репозитория, включая 17 тестов процессора Rehman и 12 тестов Evidence Gate V2).
+
+---
+
 # SUBJECT-01 — состояние после Research Cycle 9 (CI Failure, Strict JSON & Real-Data Pipeline Repair), 09.11.2026
 
 База 19402484b0295c46ae03d5dab47a363f89cf5795;
