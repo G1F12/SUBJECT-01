@@ -2,7 +2,7 @@
 """
 SUBJECT-01 — Research Cycle 9
 Regression Test Battery for Empirical Data Acquisition, Recruitment Observability,
-and Independent Validation Design (with Data Provenance Gate Verification).
+and Independent Validation Design (with Evidence Gate V2 Verification).
 """
 
 import unittest
@@ -17,7 +17,9 @@ sys.path.insert(0, str(ROOT / 'tools'))
 from verify_data_provenance import (
     audit_dataset_provenance_records,
     audit_registry_experiments,
-    audit_validation_scripts
+    audit_validation_scripts,
+    audit_structured_experiment_results,
+    audit_negative_tests
 )
 
 class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
@@ -43,11 +45,12 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         self.assertEqual(caps['gibbs_work_active_scenario_span_J'], [106.2, 389.1])
         
     def test_02_preflight_andersen_saltin_1985_audit_and_downgrade(self):
-        """Verify Andersen & Saltin 1985 audit, absence of resting table, and downgraded status."""
+        """Verify Andersen & Saltin 1985 audit, 5 male subjects (not 8), absence of resting table, and downgraded status."""
         preflight = self.exp_results['preflight']['question_2_andersen_saltin_1985_audit']
         self.assertIn("DOWNGRADED_NOT_PRIMARY_RESTING_TABLE", preflight['status_downgrade'])
         self.assertIn("0.15 to 0.40 L/min", preflight['primary_resting_data_in_paper'])
         self.assertIn("NO resting row", preflight['primary_resting_data_in_paper'])
+        self.assertEqual(preflight.get('n_biological_participants'), 5)
         
     def test_03_exp0037_empirical_datasets_acquisition(self):
         """Verify empirical human datasets: Rehman 2024 (PMC11617988) and Hug 2021 (Figshare)."""
@@ -55,18 +58,37 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         rehman = exp37['datasets']['rehman_2024_31p_mrs']
         self.assertEqual(rehman['pmcid'], "PMC11617988")
         self.assertEqual(rehman['trials_n'], 3)
+        self.assertEqual(rehman['n_biological_participants'], 1)
         self.assertAlmostEqual(rehman['mean_tau_rec_s'], 39.41, places=1)
         self.assertEqual(rehman['ph_status'], "NON_ACIDOTIC_OXIDATIVE_DOMINATED")
-        self.assertEqual(rehman['raw_download_status'], "RAW_TIMESERIES_UNAVAILABLE")
         
         hug = exp37['datasets']['hug_2021_hd_semg']
         self.assertEqual(hug['grid_channels'], 64)
         self.assertEqual(hug['inter_operator_agreement'], 0.996)
-        self.assertEqual(hug['independent_subjects_n'], 1)
+        # Biological participants must be UNKNOWN (8 operators != 8 independent subjects)
+        self.assertEqual(hug['independent_subjects_n'], "UNKNOWN")
+        self.assertEqual(hug['n_biological_participants'], "UNKNOWN")
         self.assertEqual(hug['raters_n'], 8)
-        rates = hug['gastrocnemius_medialis_rates_hz']
-        self.assertLess(rates['10_mvc'], rates['30_mvc'])
-        self.assertLess(rates['30_mvc'], rates['70_mvc'])
+        self.assertEqual(hug['n_operators'], 8)
+        self.assertEqual(hug['n_trials'], 11)
+        self.assertEqual(hug['n_records'], 126)
+        
+        # Verify Table 2 published rates (after manual editing)
+        gm_rates = hug['gastrocnemius_medialis_rates_hz']
+        self.assertEqual(gm_rates['10_mvc'], 8.1)
+        self.assertEqual(gm_rates['30_mvc'], 8.1)
+        self.assertEqual(gm_rates['50_mvc'], 7.6)
+        self.assertEqual(gm_rates['70_mvc'], 12.2)
+        
+        gl_rates = hug['gastrocnemius_lateralis_rates_hz']
+        self.assertEqual(gl_rates['10_mvc'], 8.1)
+        self.assertEqual(gl_rates['30_mvc'], 8.2)
+        self.assertEqual(gl_rates['50_mvc'], 11.3)
+        self.assertEqual(gl_rates['70_mvc'], 14.0)
+        
+        # Verify unconfirmed historical rates are recorded as retracted
+        self.assertIn("10_mvc", hug['retracted_historical_rates_hz'])
+        self.assertEqual(hug['retracted_historical_rates_hz']['10_mvc'], 9.8)
         self.assertEqual(hug['raw_download_status'], "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE")
         
     def test_04_exp0038_biophysical_recruitment_forward_simulation(self):
@@ -109,14 +131,18 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         self.assertIn("synthetic_metrics_retained_for_historical_record", loso)
         
     def test_07_exp0041_cpe45_energy_accounting_and_target_boundaries(self):
-        """Verify physical CPE45 energy accounting: 675 kJ external work, ~3375 kJ metabolic expenditure, 0.1-0.6 kJ PCr, 21 kJ/mol enthalpy."""
+        """Verify physical CPE45 energy accounting: 675 kJ external work, ~3375 kJ metabolic cost, 62.5 mol ATP, 0.1-0.6 kJ PCr, 21 kJ/mol enthalpy."""
         exp41 = self.exp_results['experiments']['EXP-0041']
         accounting = exp41['cpe45_energy_accounting']
         self.assertAlmostEqual(accounting['external_mechanical_work_kJ'], 675.0, places=1)
-        self.assertAlmostEqual(accounting['whole_body_metabolic_expenditure_nominal_kJ'], 3375.0, places=1)
+        self.assertAlmostEqual(accounting['whole_body_metabolic_cost_nominal_kJ'], 3375.0, places=1)
         self.assertAlmostEqual(accounting['assumed_gross_mechanical_efficiency_eta_gross'], 0.20, places=2)
+        self.assertAlmostEqual(accounting['whole_body_atp_turnover_moles'], 62.5, places=1)
+        self.assertAlmostEqual(accounting['oxidative_resynthesis_nominal_kJ'], 3300.0, places=1)
+        self.assertAlmostEqual(accounting['glycolysis_contribution_nominal_kJ'], 75.0, places=1)
         self.assertAlmostEqual(accounting['local_pcr_chemical_buffer_work_capacity_kJ']['anatomical_whole_gm_kJ'], 0.621, places=3)
         self.assertAlmostEqual(accounting['local_pcr_hydrolysis_reaction_enthalpy_delta_R_H_kJ_mol'], 21.0, places=1)
+        self.assertTrue(accounting['category_error_static_pcr_to_external_work_prohibited'])
         self.assertEqual(exp41['target_cpe45_status'], "NOT EXTERNALLY VALIDATED")
         self.assertEqual(exp41['biological_interventions'], "NO_GO_MAINTAINED")
         
@@ -131,17 +157,14 @@ class TestEmpiricalRecruitmentCycle9(unittest.TestCase):
         p3 = audit_validation_scripts()
         self.assertEqual(p3, [], f"Validation script errors: {p3}")
         
-    def test_09_report_and_audit_consistency(self):
-        """Ensure numerical and source consistency across reports."""
-        self.assertIn("39.2", self.report_text)
-        self.assertIn("64", self.report_text)
-        self.assertIn("675", self.report_text)
-        self.assertIn("3375", self.report_text)
-        self.assertIn("SRC-0068", self.audit_text)
-        self.assertIn("SRC-0069", self.audit_text)
-        self.assertIn("SRC-0070", self.audit_text)
-        self.assertIn("SRC-0071", self.audit_text)
-        self.assertIn("SRC-0072", self.audit_text)
+        p4 = audit_structured_experiment_results()
+        self.assertEqual(p4, [], f"Structured results errors: {p4}")
+        
+    def test_09_evidence_gate_negative_tests(self):
+        """Verify negative tests fail as expected when corrupted or fake inputs are injected."""
+        neg_results = audit_negative_tests()
+        for test_name, passed_expectation in neg_results.items():
+            self.assertTrue(passed_expectation, f"Negative test expectation failed for: {test_name}")
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,7 +1,7 @@
 {
   "cycle": 9,
-  "date": "2026-11-08",
-  "description": "Rigorous data provenance audit for Cycle 9 human measurements",
+  "date": "2026-11-09",
+  "description": "Rigorous data provenance audit for Cycle 9 human measurements (Evidence Gate V2 Compliant)",
   "rehman_2024_audit": {
     "source_id": "SRC-0069",
     "dataset_id": "DRYAD_08KPRR59V_AUDIT",
@@ -15,19 +15,31 @@
     "raw_timeseries_status": "RAW_TIMESERIES_UNAVAILABLE",
     "raw_download_audit": {
       "target_file": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
+      "expected_sha256": "ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf",
+      "expected_size_bytes": 18136,
       "http_status": 403,
-      "error_type": "AWS_WAF_BOT_CHALLENGE",
+      "error_type": "AWS_WAF_ANUBIS_BOT_CHALLENGE",
       "alternative_public_mirrors": null,
-      "conclusion": "Continuous spectral time-series are unavailable programmatically. Published Table 1 provides 3 scalar rate constants only."
+      "conclusion": "Continuous spectral time-series are unavailable programmatically due to AWS WAF/Anubis challenge. Published Table 1 provides 3 scalar rate constants."
     },
     "source_file": "research/empirical_recruitment_2026_11_08/pmc11617988.xml",
     "sha256": "835dbe48440f1b7139108c7a17673b1bb0664efc8c9d692fd01431a3276d5d2c",
+    "n_biological_participants": 1,
+    "n_operators": 1,
+    "n_trials": 3,
+    "n_records": 3,
     "independent_participants_n": 1,
-    "measurement_units": "rate constant k in min^-1; pH unitless; PCr depletion fraction",
+    "measurement_units": "rate constant k in min^-1; pH unitless; PCr depletion fraction; temporal resolution 6s",
     "number_of_real_observations": 3,
+    "source_observation_ids": [
+      "PMC11617988_TABLE1_TRIAL1",
+      "PMC11617988_TABLE1_TRIAL2",
+      "PMC11617988_TABLE1_TRIAL3"
+    ],
     "trials": [
       {
         "trial_id": 1,
+        "observation_id": "PMC11617988_TABLE1_TRIAL1",
         "pcr_depletion_fraction": 0.316,
         "k_rec_min_minus_1": 1.43,
         "tau_rec_s": 41.96,
@@ -37,6 +49,7 @@
       },
       {
         "trial_id": 2,
+        "observation_id": "PMC11617988_TABLE1_TRIAL2",
         "pcr_depletion_fraction": 0.252,
         "k_rec_min_minus_1": 1.62,
         "tau_rec_s": 37.04,
@@ -46,6 +59,7 @@
       },
       {
         "trial_id": 3,
+        "observation_id": "PMC11617988_TABLE1_TRIAL3",
         "pcr_depletion_fraction": 0.248,
         "k_rec_min_minus_1": 1.53,
         "tau_rec_s": 39.22,
@@ -59,53 +73,243 @@
       "tau_rec_mean_s": 39.406666666666666,
       "acidosis_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED"
     },
-    "validation_status": "PUBLISHED_AGGREGATE_METRICS_ONLY"
+    "validation_status": "PUBLISHED_AGGREGATE_METRICS_ONLY",
+    "cross_subject_validation_status": "PROHIBITED_SINGLE_SUBJECT_COHORT_CANNOT_SUPPORT_LOSO",
+    "owner_assisted_download_guide": {
+      "browser_url": "https://datadryad.org/stash/dataset/doi:10.5061/dryad.08kprr59v",
+      "direct_stream_url": "https://datadryad.org/downloads/file_stream/3450615",
+      "file_name": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
+      "destination_dir": "research/empirical_recruitment_2026_11_08/"
+    }
   },
   "hug_2021_audit": {
     "source_id": "SRC-0068",
     "dataset_id": "FIGSHARE_13695937_AUDIT",
     "source_url_or_doi": "https://doi.org/10.1016/j.jelekin.2021.102548",
+    "preprint_doi": "10.1101/2021.02.19.431376",
     "figshare_doi": "10.6084/m9.figshare.13695937",
     "muscles_studied": [
       "Gastrocnemius Medialis",
       "Gastrocnemius Lateralis",
-      "Tibialis Anterior",
-      "Vastus Lateralis"
+      "Tibialis Anterior"
     ],
     "data_type": "LITERATURE_REPORTED_VALUE",
+    "storage_type": "LITERATURE_CITATION",
+    "raw_source_file": null,
+    "source_file": null,
+    "sha256": null,
     "raw_archive_status": "RAW_ARCHIVE_BLOCKED_BY_CDN_CHALLENGE",
     "raw_download_audit": {
       "target_file": "Experimental_data_Raw.zip (444 MB)",
       "http_status": 403,
       "error_type": "CLOUDFLARE_R2_STORAGE_BLOCK",
-      "conclusion": "Raw 64-channel signals and decomposed IPT files are protected by Cloudflare CDN challenge. Published literature provides summary inter-operator agreement (99.6%) and discharge rates across 8 raters."
+      "conclusion": "Raw 64-channel signals and decomposed IPT files are protected by Cloudflare CDN challenge. Published literature provides Table 2 decomposition characteristics and 99.6% inter-operator agreement."
     },
-    "source_file": "registry/sources.json",
-    "sha256": "N/A_PUBLISHED_LITERATURE",
-    "independent_participants_n": 1,
+    "n_biological_participants": "UNKNOWN",
+    "independent_participants_n": "UNKNOWN",
+    "participants_explanation": "Data were reused from two prior experiments (Univ of Queensland approval #2013001448 and Univ of Rome 'Foro Italico' approval #44680; Hug et al. 2021 and Del Vecchio et al. 2019) collected from different male participants across 4 contraction intensities. Exact number of unique human participants cannot be confirmed; set to UNKNOWN rather than arbitrary N=1.",
+    "n_operators": 8,
     "rater_operators_n": 8,
     "inter_operator_agreement_median": 0.996,
-    "measurement_units": "Discharge rate in Hz; MVC percentage in %",
-    "number_of_real_observations": 8,
-    "discharge_characteristics_by_intensity": {
+    "inter_operator_icc": "> 0.99 for discharge rate and recruitment time",
+    "n_trials": 11,
+    "n_records": 126,
+    "number_of_real_observations": 126,
+    "measurement_units": "Discharge rate in pps (pulses per second / Hz); MVC percentage in %; PNR in dB",
+    "source_observation_ids": [
+      "HUG2021_TABLE2_GL_10MVC",
+      "HUG2021_TABLE2_GL_30MVC",
+      "HUG2021_TABLE2_GL_50MVC",
+      "HUG2021_TABLE2_GL_70MVC",
+      "HUG2021_TABLE2_GM_10MVC",
+      "HUG2021_TABLE2_GM_30MVC",
+      "HUG2021_TABLE2_GM_50MVC",
+      "HUG2021_TABLE2_GM_70MVC",
+      "HUG2021_TABLE2_TA_35MVC",
+      "HUG2021_TABLE2_TA_50MVC",
+      "HUG2021_TABLE2_TA_75MVC"
+    ],
+    "table_2_characteristics_after_manual_editing": {
       "gastrocnemius_medialis": {
         "10_percent_mvc": {
-          "mean_discharge_rate_hz": 9.8,
-          "sd_hz": 1.4
+          "mean_discharge_rate_hz": 8.1,
+          "sd_hz": 1.1,
+          "range_hz": [
+            6.3,
+            10.4
+          ],
+          "mus_count": 16.5,
+          "pnr_db": 32.6
         },
         "30_percent_mvc": {
-          "mean_discharge_rate_hz": 12.6,
-          "sd_hz": 1.8
+          "mean_discharge_rate_hz": 8.1,
+          "sd_hz": 1.0,
+          "range_hz": [
+            6.0,
+            10.5
+          ],
+          "mus_count": 26.1,
+          "pnr_db": 34.6
         },
         "50_percent_mvc": {
-          "mean_discharge_rate_hz": 15.4,
-          "sd_hz": 2.3
+          "mean_discharge_rate_hz": 7.6,
+          "sd_hz": 1.2,
+          "range_hz": [
+            5.7,
+            9.8
+          ],
+          "mus_count": 15.4,
+          "pnr_db": 38.1
         },
         "70_percent_mvc": {
-          "mean_discharge_rate_hz": 19.8,
-          "sd_hz": 3.1
+          "mean_discharge_rate_hz": 12.2,
+          "sd_hz": 0.6,
+          "range_hz": [
+            11.7,
+            13.1
+          ],
+          "mus_count": 5.8,
+          "pnr_db": 32.4
+        }
+      },
+      "gastrocnemius_lateralis": {
+        "10_percent_mvc": {
+          "mean_discharge_rate_hz": 8.1,
+          "sd_hz": 0.9,
+          "range_hz": [
+            7.2,
+            8.9
+          ],
+          "mus_count": 4.0,
+          "pnr_db": 37.5
+        },
+        "30_percent_mvc": {
+          "mean_discharge_rate_hz": 8.2,
+          "sd_hz": 1.3,
+          "range_hz": [
+            5.2,
+            9.6
+          ],
+          "mus_count": 8.6,
+          "pnr_db": 33.7
+        },
+        "50_percent_mvc": {
+          "mean_discharge_rate_hz": 11.3,
+          "sd_hz": 1.3,
+          "range_hz": [
+            10.1,
+            12.8
+          ],
+          "mus_count": 4.0,
+          "pnr_db": 32.5
+        },
+        "70_percent_mvc": {
+          "mean_discharge_rate_hz": 14.0,
+          "sd_hz": 1.5,
+          "range_hz": [
+            12.5,
+            15.7
+          ],
+          "mus_count": 4.9,
+          "pnr_db": 32.5
+        }
+      },
+      "tibialis_anterior": {
+        "35_percent_mvc": {
+          "mean_discharge_rate_hz": 12.0,
+          "sd_hz": 1.2,
+          "range_hz": [
+            9.0,
+            14.4
+          ],
+          "mus_count": 20.3,
+          "pnr_db": 38.7
+        },
+        "50_percent_mvc": {
+          "mean_discharge_rate_hz": 15.5,
+          "sd_hz": 1.4,
+          "range_hz": [
+            12.4,
+            17.6
+          ],
+          "mus_count": 13.3,
+          "pnr_db": 35.6
+        },
+        "75_percent_mvc": {
+          "mean_discharge_rate_hz": 17.4,
+          "sd_hz": 1.5,
+          "range_hz": [
+            15.4,
+            20.5
+          ],
+          "mus_count": 6.9,
+          "pnr_db": 33.4
         }
       }
+    },
+    "table_2_characteristics_automatic_decomposition": {
+      "gastrocnemius_medialis": {
+        "10_percent_mvc": {
+          "mean_discharge_rate_hz": 10.8,
+          "sd_hz": 1.5,
+          "mus_count": 22,
+          "pnr_db": 31.9
+        },
+        "30_percent_mvc": {
+          "mean_discharge_rate_hz": 11.9,
+          "sd_hz": 2.2,
+          "mus_count": 39,
+          "pnr_db": 31.8
+        },
+        "50_percent_mvc": {
+          "mean_discharge_rate_hz": 11.7,
+          "sd_hz": 3.2,
+          "mus_count": 19,
+          "pnr_db": 37.4
+        },
+        "70_percent_mvc": {
+          "mean_discharge_rate_hz": 16.5,
+          "sd_hz": 1.6,
+          "mus_count": 10,
+          "pnr_db": 31.3
+        }
+      },
+      "gastrocnemius_lateralis": {
+        "10_percent_mvc": {
+          "mean_discharge_rate_hz": 10.1,
+          "sd_hz": 1.9,
+          "mus_count": 5,
+          "pnr_db": 34.2
+        },
+        "30_percent_mvc": {
+          "mean_discharge_rate_hz": 10.8,
+          "sd_hz": 1.6,
+          "mus_count": 16,
+          "pnr_db": 30.7
+        },
+        "50_percent_mvc": {
+          "mean_discharge_rate_hz": 15.7,
+          "sd_hz": 2.7,
+          "mus_count": 36,
+          "pnr_db": 23.5
+        },
+        "70_percent_mvc": {
+          "mean_discharge_rate_hz": 17.9,
+          "sd_hz": 1.1,
+          "mus_count": 13,
+          "pnr_db": 29.8
+        }
+      }
+    },
+    "retracted_historical_unconfirmed_rates": {
+      "status": "RETRACTED_AND_SUPERSEDED",
+      "historical_values": {
+        "10_mvc": 9.8,
+        "30_mvc": 12.6,
+        "50_mvc": 15.4,
+        "70_mvc": 19.8
+      },
+      "reason": "Unconfirmed discharge rates recorded in earlier draft. Replaced by published Table 2 numbers."
     },
     "validation_status": "PUBLISHED_LITERATURE_RATES_SEPARATED",
     "epistemic_warning": "Eight operators analyzing the same recorded trials do NOT constitute eight independent human participants."
@@ -114,36 +318,80 @@
     "sources_audit": [
       {
         "source_id": "SRC-0063",
+        "dataset_id": "FRANKE_2020_MRI_VOLUMETRY",
         "citation": "Franke et al. (2020) PMC7332772",
         "data_type": "RAW_HUMAN_OBSERVATION",
         "muscle": "Gastrocnemius Medialis",
+        "source_file": "research/empirical_anchors_2026_11_08/franke2020_extracted_measurements.json",
+        "sha256": "c08748c08d2649cb69a535c1914c3844fb8497288aebb2d006274fdcddfcba83",
+        "n_biological_participants": 1,
+        "n_operators": 1,
+        "n_trials": 1,
+        "n_records": 1,
         "independent_participants_n": 1,
         "V_anat_mL": 379.89,
         "verification_status": "VERIFIED_PRIMARY_MEASUREMENT",
+        "validation_status": "VERIFIED_PRIMARY_MEASUREMENT",
+        "source_observation_ids": [
+          "FRANKE2020_OSIRIX_3D_VIBE_T1_CALF_SEGMENTATION"
+        ],
         "provenance": "3D T1-MRI VIBE segmentation of Subject 01 right calf."
       },
       {
         "source_id": "SRC-0066",
+        "dataset_id": "ANDERSEN_SALTIN_1985_BENCHMARK",
         "citation": "Andersen & Saltin (1985) J Physiol 366:233-249",
+        "pmid": "4057091",
         "data_type": "LITERATURE_REPORTED_VALUE",
+        "storage_type": "LITERATURE_CITATION",
         "muscle": "Quadriceps femoris",
-        "independent_participants_n": 8,
+        "source_file": null,
+        "sha256": null,
+        "n_biological_participants": 5,
+        "n_operators": 2,
+        "n_trials": 6,
+        "n_records": 5,
+        "independent_participants_n": 5,
         "V_anat_mL_estimate": 2170.0,
         "verification_status": "ESTIMATED_FROM_QUADRICEPS_MASS",
-        "provenance": "Table 1 quadriceps mass ~2.3 kg (density 1.06 g/mL -> ~2170 mL)."
+        "validation_status": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE",
+        "resting_table_status": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION",
+        "source_observation_ids": [
+          "ANDERSEN1985_PMID4057091_TABLE2_10W_TO_60W"
+        ],
+        "resting_baseline_verdict": "PubMed explicitly documents 5 subjects, not 8. Sitting resting flow (0.15-0.40 L/min) reported in text; Table 2 starts at 10 W with NO 0 W resting row. Exact 2.4 mL/100g/min and 58 mL/L are secondary textbook limb estimates.",
+        "provenance": "Knee-extensor single-leg catheterization benchmark."
       },
       {
         "source_id": "SRC-0070",
+        "dataset_id": "MUSCLEMAP_ZENODO_10077847",
         "citation": "MuscleMap Zenodo 10.5281/zenodo.10077847",
         "data_type": "SYNTHETIC",
+        "n_biological_participants": 0,
+        "n_operators": 0,
+        "n_trials": 0,
+        "n_records": 0,
         "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "validation_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "source_observation_ids": [
+          "RETRACTED_DEEP_LEARNING_TEMPLATE_WEIGHTS"
+        ],
         "audit_verdict": "Zenodo 10077847 contains deep learning model weights and template files, not a verified open cohort table of n=48 subjects with mean 342.5 mL. Retracted from empirical anchors."
       },
       {
         "source_id": "SRC-0071",
+        "dataset_id": "CENNI_FIGSHARE_5971480",
         "citation": "Cenni et al. Figshare 10.6084/m9.figshare.5971480",
         "data_type": "SYNTHETIC",
+        "n_biological_participants": 0,
+        "n_operators": 0,
+        "n_trials": 0,
+        "n_records": 0,
         "verification_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "validation_status": "UNVERIFIED_PRIMARY_TABLES_RETRACTED",
+        "source_observation_ids": [
+          "RETRACTED_UNRESOLVABLE_FIGSHARE_ID"
+        ],
         "audit_verdict": "Figshare ID 5971480 is invalid/unresolvable as a public dataset archive. Retracted from empirical anchors."
       }
     ],

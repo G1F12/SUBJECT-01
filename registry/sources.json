@@ -1151,7 +1151,7 @@
       "path": "research/empirical_anchors_2026_11_08/sources.json",
       "source_id": "SRC-0066"
     },
-    "provenance_caveat": "Values (flow 2.4 mL/100g/min, (Ca - Cv)O2 = 58 mL/L, M_loc = 0.0064 mmol ATP/L/s) are secondary literature review extrapolations from whole-limb flow and a-v difference. Andersen & Saltin 1985 Table 2 starts at 10 W and has NO resting 0 W row; sitting resting femoral vein flow is reported in text (p. 237) as 0.15 to 0.40 L/min. Status downgraded to DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION.",
+    "provenance_caveat": "PubMed PMID 4057091 confirms 5 male subjects (not 8). Sitting resting femoral venous flow is reported in text (p. 237) as 0.15 to 0.40 L/min. Table 2 starts at 10 W with NO 0 W resting row. Resting values 2.4 mL/100g/min and 58 mL/L are secondary textbook whole-limb approximations. Status downgraded to DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION.",
     "status": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE"
   },
   {
@@ -1180,8 +1180,11 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0068"
     },
-    "provenance_notes": "Published literature discharge rates across 8 rater operators analyzing 1 human subject recording dataset (8 raters != 8 independent human subjects; inter-operator agreement 99.6%). Raw 64-channel archives on Figshare (444 MB) are blocked by Cloudflare R2 bot challenge (HTTP 403 Forbidden).",
-    "data_type": "LITERATURE_REPORTED_VALUE"
+    "provenance_notes": "Published Table 2 motor unit discharge characteristics after manual editing: Gastrocnemius Medialis (10% MVC: 8.1 +- 1.1 pps; 30% MVC: 8.1 +- 1.0 pps; 50% MVC: 7.6 +- 1.2 pps; 70% MVC: 12.2 +- 0.6 pps); Gastrocnemius Lateralis (10% MVC: 8.1 +- 0.9 pps; 30% MVC: 8.2 +- 1.3 pps; 50% MVC: 11.3 +- 1.3 pps; 70% MVC: 14.0 +- 1.5 pps). Historical draft values (9.8, 12.6, 15.4, 19.8 Hz) retracted. 8 co-author operators analyzed recordings reused across two prior studies from different male participants (8 raters != 8 subjects; n_participants = UNKNOWN). Raw 64-channel archives (444 MB) on Figshare blocked by Cloudflare R2 challenge (HTTP 403 Forbidden).",
+    "data_type": "LITERATURE_REPORTED_VALUE",
+    "authors": "Hug F, Avrillon S, Del Vecchio A, Casolo A, Ibanez J, Nuccio S, Rossato J, Holobar A, Farina D.",
+    "storage_type": "LITERATURE_CITATION",
+    "status": "PUBLISHED_LITERATURE_RATES_SEPARATED"
   },
   {
     "id": "SRC-0069",
@@ -1197,8 +1200,9 @@
       "path": "research/empirical_recruitment_2026_11_08/sources.json",
       "source_id": "SRC-0069"
     },
-    "provenance_notes": "Published Data in Brief summary Table 1 listing 3 recovery rate constants in human quadriceps. Continuous raw time series on Dryad (2024_829_Ergometer_Dryad_Raw_V3.xlsx) are blocked by AWS WAF interactive bot challenge (HTTP 403 Forbidden). Status: RAW_TIMESERIES_UNAVAILABLE.",
-    "data_type": "LITERATURE_REPORTED_VALUE"
+    "provenance_notes": "Published Data in Brief summary Table 1 listing 3 recovery rate constants in human quadriceps (1 subject, 3 trials, tau = 39.4 s). Continuous raw time-series file (2024_829_Ergometer_Dryad_Raw_V3.xlsx, 18.14 KB, SHA256 ae7876d1...) on Dryad is blocked by AWS WAF / Anubis BotStopper interactive challenge (HTTP 403). Status: RAW_TIMESERIES_UNAVAILABLE pending owner-assisted browser download.",
+    "data_type": "LITERATURE_REPORTED_VALUE",
+    "status": "PUBLISHED_AGGREGATE_METRICS_ONLY"
   },
   {
     "id": "SRC-0070",

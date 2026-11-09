@@ -228,7 +228,7 @@
     "date": "2026-11-08",
     "experiment_id": "EXP-0040",
     "hypothesis": "Empirical cross-subject and cross-muscle validation of local bioenergetics model can be achieved without verified raw human time-series.",
-    "result": "Refuted: Programmatic raw data acquisition from Dryad (Rehman 2024) and Figshare (Hug 2021) returned HTTP 403 Forbidden. Previous LOSO validation results were based on synthetic exponential series generated with np.random.RandomState. Status reclassified to SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED, and empirical validation is BLOCKED_PENDING_RAW_DATA.",
+    "result": "Refuted: Programmatic raw data acquisition from Dryad (Rehman 2024) and Figshare (Hug 2021) returned HTTP 403 Forbidden. Cross-subject LOSO on N=1 participant is methodologically invalid. Previous LOSO results were synthetic demonstrations. Status reclassified to SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED, and empirical validation is BLOCKED_PENDING_RAW_DATA.",
     "impact": "Prohibits labeling synthetic algorithmic demonstrations as empirical human validation."
   },
   {
@@ -238,5 +238,21 @@
     "hypothesis": "Automated scripts can retrieve continuous open raw human 31P-MRS time-series from Dryad and raw HD-sEMG archives from Figshare.",
     "result": "Refuted: Programmatic downloads failed with HTTP 403 Forbidden due to AWS WAF interactive bot challenge on Dryad and Cloudflare R2 CDN protection on Figshare.",
     "impact": "Requires formal provenance gating and prevents synthetic data generation from masquerading as unretrieved raw empirical data."
+  },
+  {
+    "id": "NEG-0033",
+    "date": "2026-11-09",
+    "experiment_id": "EXP-0037",
+    "hypothesis": "Hug et al. 2021 reported Gastrocnemius Medialis discharge rates of 9.8, 12.6, 15.4, and 19.8 Hz across 8 independent human participants.",
+    "result": "Refuted: Table 2 of Hug et al. 2021 preprint and journal publication reports GM mean discharge rates of 8.1, 8.1, 7.6, and 12.2 pps after manual editing. The eight operators were rater co-authors evaluating shared recordings from an unknown number of male participants across two reused experiments. N=8 raters != 8 subjects.",
+    "impact": "Retracted unconfirmed discharge rates; replaced with published Table 2 numbers; classified biological sample size as UNKNOWN; barred equating operators with independent biological subjects."
+  },
+  {
+    "id": "NEG-0034",
+    "date": "2026-11-09",
+    "experiment_id": "EXP-0041",
+    "hypothesis": "More than 99% of energy in a 45-minute 250 W whole-body test is supplied oxidatively based on the ratio of single-muscle static PCr buffer to external mechanical work.",
+    "result": "Refuted: Dividing single-muscle local PCr buffer capacity (0.62 kJ) by whole-body external mechanical work (675 kJ) commits a category error between static local capacity and dynamic whole-body flux, confounds mechanical work with gross metabolic expenditure (~3375 kJ), and ignores systemic anaerobic glycolysis (~75 kJ) and multi-muscle recruitment.",
+    "impact": "Enforces multi-dimensional energetic accounting separating mechanical work, metabolic cost, ATP turnover, oxidative resynthesis, and glycolysis; bars invalid >99% oxidative claims for TARGET-CPE45."
   }
 ]

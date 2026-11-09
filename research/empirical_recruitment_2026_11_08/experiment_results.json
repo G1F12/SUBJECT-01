@@ -1,6 +1,6 @@
 {
   "cycle": 9,
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "preflight": {
     "status": "COMPLETED",
     "question_1_pcr_capacity_reconciliation": {
@@ -26,9 +26,11 @@
     "question_2_andersen_saltin_1985_audit": {
       "source_id": "SRC-0066",
       "citation": "Andersen & Saltin (1985), J Physiol 366:233-249",
-      "paper_muscle": "Human quadriceps femoris (knee-extensor dynamic model, 8 males)",
-      "primary_resting_data_in_paper": "Text on page 237 states femoral venous blood flow at rest in sitting position was 0.15 to 0.40 L/min. Table 1 lists subject mass/anthropometry. Table 2 tabulates exercise from 10 W to 60 W (NO resting row).",
-      "audit_verdict_2_4_ml_and_58_ml": "The exact numbers 2.4 mL/100g/min and 58 mL/L do NOT exist as a tabulated resting baseline in Andersen & Saltin 1985. They originate from secondary textbook limb-level approximations (0.24 L/min / 10 kg limb = 2.4 mL/100g/min).",
+      "pmid": "4057091",
+      "paper_muscle": "Human quadriceps femoris (knee-extensor dynamic model, 5 males)",
+      "n_biological_participants": 5,
+      "primary_resting_data_in_paper": "Text on page 237 states femoral venous blood flow at rest in sitting position was 0.15 to 0.40 L/min. Table 1 lists subject mass/anthropometry for 5 subjects. Table 2 tabulates exercise from 10 W to 60 W (NO resting row).",
+      "audit_verdict_2_4_ml_and_58_ml": "The exact numbers 2.4 mL/100g/min and 58 mL/L do NOT exist as a tabulated resting baseline in Andersen & Saltin 1985. They originate from secondary textbook limb-level approximations (0.24 L/min / 10 kg limb = 2.4 mL/100g/min). N=5 participants confirmed by PubMed.",
       "status_downgrade": "DOWNGRADED_NOT_PRIMARY_RESTING_TABLE / LITERATURE_REVIEW_TRANSFER_ASSUMPTION"
     }
   },
@@ -36,19 +38,25 @@
     "EXP-0037": {
       "experiment_id": "EXP-0037",
       "title": "Empirical Acquisition Audit of Lower-Limb HD-sEMG Motor Unit Spike Trains and Dynamic 31P-MRS Bioenergetics",
+      "data_type": "LITERATURE_REPORTED_VALUE",
+      "validation_status": "COMPLETED_LITERATURE_AUDIT_RAW_BLOCKED",
       "datasets": {
         "rehman_2024_31p_mrs": {
           "source_id": "SRC-0069",
           "pmcid": "PMC11617988",
           "muscle": "Quadriceps femoris",
           "protocol": "In-bore knee extension ergometer (Siemens 3T)",
+          "n_biological_participants": 1,
+          "n_operators": 1,
+          "n_trials": 3,
+          "n_records": 3,
           "trials_n": 3,
           "mean_pcr_drop_percent": 27.2,
           "mean_tau_rec_s": 39.406666666666666,
           "ph_status": "NON_ACIDOTIC_OXIDATIVE_DOMINATED",
           "data_type": "LITERATURE_REPORTED_VALUE",
           "raw_download_status": "RAW_TIMESERIES_UNAVAILABLE",
-          "raw_download_blocker": "Dryad download (2024_829_Ergometer_Dryad_Raw_V3.xlsx) blocked by AWS WAF interactive bot challenge (HTTP 403 Forbidden)"
+          "raw_download_blocker": "Continuous spectral time-series are unavailable programmatically due to AWS WAF/Anubis challenge. Published Table 1 provides 3 scalar rate constants."
         },
         "hug_2021_hd_semg": {
           "source_id": "SRC-0068",
@@ -56,17 +64,35 @@
           "muscles": [
             "Gastrocnemius Medialis",
             "Gastrocnemius Lateralis",
-            "Tibialis Anterior",
-            "Vastus Lateralis"
+            "Tibialis Anterior"
           ],
           "grid_channels": 64,
           "sampling_hz": 2048,
           "data_type": "LITERATURE_REPORTED_VALUE",
-          "independent_subjects_n": 1,
+          "storage_type": "LITERATURE_CITATION",
+          "source_file": null,
+          "sha256": null,
+          "n_biological_participants": "UNKNOWN",
+          "independent_subjects_n": "UNKNOWN",
+          "n_operators": 8,
           "raters_n": 8,
-          "note_on_subjects": "Published discharge rates are literature aggregate values from 8 operators analyzing 1 individual recording dataset (8 raters != 8 subjects).",
+          "n_trials": 11,
+          "n_records": 126,
+          "note_on_subjects": "Published discharge rates are literature aggregate values from Table 2 evaluated by 8 operators on data reused across 2 prior studies from different male participants (8 raters != 8 subjects).",
           "inter_operator_agreement": 0.996,
           "gastrocnemius_medialis_rates_hz": {
+            "10_mvc": 8.1,
+            "30_mvc": 8.1,
+            "50_mvc": 7.6,
+            "70_mvc": 12.2
+          },
+          "gastrocnemius_lateralis_rates_hz": {
+            "10_mvc": 8.1,
+            "30_mvc": 8.2,
+            "50_mvc": 11.3,
+            "70_mvc": 14.0
+          },
+          "retracted_historical_rates_hz": {
             "10_mvc": 9.8,
             "30_mvc": 12.6,
             "50_mvc": 15.4,
@@ -78,11 +104,13 @@
         "mri_volumetry": {
           "franke_2020_single_subject_gastrocnemius_mL": 379.89,
           "franke_source": "VERIFIED_PRIMARY_3D_SEGMENTATION_MAT_FILE",
-          "cohort_tables_status": "RETRACTED_UNVERIFIED_COHORT_DISTRIBUTIONS",
-          "retraction_note": "SRC-0070 (MuscleMap Zenodo 10077847 is software code/weights without verified cohort table) and SRC-0071 (Cenni Figshare 5971480 is unresolvable) have been retracted from EMPIRICALLY_BOUNDED_DISTRIBUTION status."
+          "andersen_saltin_1985_quadriceps_estimate_mL": 2170.0,
+          "andersen_saltin_1985_participants_n": 5,
+          "quadriceps_to_gastrocnemius_volume_ratio": 5.71,
+          "zenodo_musclemap_src0070_status": "RETRACTED_UNVERIFIED_COHORT_TABLE",
+          "figshare_cenni_src0071_status": "RETRACTED_INVALID_DATASET_ID"
         }
-      },
-      "validation_status": "PUBLISHED_LITERATURE_AGGREGATES_AUDITED"
+      }
     },
     "EXP-0038": {
       "experiment_id": "EXP-0038",
@@ -183,6 +211,8 @@
     "EXP-0039": {
       "experiment_id": "EXP-0039",
       "title": "Real-Data Identifiability and Profile Likelihood of Local Energy Model with Recruitment Nuisance Parameters",
+      "data_type": "COMPUTATIONAL_SIMULATION",
+      "validation_status": "IDENTIFIABILITY_AUDITED_NO_IDENTITY_CHANNELS",
       "level_1_structural_conditional_rank": {
         "n_params": 7,
         "rank": 3,
@@ -212,8 +242,7 @@
         "status": "NOT_EMPIRICALLY_IDENTIFIED_CROSS_STUDY_DISCONNECTION",
         "blocker": "No human subject currently exists in open literature with simultaneous 31P-MRS, calibrated HD-sEMG motor unit decomposition, MRI adipose morphometry, and microvascular blood flow.",
         "minimal_sufficient_experimental_design": "Simultaneous 3T 31P-MRS + 64-channel HD-sEMG + B-mode ultrasound fat thickness + arterial occlusion NIRS on single human subject during identical dynamic contraction protocol."
-      },
-      "validation_status": "IDENTIFIABILITY_AUDITED_NO_IDENTITY_CHANNELS"
+      }
     },
     "EXP-0040": {
       "experiment_id": "EXP-0040",
@@ -221,7 +250,7 @@
       "data_type": "SYNTHETIC",
       "validation_status": "SYNTHETIC_DEMONSTRATION_NOT_EMPIRICALLY_VALIDATED",
       "empirical_validation_status": "BLOCKED_PENDING_RAW_DATA",
-      "retraction_note": "Previous claims of empirical cross-subject human validation are retracted. The evaluation was performed on synthetic exponential curves generated via np.random.RandomState, not real human raw time series.",
+      "retraction_note": "PREVIOUS CLAIMS OF EMPIRICAL VALIDATION RETRACTED: evaluated on synthetic exponential curves generated via np.random.RandomState. Real empirical out-of-sample validation requires continuous raw time-series from independent cohorts.",
       "cross_subject_loso_summary": {
         "experiment_id": "EXP-0040",
         "validation_design": "SYNTHETIC_DEMONSTRATION_LOSO_ALGORITHM_ONLY",
@@ -285,15 +314,20 @@
     "EXP-0041": {
       "experiment_id": "EXP-0041",
       "title": "SUBJECT-01 Integration: Functional Power, Recovery Limits, and TARGET-CPE45 Boundaries",
+      "data_type": "COMPUTATIONAL_SIMULATION",
+      "validation_status": "COMPLETED_MACRO_BUDGET_ACCOUNTING",
       "cpe45_energy_accounting": {
         "external_mechanical_work_kJ": 675.0,
         "external_work_description": "250 W maintained over 2700 s (45 minutes) = 675 kJ. Illustrative test scenario.",
-        "whole_body_metabolic_expenditure_nominal_kJ": 3375.0,
-        "whole_body_metabolic_expenditure_span_kJ": [
+        "whole_body_metabolic_cost_nominal_kJ": 3375.0,
+        "whole_body_metabolic_cost_span_kJ": [
           2934.8,
           3750.0
         ],
         "assumed_gross_mechanical_efficiency_eta_gross": 0.2,
+        "whole_body_atp_turnover_moles": 62.5,
+        "oxidative_resynthesis_nominal_kJ": 3300.0,
+        "glycolysis_contribution_nominal_kJ": 75.0,
         "local_pcr_chemical_buffer_work_capacity_kJ": {
           "active_calf_volume_scenario_kJ": [
             0.106,
@@ -303,7 +337,8 @@
         },
         "local_pcr_hydrolysis_reaction_enthalpy_delta_R_H_kJ_mol": 21.0,
         "local_heat_dissipation_capacity_anat_kJ": 0.242,
-        "scaling_barrier_explanation": "Local single-muscle PCr buffer is a rapid transient energy store (duration ~5-30 s). 45-minute continuous endurance work requires systemic aerobic ATP resynthesis (metabolic expenditure ~3375 kJ), constrained by cardiac output, pulmonary gas exchange, and whole-body vascular distribution. Local MRS kinetics cannot be scaled to whole-body critical power without an independent cardiorespiratory model."
+        "category_error_static_pcr_to_external_work_prohibited": true,
+        "scaling_barrier_explanation": "Local single-muscle PCr buffer is a rapid transient energy store (duration ~5-30 s). 45-minute continuous endurance work requires systemic aerobic ATP resynthesis (metabolic expenditure ~3375 kJ), constrained by cardiac output, pulmonary gas exchange, and whole-body vascular distribution. Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is scientifically invalid: it confuses static local stock with dynamic systemic flux, confounds mechanical work with metabolic cost, and ignores systemic glycolysis."
       },
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
       "biological_interventions": "NO_GO_MAINTAINED"

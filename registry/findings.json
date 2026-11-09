@@ -298,7 +298,7 @@
     "id": "FND-0038",
     "date": "2026-11-08",
     "experiment_id": "EXP-0037",
-    "finding": "Auditing of open human literature reveals published discharge rates for Gastrocnemius Medialis (9.8 to 19.8 Hz) evaluated across 8 operators on 1 subject recording (8 raters != 8 subjects, inter-operator agreement 99.6%, Hug 2021) and published mean recovery time constant tau = 39.2 s in quadriceps (Rehman 2024 Table 1). Automated raw data download is blocked by AWS WAF (Dryad 403) and Cloudflare R2 (Figshare 403).",
+    "finding": "Auditing of open human literature reveals published Table 2 discharge rates for Gastrocnemius Medialis (10% MVC: 8.1 +- 1.1 pps; 30%: 8.1 +- 1.0 pps; 50%: 7.6 +- 1.2 pps; 70%: 12.2 +- 0.6 pps) and Lateralis (10%: 8.1 +- 0.9 pps; 30%: 8.2 +- 1.3 pps; 50%: 11.3 +- 1.3 pps; 70%: 14.0 +- 1.5 pps) evaluated across 8 operators on data reused from two prior studies (8 raters != 8 subjects; n_participants = UNKNOWN, Hug 2021). Historical draft rates (9.8-19.8 Hz) retracted. Dynamic 31P-MRS (Rehman 2024 Table 1) demonstrates non-acidotic quadriceps recovery with tau = 39.4 s across 3 trials of 1 participant. Automated raw downloads are blocked by AWS WAF (Dryad 403) and Cloudflare R2 (Figshare 403).",
     "confidence": "high",
     "notes": "Provides independent human empirical foundations for calf recruitment and quadriceps oxidative recovery."
   },
@@ -314,7 +314,7 @@
     "id": "FND-0040",
     "date": "2026-11-08",
     "experiment_id": "EXP-0040",
-    "finding": "Leave-One-Subject-Out algorithm evaluation on synthetic exponential benchmarks (tau=24.3 s vs tau=39.2 s) illustrates computational parameter transfer degradation (+53.9% and +189.3%). PREVIOUS CLAIMS OF EMPIRICAL VALIDATION RETRACTED: curves were synthetically generated with np.random.RandomState. Independent empirical human cross-subject validation is BLOCKED_PENDING_RAW_DATA.",
+    "finding": "Leave-One-Subject-Out algorithm evaluation on synthetic exponential benchmarks illustrates computational parameter transfer degradation. Cross-subject LOSO is strictly prohibited on single-subject datasets (Rehman n=1, Franke n=1). Independent empirical human cross-subject validation is BLOCKED_PENDING_RAW_DATA.",
     "confidence": "synthetic_methodological_demonstration_only",
     "notes": "Empirically disproves cross-muscle kinetic universality without explicit fiber-type scaling."
   },
@@ -322,7 +322,7 @@
     "id": "FND-0041",
     "date": "2026-11-08",
     "experiment_id": "EXP-0041",
-    "finding": "Physical and physiological energy accounting for the 2700-second CPE45 test at 250 W strictly separates external mechanical work (675 kJ), whole-body gross metabolic chemical expenditure (~3375 kJ at eta_gross ~20%), local active calf PCr buffer (0.11-0.39 kJ work potential; 0.62 kJ whole GM; heat enthalpy 21 kJ/mol). Taking the ratio of local PCr to 45-min whole-body work is physically invalid; local phosphagen buffers power only transient bursts (5-30 s), and long-duration endurance requires systemic cardiorespiratory oxygen delivery.",
+    "finding": "Physical and physiological energy accounting for the 2700-second CPE45 test at 250 W strictly separates external mechanical work (675 kJ), whole-body gross metabolic chemical expenditure (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol), oxidative resynthesis (~3300 kJ), anaerobic glycolysis (~75 kJ), local active calf PCr buffer (0.11-0.39 kJ work potential; 0.62 kJ whole GM), and heat enthalpy (21 kJ/mol). Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is prohibited as a category error. TARGET-CPE45 remains NOT EXTERNALLY VALIDATED; interventions NO_GO.",
     "confidence": "high",
     "notes": "Enforces structural separation between local muscle bridge and systemic TARGET-CPE45."
   }

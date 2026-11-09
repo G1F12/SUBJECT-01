@@ -788,7 +788,7 @@
       "SRC-0069",
       "SRC-0070"
     ],
-    "design": "Acquisition and cryptographic auditing of open human empirical datasets: 64-channel HD-sEMG motor unit decomposition in Gastrocnemius Medialis and Lateralis (Hug et al. 2021) and dynamic 31P-MRS quadriceps ergometry (Rehman et al. 2024, PMC11617988).",
+    "design": "Acquisition and cryptographic auditing of open human empirical datasets: 64-channel HD-sEMG motor unit decomposition in Gastrocnemius Medialis (Table 2: 8.1, 8.1, 7.6, 12.2 Hz) and Lateralis (8.1, 8.2, 11.3, 14.0 Hz) across 8 operators (Hug et al. 2021, n_participants = UNKNOWN) and dynamic 31P-MRS quadriceps ergometry across 3 trials in 1 subject (Rehman et al. 2024, PMC11617988, tau = 39.4 s).",
     "status": "completed_literature_audit_raw_blocked",
     "results": {
       "rehman_trials_n": 3,
@@ -806,7 +806,7 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Raw continuous time-series blocked by AWS WAF (Dryad 403) and Cloudflare R2 (Figshare 444 MB 403). Hug rates represent 8 operators analyzing 1 subject (8 raters != 8 subjects). SRC-0070 and SRC-0071 cohort tables retracted.",
+    "limits": "Raw continuous time-series blocked by AWS WAF / Anubis (Dryad 403) and Cloudflare R2 (Figshare 444 MB 403). Hug rates represent 8 operators analyzing reused recordings (8 raters != 8 subjects; n_participants = UNKNOWN). Andersen & Saltin 1985 has 5 subjects (not 8) with no resting row. SRC-0070 and SRC-0071 cohort tables retracted.",
     "external_validation": "published_literature_aggregates_audited",
     "data_type": "LITERATURE_REPORTED_VALUE"
   },
@@ -894,7 +894,7 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Evaluated on synthetic exponential curves generated via np.random.RandomState. Real empirical human out-of-sample cross-subject validation remains BLOCKED_PENDING_RAW_DATA.",
+    "limits": "Evaluated on synthetic exponential curves generated via np.random.RandomState. LOSO across single-subject cohorts is strictly prohibited. Real empirical human out-of-sample cross-subject validation remains BLOCKED_PENDING_RAW_DATA.",
     "external_validation": "synthetic_demonstration_not_empirically_validated",
     "data_type": "SYNTHETIC"
   },
@@ -906,7 +906,7 @@
       "SRC-0069",
       "SRC-0070"
     ],
-    "design": "Rigorous separation of external mechanical work (250 W * 2700 s = 675 kJ), whole-body metabolic expenditure (~3375 kJ at eta_gross ~20%), local PCr buffer (0.1-0.6 kJ), and reaction enthalpy Delta_R H = 21 kJ/mol. Erroneous division of local PCr by external whole-body work retracted.",
+    "design": "Rigorous separation of external mechanical work (250 W * 2700 s = 675 kJ), whole-body metabolic cost (~3375 kJ at eta_gross ~20%), whole-body ATP turnover (62.5 mol ATP), oxidative resynthesis (~3300 kJ), anaerobic glycolysis (~75 kJ), local single-muscle PCr buffer (0.1-0.6 kJ), and reaction enthalpy Delta_R H = 21 kJ/mol. Inferring >99% oxidative contribution solely by dividing single-muscle static PCr buffer by 45-min whole-body external work is strictly prohibited as a category error.",
     "status": "completed_macro_budget_accounting",
     "results": {
       "calf_pcr_contribution_percent": 0.092,
@@ -922,7 +922,7 @@
       "research/empirical_recruitment_2026_11_08/experiment_results.json"
     ],
     "reproduction_command": "python research/empirical_recruitment_2026_11_08/experiments.py",
-    "limits": "Local bioenergetics models cannot extrapolate to whole-body exercise without cardiovascular scaling.",
+    "limits": "TARGET-CPE45 remains NOT EXTERNALLY VALIDATED. Biological interventions maintain NO_GO. Local single-muscle PCr buffer cannot predict whole-body endurance without an independent systemic cardiorespiratory model.",
     "external_validation": "macro_energy_budget_accounting",
     "data_type": "COMPUTATIONAL_SIMULATION"
   }
