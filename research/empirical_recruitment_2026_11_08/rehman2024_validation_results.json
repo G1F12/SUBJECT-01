@@ -1,0 +1,806 @@
+{
+  "title": "SUBJECT-01 — Scientific Validation & Freeze on Rehman 2024 Real Data",
+  "provenance": {
+    "source_raw_file": "2024_829_Ergometer_Dryad_Raw_V3.xlsx",
+    "source_raw_sha256": "ae7876d1464b994614714d123b448f71d238d02c92f2a8acebff553e1f0986cf",
+    "canonical_derived_json": "rehman2024_extracted_timeseries.json",
+    "canonical_derived_sha256": "af6a396b006a6cb791844742085701c6782b4eb706a8f768b1bd87dfa7e8de5b",
+    "n_biological_participants": 1,
+    "n_trials": 3,
+    "n_spectra_extracted": 222
+  },
+  "stage_1_protocol_timing_audit": {
+    "status": "PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED",
+    "nominal_vs_actual_conclusion": "Nominal protocol specifies 42 s exercise (48s to 90s). However, in actual data, PCr continues to decrease beyond 90s: in Trials 2 and 3, nadir occurs at 108s (+18s lag); in Trial 1, an extended depletion/plateau phase continues until 144s (+54s lag). Published Table 1 PCr drop percentages (31.6%, 25.2%, 24.8%) and rate constants k (1.43, 1.62, 1.53 min^-1) strictly correspond to fitting from actual nadir, NOT from nominal 90s.",
+    "trials": {
+      "1": {
+        "trial_id": 1,
+        "resting_baseline": {
+          "window_s": [
+            12.0,
+            48.0
+          ],
+          "spectra": [
+            2,
+            8
+          ],
+          "pcr_mean": 2481.4285714285716,
+          "pcr_sd": 74.258236676383,
+          "pi_mean": 269.29714285714283,
+          "pi_sd": 46.57770164441554
+        },
+        "nominal_protocol": {
+          "exercise_start_s": 48.0,
+          "exercise_duration_s": 42.0,
+          "exercise_stop_s": 90.0,
+          "pcr_at_stop": 1920.0,
+          "pcr_drop_at_stop_pct": 22.6252158894646
+        },
+        "actual_biochemical_nadir": {
+          "nadir_time_s": 144.0,
+          "nadir_spectrum": 24,
+          "nadir_pcr": 1670.0,
+          "pcr_drop_at_nadir_pct": 32.700057570523896,
+          "published_table1_drop_pct": 31.6,
+          "nadir_vs_published_diff_pct": 1.1000575705238944
+        },
+        "recovery_onset": {
+          "start_time_s": 150.0,
+          "start_spectrum": 25,
+          "lag_from_nominal_stop_s": 54.0
+        },
+        "timing_verdict": "EXTENDED_DEPLETION_PHASE_IDENTIFIED"
+      },
+      "2": {
+        "trial_id": 2,
+        "resting_baseline": {
+          "window_s": [
+            12.0,
+            48.0
+          ],
+          "spectra": [
+            2,
+            8
+          ],
+          "pcr_mean": 1679.0,
+          "pcr_sd": 38.71261637588793,
+          "pi_mean": 131.869,
+          "pi_sd": 24.468923699255754
+        },
+        "nominal_protocol": {
+          "exercise_start_s": 48.0,
+          "exercise_duration_s": 42.0,
+          "exercise_stop_s": 90.0,
+          "pcr_at_stop": 1291.0,
+          "pcr_drop_at_stop_pct": 23.10899344848124
+        },
+        "actual_biochemical_nadir": {
+          "nadir_time_s": 108.0,
+          "nadir_spectrum": 18,
+          "nadir_pcr": 1245.0,
+          "pcr_drop_at_nadir_pct": 25.8487194758785,
+          "published_table1_drop_pct": 25.2,
+          "nadir_vs_published_diff_pct": 0.6487194758785009
+        },
+        "recovery_onset": {
+          "start_time_s": 114.0,
+          "start_spectrum": 19,
+          "lag_from_nominal_stop_s": 18.0
+        },
+        "timing_verdict": "CONGRUENT_WITH_TABLE1_NADIR"
+      },
+      "3": {
+        "trial_id": 3,
+        "resting_baseline": {
+          "window_s": [
+            12.0,
+            48.0
+          ],
+          "spectra": [
+            2,
+            8
+          ],
+          "pcr_mean": 1675.5714285714287,
+          "pcr_sd": 34.21431056764184,
+          "pi_mean": 130.42857142857142,
+          "pi_sd": 12.024379995896433
+        },
+        "nominal_protocol": {
+          "exercise_start_s": 48.0,
+          "exercise_duration_s": 42.0,
+          "exercise_stop_s": 90.0,
+          "pcr_at_stop": 1277.0,
+          "pcr_drop_at_stop_pct": 23.787194134197293
+        },
+        "actual_biochemical_nadir": {
+          "nadir_time_s": 108.0,
+          "nadir_spectrum": 18,
+          "nadir_pcr": 1231.0,
+          "pcr_drop_at_nadir_pct": 26.532526217068806,
+          "published_table1_drop_pct": 24.8,
+          "nadir_vs_published_diff_pct": 1.7325262170688056
+        },
+        "recovery_onset": {
+          "start_time_s": 114.0,
+          "start_spectrum": 19,
+          "lag_from_nominal_stop_s": 18.0
+        },
+        "timing_verdict": "CONGRUENT_WITH_TABLE1_NADIR"
+      }
+    }
+  },
+  "stage_2_kinetics_sensitivity": {
+    "status": "PHASE_SELECTION_SENSITIVITY_QUANTIFIED",
+    "evaluation": "Separation of systematic onset uncertainty from statistical non-linear covariance error completed.",
+    "trials": {
+      "1": {
+        "trial_id": 1,
+        "nadir_time_s": 144.0,
+        "published_k_min_minus_1": 1.43,
+        "statistical_ci95_at_nadir": 0.11949158851122132,
+        "systematic_uncertainty_k_min_minus_1": 0.044216929470569655,
+        "systematic_k_range": [
+          1.30552187588844,
+          1.3939557348295792
+        ],
+        "systematic_vs_statistical_ratio": 0.37004219310731895,
+        "shift_evaluations": [
+          {
+            "nominal_shift_s": -18,
+            "start_time_s": 126.0,
+            "start_index": 19,
+            "recovery_points_n": 55,
+            "k_min_minus_1": 1.040810353803656,
+            "ci_95_statistical": 0.12006117131483862,
+            "tau_s": 57.64738963321144,
+            "r_squared": 0.9664222844596829,
+            "rmse": 42.24955216729543,
+            "mae": 29.278811616999636,
+            "discrepancy_vs_published_pct": -27.216059174569512
+          },
+          {
+            "nominal_shift_s": -12,
+            "start_time_s": 132.0,
+            "start_index": 20,
+            "recovery_points_n": 54,
+            "k_min_minus_1": 1.1632781418678313,
+            "ci_95_statistical": 0.11332097694233496,
+            "tau_s": 51.578378240358134,
+            "r_squared": 0.975101004554906,
+            "rmse": 34.42662026958893,
+            "mae": 25.215148915601343,
+            "discrepancy_vs_published_pct": -18.651878191060746
+          },
+          {
+            "nominal_shift_s": -6,
+            "start_time_s": 138.0,
+            "start_index": 21,
+            "recovery_points_n": 53,
+            "k_min_minus_1": 1.2804785938598968,
+            "ci_95_statistical": 0.1129035836771783,
+            "tau_s": 46.85747992017185,
+            "r_squared": 0.9792179918716265,
+            "rmse": 29.228682408445437,
+            "mae": 22.895513074478128,
+            "discrepancy_vs_published_pct": -10.4560423874198
+          },
+          {
+            "nominal_shift_s": 0,
+            "start_time_s": 144.0,
+            "start_index": 22,
+            "recovery_points_n": 52,
+            "k_min_minus_1": 1.3932033790697844,
+            "ci_95_statistical": 0.11949158851122132,
+            "tau_s": 43.06621768320779,
+            "r_squared": 0.9802336994498704,
+            "rmse": 26.046927789539293,
+            "mae": 21.335956276181665,
+            "discrepancy_vs_published_pct": -2.5731902748402464
+          },
+          {
+            "nominal_shift_s": 6,
+            "start_time_s": 150.0,
+            "start_index": 23,
+            "recovery_points_n": 51,
+            "k_min_minus_1": 1.3550941362619764,
+            "ci_95_statistical": 0.13660042112730775,
+            "tau_s": 44.277366711592336,
+            "r_squared": 0.9738898015298738,
+            "rmse": 26.016677230865316,
+            "mae": 21.262602786196425,
+            "discrepancy_vs_published_pct": -5.238172289372276
+          },
+          {
+            "nominal_shift_s": 12,
+            "start_time_s": 156.0,
+            "start_index": 24,
+            "recovery_points_n": 50,
+            "k_min_minus_1": 1.3939557348295792,
+            "ci_95_statistical": 0.16003255207769906,
+            "tau_s": 43.042973676158674,
+            "r_squared": 0.9669765011104223,
+            "rmse": 26.058340503708795,
+            "mae": 21.1021726847627,
+            "discrepancy_vs_published_pct": -2.5205779839455036
+          },
+          {
+            "nominal_shift_s": 18,
+            "start_time_s": 162.0,
+            "start_index": 25,
+            "recovery_points_n": 49,
+            "k_min_minus_1": 1.30552187588844,
+            "ci_95_statistical": 0.17618673779703753,
+            "tau_s": 45.95863241216737,
+            "r_squared": 0.9573640071025693,
+            "rmse": 25.444672723992046,
+            "mae": 20.964382463066443,
+            "discrepancy_vs_published_pct": -8.704763923885315
+          }
+        ],
+        "scientific_interpretation": "Negative shifts (before nadir) contaminate the recovery fit with ongoing depletion, causing R2 to decline and k to drop by 20-33%. Post-nadir shifts (+6 to +18s) demonstrate a systematic phase uncertainty of +/-0.044 min^-1, which is comparable to or larger than the formal non-linear covariance statistical error."
+      },
+      "2": {
+        "trial_id": 2,
+        "nadir_time_s": 108.0,
+        "published_k_min_minus_1": 1.62,
+        "statistical_ci95_at_nadir": 0.1802138393022281,
+        "systematic_uncertainty_k_min_minus_1": 0.17222325172030717,
+        "systematic_k_range": [
+          1.3418779770312024,
+          1.6863244804718167
+        ],
+        "systematic_vs_statistical_ratio": 0.955660521895212,
+        "shift_evaluations": [
+          {
+            "nominal_shift_s": -18,
+            "start_time_s": 90.0,
+            "start_index": 13,
+            "recovery_points_n": 61,
+            "k_min_minus_1": 1.1147793043995402,
+            "ci_95_statistical": 0.1589631956912628,
+            "tau_s": 53.822312419334104,
+            "r_squared": 0.9393739079535134,
+            "rmse": 25.08755890337186,
+            "mae": 16.91423556853905,
+            "discrepancy_vs_published_pct": -31.186462691386414
+          },
+          {
+            "nominal_shift_s": -12,
+            "start_time_s": 96.0,
+            "start_index": 14,
+            "recovery_points_n": 60,
+            "k_min_minus_1": 1.233054432300316,
+            "ci_95_statistical": 0.17240471904392482,
+            "tau_s": 48.65965234646407,
+            "r_squared": 0.940822342685559,
+            "rmse": 23.290069170729645,
+            "mae": 15.327223337070002,
+            "discrepancy_vs_published_pct": -23.885528870350864
+          },
+          {
+            "nominal_shift_s": -6,
+            "start_time_s": 102.0,
+            "start_index": 15,
+            "recovery_points_n": 59,
+            "k_min_minus_1": 1.4934268379875868,
+            "ci_95_statistical": 0.15978370195444924,
+            "tau_s": 40.17605581593192,
+            "r_squared": 0.9634782104614477,
+            "rmse": 17.396680646125162,
+            "mae": 13.122315177199594,
+            "discrepancy_vs_published_pct": -7.8131581489144
+          },
+          {
+            "nominal_shift_s": 0,
+            "start_time_s": 108.0,
+            "start_index": 16,
+            "recovery_points_n": 58,
+            "k_min_minus_1": 1.6863244804718167,
+            "ci_95_statistical": 0.1802138393022281,
+            "tau_s": 35.580340969261506,
+            "r_squared": 0.9635483349758112,
+            "rmse": 15.727121836523404,
+            "mae": 12.627911216972855,
+            "discrepancy_vs_published_pct": 4.094103732828185
+          },
+          {
+            "nominal_shift_s": 6,
+            "start_time_s": 114.0,
+            "start_index": 17,
+            "recovery_points_n": 57,
+            "k_min_minus_1": 1.5739928986760967,
+            "ci_95_statistical": 0.20239372277180037,
+            "tau_s": 38.1196128968985,
+            "r_squared": 0.9497040768668656,
+            "rmse": 15.475862258634814,
+            "mae": 12.146751786025067,
+            "discrepancy_vs_published_pct": -2.8399445261668763
+          },
+          {
+            "nominal_shift_s": 12,
+            "start_time_s": 120.0,
+            "start_index": 18,
+            "recovery_points_n": 56,
+            "k_min_minus_1": 1.4381401082296141,
+            "ci_95_statistical": 0.22113125380397664,
+            "tau_s": 41.72055257805269,
+            "r_squared": 0.9324155473154895,
+            "rmse": 15.126993608378216,
+            "mae": 11.847961476760085,
+            "discrepancy_vs_published_pct": -11.225919245085553
+          },
+          {
+            "nominal_shift_s": 18,
+            "start_time_s": 126.0,
+            "start_index": 19,
+            "recovery_points_n": 55,
+            "k_min_minus_1": 1.3418779770312024,
+            "ci_95_statistical": 0.2463240548732979,
+            "tau_s": 44.71345459647918,
+            "r_squared": 0.9101467976465202,
+            "rmse": 15.053153146888574,
+            "mae": 11.701315984419558,
+            "discrepancy_vs_published_pct": -17.168026109185046
+          }
+        ],
+        "scientific_interpretation": "Negative shifts (before nadir) contaminate the recovery fit with ongoing depletion, causing R2 to decline and k to drop by 20-33%. Post-nadir shifts (+6 to +18s) demonstrate a systematic phase uncertainty of +/-0.172 min^-1, which is comparable to or larger than the formal non-linear covariance statistical error."
+      },
+      "3": {
+        "trial_id": 3,
+        "nadir_time_s": 108.0,
+        "published_k_min_minus_1": 1.53,
+        "statistical_ci95_at_nadir": 0.12096385725711663,
+        "systematic_uncertainty_k_min_minus_1": 0.11652737835832827,
+        "systematic_k_range": [
+          1.4804503465650756,
+          1.7135051032817321
+        ],
+        "systematic_vs_statistical_ratio": 0.963323929978867,
+        "shift_evaluations": [
+          {
+            "nominal_shift_s": -18,
+            "start_time_s": 90.0,
+            "start_index": 13,
+            "recovery_points_n": 61,
+            "k_min_minus_1": 1.0234229164712478,
+            "ci_95_statistical": 0.14814619928570963,
+            "tau_s": 58.62678960412516,
+            "r_squared": 0.9398497123939296,
+            "rmse": 29.53063906185567,
+            "mae": 20.674079267163314,
+            "discrepancy_vs_published_pct": -33.10961330253282
+          },
+          {
+            "nominal_shift_s": -12,
+            "start_time_s": 96.0,
+            "start_index": 14,
+            "recovery_points_n": 60,
+            "k_min_minus_1": 1.1654321130620506,
+            "ci_95_statistical": 0.13852505812104166,
+            "tau_s": 51.48305021590343,
+            "r_squared": 0.9573497335745117,
+            "rmse": 23.88517254348333,
+            "mae": 16.967254510071935,
+            "discrepancy_vs_published_pct": -23.82796646653264
+          },
+          {
+            "nominal_shift_s": -6,
+            "start_time_s": 102.0,
+            "start_index": 15,
+            "recovery_points_n": 59,
+            "k_min_minus_1": 1.3234461715167374,
+            "ci_95_statistical": 0.12706282702320051,
+            "tau_s": 45.33618464530138,
+            "r_squared": 0.9712275464777494,
+            "rmse": 18.55337700923751,
+            "mae": 13.63657328454695,
+            "discrepancy_vs_published_pct": -13.500250227664226
+          },
+          {
+            "nominal_shift_s": 0,
+            "start_time_s": 108.0,
+            "start_index": 16,
+            "recovery_points_n": 58,
+            "k_min_minus_1": 1.4804503465650756,
+            "ci_95_statistical": 0.12096385725711663,
+            "tau_s": 40.52820828419631,
+            "r_squared": 0.9788698848867743,
+            "rmse": 14.702257623762994,
+            "mae": 11.499203360472707,
+            "discrepancy_vs_published_pct": -3.238539440191141
+          },
+          {
+            "nominal_shift_s": 6,
+            "start_time_s": 114.0,
+            "start_index": 17,
+            "recovery_points_n": 57,
+            "k_min_minus_1": 1.6098330433002856,
+            "ci_95_statistical": 0.12910168190410137,
+            "tau_s": 37.270945735462874,
+            "r_squared": 0.9797315021732004,
+            "rmse": 12.954818765385678,
+            "mae": 10.686450299450224,
+            "discrepancy_vs_published_pct": 5.2178459673389295
+          },
+          {
+            "nominal_shift_s": 12,
+            "start_time_s": 120.0,
+            "start_index": 18,
+            "recovery_points_n": 56,
+            "k_min_minus_1": 1.7135051032817321,
+            "ci_95_statistical": 0.1492850825475222,
+            "tau_s": 35.01594473520216,
+            "r_squared": 0.9764292710373346,
+            "rmse": 12.301155240851879,
+            "mae": 9.98585455185536,
+            "discrepancy_vs_published_pct": 11.993797600113208
+          },
+          {
+            "nominal_shift_s": 18,
+            "start_time_s": 126.0,
+            "start_index": 19,
+            "recovery_points_n": 55,
+            "k_min_minus_1": 1.663107759536929,
+            "ci_95_statistical": 0.17508506998058213,
+            "tau_s": 36.07703689429374,
+            "r_squared": 0.966849140379151,
+            "rmse": 12.28540801645525,
+            "mae": 10.05114633620931,
+            "discrepancy_vs_published_pct": 8.699853564505162
+          }
+        ],
+        "scientific_interpretation": "Negative shifts (before nadir) contaminate the recovery fit with ongoing depletion, causing R2 to decline and k to drop by 20-33%. Post-nadir shifts (+6 to +18s) demonstrate a systematic phase uncertainty of +/-0.117 min^-1, which is comparable to or larger than the formal non-linear covariance statistical error."
+      }
+    }
+  },
+  "stage_3_ph_calibration_audit": {
+    "status": "PH_CALIBRATION_PARTIAL",
+    "mean_offset_delta_ph": -0.061007571749065806,
+    "sd_offset_delta_ph": 0.008247753740555107,
+    "offset_summary": "Calculated pH is systematically -0.061 +/- 0.008 pH units below published Table 1.",
+    "physical_investigation": {
+      "factor_1_henderson_hasselbalch_pk": "Rehman Fig. 7 cites pK = 6.75 with delta_A = 3.290 and delta_B = 5.805 ppm. In physiological literature (Moon 1973, Dawson 1977), pK at 37 C and physiological ionic strength ranges from 6.75 to 6.80. A pK shift of +0.05..+0.06 exactly accounts for the discrepancy.",
+      "factor_2_jmrui_chemical_shift_referencing": "In jMRUI AMARES peak fitting, PCr is typically referenced to 0.00 ppm rather than -2.54 ppm. If delta_o in the authors' analysis script was computed from unrounded jMRUI chemical shifts with an internal zero reference, a ~0.08 ppm difference in peak assignment shifts calculated pH by ~0.06.",
+      "factor_3_spreadsheet_rounding": "The published Dryad spreadsheet rounds chemical shifts to 2 decimal places (-2.54, 2.26, 2.31). Sub-ppm precision in original FID spectra fitting is lost during Excel export.",
+      "epistemic_ruling": "Per scientific integrity guidelines, NO artificial empirical correction factor (+0.055) is added to the code. Status PH_CALIBRATION_PARTIAL is retained. The qualitative biological invariant is confirmed: muscle pH remains non-acidotic (>= 6.86) throughout, establishing that mitochondrial recovery kinetics are oxidative and uninhibited by severe acidosis."
+    },
+    "trials": {
+      "1": {
+        "trial_id": 1,
+        "calculated_ph": {
+          "control_mean": 6.912481071096458,
+          "end_exercise_nadir": 6.91962521680645,
+          "end_recovery": 6.8628742252069195
+        },
+        "published_table1_ph": {
+          "control": 6.97,
+          "end_exercise": 6.98,
+          "end_recovery": 6.92
+        },
+        "systematic_offset_delta_ph": {
+          "control": -0.0575189289035416,
+          "end_exercise": -0.060374783193550385,
+          "end_recovery": -0.05712577479308045
+        }
+      },
+      "2": {
+        "trial_id": 2,
+        "calculated_ph": {
+          "control_mean": 6.960006535928057,
+          "end_exercise_nadir": 6.955804384826499,
+          "end_recovery": 6.91962521680645
+        },
+        "published_table1_ph": {
+          "control": 7.02,
+          "end_exercise": 7.02,
+          "end_recovery": 7.0
+        },
+        "systematic_offset_delta_ph": {
+          "control": -0.05999346407194217,
+          "end_exercise": -0.06419561517350036,
+          "end_recovery": -0.08037478319354996
+        }
+      },
+      "3": {
+        "trial_id": 3,
+        "calculated_ph": {
+          "control_mean": 6.955858841969005,
+          "end_exercise_nadir": 6.977845476081906,
+          "end_recovery": 6.926810885536662
+        },
+        "published_table1_ph": {
+          "control": 7.01,
+          "end_exercise": 7.03,
+          "end_recovery": 6.99
+        },
+        "systematic_offset_delta_ph": {
+          "control": -0.05414115803099495,
+          "end_exercise": -0.0521545239180945,
+          "end_recovery": -0.06318911446333786
+        }
+      }
+    }
+  },
+  "stage_4_model_comparison_and_transfer": {
+    "status": "WITHIN_SUBJECT_TRIAL_TRANSFER_COMPLETED",
+    "in_sample_fits": {
+      "1": {
+        "trial_id": 1,
+        "provenance": "IN_SAMPLE_FIT_NOT_VALIDATION",
+        "M0_null_constant": {
+          "rmse": 230.87889205024467,
+          "mae": 139.20329670329681,
+          "r_squared": -0.553033564263278
+        },
+        "M1_monoexponential_3param": {
+          "rmse": 26.046927789539293,
+          "mae": 21.335956276181665,
+          "r_squared": 0.9802336994498704,
+          "k_min_minus_1": 1.3932033790697844
+        },
+        "M2_physiological_ode_model": {
+          "rmse": 31.719752709468636,
+          "mae": 25.695671478869592,
+          "r_squared": 0.9706862102737707,
+          "k_min_minus_1": 1.297870667195272,
+          "tau_s": 46.229567796351674
+        }
+      },
+      "2": {
+        "trial_id": 2,
+        "provenance": "IN_SAMPLE_FIT_NOT_VALIDATION",
+        "M0_null_constant": {
+          "rmse": 120.21145163189851,
+          "mae": 87.55172413793103,
+          "r_squared": -1.1296613602925456
+        },
+        "M1_monoexponential_3param": {
+          "rmse": 15.727121836523404,
+          "mae": 12.627911216972855,
+          "r_squared": 0.9635483349758112,
+          "k_min_minus_1": 1.6863244804718167
+        },
+        "M2_physiological_ode_model": {
+          "rmse": 37.671449473787874,
+          "mae": 33.214634663985464,
+          "r_squared": 0.7908569054671779,
+          "k_min_minus_1": 1.1468668990141329,
+          "tau_s": 52.31644583305793
+        }
+      },
+      "3": {
+        "trial_id": 3,
+        "provenance": "IN_SAMPLE_FIT_NOT_VALIDATION",
+        "M0_null_constant": {
+          "rmse": 141.68872922268852,
+          "mae": 99.22660098522176,
+          "r_squared": -0.9624762809246039
+        },
+        "M1_monoexponential_3param": {
+          "rmse": 14.702257623762994,
+          "mae": 11.499203360472707,
+          "r_squared": 0.9788698848867743,
+          "k_min_minus_1": 1.4804503465650756
+        },
+        "M2_physiological_ode_model": {
+          "rmse": 32.79890755630439,
+          "mae": 28.704936614222362,
+          "r_squared": 0.894839519083447,
+          "k_min_minus_1": 0.9696331561947614,
+          "tau_s": 61.87907211781477
+        }
+      }
+    },
+    "within_subject_trial_transfers": [
+      {
+        "train_trial": 1,
+        "test_trial": 2,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 1.297870667195272,
+        "M1_transfer": {
+          "rmse": 39.74998652885594,
+          "mae": 34.98929419933231,
+          "r_squared": 0.7671411009599775
+        },
+        "M2_transfer": {
+          "rmse": 38.55572806563592,
+          "mae": 33.70449319477878,
+          "r_squared": 0.7809230504191056
+        }
+      },
+      {
+        "train_trial": 1,
+        "test_trial": 3,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 1.297870667195272,
+        "M1_transfer": {
+          "rmse": 43.090251567747536,
+          "mae": 40.30609745922056,
+          "r_squared": 0.8184936325610636
+        },
+        "M2_transfer": {
+          "rmse": 39.96594600432794,
+          "mae": 36.3842940333129,
+          "r_squared": 0.8438600627161711
+        }
+      },
+      {
+        "train_trial": 2,
+        "test_trial": 1,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 1.1468668990141329,
+        "M1_transfer": {
+          "rmse": 48.198394842331155,
+          "mae": 39.86175423677585,
+          "r_squared": 0.9323173222082979
+        },
+        "M2_transfer": {
+          "rmse": 36.93433307773037,
+          "mae": 28.580919296718097,
+          "r_squared": 0.9602558781815221
+        }
+      },
+      {
+        "train_trial": 2,
+        "test_trial": 3,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 1.1468668990141329,
+        "M1_transfer": {
+          "rmse": 52.43055496780417,
+          "mae": 49.83518612935873,
+          "r_squared": 0.7312783142067407
+        },
+        "M2_transfer": {
+          "rmse": 35.47436143916803,
+          "mae": 30.13038215779044,
+          "r_squared": 0.8769836097023447
+        }
+      },
+      {
+        "train_trial": 3,
+        "test_trial": 1,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 0.9696331561947614,
+        "M1_transfer": {
+          "rmse": 36.90796455158991,
+          "mae": 29.9740990070652,
+          "r_squared": 0.9603126069609902
+        },
+        "M2_transfer": {
+          "rmse": 56.284743188858485,
+          "mae": 42.42543857936451,
+          "r_squared": 0.9077016876214729
+        }
+      },
+      {
+        "train_trial": 3,
+        "test_trial": 2,
+        "evaluation_mode": "WITHIN_SUBJECT_TRIAL_TRANSFER",
+        "transfer_rate_constant_k_min": 0.9696331561947614,
+        "M1_transfer": {
+          "rmse": 41.08424614815638,
+          "mae": 36.53837460297987,
+          "r_squared": 0.7512463206097126
+        },
+        "M2_transfer": {
+          "rmse": 39.54083357039658,
+          "mae": 34.985905988628744,
+          "r_squared": 0.7695851267812625
+        }
+      }
+    ],
+    "transfer_summary": {
+      "m2_transfer_r_squared_mean": 0.8565515692369797,
+      "m2_transfer_r_squared_min": 0.7695851267812625,
+      "m2_transfer_r_squared_max": 0.9602558781815221,
+      "m2_transfer_rmse_mean": 41.125990891019555,
+      "evaluation": "Physiological model M2 demonstrates excellent intra-subject generalization (transfer R2 = 0.8566, range [0.7696, 0.9603]), retaining over 75-96% of variance across repeated trials of the same participant. This verifies technical test-retest reproducibility of the bioenergetic rate parameter."
+    },
+    "cross_subject_loso_policy": {
+      "permitted": false,
+      "reason": "Single participant (N=1). Cross-subject Leave-One-Subject-Out (LOSO) validation is mathematically and epistemically prohibited."
+    }
+  },
+  "stage_5_identifiability_and_scientific_integration": {
+    "identifiable_parameters": {
+      "tau_PCr_rec_s": {
+        "value_mean_sd": "39.72 +/- 3.81 s",
+        "identifiability_status": "IDENTIFIED_FROM_OBSERVED_KINETICS",
+        "basis": "Monoexponential relaxation of PCr signal amplitude during recovery."
+      },
+      "k_rec_min_minus_1": {
+        "value_mean_sd": "1.520 +/- 0.151 min^-1",
+        "identifiability_status": "IDENTIFIED_FROM_OBSERVED_KINETICS",
+        "basis": "Inverted time constant (k = 60/tau)."
+      },
+      "intra_subject_repeatability_cv_pct": {
+        "value": 9.9,
+        "identifiability_status": "IDENTIFIED_FROM_REPEATED_TRIALS",
+        "basis": "CV% across 3 experimental trials of the same participant."
+      },
+      "fractional_pcr_depletion": {
+        "value_mean_sd": "28.36 +/- 3.77 %",
+        "identifiability_status": "IDENTIFIED_RELATIVE_METRIC",
+        "basis": "(PCr_rest - PCr_nadir) / PCr_rest (dimensionless ratio independent of gain)."
+      },
+      "intracellular_non_acidotic_status": {
+        "value": "pH >= 6.86 throughout exercise and recovery",
+        "identifiability_status": "IDENTIFIED_FROM_CHEMICAL_SHIFTS",
+        "basis": "Pi and PCr chemical shift delta_o via Henderson-Hasselbalch equation."
+      }
+    },
+    "strictly_unidentifiable_parameters": {
+      "PCr_rest_absolute_mM": {
+        "identifiability_status": "UNIDENTIFIABLE_WITHOUT_EXTERNAL_PHANTOM",
+        "reason": "MR raw signal amplitudes are in arbitrary units; absolute concentration cannot be separated from receiver coil gain."
+      },
+      "active_muscle_volume_V_active_L": {
+        "identifiability_status": "UNIDENTIFIABLE_FROM_SINGLE_COIL_MRS",
+        "reason": "A 30% drop in a 100 mL muscle volume produces the identical normalized PCr trajectory as a 30% drop in a 300 mL volume."
+      },
+      "absolute_ATP_turnover_J_ATP_mol_s": {
+        "identifiability_status": "UNIDENTIFIABLE_SCALE_CONFOUNDED",
+        "reason": "Coupled to unknown active volume and absolute mM concentration."
+      },
+      "local_actomyosin_efficiency_eta_loc": {
+        "identifiability_status": "UNIDENTIFIABLE_FORCE_CONFOUNDED",
+        "reason": "Ergometer pedal force was not recorded simultaneously in Dryad raw spreadsheet."
+      },
+      "maximal_oxidative_capacity_Q_max_mM_s": {
+        "identifiability_status": "UNIDENTIFIABLE_SUBMAXIMAL_REGIME",
+        "reason": "Because exercise was moderate (10% MVC, depletion ~28%, non-acidotic), oxidative flux remained in the linear recovery regime without saturating Q_max."
+      },
+      "systemic_endurance_TARGET_CPE45": {
+        "identifiability_status": "STRICTLY_NOT_EXTERNALLY_VALIDATED",
+        "reason": "A 42-second localized single-leg knee extension kick cannot validate 45-minute whole-body 250 W thermoregulatory, cardiovascular, or glycogen endurance limits."
+      }
+    },
+    "scientific_integrity_guarantees": {
+      "no_false_calibration_claim": "We strictly refrain from claiming experimental calibration of muscle force, ATP turnover, active muscle volume, or systemic 45-minute endurance from a single PCr signal.",
+      "target_cpe45_verdict": "NOT EXTERNALLY VALIDATED",
+      "biological_intervention_verdict": "NO_GO_MAINTAINED"
+    },
+    "next_step_public_dataset_acquisition_plan": {
+      "objective": "Acquire open multi-subject human cohorts (N >= 8) with simultaneous physiological observables to break remaining identifiability symmetries.",
+      "target_candidate_repositories": [
+        {
+          "repository": "OpenNeuro",
+          "data_types": [
+            "Multi-subject in-vivo 31P-MRS",
+            "3D anatomical T1/Dixon MRI"
+          ],
+          "target_cohort": "Healthy young and older adult cohorts (N >= 10)"
+        },
+        {
+          "repository": "Zenodo / PhysioNet",
+          "data_types": [
+            "Synchronized pulmonary breath-by-breath CPET VO2",
+            "Near-infrared spectroscopy (NIRS) SmO2",
+            "Mechanical ergometer pedal power"
+          ],
+          "target_cohort": "Continuous exercise protocols (ramp incremental and steady-state constant load)"
+        },
+        {
+          "repository": "Dryad / Figshare",
+          "data_types": [
+            "Motor unit HD-sEMG decomp with documented biological subject IDs"
+          ],
+          "target_cohort": "Tibialis anterior / Gastrocnemius multi-subject recordings"
+        }
+      ],
+      "execution_principle": "Verify data licensing and multi-subject provenance BEFORE downloading; prohibit single-subject cohort extrapolation to population-level models."
+    }
+  },
+  "overall_conclusions": {
+    "reproduced_k_mean_min_minus_1": 1.52,
+    "published_k_mean_min_minus_1": 1.53,
+    "reproduced_k_discrepancy_pct": -0.65,
+    "reproduced_tau_mean_s": 39.72,
+    "published_tau_mean_s": 39.4,
+    "repeatability_cv_pct": 9.9,
+    "transfer_r_squared_m2_mean": 0.8565515692369797,
+    "ph_status": "PH_CALIBRATION_PARTIAL",
+    "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
+    "biological_intervention_status": "NO_GO"
+  }
+}

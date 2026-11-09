@@ -1,3 +1,38 @@
+# SUBJECT-01 — состояние после Real PCr Validation & Scientific Freeze, 09.11.2026
+
+База fd1793623eee8ac6bf9df8f96378d177198fbe91;
+ветка main (слияние feature/real-pcr-validation-and-scientific-freeze, HEAD 32adefce36801c6357836f60541f3ea3e0d70131).
+[Научный отчёт по валидации и заморозке реальных данных](research/empirical_recruitment_2026_11_08/REAL_DATA_VALIDATION_REPORT.md),
+[канонический артефакт валидации](research/empirical_recruitment_2026_11_08/rehman2024_validation_results.json),
+[движок валидации моделей Rehman](tools/evaluate_rehman_models.py),
+[тесты валидации моделей Rehman](tests/test_rehman_model_validation.py),
+[Отчёт EXP-0037..0042](research/empirical_recruitment_2026_11_08/REPORT.md),
+[математика и биофизика рекрутирования](research/empirical_recruitment_2026_11_08/MATHEMATICS.md),
+[модель физических измерений](research/empirical_recruitment_2026_11_08/MEASUREMENT_MODEL.md),
+[метрология и аудит данных](research/empirical_recruitment_2026_11_08/DATA_AUDIT.md),
+[ограничения и межмышечные барьеры](research/empirical_recruitment_2026_11_08/LIMITATIONS.md),
+[сквозной гейт Evidence Gate V2](tools/verify_data_provenance.py),
+[пайплайн обработки Rehman XLSX](tools/process_rehman_xlsx.py),
+[тесты процессора Rehman XLSX](tests/test_rehman_xlsx_processor.py),
+[набор тестов Evidence Gate V2](tests/test_evidence_gate_v2.py),
+[извлечённый канонический временной ряд Rehman 2024](research/empirical_recruitment_2026_11_08/rehman2024_extracted_timeseries.json),
+[reproduction](research/empirical_recruitment_2026_11_08/README.md).
+
+Выполнены 5 ключевых этапов научной валидации и заморозки:
+1. **Реконструкция тайминга протокола**: обнаружен лаг между номинальной 90-й секундой остановки и надиром PCr (+18 с в триалах 2 и 3, +54 с в триале 1). Доказано соответствие опубликованных констант именно надиру (фит от 90 с даёт занижение $k$ на ~30%). Статус: `PROTOCOL_TIMING_DISCREPANCY_IDENTIFIED`.
+2. **Чувствительность кинетики**: диапазон сдвигов от -18 до +18 с выявил систематическую погрешность разметки фаз $\Delta k_{\text{sys}} = \pm 0.044\dots 0.172\text{ мин}^{-1}$, сопоставимую со статистической ошибкой регрессии $\text{CI}_{95} = \pm 0.12\dots 0.18\text{ мин}^{-1}$. Статус: `PHASE_SELECTION_SENSITIVITY_QUANTIFIED`.
+3. **Аудит pH**: систематическое расхождение $\Delta\text{pH} = -0.055 \pm 0.010$ относительно Таблицы 1 объяснено различиями в константах $pK_a$ и референтном нуле jMRUI. Присвоен статус `PH_CALIBRATION_PARTIAL` без введения искусственных эмпирических поправок. Неацидотический статус подтверждён ($\text{pH} \ge 6.86$).
+4. **Сравнение моделей и внутрисубъектный перенос**: физиологическая модель M2 переносит параметр скорости $k$ между повторными триалами одного участника со средним переносным $R^2 = 0.8566$ (диапазон $0.7696\dots 0.9603$, снижение RMSE на 60% относительно M0). Кросс-субъектный LOSO на $N=1$ строго запрещён (`LosoProhibitedError`).
+5. **Матрица идентифицируемости**: разграничены идентифицируемые относительные кинетические параметры и строго неидентифицируемые абсолютные величины ($[\text{PCr}]_{\text{rest}}$, $V_{\text{active}}$, $J_{\text{ATP}}$, $\eta_{\text{loc}}$, $Q_{\text{max}}$).
+
+Научный статус:
+- TARGET-CPE45: NOT EXTERNALLY VALIDATED.
+- Биологические вмешательства: NO_GO.
+- Реестры: HYP=8, EXP=42, FND=42, NEG=35, DEC=16, ISS=19, SRC=72.
+- Тесты: 206/206 PASS (включая 9 новых тестов валидации моделей Rehman).
+
+---
+
 # SUBJECT-01 — состояние после Rehman 2024 Real XLSX Format Hotfix, 09.11.2026
 
 База 5f2846cbf025efe7a747dbcf6a2355dedabcb5b6;

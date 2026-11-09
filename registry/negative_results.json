@@ -254,5 +254,13 @@
     "hypothesis": "More than 99% of energy in a 45-minute 250 W whole-body test is supplied oxidatively based on the ratio of single-muscle static PCr buffer to external mechanical work.",
     "result": "Refuted: Dividing single-muscle local PCr buffer capacity (0.62 kJ) by whole-body external mechanical work (675 kJ) commits a category error between static local capacity and dynamic whole-body flux, confounds mechanical work with gross metabolic expenditure (~3375 kJ), and ignores systemic anaerobic glycolysis (~75 kJ) and multi-muscle recruitment.",
     "impact": "Enforces multi-dimensional energetic accounting separating mechanical work, metabolic cost, ATP turnover, oxidative resynthesis, and glycolysis; bars invalid >99% oxidative claims for TARGET-CPE45."
+  },
+  {
+    "id": "NEG-0035",
+    "date": "2026-11-09",
+    "experiment_id": "EXP-0042",
+    "hypothesis": "Nominal exercise protocol timing (fitting from 90s nominal stop) reproduces true recovery kinetics, and arbitrary MR signal amplitudes can identify absolute resting PCr concentration and active muscle volume.",
+    "result": "Refuted: (1) Fitting from nominal 90s stop instead of actual biochemical nadir contaminates recovery with ongoing exercise depletion, underestimating k by 20-33% (dropping k from ~1.5 to ~1.0-1.1 min^-1) and severely degrading fit quality; (2) Arbitrary MR signal amplitudes are intrinsically scale-confounded with receiver coil sensitivity and cannot identify absolute mM concentration; (3) Single-coil MRS creates an exact unidentifiable scaling symmetry between active muscle volume and localized metabolic depletion; (4) Cross-subject LOSO validation is mathematically impossible on an N=1 cohort.",
+    "impact": "Mandates empirical nadir detection for phase alignment; bars reporting pre-nadir fits as recovery kinetics; maintains absolute PCr concentration and active volume as strictly unidentifiable; prohibits cross-subject generalization claims from single-participant MRS."
   }
 ]
