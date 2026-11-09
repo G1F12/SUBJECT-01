@@ -49,3 +49,5 @@ jobs:
         run: python -m unittest discover -s research/empirical_anchors_2026_11_08 -p test_empirical_anchors.py
       - name: Verify Cycle 9 empirical recruitment, volume conduction and LOSO validation
         run: python -m unittest discover -s research/empirical_recruitment_2026_11_08 -p test_empirical_recruitment.py
+      - name: Verify Evidence Gate V2 and negative testing battery
+        run: python -m unittest discover -s tests -p test_evidence_gate_v2.py
