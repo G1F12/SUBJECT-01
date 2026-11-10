@@ -2,7 +2,7 @@
   "experiment_id": "EXP-0044",
   "dataset_id": "SRC-0074_PHYSIONET_MALAGA_TREADMILL_CPET",
   "cycle": 11,
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "governing_standard": "EVIDENCE_GATE_V2",
   "cohort_description": {
     "source_id": "SRC-0074",
@@ -12,7 +12,11 @@
     "version": "1.0.1",
     "n_total_csv_rows": 575087,
     "n_subject_info_entries": 992,
+    "n_raw_unique_subjects": 857,
     "n_valid_incremental_tests": 981,
+    "n_valid_unique_subjects": 846,
+    "n_repeat_subjects": 116,
+    "n_tests_from_repeat_subjects": 251,
     "verified_sha256": {
       "LICENSE.txt": "92905d58fa4b1d55f2ad00ece3a8282073565d228ce888a18274ca6e556e7361",
       "subject-info.csv": "e9ca5ba20eb1272df56c11d3e584ec3997d5484454812bd94966e58082415f16",
@@ -25,155 +29,489 @@
       "vco2_units": "mL/min (observed range: 51 to 7566 mL/min)",
       "speed_units": "km/h (treadmill belt speed)",
       "audit_verdict": "UNITS_CONSISTENT_WITH_PHYSIOLOGICAL_RESPIRATORY_EXCHANGE"
+    },
+    "sex_encoding_audit": {
+      "raw_values": "0 and 1",
+      "mapping": "0 = Male (836 valid tests), 1 = Female (145 valid tests)",
+      "audit_verdict": "VERIFIED_AGAINST_PHYSIONET_METADATA"
     }
   },
   "respiratory_exchange_and_oxycaloric_audit": {
-    "n_breath_observations_analyzed": 568016,
-    "rer_distribution": {
-      "mean": 1.0097088124212386,
-      "sd": 0.19273248514851735,
-      "p05": 0.7396297251734951,
-      "p25": 0.8715534633490248,
-      "median": 0.9834074326117772,
-      "p75": 1.1249651681477195,
-      "p95": 1.3611274576989327
+    "classification_status": {
+      "vo2_vco2_rer": "MEASURED_PULMONARY_GAS_EXCHANGE",
+      "oxycaloric_equivalent": "DERIVED_MODEL_DEPENDENT_NOT_DIRECT_CALORIMETRY",
+      "substrate_oxidation_in_non_steady_state": "NOT_INDEPENDENTLY_VALIDATED"
     },
-    "oxycaloric_equivalent_kj_per_l_distribution": {
-      "mean": 21.37365792697916,
-      "sd": 0.4284665221021722,
-      "p05": 20.455015275336248,
-      "p25": 21.0908876933423,
-      "median": 21.630023825188765,
+    "n_breath_observations_analyzed": 569379,
+    "rer_greater_than_1_analysis": {
+      "n_observations_rer_gt_1": 266461,
+      "percentage_rer_gt_1": 46.79852962613655,
+      "physiological_interpretation": "Under incremental exercise to exhaustion, 46.8% of observations exhibit RER > 1.00. This reflects non-metabolic CO2 exhalation produced by bicarbonate buffering of metabolic hydrogen ions (H+ + HCO3- <-> H2CO3 <-> H2O + CO2) and hyperventilation, not cellular carbohydrate oxidation exceeding 100%."
+    },
+    "rer_distribution": {
+      "overall": {
+        "mean": 1.0117915007660632,
+        "sd": 0.19716165824206558,
+        "p05": 0.7397633010915411,
+        "p25": 0.8718667868839887,
+        "median": 0.9840044125758411,
+        "p75": 1.126232991097067,
+        "p95": 1.3674147932928686
+      },
+      "sub_threshold_aerobic_speed_le_8kmh": {
+        "n_observations": 259312,
+        "mean": 1.00963892646503,
+        "median": 0.9365624057717341,
+        "p05": 0.699408447244684,
+        "p95": 1.4417268453253198
+      },
+      "high_intensity_speed_ge_12kmh": {
+        "n_observations": 196651,
+        "mean": 1.055824121930315,
+        "median": 1.040273756251645,
+        "p05": 0.8799620018693788,
+        "p95": 1.2865864621429386
+      }
+    },
+    "derived_oxycaloric_equivalent_kj_per_l_distribution": {
+      "formula": "c_ox = 16.89 + 4.82 * min(max(RER, 0.707), 1.000)",
+      "mean": 21.37446307477268,
+      "sd": 0.42826889733463497,
+      "p05": 20.45565911126123,
+      "p25": 21.092397912780825,
+      "median": 21.632901268615555,
       "p75": 21.71,
       "p95": 21.71
     },
     "comparison_with_nominal_constant": {
       "nominal_c_ox_kj_per_l": 20.9,
-      "empirical_mean_c_ox_kj_per_l": 21.37365792697916,
-      "relative_difference_pct": 2.26630587071369,
-      "scientific_interpretation": "Empirical breath-by-breath RER across 979 treadmill CPET tests confirms that the empirical oxycaloric equivalent averages 21.37 kJ/L O2 (median 21.71 kJ/L during vigorous work), matching the canonical 20.9 kJ/L assumption within 2.2% across the whole population."
+      "clipped_formula_mean_c_ox_kj_per_l": 21.37446307477268,
+      "mathematical_difference_pct": 2.2701582525008726,
+      "scientific_interpretation": "The 2.26% difference between the nominal 20.9 kJ/L constant and the formula mean (21.37 kJ/L) is a mathematical property of clipping non-steady-state hyperventilatory RER to 1.000 (which pins all 46.8% of RER > 1 breaths to 21.71 kJ/L). It must NOT be treated as an independent experimental error or direct validation of true non-steady-state caloric expenditure."
     }
   },
   "macroscopic_kinetics_validation": {
-    "n_folds": 5,
-    "n_tests_evaluated": 981,
-    "validation_strategy": "5_FOLD_OUT_OF_SAMPLE_CROSS_VALIDATION",
-    "M0_null_summary": {
-      "rmse_mean": 950.9006070918061,
-      "rmse_sd": 202.9943743665444,
-      "mae_mean": 821.3410006778568,
-      "mae_sd": 196.91860055644352,
-      "r_squared_mean": -0.6259897706915637,
-      "r_squared_sd": 1.853714534409971,
-      "bias_mean": 29.604223506879507,
-      "bias_sd": 459.1625326902899
+    "validation_strategy": "5_FOLD_SUBJECT_GROUPED_CROSS_VALIDATION",
+    "group_kfold_subject_validation": {
+      "is_grouped": true,
+      "leakage_status": "GUARANTEED_ZERO_LEAKAGE",
+      "n_folds": 5,
+      "n_tests_evaluated": 981,
+      "folds": [
+        {
+          "fold_idx": 0,
+          "n_train_tests": 784,
+          "n_val_tests": 197,
+          "n_train_subjects": 677,
+          "n_val_subjects": 169,
+          "subject_overlap_count": 0
+        },
+        {
+          "fold_idx": 1,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 677,
+          "n_val_subjects": 169,
+          "subject_overlap_count": 0
+        },
+        {
+          "fold_idx": 2,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 677,
+          "n_val_subjects": 169,
+          "subject_overlap_count": 0
+        },
+        {
+          "fold_idx": 3,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 677,
+          "n_val_subjects": 169,
+          "subject_overlap_count": 0
+        },
+        {
+          "fold_idx": 4,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 676,
+          "n_val_subjects": 170,
+          "subject_overlap_count": 0
+        }
+      ],
+      "M0_null_summary": {
+        "rmse_mean": 950.7498279448822,
+        "rmse_sd": 202.90377010089256,
+        "mae_mean": 821.1347726828013,
+        "mae_sd": 196.86657051427434,
+        "r_squared_mean": -0.6244460799736433,
+        "r_squared_sd": 1.846065722647201,
+        "bias_mean": 29.641279872886802,
+        "bias_sd": 458.8077273432224
+      },
+      "M1_empirical_linear_summary": {
+        "rmse_mean": 570.0035797267768,
+        "rmse_sd": 186.08435202654763,
+        "mae_mean": 455.5602045594374,
+        "mae_sd": 179.53828023565524,
+        "r_squared_mean": 0.3296190456176574,
+        "r_squared_sd": 1.1465446444906484,
+        "bias_mean": -0.7064052090168077,
+        "bias_sd": 381.67503894566215
+      },
+      "M2_linear_mass_summary": {
+        "rmse_mean": 514.1320186716575,
+        "rmse_sd": 156.53812976185836,
+        "mae_mean": 391.3948305545052,
+        "mae_sd": 142.83921117773815,
+        "r_squared_mean": 0.5157428228624154,
+        "r_squared_sd": 0.7881827629801432,
+        "bias_mean": 8.893806323984396,
+        "bias_sd": 273.69001325821284
+      },
+      "M3_dynamic_ode_summary": {
+        "rmse_mean": 469.91739826433434,
+        "rmse_sd": 211.77397288272826,
+        "mae_mean": 403.4725768812597,
+        "mae_sd": 193.70807802533707,
+        "r_squared_mean": 0.4837030480346027,
+        "r_squared_sd": 1.095317068426063,
+        "bias_mean": 0.925939793572706,
+        "bias_sd": 380.7684013721119
+      },
+      "M4_dynamic_allometric_summary": {
+        "rmse_mean": 404.0165665296715,
+        "rmse_sd": 175.07765444755285,
+        "mae_mean": 336.65240445617275,
+        "mae_sd": 151.1809273160132,
+        "r_squared_mean": 0.664804909146265,
+        "r_squared_sd": 0.737353935608393,
+        "bias_mean": 28.33409848955033,
+        "bias_sd": 285.4568152739181
+      },
+      "M_static_allometric_summary": {
+        "rmse_mean": 516.0598032777306,
+        "rmse_sd": 160.41323049442045,
+        "mae_mean": 395.9888648139556,
+        "mae_sd": 146.39268957678854,
+        "r_squared_mean": 0.5145124183502956,
+        "r_squared_sd": 0.7744724861157128,
+        "bias_mean": 26.466004184604852,
+        "bias_sd": 284.88901342086973
+      },
+      "baseline_persistence_summary": {
+        "rmse_mean": 96.62707902745845,
+        "rmse_sd": 15.834990848989472,
+        "mae_mean": 44.465758012725004,
+        "mae_sd": 12.115027804549662,
+        "r_squared_mean": 0.9816658303938851,
+        "r_squared_sd": 0.018931850727441413,
+        "bias_mean": 1.808454867984229,
+        "bias_sd": 0.7775868341562554,
+        "information_regime": "AUTOREGRESSIVE_ONE_STEP_LOOKBACK: Observes prior measured breath VO2(t-1). Informational advantage over prospective models that predict solely from external workload."
+      },
+      "baseline_lagged_summary": {
+        "rmse_mean": 527.8132896470646,
+        "rmse_sd": 196.63515631144833,
+        "mae_mean": 436.1573118164161,
+        "mae_sd": 184.7905449446781,
+        "r_squared_mean": 0.3932093700340343,
+        "r_squared_sd": 1.1378691638563927,
+        "bias_mean": -10.016180448165482,
+        "bias_sd": 381.357152516418
+      },
+      "ad_hoc_cycling_transfer_summary": {
+        "rmse_mean": 584.8605413525756,
+        "rmse_sd": 176.03658925237585,
+        "mae_mean": 467.16207953442165,
+        "mae_sd": 178.30168752021373,
+        "r_squared_mean": 0.24648565059340063,
+        "r_squared_sd": 1.3364258828470532,
+        "bias_mean": 82.25747693734067,
+        "bias_sd": 382.18388223551176,
+        "status": "AD_HOC_CROSS_MODAL_MAPPING_FAILURE"
+      }
     },
-    "M1_empirical_linear_summary": {
-      "rmse_mean": 569.9254984798415,
-      "rmse_sd": 186.0847022847866,
-      "mae_mean": 455.46214266088066,
-      "mae_sd": 179.458841972212,
-      "r_squared_mean": 0.3297256183378761,
-      "r_squared_sd": 1.1467853169203612,
-      "bias_mean": -0.6045212388206985,
-      "bias_sd": 381.54364827313816
-    },
-    "M2_linear_mass_summary": {
-      "rmse_mean": 514.3608772091692,
-      "rmse_sd": 156.8178220430293,
-      "mae_mean": 391.6649481801171,
-      "mae_sd": 143.06406928981895,
-      "r_squared_mean": 0.514912214503074,
-      "r_squared_sd": 0.7877639719311701,
-      "bias_mean": 9.069774209849452,
-      "bias_sd": 274.2317992203949
-    },
-    "M3_dynamic_ode_summary": {
-      "rmse_mean": 469.822246678293,
-      "rmse_sd": 211.72882879843735,
-      "mae_mean": 403.3481462710083,
-      "mae_sd": 193.6469336662143,
-      "r_squared_mean": 0.4838060989109308,
-      "r_squared_sd": 1.0956739421715833,
-      "bias_mean": 1.0292118160452537,
-      "bias_sd": 380.64049503038154
-    },
-    "M4_dynamic_allometric_summary": {
-      "rmse_mean": 404.4262357647838,
-      "rmse_sd": 175.44740585749253,
-      "mae_mean": 337.01948725408437,
-      "mae_sd": 151.45937815974054,
-      "r_squared_mean": 0.6642072897445821,
-      "r_squared_sd": 0.7328548763187152,
-      "bias_mean": 28.514610394575946,
-      "bias_sd": 286.0517469396896
-    },
-    "baseline_persistence_summary": {
-      "rmse_mean": 96.62912899500306,
-      "rmse_sd": 15.842182184507527,
-      "mae_mean": 44.46583942995499,
-      "mae_sd": 12.11440884003979,
-      "r_squared_mean": 0.9816602258314239,
-      "r_squared_sd": 0.01894989585846205,
-      "bias_mean": 1.8085400295600844,
-      "bias_sd": 0.7782992889402716
-    },
-    "baseline_lagged_summary": {
-      "rmse_mean": 527.7387970534722,
-      "rmse_sd": 196.5950856568698,
-      "mae_mean": 436.02152343445647,
-      "mae_sd": 184.7373099528241,
-      "r_squared_mean": 0.3933093192186232,
-      "r_squared_sd": 1.1382502495366453,
-      "bias_mean": -9.917710804375666,
-      "bias_sd": 381.22014175269874
-    },
-    "naive_cycling_transfer_summary": {
-      "rmse_mean": 584.8605413525756,
-      "rmse_sd": 176.03658925237588,
-      "mae_mean": 467.16207953442165,
-      "mae_sd": 178.30168752021373,
-      "r_squared_mean": 0.24648565059340063,
-      "r_squared_sd": 1.3364258828470532,
-      "bias_mean": 82.25747693734067,
-      "bias_sd": 382.18388223551176
+    "legacy_test_level_validation_with_leakage_risk": {
+      "is_grouped": false,
+      "leakage_status": "SUBJECT_LEAKAGE_RISK_NOT_GROUPED",
+      "n_folds": 5,
+      "n_tests_evaluated": 981,
+      "folds": [
+        {
+          "fold_idx": 0,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 693,
+          "n_val_subjects": 193,
+          "subject_overlap_count": 40
+        },
+        {
+          "fold_idx": 1,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 703,
+          "n_val_subjects": 188,
+          "subject_overlap_count": 45
+        },
+        {
+          "fold_idx": 2,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 689,
+          "n_val_subjects": 193,
+          "subject_overlap_count": 36
+        },
+        {
+          "fold_idx": 3,
+          "n_train_tests": 785,
+          "n_val_tests": 196,
+          "n_train_subjects": 697,
+          "n_val_subjects": 187,
+          "subject_overlap_count": 38
+        },
+        {
+          "fold_idx": 4,
+          "n_train_tests": 784,
+          "n_val_tests": 197,
+          "n_train_subjects": 697,
+          "n_val_subjects": 186,
+          "subject_overlap_count": 37
+        }
+      ],
+      "M0_null_summary": {
+        "rmse_mean": 950.9006070918061,
+        "rmse_sd": 202.9943743665444,
+        "mae_mean": 821.3410006778568,
+        "mae_sd": 196.91860055644352,
+        "r_squared_mean": -0.6259897706915637,
+        "r_squared_sd": 1.853714534409971,
+        "bias_mean": 29.604223506879507,
+        "bias_sd": 459.1625326902899
+      },
+      "M1_empirical_linear_summary": {
+        "rmse_mean": 569.9254984798415,
+        "rmse_sd": 186.0847022847866,
+        "mae_mean": 455.46214266088066,
+        "mae_sd": 179.458841972212,
+        "r_squared_mean": 0.3297256183378761,
+        "r_squared_sd": 1.1467853169203612,
+        "bias_mean": -0.6045212388206985,
+        "bias_sd": 381.54364827313816
+      },
+      "M2_linear_mass_summary": {
+        "rmse_mean": 514.3608772091692,
+        "rmse_sd": 156.8178220430293,
+        "mae_mean": 391.6649481801171,
+        "mae_sd": 143.06406928981895,
+        "r_squared_mean": 0.514912214503074,
+        "r_squared_sd": 0.7877639719311701,
+        "bias_mean": 9.069774209849452,
+        "bias_sd": 274.2317992203949
+      },
+      "M3_dynamic_ode_summary": {
+        "rmse_mean": 469.822246678293,
+        "rmse_sd": 211.72882879843735,
+        "mae_mean": 403.3481462710083,
+        "mae_sd": 193.6469336662143,
+        "r_squared_mean": 0.4838060989109308,
+        "r_squared_sd": 1.0956739421715833,
+        "bias_mean": 1.0292118160452537,
+        "bias_sd": 380.64049503038154
+      },
+      "M4_dynamic_allometric_summary": {
+        "rmse_mean": 404.4262357647838,
+        "rmse_sd": 175.44740585749253,
+        "mae_mean": 337.01948725408437,
+        "mae_sd": 151.45937815974054,
+        "r_squared_mean": 0.6642072897445821,
+        "r_squared_sd": 0.7328548763187152,
+        "bias_mean": 28.514610394575946,
+        "bias_sd": 286.0517469396896
+      },
+      "M_static_allometric_summary": {
+        "rmse_mean": 516.4635929975835,
+        "rmse_sd": 160.70829219961246,
+        "mae_mean": 396.441506871419,
+        "mae_sd": 146.69132139360974,
+        "r_squared_mean": 0.5138512485187966,
+        "r_squared_sd": 0.7697632273648812,
+        "bias_mean": 26.641110307804407,
+        "bias_sd": 285.4539981114263
+      },
+      "baseline_persistence_summary": {
+        "rmse_mean": 96.62912899500306,
+        "rmse_sd": 15.842182184507527,
+        "mae_mean": 44.46583942995499,
+        "mae_sd": 12.11440884003979,
+        "r_squared_mean": 0.9816602258314239,
+        "r_squared_sd": 0.01894989585846205,
+        "bias_mean": 1.8085400295600844,
+        "bias_sd": 0.7782992889402716,
+        "information_regime": "AUTOREGRESSIVE_ONE_STEP_LOOKBACK: Observes prior measured breath VO2(t-1). Informational advantage over prospective models that predict solely from external workload."
+      },
+      "baseline_lagged_summary": {
+        "rmse_mean": 527.7387970534722,
+        "rmse_sd": 196.5950856568698,
+        "mae_mean": 436.02152343445647,
+        "mae_sd": 184.7373099528241,
+        "r_squared_mean": 0.3933093192186232,
+        "r_squared_sd": 1.1382502495366453,
+        "bias_mean": -9.917710804375666,
+        "bias_sd": 381.22014175269874
+      },
+      "ad_hoc_cycling_transfer_summary": {
+        "rmse_mean": 584.8605413525756,
+        "rmse_sd": 176.03658925237588,
+        "mae_mean": 467.16207953442165,
+        "mae_sd": 178.30168752021373,
+        "r_squared_mean": 0.24648565059340063,
+        "r_squared_sd": 1.3364258828470532,
+        "bias_mean": 82.25747693734067,
+        "bias_sd": 382.18388223551176,
+        "status": "AD_HOC_CROSS_MODAL_MAPPING_FAILURE"
+      }
     }
   },
-  "cross_modality_barrier_negative_result": {
-    "negative_result_id": "NEG-0037",
-    "title": "Non-transferability of cycling efficiency parameters to treadmill locomotion",
-    "cycling_model_applied_to_treadmill": {
-      "rmse_mean": 584.8605413525756,
-      "rmse_sd": 176.03658925237588,
-      "mae_mean": 467.16207953442165,
-      "mae_sd": 178.30168752021373,
-      "r_squared_mean": 0.24648565059340063,
-      "r_squared_sd": 1.3364258828470532,
-      "bias_mean": 82.25747693734067,
-      "bias_sd": 382.18388223551176
+  "statistical_reliability_audit": {
+    "paired_comparisons": {
+      "M4_vs_M3": {
+        "mean_rmse_reduction_ml_min": 65.90083173466297,
+        "paired_t_stat": 10.830160923246881,
+        "paired_t_p_value": 6.77548945662328e-26,
+        "wilcoxon_stat": 155557.0,
+        "wilcoxon_p_value": 7.458153770994772e-22
+      },
+      "M4_vs_M2": {
+        "mean_rmse_reduction_ml_min": 110.11545214198607,
+        "paired_t_stat": 39.72245681324464,
+        "paired_t_p_value": 2.2432392006553675e-206
+      },
+      "M4_vs_M1": {
+        "mean_rmse_reduction_ml_min": 165.98701319710554,
+        "paired_t_stat": 28.856923856933893,
+        "paired_t_p_value": 4.93279248422054e-133
+      },
+      "M3_vs_M1": {
+        "mean_rmse_reduction_ml_min": 100.08618146244257,
+        "paired_t_stat": 61.408592665268316,
+        "paired_t_p_value": 0.0
+      }
     },
-    "m4_treadmill_model": {
-      "rmse_mean": 404.4262357647838,
-      "rmse_sd": 175.44740585749253,
-      "mae_mean": 337.01948725408437,
-      "mae_sd": 151.45937815974054,
-      "r_squared_mean": 0.6642072897445821,
-      "r_squared_sd": 0.7328548763187152,
-      "bias_mean": 28.514610394575946,
-      "bias_sd": 286.0517469396896
+    "participant_bootstrap_ci95": {
+      "n_bootstraps": 1000,
+      "m4_rmse_ci95": [
+        393.58167994435394,
+        416.23246335196086
+      ],
+      "m4_r2_ci95": [
+        0.6123781658190024,
+        0.7034081796197099
+      ],
+      "m3_rmse_ci95": [
+        456.8628615331655,
+        484.4646975259335
+      ]
     },
-    "rmse_penalty_l_min": 0.1804343055877918,
-    "r2_penalty": 0.41772163915118143,
-    "mechanism": "Running locomotion incorporates substantial elastic strain energy storage/recoil in tendons, active vertical center-of-mass oscillations, and eccentric muscular contractions. Seated cycle ergometry is strictly concentric work against crank resistance. Direct transfer of cycling delta efficiency without locomotion-specific running economy causes massive systematic error.",
-    "epistemic_decision": "Decouple cycling bioenergetics from running locomotion; mandate mode-specific calibration."
+    "worst_participants_tail_analysis": {
+      "tail_fraction": 0.05,
+      "n_tests": 49,
+      "worst_m4_rmse_range": [
+        754.047869879913,
+        1588.0260524247037
+      ],
+      "worst_m4_rmse_mean": 947.6966563635204,
+      "worst_mean_body_mass_kg": 77.51224489795919,
+      "cohort_mean_body_mass_kg": 73.32212028542304,
+      "worst_mean_age_years": 31.367346938775512,
+      "cohort_mean_age_years": 28.99317023445464,
+      "tail_failure_mechanism": "Tail error concentrated in heavier individuals (>77 kg) and individuals with high non-linear hyperventilation/drift at supramaximal velocities."
+    },
+    "subgroup_performance": {
+      "by_sex": {
+        "Male": {
+          "n_tests": 836,
+          "m4_rmse_mean": 417.64040973285825,
+          "m4_rmse_sd": 179.1476871586646,
+          "m4_r2_mean": 0.6929479965230187,
+          "m4_r2_sd": 0.6764645342450435
+        },
+        "Female": {
+          "n_tests": 145,
+          "m4_rmse_mean": 325.4680636478496,
+          "m4_rmse_sd": 122.88201157883132,
+          "m4_r2_mean": 0.5025454536499464,
+          "m4_r2_sd": 1.0045545086699506
+        }
+      },
+      "by_age_bracket": {
+        "<18": {
+          "n_tests": 143,
+          "m4_rmse_mean": 405.6392170725629,
+          "m4_rmse_sd": 183.04365406016458,
+          "m4_r2_mean": 0.6545626166111868,
+          "m4_r2_sd": 0.48068110851714035
+        },
+        "18-29": {
+          "n_tests": 438,
+          "m4_rmse_mean": 387.9519791629548,
+          "m4_rmse_sd": 152.14504592001677,
+          "m4_r2_mean": 0.6615464440746601,
+          "m4_r2_sd": 1.0066247246160935
+        },
+        "30-44": {
+          "n_tests": 326,
+          "m4_rmse_mean": 429.5383503288614,
+          "m4_rmse_sd": 203.93422506960593,
+          "m4_r2_mean": 0.6617092180029236,
+          "m4_r2_sd": 0.3961694388334585
+        },
+        "45-59": {
+          "n_tests": 71,
+          "m4_rmse_mean": 382.2218774739787,
+          "m4_rmse_sd": 130.65358231248138,
+          "m4_r2_mean": 0.7245837452373901,
+          "m4_r2_sd": 0.26293846616420824
+        },
+        ">=60": {
+          "n_tests": 3,
+          "m4_rmse_mean": 414.540447665244,
+          "m4_rmse_sd": 57.240992452775714,
+          "m4_r2_mean": 0.5503894038591125,
+          "m4_r2_sd": 0.1890398980986838
+        }
+      }
+    }
+  },
+  "cross_modality_transfer_barrier": {
+    "ad_hoc_cycling_transfer_result": {
+      "id": "NEG-0037",
+      "title": "Failure of ad-hoc linear speed-to-power cycling parameter mapping",
+      "classification": "AD_HOC_CROSS_MODAL_MAPPING_FAILURE",
+      "formula_evaluated": "pred_vo2 = 560.0 + (7.657 * 25.0) * speed",
+      "rmse_ml_min": 584.8605413525756,
+      "r_squared": 0.24648565059340063,
+      "rmse_penalty_vs_m4_ml_min": 180.84397482290416,
+      "epistemic_verdict": "The arbitrary 25 W/(km/h) multiplier and fixed 560 mL/min intercept do not correspond to measured running biomechanics. This failure falsifies the naive ad-hoc mapping, but does not prove the physical impossibility of cross-modal bioenergetic transfer."
+    },
+    "physical_cross_modal_transfer_status": {
+      "status": "PHYSICAL_CROSS_MODAL_TRANSFER_NOT_IDENTIFIABLE",
+      "barrier_reason": "Treadmill CPET in Malaga lacks ground reaction force plates, motion capture kinematics, and tendon recoil measurements. Measured running mechanical power P_mech (Watts) is absent. Transforming running belt speed to mechanical Watts without biomechanical measurement is physically unidentifiable and strictly forbidden by Evidence Gate V2."
+    }
+  },
+  "three_level_generalization_verdict": {
+    "A_within_dataset_cycling_loso": "VALIDATED_ON_ACTES_N18 (M2 Allometric R2 = 0.812)",
+    "B_within_dataset_treadmill_grouped": "VALIDATED_ON_MALAGA_N846 (M4 Allometric R2 = 0.665)",
+    "C_external_zero_shot_transfer": "NOT_IDENTIFIABLE (Mechanical power absent in running locomotion)"
   },
   "overall_conclusions": {
-    "validation_verdict": "MACROSCOPIC_LOCOMOTION_KINETICS_VALIDATED_CROSS_COHORT_N979",
-    "treadmill_m4_allometric_r2": 0.6642072897445821,
-    "treadmill_m4_allometric_rmse_ml_min": 404.4262357647838,
-    "treadmill_m3_ode_r2": 0.4838060989109308,
-    "treadmill_m1_linear_r2": 0.3297256183378761,
-    "treadmill_m0_null_r2": -0.6259897706915637,
+    "validation_verdict": "MACROSCOPIC_LOCOMOTION_KINETICS_VALIDATED_SUBJECT_GROUPED_N846",
+    "treadmill_m4_allometric_r2": 0.664804909146265,
+    "treadmill_m4_allometric_rmse_ml_min": 404.0165665296715,
+    "treadmill_m3_ode_r2": 0.4837030480346027,
+    "treadmill_m2_mass_r2": 0.5157428228624154,
+    "treadmill_m1_linear_r2": 0.3296190456176574,
+    "treadmill_m0_null_r2": -0.6244460799736433,
     "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
     "biological_intervention_status": "NO_GO"
   }

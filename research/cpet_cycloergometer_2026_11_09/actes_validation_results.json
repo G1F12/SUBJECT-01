@@ -1530,19 +1530,139 @@
       }
     }
   },
+  "delta_efficiency_sensitivity_audit": {
+    "apparent_ramp_delta_efficiency": 0.3749050096784642,
+    "regression_slope_b1_l_min_per_w": 0.0076574420800386974,
+    "identifiability_status": "DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP",
+    "scientific_rationale": "The unlagged ramp regression slope beta1 = 0.00766 L/min/W yields an apparent delta efficiency of ~37.49% (NOT 25.5%). This value is an unlagged ramp regression parameter, not true steady-state delta efficiency. Pulmonary VO2 lags cellular respiration by ~35-45s, and during continuous ramp testing to exhaustion, steady state is never attained. True delta efficiency requires constant-load multi-stage steady states, which are absent in ACTES.",
+    "sensitivity_analysis": {
+      "time_lag_sensitivity": {
+        "lag_0s": {
+          "lag_seconds": 0,
+          "slope_b1_l_min_per_w": 0.0076574420800386974,
+          "intercept_b0_l_min": 0.7233666463630344,
+          "apparent_eta_delta": 0.3749050096784642
+        },
+        "lag_10s": {
+          "lag_seconds": 10,
+          "slope_b1_l_min_per_w": 0.007907701942996408,
+          "intercept_b0_l_min": 0.6921377140474089,
+          "apparent_eta_delta": 0.3630401623409405
+        },
+        "lag_20s": {
+          "lag_seconds": 20,
+          "slope_b1_l_min_per_w": 0.008079597763136735,
+          "intercept_b0_l_min": 0.6700140216700109,
+          "apparent_eta_delta": 0.35531637604873206
+        },
+        "lag_30s": {
+          "lag_seconds": 30,
+          "slope_b1_l_min_per_w": 0.008179539333315132,
+          "intercept_b0_l_min": 0.6563538201498841,
+          "apparent_eta_delta": 0.35097494860577416
+        },
+        "lag_35s": {
+          "lag_seconds": 35,
+          "slope_b1_l_min_per_w": 0.008199659778808172,
+          "intercept_b0_l_min": 0.6529877165671392,
+          "apparent_eta_delta": 0.3501137211264224
+        },
+        "lag_40s": {
+          "lag_seconds": 40,
+          "slope_b1_l_min_per_w": 0.008198466810636155,
+          "intercept_b0_l_min": 0.6520670205575968,
+          "apparent_eta_delta": 0.35016466656970313
+        },
+        "lag_45s": {
+          "lag_seconds": 45,
+          "slope_b1_l_min_per_w": 0.00817106571314994,
+          "intercept_b0_l_min": 0.6541810695023078,
+          "apparent_eta_delta": 0.3513389192928777
+        },
+        "lag_50s": {
+          "lag_seconds": 50,
+          "slope_b1_l_min_per_w": 0.008138739549350325,
+          "intercept_b0_l_min": 0.6569871276292408,
+          "apparent_eta_delta": 0.3527343982101442
+        },
+        "lag_60s": {
+          "lag_seconds": 60,
+          "slope_b1_l_min_per_w": 0.008040783592599956,
+          "intercept_b0_l_min": 0.6667145186503801,
+          "apparent_eta_delta": 0.3570315460014663
+        }
+      },
+      "workload_range_sensitivity": {
+        "low_20_to_100w": {
+          "workload_range_w": [
+            20.0,
+            100.0
+          ],
+          "slope_b1_l_min_per_w": 0.0074801364928418395,
+          "apparent_eta_delta": 0.3837915791879504
+        },
+        "mid_100_to_200w": {
+          "workload_range_w": [
+            100.0,
+            200.0
+          ],
+          "slope_b1_l_min_per_w": 0.009465213608581812,
+          "apparent_eta_delta": 0.3033014906844057
+        },
+        "high_ge_200w": {
+          "workload_range_w": [
+            200.0,
+            500.0
+          ],
+          "slope_b1_l_min_per_w": 0.00871068100502668,
+          "apparent_eta_delta": 0.32957393290748727
+        }
+      },
+      "resting_intercept_sensitivity": {
+        "unconstrained": {
+          "intercept_b0_l_min": 0.7233666463630344,
+          "slope_b1_l_min_per_w": 0.0076574420800386974,
+          "apparent_eta_delta": 0.3749050096784642
+        },
+        "constrained_to_resting_baseline_0_35_l_min": {
+          "fixed_intercept_b0_l_min": 0.35,
+          "slope_b1_l_min_per_w": 0.009729145884828216,
+          "apparent_eta_delta": 0.29507352763678657
+        }
+      },
+      "oxycaloric_equivalent_sensitivity": {
+        "c_ox_19.6_kj_per_l": {
+          "c_ox_kj_per_l": 19.6,
+          "apparent_eta_delta": 0.3997711582795868
+        },
+        "c_ox_20.0_kj_per_l": {
+          "c_ox_kj_per_l": 20.0,
+          "apparent_eta_delta": 0.39177573511399505
+        },
+        "c_ox_20.9_kj_per_l": {
+          "c_ox_kj_per_l": 20.9,
+          "apparent_eta_delta": 0.3749050096784642
+        },
+        "c_ox_21.3_kj_per_l": {
+          "c_ox_kj_per_l": 21.3,
+          "apparent_eta_delta": 0.3678645400131409
+        }
+      }
+    }
+  },
   "parameter_identifiability_audit": {
     "identified_parameters": [
       {
         "parameter": "delta_efficiency_eta_delta",
         "domain": "Whole-body incremental aerobic coupling",
-        "status": "IDENTIFIED_INCREMENTAL_MACROSCOPIC_COUPLING",
-        "estimated_value": 0.3749050096784642,
+        "status": "DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP",
+        "apparent_value": 0.3749050096784642,
         "estimated_range": [
           0.3,
           0.45
         ],
         "regression_slope_b1_l_min_per_w": 0.0076574420800386974,
-        "notes": "Unlagged ramp regression slope beta1 = Delta VO2 / Delta P = 0.00766 L/min/W. Apparent ramp delta efficiency eta_delta = 1 / (beta1 * 348.33) is ~37.5%, reflecting Phase II delay during continuous ramp increments."
+        "notes": "Unlagged ramp regression slope beta1 = Delta VO2 / Delta P = 0.00766 L/min/W. Apparent ramp delta efficiency eta_delta = 1 / (beta1 * 348.33) is ~37.49% (NOT 25.5%). Because pulmonary VO2 lags cellular respiration and ACTES lacks constant-load steady states, true physiological delta efficiency is NOT IDENTIFIABLE."
       },
       {
         "parameter": "macroscopic_gross_efficiency_eta_gross",

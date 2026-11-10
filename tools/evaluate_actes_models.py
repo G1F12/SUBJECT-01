@@ -494,6 +494,105 @@ def run_statistical_reliability_analysis(loso_eval: Dict[str, Any]) -> Dict[str,
     }
 
 
+def run_efficiency_sensitivity_analysis(
+    dataset: Dict[str, Any], pop_b1: float, pop_b0: float
+) -> Dict[str, Any]:
+    """
+    Epistemic sensitivity and identifiability audit of delta efficiency.
+    Clarifies that eta_apparent = 1 / (beta1 * 348.33) is ~37.49% (NOT 25.5%),
+    and that true physiological delta efficiency is NOT IDENTIFIABLE from unlagged ramp tests.
+    """
+    subjects = dataset["subjects"]
+    c_ox = OXYCALORIC_WATTS_PER_L_PER_MIN
+    eta_apparent = float(1.0 / (pop_b1 * c_ox))
+
+    # 1. Time lag sensitivity
+    lag_sensitivity = {}
+    for lag_s in [0, 10, 20, 30, 35, 40, 45, 50, 60]:
+        lagged_p = []
+        lagged_v = []
+        for s in subjects.values():
+            t = s["timeseries"]["time"]
+            p = s["timeseries"]["power"]
+            v = s["timeseries"]["vo2"]
+            p_shifted = np.interp(t - lag_s, t, p, left=p[0])
+            lagged_p.append(p_shifted)
+            lagged_v.append(v)
+        b1_lag, b0_lag = np.polyfit(np.concatenate(lagged_p), np.concatenate(lagged_v), 1)
+        lag_sensitivity[f"lag_{lag_s}s"] = {
+            "lag_seconds": lag_s,
+            "slope_b1_l_min_per_w": float(b1_lag),
+            "intercept_b0_l_min": float(b0_lag),
+            "apparent_eta_delta": float(1.0 / (b1_lag * c_ox)),
+        }
+
+    # 2. Workload range sensitivity
+    workload_ranges = [("low_20_to_100w", 20.0, 100.0), ("mid_100_to_200w", 100.0, 200.0), ("high_ge_200w", 200.0, 500.0)]
+    range_sensitivity = {}
+    for rname, p_min, p_max in workload_ranges:
+        sub_p = []
+        sub_v = []
+        for s in subjects.values():
+            p = s["timeseries"]["power"]
+            v = s["timeseries"]["vo2"]
+            mask = (p >= p_min) & (p <= p_max)
+            if np.sum(mask) > 10:
+                sub_p.append(p[mask])
+                sub_v.append(v[mask])
+        if sub_p:
+            b1_r, b0_r = np.polyfit(np.concatenate(sub_p), np.concatenate(sub_v), 1)
+            range_sensitivity[rname] = {
+                "workload_range_w": [p_min, p_max],
+                "slope_b1_l_min_per_w": float(b1_r),
+                "apparent_eta_delta": float(1.0 / (b1_r * c_ox)),
+            }
+
+    # 3. Resting metabolic intercept sensitivity
+    all_p = np.concatenate([s["timeseries"]["power"] for s in subjects.values()])
+    all_v = np.concatenate([s["timeseries"]["vo2"] for s in subjects.values()])
+    b1_constrained = float(np.sum(all_p * (all_v - 0.35)) / np.sum(all_p ** 2))
+    intercept_sensitivity = {
+        "unconstrained": {
+            "intercept_b0_l_min": float(pop_b0),
+            "slope_b1_l_min_per_w": float(pop_b1),
+            "apparent_eta_delta": eta_apparent,
+        },
+        "constrained_to_resting_baseline_0_35_l_min": {
+            "fixed_intercept_b0_l_min": 0.35,
+            "slope_b1_l_min_per_w": b1_constrained,
+            "apparent_eta_delta": float(1.0 / (b1_constrained * c_ox)),
+        },
+    }
+
+    # 4. Oxycaloric equivalent variation
+    cox_sensitivity = {}
+    for c_val in [19.6, 20.0, 20.9, 21.3]:
+        equiv = (c_val * 1000.0) / 60.0
+        cox_sensitivity[f"c_ox_{c_val}_kj_per_l"] = {
+            "c_ox_kj_per_l": c_val,
+            "apparent_eta_delta": float(1.0 / (pop_b1 * equiv)),
+        }
+
+    return {
+        "apparent_ramp_delta_efficiency": eta_apparent,
+        "regression_slope_b1_l_min_per_w": float(pop_b1),
+        "identifiability_status": "DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP",
+        "scientific_rationale": (
+            "The unlagged ramp regression slope beta1 = 0.00766 L/min/W yields an apparent delta efficiency "
+            "of ~37.49% (NOT 25.5%). This value is an unlagged ramp regression parameter, not true steady-state "
+            "delta efficiency. Pulmonary VO2 lags cellular respiration by ~35-45s, and during continuous ramp "
+            "testing to exhaustion, steady state is never attained. True delta efficiency requires constant-load "
+            "multi-stage steady states, which are absent in ACTES."
+        ),
+        "sensitivity_analysis": {
+            "time_lag_sensitivity": lag_sensitivity,
+            "workload_range_sensitivity": range_sensitivity,
+            "resting_intercept_sensitivity": intercept_sensitivity,
+            "oxycaloric_equivalent_sensitivity": cox_sensitivity,
+        },
+    }
+
+
 def run_full_actes_validation() -> Dict[str, Any]:
     """Execute complete ACTES CPET validation pipeline and save master canonical JSON."""
     dataset = load_actes_dataset()
@@ -506,8 +605,9 @@ def run_full_actes_validation() -> Dict[str, Any]:
     train_all_v = np.concatenate([s["timeseries"]["vo2"] for s in dataset["subjects"].values()])
     pop_b1, pop_b0 = np.polyfit(train_all_p, train_all_v, 1)
 
-    # Delta efficiency: eta_delta = 1 / (beta1 * 348.33)
-    eta_delta = float(1.0 / (pop_b1 * OXYCALORIC_WATTS_PER_L_PER_MIN))
+    # Apparent delta efficiency: eta_delta_apparent = 1 / (beta1 * 348.33) ~ 37.49%
+    efficiency_audit = run_efficiency_sensitivity_analysis(dataset, pop_b1, pop_b0)
+    eta_delta_apparent = efficiency_audit["apparent_ramp_delta_efficiency"]
 
     # Compile master results object
     results: Dict[str, Any] = {
@@ -540,19 +640,21 @@ def run_full_actes_validation() -> Dict[str, Any]:
         },
         "loso_cross_validation": loso_eval,
         "statistical_reliability_audit": stats_audit,
+        "delta_efficiency_sensitivity_audit": efficiency_audit,
         "parameter_identifiability_audit": {
             "identified_parameters": [
                 {
                     "parameter": "delta_efficiency_eta_delta",
                     "domain": "Whole-body incremental aerobic coupling",
-                    "status": "IDENTIFIED_INCREMENTAL_MACROSCOPIC_COUPLING",
-                    "estimated_value": eta_delta,
+                    "status": "DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP",
+                    "apparent_value": eta_delta_apparent,
                     "estimated_range": [0.30, 0.45],
                     "regression_slope_b1_l_min_per_w": float(pop_b1),
                     "notes": (
                         "Unlagged ramp regression slope beta1 = Delta VO2 / Delta P = 0.00766 L/min/W. "
-                        "Apparent ramp delta efficiency eta_delta = 1 / (beta1 * 348.33) is ~37.5%, "
-                        "reflecting Phase II delay during continuous ramp increments."
+                        "Apparent ramp delta efficiency eta_delta = 1 / (beta1 * 348.33) is ~37.49% (NOT 25.5%). "
+                        "Because pulmonary VO2 lags cellular respiration and ACTES lacks constant-load steady states, "
+                        "true physiological delta efficiency is NOT IDENTIFIABLE."
                     ),
                 },
                 {

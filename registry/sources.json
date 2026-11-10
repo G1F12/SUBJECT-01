@@ -1290,7 +1290,7 @@
       "path": "research/treadmill_cpet_2026_11_09/sources.json",
       "source_id": "SRC-0074"
     },
-    "provenance_notes": "Continuous breath-by-breath VO2 (mL/min), VCO2 (mL/min), HR, and treadmill speed (km/h) across N=992 maximal incremental exercise tests on N=857 independent participants (575,087 total observations). Downloaded from PhysioNet AWS S3 open mirror; SHA256 checksums verified against official SHA256SUMS.txt.",
+    "provenance_notes": "Continuous breath-by-breath VO2 (mL/min), VCO2 (mL/min), HR, and treadmill speed (km/h) across N=992 maximal incremental exercise tests on N=857 independent participants (575,087 total observations). N=981 valid incremental tests on N=846 unique participants admitted for subject-level GroupKFold validation (116 repeat subjects with 251 tests preserved). Downloaded from PhysioNet AWS S3 open mirror; SHA256 checksums verified against official SHA256SUMS.txt. Note: license conflict tracked under ISS-0020 (packaged CC BY-NC-SA 4.0 vs PhysioNet Health Data License 1.5.0).",
     "data_type": "ORIGINAL_BINARY_FILE",
     "status": "EMPIRICAL_RAW_DATA_VERIFIED",
     "local_files": [

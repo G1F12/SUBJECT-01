@@ -23,7 +23,7 @@ Cycle 10 breaks this limitation by acquiring, verifying byte-for-byte, and evalu
 ### 1.2 Pre-Registered Hypothesis & Parameter Freezing
 Before running any model predictions on the held-out subjects, all model structures, bioenergetic parameters, and search boundaries were frozen:
 1. **Oxycaloric Equivalent**: $c_{\text{ox}} = 20,900\text{ J/L}$ ($20.9\text{ kJ/L O}_2$, mixed carbohydrate/lipid substrate oxidation, corresponding to $348.33\text{ W / (L/min)}$).
-2. **Incremental Delta Efficiency**: $\eta_{\text{delta}} = 1 / (\beta_1 \cdot 348.33) \approx 22.5\%\dots 26.5\%$ (canonical incremental human cycling efficiency). Gross efficiency $\eta_{\text{gross}}(t) = P(t) / \dot{E}_{\text{met}}(t)$ is workload-dependent ($0\%$ at rest, rising to $20\dots 24\%$ at peak), distinct from the incremental slope.
+2. **Apparent Ramp Slope vs True Delta Efficiency**: Unlagged population ramp regression slope $\beta_1 = 0.007657\text{ L/min/W}$ yields an apparent coefficient $\eta_{\text{delta,apparent}} = 1 / (\beta_1 \cdot 348.33) \approx 37.49\%$ (NOT 25.5%). This value is an unlagged ramp parameter rather than true steady-state delta efficiency. Gross efficiency $\eta_{\text{gross}}(t) = P(t) / \dot{E}_{\text{met}}(t)$ is workload-dependent ($0\%$ at rest, rising to $20\dots 24\%$ at peak), distinct from the incremental slope.
 3. **Cardiorespiratory Kinetic Delay**: $\tau_{\dot{V}\text{O}_2} \in [0, 65]\text{ s}$, evaluated strictly within training subjects via nested subject-level cross-validation (confirming optimal generalization at $\tau = 35.0\text{ s}$ across folds without test leakage).
 4. **Allometric Normalization**: Linear mass scaling of work rate ($P / M$ in $\text{W/kg}$) and metabolic rate ($\dot{V}\text{O}_2 / M$ in $\text{mL/(min}\cdot\text{kg)}$).
 
@@ -82,6 +82,13 @@ In each fold $k \in \{1, \dots, 18\}$, training is performed on the 17 other par
    While linear mass normalization ($P/M$) improves the macro-average $R^2$ across the full cohort, it degrades RMSE in 7 of the 18 participants (Subjects 3, 4, 6, 15, 16, 17, 18), demonstrating that single-variable linear body mass scaling introduces individual bias for light endurance and heavy muscular athletes.
 5. **Metrological Unit Verification**:
    Audited raw byte tables: while the PhysioNet HTML metadata claims units of $\text{mL/min}$, raw CSV numbers in `test_measure.csv` are strictly in $\text{L/min}$ ($0.20\dots 4.54\text{ L/min}$); processing treats them directly without post-hoc multipliers.
+6. **Delta Efficiency Sensitivity & Identifiability Audit (Stage 3 Corrigendum)**:
+   - **Arithmetic Rectification**: Population regression slope $\beta_1 = 0.00765744\text{ L/min/W}$ with $c_{\text{ox}} = 20.9\text{ kJ/L}$ ($348.33\text{ W / (L/min)}$) yields $\eta_{\text{apparent}} = 1 / (\beta_1 \cdot 348.33) = 37.4905\%$ ($37.49\%$, **NOT $25.5\%$**).
+   - **Time Lag Sensitivity**: Shifting power by $\tau \in [0, 60]\text{ s}$ adjusts apparent $\eta$ from $37.49\%$ (0 s) to $35.01\%$ (35 s) and $35.70\%$ (60 s).
+   - **Workload Range Sensitivity**: Low power ($20\dots 100\text{ W}$) yields $37.41\%$; mid power ($100\dots 200\text{ W}$) yields $36.78\%$; high power ($>200\text{ W}$) shifts to $47.74\%$ due to non-linear hyperventilation and anaerobic glycolytic ATP contribution.
+   - **Resting Intercept Sensitivity**: Unconstrained regression yields intercept $b_0 = 0.723\text{ L/min}$ ($\eta = 37.49\%$); constraining the intercept through measured resting baseline ($0.35\text{ L/min}$) yields $\eta = 28.52\%$.
+   - **Oxycaloric Equivalent Sensitivity**: Ranging $c_{\text{ox}}$ from $19.6\text{ kJ/L}$ (pure lipid) to $21.3\text{ kJ/L}$ (pure glycogen) shifts apparent $\eta$ from $39.91\%$ to $36.73\%$.
+   - **Epistemic Classification**: `DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP`. Because ACTES consists strictly of continuous incremental ramp tests without constant-load steady-state plateaus, true physiological delta efficiency cannot be identified.
 
 ---
 
