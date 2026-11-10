@@ -318,5 +318,30 @@
     "id": "EXP-0070",
     "title": "SUBJECT-01 Unified Compatibility and TARGET-CPE45 Multi-Climate Evaluation",
     "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0071",
+    "title": "Independent Holdout Verification of Keratin Hydration-Rate Mechanics on Wang 2016 and McKittrick 2012 Coupons",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0072",
+    "title": "Multi-Species VML Contractile Recovery Holdout Analysis on Corona 2015, Greising 2017/2020, and Garg 2015 Datasets",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0073",
+    "title": "Comparative Evaluation of 1-Node vs 3-Node Thermal Models Under Matched Montain 1994 Heat Stress",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0074",
+    "title": "Forensic Biological Absolutes Rectification and Metabolic Cost Analysis of Synthetic Implants",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0075",
+    "title": "SUBJECT-01 Architectural Compatibility, Intracompartmental Pressure, and Kinematic Boundary Assessment",
+    "cycle": "Cycle 6"
   }
 ]

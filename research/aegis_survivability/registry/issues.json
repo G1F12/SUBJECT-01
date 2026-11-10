@@ -75,5 +75,26 @@
     "severity": "critical",
     "status": "resolved",
     "impact": "Resolved in Cycle 4C by authentic data reconstruction (PMC5744714), LOPO-CV evaluation, true prediction error re-calculation (9.15%), and formal downgrading of validation verdicts in DEC-0029."
+  },
+  {
+    "id": "ISS-0036",
+    "issue": "Dogmatic assertion of universal 3-5 satellite cell cycle limit and 200 um tissue death in previous cycles",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Rectified in Cycle 6 Phase 1 by establishing metabolic-rate-dependent diffusion scaling and asymmetric stem cell self-renewal dynamics."
+  },
+  {
+    "id": "ISS-0037",
+    "issue": "Lack of independent multi-species external holdout verification for volumetric muscle loss recovery beyond Dziki 2016",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 6 Question B by evaluating independent rodent and porcine holdouts (Corona 2015, Greising 2017/2020, Garg 2015) with TRANSLATIONAL_UNVALIDATED flags."
+  },
+  {
+    "id": "ISS-0038",
+    "issue": "Discrepancy in environmental relative humidity between Montain 1994 experimental data (50% RH) and model simulation (80% RH)",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 6 Question C by simulating strictly matched 50% RH and 1.5 clo uncompensable heat stress conditions."
   }
 ]

@@ -9,7 +9,7 @@
   },
   {
     "id": "DEC-0025",
-    "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D — CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
+    "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D \u2014 CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
     "rationale": "Physics and neurophysiology strictly prove that projectile flight time at combat distances (<70 ms) is shorter than biological sensorimotor latency (>= 30-108 ms). Claiming reactive bullet evasion violates physical causality.",
     "status": "CONFIRMED",
     "date": "2026-11-08",
@@ -130,5 +130,25 @@
     "id": "DEC-0042",
     "title": "Mandate Functional Contractile and Neuromuscular Endpoints for Tissue Regeneration",
     "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0043",
+    "title": "Formally Downgrade Universal Dogmatic Biological Absolutes to Context-Dependent Physical Envelopes",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0044",
+    "title": "Mandate Non-Human Regeneration Data Tagging with TRANSLATIONAL_UNVALIDATED Flag",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0045",
+    "title": "Retain 1-Node Thermal Baseline as Parsimonious Default Due to Minimal Multi-Node Advantage Under Encapsulation",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0046",
+    "title": "Transition AEGIS Biological Architecture Assessment to CONDITIONAL Pending Whole-Organism Live Integration",
+    "cycle": "Cycle 6"
   }
 ]

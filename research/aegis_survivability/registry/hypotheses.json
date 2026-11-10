@@ -139,7 +139,7 @@
     "related_experiments": [
       "EXP-0054"
     ],
-    "description": "Extensive cutaneous armor coverage (>70%) severely restricts evaporative cooling, inducing fatal hyperthermic core temperature increases (+5.3 K, exceeding 39.5°C in ~20 minutes) during sustained physical activity in warm environments.",
+    "description": "Extensive cutaneous armor coverage (>70%) severely restricts evaporative cooling, inducing fatal hyperthermic core temperature increases (+5.3 K, exceeding 39.5\u00b0C in ~20 minutes) during sustained physical activity in warm environments.",
     "original_id": "HYP-0018"
   },
   {
@@ -301,11 +301,51 @@
   {
     "id": "HYP-0034",
     "title": "Satellite Cell Hayflick Exhaustion Under Repeated Muscle Regeneration Cycles",
-    "statement": "Constitutive regeneration over repeated severe volumetric muscle injuries causes Pax7+ stem cell senescence and progressive fibro-adipogenic substitution within 3-5 cycles.",
-    "status": "SUPPORTED",
+    "statement": "Constitutive regeneration over repeated severe volumetric muscle injuries causes Pax7+ stem cell senescence and progressive fibro-adipogenic substitution within 3-5 cycles. (Rectified in Cycle 6: Limit applies under unremitting dystrophic stress; healthy asymmetric division preserves pool).",
+    "status": "DOWNGRADED",
     "cycle": "Cycle 5",
     "related_experiments": [
       "EXP-0069"
+    ]
+  },
+  {
+    "id": "HYP-0035",
+    "title": "Viscoelastic-Hydration Scaling of Biological Alpha/Beta Keratins",
+    "statement": "Natural keratin protective structures obey water-plasticized hydrogen bond disruption and logarithmic strain-rate hardening, allowing accurate modulus prediction across diverse species.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0071"
+    ]
+  },
+  {
+    "id": "HYP-0036",
+    "title": "Lateral Force Transmission Disruption in Volumetric Muscle Loss",
+    "statement": "Contractile recovery after VML is bounded primarily by perilesional myofascial force transmission loss and vascular perfusion limits, rendering ECM scaffold alone ineffective without motor reinnervation and mechanical loading.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0072"
+    ]
+  },
+  {
+    "id": "HYP-0037",
+    "title": "Thermal Nodal Superiority Under Uncompensable Encapsulated Heat Strain",
+    "statement": "A 3-node dynamic thermal model significantly reduces rectal temperature prediction error relative to a 1-node lumped baseline under matched Montain 1994 conditions.",
+    "status": "REFUTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0073"
+    ]
+  },
+  {
+    "id": "HYP-0038",
+    "title": "Zero Metabolic Overhead of Subcutaneous Synthetic Biohybrids",
+    "statement": "Indwelling synthetic armor implants operate with zero ongoing metabolic energy or immune maintenance cost.",
+    "status": "REFUTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0074"
     ]
   }
 ]

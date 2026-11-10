@@ -370,7 +370,7 @@
       "verified_via": "MSSE ACSM DOI / PubMed PMID 17277604",
       "checked_date": "2026-11-08"
     },
-    "measured_quantities": "Human sweating rates (1.0-2.5 L/h), dehydration hyperthermia threshold (core T > 39.5°C), and evaporative thermoregulatory failure",
+    "measured_quantities": "Human sweating rates (1.0-2.5 L/h), dehydration hyperthermia threshold (core T > 39.5\u00b0C), and evaporative thermoregulatory failure",
     "biological_species": "Homo sapiens exercise physiology",
     "supports_hypotheses": [
       "HYP-0019"
@@ -701,5 +701,45 @@
     "id": "SRC-0120",
     "citation": "ISO 7933:2023 Ergonomics of the thermal environment -- Analytical determination and interpretation of heat stress using calculation of the predicted heat strain.",
     "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0121",
+    "citation": "Wang et al. (2016). The mechanical properties and structure of pangolin scales. Nature Communications 7:13024. DOI: 10.1038/ncomms13024.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0122",
+    "citation": "McKittrick et al. (2012). The structure and mechanics of sheep horns. Journal of the Mechanical Behavior of Biomedical Materials 12:87-108.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0123",
+    "citation": "Corona et al. (2015). Functional muscle recovery after volumetric muscle loss: role of autologous cell-based therapies and exercise. Journal of Applied Physiology 118:1115-1126.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0124",
+    "citation": "Greising et al. (2017). Quantitative assessment of muscle function following volumetric muscle loss. Journal of Orthopaedic Research 35:106-114.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0125",
+    "citation": "Greising et al. (2020). Neuromuscular and extracellular matrix remodeling after volumetric muscle loss. Tissue Engineering Part A 26:581-591.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0126",
+    "citation": "Garg et al. (2015). Autologous minced muscle grafts improve functional recovery after volumetric muscle loss. Stem Cells Translational Medicine 4:1072-1082.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0127",
+    "citation": "Anderson et al. (2008). Foreign body reaction to biomaterials. Seminars in Immunology 20:86-100.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0128",
+    "citation": "Zammit et al. (2004). Muscle satellite cells adopt divergent fates: a mechanism for self-renewal. Journal of Cell Biology 166:347-357.",
+    "cycle": "Cycle 6"
   }
 ]

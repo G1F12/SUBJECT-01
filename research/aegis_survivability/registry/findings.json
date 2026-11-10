@@ -122,7 +122,7 @@
   {
     "id": "FND-0060",
     "experiment_id": "EXP-0058",
-    "finding": "Thermodynamic reconciliation of climate-dependent heating rates: 0.038 °C/min is strictly valid for temperate running (25°C, 50% RH) stabilizing at 38.4°C; under hot-humid conditions (35°C, 80% RH) net heat storage of 420-710 W drives 0.095-0.150 °C/min heating, reaching 40.0°C in 20.2-32.0 minutes.",
+    "finding": "Thermodynamic reconciliation of climate-dependent heating rates: 0.038 \u00b0C/min is strictly valid for temperate running (25\u00b0C, 50% RH) stabilizing at 38.4\u00b0C; under hot-humid conditions (35\u00b0C, 80% RH) net heat storage of 420-710 W drives 0.095-0.150 \u00b0C/min heating, reaching 40.0\u00b0C in 20.2-32.0 minutes.",
     "claim_level": "LEVEL_A_VERIFIED_PHYSICAL_MODEL",
     "evidence": "Coupled energy ledger with Tetens equation; Wenger 1988, Sawka 2007, ISO 7933:2023.",
     "original_id": "FND-0057"
@@ -259,5 +259,41 @@
     "title": "Human Muscle Satellite Cell Replicative Exhaustion Occurs Within 3-5 Massive Regenerative Cycles",
     "experiment_id": "EXP-0069",
     "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0081",
+    "title": "Keratin Viscoelastic-Hydration Model Reduces Modulus Prediction Error by 84.8% Over Baseline on Independent Holdout Coupons",
+    "experiment_id": "EXP-0071",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0082",
+    "title": "Mechanistic VML Regeneration Model Accounting for Costamere Disruption Reduces MAE from 14.25% to 6.69% Across Multi-Species Holdout",
+    "experiment_id": "EXP-0072",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0083",
+    "title": "Decellularized ECM Scaffold Alone Yields Statistically Insignificant Contractile Improvement (+2.3 to +3.5 pp) in Critical-Size Defects",
+    "experiment_id": "EXP-0072",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0084",
+    "title": "3-Node Dynamic Thermal Model Yields Only Marginal 6.2% Error Reduction Over 1-Node Baseline Without Sensor-Lag Calibration",
+    "experiment_id": "EXP-0073",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0085",
+    "title": "Foreign Body Reaction Imposes Obligate Basal Metabolic Overhead of 20-50 kcal/day for Extensive Subcutaneous Implants",
+    "experiment_id": "EXP-0074",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0086",
+    "title": "Rigid Bio-Armor Plating Increases Intracompartmental Fascicular Pressure During Peak Contraction, Exacerbating CPE45",
+    "experiment_id": "EXP-0075",
+    "cycle": "Cycle 6"
   }
 ]

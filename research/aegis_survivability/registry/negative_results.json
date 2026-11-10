@@ -224,5 +224,29 @@
     "title": "Absence of Known Biological Pathways for Ribosomal or Enzymatic Synthesis of Macromolecular Graphene Sheets",
     "experiment_id": "EXP-0067",
     "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0069",
+    "title": "Failure of 3-Node Dynamic Thermal Model to Substantially Outperform 1-Node Baseline Under Encapsulated Uncompensable Conditions",
+    "experiment_id": "EXP-0073",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0070",
+    "title": "Inability of Decellularized Acellular ECM Scaffolds to Restore Contractile Function in Absence of Motor Reinnervation or Myoblast Seeding",
+    "experiment_id": "EXP-0072",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0071",
+    "title": "Refutation of Zero-Metabolic-Cost Assumption for Internal Biohybrid Armor Implants",
+    "experiment_id": "EXP-0074",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0072",
+    "title": "Inability to Produce Deterministic Kinematic Performance Predictions Without Dynamic Multi-Joint Empirical Calibration",
+    "experiment_id": "EXP-0075",
+    "cycle": "Cycle 6"
   }
 ]
