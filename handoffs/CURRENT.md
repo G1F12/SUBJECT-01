@@ -1,8 +1,8 @@
-# SUBJECT-01 — handoff: Cycle 12 Human Muscle Force, Fatigue & Biomechanical Validation (EXP-0045)
+# SUBJECT-01 — handoff: Cycle 12 Human Muscle Force, Fatigue & Biomechanical Validation (EXP-0045 & Аудит)
 
 Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD с origin/main.
-База: 9911e1e476138fb339510be0e21a7d7e0ff55a33.
-Ветка: feature/cycle12-human-muscle-force-and-fatigue (слияние в main).
+База: 9911e1e476138fb339510be0e21a7d7e0ff55a33 (origin/main).
+Ветка: feature/cycle12-human-muscle-force-and-fatigue (слияние в main, ожидает интерактивного push владельцем).
 
 Ключевые документы и инструменты:
 - research/muscle_force_biomechanics_2026_11_10/BIOMECHANICAL_VALIDATION_REPORT.md (мастер-отчёт биомеханической валидации силы мышц и утомления Bird et al. 2026)
@@ -11,19 +11,30 @@
 - research/muscle_force_biomechanics_2026_11_10/empirical_datasets_cycle12.json (реестр эмпирических датасетов Cycle 12)
 - research/muscle_force_biomechanics_2026_11_10/sources.json (реестр источников Cycle 12, SRC-0076)
 - tools/generate_biomechanics_report_tables.py (генератор структурных таблиц Markdown из JSON для биомеханики)
-- tools/evaluate_bird_biomechanics.py (движок сократительной биомеханики, декуплинга, утомления и мультимасштабного моста)
-- tests/test_bird_biomechanics_validation.py (13 юнит-тестов биомеханики: криптография SHA-256, когорты, декуплинг, иерархия моделей, утомление, 4 негативных теста)
+- tools/evaluate_bird_biomechanics.py (движок сократительной биомеханики, декуплинга, утомления, 4-уровневой таксономии и аудита ограничений)
+- tests/test_bird_biomechanics_validation.py (17 юнит-тестов биомеханики: криптография SHA-256, таксономия, ограничения, когорты, декуплинг, иерархия моделей, утомление, 4 негативных теста)
 - tools/evaluate_malaga_treadmill.py (движок Malaga с агрегацией по 846 участникам и кластерным бутстрепом)
 - research/treadmill_cpet_2026_11_09/malaga_validation_results.json (канонический JSON Malaga с участник-уровневой статистикой)
 - tests/test_malaga_cpet_validation.py (20 юнит-тестов Malaga, включая контроль псевдорепликации df)
-- registry/experiments.json (EXP-0045: валидация биомеханики мышц и утомления)
-- registry/findings.json (FND-0045: динамический декуплинг и нейромышечная компенсация +26%)
-- registry/negative_results.json (NEG-0038: запрет экстраполяции момента одного сустава на выносливость TARGET-CPE45)
-- registry/decisions.json (DEC-0020: утверждение онтологии и приоритизация архитектур аугментации)
+- registry/experiments.json (EXP-0045: статус completed_theoretical_framework_raw_data_pending)
+- registry/findings.json (FND-0045: динамический декуплинг, нейромышечная компенсация +26%, 4-уровневая таксономия и аудит ограничений)
+- registry/negative_results.json (NEG-0038: запрет экстраполяции момента одного сустава на выносливость TARGET-CPE45 и запрет объявления эмпирической валидации до получения сырых массивов)
+- registry/decisions.json (DEC-0020: утверждение онтологии, 4-уровневой таксономии, аудита физических ограничений и приоритизации архитектур аугментации)
 - tools/verify_data_provenance.py / tools/validate_repository.py (сквозные валидаторы целостности реестров)
 
-Результаты этапов (Cycle 12 Human Muscle Force, Fatigue & Biomechanical Validation):
-1. **Закрытие остаточного статистического аудита Cycle 11 (Stage 0, EXP-0044)**:
+Результаты этапов (Cycle 12 & Научный аудит):
+0. **Диагностика публикации (Stage 1 Аудита)**:
+   - `origin/main` на коммите Cycle 11 (`9911e1e476138fb339510be0e21a7d7e0ff55a33`).
+   - Локальная ветка опережает remote на 3 коммита. Блокировка push вызвана неинтерактивным запуском Git Credential Manager в консоли.
+   - Команда для владельца: `git push origin feature/cycle12-human-muscle-force-and-fatigue`.
+1. **Аудит данных Bird и 4-уровневая таксономия (Stages 2-3 Аудита)**:
+   - Сырые массивы `.mat` (5.2 МБ) и `.xlsx` (681 МБ) заблокированы Techaro Anubis BotStopper и ожидают загрузки владельцем.
+   - Модели M4 ($R^2=0.748$) и M2 ($R^2=0.812$) зафиксированы как теоретические симуляции; статус на сырых массивах: `NOT_INDEPENDENTLY_VALIDATED_ON_RAW_ARRAYS_PENDING_ACQUISITION`.
+   - Авторские радарные модели обучались с intra-participant 5-fold CV (без cross-subject LOSO across N=6). 16 условий относятся к одним и тем же 6 людям ($N=6$, а не $N=96$).
+2. **Аудит физических ограничений (Stage 4 Аудита)**:
+   - 7 параметров (удельное напряжение $25\dots 30\text{ Н/см}^2$, силы сухожилия $5.5\dots 8.4\text{ кН}$, деформация $6\dots 8\%$, запас $<1.5$, гипертрофия $10\dots 15\%$, диффузия $>200$ мкм) не измерялись в Bird 2026 и классифицированы как литературные референсы.
+   - Конфликт выносливости и силы при параллельной тренировке отнесён к **молекулярному интерференционному эффекту AMPK-mTORC1**, а не к Принципу Ханнемана.
+3. **Закрытие остаточного статистического аудита Cycle 11 (Stage 0, EXP-0044)**:
    - Ликвидирована псевдорепликация в t-тестах: агрегация переведена на 846 участников ($df=845$). Превосходство M4 подтверждено ($p = 2.41 \times 10^{-22}$).
    - Кластерный бутстреп подтвердил $\Delta\text{RMSE}(\text{M4}-\text{M3}) = -66.0$ мл/мин (95% ДИ $[-75.5, -56.3]$).
    - Раздельно вычислены participant-weighted и test-weighted метрики (RMSE $= 404.0$ мл/мин, $R^2 = 0.665$).

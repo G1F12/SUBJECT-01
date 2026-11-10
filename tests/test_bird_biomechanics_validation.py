@@ -140,6 +140,59 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         self.assertIn("DOES NOT validate TARGET-CPE45", epistemic["protocol_does_not_validate_cpe45"])
         self.assertEqual(epistemic["target_cpe45_status"], "NOT EXTERNALLY VALIDATED")
 
+    def test_four_tier_taxonomy_separation(self):
+        """Verify strict 4-tier model taxonomy separation and honest empirical status."""
+        dyn = self.results["stage3_dynamic_contraction_mechanics"]
+        self.assertIn("BIRD_AUTHOR_REPORTED", dyn)
+        self.assertIn("model_taxonomy_status", dyn)
+
+        status = dyn["model_taxonomy_status"]
+        self.assertEqual(status["SUBJECT01_INDEPENDENT_REPRODUCTION"]["status"], "BLOCKED_PENDING_RAW_DATA_ARRAYS")
+        self.assertEqual(status["SUBJECT01_NEW_MODEL_FIT"]["status"], "NOT_FIT_ON_RAW_ARRAYS")
+        self.assertEqual(status["SUBJECT01_HELD_OUT_PREDICTION"]["status"], "NOT_EXECUTED_ON_RAW_OBSERVATIONS")
+
+    def test_physical_constraints_audit(self):
+        """Verify that all physical constraints are marked unmeasured in Bird 2026 and classified appropriately."""
+        constraints = self.results["physical_constraints_audit"]
+        expected_keys = [
+            "specific_muscle_tension_sigma_max",
+            "patellar_tendon_peak_force",
+            "ultimate_patellar_tendon_strain",
+            "patellar_tendon_safety_factor",
+            "muscle_volume_hypertrophy_limit",
+            "microvascular_diffusion_limit",
+            "concurrent_training_phenotypic_tradeoff",
+        ]
+        for key in expected_keys:
+            self.assertIn(key, constraints)
+            self.assertFalse(constraints[key]["measured_in_bird_2026"])
+            self.assertIn(constraints[key]["epistemic_status"], [
+                "LITERATURE_DERIVED",
+                "ASSUMPTION_AND_LEVER_CALCULATION",
+                "THEORETICAL_DERIVATION",
+                "ANATOMICAL_HYPOTHESIS",
+                "LITERATURE_DERIVED_BIOCHEMICAL_MECHANISM",
+            ])
+
+    def test_henneman_size_principle_vs_ampk_mtorc1_correction(self):
+        """Verify explicit correction of Henneman's Size Principle vs AMPK-mTORC1 Molecular Interference."""
+        tradeoff = self.results["physical_constraints_audit"]["concurrent_training_phenotypic_tradeoff"]
+        self.assertEqual(tradeoff["mechanism"], "AMPK-mTORC1 Molecular Interference Effect")
+        correction = tradeoff["correction_regarding_henneman"]
+        self.assertIn("Henneman's Size Principle strictly governs", correction)
+        self.assertIn("motor unit recruitment", correction.lower())
+        self.assertIn("AMPK", correction)
+        self.assertIn("mTORC1", correction)
+
+    def test_leakage_and_pseudoreplication_audit(self):
+        """Verify intra-participant vs LOSO leakage and condition pseudoreplication controls."""
+        dyn_leakage = self.results["stage3_dynamic_contraction_mechanics"]["leakage_and_pseudoreplication_audit"]
+        self.assertIn("intra-subject 5-fold CV", dyn_leakage["participant_level_leakage"]["finding"])
+        self.assertIn("SAME 6 participants", dyn_leakage["condition_level_pseudoreplication"]["finding"])
+        self.assertIn("N=6, not N=96", dyn_leakage["condition_level_pseudoreplication"]["implication"])
+        self.assertIn("temporal autocorrelation", dyn_leakage["temporal_autocorrelation_leakage"]["finding"])
+        self.assertIn("peak MVC", dyn_leakage["mvc_normalization_leakage"]["finding"])
+
     def test_negative_tampered_model_r2_fails_structural_verification(self):
         """Negative Test: Tampering model R2 in JSON triggers structural verification error."""
         corrupted = copy.deepcopy(self.results)

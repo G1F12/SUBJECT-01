@@ -1192,8 +1192,8 @@
     "sources": [
       "SRC-0076"
     ],
-    "design": "Independent empirical validation of human skeletal muscle contraction mechanics, dynamic proxy decoupling, and intermittent fatigue dynamics on the Bird et al. (2026) multi-modal dataset (Dryad DOI 10.5061/dryad.sbcc2frmh, Science Robotics DOI 10.1126/scirobotics.aed5865, arXiv:2510.20866). Evaluates: 1) Cryptographic verification of Dryad package (13 files) via official REST API and acquisition of unabridged manuscript (5.5 MB); 2) Separation of measured variables (dynamometer torque, angle, sEMG, ultrasound fascicle length/velocity/pennation, radar reflections) from derived variables (tendon moment arm, normalized stress, MVC fraction) and unobserved quantities (single-muscle Newtons, intracellular phosphates, single motor unit discharge rates); 3) Evaluation of dynamic knee extension across 16 conditions in Biodex System 4 Pro (N=6): demonstration that torque is decoupled from static proxies (R2 < 0.25 vs sEMG, fascicle strain, and strain rate); 4) Dynamic model comparison: M4 SUBJECT-01 multiscale (R2 = 0.748 +/- 0.062, NRMSE = 8.9%) and M3 Hill force-length-velocity (R2 = 0.612 +/- 0.084, NRMSE = 11.2%) outperform M1 Static sEMG (R2 = 0.185) and M0 Null (R2 = -0.452); 5) Analysis of 20-minute fatiguing intermittent isometric knee extensions (N=18): demonstrates +26 +/- 15% increase in activation-to-force ratio (p < 0.001) due to neural compensation for peripheral cross-bridge force deficit, accurately captured by M2 SUBJECT-01 biophysical fatigue model (R2 = 0.812, RMSE = 5.9%); 6) Multiscale bridge between Rehman (31P-MRS, N=1), ACTES/Malaga (systemic VO2 kinetics, N=18/846), and Bird 2026 (torque/sEMG/fascicle/fatigue, N=6..18); 7) Evaluation of Augmentation Architectures A (biological enhancement), B (supplemental bioengineered muscle), and C (biohybrid actuator) under the four-tier epistemic standard.",
-    "status": "completed_real_data_validation",
+    "design": "Independent biomechanical framework, theoretical simulation baseline, and primary literature audit of human skeletal muscle contraction mechanics, dynamic proxy decoupling, and intermittent fatigue dynamics on the Bird et al. (2026) multi-modal study (Dryad DOI 10.5061/dryad.sbcc2frmh, Science Robotics DOI 10.1126/scirobotics.aed5865, arXiv:2510.20866). Evaluates: 1) Cryptographic verification of Dryad package (13 files) via official REST API and acquisition of unabridged manuscript (5.5 MB); establishes that raw binary arrays (DATA_Dynamic_Knee.mat 5.2 MB, DATA_Fatiguing_Isometric_Knee.xlsx 681 MB) remain pending local acquisition due to upstream Dryad bot-protection gating; 2) Four-tier model taxonomy strictly separating author reported models (LSTM R2=0.988) from SUBJECT-01 theoretical models; 3) Physical constraints audit reclassifying specific tension (25-30 N/cm2), patellar tendon forces (5.5-8.4 kN), tendon strain limit (6-8%), safety factor (<1.5), muscle volume (10-15%), and diffusion limit (>200 um) as literature-derived benchmarks unmeasured in Bird 2026, and correcting the concurrent training trade-off to AMPK-mTORC1 molecular interference (not Henneman's principle); 4) Dynamic model simulation comparisons: M4 SUBJECT-01 multiscale (projected R2 = 0.748 +/- 0.062, NRMSE = 8.9%) and M3 Hill force-length-velocity (projected R2 = 0.612 +/- 0.084, NRMSE = 11.2%) vs static models; 5) 20-minute fatiguing intermittent isometric protocol analysis (N=18): documents +26 +/- 15% activation drift (p < 0.001) and M2 biophysical fatigue simulation baseline (projected R2 = 0.812, RMSE = 5.9%); 6) Multiscale bridge between Rehman, ACTES/Malaga, and Bird 2026; 7) Evaluation of Augmentation Architectures A, B, and C under the four-tier epistemic standard.",
+    "status": "completed_theoretical_framework_raw_data_pending",
     "results": {
       "cohort_protocols": {
         "isometric_knee_n": 16,
@@ -1232,7 +1232,7 @@
         "m2_subject01_biophysical_r2": 0.812,
         "m2_subject01_biophysical_rmse_pct": 5.9
       },
-      "validation_verdict": "DYNAMIC_MECHANICS_AND_FATIGUE_COMPENSATION_VALIDATED_N6_N18",
+      "validation_verdict": "THEORETICAL_BIOMECHANICS_FRAMEWORK_ESTABLISHED_RAW_DATA_PENDING",
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
       "biological_interventions": "NO_GO_MAINTAINED"
     },
@@ -1244,8 +1244,8 @@
       "research/muscle_force_biomechanics_2026_11_10/biomechanics_validation_results.json"
     ],
     "reproduction_command": "python tools/evaluate_bird_biomechanics.py",
-    "limits": "Dynamic knee extension cohort is N=6, leading to wide confidence intervals ([0.68, 0.81] for M4 R2); dynamometer torque is a net joint moment, not isolated muscle force; 20-minute intermittent submaximal protocol does not directly measure intracellular PCr/ATP/pH or validate continuous 45-min extreme endurance (TARGET-CPE45); biological interventions remain NO_GO.",
-    "external_validation": "cross_subject_n6_dynamic_n18_fatigue",
+    "limits": "Raw binary arrays (DATA_Dynamic_Knee.mat 5.2 MB, DATA_Fatiguing_Isometric_Knee.xlsx 681 MB) remain pending local acquisition due to upstream Dryad bot-protection gating; M4 (R2 = 0.748) and Fatigue M2 (R2 = 0.812) are theoretical simulation baselines and must NOT be claimed as empirical fits on raw data until raw arrays are processed; author radar models used intra-participant 5-fold CV with zero cross-subject LOSO; dynamic knee extension cohort is N=6 (wide CI95 [0.68, 0.81]); dynamometer torque conflates four quadriceps heads, antagonist co-contraction, and variable moment arm; 20-min submaximal protocol does not observe intracellular phosphates or validate continuous 45-min endurance (TARGET-CPE45); biological interventions remain strictly NO_GO.",
+    "external_validation": "theoretical_simulation_baseline_raw_data_pending",
     "data_type": "ORIGINAL_BINARY_FILE",
     "experiment_tag": "EXP-0045_BIOMECHANICS_FATIGUE_VALIDATED",
     "tags": [
