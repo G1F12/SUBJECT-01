@@ -617,36 +617,91 @@ def run_statistical_auditing(
                 "meta": tests[tid]["metadata"],
             }
 
+    # All test-level metrics (981 tests)
     m4_rmse = np.array([test_metrics[tid]["M4"]["rmse"] for tid in test_ids])
     m3_rmse = np.array([test_metrics[tid]["M3"]["rmse"] for tid in test_ids])
     m2_rmse = np.array([test_metrics[tid]["M2"]["rmse"] for tid in test_ids])
     m1_rmse = np.array([test_metrics[tid]["M1"]["rmse"] for tid in test_ids])
+    m0_rmse = np.array([test_metrics[tid]["M0"]["rmse"] for tid in test_ids])
 
-    # 1. Paired comparisons
-    t_stat_m4_m3, p_val_m4_m3 = stats.ttest_rel(m3_rmse, m4_rmse)
-    w_stat_m4_m3, w_pval_m4_m3 = stats.wilcoxon(m3_rmse, m4_rmse)
+    m4_mae = np.array([test_metrics[tid]["M4"]["mae"] for tid in test_ids])
+    m3_mae = np.array([test_metrics[tid]["M3"]["mae"] for tid in test_ids])
+    m2_mae = np.array([test_metrics[tid]["M2"]["mae"] for tid in test_ids])
+    m1_mae = np.array([test_metrics[tid]["M1"]["mae"] for tid in test_ids])
+    m0_mae = np.array([test_metrics[tid]["M0"]["mae"] for tid in test_ids])
 
-    t_stat_m4_m2, p_val_m4_m2 = stats.ttest_rel(m2_rmse, m4_rmse)
-    t_stat_m4_m1, p_val_m4_m1 = stats.ttest_rel(m1_rmse, m4_rmse)
-    t_stat_m3_m1, p_val_m3_m1 = stats.ttest_rel(m1_rmse, m3_rmse)
+    m4_r2 = np.array([test_metrics[tid]["M4"]["r_squared"] for tid in test_ids])
+    m3_r2 = np.array([test_metrics[tid]["M3"]["r_squared"] for tid in test_ids])
+    m2_r2 = np.array([test_metrics[tid]["M2"]["r_squared"] for tid in test_ids])
+    m1_r2 = np.array([test_metrics[tid]["M1"]["r_squared"] for tid in test_ids])
+    m0_r2 = np.array([test_metrics[tid]["M0"]["r_squared"] for tid in test_ids])
 
-    # 2. Participant-level bootstrap
+    # Participant-level aggregation (N=846 unique biological subjects)
     unique_subjs = sorted(list(set(tests[tid]["metadata"]["subject_id"] for tid in test_ids)))
     subject_to_tests: Dict[str, List[str]] = {}
     for tid in test_ids:
         subject_to_tests.setdefault(tests[tid]["metadata"]["subject_id"], []).append(tid)
 
+    subj_m4_rmse = np.array([float(np.mean([test_metrics[tid]["M4"]["rmse"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m3_rmse = np.array([float(np.mean([test_metrics[tid]["M3"]["rmse"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m2_rmse = np.array([float(np.mean([test_metrics[tid]["M2"]["rmse"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m1_rmse = np.array([float(np.mean([test_metrics[tid]["M1"]["rmse"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m0_rmse = np.array([float(np.mean([test_metrics[tid]["M0"]["rmse"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+
+    subj_m4_mae = np.array([float(np.mean([test_metrics[tid]["M4"]["mae"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m3_mae = np.array([float(np.mean([test_metrics[tid]["M3"]["mae"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m2_mae = np.array([float(np.mean([test_metrics[tid]["M2"]["mae"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m1_mae = np.array([float(np.mean([test_metrics[tid]["M1"]["mae"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m0_mae = np.array([float(np.mean([test_metrics[tid]["M0"]["mae"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+
+    subj_m4_r2 = np.array([float(np.mean([test_metrics[tid]["M4"]["r_squared"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m3_r2 = np.array([float(np.mean([test_metrics[tid]["M3"]["r_squared"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m2_r2 = np.array([float(np.mean([test_metrics[tid]["M2"]["r_squared"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m1_r2 = np.array([float(np.mean([test_metrics[tid]["M1"]["r_squared"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+    subj_m0_r2 = np.array([float(np.mean([test_metrics[tid]["M0"]["r_squared"] for tid in subject_to_tests[sid]])) for sid in unique_subjs])
+
+    # 1. Rigorous participant-level paired comparisons (N=846 unique participants, df=845, avoids pseudoreplication)
+    t_stat_m4_m3, p_val_m4_m3 = stats.ttest_rel(subj_m3_rmse, subj_m4_rmse)
+    w_stat_m4_m3, w_pval_m4_m3 = stats.wilcoxon(subj_m3_rmse, subj_m4_rmse)
+
+    t_stat_m4_m2, p_val_m4_m2 = stats.ttest_rel(subj_m2_rmse, subj_m4_rmse)
+    t_stat_m4_m1, p_val_m4_m1 = stats.ttest_rel(subj_m1_rmse, subj_m4_rmse)
+    t_stat_m3_m1, p_val_m3_m1 = stats.ttest_rel(subj_m1_rmse, subj_m3_rmse)
+
+    # Legacy test-level paired comparison (N=981, df=980, marked explicitly as pseudoreplication risk)
+    t_leg_m4_m3, p_leg_m4_m3 = stats.ttest_rel(m3_rmse, m4_rmse)
+    w_leg_m4_m3, w_leg_p_m4_m3 = stats.wilcoxon(m3_rmse, m4_rmse)
+
+    # 2. Cluster bootstrap by participant ID with explicit estimands
     rng = np.random.RandomState(42)
     n_boot = 1000
-    boot_m4_rmse = []
-    boot_m4_r2 = []
-    boot_m3_rmse = []
+    boot_part_m4_rmse = []
+    boot_part_m4_r2 = []
+    boot_part_m3_rmse = []
+    boot_part_m4_vs_m3_diff = []
+
+    boot_test_m4_rmse = []
+    boot_test_m4_r2 = []
+
+    subj_m4_rmse_dict = {sid: float(np.mean([test_metrics[tid]["M4"]["rmse"] for tid in tids])) for sid, tids in subject_to_tests.items()}
+    subj_m3_rmse_dict = {sid: float(np.mean([test_metrics[tid]["M3"]["rmse"] for tid in tids])) for sid, tids in subject_to_tests.items()}
+    subj_m4_r2_dict = {sid: float(np.mean([test_metrics[tid]["M4"]["r_squared"] for tid in tids])) for sid, tids in subject_to_tests.items()}
+
     for _ in range(n_boot):
         sample_subjs = rng.choice(unique_subjs, size=len(unique_subjs), replace=True)
+        # Estimand A: Participant-weighted means
+        p_m4 = [subj_m4_rmse_dict[sid] for sid in sample_subjs]
+        p_m3 = [subj_m3_rmse_dict[sid] for sid in sample_subjs]
+        p_r2 = [subj_m4_r2_dict[sid] for sid in sample_subjs]
+        boot_part_m4_rmse.append(float(np.mean(p_m4)))
+        boot_part_m3_rmse.append(float(np.mean(p_m3)))
+        boot_part_m4_r2.append(float(np.mean(p_r2)))
+        boot_part_m4_vs_m3_diff.append(float(np.mean(np.array(p_m3) - np.array(p_m4))))
+
+        # Estimand B: Test-weighted cluster means
         sample_tids = [tid for sid in sample_subjs for tid in subject_to_tests[sid]]
-        boot_m4_rmse.append(float(np.mean([test_metrics[tid]["M4"]["rmse"] for tid in sample_tids])))
-        boot_m4_r2.append(float(np.mean([test_metrics[tid]["M4"]["r_squared"] for tid in sample_tids])))
-        boot_m3_rmse.append(float(np.mean([test_metrics[tid]["M3"]["rmse"] for tid in sample_tids])))
+        boot_test_m4_rmse.append(float(np.mean([test_metrics[tid]["M4"]["rmse"] for tid in sample_tids])))
+        boot_test_m4_r2.append(float(np.mean([test_metrics[tid]["M4"]["r_squared"] for tid in sample_tids])))
 
     # 3. Worst 5% participants
     n_worst = int(0.05 * len(m4_rmse))
@@ -694,35 +749,102 @@ def run_statistical_auditing(
             }
 
     return {
+        "participant_weighted_metrics": {
+            "n_unique_participants": len(unique_subjs),
+            "weighting_rule": "EQUAL_WEIGHT_PER_BIOLOGICAL_PARTICIPANT_MEANS",
+            "M0": {"rmse_mean": float(np.mean(subj_m0_rmse)), "rmse_sd": float(np.std(subj_m0_rmse)), "r2_mean": float(np.mean(subj_m0_r2)), "mae_mean": float(np.mean(subj_m0_mae))},
+            "M1": {"rmse_mean": float(np.mean(subj_m1_rmse)), "rmse_sd": float(np.std(subj_m1_rmse)), "r2_mean": float(np.mean(subj_m1_r2)), "mae_mean": float(np.mean(subj_m1_mae))},
+            "M2": {"rmse_mean": float(np.mean(subj_m2_rmse)), "rmse_sd": float(np.std(subj_m2_rmse)), "r2_mean": float(np.mean(subj_m2_r2)), "mae_mean": float(np.mean(subj_m2_mae))},
+            "M3": {"rmse_mean": float(np.mean(subj_m3_rmse)), "rmse_sd": float(np.std(subj_m3_rmse)), "r2_mean": float(np.mean(subj_m3_r2)), "mae_mean": float(np.mean(subj_m3_mae))},
+            "M4": {"rmse_mean": float(np.mean(subj_m4_rmse)), "rmse_sd": float(np.std(subj_m4_rmse)), "r2_mean": float(np.mean(subj_m4_r2)), "mae_mean": float(np.mean(subj_m4_mae))},
+        },
+        "test_weighted_metrics": {
+            "n_tests": len(test_ids),
+            "weighting_rule": "EQUAL_WEIGHT_PER_TEST_RUN",
+            "M0": {"rmse_mean": float(np.mean(m0_rmse)), "rmse_sd": float(np.std(m0_rmse)), "r2_mean": float(np.mean(m0_r2)), "mae_mean": float(np.mean(m0_mae))},
+            "M1": {"rmse_mean": float(np.mean(m1_rmse)), "rmse_sd": float(np.std(m1_rmse)), "r2_mean": float(np.mean(m1_r2)), "mae_mean": float(np.mean(m1_mae))},
+            "M2": {"rmse_mean": float(np.mean(m2_rmse)), "rmse_sd": float(np.std(m2_rmse)), "r2_mean": float(np.mean(m2_r2)), "mae_mean": float(np.mean(m2_mae))},
+            "M3": {"rmse_mean": float(np.mean(m3_rmse)), "rmse_sd": float(np.std(m3_rmse)), "r2_mean": float(np.mean(m3_r2)), "mae_mean": float(np.mean(m3_mae))},
+            "M4": {"rmse_mean": float(np.mean(m4_rmse)), "rmse_sd": float(np.std(m4_rmse)), "r2_mean": float(np.mean(m4_r2)), "mae_mean": float(np.mean(m4_mae))},
+        },
         "paired_comparisons": {
+            "participant_level_paired_tests": {
+                "n_units": len(unique_subjs),
+                "degrees_of_freedom": len(unique_subjs) - 1,
+                "pseudoreplication_status": "CONTROLLED_ZERO_PSEUDOREPLICATION",
+                "M4_vs_M3": {
+                    "mean_rmse_reduction_ml_min": float(np.mean(subj_m3_rmse - subj_m4_rmse)),
+                    "paired_t_stat": float(t_stat_m4_m3),
+                    "paired_t_p_value": float(p_val_m4_m3),
+                    "wilcoxon_stat": float(w_stat_m4_m3),
+                    "wilcoxon_p_value": float(w_pval_m4_m3),
+                },
+                "M4_vs_M2": {
+                    "mean_rmse_reduction_ml_min": float(np.mean(subj_m2_rmse - subj_m4_rmse)),
+                    "paired_t_stat": float(t_stat_m4_m2),
+                    "paired_t_p_value": float(p_val_m4_m2),
+                },
+                "M4_vs_M1": {
+                    "mean_rmse_reduction_ml_min": float(np.mean(subj_m1_rmse - subj_m4_rmse)),
+                    "paired_t_stat": float(t_stat_m4_m1),
+                    "paired_t_p_value": float(p_val_m4_m1),
+                },
+                "M3_vs_M1": {
+                    "mean_rmse_reduction_ml_min": float(np.mean(subj_m1_rmse - subj_m3_rmse)),
+                    "paired_t_stat": float(t_stat_m3_m1),
+                    "paired_t_p_value": float(p_val_m3_m1),
+                },
+            },
+            "legacy_test_level_pseudoreplication_benchmark": {
+                "n_units": len(test_ids),
+                "degrees_of_freedom": len(test_ids) - 1,
+                "pseudoreplication_warning": "PSEUDOREPLICATION_RISK_REPEATED_VISITS_NOT_AGGREGATED",
+                "M4_vs_M3": {
+                    "mean_rmse_reduction_ml_min": float(np.mean(m3_rmse - m4_rmse)),
+                    "paired_t_stat": float(t_leg_m4_m3),
+                    "paired_t_p_value": float(p_leg_m4_m3),
+                    "wilcoxon_stat": float(w_leg_m4_m3),
+                    "wilcoxon_p_value": float(w_leg_p_m4_m3),
+                },
+            },
+            # Flat key alias for backwards compatibility with existing consumers
             "M4_vs_M3": {
-                "mean_rmse_reduction_ml_min": float(np.mean(m3_rmse - m4_rmse)),
+                "mean_rmse_reduction_ml_min": float(np.mean(subj_m3_rmse - subj_m4_rmse)),
                 "paired_t_stat": float(t_stat_m4_m3),
                 "paired_t_p_value": float(p_val_m4_m3),
                 "wilcoxon_stat": float(w_stat_m4_m3),
                 "wilcoxon_p_value": float(w_pval_m4_m3),
             },
             "M4_vs_M2": {
-                "mean_rmse_reduction_ml_min": float(np.mean(m2_rmse - m4_rmse)),
+                "mean_rmse_reduction_ml_min": float(np.mean(subj_m2_rmse - subj_m4_rmse)),
                 "paired_t_stat": float(t_stat_m4_m2),
                 "paired_t_p_value": float(p_val_m4_m2),
             },
             "M4_vs_M1": {
-                "mean_rmse_reduction_ml_min": float(np.mean(m1_rmse - m4_rmse)),
+                "mean_rmse_reduction_ml_min": float(np.mean(subj_m1_rmse - subj_m4_rmse)),
                 "paired_t_stat": float(t_stat_m4_m1),
                 "paired_t_p_value": float(p_val_m4_m1),
             },
             "M3_vs_M1": {
-                "mean_rmse_reduction_ml_min": float(np.mean(m1_rmse - m3_rmse)),
+                "mean_rmse_reduction_ml_min": float(np.mean(subj_m1_rmse - subj_m3_rmse)),
                 "paired_t_stat": float(t_stat_m3_m1),
                 "paired_t_p_value": float(p_val_m3_m1),
             },
         },
         "participant_bootstrap_ci95": {
             "n_bootstraps": n_boot,
-            "m4_rmse_ci95": [float(np.percentile(boot_m4_rmse, 2.5)), float(np.percentile(boot_m4_rmse, 97.5))],
-            "m4_r2_ci95": [float(np.percentile(boot_m4_r2, 2.5)), float(np.percentile(boot_m4_r2, 97.5))],
-            "m3_rmse_ci95": [float(np.percentile(boot_m3_rmse, 2.5)), float(np.percentile(boot_m3_rmse, 97.5))],
+            "clustering_unit": "subject_id",
+            "estimands": {
+                "participant_weighted_m4_rmse_ci95": [float(np.percentile(boot_part_m4_rmse, 2.5)), float(np.percentile(boot_part_m4_rmse, 97.5))],
+                "participant_weighted_m4_r2_ci95": [float(np.percentile(boot_part_m4_r2, 2.5)), float(np.percentile(boot_part_m4_r2, 97.5))],
+                "participant_weighted_m3_rmse_ci95": [float(np.percentile(boot_part_m3_rmse, 2.5)), float(np.percentile(boot_part_m3_rmse, 97.5))],
+                "participant_weighted_m4_vs_m3_diff_ci95": [float(np.percentile(boot_part_m4_vs_m3_diff, 2.5)), float(np.percentile(boot_part_m4_vs_m3_diff, 97.5))],
+                "test_weighted_m4_rmse_ci95": [float(np.percentile(boot_test_m4_rmse, 2.5)), float(np.percentile(boot_test_m4_rmse, 97.5))],
+                "test_weighted_m4_r2_ci95": [float(np.percentile(boot_test_m4_r2, 2.5)), float(np.percentile(boot_test_m4_r2, 97.5))],
+            },
+            "m4_rmse_ci95": [float(np.percentile(boot_part_m4_rmse, 2.5)), float(np.percentile(boot_part_m4_rmse, 97.5))],
+            "m4_r2_ci95": [float(np.percentile(boot_part_m4_r2, 2.5)), float(np.percentile(boot_part_m4_r2, 97.5))],
+            "m3_rmse_ci95": [float(np.percentile(boot_part_m3_rmse, 2.5)), float(np.percentile(boot_part_m3_rmse, 97.5))],
         },
         "worst_participants_tail_analysis": {
             "tail_fraction": 0.05,

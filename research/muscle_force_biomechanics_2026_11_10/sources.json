@@ -1,0 +1,74 @@
+[
+  {
+    "id": "SRC-0076",
+    "source_id": "SRC-0076",
+      "citation": "Bird, C. S., Bo, A. P. L., Lu, W., & Dick, T. J. M. (2026). Data from: Ultra-wideband radar to measure in vivo muscle forces. Dryad Digital Repository. https://doi.org/10.5061/dryad.sbcc2frmh; Science Robotics, 11(116), eaed5865. https://doi.org/10.1126/scirobotics.aed5865; arXiv:2510.20866",
+      "doi": "10.5061/dryad.sbcc2frmh",
+      "article_doi": "10.1126/scirobotics.aed5865",
+      "arxiv_id": "arXiv:2510.20866",
+      "title": "Ultra-wideband radar to measure in vivo muscle forces",
+      "authors": [
+        "Christopher S. Bird",
+        "Antonio P. L. Bo",
+        "Wei Lu",
+        "Taylor J. M. Dick"
+      ],
+      "institution": "The University of Queensland / CSIRO Health and Biosecurity / Oslo Metropolitan University",
+      "license": "CC0-1.0 (Public Domain Dedication)",
+      "date_published": "2026-07-02",
+      "cohort_size": "54 recruitment events across 4 distinct protocols (16 isometric knee, 18 fatiguing isometric knee, 6 dynamic knee, 6 isometric ankle)",
+      "measurements_present": [
+        "Biodex isokinetic dynamometer knee joint torque (passive, isokinetic, isotonic)",
+        "Forsentek 3-axis load cell knee torque and DACELL ankle dorsiflexion torque",
+        "Joint angle (0 to 90 degrees) and angular velocity (30, 60, 90, 120 deg/s)",
+        "B-mode ultrasound vastus lateralis and tibialis anterior fascicle length, pennation, velocity (Telemed 100 Hz, UltraTrack v5.0)",
+        "Surface EMG vastus lateralis (2048 Hz, normalized to MVC)",
+        "Ultra-wideband radar S11 and S21 scattering parameters (100 MHz to 2.9 GHz across 51 frequencies, 10.8 Hz)",
+        "20-minute fatiguing intermittent isometric knee extension protocol"
+      ],
+      "verified_dryad_file_digests": {
+        "README.md": {
+          "size_bytes": 14751,
+          "sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b"
+        },
+        "DATA_Isometric_Knee.xlsx": {
+          "size_bytes": 19879,
+          "sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f"
+        },
+        "DATA_Isometric_Ankle.xlsx": {
+          "size_bytes": 14591,
+          "sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3"
+        },
+        "DATA_Dynamic_Knee.mat": {
+          "size_bytes": 5212093,
+          "sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9"
+        },
+        "DATA_Dynamic_Knee.xlsx": {
+          "size_bytes": 10035204,
+          "sha256": "5101bc530624b9d4f604fc8f92143d0c7ee7aced5ea1af1079a83cf11fd82c15"
+        },
+        "DATA_Fatiguing_Isometric_Knee.xlsx": {
+          "size_bytes": 681704952,
+          "sha256": "08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25"
+        },
+        "CODE_LME_Estimate_Torque.m": {
+          "size_bytes": 3306,
+          "sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8"
+        },
+        "CODE_Train_LSTM_Models.py": {
+          "size_bytes": 7184,
+          "sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e"
+        },
+        "arxiv_2510_20866.pdf": {
+          "size_bytes": 5494859,
+          "sha256": "eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c"
+        }
+      },
+      "acquisition_and_access_audit": {
+        "rest_api_download_status": "REQUIRES_OAUTH_BEARER_TOKEN (HTTP 401 Unauthorized)",
+        "web_stream_download_status": "GATED_BY_ANUBIS_BOTSTOPPER_POW (HTTP 403 Forbidden without interactive browser JS)",
+        "preprinted_paper_status": "FULLY_ACQUIRED_FROM_ARXIV_UNABRIDGED (5,494,859 bytes, 25 pages, SHA256 verified)",
+        "governing_policy": "NO_BOT_BYPASS_ATTEMPTS. Owner-assisted acquisition supported with cryptographic SHA256 gate."
+      }
+    }
+]
