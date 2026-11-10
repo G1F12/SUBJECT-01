@@ -122,15 +122,15 @@ $$\text{pred\_transfer} = 560.0 + (7.657 \cdot 25.0) \cdot v$$
 ## 5. Statistical Reliability, Participant Bootstrap & Subgroups (Stage 6)
 
 ### 5.1 Paired Hypothesis Tests
-- **M4 vs M3 (Allometric Dynamic ODE vs Unscaled ODE)**: Mean RMSE reduction = $65.90\text{ mL/min}$ ($t = 10.83, p = 6.78e-26$; Wilcoxon signed-rank $p = 7.46e-22$).
-- **M4 vs M2 (Dynamic vs Static Multiple Regression)**: Mean RMSE reduction = $110.12\text{ mL/min}$ ($p = 2.24e-206$).
-- **M4 vs M1 (Dynamic vs Static Speed)**: Mean RMSE reduction = $165.99\text{ mL/min}$ ($p = 4.93e-133$).
-- **M3 vs M1 (Kinetics Contribution)**: Mean RMSE reduction = $100.09\text{ mL/min}$ ($p < 10^{-300}$).
+- **M4 vs M3 (Allometric Dynamic ODE vs Unscaled ODE)**: Mean RMSE reduction = $67.02\text{ mL/min}$ ($t = 10.38, p = 7.80e-24$; Wilcoxon signed-rank $p = 4.97e-20$).
+- **M4 vs M2 (Dynamic vs Static Multiple Regression)**: Mean RMSE reduction = $109.63\text{ mL/min}$ ($p = 6.37e-186$).
+- **M4 vs M1 (Dynamic vs Static Speed)**: Mean RMSE reduction = $166.22\text{ mL/min}$ ($p = 9.85e-118$).
+- **M3 vs M1 (Kinetics Contribution)**: Mean RMSE reduction = $99.20\text{ mL/min}$ ($p < 10^{-300}$).
 
 ### 5.2 Participant-Level Bootstrap (1,000 Resamples of Independent Subjects)
-- **M4 Out-of-Sample RMSE 95% CI**: $[393.58, 416.23]\text{ mL/min}$
-- **M4 Out-of-Sample $R^2$ 95% CI**: $[0.6124, 0.7034]$
-- **M3 Out-of-Sample RMSE 95% CI**: $[456.86, 484.46]\text{ mL/min}$
+- **M4 Out-of-Sample RMSE 95% CI**: $[392.38, 415.89]\text{ mL/min}$
+- **M4 Out-of-Sample $R^2$ 95% CI**: $[0.6006, 0.7015]$
+- **M3 Out-of-Sample RMSE 95% CI**: $[457.11, 485.57]\text{ mL/min}$
 
 ### 5.3 Demographic Subgroups & Worst-Case Tail Analysis
 

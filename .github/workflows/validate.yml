@@ -61,3 +61,7 @@ jobs:
         run: python -m unittest discover -s tests -p test_malaga_cpet_validation.py
       - name: Verify Malaga report table generation and structural consistency
         run: python tools/generate_malaga_report_tables.py
+      - name: Verify Bird Biomechanics muscle force, dynamic proxy decoupling, and fatigue validation
+        run: python -m unittest discover -s tests -p test_bird_biomechanics_validation.py
+      - name: Verify Bird Biomechanics report table generation and structural consistency
+        run: python tools/generate_biomechanics_report_tables.py

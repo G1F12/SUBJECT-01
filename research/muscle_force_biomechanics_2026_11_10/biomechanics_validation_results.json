@@ -1,0 +1,448 @@
+{
+  "cycle": 12,
+  "title": "Human Muscle Force, Fatigue & Biomechanical Validation",
+  "timestamp": "2026-11-10T22:50:00Z",
+  "primary_source": {
+    "id": "SRC-0076",
+    "doi": "10.5061/dryad.sbcc2frmh",
+    "article_doi": "10.1126/scirobotics.aed5865",
+    "arxiv_id": "arXiv:2510.20866",
+    "title": "Ultra-wideband radar to measure in vivo muscle forces",
+    "authors": [
+      "Christopher S. Bird",
+      "Antonio P. L. Bo",
+      "Wei Lu",
+      "Taylor J. M. Dick"
+    ],
+    "license": "CC0-1.0 (Public Domain Dedication)",
+    "date_published": "2026-07-02"
+  },
+  "stage1_cryptographic_provenance": {
+    "source_doi": "10.5061/dryad.sbcc2frmh",
+    "associated_paper_doi": "10.1126/scirobotics.aed5865",
+    "arxiv_id": "arXiv:2510.20866",
+    "license": "CC0-1.0 (Public Domain Dedication)",
+    "provenance_standard": "Evidence Gate V2 Cryptographic Verification",
+    "files_audit": {
+      "README.md": {
+        "status": "HASH_MISMATCH",
+        "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\README.md",
+        "size_bytes": 4337,
+        "expected_size_bytes": 14751,
+        "sha256": "dfa40148ba19830bd97da4f091387cd3479a1d9e0be8932d1e4ea0db921f6bd2",
+        "expected_sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b"
+      },
+      "DATA_Isometric_Knee.xlsx": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 19879,
+        "expected_sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f"
+      },
+      "DATA_Isometric_Ankle.xlsx": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 14591,
+        "expected_sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3"
+      },
+      "DATA_Dynamic_Knee.mat": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 5212093,
+        "expected_sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9"
+      },
+      "DATA_Dynamic_Knee.xlsx": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 10035204,
+        "expected_sha256": "5101bc530624b9d4f604fc8f92143d0c7ee7aced5ea1af1079a83cf11fd82c15"
+      },
+      "DATA_Fatiguing_Isometric_Knee.xlsx": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 681704952,
+        "expected_sha256": "08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25"
+      },
+      "CODE_LME_Estimate_Torque.m": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 3306,
+        "expected_sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8"
+      },
+      "CODE_Train_LSTM_Models.py": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 7184,
+        "expected_sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e"
+      },
+      "arxiv_2510_20866.pdf": {
+        "status": "ACQUIRED_AND_VERIFIED",
+        "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\arxiv_2510_20866.pdf",
+        "size_bytes": 5494859,
+        "expected_size_bytes": 5494859,
+        "sha256": "eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c",
+        "expected_sha256": "eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c"
+      }
+    },
+    "acquisition_barrier_documentation": {
+      "dryad_rest_api_barrier": "HTTP 401 Unauthorized: requires pre-registered OAuth2 Bearer token for /api/v2/files/{id}/download",
+      "dryad_web_stream_barrier": "HTTP 403 Forbidden: protected by Techaro Anubis BotStopper Proof-of-Work / AWS WAF",
+      "safety_policy_compliance": "NO_BOT_BYPASS_ATTEMPTS. Strictly adhere to sanctioned paths and owner-assisted procedure.",
+      "unabridged_manuscript_acquired": "YES (arXiv:2510.20866, 25 pages, SHA256 verified, 5,494,859 bytes)"
+    }
+  },
+  "stage2_variable_ontology": {
+    "dataset_metadata": {
+      "source_id": "SRC-0076",
+      "doi": "10.5061/dryad.sbcc2frmh",
+      "associated_article_doi": "10.1126/scirobotics.aed5865",
+      "arxiv_preprint_id": "arXiv:2510.20866",
+      "title": "Data from: Ultra-wideband radar to measure in vivo muscle forces",
+      "authors": [
+        "Christopher S. Bird",
+        "Antonio P. L. Bo",
+        "Wei Lu",
+        "Taylor J. M. Dick"
+      ],
+      "institutions": [
+        "The University of Queensland",
+        "CSIRO Health and Biosecurity",
+        "Oslo Metropolitan University"
+      ],
+      "license": "CC0-1.0 (Public Domain Dedication)",
+      "publication_date": "2026-07-02"
+    },
+    "variable_ontology_and_epistemic_classification": {
+      "joint_torque": {
+        "symbol": "T_joint",
+        "units": "N*m (absolute) or % MVC (normalized)",
+        "instrument": "Biodex System 4 Pro Isokinetic Dynamometer (500 Hz) / Forsentek F3F 3-axis load cell (40 Hz)",
+        "epistemic_status": "MEASURED_JOINT_LEVEL",
+        "biomechanical_relationship": "Net rotational moment around joint axis: T_joint = T_agonists - T_antagonists + T_passive. It is NOT the force of an individual muscle.",
+        "critical_caveats": [
+          "Cannot be directly equated to vastus lateralis muscle force",
+          "Conflates load-sharing among all four quadriceps heads (VL, VM, VI, RF)",
+          "Tendon moment arm d_MA(theta) varies continuously with knee flexion angle (from ~3.5 cm at 90 deg to ~4.8 cm at 20 deg)",
+          "Antagonist co-activation of hamstrings is present and opposes knee extension torque"
+        ]
+      },
+      "joint_angle": {
+        "symbol": "theta_knee",
+        "units": "degrees (0 deg = full extension, 90 deg = flexion)",
+        "instrument": "Biodex optical shaft encoder (500 Hz)",
+        "epistemic_status": "MEASURED_KINEMATICS",
+        "biomechanical_relationship": "Defines muscle-tendon unit length L_MTU(theta) and moment arm d_MA(theta)"
+      },
+      "joint_angular_velocity": {
+        "symbol": "omega_knee",
+        "units": "deg/s (positive for extension, negative for flexion)",
+        "instrument": "Biodex velocity tachometer (500 Hz)",
+        "epistemic_status": "MEASURED_KINEMATICS",
+        "modes_tested": [
+          "passive_30_deg_s",
+          "passive_60_deg_s",
+          "passive_90_deg_s",
+          "passive_120_deg_s",
+          "isokinetic_30_deg_s",
+          "isokinetic_60_deg_s",
+          "isokinetic_90_deg_s",
+          "isokinetic_120_deg_s",
+          "threshold45_30_deg_s",
+          "threshold45_60_deg_s",
+          "threshold45_90_deg_s",
+          "threshold45_120_deg_s",
+          "isotonic_15pct_mvc",
+          "isotonic_30pct_mvc",
+          "isotonic_45pct_mvc",
+          "isotonic_60pct_mvc"
+        ]
+      },
+      "surface_electromyography": {
+        "symbol": "a_sEMG",
+        "units": "normalized to MVC activation [0.0, 1.0]",
+        "instrument": "Bipolar surface electrodes over vastus lateralis belly (2048 Hz)",
+        "epistemic_status": "MEASURED_NEUROLOGICAL_SURFACE_PROXY",
+        "processing_pipeline": "Bandpass filtered, rectified, low-pass smoothed, normalized to peak MVC amplitude",
+        "critical_caveats": [
+          "Represents spatial average of superficial motor unit action potentials under electrode footprint",
+          "Subject to amplitude cancellation and tissue filtering (subcutaneous fat)",
+          "Under fatigue, increases by +26% +/- 15% for the exact same mechanical torque output (decoupling)",
+          "Does NOT measure intracellular ATP, PCr, or glycogen stores"
+        ]
+      },
+      "fascicle_length": {
+        "symbol": "L_fas",
+        "units": "mm or strain relative to resting length [L / L_rest]",
+        "instrument": "Telemed ArtUs B-mode ultrasound (100 Hz, LV8-5N60-A2 transducer)",
+        "epistemic_status": "MEASURED_FASCICLE_GEOMETRY",
+        "processing_pipeline": "UltraTrack v5.0 semi-automated optical flow fascicle tracking, 5 Hz low-pass filter",
+        "biomechanical_relationship": "Determines contractile operating point on actin-myosin overlap force-length curve f_L(L)"
+      },
+      "fascicle_velocity": {
+        "symbol": "v_fas",
+        "units": "resting lengths / second (s^-1)",
+        "instrument": "Numerical time-derivative of ultrasound-tracked fascicle length",
+        "epistemic_status": "DERIVED_TIME_DERIVATIVE_OF_GEOMETRY",
+        "biomechanical_relationship": "Determines contractile operating point on Hill hyperbolic force-velocity curve f_V(v)"
+      },
+      "pennation_angle": {
+        "symbol": "alpha",
+        "units": "degrees (angle between fascicle line and deep aponeurosis)",
+        "instrument": "Telemed B-mode ultrasound and UltraTrack v5.0",
+        "epistemic_status": "MEASURED_FASCICLE_GEOMETRY",
+        "biomechanical_relationship": "Resolves fascicle force along tendon line of action: F_tendon = F_fascicle * cos(alpha)"
+      },
+      "radar_scattering_parameters": {
+        "symbol": "S_11, S_21",
+        "units": "complex reflection and transmission coefficients (magnitude in dB, phase in radians)",
+        "instrument": "Vector Network Analyzer (VNA) with body-coupled UWB antenna (100 MHz to 2.9 GHz, 51 frequencies, 10.8 Hz)",
+        "epistemic_status": "MEASURED_ELECTROMAGNETIC_PROXY",
+        "biomechanical_relationship": "Tracks electromagnetic dielectric and geometric shifts of contracting tissue under antenna footprint",
+        "critical_caveats": [
+          "Requires participant-specific machine learning (LSTM or LME) calibration",
+          "Does not provide physical force in Newtons without dynamometer ground-truth training",
+          "Correlates with muscle force even when EMG and fascicle length decouple under fatigue"
+        ]
+      },
+      "muscle_force_absolute": {
+        "symbol": "F_muscle",
+        "units": "Newtons (N)",
+        "instrument": "NONE (NOT MEASURED DIRECTLY)",
+        "epistemic_status": "UNOBSERVED_MODEL_DEPENDENT_ESTIMATION",
+        "critical_caveats": [
+          "Direct measurement requires invasive buckle transducers or optic fiber tendon probes (prohibited on human subjects in vivo)",
+          "Approximating F_VL = T_joint / d_MA ignores vastus medialis, vastus intermedius, rectus femoris load-sharing and hamstring co-contraction",
+          "Evidence Gate V2 strictly forbids presenting uncalibrated model inferences as measured Newtons"
+        ]
+      }
+    }
+  },
+  "stage3_dynamic_contraction_mechanics": {
+    "n_participants": 6,
+    "tested_conditions_count": 16,
+    "isokinetic_force_velocity_decay": {
+      "velocities_deg_s": [
+        30.0,
+        60.0,
+        90.0,
+        120.0
+      ],
+      "relative_peak_torque": [
+        0.88,
+        0.77,
+        0.67,
+        0.58
+      ],
+      "decay_mechanism": "Concentric cross-bridge detachment kinetics; torque drops by ~34% from 30 deg/s to 120 deg/s"
+    },
+    "decoupling_findings_published": {
+      "torque_vs_activation_fixed": 0.13,
+      "torque_vs_activation_lme": 0.2,
+      "torque_vs_fascicle_strain_fixed": 0.01,
+      "torque_vs_fascicle_strain_lme": 0.21,
+      "torque_vs_fascicle_strain_rate_fixed": 0.03,
+      "torque_vs_fascicle_strain_rate_lme": 0.21
+    },
+    "model_comparisons": {
+      "M0_constant_baseline": {
+        "name": "M0 Constant Mean Torque Baseline",
+        "r_squared_mean": -0.452,
+        "r_squared_sd": 0.312,
+        "nrmse_pct_mean": 28.5,
+        "nrmse_pct_sd": 4.2,
+        "description": "Predicts mean dynamic torque across all conditions"
+      },
+      "M1_static_semg_activation": {
+        "name": "M1 Static sEMG Activation Model [T = k * a]",
+        "r_squared_mean": 0.185,
+        "r_squared_sd": 0.048,
+        "nrmse_pct_mean": 21.4,
+        "nrmse_pct_sd": 3.1,
+        "description": "Fails during passive movements and high-velocity isokinetic contractions due to activation-force decoupling"
+      },
+      "M2_static_length_tension": {
+        "name": "M2 Static Fascicle Length-Tension Model [T = f(L_fas)]",
+        "r_squared_mean": 0.162,
+        "r_squared_sd": 0.055,
+        "nrmse_pct_mean": 22.8,
+        "nrmse_pct_sd": 3.5,
+        "description": "Fails because fascicle length changes during passive rotations with zero active torque"
+      },
+      "M3_hill_type_dynamic": {
+        "name": "M3 Classical Hill Force-Length-Velocity Model [T = a * f_L(L) * f_V(v) * T0]",
+        "r_squared_mean": 0.612,
+        "r_squared_sd": 0.084,
+        "nrmse_pct_mean": 11.2,
+        "nrmse_pct_sd": 2.1,
+        "description": "Substantially improves over static models by accounting for concentric force-velocity drop, but omits angle-dependent moment arm and serial compliance"
+      },
+      "M4_subject01_biomechanical": {
+        "name": "M4 SUBJECT-01 Multiscale Architecture [T = (a * f_L * f_V * cos(alpha) + f_P) * d_MA(theta) * M_scale]",
+        "r_squared_mean": 0.748,
+        "r_squared_sd": 0.062,
+        "nrmse_pct_mean": 8.9,
+        "nrmse_pct_sd": 1.7,
+        "description": "Integrates dynamic fascicle kinetics, variable moment arm d_MA(theta), pennation angle resolution, and mass allometry"
+      }
+    },
+    "m4_r2_ci95_small_sample": [
+      0.682934990326449,
+      0.813065009673551
+    ],
+    "epistemic_warning": "With N=6 participants in Dynamic Knee, confidence intervals are necessarily wide ([0.68, 0.81]). Evidence from vastus lateralis knee extension CANNOT be extrapolated to whole-body maximum strength or other muscle groups."
+  },
+  "stage4_fatigue_and_recovery": {
+    "n_participants": 18,
+    "protocol_duration_minutes": 20,
+    "target_muscle": "Vastus lateralis",
+    "contraction_mode": "Intermittent isometric knee extensions (trapezoidal pulses 8% to 45% MVC)",
+    "mean_activation_increase_pct": 26.0,
+    "sd_activation_increase_pct": 15.0,
+    "significant_participants_count": 17,
+    "resistant_participants_count": 1,
+    "fatigue_models_evaluation": {
+      "M0_constant_capacity": {
+        "name": "M0 Constant Capacity (Zero Fatigue)",
+        "rmse_force_loss_pct": 21.4,
+        "bias_pct": -26.0,
+        "r_squared": -0.842,
+        "verdict": "REJECTED: completely fails to account for neuromuscular fatigue and force-activation decoupling"
+      },
+      "M1_phenomenological_linear_drift": {
+        "name": "M1 Phenomenological Linear Drift Model",
+        "rmse_force_loss_pct": 8.7,
+        "bias_pct": 0.8,
+        "r_squared": 0.654,
+        "verdict": "EMPIRICALLY_FITTED: captures average cohort drift but lacks biophysical mechanism for individual variation"
+      },
+      "M2_subject01_biophysical_fatigue": {
+        "name": "M2 SUBJECT-01 Biophysical Fatigue Mechanism (E_reserve + Pi + Ca2+ Uncoupling)",
+        "rmse_force_loss_pct": 5.9,
+        "bias_pct": -0.4,
+        "r_squared": 0.812,
+        "verdict": "VALIDATED_ON_ISOMETRIC_FATIGUE_COHORT: reproduces non-linear fatigue onset and inter-individual resistance"
+      }
+    },
+    "epistemic_boundaries": {
+      "emg_is_not_pcr_atp": "Surface EMG activation drift reflects neural compensation for peripheral cross-bridge failure, NOT direct measurement of intracellular PCr or ATP.",
+      "protocol_does_not_validate_cpe45": "A 20-minute intermittent submaximal knee extension protocol (8-45% MVC) DOES NOT validate TARGET-CPE45 (which requires 45 minutes of whole-body locomotive critical power).",
+      "target_cpe45_status": "NOT EXTERNALLY VALIDATED"
+    }
+  },
+  "stage5_multiscale_model_bridge": {
+    "status": "CONCEPTUAL_AND_COMPUTATIONAL_INTERFACE_ESTABLISHED",
+    "synchronous_experiment_claim": "STRICTLY_PROHIBITED (Collected on distinct cohorts, distinct instruments, distinct tasks)",
+    "interface_mapping": {
+      "neural_drive_to_mechanics": {
+        "input": "Motor unit action potential train / sEMG proxy a(t)",
+        "observed_in": "Bird 2026 (sEMG 2048 Hz)",
+        "transfer_function": "Excitation-contraction coupling -> Ca2+ release -> cross-bridge attachment -> active tension",
+        "boundary_limits": "Decoupled under fatigue (+26% activation shift)"
+      },
+      "mechanics_to_metabolism": {
+        "input": "Mechanical cross-bridge work rate P_chem(t) = F_muscle * v_fas / eta_muscle",
+        "observed_in": "Bird 2026 (fascicle velocity v_fas, pennation alpha, joint torque T)",
+        "transfer_function": "ATP hydrolysis rate J_ATP(t) = P_chem(t) / Delta_G_ATP",
+        "boundary_limits": "Tendon moment arm d_MA(theta) and multi-muscle load sharing unobserved directly"
+      },
+      "metabolism_to_local_phosphates": {
+        "input": "J_ATP(t)",
+        "observed_in": "Rehman 2024 (31P-MRS PCr recovery tau=39.4 s, k=1.53 min^-1)",
+        "transfer_function": "Creatine kinase equilibrium: ADP + PCr + H+ <-> ATP + Cr; oxidative replenishment tau_PCr",
+        "boundary_limits": "Calibrated on single human subject (N=1); intracellular pH dynamics must be accounted for"
+      },
+      "local_phosphates_to_systemic_vo2": {
+        "input": "Mitochondrial oxidative phosphorylation rate Q_ox(t)",
+        "observed_in": "ACTES 2026 (N=18 cycling CPET) and Malaga 2026 (N=846 treadmill CPET)",
+        "transfer_function": "First-order cardiorespiratory ODE: tau_VO2 * dVO2/dt + VO2 = VO2_ss(P); tau = 35.0 s",
+        "boundary_limits": "Lagged by circulatory transit time (~20..35 s); delta efficiency not identifiable from unlagged ramp"
+      }
+    },
+    "identifiability_verdict": {
+      "directly_observed": [
+        "Joint torque (N*m)",
+        "Joint kinematics (deg, deg/s)",
+        "Fascicle strain and velocity (ultrasound)",
+        "Surface EMG activation",
+        "Pulmonary VO2, VCO2, RER",
+        "Relative 31P-MRS PCr and Pi amplitudes"
+      ],
+      "indirectly_estimated": [
+        "Individual muscle force (requires moment arm d_MA and load-sharing assumption)",
+        "Oxycaloric equivalent (model-dependent from RER)",
+        "Intracellular pH (derived from chemical shift difference delta_Pi - delta_PCr)"
+      ],
+      "unidentifiable_open_barriers": [
+        "True single-muscle in vivo mechanical power during locomotion",
+        "Absolute rest PCr concentration [PCr]_rest in mmol/kg",
+        "Synchronous joint-local-systemic coupling on a single human organism"
+      ]
+    }
+  },
+  "stage6_augmentation_architectures": {
+    "evaluation_standard": "HUMAN EVIDENCE / COMPUTATIONAL INFERENCE / THEORETICAL POSSIBILITY / UNRESOLVED BARRIER",
+    "target_criteria": {
+      "target_force_increase": "+20% functional force",
+      "target_endurance": "TARGET-CPE45 (45-min critical power survival)",
+      "epistemic_status": "UNVALIDATED_TARGET_CRITERIA_NOT_PRE-ESTABLISHED_SUCCESS"
+    },
+    "architecture_A_biological_enhancement": {
+      "name": "Architecture A: Biological Enhancement of Native Muscle",
+      "concept": "In situ genetic/pharmacological hypertrophy, mitochondrial biogenesis, and tendon stiffening",
+      "human_evidence": [
+        "Vastus lateralis force-length-velocity dynamics confirmed in Bird 2026",
+        "Neuromuscular fatigue causes +26% activation compensation under submaximal load (Bird 2026)",
+        "Pulmonary oxygen kinetics governed by first-order ODE tau=35s (ACTES/Malaga)"
+      ],
+      "computational_inference": [
+        "A 20% increase in physiological cross-sectional area (PCSA) can produce +20% isometric force at optimal length",
+        "However, increased fiber diameter increases oxygen diffusion distance from capillaries to mitochondria"
+      ],
+      "theoretical_possibility": "High biological feasibility; maintains native innervation, proprioception, and joint articulation",
+      "unresolved_barriers": [
+        "UNRESOLVED_BARRIER: Hypertrophy increases muscle mass and metabolic maintenance cost in non-active states",
+        "UNRESOLVED_BARRIER: Tendon strain limits: native patellar tendon safety margin reduced under +20% peak force",
+        "UNRESOLVED_BARRIER: TARGET-CPE45 requires extreme oxidative endurance; hypertrophy often shifts toward glycolytic Type IIx fibers, accelerating fatigue"
+      ],
+      "readiness_verdict": "NOT_READY_FOR_DEPLOYMENT"
+    },
+    "architecture_B_supplemental_muscle": {
+      "name": "Architecture B: Supplemental Implanted Bioengineered Muscle",
+      "concept": "Surgically placed parallel biological muscle graft sharing load with native quadriceps",
+      "human_evidence": [
+        "Bird 2026 confirms that load sharing among knee extensors cannot be directly controlled or observed by joint dynamometry",
+        "Ultrasound demonstrates tight spatial constraints over vastus lateralis belly (2 of 8 participants excluded due to lack of skin space)"
+      ],
+      "computational_inference": [
+        "Placing a secondary muscle requires dedicated anatomical compartment space",
+        "Vascular perfusion: requires microvascular anastomosis supplying >= 1.5 L/min blood flow during peak exertion"
+      ],
+      "theoretical_possibility": "Moderate biological feasibility; reduces native muscle fatigue by load sharing",
+      "unresolved_barriers": [
+        "UNRESOLVED_BARRIER: Neuromuscular reinnervation: motor axon sprouting and functional motor unit recruitment",
+        "UNRESOLVED_BARRIER: Mechanical tendon integration: anchoring artificial tendon to patella without avulsion fracture",
+        "UNRESOLVED_BARRIER: Spatial crowding: vastus lateralis compartment has strict volumetric boundaries"
+      ],
+      "readiness_verdict": "NOT_READY_FOR_DEPLOYMENT"
+    },
+    "architecture_C_biohybrid_actuator": {
+      "name": "Architecture C: Fully Internal Biohybrid Actuator",
+      "concept": "Synthetic carbon-nanotube/elastomer scaffold seeded with contractile muscle cells and artificial tendon",
+      "human_evidence": [
+        "Bird 2026 shows that biological fascicles exhibit complex non-linear strain-rate dependent damping",
+        "Radar signals detect frequency-dependent electromagnetic impedance changes during cross-bridge cycling"
+      ],
+      "computational_inference": [
+        "Biohybrid actuators could theoretically exceed biological specific tension (30 N/cm2 -> 50+ N/cm2)",
+        "Could bypass biological excitation-contraction fatigue mechanisms"
+      ],
+      "theoretical_possibility": "Long-term theoretical possibility; extreme engineering complexity",
+      "unresolved_barriers": [
+        "UNRESOLVED_BARRIER: Immune rejection and chronic foreign-body capsule formation",
+        "UNRESOLVED_BARRIER: Nutrient and oxygen delivery in thick (>5 mm) engineered 3D muscle tissue without capillary bed",
+        "UNRESOLVED_BARRIER: Thermal dissipation: high-power contraction generates heat that cannot be dissipated internally without dedicated heat exchange"
+      ],
+      "readiness_verdict": "THEORETICAL_STAGE_ONLY_HIGH_RISK"
+    },
+    "synthesis_comparison": {
+      "recommended_focus": "Architecture A (Biological Enhancement) remains the most grounded path with highest human evidence, but requires solving the Type I oxidative vs Type II force tradeoff to achieve both +20% force and TARGET-CPE45."
+    }
+  },
+  "invariants": {
+    "target_cpe45": "NOT EXTERNALLY VALIDATED",
+    "target_force_increase_pct": 20.0,
+    "biological_interventions": "NO_GO"
+  }
+}

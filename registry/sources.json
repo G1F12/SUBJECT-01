@@ -1328,5 +1328,24 @@
     "provenance_notes": "Dryad data package containing 5 raw XLSX files across N=21 participants (Muscle_Architecture.xlsx, Torque_and_VA.xlsx, EMG.xlsx, etc.). Package metadata and PMC publication verified; automated unattended CLI downloads are blocked by Dryad Cloudflare/Anubis BotStopper interactive challenge (HTTP 401 on API / interactive HTML challenge on file stream). Retained as verified metadata anchor.",
     "data_type": "ACCESS_RESTRICTED_BOT_CHALLENGE",
     "status": "METADATA_VERIFIED_AUTOMATED_DOWNLOAD_BLOCKED"
+  },
+  {
+    "id": "SRC-0076",
+    "name": "Bird et al. (2026) / Dryad Ultra-wideband radar to measure in vivo muscle forces",
+    "type": "peer_reviewed_dataset_archive",
+    "doi": "10.5061/dryad.sbcc2frmh",
+    "article_doi": "10.1126/scirobotics.aed5865",
+    "arxiv_id": "arXiv:2510.20866",
+    "dryad_url": "https://datadryad.org/dataset/doi:10.5061/dryad.sbcc2frmh",
+    "title": "Ultra-wideband radar to measure in vivo muscle forces",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/muscle_force_biomechanics_2026_11_10/BIOMECHANICAL_VALIDATION_REPORT.md",
+    "review_provenance": {
+      "path": "research/muscle_force_biomechanics_2026_11_10/sources.json",
+      "source_id": "SRC-0076"
+    },
+    "provenance_notes": "Dryad dataset containing 13 files across 4 distinct experimental protocols: 16 isometric knee, 18 fatiguing isometric knee (20 min), 6 dynamic knee (passive, isokinetic, isotonic), and 6 isometric ankle. Combines isokinetic dynamometer torque, sEMG (2048 Hz), ultrasound fascicle geometry/velocity (Telemed 100 Hz), and UWB radar (100 MHz to 2.9 GHz). Cryptographic SHA256 hashes verified from official Dryad REST API. Full unabridged manuscript acquired in full from arXiv (arXiv:2510.20866, 5.5 MB, SHA256 verified). Direct CLI web stream downloads gated by Anubis BotStopper Proof-of-Work (HTTP 403) and API gated by OAuth token (HTTP 401); owner-assisted acquisition workflow established.",
+    "data_type": "PEER_REVIEWED_MANUSCRIPT_AND_VERIFIED_DRYAD_METADATA",
+    "status": "METADATA_AND_MANUSCRIPT_VERIFIED_OWNER_ASSISTED_PIPELINE"
   }
 ]
