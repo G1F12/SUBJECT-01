@@ -34,9 +34,10 @@ class AuthenticPatientRecordVML:
     device_used: str
     preop_innervation_status: str  # "DENERVATED", "PARTIAL", "INTACT"
     activities_measured: List[str]
-    baseline_forces_lb: List[float]
+    baseline_forces_lb: List[float]  # Empty/unmeasured for S01
     week24_percent_changes: List[float]
     mean_week24_improvement_pct: float
+    baseline_measurement_status: str = "MEASURED"  # "MEASURED" or "MISSING_IN_PUBLISHED_TABLE"
 
 
 # Primary authentic data from Dziki et al. (2016), Table 1 & Table 2
@@ -44,12 +45,14 @@ DZIKI_2016_AUTHENTIC_COHORT: List[AuthenticPatientRecordVML] = [
     AuthenticPatientRecordVML(
         "S01", 34, "M", "Anterior tibial compartment (left)", "Exercise induced", 58.0,
         "Acell, Matristem", "DENERVATED",
-        ["Dorsiflexion"], [0.0], [0.0], 0.0
+        ["Dorsiflexion"], [], [0.0], 0.0,
+        baseline_measurement_status="MISSING_IN_PUBLISHED_TABLE"
     ),
     AuthenticPatientRecordVML(
         "S02", 37, "M", "Anterior tibial compartment (left)", "Skiing accident", 67.0,
         "Acell, Matristem", "DENERVATED",
-        ["Dorsiflexion"], [0.0], [0.0], 0.0
+        ["Dorsiflexion"], [0.0], [0.0], 0.0,
+        baseline_measurement_status="MEASURED"
     ),
     AuthenticPatientRecordVML(
         "S03", 28, "M", "Quadriceps (left)", "IED blast", 68.0,
@@ -152,6 +155,38 @@ def evaluate_track_1_muscle_recovery() -> Dict[str, Any]:
     lopo_mae = sum(abs(e) for e in lopo_errors) / n
     lopo_rmse = math.sqrt(sum(e**2 for e in lopo_errors) / n)
     
+    # Simple Independent Baseline: Featureless LOPO Cohort Mean
+    cohort_mean_lopo_preds = []
+    for i in range(n):
+        train = [cohort[j].mean_week24_improvement_pct for j in range(n) if j != i]
+        cohort_mean_lopo_preds.append(sum(train) / len(train))
+    baseline_errors = [pred - obs for pred, obs in zip(cohort_mean_lopo_preds, observed_vals)]
+    baseline_mae = sum(abs(e) for e in baseline_errors) / n
+    baseline_rmse = math.sqrt(sum(e**2 for e in baseline_errors) / n)
+
+    # Policy A: Complete Cases (N=12, excluding S01 whose baseline is missing)
+    complete_cohort = [p for p in cohort if p.baseline_measurement_status == "MEASURED"]
+    n_comp = len(complete_cohort)
+    comp_obs = [p.mean_week24_improvement_pct for p in complete_cohort]
+    
+    comp_grp_preds = []
+    for i in range(n_comp):
+        train = [complete_cohort[j] for j in range(n_comp) if j != i]
+        test = complete_cohort[i]
+        grp = [p.mean_week24_improvement_pct for p in train if p.preop_innervation_status == test.preop_innervation_status]
+        comp_grp_preds.append(sum(grp)/len(grp) if grp else sum(p.mean_week24_improvement_pct for p in train)/len(train))
+    comp_grp_errors = [p - o for p, o in zip(comp_grp_preds, comp_obs)]
+    comp_grp_mae = sum(abs(e) for e in comp_grp_errors) / n_comp
+    comp_grp_rmse = math.sqrt(sum(e**2 for e in comp_grp_errors) / n_comp)
+
+    comp_base_preds = []
+    for i in range(n_comp):
+        train = [comp_obs[j] for j in range(n_comp) if j != i]
+        comp_base_preds.append(sum(train) / len(train))
+    comp_base_errors = [p - o for p, o in zip(comp_base_preds, comp_obs)]
+    comp_base_mae = sum(abs(e) for e in comp_base_errors) / n_comp
+    comp_base_rmse = math.sqrt(sum(e**2 for e in comp_base_errors) / n_comp)
+
     patient_records = []
     for p, pred, err in zip(cohort, model_preds, errors):
         patient_records.append({
@@ -162,6 +197,7 @@ def evaluate_track_1_muscle_recovery() -> Dict[str, Any]:
             "cause": p.cause_of_injury,
             "tissue_deficit_pct": p.tissue_deficit_pct,
             "innervation": p.preop_innervation_status,
+            "baseline_measurement_status": p.baseline_measurement_status,
             "observed_pct": p.mean_week24_improvement_pct,
             "model_pred_pct": pred,
             "residual_pct": round(err, 2)
@@ -183,13 +219,38 @@ def evaluate_track_1_muscle_recovery() -> Dict[str, Any]:
             "lopo_mae": round(lopo_mae, 2),   # 36.21%
             "lopo_rmse": round(lopo_rmse, 2)  # 48.94%
         },
+        "independent_baseline_lopo": {
+            "cohort_mean_lopo_mae": round(baseline_mae, 2),   # 38.89%
+            "cohort_mean_lopo_rmse": round(baseline_rmse, 2), # 46.44%
+            "model_beats_baseline_mae": round(lopo_mae, 2) < round(baseline_mae, 2),
+            "model_beats_baseline_rmse": round(lopo_rmse, 2) < round(baseline_rmse, 2),  # False: 48.94 > 46.44!
+        },
+        "missing_data_policies": {
+            "policy_b_full_cohort_n13": {
+                "description": "Full cohort N=13; S01 baseline force is unmeasured (None), outcome retained as 0.0% based on persistent denervation.",
+                "group_lopo_mae": round(lopo_mae, 2),
+                "group_lopo_rmse": round(lopo_rmse, 2),
+                "baseline_lopo_mae": round(baseline_mae, 2),
+                "baseline_lopo_rmse": round(baseline_rmse, 2),
+            },
+            "policy_a_complete_cases_n12": {
+                "description": "Complete cases only N=12 (excluding S01 due to missing pre-op baseline force).",
+                "group_lopo_mae": round(comp_grp_mae, 2),       # 42.91%
+                "group_lopo_rmse": round(comp_grp_rmse, 2),     # 52.51%
+                "baseline_lopo_mae": round(comp_base_mae, 2),   # 39.59%
+                "baseline_lopo_rmse": round(comp_base_rmse, 2), # 47.11%
+                "group_beats_baseline_mae": False,              # 42.91 > 39.59
+                "group_beats_baseline_rmse": False              # 52.51 > 47.11
+            }
+        },
         "patient_records": patient_records,
         "forensic_verdict": "PARTIAL",
         "forensic_findings": [
             "Cohort mean (+37.34%) accurately reflects the published human clinical average (+37.3%).",
             "Cycle 4B claim of MAE = 5.92% on a 6/4/3 split was based on a fabricated synthetic dataset and is permanently revoked.",
             "Patient S12 did NOT experience +112.4% gain (in reality -3.5% hip flexion, -1.1% knee extension, mean -2.30%).",
-            "On authentic clinical data, individual patient variance is high (SD = 44.62%), yielding true Model 13 MAE = 25.74% and LOPO-CV MAE = 36.21%."
+            "Patient S01 pre-op baseline force is absent in published Table 2. Under Complete Case analysis (N=12), the innervation group model is WORSE than simple cohort-mean baseline on both MAE (42.91 vs 39.59) and RMSE (52.51 vs 47.11).",
+            "Under Full Cohort (N=13), the trained group model fails to beat the independent baseline on RMSE (48.94 pp vs 46.44 pp), demonstrating zero utility for individual patient prognosis."
         ]
     }
 
@@ -249,11 +310,21 @@ def evaluate_track_2_materials() -> Dict[str, Any]:
             pred_errors.append(rel_err)
             
         within_1sigma = err <= e.observed_uncertainty
+        
+        # Determine 5-tier classification
+        if not e.is_independent_prediction:
+            epistemic_class = "TIER-1-RAW-CONSTANT-CALIBRATION"
+        elif "sqrt(E*Gc)" in e.parameter_name:
+            epistemic_class = "TIER-2-MATHEMATICAL-IDENTITY-CHECK"
+        else:
+            epistemic_class = "TIER-3-BOUNDARY-VALUE-PREDICTION"
+            
         records_out.append({
             "source": e.source_citation,
             "material": e.material_name,
             "parameter": e.parameter_name,
             "is_independent": e.is_independent_prediction,
+            "epistemic_class": epistemic_class,
             "calibration_value": f"{e.calibration_value} {e.units}" if not e.is_independent_prediction else "N/A",
             "observed": f"{e.observed_mean} +/- {e.observed_uncertainty} {e.units}",
             "predicted": f"{e.predicted_value} {e.units}",
@@ -270,13 +341,31 @@ def evaluate_track_2_materials() -> Dict[str, Any]:
         "genuine_predictions_count": len(prediction_entries),
         "mean_genuine_prediction_error_pct": round(mean_prediction_error, 2),  # ~9.15%
         "genuine_predictions_within_1sigma": all(abs(e.predicted_value - e.observed_mean) <= e.observed_uncertainty for e in prediction_entries),
+        "epistemic_classification": {
+            "tier_1_raw_calibration_constants": len(calibration_entries),
+            "tier_2_mathematical_identities": 1,  # Pangolin K1c = sqrt(E*Gc)
+            "tier_3_derived_boundary_value_predictions": 2,  # Dermis puncture and sharp cutting
+            "tier_4_cross_material_transfer": 0,
+            "tier_5_true_independent_holdout_validation": 0  # No unseen biological coupons evaluated
+        },
+        "k1c_independence_audit": {
+            "parameter": "Pangolin Keratin Fracture Toughness K1c",
+            "formula_used": "sqrt(E * Gc)",
+            "input_E_gpa": 2.20,
+            "input_Gc_kj_m2": 16.8,
+            "calculated_k1c_mpa_m05": 6.08,
+            "reported_in_paper_mpa_m05": 5.80,
+            "status": "MATHEMATICAL_IDENTITY_VERIFICATION",
+            "finding": "K1c was calculated directly from Wang et al. 2016 inputs via LEFM Irwin relation. It is not an independent material property prediction."
+        },
         "records": records_out,
         "forensic_verdict": "PARTIAL",
         "forensic_findings": [
             "11 of the 12 properties reported in Cycle 4B were hardcoded input constants (calibration values), yielding artificial 0.0% error.",
             "Cycle 4B's claimed 0.50% error was a mathematical artifact of averaging 11 circular identities with 1 true prediction (5.96% / 12 = 0.50%).",
-            "Across 3 genuine derived predictions (dermis puncture 26.8N, keratin toughness 6.08 MPa*m^0.5, scalpel cut 21.0N), real mean relative error is 9.15%.",
-            "All 3 genuine predictions fall within experimental 1-sigma uncertainty bands."
+            "Pangolin Keratin K1c = sqrt(E*Gc) confirms the internal mathematical consistency of the LEFM Irwin relation on Wang 2016 data, but is NOT an independent empirical prediction.",
+            "Across 3 derived predictions (dermis puncture 26.8N, keratin toughness 6.08 MPa*m^0.5, scalpel cut 21.0N), real mean relative error is 9.15%.",
+            "True blind holdout validation across unseen specimens remains UNVALIDATED."
         ]
     }
 
@@ -340,11 +429,38 @@ def evaluate_track_3_thermoregulation() -> Dict[str, Any]:
             "within_human_literature_range": (human_obs_mean_k_min - human_obs_sd_k_min <= model14_case2_hybrid_pred <= human_obs_mean_k_min + 2 * human_obs_sd_k_min),
             "description": "Model 14 aligns with empirical uncompensable heat literature, but whole-body biological armor has not been tested on living human subjects."
         },
+        "montain_1994_matched_conditions_audit": {
+            "experimental_conditions": {
+                "ambient_temp_tropical_c": 35.0,
+                "ambient_rh_tropical_pct": 50.0,
+                "ambient_temp_desert_c": 43.0,
+                "ambient_rh_desert_pct": 20.0,
+                "air_velocity_m_s": 1.0,
+                "clothing_ensemble": "Chemical protective overgarment BDO (MOPP-4)",
+                "clothing_insulation_clo": 1.5,
+                "clothing_permeability_im": 0.33,
+                "metabolic_workload_w": [425.0, 600.0]
+            },
+            "observed_vs_model_heating_rates_k_min": {
+                "observed_moderate_425w_tropical": "0.035 - 0.055 (mean: 0.045)",
+                "observed_heavy_600w_tropical": "0.055 - 0.080 (mean: 0.065)",
+                "predicted_lumped_425w_50rh": 0.0728,
+                "predicted_lumped_600w_50rh": 0.1120,
+                "predicted_lumped_600w_80rh_jungle": 0.1233
+            },
+            "humidity_divergence_findings": {
+                "evaporative_capacity_at_50rh_w": 109.9,
+                "evaporative_capacity_at_80rh_w": 50.6,
+                "capacity_loss_at_80rh_pct": 53.96,
+                "rectification": "Cycle 4C incorrectly compared 50% RH experimental data with an 80% RH simulation as identical. At 80% RH, evaporative heat dissipation is reduced by 54%, causing substantially more severe heat strain."
+            }
+        },
         "forensic_verdict": "PARTIAL",
         "forensic_findings": [
             "ISO 7933:2023 is a normative standard/model, NOT individual raw human trial data.",
             "Agreement with ISO 7933 establishes REFERENCE_MODEL_AGREEMENT, not EXTERNALLY_VALIDATED.",
-            "Empirical human data from Montain et al. (1994) confirms uncompensable warming rates of 0.04-0.085 K/min, consistent with Model 14.",
+            "Empirical human data from Montain et al. (1994) confirms uncompensable warming rates of 0.04-0.085 K/min under matched 50% RH (tropical) and 20% RH (desert) conditions.",
+            "Comparing 50% RH experimental results with 80% RH model scenarios is physically invalid because evaporative capacity drops by 54% from 109.9 W to 50.6 W.",
             "Final thermal validation status is PARTIAL pending living whole-organism armor testing."
         ]
     }

@@ -9,12 +9,12 @@
       "thickness_mm": 6.02,
       "areal_density_kg_m2": 6.14,
       "sharp_puncture_n_ci": [
-        17.05,
-        30.73
+        17.24,
+        30.47
       ],
       "slicing_cut_n_ci": [
-        60.37,
-        107.28
+        61.12,
+        106.26
       ],
       "tensile_spall_risk": false,
       "metabolic_cost_w_m2": 2.8,
@@ -28,12 +28,12 @@
       "thickness_mm": 4.5,
       "areal_density_kg_m2": 5.31,
       "sharp_puncture_n_ci": [
-        26.35,
-        45.68
+        26.65,
+        45.48
       ],
       "slicing_cut_n_ci": [
-        131.88,
-        231.02
+        133.3,
+        236.84
       ],
       "tensile_spall_risk": false,
       "metabolic_cost_w_m2": 1.2,
@@ -47,12 +47,12 @@
       "thickness_mm": 5.0,
       "areal_density_kg_m2": 9.25,
       "sharp_puncture_n_ci": [
-        11.72,
-        17.59
+        11.55,
+        17.47
       ],
       "slicing_cut_n_ci": [
-        75.14,
-        136.54
+        72.8,
+        135.83
       ],
       "tensile_spall_risk": true,
       "metabolic_cost_w_m2": 4.5,
@@ -66,12 +66,12 @@
       "thickness_mm": 4.0,
       "areal_density_kg_m2": 4.8,
       "sharp_puncture_n_ci": [
-        46.81,
-        80.0
+        44.46,
+        79.73
       ],
       "slicing_cut_n_ci": [
-        136.31,
-        230.9
+        132.33,
+        232.59
       ],
       "tensile_spall_risk": false,
       "metabolic_cost_w_m2": 3.2,
@@ -85,12 +85,12 @@
       "thickness_mm": 5.5,
       "areal_density_kg_m2": 8.53,
       "sharp_puncture_n_ci": [
-        23.76,
-        38.88
+        23.66,
+        38.33
       ],
       "slicing_cut_n_ci": [
-        166.98,
-        291.65
+        167.2,
+        295.77
       ],
       "tensile_spall_risk": true,
       "metabolic_cost_w_m2": 5.0,
@@ -215,85 +215,85 @@
       "system_id": "SYS-A",
       "sample_count": 500,
       "perturbation_range": "+/- 20%",
-      "sharp_puncture_mean_n": 23.35,
-      "sharp_puncture_std_n": 3.49,
+      "sharp_puncture_mean_n": 23.22,
+      "sharp_puncture_std_n": 3.52,
       "sharp_puncture_95ci_n": [
-        17.05,
-        30.73
+        17.24,
+        30.47
       ],
-      "slicing_cut_mean_n": 82.25,
-      "slicing_cut_std_n": 11.86,
+      "slicing_cut_mean_n": 81.7,
+      "slicing_cut_std_n": 11.98,
       "slicing_cut_95ci_n": [
-        60.37,
-        107.28
+        61.12,
+        106.26
       ]
     },
     {
       "system_id": "SYS-B",
       "sample_count": 500,
       "perturbation_range": "+/- 20%",
-      "sharp_puncture_mean_n": 35.26,
-      "sharp_puncture_std_n": 5.17,
+      "sharp_puncture_mean_n": 35.15,
+      "sharp_puncture_std_n": 4.95,
       "sharp_puncture_95ci_n": [
-        26.35,
-        45.68
+        26.65,
+        45.48
       ],
-      "slicing_cut_mean_n": 179.4,
-      "slicing_cut_std_n": 27.79,
+      "slicing_cut_mean_n": 179.0,
+      "slicing_cut_std_n": 27.07,
       "slicing_cut_95ci_n": [
-        131.88,
-        231.02
+        133.3,
+        236.84
       ]
     },
     {
       "system_id": "SYS-C",
       "sample_count": 500,
       "perturbation_range": "+/- 20%",
-      "sharp_puncture_mean_n": 14.37,
-      "sharp_puncture_std_n": 1.55,
+      "sharp_puncture_mean_n": 14.29,
+      "sharp_puncture_std_n": 1.54,
       "sharp_puncture_95ci_n": [
-        11.72,
-        17.59
+        11.55,
+        17.47
       ],
-      "slicing_cut_mean_n": 102.9,
+      "slicing_cut_mean_n": 102.08,
       "slicing_cut_std_n": 16.37,
       "slicing_cut_95ci_n": [
-        75.14,
-        136.54
+        72.8,
+        135.83
       ]
     },
     {
       "system_id": "SYS-D",
       "sample_count": 500,
       "perturbation_range": "+/- 20%",
-      "sharp_puncture_mean_n": 61.45,
-      "sharp_puncture_std_n": 8.9,
+      "sharp_puncture_mean_n": 61.07,
+      "sharp_puncture_std_n": 9.2,
       "sharp_puncture_95ci_n": [
-        46.81,
-        80.0
+        44.46,
+        79.73
       ],
-      "slicing_cut_mean_n": 181.49,
-      "slicing_cut_std_n": 25.21,
+      "slicing_cut_mean_n": 180.02,
+      "slicing_cut_std_n": 26.81,
       "slicing_cut_95ci_n": [
-        136.31,
-        230.9
+        132.33,
+        232.59
       ]
     },
     {
       "system_id": "SYS-E",
       "sample_count": 500,
       "perturbation_range": "+/- 20%",
-      "sharp_puncture_mean_n": 30.35,
-      "sharp_puncture_std_n": 4.08,
+      "sharp_puncture_mean_n": 30.52,
+      "sharp_puncture_std_n": 4.09,
       "sharp_puncture_95ci_n": [
-        23.76,
-        38.88
+        23.66,
+        38.33
       ],
-      "slicing_cut_mean_n": 222.7,
-      "slicing_cut_std_n": 34.36,
+      "slicing_cut_mean_n": 224.43,
+      "slicing_cut_std_n": 34.72,
       "slicing_cut_95ci_n": [
-        166.98,
-        291.65
+        167.2,
+        295.77
       ]
     }
   ],

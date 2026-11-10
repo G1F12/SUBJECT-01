@@ -25,7 +25,7 @@ import sys
 
 AEGIS_ROOT = Path(__file__).resolve().parent.parent
 AEGIS_REG_DIR = AEGIS_ROOT / "registry"
-SUBJECT01_ROOT = Path("D:/SUBJECT-01")
+SUBJECT01_ROOT = AEGIS_ROOT.parent.parent if (AEGIS_ROOT.parent.parent / "registry").is_dir() else Path("D:/SUBJECT-01")
 SUBJECT01_REG_DIR = SUBJECT01_ROOT / "registry"
 
 OFFSETS = {
@@ -96,8 +96,8 @@ def is_already_migrated() -> bool:
         return False
     data = json.loads(negs_file.read_text(encoding="utf-8"))
     ids = [item.get("id") for item in data]
-    # If NEG-0035 is present and NEG-0029 is absent, already migrated
-    return ("NEG-0035" in ids) and ("NEG-0029" not in ids)
+    # If NEG-0038 is present or NEG-0035 is present and NEG-0029 is absent, already migrated
+    return ("NEG-0038" in ids or "NEG-0035" in ids) and ("NEG-0029" not in ids)
 
 
 def run_migration():

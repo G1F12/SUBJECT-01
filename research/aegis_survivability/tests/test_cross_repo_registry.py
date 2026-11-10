@@ -13,7 +13,7 @@ import sys
 
 AEGIS_ROOT = Path(__file__).resolve().parent.parent
 AEGIS_REG_DIR = AEGIS_ROOT / "registry"
-SUBJECT01_ROOT = Path("D:/SUBJECT-01")
+SUBJECT01_ROOT = AEGIS_ROOT.parent.parent if (AEGIS_ROOT.parent.parent / "registry").is_dir() else Path("D:/SUBJECT-01")
 SUBJECT01_REG_DIR = SUBJECT01_ROOT / "registry"
 
 COMMON_REGISTRIES = [

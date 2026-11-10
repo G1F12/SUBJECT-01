@@ -1,6 +1,6 @@
 [
   {
-    "id": "DEC-0016",
+    "id": "DEC-0024",
     "decision": "Establish AEGIS-01 as an autonomous, scientifically rigorous survivability track within SUBJECT-01 without modifying main branch.",
     "rationale": "AEGIS-01 focuses on mechanical survivability, ballistics, hemostasis, and regeneration, complementing the metabolic/endurance research of SUBJECT-01 while maintaining strict ID isolation and zero collision.",
     "status": "CONFIRMED",
@@ -8,7 +8,7 @@
     "original_id": "DEC-0015"
   },
   {
-    "id": "DEC-0017",
+    "id": "DEC-0025",
     "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D — CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
     "rationale": "Physics and neurophysiology strictly prove that projectile flight time at combat distances (<70 ms) is shorter than biological sensorimotor latency (>= 30-108 ms). Claiming reactive bullet evasion violates physical causality.",
     "status": "CONFIRMED",
@@ -16,7 +16,7 @@
     "original_id": "DEC-0016"
   },
   {
-    "id": "DEC-0018",
+    "id": "DEC-0026",
     "decision": "Adopt the Viscous Criterion (VC) and Backface Deformation (BFD <= 25mm) as mandatory non-negotiable pass criteria for AEGIS-BAL.",
     "rationale": "Arresting penetration while allowing fatal blunt force cardiac/thoracic crush (BABT) is an engineering failure. Real protection requires skeletal load-bridging.",
     "status": "CONFIRMED",
@@ -24,7 +24,7 @@
     "original_id": "DEC-0017"
   },
   {
-    "id": "DEC-0019",
+    "id": "DEC-0027",
     "decision": "Mandate localized hemostasis mechanisms (topical sealants, sphincter-like microvascular spasm) and reject systemic hypercoagulation.",
     "rationale": "Systemic prothrombotic alterations induce lethal DIC, stroke, and pulmonary embolism, violating whole-organism viability criteria.",
     "status": "CONFIRMED",
@@ -32,7 +32,7 @@
     "original_id": "DEC-0018"
   },
   {
-    "id": "DEC-0020",
+    "id": "DEC-0028",
     "decision": "Adopt the Acomys-inspired fibrosis-control model (TGF-beta3 / M2 macrophage polarization) and couple blastema activation with Peto-scale TP53 expansion.",
     "rationale": "Scarless dermal repair is biologically proven in mammals (Acomys), but unlimited somatic blastema cycling requires robust tumor suppressor expansion to prevent lethal malignancy.",
     "status": "CONFIRMED",
@@ -40,7 +40,7 @@
     "original_id": "DEC-0019"
   },
   {
-    "id": "DEC-0021",
+    "id": "DEC-0029",
     "decision": "Reject continuous monolithic carapace architectures (ARCH-1) in favor of zoned modular protection (ARCH-4).",
     "rationale": "Full carapaces induce fatal exertion-induced heat stroke in <60 minutes due to sweat occlusion and degrade sprint speed by 40%. Zoned protection (55% vital area coverage) preserves thermoregulation and mobility.",
     "status": "CONFIRMED",
@@ -48,7 +48,7 @@
     "original_id": "DEC-0020"
   },
   {
-    "id": "DEC-0022",
+    "id": "DEC-0030",
     "decision": "Enforce strict sequential ID namespace starting at HYP-0008, EXP-0037, FND-0038, NEG-0029, DEC-0015, ISS-0020, SRC-0068 for turnkey compatibility with SUBJECT-01 validator.",
     "rationale": "Guarantees zero identifier collision with SUBJECT-01 registry and satisfies tools/validate_repository.py stdlib validation constraints.",
     "status": "CONFIRMED",
@@ -56,7 +56,7 @@
     "original_id": "DEC-0021"
   },
   {
-    "id": "DEC-0023",
+    "id": "DEC-0031",
     "decision": "Formal partitioning of research architectures into three isolated tiers: ARCH-BIO (Fully Endogenous), ARCH-HYBRID (Internal Biohybrid), and ARCH-SPEC (Speculative Biological Architecture). Rejection of external exoskeletons and wearable armor as primary endpoints.",
     "rationale": "Prevents conflation of biological feasibility with synthetic or speculative technologies, keeping core priority on internal biological solutions.",
     "status": "CONFIRMED",
@@ -64,7 +64,7 @@
     "original_id": "DEC-0023"
   },
   {
-    "id": "DEC-0024",
+    "id": "DEC-0032",
     "decision": "Adoption of multi-axis functional regeneration framework (8 physiological recovery dimensions) and prioritization of tissue preservation (PEG membrane fusion) to bypass prolonged de novo axonal regrowth.",
     "rationale": "True recovery requires returning coordinated muscle strength, innervation, vascularity, and joint mobility rather than superficial wound closure.",
     "status": "CONFIRMED",
@@ -72,38 +72,63 @@
     "original_id": "DEC-0024"
   },
   {
-    "id": "DEC-0025",
+    "id": "DEC-0033",
     "decision": "Mandatory Disaggregation of Peripheral Nerve and Muscle Recovery Metrics",
     "rationale": "To prevent false claims of rapid functional recovery, all future models and reports must independently report: (1) electrophysiological CNAP conduction, (2) sensory recovery, (3) motor axonal misdirection rate, and (4) contractile muscle torque.",
     "status": "active",
     "date": "2026-11-09"
   },
   {
-    "id": "DEC-0026",
+    "id": "DEC-0034",
     "decision": "Classification of Ballistic and Knife Resistance Predictions as EXPLORATORY_NUMERICAL_UNVALIDATED",
     "rationale": "Mathematical formulations of V50 and blade cut resistance serve as comparative design guides but must never be declared as proven weapon protection without empirical live-fire or drop-tower testing.",
     "status": "active",
     "date": "2026-11-09"
   },
   {
-    "id": "DEC-0027",
+    "id": "DEC-0035",
     "decision": "Adoption of Multi-Tier Scientific Model Status Classification (CODE_VERIFIED, PHYSICS_CONSISTENT, CALIBRATION_ONLY, EXTERNALLY_VALIDATED, UNVALIDATED, INVALIDATED)",
     "rationale": "To prevent epistemic over-claiming and conflation of numerical test passage with real-world empirical validation, all models, parameters, and claims must be assigned explicit scientific status labels based on verifiable physical and empirical criteria.",
     "status": "active",
     "date": "2026-11-09"
   },
   {
-    "id": "DEC-0028",
+    "id": "DEC-0036",
     "decision": "Strategic Adoption of Option C (Focused Biohybrid Engineering & Live Empirical Protocol Design) for Cycle 5",
     "rationale": "Directs research to focus on empirical drop-tower and FEA bio-heat protocols rather than adding more unvalidated models.",
     "status": "active",
     "date": "2026-11-09"
   },
   {
-    "id": "DEC-0029",
+    "id": "DEC-0037",
     "decision": "Forensic Revocation and Downgrade of Cycle 4B Validation Claims to PARTIAL and CONDITIONAL",
     "rationale": "Following discovery of synthetic VML data, biomaterials circular calibration, and normative ISO model substitution, all validation verdicts are formally downgraded to PARTIAL and ARCHITECTURE_BIOLOGICAL_FEASIBILITY is set to CONDITIONAL.",
     "status": "active",
     "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0038",
+    "title": "Reclassify MODEL-13 to UNVALIDATED_FOR_INDIVIDUAL_PREDICTION",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0039",
+    "title": "Adoption of 5-Tier Epistemic Classification for All Mechanical Material Properties",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0040",
+    "title": "Adoption of Exact Matched Climatic Parameters for Thermal Benchmarks (Montain 1994)",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0041",
+    "title": "Epistemic Demarcation Between Endogenous Living Tissues and Internal Biohybrids",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0042",
+    "title": "Mandate Functional Contractile and Neuromuscular Endpoints for Tissue Regeneration",
+    "cycle": "Cycle 5"
   }
 ]

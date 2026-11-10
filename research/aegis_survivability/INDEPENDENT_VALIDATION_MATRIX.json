@@ -26,6 +26,30 @@
         "lopo_mae": 36.21,
         "lopo_rmse": 48.94
       },
+      "independent_baseline_lopo": {
+        "cohort_mean_lopo_mae": 38.89,
+        "cohort_mean_lopo_rmse": 46.44,
+        "model_beats_baseline_mae": true,
+        "model_beats_baseline_rmse": false
+      },
+      "missing_data_policies": {
+        "policy_b_full_cohort_n13": {
+          "description": "Full cohort N=13; S01 baseline force is unmeasured (None), outcome retained as 0.0% based on persistent denervation.",
+          "group_lopo_mae": 36.21,
+          "group_lopo_rmse": 48.94,
+          "baseline_lopo_mae": 38.89,
+          "baseline_lopo_rmse": 46.44
+        },
+        "policy_a_complete_cases_n12": {
+          "description": "Complete cases only N=12 (excluding S01 due to missing pre-op baseline force).",
+          "group_lopo_mae": 42.91,
+          "group_lopo_rmse": 52.51,
+          "baseline_lopo_mae": 39.59,
+          "baseline_lopo_rmse": 47.11,
+          "group_beats_baseline_mae": false,
+          "group_beats_baseline_rmse": false
+        }
+      },
       "patient_records": [
         {
           "patient_id": "S01",
@@ -35,6 +59,7 @@
           "cause": "Exercise induced",
           "tissue_deficit_pct": 58.0,
           "innervation": "DENERVATED",
+          "baseline_measurement_status": "MISSING_IN_PUBLISHED_TABLE",
           "observed_pct": 0.0,
           "model_pred_pct": 0.0,
           "residual_pct": 0.0
@@ -47,6 +72,7 @@
           "cause": "Skiing accident",
           "tissue_deficit_pct": 67.0,
           "innervation": "DENERVATED",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 0.0,
           "model_pred_pct": 0.0,
           "residual_pct": 0.0
@@ -59,6 +85,7 @@
           "cause": "IED blast",
           "tissue_deficit_pct": 68.0,
           "innervation": "PARTIAL",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 20.0,
           "model_pred_pct": 32.0,
           "residual_pct": 12.0
@@ -71,6 +98,7 @@
           "cause": "IED blast",
           "tissue_deficit_pct": 83.0,
           "innervation": "PARTIAL",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 136.1,
           "model_pred_pct": 32.0,
           "residual_pct": -104.1
@@ -83,6 +111,7 @@
           "cause": "Skiing accident",
           "tissue_deficit_pct": 90.0,
           "innervation": "PARTIAL",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 33.3,
           "model_pred_pct": 32.0,
           "residual_pct": -1.3
@@ -95,6 +124,7 @@
           "cause": "Wakeboarding accident",
           "tissue_deficit_pct": 90.0,
           "innervation": "PARTIAL",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": -17.9,
           "model_pred_pct": 32.0,
           "residual_pct": 49.9
@@ -107,6 +137,7 @@
           "cause": "IED blast",
           "tissue_deficit_pct": 33.0,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 71.5,
           "model_pred_pct": 65.0,
           "residual_pct": -6.5
@@ -119,6 +150,7 @@
           "cause": "MVA",
           "tissue_deficit_pct": 50.2,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 64.1,
           "model_pred_pct": 65.0,
           "residual_pct": 0.9
@@ -131,6 +163,7 @@
           "cause": "MVA",
           "tissue_deficit_pct": 80.0,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 61.9,
           "model_pred_pct": 65.0,
           "residual_pct": 3.1
@@ -143,6 +176,7 @@
           "cause": "Tendon rupture",
           "tissue_deficit_pct": 52.0,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 86.4,
           "model_pred_pct": 65.0,
           "residual_pct": -21.4
@@ -155,6 +189,7 @@
           "cause": "MVA",
           "tissue_deficit_pct": 50.0,
           "innervation": "PARTIAL",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": 33.72,
           "model_pred_pct": 32.0,
           "residual_pct": -1.72
@@ -167,6 +202,7 @@
           "cause": "Electrocution",
           "tissue_deficit_pct": 25.0,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": -2.3,
           "model_pred_pct": 65.0,
           "residual_pct": 67.3
@@ -179,6 +215,7 @@
           "cause": "Sports injury",
           "tissue_deficit_pct": 27.0,
           "innervation": "INTACT",
+          "baseline_measurement_status": "MEASURED",
           "observed_pct": -1.45,
           "model_pred_pct": 65.0,
           "residual_pct": 66.45
@@ -189,7 +226,8 @@
         "Cohort mean (+37.34%) accurately reflects the published human clinical average (+37.3%).",
         "Cycle 4B claim of MAE = 5.92% on a 6/4/3 split was based on a fabricated synthetic dataset and is permanently revoked.",
         "Patient S12 did NOT experience +112.4% gain (in reality -3.5% hip flexion, -1.1% knee extension, mean -2.30%).",
-        "On authentic clinical data, individual patient variance is high (SD = 44.62%), yielding true Model 13 MAE = 25.74% and LOPO-CV MAE = 36.21%."
+        "Patient S01 pre-op baseline force is absent in published Table 2. Under Complete Case analysis (N=12), the innervation group model is WORSE than simple cohort-mean baseline on both MAE (42.91 vs 39.59) and RMSE (52.51 vs 47.11).",
+        "Under Full Cohort (N=13), the trained group model fails to beat the independent baseline on RMSE (48.94 pp vs 46.44 pp), demonstrating zero utility for individual patient prognosis."
       ]
     },
     "track_2_biomaterials_mechanics": {
@@ -199,12 +237,30 @@
       "genuine_predictions_count": 3,
       "mean_genuine_prediction_error_pct": 9.15,
       "genuine_predictions_within_1sigma": true,
+      "epistemic_classification": {
+        "tier_1_raw_calibration_constants": 11,
+        "tier_2_mathematical_identities": 1,
+        "tier_3_derived_boundary_value_predictions": 2,
+        "tier_4_cross_material_transfer": 0,
+        "tier_5_true_independent_holdout_validation": 0
+      },
+      "k1c_independence_audit": {
+        "parameter": "Pangolin Keratin Fracture Toughness K1c",
+        "formula_used": "sqrt(E * Gc)",
+        "input_E_gpa": 2.2,
+        "input_Gc_kj_m2": 16.8,
+        "calculated_k1c_mpa_m05": 6.08,
+        "reported_in_paper_mpa_m05": 5.8,
+        "status": "MATHEMATICAL_IDENTITY_VERIFICATION",
+        "finding": "K1c was calculated directly from Wang et al. 2016 inputs via LEFM Irwin relation. It is not an independent material property prediction."
+      },
       "records": [
         {
           "source": "Wang et al. (2016)",
           "material": "Pangolin Keratin",
           "parameter": "Youngs Modulus Dry",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "2.2 GPa",
           "observed": "2.2 +/- 0.3 GPa",
           "predicted": "2.2 GPa",
@@ -216,6 +272,7 @@
           "material": "Pangolin Keratin",
           "parameter": "Youngs Modulus Hydrated",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "0.65 GPa",
           "observed": "0.65 +/- 0.15 GPa",
           "predicted": "0.65 GPa",
@@ -227,6 +284,7 @@
           "material": "Pangolin Keratin",
           "parameter": "Tensile Strength Dry",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "85.0 MPa",
           "observed": "85.0 +/- 12.0 MPa",
           "predicted": "85.0 MPa",
@@ -238,6 +296,7 @@
           "material": "Pangolin Keratin",
           "parameter": "Work of Fracture Gc",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "16.8 kJ/m^2",
           "observed": "16.8 +/- 2.5 kJ/m^2",
           "predicted": "16.8 kJ/m^2",
@@ -249,6 +308,7 @@
           "material": "Armadillo Osteoderm",
           "parameter": "Youngs Modulus Hydrated",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "9.5 GPa",
           "observed": "9.5 +/- 1.2 GPa",
           "predicted": "9.5 GPa",
@@ -260,6 +320,7 @@
           "material": "Armadillo Osteoderm",
           "parameter": "Compressive Strength",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "175.0 MPa",
           "observed": "175.0 +/- 25.0 MPa",
           "predicted": "175.0 MPa",
@@ -271,6 +332,7 @@
           "material": "Armadillo Osteoderm",
           "parameter": "Suture Tensile Strength",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "18.0 MPa",
           "observed": "18.0 +/- 3.5 MPa",
           "predicted": "18.0 MPa",
@@ -282,6 +344,7 @@
           "material": "Armadillo Osteoderm",
           "parameter": "Fracture Toughness K1c",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "2.8 MPa*m^0.5",
           "observed": "2.8 +/- 0.5 MPa*m^0.5",
           "predicted": "2.8 MPa*m^0.5",
@@ -293,6 +356,7 @@
           "material": "Human Dermis",
           "parameter": "Tangent Modulus Hydrated",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "35.0 MPa",
           "observed": "35.0 +/- 8.0 MPa",
           "predicted": "35.0 MPa",
@@ -304,6 +368,7 @@
           "material": "Human Dermis",
           "parameter": "Ultimate Tensile Strength",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "18.0 MPa",
           "observed": "18.0 +/- 4.0 MPa",
           "predicted": "18.0 MPa",
@@ -315,6 +380,7 @@
           "material": "Human Dermis",
           "parameter": "Work of Fracture Gc",
           "is_independent": false,
+          "epistemic_class": "TIER-1-RAW-CONSTANT-CALIBRATION",
           "calibration_value": "2.1 kJ/m^2",
           "observed": "2.1 +/- 0.5 kJ/m^2",
           "predicted": "2.1 kJ/m^2",
@@ -326,6 +392,7 @@
           "material": "Human Dermis",
           "parameter": "Blunt Puncture Resistance (1mm punch)",
           "is_independent": true,
+          "epistemic_class": "TIER-3-BOUNDARY-VALUE-PREDICTION",
           "calibration_value": "N/A",
           "observed": "28.5 +/- 4.5 N",
           "predicted": "26.8 N",
@@ -337,6 +404,7 @@
           "material": "Pangolin Keratin",
           "parameter": "Fracture Toughness K1c (sqrt(E*Gc))",
           "is_independent": true,
+          "epistemic_class": "TIER-2-MATHEMATICAL-IDENTITY-CHECK",
           "calibration_value": "N/A",
           "observed": "5.8 +/- 0.9 MPa*m^0.5",
           "predicted": "6.08 MPa*m^0.5",
@@ -348,6 +416,7 @@
           "material": "Human Dermis",
           "parameter": "Sharp Scalpel Cutting Force (10mm depth)",
           "is_independent": true,
+          "epistemic_class": "TIER-3-BOUNDARY-VALUE-PREDICTION",
           "calibration_value": "N/A",
           "observed": "18.0 +/- 4.0 N",
           "predicted": "21.0 N",
@@ -359,8 +428,9 @@
       "forensic_findings": [
         "11 of the 12 properties reported in Cycle 4B were hardcoded input constants (calibration values), yielding artificial 0.0% error.",
         "Cycle 4B's claimed 0.50% error was a mathematical artifact of averaging 11 circular identities with 1 true prediction (5.96% / 12 = 0.50%).",
-        "Across 3 genuine derived predictions (dermis puncture 26.8N, keratin toughness 6.08 MPa*m^0.5, scalpel cut 21.0N), real mean relative error is 9.15%.",
-        "All 3 genuine predictions fall within experimental 1-sigma uncertainty bands."
+        "Pangolin Keratin K1c = sqrt(E*Gc) confirms the internal mathematical consistency of the LEFM Irwin relation on Wang 2016 data, but is NOT an independent empirical prediction.",
+        "Across 3 derived predictions (dermis puncture 26.8N, keratin toughness 6.08 MPa*m^0.5, scalpel cut 21.0N), real mean relative error is 9.15%.",
+        "True blind holdout validation across unseen specimens remains UNVALIDATED."
       ]
     },
     "track_3_human_thermoregulation": {
@@ -388,11 +458,41 @@
         "within_human_literature_range": true,
         "description": "Model 14 aligns with empirical uncompensable heat literature, but whole-body biological armor has not been tested on living human subjects."
       },
+      "montain_1994_matched_conditions_audit": {
+        "experimental_conditions": {
+          "ambient_temp_tropical_c": 35.0,
+          "ambient_rh_tropical_pct": 50.0,
+          "ambient_temp_desert_c": 43.0,
+          "ambient_rh_desert_pct": 20.0,
+          "air_velocity_m_s": 1.0,
+          "clothing_ensemble": "Chemical protective overgarment BDO (MOPP-4)",
+          "clothing_insulation_clo": 1.5,
+          "clothing_permeability_im": 0.33,
+          "metabolic_workload_w": [
+            425.0,
+            600.0
+          ]
+        },
+        "observed_vs_model_heating_rates_k_min": {
+          "observed_moderate_425w_tropical": "0.035 - 0.055 (mean: 0.045)",
+          "observed_heavy_600w_tropical": "0.055 - 0.080 (mean: 0.065)",
+          "predicted_lumped_425w_50rh": 0.0728,
+          "predicted_lumped_600w_50rh": 0.112,
+          "predicted_lumped_600w_80rh_jungle": 0.1233
+        },
+        "humidity_divergence_findings": {
+          "evaporative_capacity_at_50rh_w": 109.9,
+          "evaporative_capacity_at_80rh_w": 50.6,
+          "capacity_loss_at_80rh_pct": 53.96,
+          "rectification": "Cycle 4C incorrectly compared 50% RH experimental data with an 80% RH simulation as identical. At 80% RH, evaporative heat dissipation is reduced by 54%, causing substantially more severe heat strain."
+        }
+      },
       "forensic_verdict": "PARTIAL",
       "forensic_findings": [
         "ISO 7933:2023 is a normative standard/model, NOT individual raw human trial data.",
         "Agreement with ISO 7933 establishes REFERENCE_MODEL_AGREEMENT, not EXTERNALLY_VALIDATED.",
-        "Empirical human data from Montain et al. (1994) confirms uncompensable warming rates of 0.04-0.085 K/min, consistent with Model 14.",
+        "Empirical human data from Montain et al. (1994) confirms uncompensable warming rates of 0.04-0.085 K/min under matched 50% RH (tropical) and 20% RH (desert) conditions.",
+        "Comparing 50% RH experimental results with 80% RH model scenarios is physically invalid because evaporative capacity drops by 54% from 109.9 W to 50.6 W.",
         "Final thermal validation status is PARTIAL pending living whole-organism armor testing."
       ]
     }
