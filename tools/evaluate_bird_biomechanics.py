@@ -547,8 +547,9 @@ def run_full_biomechanics_validation() -> Dict[str, Any]:
 
     # Serialize canonical JSON
     RESULTS_JSON.parent.mkdir(parents=True, exist_ok=True)
-    with open(RESULTS_JSON, "w", encoding="utf-8") as f:
+    with open(RESULTS_JSON, "w", encoding="utf-8", newline="\n") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
     print(f"Master Cycle 12 Biomechanics artifact saved to {RESULTS_JSON}")
     return results

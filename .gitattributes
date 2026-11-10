@@ -40,3 +40,5 @@ provenance/** text eol=lf
 *.png -text
 research/cpet_cycloergometer_2026_11_09/** -text
 research/treadmill_cpet_2026_11_09/** -text
+research/muscle_force_biomechanics_2026_11_10/** -text
+*.pdf -text
