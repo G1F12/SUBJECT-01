@@ -55,3 +55,9 @@ jobs:
         run: python -m unittest discover -s tests -p test_rehman_xlsx_processor.py
       - name: Verify Rehman real PCr model validation and scientific freeze
         run: python -m unittest discover -s tests -p test_rehman_model_validation.py
+      - name: Verify ACTES CPET multi-subject validation and report structural consistency
+        run: python -m unittest discover -s tests -p test_actes_cpet_validation.py
+      - name: Verify Malaga Treadmill CPET subject-level GroupKFold and negative tests
+        run: python -m unittest discover -s tests -p test_malaga_cpet_validation.py
+      - name: Verify Malaga report table generation and structural consistency
+        run: python tools/generate_malaga_report_tables.py

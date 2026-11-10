@@ -162,5 +162,17 @@
     "description": "While anatomical MRI provides high-precision V_anat (379.89 mL), dynamic active volume V_active varies between 83.6 and 144.4 mL depending on pedal torque and cadence. Cycle 9 must design a formal synthetic confidence ensemble or multi-channel sEMG/T2* inversion protocol to bound V_active without ad-hoc constants.",
     "status": "open",
     "priority": "high"
+  },
+  {
+    "id": "ISS-0020",
+    "date": "2026-11-10",
+    "title": "PhysioNet Malaga Treadmill CPET (SRC-0074) License Conflict and Redistribution Conditions",
+    "description": "A tri-fold licensing divergence was identified during the Cycle 11 data provenance audit: (1) empirical_datasets_cycle11.json inadvertently listed ODC-By v1.0 (inherited from ACTES); (2) the downloaded raw distribution archive contains LICENSE.txt specifying Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0); (3) the official PhysioNet resource landing page (version 1.0.1, DOI 10.13026/7ezk-j442) specifies the PhysioNet Contributor Review Health Data License 1.5.0 and Data Use Agreement 1.5.0. Public storage and redistribution of raw CSV files are strictly conditioned on non-commercial academic research attribution. Clean dual-licensing clearance is NOT claimed, and this conflict remains tracked as an OPEN_ISSUE.",
+    "status": "open",
+    "priority": "high",
+    "affected_modules": [
+      "research/treadmill_cpet_2026_11_09",
+      "tools/evaluate_malaga_treadmill.py"
+    ]
   }
 ]

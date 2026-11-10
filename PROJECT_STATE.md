@@ -1,3 +1,58 @@
+# SUBJECT-01 — состояние после Cycle 11 Scientific Corrigendum & Subject-Level GroupKFold Validation (EXP-0044), 10.11.2026
+
+База: 68ed5137492525ddf487be8bfc629586a853250d;
+Ветка: correction/cycle11-subject-level-validation-corrigendum (слияние в main).
+
+Ключевые артефакты Cycle 11 Corrigendum / Stages 1-8:
+- [Отчёт по валидации беговой локомоции CPET PhysioNet Malaga (N=846 независимых участников, GroupKFold)](research/treadmill_cpet_2026_11_09/TREADMILL_CPET_REPORT.md),
+- [Канонический JSON валидации Malaga Treadmill (EXP-0044 GroupKFold)](research/treadmill_cpet_2026_11_09/malaga_validation_results.json),
+- [Генератор структурных таблиц отчёта Malaga CPET](tools/generate_malaga_report_tables.py),
+- [Движок GroupKFold валидации Malaga Treadmill CPET](tools/evaluate_malaga_treadmill.py),
+- [Тесты валидации Malaga Treadmill CPET (16 тестов, GroupKFold 0-leakage, структурные и лицензионные негативные проверки)](tests/test_malaga_cpet_validation.py),
+- [Обновлённый канонический JSON ACTES CPET с анализом чувствительности эффективности (EXP-0043)](research/cpet_cycloergometer_2026_11_09/actes_validation_results.json),
+- [Отчёт по валидации CPET ACTES](research/cpet_cycloergometer_2026_11_09/CPET_VALIDATION_REPORT.md),
+- [Движок факториального анализа ACTES и оценки чувствительности эффективности](tools/evaluate_actes_models.py),
+- [Тесты валидации ACTES CPET (13 тестов, проверка 37.49% кажущейся эффективности и неидентифицируемости дельта-эффективности)](tests/test_actes_cpet_validation.py),
+- [Реестр эмпирических датасетов Cycle 11 с фиксацией ISS-0020](research/treadmill_cpet_2026_11_09/empirical_datasets_cycle11.json),
+- [Решение DEC-0019 (Утверждение научного корригендума Cycle 11)](registry/decisions.json),
+- [Проблема ISS-0020 (Тройственный лицензионный конфликт PhysioNet Malaga v1.0.1)](registry/issues.json).
+
+Главные итоги:
+1. **Ликвидация групповой утечки данных (GroupKFold по subject_id, EXP-0044)**:
+   - Устранена критическая утечка: случайное разбиение тестов допускало тесты одних и тех же участников в train и test одновременно.
+   - Внедрён GroupKFold по `subject_id` (n_splits=5). Программно подтверждено: $\text{intersection}(\text{train\_subject\_ids}, \text{val\_subject\_ids}) == \emptyset$ для всех фолдов.
+   - Из 857 уникальных участников Malaga после фильтрации ($\ge 100$ строк, $\Delta v \ge 3$ км/ч) допущены ровно 846 участников (981 тест, 11 отсеяно).
+   - Все 116 участников с повторными испытаниями (251 тест) сохранены строго внутри своих групп.
+   - Распределение по фолдам: F0 (169 суб., 197 тестов), F1 (169 суб., 196 тестов), F2 (169 суб., 196 тестов), F3 (169 суб., 196 тестов), F4 (170 суб., 196 тестов).
+   - Историческое разбиение сохранено как legacy-бенчмарк с меткой `SUBJECT_LEAKAGE_RISK_NOT_GROUPED`.
+2. **Реконсилиация отчётов и генератор таблиц (Stage 2)**:
+   - Создан `tools/generate_malaga_report_tables.py`, формирующий Markdown-таблицы напрямую из JSON.
+   - Внедрена строгая валидация `verify_malaga_structural_consistency` и негативные тесты на подмену $n$, RMSE, $R^2$, bias, `model_id`.
+3. **Коррекция энергетической эффективности ACTES (Stage 3, DEC-0019)**:
+   - Арифметика исправлена: при $\beta_1 = 0.00765744$ л/мин/Вт и $c_{\text{ox}} = 20.9$ кДж/л кажущаяся эффективность составляет $\eta_{\text{apparent}} = 1 / (\beta_1 \cdot 348.33) \approx 37.4905\%$ (37.49%, не 25.5%).
+   - Проведён анализ чувствительности (временной лаг $0\dots 60$ с, базовая линия покоя $0.35$ л/мин даёт $28.52\%$, диапазон мощности, $c_{\text{ox}} = 19.6\dots 21.3$ кДж/л).
+   - Статус зафиксирован как `DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP`: истинная дельта-эффективность неидентифицируема без steady-state ступеней и учёта легочного лага $\tau$.
+4. **Физический аудит межмодального переноса (Stage 4, NEG-0037, DEC-0019)**:
+   - Формула переноса `560.0 + (7.657 * 25.0) * speed` переклассифицирована в `AD_HOC_CROSS_MODAL_MAPPING_FAILURE`.
+   - В связи с отсутствием измерения механической мощности бега установлен статус `PHYSICAL_CROSS_MODAL_TRANSFER_NOT_IDENTIFIABLE`. Отрицательный результат сохранён без приписывания эвристике физического смысла.
+5. **Метрологический аудит оксикалорического эквивалента (Stage 5)**:
+   - Классификация: $\dot{V}\text{O}_2, \dot{V}\text{CO}_2, \text{RER}$ — `MEASURED`; $c_{\text{ox}}$ — `DERIVED_MODEL_DEPENDENT`; нестационарное окисление субстратов — `NOT INDEPENDENTLY VALIDATED`.
+   - 46.8% точек с $\text{RER} > 1.0$ отражают избыточное выделение $\text{CO}_2$ при буферизации лактата гидрокарбонатом, а не истинное субстратное окисление.
+   - Расхождение 2.26% со справочным $20.9$ кДж/л признано артефактом клиппирования RER.
+6. **Научная генерализация и статистика (Stage 6)**:
+   - Иерархия подтверждена на независимых субъектах: M4 ($R^2 = 0.6648$, RMSE $= 404.0$ мл/мин) достоверно превосходит M3 ($R^2 = 0.4837$, RMSE $= 469.9$ мл/мин, $p = 6.78 \times 10^{-26}$), M2 ($R^2 = 0.5157$, RMSE $= 514.1$ мл/мин) и M1 ($R^2 = 0.3296$, RMSE $= 570.0$ мл/мин).
+   - Персистентный бейзлайн (RMSE $= 96.6$ мл/мин) чётко охарактеризован как авторегрессионный с превосходством по информации.
+   - Разграничены уровни Level A (ACTES), Level B (Malaga), Level C (межмодальный перенос — неидентифицируем).
+7. **Лицензионный аудит и источники (Stage 7, ISS-0020)**:
+   - Зарегистрирован тройственный конфликт (PhysioNet Contributor License vs CC BY-NC-SA 4.0 vs ODC-By v1.0). Проблема открыта в `ISS-0020`.
+8. **Эпистемические инварианты**:
+   - `TARGET-CPE45`: **`NOT EXTERNALLY VALIDATED`**.
+   - Биологические вмешательства: **`NO_GO`**.
+   - Реестры: HYP=8, EXP=44, FND=44, NEG=37, DEC=19, ISS=20, SRC=75.
+   - Все юнит-тесты и шаги CI успешно выполняются локально.
+
+---
+
 # SUBJECT-01 — состояние после Cycle 10 Scientific Integrity & Cycle 11 Independent Data Expansion (EXP-0044), 09.11.2026
 
 База: 7a1d5ba4b820ff2254e4792bedfac1d0c4c8b601;

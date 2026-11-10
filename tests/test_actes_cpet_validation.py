@@ -180,10 +180,20 @@ class TestActesCPETValidation(unittest.TestCase):
         self.assertIn("delta_efficiency_eta_delta", ident_params)
         self.assertEqual(
             ident_params["delta_efficiency_eta_delta"]["status"],
-            "IDENTIFIED_INCREMENTAL_MACROSCOPIC_COUPLING",
+            "DELTA_EFFICIENCY_NOT_IDENTIFIABLE_FROM_UNLAGGED_RAMP",
         )
-        self.assertGreater(ident_params["delta_efficiency_eta_delta"]["estimated_value"], 0.20)
-        self.assertLess(ident_params["delta_efficiency_eta_delta"]["estimated_value"], 0.45)
+        # Arithmetic corrigendum: 1 / (beta1 * 348.33) is ~0.3749 (37.49%), NOT 25.5%
+        apparent_val = ident_params["delta_efficiency_eta_delta"]["apparent_value"]
+        self.assertAlmostEqual(apparent_val, 0.374905, places=4)
+        self.assertNotEqual(round(apparent_val, 3), 0.255)
+
+        # Verify sensitivity audit exists and covers all required dimensions
+        self.assertIn("delta_efficiency_sensitivity_audit", self.results)
+        sens = self.results["delta_efficiency_sensitivity_audit"]["sensitivity_analysis"]
+        self.assertIn("time_lag_sensitivity", sens)
+        self.assertIn("workload_range_sensitivity", sens)
+        self.assertIn("resting_intercept_sensitivity", sens)
+        self.assertIn("oxycaloric_equivalent_sensitivity", sens)
 
         self.assertIn("pulmonary_vo2_kinetics_tau_s", ident_params)
         self.assertEqual(
