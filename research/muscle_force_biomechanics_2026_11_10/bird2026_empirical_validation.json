@@ -1,6 +1,6 @@
 {
   "cycle": 12,
-  "timestamp": "2026-11-11T18:05:00Z",
+  "timestamp": "2026-11-11T18:30:00Z",
   "source": {
     "id": "SRC-0076",
     "doi": "10.5061/dryad.sbcc2frmh",
@@ -196,16 +196,23 @@
     "status": "VALIDATED_ON_RAW_ARRAYS",
     "stage1_raw_observation_audit": {
       "total_dynamic_observations": 3226,
-      "passive_torque_zero_count": 1382,
+      "torque_units": "fraction of MVC [0.0, 1.0] (where 1.0 = 100% MVC)",
+      "passive_protocol_count": 1382,
+      "active_protocol_count": 1844,
       "active_positive_torque_count": 1821,
-      "active_negative_sensor_drift_count": 23,
+      "active_negative_count": 23,
+      "active_zero_torque_count": 0,
       "sum_check_exact_match": true,
-      "total_active_conditions_count": 1844,
-      "negative_sensor_drift_details": {
+      "protocol_partition_exact": true,
+      "negative_values_details": {
         "count": 23,
-        "min_nm": -0.02072831165171182,
-        "max_nm": -0.0006627505439774003,
-        "mean_nm": -0.007408561444999562,
+        "min_fraction_mvc": -0.02072831165171182,
+        "max_fraction_mvc": -0.0006627505439774003,
+        "mean_fraction_mvc": -0.007408561444999562,
+        "min_pct_mvc": -2.072831165171182,
+        "max_pct_mvc": -0.06627505439774002,
+        "mean_pct_mvc": -0.7408561444999562,
+        "units": "fraction of MVC [0.0, 1.0]",
         "participants_affected": [
           1,
           3,
@@ -233,8 +240,71 @@
           63,
           71
         ],
-        "interpretation": "Small negative baseline sensor drift (ranging from -0.0207 to -0.00066 Nm) during active runs near terminal knee extension (84.0 deg to 90.1 deg) in participants 1, 3, 4, 5. Representing baseline load-cell zero-point noise rather than active negative torque."
+        "velocities_deg_s_range": [
+          -21.865796393743516,
+          64.3677869740804
+        ],
+        "s_emg_range": [
+          0.009100773734327104,
+          0.1366192711105738
+        ],
+        "interpretation": "Small baseline offset fluctuations (ranging from -0.0207 to -0.00066 fraction of MVC, i.e., -2.07% to -0.07% MVC) during active runs near terminal knee extension (84.0 deg to 90.1 deg) with near-zero velocity (0.0 to 20.9 deg/s) and baseline sEMG (0.01 to 0.05) in participants 1, 3, 4, 5. Arising from dynamometer gravity-correction offset and 5 Hz low-pass filter transition ringing at the boundary of active contractions, rather than active negative torque or unverified hardware failure.",
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562
       },
+      "passive_torque_zero_count": 1382,
+      "active_negative_sensor_drift_count": 23,
+      "negative_sensor_drift_details": {
+        "count": 23,
+        "min_fraction_mvc": -0.02072831165171182,
+        "max_fraction_mvc": -0.0006627505439774003,
+        "mean_fraction_mvc": -0.007408561444999562,
+        "min_pct_mvc": -2.072831165171182,
+        "max_pct_mvc": -0.06627505439774002,
+        "mean_pct_mvc": -0.7408561444999562,
+        "units": "fraction of MVC [0.0, 1.0]",
+        "participants_affected": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "angles_deg_range": [
+          83.97979161922946,
+          90.13199821004518
+        ],
+        "runs_affected": [
+          9,
+          38,
+          40,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          62,
+          63,
+          71
+        ],
+        "velocities_deg_s_range": [
+          -21.865796393743516,
+          64.3677869740804
+        ],
+        "s_emg_range": [
+          0.009100773734327104,
+          0.1366192711105738
+        ],
+        "interpretation": "Small baseline offset fluctuations (ranging from -0.0207 to -0.00066 fraction of MVC, i.e., -2.07% to -0.07% MVC) during active runs near terminal knee extension (84.0 deg to 90.1 deg) with near-zero velocity (0.0 to 20.9 deg/s) and baseline sEMG (0.01 to 0.05) in participants 1, 3, 4, 5. Arising from dynamometer gravity-correction offset and 5 Hz low-pass filter transition ringing at the boundary of active contractions, rather than active negative torque or unverified hardware failure.",
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562
+      },
+      "total_active_conditions_count": 1844,
       "nan_count_across_all_channels": {
         "part": 0,
         "run": 0,
@@ -256,7 +326,7 @@
         "status_in_paper": "Method used by Bird et al. (2026) for published LME (R2=0.984) and LSTM (R2=0.988)."
       },
       "BLOCKED_TEMPORAL_CV": {
-        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks) within each participant to mitigate adjacent sample autocorrelation.",
+        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks or individual runs) within each participant to mitigate adjacent sample autocorrelation.",
         "leakage_mechanism": "Reduces high-frequency temporal autocorrelation leakage, but remains participant-specific.",
         "status_in_paper": "Used in LSTM segment preprocessing, but within-participant."
       },
@@ -529,13 +599,19 @@
               "nrmse_pct_sd": 2.5657460950573294,
               "rmse_mean": 0.21813837596777877,
               "mae_mean": 0.18467146145410815,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": -0.0007551964295625806,
               "r_squared_sd": 0.0013339563320202217,
               "nrmse_pct_mean": 28.015928239493963,
               "nrmse_pct_sd": 2.69637326602926
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -31.976481875096603,
+              "r_squared_sd": 186.4452259797617,
+              "n_runs_evaluated": 66
             }
           },
           "M1_static_semg": {
@@ -558,13 +634,19 @@
               "nrmse_pct_sd": 2.144981200527033,
               "rmse_mean": 0.1546070135424303,
               "mae_mean": 0.10921680630920279,
-              "pearson_r_mean": 0.6982832526191135
+              "pearson_r_mean": 0.6982832526191135,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.487113768329502,
               "r_squared_sd": 0.053216039846176316,
               "nrmse_pct_mean": 19.987483472523632,
               "nrmse_pct_sd": 1.7604190896362208
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.5086476823319055,
+              "r_squared_sd": 30.996199853119066,
+              "n_runs_evaluated": 66
             }
           },
           "M2_static_length": {
@@ -587,13 +669,19 @@
               "nrmse_pct_sd": 3.0730586484226947,
               "rmse_mean": 0.2110442733224017,
               "mae_mean": 0.1745750943176336,
-              "pearson_r_mean": 0.2902939758686173
+              "pearson_r_mean": 0.2902939758686173,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.09953470327168405,
               "r_squared_sd": 0.09115993509421093,
               "nrmse_pct_mean": 26.51932093109051,
               "nrmse_pct_sd": 2.7642369039647
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -31.949632099137364,
+              "r_squared_sd": 189.9557363903142,
+              "n_runs_evaluated": 66
             }
           },
           "M3_hill_dynamic": {
@@ -616,13 +704,19 @@
               "nrmse_pct_sd": 3.2903031534925935,
               "rmse_mean": 0.17721354972717449,
               "mae_mean": 0.13480042522313143,
-              "pearson_r_mean": 0.6096406508362903
+              "pearson_r_mean": 0.6096406508362903,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.37160460076213847,
               "r_squared_sd": 0.08648226798656629,
               "nrmse_pct_mean": 22.226109010026544,
               "nrmse_pct_sd": 3.1765935930216376
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.680360642071389,
+              "r_squared_sd": 23.574343749555574,
+              "n_runs_evaluated": 66
             }
           },
           "M4_subject01_biomechanical": {
@@ -645,13 +739,19 @@
               "nrmse_pct_sd": 3.2312247887307826,
               "rmse_mean": 0.17519655642632948,
               "mae_mean": 0.13307537627372867,
-              "pearson_r_mean": 0.6180662429864864
+              "pearson_r_mean": 0.6180662429864864,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.38292736784724996,
               "r_squared_sd": 0.09967542721865723,
               "nrmse_pct_mean": 22.013068164289624,
               "nrmse_pct_sd": 3.3304957425799593
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.151940264681653,
+              "r_squared_sd": 19.463814826901498,
+              "n_runs_evaluated": 66
             }
           },
           "UWB_radar_ridge": {
@@ -674,34 +774,794 @@
               "nrmse_pct_sd": 17.72817127671256,
               "rmse_mean": 0.3681805423206141,
               "mae_mean": 0.270854772895258,
-              "pearson_r_mean": 0.2738581986294306
+              "pearson_r_mean": 0.2738581986294306,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.9762889395676149,
               "r_squared_sd": 0.009909723361533443,
               "nrmse_pct_mean": 4.191328046580975,
               "nrmse_pct_sd": 0.9540989646719276
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -0.9596217122066147,
+              "r_squared_sd": 8.820756108640197,
+              "n_runs_evaluated": 66
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.014822279463689228,
+            "delta_r2_sd": 0.03360934330913275,
+            "delta_r2_ci95": [
+              -0.02044856323841432,
+              0.05009312216579277
+            ],
             "paired_t_statistic": 1.0802657218567766,
             "paired_t_pvalue": 0.32935334494610286,
             "wilcoxon_statistic": 5.0,
             "wilcoxon_pvalue": 0.3125,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0148) is NOT statistically significant (p = 0.3294). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0148, 95% CI [-0.0204, 0.0501]) is not statistically significant (paired t = 1.080, p = 0.3294). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.1376611378004214,
+            "delta_r2_sd": 0.13695964928626325,
+            "delta_r2_ci95": [
+              -0.2813914749890807,
+              0.006069199388237856
+            ],
             "paired_t_statistic": -2.4620356928426674,
             "paired_t_pvalue": 0.05708568884018873,
             "wilcoxon_statistic": 1.0,
             "wilcoxon_pvalue": 0.0625,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.1377, t = -2.462, p = 0.0571). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.1377). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -2.462, p = 0.0571; Wilcoxon p = 0.0625; 95% CI [-0.2814, 0.0061] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_all": {
+        "observations_count": 1844,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.26103188938721794,
+              "r_squared_sd": 0.34333820101305834,
+              "r_squared_ci95": [
+                -0.6213432340680929,
+                0.09927945529365706
+              ],
+              "r_squared_per_subject": [
+                -0.007368777472910981,
+                -0.8450394142759292,
+                -0.11812997338541864,
+                -0.07549355204645969,
+                -0.005965078819988756,
+                -0.5141945403226003
+              ],
+              "nrmse_pct_mean": 27.14184591902917,
+              "nrmse_pct_sd": 3.630730439124909,
+              "rmse_mean": 0.21479618817933996,
+              "mae_mean": 0.1784331593200472,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.052799657596432036,
+              "r_squared_sd": 0.23335533029744723,
+              "r_squared_ci95": [
+                -0.29769105797027234,
+                0.1920917427774083
+              ],
+              "r_squared_per_subject": [
+                0.03241840143052488,
+                -0.4273605202974493,
+                0.08876238566742856,
+                0.14551541102409504,
+                0.10091650700625143,
+                -0.2570501304094428
+              ],
+              "nrmse_pct_mean": 24.919250897394036,
+              "nrmse_pct_sd": 3.363914933946213,
+              "rmse_mean": 0.1974219922681469,
+              "mae_mean": 0.165180648601168,
+              "pearson_r_mean": 0.2473412593572328,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.2813561777601278,
+              "r_squared_sd": 0.3252222119608599,
+              "r_squared_ci95": [
+                -0.6226559578776603,
+                0.0599436023574047
+              ],
+              "r_squared_per_subject": [
+                0.02037307803896138,
+                -0.8051218336694628,
+                -0.1029062643558738,
+                -0.25283264702486985,
+                -0.018183329954180705,
+                -0.5294660695953408
+              ],
+              "nrmse_pct_mean": 27.343507605371638,
+              "nrmse_pct_sd": 3.245907667904893,
+              "rmse_mean": 0.2163778100383714,
+              "mae_mean": 0.17759593593878586,
+              "pearson_r_mean": 0.1392857893629015,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.13873421425545768,
+              "r_squared_sd": 0.24291395317229345,
+              "r_squared_ci95": [
+                -0.3936567741424866,
+                0.11618834563157127
+              ],
+              "r_squared_per_subject": [
+                0.02231525785464883,
+                -0.45691690384779027,
+                0.05274929352735791,
+                0.014684786830312269,
+                -0.02045523233428126,
+                -0.44478248756299354
+              ],
+              "nrmse_pct_mean": 25.943300812143253,
+              "nrmse_pct_sd": 3.699132092198469,
+              "rmse_mean": 0.20620408120814293,
+              "mae_mean": 0.1690139483735041,
+              "pearson_r_mean": 0.24986942658740194,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.11531974155778657,
+              "r_squared_sd": 0.22920575420366543,
+              "r_squared_ci95": [
+                -0.35585642888835195,
+                0.1252169457727788
+              ],
+              "r_squared_per_subject": [
+                0.042632914016408785,
+                -0.3853637777119243,
+                0.07141429283166101,
+                -0.011590045138571314,
+                0.022722788329397003,
+                -0.4317346216736906
+              ],
+              "nrmse_pct_mean": 25.674418678867227,
+              "nrmse_pct_sd": 3.5576716568852373,
+              "rmse_mean": 0.2042022684884378,
+              "mae_mean": 0.16678883785711474,
+              "pearson_r_mean": 0.28630912083754456,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.015378786911168,
+              "r_squared_sd": 5.33756658530156,
+              "r_squared_ci95": [
+                -11.616811391844536,
+                -0.413946181977801
+              ],
+              "r_squared_per_subject": [
+                -4.6962601094775716,
+                -0.1895123441052604,
+                -4.075638001474066,
+                -11.90576103949986,
+                -13.23421310264643,
+                -1.9908881242638237
+              ],
+              "nrmse_pct_mean": 60.92484979967268,
+              "nrmse_pct_sd": 27.655304683667786,
+              "rmse_mean": 0.47776166583863694,
+              "mae_mean": 0.4061156045937097,
+              "pearson_r_mean": 0.0624157940349089,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.023414472697671107,
+            "delta_r2_sd": 0.03260849302922077,
+            "delta_r2_ci95": [
+              -0.010806042050492938,
+              0.05763498744583515
+            ],
+            "paired_t_statistic": 1.7588519240747233,
+            "paired_t_pvalue": 0.13892868138099895,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0234, 95% CI [-0.0108, 0.0576]) is not statistically significant (paired t = 1.759, p = 0.1389). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.06252008396135454,
+            "delta_r2_sd": 0.08947346765811093,
+            "delta_r2_ci95": [
+              -0.15641672974685683,
+              0.03137656182414776
+            ],
+            "paired_t_statistic": -1.7115946032901792,
+            "paired_t_pvalue": 0.1476532415029888,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0625). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.712, p = 0.1477; Wilcoxon p = 0.2188; 95% CI [-0.1564, 0.0314] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_positive": {
+        "observations_count": 1821,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.262047008848241,
+              "r_squared_sd": 0.37049725079411083,
+              "r_squared_ci95": [
+                -0.6508600283150617,
+                0.12676601061857973
+              ],
+              "r_squared_per_subject": [
+                -0.004671152511062537,
+                -0.9162836348813916,
+                -0.1208923127483772,
+                -0.03383293436265822,
+                -0.0036697020881026887,
+                -0.49293231649785363
+              ],
+              "nrmse_pct_mean": 26.918484002697365,
+              "nrmse_pct_sd": 4.170130599238125,
+              "rmse_mean": 0.21175249909572258,
+              "mae_mean": 0.17641639975725512,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.0881705085315073,
+              "r_squared_sd": 0.2271052565569537,
+              "r_squared_ci95": [
+                -0.3265028587700957,
+                0.15016184170708113
+              ],
+              "r_squared_per_subject": [
+                0.03208516863203292,
+                -0.47040603225262845,
+                0.06727821082643948,
+                0.0024180497043161386,
+                0.09982978793002817,
+                -0.26022823602923206
+              ],
+              "nrmse_pct_mean": 25.101085425045174,
+              "nrmse_pct_sd": 3.2758685988408494,
+              "rmse_mean": 0.19752344222555485,
+              "mae_mean": 0.16500471635854483,
+              "pearson_r_mean": 0.2178204908976489,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.253512378286142,
+              "r_squared_sd": 0.32030958617175126,
+              "r_squared_ci95": [
+                -0.5896566738151117,
+                0.08263191724282776
+              ],
+              "r_squared_per_subject": [
+                0.0400847070645205,
+                -0.777927590678094,
+                -0.09382952254394716,
+                -0.1384657269632874,
+                -0.0387381162358551,
+                -0.5121980203601888
+              ],
+              "nrmse_pct_mean": 26.86897383114253,
+              "nrmse_pct_sd": 3.8903946150177577,
+              "rmse_mean": 0.2116671823969313,
+              "mae_mean": 0.17388759044650334,
+              "pearson_r_mean": 0.18105852323232988,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.1619815661612692,
+              "r_squared_sd": 0.2546337887244026,
+              "r_squared_ci95": [
+                -0.42920333917040154,
+                0.10524020684786314
+              ],
+              "r_squared_per_subject": [
+                0.023878213130461234,
+                -0.5399852336579052,
+                0.03798627395838894,
+                -0.044357035962975244,
+                -0.018465809178231485,
+                -0.4309458052573536
+              ],
+              "nrmse_pct_mean": 25.96331779272467,
+              "nrmse_pct_sd": 3.8491501948971263,
+              "rmse_mean": 0.2049360413654919,
+              "mae_mean": 0.16800445977823483,
+              "pearson_r_mean": 0.23285089853722565,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.14114607148934497,
+              "r_squared_sd": 0.23869805370623964,
+              "r_squared_ci95": [
+                -0.39164431622247864,
+                0.10935217324378868
+              ],
+              "r_squared_per_subject": [
+                0.04362489930629376,
+                -0.465425811560767,
+                0.05781130475606533,
+                -0.0861238559419728,
+                0.021189549467386493,
+                -0.4179525149630756
+              ],
+              "nrmse_pct_mean": 25.72061631698826,
+              "nrmse_pct_sd": 3.6479795153278167,
+              "rmse_mean": 0.2031194177764695,
+              "mae_mean": 0.16583441280899427,
+              "pearson_r_mean": 0.2707217519091248,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.662674479265289,
+              "r_squared_sd": 6.2618849642199175,
+              "r_squared_ci95": [
+                -13.234119733646462,
+                -0.09122922488411511
+              ],
+              "r_squared_per_subject": [
+                -4.758321619812343,
+                -0.18810440760653546,
+                -4.2053910543847035,
+                -15.494652672361209,
+                -13.341885230733427,
+                -1.9876918906935184
+              ],
+              "nrmse_pct_mean": 62.01129529568157,
+              "nrmse_pct_sd": 28.464872123895887,
+              "rmse_mean": 0.4812399247368447,
+              "mae_mean": 0.412341023161086,
+              "pearson_r_mean": 0.05077220822725629,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.02083549467192425,
+            "delta_r2_sd": 0.03800843108657368,
+            "delta_r2_ci95": [
+              -0.019051907526856628,
+              0.060722896870705124
+            ],
+            "paired_t_statistic": 1.3427634086880365,
+            "paired_t_pvalue": 0.23708070600143674,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0208, 95% CI [-0.0191, 0.0607]) is not statistically significant (paired t = 1.343, p = 0.2371). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.052975562957837674,
+            "delta_r2_sd": 0.06679825296317088,
+            "delta_r2_ci95": [
+              -0.12307603030017675,
+              0.0171249043845014
+            ],
+            "paired_t_statistic": -1.9426121541671542,
+            "paired_t_pvalue": 0.10970317275211573,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0530). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.943, p = 0.1097; Wilcoxon p = 0.2188; 95% CI [-0.1231, 0.0171] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "passive_protocol": {
+        "observations_count": 1382,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.0,
+            "delta_r2_sd": 0.0,
+            "delta_r2_ci95": [
+              0.0,
+              0.0
+            ],
+            "paired_t_statistic": null,
+            "paired_t_pvalue": null,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0000, 95% CI [0.0000, 0.0000]) is not statistically significant (paired t = N/A, p = N/A). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": 0.0,
+            "delta_r2_sd": 0.0,
+            "delta_r2_ci95": [
+              0.0,
+              0.0
+            ],
+            "paired_t_statistic": null,
+            "paired_t_pvalue": null,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": false,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = +0.0000). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = N/A, p = N/A; Wilcoxon p = 1.0000; 95% CI [0.0000, 0.0000] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_nonpositive": {
+        "observations_count": 23,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -11.783511336269532,
+              "r_squared_sd": 21.747320838148156,
+              "r_squared_ci95": [
+                -34.60592489607482,
+                11.038902223535752
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -44.344815303904994,
+                -2.789230041173132,
+                0.0
+              ],
+              "nrmse_pct_mean": 71.82395842780713,
+              "nrmse_pct_sd": 115.00587572675747,
+              "rmse_mean": 0.00647118611587413,
+              "mae_mean": 0.0061536509310556676,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.561980529068313,
+              "r_squared_sd": 25.434656981558526,
+              "r_squared_ci95": [
+                -40.25401605404505,
+                13.130054995908425
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -51.670407479414386,
+                -2.5775146368588677,
+                0.0
+              ],
+              "nrmse_pct_mean": 76.18672283580766,
+              "nrmse_pct_sd": 124.33634987238639,
+              "rmse_mean": 0.006485997726358919,
+              "mae_mean": 0.006184598466127646,
+              "pearson_r_mean": -0.07422477295121023,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -15.732876873912375,
+              "r_squared_sd": 29.519654543370297,
+              "r_squared_ci95": [
+                -46.71185442914259,
+                15.246100681317838
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -59.96256369351008,
+                -2.968943802139419,
+                0.0
+              ],
+              "nrmse_pct_mean": 81.7124459566933,
+              "nrmse_pct_sd": 133.8521778062848,
+              "rmse_mean": 0.006747556251241191,
+              "mae_mean": 0.006321362688183178,
+              "pearson_r_mean": -0.3180842056553619,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.068859965186538,
+              "r_squared_sd": 24.44235664311251,
+              "r_squared_ci95": [
+                -38.71954014951719,
+                12.581820219144108
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -49.686668862848784,
+                -2.588770997897369,
+                0.0
+              ],
+              "nrmse_pct_mean": 74.96857687588725,
+              "nrmse_pct_sd": 121.89564317922374,
+              "rmse_mean": 0.0064255729690605255,
+              "mae_mean": 0.0061209951427893825,
+              "pearson_r_mean": -0.05989534246600421,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.068837306565474,
+              "r_squared_sd": 24.44229992619161,
+              "r_squared_ci95": [
+                -38.71945797013794,
+                12.58178335700699
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -49.686560392120676,
+                -2.588788834141219,
+                0.0
+              ],
+              "nrmse_pct_mean": 74.96853650252125,
+              "nrmse_pct_sd": 121.89549961470307,
+              "rmse_mean": 0.006425670820132807,
+              "mae_mean": 0.006121094882360154,
+              "pearson_r_mean": -0.05998687768577067,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -15.731922930480977,
+              "r_squared_sd": 29.716212130688515,
+              "r_squared_ci95": [
+                -46.917175023134895,
+                15.453329162172942
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -60.26650367084006,
+                -2.661188051083847,
+                0.0
+              ],
+              "nrmse_pct_mean": 81.42035478518434,
+              "nrmse_pct_sd": 134.3596061777603,
+              "rmse_mean": 0.007077638524974933,
+              "mae_mean": 0.006742724002582212,
+              "pearson_r_mean": -0.23903660820691122,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 2.2658621064541862e-05,
+            "delta_r2_sd": 5.7822654201664584e-05,
+            "delta_r2_ci95": [
+              -3.802253304806625e-05,
+              8.333977517714996e-05
+            ],
+            "paired_t_statistic": 0.7837281555950979,
+            "paired_t_pvalue": 0.490382133603786,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0000, 95% CI [-0.0000, 0.0001]) is not statistically significant (paired t = 0.784, p = 0.4904). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": 0.49314322250283993,
+            "delta_r2_sd": 0.9938167875562979,
+            "delta_r2_ci95": [
+              -0.5498035338856752,
+              1.5360899788913551
+            ],
+            "paired_t_statistic": 0.9924228060494587,
+            "paired_t_pvalue": 0.39414724856061456,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": false,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = +0.4931). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = 0.992, p = 0.3941; Wilcoxon p = 1.0000; 95% CI [-0.5498, 1.5361] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       },
@@ -728,7 +1588,8 @@
               "nrmse_pct_sd": 4.170130599238125,
               "rmse_mean": 0.21175249909572258,
               "mae_mean": 0.17641639975725512,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M1_static_semg": {
@@ -751,7 +1612,8 @@
               "nrmse_pct_sd": 3.2758685988408494,
               "rmse_mean": 0.19752344222555485,
               "mae_mean": 0.16500471635854483,
-              "pearson_r_mean": 0.2178204908976489
+              "pearson_r_mean": 0.2178204908976489,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M2_static_length": {
@@ -774,7 +1636,8 @@
               "nrmse_pct_sd": 3.8903946150177577,
               "rmse_mean": 0.2116671823969313,
               "mae_mean": 0.17388759044650334,
-              "pearson_r_mean": 0.18105852323232988
+              "pearson_r_mean": 0.18105852323232988,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M3_hill_dynamic": {
@@ -797,7 +1660,8 @@
               "nrmse_pct_sd": 3.8491501948971263,
               "rmse_mean": 0.2049360413654919,
               "mae_mean": 0.16800445977823483,
-              "pearson_r_mean": 0.23285089853722565
+              "pearson_r_mean": 0.23285089853722565,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M4_subject01_biomechanical": {
@@ -820,7 +1684,8 @@
               "nrmse_pct_sd": 3.6479795153278167,
               "rmse_mean": 0.2031194177764695,
               "mae_mean": 0.16583441280899427,
-              "pearson_r_mean": 0.2707217519091248
+              "pearson_r_mean": 0.2707217519091248,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "UWB_radar_ridge": {
@@ -843,28 +1708,47 @@
               "nrmse_pct_sd": 28.464872123895887,
               "rmse_mean": 0.4812399247368447,
               "mae_mean": 0.412341023161086,
-              "pearson_r_mean": 0.05077220822725629
+              "pearson_r_mean": 0.05077220822725629,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.02083549467192425,
+            "delta_r2_sd": 0.03800843108657368,
+            "delta_r2_ci95": [
+              -0.019051907526856628,
+              0.060722896870705124
+            ],
             "paired_t_statistic": 1.3427634086880365,
             "paired_t_pvalue": 0.23708070600143674,
             "wilcoxon_statistic": 5.0,
             "wilcoxon_pvalue": 0.3125,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0208) is NOT statistically significant (p = 0.2371). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0208, 95% CI [-0.0191, 0.0607]) is not statistically significant (paired t = 1.343, p = 0.2371). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.052975562957837674,
+            "delta_r2_sd": 0.06679825296317088,
+            "delta_r2_ci95": [
+              -0.12307603030017675,
+              0.0171249043845014
+            ],
             "paired_t_statistic": -1.9426121541671542,
             "paired_t_pvalue": 0.10970317275211573,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0530, t = -1.943, p = 0.1097). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0530). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.943, p = 0.1097; Wilcoxon p = 0.2188; 95% CI [-0.1231, 0.0171] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       },
@@ -891,7 +1775,8 @@
               "nrmse_pct_sd": 3.630730439124909,
               "rmse_mean": 0.21479618817933996,
               "mae_mean": 0.1784331593200472,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M1_static_semg": {
@@ -914,7 +1799,8 @@
               "nrmse_pct_sd": 3.363914933946213,
               "rmse_mean": 0.1974219922681469,
               "mae_mean": 0.165180648601168,
-              "pearson_r_mean": 0.2473412593572328
+              "pearson_r_mean": 0.2473412593572328,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M2_static_length": {
@@ -937,7 +1823,8 @@
               "nrmse_pct_sd": 3.245907667904893,
               "rmse_mean": 0.2163778100383714,
               "mae_mean": 0.17759593593878586,
-              "pearson_r_mean": 0.1392857893629015
+              "pearson_r_mean": 0.1392857893629015,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M3_hill_dynamic": {
@@ -960,7 +1847,8 @@
               "nrmse_pct_sd": 3.699132092198469,
               "rmse_mean": 0.20620408120814293,
               "mae_mean": 0.1690139483735041,
-              "pearson_r_mean": 0.24986942658740194
+              "pearson_r_mean": 0.24986942658740194,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M4_subject01_biomechanical": {
@@ -983,7 +1871,8 @@
               "nrmse_pct_sd": 3.5576716568852373,
               "rmse_mean": 0.2042022684884378,
               "mae_mean": 0.16678883785711474,
-              "pearson_r_mean": 0.28630912083754456
+              "pearson_r_mean": 0.28630912083754456,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "UWB_radar_ridge": {
@@ -1006,28 +1895,47 @@
               "nrmse_pct_sd": 27.655304683667786,
               "rmse_mean": 0.47776166583863694,
               "mae_mean": 0.4061156045937097,
-              "pearson_r_mean": 0.0624157940349089
+              "pearson_r_mean": 0.0624157940349089,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.023414472697671107,
+            "delta_r2_sd": 0.03260849302922077,
+            "delta_r2_ci95": [
+              -0.010806042050492938,
+              0.05763498744583515
+            ],
             "paired_t_statistic": 1.7588519240747233,
             "paired_t_pvalue": 0.13892868138099895,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0234) is NOT statistically significant (p = 0.1389). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0234, 95% CI [-0.0108, 0.0576]) is not statistically significant (paired t = 1.759, p = 0.1389). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.06252008396135454,
+            "delta_r2_sd": 0.08947346765811093,
+            "delta_r2_ci95": [
+              -0.15641672974685683,
+              0.03137656182414776
+            ],
             "paired_t_statistic": -1.7115946032901792,
             "paired_t_pvalue": 0.1476532415029888,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0625, t = -1.712, p = 0.1477). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0625). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.712, p = 0.1477; Wilcoxon p = 0.2188; 95% CI [-0.1564, 0.0314] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       }
@@ -1036,8 +1944,9 @@
       "mechanism_1_single_head_vs_net_joint_moment": "Vastus lateralis B-mode ultrasound captures kinematics from only 1 of 4 quadriceps heads. Knee extension torque reflects the algebraic sum of vastus medialis, vastus intermedius, vastus lateralis, and rectus femoris (bi-articular), minus antagonist hamstring co-contraction. Surface EMG integrates overall neural drive better than single-muscle fascicle geometry.",
       "mechanism_2_parameter_unidentifiability": "Anatomical moment arms d_MA(theta), tendon slack lengths, and optimal fascicle lengths L0 vary substantially across individuals. In cross-subject LOSO, pooled fixed parameters induce systematic bias on held-out subjects that degrades accuracy.",
       "mechanism_3_ultrasound_tracking_noise_propagation": "Multiplying neural activation by uncalibrated ultrasound geometric factors (f_L * f_V * cos(alpha)) amplifies measurement tracking noise, resulting in higher prediction variance than direct linear sEMG.",
-      "mechanism_4_sample_size_limitation": "With N=6 participants, between-subject morphological variability cannot be learned by unregularized linear models without participant-specific calibration.",
-      "registry_action": "Preserve NEG-0039 in negative_results.json. Bar assigning superior architecture status to M4."
+      "mechanism_4_statistical_power_and_confidence_interval": "With N=6 participants, statistical power to detect Delta R2 ~ 0.14 at alpha=0.05 is approximately 55%. The 95% confidence interval for paired Delta R2 (M4 - M1) is [-0.2815, +0.0061], which crosses zero. The paired t-test yields p = 0.0571 (Wilcoxon p = 0.0625), which fails to reject H0 at alpha=0.05. Therefore, it is strictly prohibited to declare M1 superior at alpha=0.05, while the sample point-estimate favors M1 by +0.1377.",
+      "mechanism_5_model_scope_limitation": "The evaluated model is an uncalibrated linear fit of a single engineered composite feature (a * f_L * f_V * cos(alpha) * d_MA), formally designated ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE. The full multi-scale physiological ODE of SUBJECT-01 (incorporating motor unit recruitment, activation-deactivation kinetics, non-linear tendon elasticity, and multi-muscle joint balance) was not evaluated in this linear feature test and remains unfalsified (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST).",
+      "registry_action": "Preserve NEG-0039 in negative_results.json with exact statistical interpretation."
     },
     "models_evaluation": {
       "M0_constant_baseline": {
@@ -1060,13 +1969,19 @@
           "nrmse_pct_sd": 2.5657460950573294,
           "rmse_mean": 0.21813837596777877,
           "mae_mean": 0.18467146145410815,
-          "pearson_r_mean": 0.0
+          "pearson_r_mean": 0.0,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": -0.0007551964295625806,
           "r_squared_sd": 0.0013339563320202217,
           "nrmse_pct_mean": 28.015928239493963,
           "nrmse_pct_sd": 2.69637326602926
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -31.976481875096603,
+          "r_squared_sd": 186.4452259797617,
+          "n_runs_evaluated": 66
         }
       },
       "M1_static_semg": {
@@ -1089,13 +2004,19 @@
           "nrmse_pct_sd": 2.144981200527033,
           "rmse_mean": 0.1546070135424303,
           "mae_mean": 0.10921680630920279,
-          "pearson_r_mean": 0.6982832526191135
+          "pearson_r_mean": 0.6982832526191135,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.487113768329502,
           "r_squared_sd": 0.053216039846176316,
           "nrmse_pct_mean": 19.987483472523632,
           "nrmse_pct_sd": 1.7604190896362208
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.5086476823319055,
+          "r_squared_sd": 30.996199853119066,
+          "n_runs_evaluated": 66
         }
       },
       "M2_static_length": {
@@ -1118,13 +2039,19 @@
           "nrmse_pct_sd": 3.0730586484226947,
           "rmse_mean": 0.2110442733224017,
           "mae_mean": 0.1745750943176336,
-          "pearson_r_mean": 0.2902939758686173
+          "pearson_r_mean": 0.2902939758686173,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.09953470327168405,
           "r_squared_sd": 0.09115993509421093,
           "nrmse_pct_mean": 26.51932093109051,
           "nrmse_pct_sd": 2.7642369039647
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -31.949632099137364,
+          "r_squared_sd": 189.9557363903142,
+          "n_runs_evaluated": 66
         }
       },
       "M3_hill_dynamic": {
@@ -1147,13 +2074,19 @@
           "nrmse_pct_sd": 3.2903031534925935,
           "rmse_mean": 0.17721354972717449,
           "mae_mean": 0.13480042522313143,
-          "pearson_r_mean": 0.6096406508362903
+          "pearson_r_mean": 0.6096406508362903,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.37160460076213847,
           "r_squared_sd": 0.08648226798656629,
           "nrmse_pct_mean": 22.226109010026544,
           "nrmse_pct_sd": 3.1765935930216376
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.680360642071389,
+          "r_squared_sd": 23.574343749555574,
+          "n_runs_evaluated": 66
         }
       },
       "M4_subject01_biomechanical": {
@@ -1176,13 +2109,19 @@
           "nrmse_pct_sd": 3.2312247887307826,
           "rmse_mean": 0.17519655642632948,
           "mae_mean": 0.13307537627372867,
-          "pearson_r_mean": 0.6180662429864864
+          "pearson_r_mean": 0.6180662429864864,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.38292736784724996,
           "r_squared_sd": 0.09967542721865723,
           "nrmse_pct_mean": 22.013068164289624,
           "nrmse_pct_sd": 3.3304957425799593
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.151940264681653,
+          "r_squared_sd": 19.463814826901498,
+          "n_runs_evaluated": 66
         }
       },
       "UWB_radar_ridge": {
@@ -1205,13 +2144,19 @@
           "nrmse_pct_sd": 17.72817127671256,
           "rmse_mean": 0.3681805423206141,
           "mae_mean": 0.270854772895258,
-          "pearson_r_mean": 0.2738581986294306
+          "pearson_r_mean": 0.2738581986294306,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.9762889395676149,
           "r_squared_sd": 0.009909723361533443,
           "nrmse_pct_mean": 4.191328046580975,
           "nrmse_pct_sd": 0.9540989646719276
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -0.9596217122066147,
+          "r_squared_sd": 8.820756108640197,
+          "n_runs_evaluated": 66
         }
       }
     },
@@ -1219,7 +2164,7 @@
       "intra_r2": 0.9762889395676149,
       "loso_r2": -2.4457025356908573,
       "delta_r2": -3.421991475258472,
-      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: UWB radar achieves near-perfect intra-participant accuracy (R2 = 0.9763) due to memorizing participant-specific dielectric tissue impedance and antenna coupling, but collapses completely under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457). Raw radar cannot predict muscle torque on unseen human subjects without individual calibration."
+      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: The specific uncalibrated UWB Ridge regression model (204 raw frequency channels) collapses under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457 +/- 2.2077), failing on 5 of 6 held-out human participants despite achieving intra-participant R2 = 0.9763. This collapse is specific to this linear uncalibrated Ridge implementation and must not be extrapolated to declare all UWB technologies unusable, nor to non-linear architectures (LME with random intercepts, LSTM with recurrent memory, Random Forest) without explicit cross-subject LOSO evaluation."
     },
     "decoupling_analysis": {
       "active_positive_count": 1821,
@@ -1237,16 +2182,23 @@
     "status": "VALIDATED_ON_RAW_ARRAYS",
     "stage1_raw_observation_audit": {
       "total_dynamic_observations": 3226,
-      "passive_torque_zero_count": 1382,
+      "torque_units": "fraction of MVC [0.0, 1.0] (where 1.0 = 100% MVC)",
+      "passive_protocol_count": 1382,
+      "active_protocol_count": 1844,
       "active_positive_torque_count": 1821,
-      "active_negative_sensor_drift_count": 23,
+      "active_negative_count": 23,
+      "active_zero_torque_count": 0,
       "sum_check_exact_match": true,
-      "total_active_conditions_count": 1844,
-      "negative_sensor_drift_details": {
+      "protocol_partition_exact": true,
+      "negative_values_details": {
         "count": 23,
-        "min_nm": -0.02072831165171182,
-        "max_nm": -0.0006627505439774003,
-        "mean_nm": -0.007408561444999562,
+        "min_fraction_mvc": -0.02072831165171182,
+        "max_fraction_mvc": -0.0006627505439774003,
+        "mean_fraction_mvc": -0.007408561444999562,
+        "min_pct_mvc": -2.072831165171182,
+        "max_pct_mvc": -0.06627505439774002,
+        "mean_pct_mvc": -0.7408561444999562,
+        "units": "fraction of MVC [0.0, 1.0]",
         "participants_affected": [
           1,
           3,
@@ -1274,8 +2226,71 @@
           63,
           71
         ],
-        "interpretation": "Small negative baseline sensor drift (ranging from -0.0207 to -0.00066 Nm) during active runs near terminal knee extension (84.0 deg to 90.1 deg) in participants 1, 3, 4, 5. Representing baseline load-cell zero-point noise rather than active negative torque."
+        "velocities_deg_s_range": [
+          -21.865796393743516,
+          64.3677869740804
+        ],
+        "s_emg_range": [
+          0.009100773734327104,
+          0.1366192711105738
+        ],
+        "interpretation": "Small baseline offset fluctuations (ranging from -0.0207 to -0.00066 fraction of MVC, i.e., -2.07% to -0.07% MVC) during active runs near terminal knee extension (84.0 deg to 90.1 deg) with near-zero velocity (0.0 to 20.9 deg/s) and baseline sEMG (0.01 to 0.05) in participants 1, 3, 4, 5. Arising from dynamometer gravity-correction offset and 5 Hz low-pass filter transition ringing at the boundary of active contractions, rather than active negative torque or unverified hardware failure.",
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562
       },
+      "passive_torque_zero_count": 1382,
+      "active_negative_sensor_drift_count": 23,
+      "negative_sensor_drift_details": {
+        "count": 23,
+        "min_fraction_mvc": -0.02072831165171182,
+        "max_fraction_mvc": -0.0006627505439774003,
+        "mean_fraction_mvc": -0.007408561444999562,
+        "min_pct_mvc": -2.072831165171182,
+        "max_pct_mvc": -0.06627505439774002,
+        "mean_pct_mvc": -0.7408561444999562,
+        "units": "fraction of MVC [0.0, 1.0]",
+        "participants_affected": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "angles_deg_range": [
+          83.97979161922946,
+          90.13199821004518
+        ],
+        "runs_affected": [
+          9,
+          38,
+          40,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          62,
+          63,
+          71
+        ],
+        "velocities_deg_s_range": [
+          -21.865796393743516,
+          64.3677869740804
+        ],
+        "s_emg_range": [
+          0.009100773734327104,
+          0.1366192711105738
+        ],
+        "interpretation": "Small baseline offset fluctuations (ranging from -0.0207 to -0.00066 fraction of MVC, i.e., -2.07% to -0.07% MVC) during active runs near terminal knee extension (84.0 deg to 90.1 deg) with near-zero velocity (0.0 to 20.9 deg/s) and baseline sEMG (0.01 to 0.05) in participants 1, 3, 4, 5. Arising from dynamometer gravity-correction offset and 5 Hz low-pass filter transition ringing at the boundary of active contractions, rather than active negative torque or unverified hardware failure.",
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562
+      },
+      "total_active_conditions_count": 1844,
       "nan_count_across_all_channels": {
         "part": 0,
         "run": 0,
@@ -1297,7 +2312,7 @@
         "status_in_paper": "Method used by Bird et al. (2026) for published LME (R2=0.984) and LSTM (R2=0.988)."
       },
       "BLOCKED_TEMPORAL_CV": {
-        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks) within each participant to mitigate adjacent sample autocorrelation.",
+        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks or individual runs) within each participant to mitigate adjacent sample autocorrelation.",
         "leakage_mechanism": "Reduces high-frequency temporal autocorrelation leakage, but remains participant-specific.",
         "status_in_paper": "Used in LSTM segment preprocessing, but within-participant."
       },
@@ -1570,13 +2585,19 @@
               "nrmse_pct_sd": 2.5657460950573294,
               "rmse_mean": 0.21813837596777877,
               "mae_mean": 0.18467146145410815,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": -0.0007551964295625806,
               "r_squared_sd": 0.0013339563320202217,
               "nrmse_pct_mean": 28.015928239493963,
               "nrmse_pct_sd": 2.69637326602926
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -31.976481875096603,
+              "r_squared_sd": 186.4452259797617,
+              "n_runs_evaluated": 66
             }
           },
           "M1_static_semg": {
@@ -1599,13 +2620,19 @@
               "nrmse_pct_sd": 2.144981200527033,
               "rmse_mean": 0.1546070135424303,
               "mae_mean": 0.10921680630920279,
-              "pearson_r_mean": 0.6982832526191135
+              "pearson_r_mean": 0.6982832526191135,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.487113768329502,
               "r_squared_sd": 0.053216039846176316,
               "nrmse_pct_mean": 19.987483472523632,
               "nrmse_pct_sd": 1.7604190896362208
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.5086476823319055,
+              "r_squared_sd": 30.996199853119066,
+              "n_runs_evaluated": 66
             }
           },
           "M2_static_length": {
@@ -1628,13 +2655,19 @@
               "nrmse_pct_sd": 3.0730586484226947,
               "rmse_mean": 0.2110442733224017,
               "mae_mean": 0.1745750943176336,
-              "pearson_r_mean": 0.2902939758686173
+              "pearson_r_mean": 0.2902939758686173,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.09953470327168405,
               "r_squared_sd": 0.09115993509421093,
               "nrmse_pct_mean": 26.51932093109051,
               "nrmse_pct_sd": 2.7642369039647
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -31.949632099137364,
+              "r_squared_sd": 189.9557363903142,
+              "n_runs_evaluated": 66
             }
           },
           "M3_hill_dynamic": {
@@ -1657,13 +2690,19 @@
               "nrmse_pct_sd": 3.2903031534925935,
               "rmse_mean": 0.17721354972717449,
               "mae_mean": 0.13480042522313143,
-              "pearson_r_mean": 0.6096406508362903
+              "pearson_r_mean": 0.6096406508362903,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.37160460076213847,
               "r_squared_sd": 0.08648226798656629,
               "nrmse_pct_mean": 22.226109010026544,
               "nrmse_pct_sd": 3.1765935930216376
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.680360642071389,
+              "r_squared_sd": 23.574343749555574,
+              "n_runs_evaluated": 66
             }
           },
           "M4_subject01_biomechanical": {
@@ -1686,13 +2725,19 @@
               "nrmse_pct_sd": 3.2312247887307826,
               "rmse_mean": 0.17519655642632948,
               "mae_mean": 0.13307537627372867,
-              "pearson_r_mean": 0.6180662429864864
+              "pearson_r_mean": 0.6180662429864864,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.38292736784724996,
               "r_squared_sd": 0.09967542721865723,
               "nrmse_pct_mean": 22.013068164289624,
               "nrmse_pct_sd": 3.3304957425799593
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -6.151940264681653,
+              "r_squared_sd": 19.463814826901498,
+              "n_runs_evaluated": 66
             }
           },
           "UWB_radar_ridge": {
@@ -1715,34 +2760,794 @@
               "nrmse_pct_sd": 17.72817127671256,
               "rmse_mean": 0.3681805423206141,
               "mae_mean": 0.270854772895258,
-              "pearson_r_mean": 0.2738581986294306
+              "pearson_r_mean": 0.2738581986294306,
+              "units": "fraction of MVC [0.0, 1.0]"
             },
             "intra_participant_5fold": {
               "r_squared_mean": 0.9762889395676149,
               "r_squared_sd": 0.009909723361533443,
               "nrmse_pct_mean": 4.191328046580975,
               "nrmse_pct_sd": 0.9540989646719276
+            },
+            "blocked_run_cv": {
+              "r_squared_mean": -0.9596217122066147,
+              "r_squared_sd": 8.820756108640197,
+              "n_runs_evaluated": 66
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.014822279463689228,
+            "delta_r2_sd": 0.03360934330913275,
+            "delta_r2_ci95": [
+              -0.02044856323841432,
+              0.05009312216579277
+            ],
             "paired_t_statistic": 1.0802657218567766,
             "paired_t_pvalue": 0.32935334494610286,
             "wilcoxon_statistic": 5.0,
             "wilcoxon_pvalue": 0.3125,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0148) is NOT statistically significant (p = 0.3294). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0148, 95% CI [-0.0204, 0.0501]) is not statistically significant (paired t = 1.080, p = 0.3294). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.1376611378004214,
+            "delta_r2_sd": 0.13695964928626325,
+            "delta_r2_ci95": [
+              -0.2813914749890807,
+              0.006069199388237856
+            ],
             "paired_t_statistic": -2.4620356928426674,
             "paired_t_pvalue": 0.05708568884018873,
             "wilcoxon_statistic": 1.0,
             "wilcoxon_pvalue": 0.0625,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.1377, t = -2.462, p = 0.0571). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.1377). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -2.462, p = 0.0571; Wilcoxon p = 0.0625; 95% CI [-0.2814, 0.0061] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_all": {
+        "observations_count": 1844,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.26103188938721794,
+              "r_squared_sd": 0.34333820101305834,
+              "r_squared_ci95": [
+                -0.6213432340680929,
+                0.09927945529365706
+              ],
+              "r_squared_per_subject": [
+                -0.007368777472910981,
+                -0.8450394142759292,
+                -0.11812997338541864,
+                -0.07549355204645969,
+                -0.005965078819988756,
+                -0.5141945403226003
+              ],
+              "nrmse_pct_mean": 27.14184591902917,
+              "nrmse_pct_sd": 3.630730439124909,
+              "rmse_mean": 0.21479618817933996,
+              "mae_mean": 0.1784331593200472,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.052799657596432036,
+              "r_squared_sd": 0.23335533029744723,
+              "r_squared_ci95": [
+                -0.29769105797027234,
+                0.1920917427774083
+              ],
+              "r_squared_per_subject": [
+                0.03241840143052488,
+                -0.4273605202974493,
+                0.08876238566742856,
+                0.14551541102409504,
+                0.10091650700625143,
+                -0.2570501304094428
+              ],
+              "nrmse_pct_mean": 24.919250897394036,
+              "nrmse_pct_sd": 3.363914933946213,
+              "rmse_mean": 0.1974219922681469,
+              "mae_mean": 0.165180648601168,
+              "pearson_r_mean": 0.2473412593572328,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.2813561777601278,
+              "r_squared_sd": 0.3252222119608599,
+              "r_squared_ci95": [
+                -0.6226559578776603,
+                0.0599436023574047
+              ],
+              "r_squared_per_subject": [
+                0.02037307803896138,
+                -0.8051218336694628,
+                -0.1029062643558738,
+                -0.25283264702486985,
+                -0.018183329954180705,
+                -0.5294660695953408
+              ],
+              "nrmse_pct_mean": 27.343507605371638,
+              "nrmse_pct_sd": 3.245907667904893,
+              "rmse_mean": 0.2163778100383714,
+              "mae_mean": 0.17759593593878586,
+              "pearson_r_mean": 0.1392857893629015,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.13873421425545768,
+              "r_squared_sd": 0.24291395317229345,
+              "r_squared_ci95": [
+                -0.3936567741424866,
+                0.11618834563157127
+              ],
+              "r_squared_per_subject": [
+                0.02231525785464883,
+                -0.45691690384779027,
+                0.05274929352735791,
+                0.014684786830312269,
+                -0.02045523233428126,
+                -0.44478248756299354
+              ],
+              "nrmse_pct_mean": 25.943300812143253,
+              "nrmse_pct_sd": 3.699132092198469,
+              "rmse_mean": 0.20620408120814293,
+              "mae_mean": 0.1690139483735041,
+              "pearson_r_mean": 0.24986942658740194,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.11531974155778657,
+              "r_squared_sd": 0.22920575420366543,
+              "r_squared_ci95": [
+                -0.35585642888835195,
+                0.1252169457727788
+              ],
+              "r_squared_per_subject": [
+                0.042632914016408785,
+                -0.3853637777119243,
+                0.07141429283166101,
+                -0.011590045138571314,
+                0.022722788329397003,
+                -0.4317346216736906
+              ],
+              "nrmse_pct_mean": 25.674418678867227,
+              "nrmse_pct_sd": 3.5576716568852373,
+              "rmse_mean": 0.2042022684884378,
+              "mae_mean": 0.16678883785711474,
+              "pearson_r_mean": 0.28630912083754456,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.015378786911168,
+              "r_squared_sd": 5.33756658530156,
+              "r_squared_ci95": [
+                -11.616811391844536,
+                -0.413946181977801
+              ],
+              "r_squared_per_subject": [
+                -4.6962601094775716,
+                -0.1895123441052604,
+                -4.075638001474066,
+                -11.90576103949986,
+                -13.23421310264643,
+                -1.9908881242638237
+              ],
+              "nrmse_pct_mean": 60.92484979967268,
+              "nrmse_pct_sd": 27.655304683667786,
+              "rmse_mean": 0.47776166583863694,
+              "mae_mean": 0.4061156045937097,
+              "pearson_r_mean": 0.0624157940349089,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.023414472697671107,
+            "delta_r2_sd": 0.03260849302922077,
+            "delta_r2_ci95": [
+              -0.010806042050492938,
+              0.05763498744583515
+            ],
+            "paired_t_statistic": 1.7588519240747233,
+            "paired_t_pvalue": 0.13892868138099895,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0234, 95% CI [-0.0108, 0.0576]) is not statistically significant (paired t = 1.759, p = 0.1389). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.06252008396135454,
+            "delta_r2_sd": 0.08947346765811093,
+            "delta_r2_ci95": [
+              -0.15641672974685683,
+              0.03137656182414776
+            ],
+            "paired_t_statistic": -1.7115946032901792,
+            "paired_t_pvalue": 0.1476532415029888,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0625). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.712, p = 0.1477; Wilcoxon p = 0.2188; 95% CI [-0.1564, 0.0314] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_positive": {
+        "observations_count": 1821,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.262047008848241,
+              "r_squared_sd": 0.37049725079411083,
+              "r_squared_ci95": [
+                -0.6508600283150617,
+                0.12676601061857973
+              ],
+              "r_squared_per_subject": [
+                -0.004671152511062537,
+                -0.9162836348813916,
+                -0.1208923127483772,
+                -0.03383293436265822,
+                -0.0036697020881026887,
+                -0.49293231649785363
+              ],
+              "nrmse_pct_mean": 26.918484002697365,
+              "nrmse_pct_sd": 4.170130599238125,
+              "rmse_mean": 0.21175249909572258,
+              "mae_mean": 0.17641639975725512,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.0881705085315073,
+              "r_squared_sd": 0.2271052565569537,
+              "r_squared_ci95": [
+                -0.3265028587700957,
+                0.15016184170708113
+              ],
+              "r_squared_per_subject": [
+                0.03208516863203292,
+                -0.47040603225262845,
+                0.06727821082643948,
+                0.0024180497043161386,
+                0.09982978793002817,
+                -0.26022823602923206
+              ],
+              "nrmse_pct_mean": 25.101085425045174,
+              "nrmse_pct_sd": 3.2758685988408494,
+              "rmse_mean": 0.19752344222555485,
+              "mae_mean": 0.16500471635854483,
+              "pearson_r_mean": 0.2178204908976489,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.253512378286142,
+              "r_squared_sd": 0.32030958617175126,
+              "r_squared_ci95": [
+                -0.5896566738151117,
+                0.08263191724282776
+              ],
+              "r_squared_per_subject": [
+                0.0400847070645205,
+                -0.777927590678094,
+                -0.09382952254394716,
+                -0.1384657269632874,
+                -0.0387381162358551,
+                -0.5121980203601888
+              ],
+              "nrmse_pct_mean": 26.86897383114253,
+              "nrmse_pct_sd": 3.8903946150177577,
+              "rmse_mean": 0.2116671823969313,
+              "mae_mean": 0.17388759044650334,
+              "pearson_r_mean": 0.18105852323232988,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.1619815661612692,
+              "r_squared_sd": 0.2546337887244026,
+              "r_squared_ci95": [
+                -0.42920333917040154,
+                0.10524020684786314
+              ],
+              "r_squared_per_subject": [
+                0.023878213130461234,
+                -0.5399852336579052,
+                0.03798627395838894,
+                -0.044357035962975244,
+                -0.018465809178231485,
+                -0.4309458052573536
+              ],
+              "nrmse_pct_mean": 25.96331779272467,
+              "nrmse_pct_sd": 3.8491501948971263,
+              "rmse_mean": 0.2049360413654919,
+              "mae_mean": 0.16800445977823483,
+              "pearson_r_mean": 0.23285089853722565,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.14114607148934497,
+              "r_squared_sd": 0.23869805370623964,
+              "r_squared_ci95": [
+                -0.39164431622247864,
+                0.10935217324378868
+              ],
+              "r_squared_per_subject": [
+                0.04362489930629376,
+                -0.465425811560767,
+                0.05781130475606533,
+                -0.0861238559419728,
+                0.021189549467386493,
+                -0.4179525149630756
+              ],
+              "nrmse_pct_mean": 25.72061631698826,
+              "nrmse_pct_sd": 3.6479795153278167,
+              "rmse_mean": 0.2031194177764695,
+              "mae_mean": 0.16583441280899427,
+              "pearson_r_mean": 0.2707217519091248,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.662674479265289,
+              "r_squared_sd": 6.2618849642199175,
+              "r_squared_ci95": [
+                -13.234119733646462,
+                -0.09122922488411511
+              ],
+              "r_squared_per_subject": [
+                -4.758321619812343,
+                -0.18810440760653546,
+                -4.2053910543847035,
+                -15.494652672361209,
+                -13.341885230733427,
+                -1.9876918906935184
+              ],
+              "nrmse_pct_mean": 62.01129529568157,
+              "nrmse_pct_sd": 28.464872123895887,
+              "rmse_mean": 0.4812399247368447,
+              "mae_mean": 0.412341023161086,
+              "pearson_r_mean": 0.05077220822725629,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.02083549467192425,
+            "delta_r2_sd": 0.03800843108657368,
+            "delta_r2_ci95": [
+              -0.019051907526856628,
+              0.060722896870705124
+            ],
+            "paired_t_statistic": 1.3427634086880365,
+            "paired_t_pvalue": 0.23708070600143674,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0208, 95% CI [-0.0191, 0.0607]) is not statistically significant (paired t = 1.343, p = 0.2371). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.052975562957837674,
+            "delta_r2_sd": 0.06679825296317088,
+            "delta_r2_ci95": [
+              -0.12307603030017675,
+              0.0171249043845014
+            ],
+            "paired_t_statistic": -1.9426121541671542,
+            "paired_t_pvalue": 0.10970317275211573,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0530). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.943, p = 0.1097; Wilcoxon p = 0.2188; 95% CI [-0.1231, 0.0171] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "passive_protocol": {
+        "observations_count": 1382,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.0,
+              "r_squared_sd": 0.0,
+              "r_squared_ci95": [
+                0.0,
+                0.0
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "nrmse_pct_mean": 0.0,
+              "nrmse_pct_sd": 0.0,
+              "rmse_mean": 0.0,
+              "mae_mean": 0.0,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.0,
+            "delta_r2_sd": 0.0,
+            "delta_r2_ci95": [
+              0.0,
+              0.0
+            ],
+            "paired_t_statistic": null,
+            "paired_t_pvalue": null,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0000, 95% CI [0.0000, 0.0000]) is not statistically significant (paired t = N/A, p = N/A). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": 0.0,
+            "delta_r2_sd": 0.0,
+            "delta_r2_ci95": [
+              0.0,
+              0.0
+            ],
+            "paired_t_statistic": null,
+            "paired_t_pvalue": null,
+            "wilcoxon_statistic": 0.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": false,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = +0.0000). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = N/A, p = N/A; Wilcoxon p = 1.0000; 95% CI [0.0000, 0.0000] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
+          }
+        }
+      },
+      "active_protocol_nonpositive": {
+        "observations_count": 23,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -11.783511336269532,
+              "r_squared_sd": 21.747320838148156,
+              "r_squared_ci95": [
+                -34.60592489607482,
+                11.038902223535752
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -44.344815303904994,
+                -2.789230041173132,
+                0.0
+              ],
+              "nrmse_pct_mean": 71.82395842780713,
+              "nrmse_pct_sd": 115.00587572675747,
+              "rmse_mean": 0.00647118611587413,
+              "mae_mean": 0.0061536509310556676,
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.561980529068313,
+              "r_squared_sd": 25.434656981558526,
+              "r_squared_ci95": [
+                -40.25401605404505,
+                13.130054995908425
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -51.670407479414386,
+                -2.5775146368588677,
+                0.0
+              ],
+              "nrmse_pct_mean": 76.18672283580766,
+              "nrmse_pct_sd": 124.33634987238639,
+              "rmse_mean": 0.006485997726358919,
+              "mae_mean": 0.006184598466127646,
+              "pearson_r_mean": -0.07422477295121023,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -15.732876873912375,
+              "r_squared_sd": 29.519654543370297,
+              "r_squared_ci95": [
+                -46.71185442914259,
+                15.246100681317838
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -59.96256369351008,
+                -2.968943802139419,
+                0.0
+              ],
+              "nrmse_pct_mean": 81.7124459566933,
+              "nrmse_pct_sd": 133.8521778062848,
+              "rmse_mean": 0.006747556251241191,
+              "mae_mean": 0.006321362688183178,
+              "pearson_r_mean": -0.3180842056553619,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.068859965186538,
+              "r_squared_sd": 24.44235664311251,
+              "r_squared_ci95": [
+                -38.71954014951719,
+                12.581820219144108
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -49.686668862848784,
+                -2.588770997897369,
+                0.0
+              ],
+              "nrmse_pct_mean": 74.96857687588725,
+              "nrmse_pct_sd": 121.89564317922374,
+              "rmse_mean": 0.0064255729690605255,
+              "mae_mean": 0.0061209951427893825,
+              "pearson_r_mean": -0.05989534246600421,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -13.068837306565474,
+              "r_squared_sd": 24.44229992619161,
+              "r_squared_ci95": [
+                -38.71945797013794,
+                12.58178335700699
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -49.686560392120676,
+                -2.588788834141219,
+                0.0
+              ],
+              "nrmse_pct_mean": 74.96853650252125,
+              "nrmse_pct_sd": 121.89549961470307,
+              "rmse_mean": 0.006425670820132807,
+              "mae_mean": 0.006121094882360154,
+              "pearson_r_mean": -0.05998687768577067,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -15.731922930480977,
+              "r_squared_sd": 29.716212130688515,
+              "r_squared_ci95": [
+                -46.917175023134895,
+                15.453329162172942
+              ],
+              "r_squared_per_subject": [
+                0.0,
+                -60.26650367084006,
+                -2.661188051083847,
+                0.0
+              ],
+              "nrmse_pct_mean": 81.42035478518434,
+              "nrmse_pct_sd": 134.3596061777603,
+              "rmse_mean": 0.007077638524974933,
+              "mae_mean": 0.006742724002582212,
+              "pearson_r_mean": -0.23903660820691122,
+              "units": "fraction of MVC [0.0, 1.0]"
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 2.2658621064541862e-05,
+            "delta_r2_sd": 5.7822654201664584e-05,
+            "delta_r2_ci95": [
+              -3.802253304806625e-05,
+              8.333977517714996e-05
+            ],
+            "paired_t_statistic": 0.7837281555950979,
+            "paired_t_pvalue": 0.490382133603786,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0000, 95% CI [-0.0000, 0.0001]) is not statistically significant (paired t = 0.784, p = 0.4904). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": 0.49314322250283993,
+            "delta_r2_sd": 0.9938167875562979,
+            "delta_r2_ci95": [
+              -0.5498035338856752,
+              1.5360899788913551
+            ],
+            "paired_t_statistic": 0.9924228060494587,
+            "paired_t_pvalue": 0.39414724856061456,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 1.0,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
+            "m4_inferior_to_m1": false,
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = +0.4931). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = 0.992, p = 0.3941; Wilcoxon p = 1.0000; 95% CI [-0.5498, 1.5361] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       },
@@ -1769,7 +3574,8 @@
               "nrmse_pct_sd": 4.170130599238125,
               "rmse_mean": 0.21175249909572258,
               "mae_mean": 0.17641639975725512,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M1_static_semg": {
@@ -1792,7 +3598,8 @@
               "nrmse_pct_sd": 3.2758685988408494,
               "rmse_mean": 0.19752344222555485,
               "mae_mean": 0.16500471635854483,
-              "pearson_r_mean": 0.2178204908976489
+              "pearson_r_mean": 0.2178204908976489,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M2_static_length": {
@@ -1815,7 +3622,8 @@
               "nrmse_pct_sd": 3.8903946150177577,
               "rmse_mean": 0.2116671823969313,
               "mae_mean": 0.17388759044650334,
-              "pearson_r_mean": 0.18105852323232988
+              "pearson_r_mean": 0.18105852323232988,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M3_hill_dynamic": {
@@ -1838,7 +3646,8 @@
               "nrmse_pct_sd": 3.8491501948971263,
               "rmse_mean": 0.2049360413654919,
               "mae_mean": 0.16800445977823483,
-              "pearson_r_mean": 0.23285089853722565
+              "pearson_r_mean": 0.23285089853722565,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M4_subject01_biomechanical": {
@@ -1861,7 +3670,8 @@
               "nrmse_pct_sd": 3.6479795153278167,
               "rmse_mean": 0.2031194177764695,
               "mae_mean": 0.16583441280899427,
-              "pearson_r_mean": 0.2707217519091248
+              "pearson_r_mean": 0.2707217519091248,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "UWB_radar_ridge": {
@@ -1884,28 +3694,47 @@
               "nrmse_pct_sd": 28.464872123895887,
               "rmse_mean": 0.4812399247368447,
               "mae_mean": 0.412341023161086,
-              "pearson_r_mean": 0.05077220822725629
+              "pearson_r_mean": 0.05077220822725629,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.02083549467192425,
+            "delta_r2_sd": 0.03800843108657368,
+            "delta_r2_ci95": [
+              -0.019051907526856628,
+              0.060722896870705124
+            ],
             "paired_t_statistic": 1.3427634086880365,
             "paired_t_pvalue": 0.23708070600143674,
             "wilcoxon_statistic": 5.0,
             "wilcoxon_pvalue": 0.3125,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0208) is NOT statistically significant (p = 0.2371). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0208, 95% CI [-0.0191, 0.0607]) is not statistically significant (paired t = 1.343, p = 0.2371). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.052975562957837674,
+            "delta_r2_sd": 0.06679825296317088,
+            "delta_r2_ci95": [
+              -0.12307603030017675,
+              0.0171249043845014
+            ],
             "paired_t_statistic": -1.9426121541671542,
             "paired_t_pvalue": 0.10970317275211573,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0530, t = -1.943, p = 0.1097). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0530). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.943, p = 0.1097; Wilcoxon p = 0.2188; 95% CI [-0.1231, 0.0171] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       },
@@ -1932,7 +3761,8 @@
               "nrmse_pct_sd": 3.630730439124909,
               "rmse_mean": 0.21479618817933996,
               "mae_mean": 0.1784331593200472,
-              "pearson_r_mean": 0.0
+              "pearson_r_mean": 0.0,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M1_static_semg": {
@@ -1955,7 +3785,8 @@
               "nrmse_pct_sd": 3.363914933946213,
               "rmse_mean": 0.1974219922681469,
               "mae_mean": 0.165180648601168,
-              "pearson_r_mean": 0.2473412593572328
+              "pearson_r_mean": 0.2473412593572328,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M2_static_length": {
@@ -1978,7 +3809,8 @@
               "nrmse_pct_sd": 3.245907667904893,
               "rmse_mean": 0.2163778100383714,
               "mae_mean": 0.17759593593878586,
-              "pearson_r_mean": 0.1392857893629015
+              "pearson_r_mean": 0.1392857893629015,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M3_hill_dynamic": {
@@ -2001,7 +3833,8 @@
               "nrmse_pct_sd": 3.699132092198469,
               "rmse_mean": 0.20620408120814293,
               "mae_mean": 0.1690139483735041,
-              "pearson_r_mean": 0.24986942658740194
+              "pearson_r_mean": 0.24986942658740194,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "M4_subject01_biomechanical": {
@@ -2024,7 +3857,8 @@
               "nrmse_pct_sd": 3.5576716568852373,
               "rmse_mean": 0.2042022684884378,
               "mae_mean": 0.16678883785711474,
-              "pearson_r_mean": 0.28630912083754456
+              "pearson_r_mean": 0.28630912083754456,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           },
           "UWB_radar_ridge": {
@@ -2047,28 +3881,47 @@
               "nrmse_pct_sd": 27.655304683667786,
               "rmse_mean": 0.47776166583863694,
               "mae_mean": 0.4061156045937097,
-              "pearson_r_mean": 0.0624157940349089
+              "pearson_r_mean": 0.0624157940349089,
+              "units": "fraction of MVC [0.0, 1.0]"
             }
           }
         },
         "statistical_comparisons": {
           "m4_vs_m3_hill": {
             "delta_r2_mean": 0.023414472697671107,
+            "delta_r2_sd": 0.03260849302922077,
+            "delta_r2_ci95": [
+              -0.010806042050492938,
+              0.05763498744583515
+            ],
             "paired_t_statistic": 1.7588519240747233,
             "paired_t_pvalue": 0.13892868138099895,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
             "statistically_significant_at_alpha_005": false,
-            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0234) is NOT statistically significant (p = 0.1389). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+            "does_p_prove_equivalence": false,
+            "scientific_verdict": "M4 vs M3 difference (Delta R2 = +0.0234, 95% CI [-0.0108, 0.0576]) is not statistically significant (paired t = 1.759, p = 0.1389). Crucially, failure to reject H0 does NOT prove equivalence between M4 and M3."
           },
           "m4_vs_m1_semg": {
             "delta_r2_mean": -0.06252008396135454,
+            "delta_r2_sd": 0.08947346765811093,
+            "delta_r2_ci95": [
+              -0.15641672974685683,
+              0.03137656182414776
+            ],
             "paired_t_statistic": -1.7115946032901792,
             "paired_t_pvalue": 0.1476532415029888,
             "wilcoxon_statistic": 4.0,
             "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "observed_point_estimate_advantage": "M1_SEMG",
+            "statistical_significance": "NON_SIGNIFICANT_AT_ALPHA_005",
+            "practical_significance": "SUBSTANTIAL_EFFECT_SIZE_FAVORING_M1",
+            "limited_statistical_power": "N_EQUALS_6_POWER_APPROX_55_PERCENT",
+            "model_scope_designation": "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE",
+            "multiscale_architecture_status": "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST",
             "m4_inferior_to_m1": true,
-            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0625, t = -1.712, p = 0.1477). Complex multiscale ultrasound tracking underperforms surface EMG."
+            "scientific_verdict": "Observed sample point-estimate favors M1 sEMG baseline (Delta R2 = -0.0625). However, this difference is NOT statistically significant at two-sided alpha=0.05 (paired t = -1.712, p = 0.1477; Wilcoxon p = 0.2188; 95% CI [-0.1564, 0.0314] spans zero; fails to reject H0). The tested engineered feature linear model provides no verified advantage (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE). The full multi-scale physiological ODE architecture is not falsified by this single feature test (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST)."
           }
         }
       }
@@ -2077,8 +3930,9 @@
       "mechanism_1_single_head_vs_net_joint_moment": "Vastus lateralis B-mode ultrasound captures kinematics from only 1 of 4 quadriceps heads. Knee extension torque reflects the algebraic sum of vastus medialis, vastus intermedius, vastus lateralis, and rectus femoris (bi-articular), minus antagonist hamstring co-contraction. Surface EMG integrates overall neural drive better than single-muscle fascicle geometry.",
       "mechanism_2_parameter_unidentifiability": "Anatomical moment arms d_MA(theta), tendon slack lengths, and optimal fascicle lengths L0 vary substantially across individuals. In cross-subject LOSO, pooled fixed parameters induce systematic bias on held-out subjects that degrades accuracy.",
       "mechanism_3_ultrasound_tracking_noise_propagation": "Multiplying neural activation by uncalibrated ultrasound geometric factors (f_L * f_V * cos(alpha)) amplifies measurement tracking noise, resulting in higher prediction variance than direct linear sEMG.",
-      "mechanism_4_sample_size_limitation": "With N=6 participants, between-subject morphological variability cannot be learned by unregularized linear models without participant-specific calibration.",
-      "registry_action": "Preserve NEG-0039 in negative_results.json. Bar assigning superior architecture status to M4."
+      "mechanism_4_statistical_power_and_confidence_interval": "With N=6 participants, statistical power to detect Delta R2 ~ 0.14 at alpha=0.05 is approximately 55%. The 95% confidence interval for paired Delta R2 (M4 - M1) is [-0.2815, +0.0061], which crosses zero. The paired t-test yields p = 0.0571 (Wilcoxon p = 0.0625), which fails to reject H0 at alpha=0.05. Therefore, it is strictly prohibited to declare M1 superior at alpha=0.05, while the sample point-estimate favors M1 by +0.1377.",
+      "mechanism_5_model_scope_limitation": "The evaluated model is an uncalibrated linear fit of a single engineered composite feature (a * f_L * f_V * cos(alpha) * d_MA), formally designated ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE. The full multi-scale physiological ODE of SUBJECT-01 (incorporating motor unit recruitment, activation-deactivation kinetics, non-linear tendon elasticity, and multi-muscle joint balance) was not evaluated in this linear feature test and remains unfalsified (FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST).",
+      "registry_action": "Preserve NEG-0039 in negative_results.json with exact statistical interpretation."
     },
     "models_evaluation": {
       "M0_constant_baseline": {
@@ -2101,13 +3955,19 @@
           "nrmse_pct_sd": 2.5657460950573294,
           "rmse_mean": 0.21813837596777877,
           "mae_mean": 0.18467146145410815,
-          "pearson_r_mean": 0.0
+          "pearson_r_mean": 0.0,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": -0.0007551964295625806,
           "r_squared_sd": 0.0013339563320202217,
           "nrmse_pct_mean": 28.015928239493963,
           "nrmse_pct_sd": 2.69637326602926
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -31.976481875096603,
+          "r_squared_sd": 186.4452259797617,
+          "n_runs_evaluated": 66
         }
       },
       "M1_static_semg": {
@@ -2130,13 +3990,19 @@
           "nrmse_pct_sd": 2.144981200527033,
           "rmse_mean": 0.1546070135424303,
           "mae_mean": 0.10921680630920279,
-          "pearson_r_mean": 0.6982832526191135
+          "pearson_r_mean": 0.6982832526191135,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.487113768329502,
           "r_squared_sd": 0.053216039846176316,
           "nrmse_pct_mean": 19.987483472523632,
           "nrmse_pct_sd": 1.7604190896362208
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.5086476823319055,
+          "r_squared_sd": 30.996199853119066,
+          "n_runs_evaluated": 66
         }
       },
       "M2_static_length": {
@@ -2159,13 +4025,19 @@
           "nrmse_pct_sd": 3.0730586484226947,
           "rmse_mean": 0.2110442733224017,
           "mae_mean": 0.1745750943176336,
-          "pearson_r_mean": 0.2902939758686173
+          "pearson_r_mean": 0.2902939758686173,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.09953470327168405,
           "r_squared_sd": 0.09115993509421093,
           "nrmse_pct_mean": 26.51932093109051,
           "nrmse_pct_sd": 2.7642369039647
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -31.949632099137364,
+          "r_squared_sd": 189.9557363903142,
+          "n_runs_evaluated": 66
         }
       },
       "M3_hill_dynamic": {
@@ -2188,13 +4060,19 @@
           "nrmse_pct_sd": 3.2903031534925935,
           "rmse_mean": 0.17721354972717449,
           "mae_mean": 0.13480042522313143,
-          "pearson_r_mean": 0.6096406508362903
+          "pearson_r_mean": 0.6096406508362903,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.37160460076213847,
           "r_squared_sd": 0.08648226798656629,
           "nrmse_pct_mean": 22.226109010026544,
           "nrmse_pct_sd": 3.1765935930216376
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.680360642071389,
+          "r_squared_sd": 23.574343749555574,
+          "n_runs_evaluated": 66
         }
       },
       "M4_subject01_biomechanical": {
@@ -2217,13 +4095,19 @@
           "nrmse_pct_sd": 3.2312247887307826,
           "rmse_mean": 0.17519655642632948,
           "mae_mean": 0.13307537627372867,
-          "pearson_r_mean": 0.6180662429864864
+          "pearson_r_mean": 0.6180662429864864,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.38292736784724996,
           "r_squared_sd": 0.09967542721865723,
           "nrmse_pct_mean": 22.013068164289624,
           "nrmse_pct_sd": 3.3304957425799593
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -6.151940264681653,
+          "r_squared_sd": 19.463814826901498,
+          "n_runs_evaluated": 66
         }
       },
       "UWB_radar_ridge": {
@@ -2246,13 +4130,19 @@
           "nrmse_pct_sd": 17.72817127671256,
           "rmse_mean": 0.3681805423206141,
           "mae_mean": 0.270854772895258,
-          "pearson_r_mean": 0.2738581986294306
+          "pearson_r_mean": 0.2738581986294306,
+          "units": "fraction of MVC [0.0, 1.0]"
         },
         "intra_participant_5fold": {
           "r_squared_mean": 0.9762889395676149,
           "r_squared_sd": 0.009909723361533443,
           "nrmse_pct_mean": 4.191328046580975,
           "nrmse_pct_sd": 0.9540989646719276
+        },
+        "blocked_run_cv": {
+          "r_squared_mean": -0.9596217122066147,
+          "r_squared_sd": 8.820756108640197,
+          "n_runs_evaluated": 66
         }
       }
     },
@@ -2260,7 +4150,7 @@
       "intra_r2": 0.9762889395676149,
       "loso_r2": -2.4457025356908573,
       "delta_r2": -3.421991475258472,
-      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: UWB radar achieves near-perfect intra-participant accuracy (R2 = 0.9763) due to memorizing participant-specific dielectric tissue impedance and antenna coupling, but collapses completely under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457). Raw radar cannot predict muscle torque on unseen human subjects without individual calibration."
+      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: The specific uncalibrated UWB Ridge regression model (204 raw frequency channels) collapses under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457 +/- 2.2077), failing on 5 of 6 held-out human participants despite achieving intra-participant R2 = 0.9763. This collapse is specific to this linear uncalibrated Ridge implementation and must not be extrapolated to declare all UWB technologies unusable, nor to non-linear architectures (LME with random intercepts, LSTM with recurrent memory, Random Forest) without explicit cross-subject LOSO evaluation."
     },
     "decoupling_analysis": {
       "active_positive_count": 1821,
@@ -2276,7 +4166,7 @@
   },
   "registered_negative_results": {
     "NEG-0038": "Single-muscle vastus lateralis knee extension torque, sEMG amplitude, and ultrasound fascicle length directly predict whole-body maximum strength and athletic capacity, and successful validation of 20-minute intermittent fatigue compensation models provides empirical validation for continuous 45-minute extreme metabolic endurance (TARGET-CPE45). [REFUTED]",
-    "NEG-0039": "Cross-Subject Generalization Collapse of Raw UWB Radar Muscle Force Estimation and Falsification of SUBJECT-01 Multiscale Architecture (M4) Superiority over sEMG Baseline. [REFUTED]"
+    "NEG-0039": "Cross-Subject Generalization Collapse of Raw UWB Radar Muscle Force Estimation and Falsification of Engineered Feature M4 Superiority over sEMG Baseline (ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE; FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST). [REFUTED]"
   },
   "epistemic_invariants": {
     "target_cpe45": "NOT EXTERNALLY VALIDATED",

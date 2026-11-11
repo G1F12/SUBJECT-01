@@ -294,7 +294,7 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         self.assertGreater(len(errors), 0, "Missing SRC-0076 must trigger error")
 
     def test_stage1_observation_discrepancy_resolution(self):
-        """Verify resolution of the 3,226 dynamic observations (1,382 passive, 1,821 active, 23 sensor drift)."""
+        """Verify resolution of the 3,226 dynamic observations (1,382 passive protocol, 1,844 active protocol)."""
         empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
         self.assertTrue(empirical_file.is_file(), "Empirical JSON must exist")
         with open(empirical_file, "r", encoding="utf-8") as f:
@@ -303,15 +303,22 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         dyn = emp["dynamic_knee_scientific_audit"]
         stage1 = dyn["stage1_raw_observation_audit"]
         self.assertEqual(stage1["total_dynamic_observations"], 3226)
-        self.assertEqual(stage1["passive_torque_zero_count"], 1382)
+        self.assertEqual(stage1["passive_protocol_count"], 1382)
+        self.assertEqual(stage1["active_protocol_count"], 1844)
         self.assertEqual(stage1["active_positive_torque_count"], 1821)
+        self.assertEqual(stage1["active_negative_count"], 23)
+        self.assertEqual(stage1["passive_torque_zero_count"], 1382)
         self.assertEqual(stage1["active_negative_sensor_drift_count"], 23)
         self.assertTrue(stage1["sum_check_exact_match"])
+        self.assertTrue(stage1["protocol_partition_exact"])
         self.assertTrue(stage1["all_channels_clean"])
-        # Check negative sensor drift details
-        neg = stage1["negative_sensor_drift_details"]
-        self.assertLess(neg["max_nm"], 0.0)
-        self.assertGreater(neg["min_nm"], -0.05)
+        self.assertIn("fraction of MVC", stage1["torque_units"])
+
+        # Check negative offset details
+        neg = stage1["negative_values_details"]
+        self.assertLess(neg["max_fraction_mvc"], 0.0)
+        self.assertGreater(neg["min_fraction_mvc"], -0.05)
+        self.assertEqual(neg["count"], 23)
 
     def test_stage2_cross_validation_scheme_separation(self):
         """Verify strict separation of INTRA_SUBJECT_CV, BLOCKED_TEMPORAL_CV, LOSO, PRECOMPUTED, RETRAINING."""
@@ -363,13 +370,19 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         self.assertAlmostEqual(m3_r2, 0.3103, delta=0.005)
         self.assertAlmostEqual(m4_r2, 0.3251, delta=0.005)
 
-        # M4 vs M3 advantage is statistically insignificant
+        # M4 vs M3 advantage is statistically insignificant and does NOT prove equivalence
         self.assertFalse(stats_comp["m4_vs_m3_hill"]["statistically_significant_at_alpha_005"])
+        self.assertFalse(stats_comp["m4_vs_m3_hill"]["does_p_prove_equivalence"])
         self.assertGreater(stats_comp["m4_vs_m3_hill"]["paired_t_pvalue"], 0.05)
 
-        # M4 underperforms M1 sEMG
-        self.assertTrue(stats_comp["m4_vs_m1_semg"]["m4_inferior_to_m1"])
-        self.assertLess(m4_r2, m1_r2)
+        # M4 vs M1 sEMG: point estimate favors M1, but difference is NOT statistically significant at alpha=0.05
+        self.assertFalse(stats_comp["m4_vs_m1_semg"]["statistically_significant_at_alpha_005"])
+        self.assertAlmostEqual(stats_comp["m4_vs_m1_semg"]["paired_t_pvalue"], 0.0571, delta=0.005)
+        self.assertAlmostEqual(stats_comp["m4_vs_m1_semg"]["wilcoxon_pvalue"], 0.0625, delta=0.005)
+        self.assertLess(stats_comp["m4_vs_m1_semg"]["delta_r2_ci95"][0], 0.0)
+        self.assertGreater(stats_comp["m4_vs_m1_semg"]["delta_r2_ci95"][1], 0.0)
+        self.assertEqual(stats_comp["m4_vs_m1_semg"]["model_scope_designation"], "ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE")
+        self.assertEqual(stats_comp["m4_vs_m1_semg"]["multiscale_architecture_status"], "FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST")
 
         # On active-only points (torque > 0), both M1 and M4 collapse below zero
         act_dset = dyn["stage4_dataset_evaluations"]["active_only_conditions"]
@@ -394,9 +407,10 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
 
         neg39 = neg_ids["NEG-0039"]
         self.assertIn("UWB radar", neg39["hypothesis"])
-        self.assertIn("Architecture M4", neg39["hypothesis"])
+        self.assertIn("M4", neg39["hypothesis"])
         self.assertIn("-2.4457", neg39["result"])
-        self.assertIn("M4 Falsification", neg39["result"])
+        self.assertIn("ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE", neg39["result"])
+        self.assertIn("FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST", neg39["result"])
 
 
 if __name__ == "__main__":

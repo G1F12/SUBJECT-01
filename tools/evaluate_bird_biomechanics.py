@@ -353,10 +353,14 @@ def evaluate_dynamic_contraction_mechanics() -> Dict[str, Any]:
                 "status": "EXECUTED_LOSO_ON_RAW_OBSERVATIONS",
                 "details": (
                     "Cross-subject Leave-One-Subject-Out (LOSO) cross-validation executed across N=6 participants. "
-                    "Confirms UWB radar generalization collapse (R2 = -2.4457 +/- 2.2077, NRMSE = 47.25%, NEG-0039), "
+                    "Confirms uncalibrated UWB Ridge radar generalization collapse (R2 = -2.4457 +/- 2.2077, NRMSE = 47.25%, NEG-0039), "
                     "while M1 sEMG generalizes with R2 = 0.4628 +/- 0.0651, M3 Hill achieves R2 = 0.3103, "
-                    "and M4 SUBJECT-01 achieves R2 = 0.3251. M4 underperforms M1 sEMG baseline and provides no "
-                    "statistically significant benefit over Hill model M3 (p = 0.3294)."
+                    "and engineered feature M4 achieves R2 = 0.3251. The observed sample point-estimate favors M1 over M4 "
+                    "(Delta R2 = -0.1377), but this difference is NOT statistically significant at alpha=0.05 (paired t = -2.462, "
+                    "p = 0.0571; Wilcoxon p = 0.0625; 95% CI [-0.2814, +0.0061] spans zero) due to limited power (N=6). "
+                    "M4 provides no statistically significant benefit over Hill model M3 (p = 0.3294, which does not prove equivalence). "
+                    "Designated ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE, while FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST "
+                    "is preserved."
                 ),
             },
         }
