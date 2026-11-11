@@ -19,6 +19,7 @@ All files in the Dryad repository `10.5061/dryad.sbcc2frmh` have been indexed an
 
 | File / Artifact | Official Expected Size | Expected SHA-256 Digest | Status in Repository |
 | :--- | :---: | :--- | :---: |
+| `CODE_Generate_LSTM_Training_Data.zip` | 1,770,680,319 bytes | `9b28c56c1eead02a3997b0cc2951121c8ad8728f92b5a61d7d401f50eceec7e8` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `CODE_LME_Estimate_Torque.m` | 3,306 bytes | `f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `CODE_Train_LSTM_Models.py` | 7,184 bytes | `7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `DATA_Dynamic_Knee.mat` | 5,212,093 bytes | `7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
@@ -26,6 +27,10 @@ All files in the Dryad repository `10.5061/dryad.sbcc2frmh` have been indexed an
 | `DATA_Fatiguing_Isometric_Knee.xlsx` | 681,704,952 bytes | `08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `DATA_Isometric_Ankle.xlsx` | 14,591 bytes | `30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `DATA_Isometric_Knee.xlsx` | 19,879 bytes | `1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `LME_Data_Outputs.mat` | 40,628 bytes | `f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `LME_Trained_Models.mat` | 28,145,117 bytes | `6f729e8b00b862d58eef866ca383eebf069b7ecd9d392094cf0019ad2cba4476` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `LSTM_Data_Outputs.zip` | 8,939,260 bytes | `863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `LSTM_Trained_Models.zip` | 101,796,528 bytes | `9cf8f31433e0938a3fa64cad86b3083560b39cdfc609a186c23f11e3930f845f` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `README.md` | 14,751 bytes | `5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `arxiv_2510_20866.pdf` | 5,494,859 bytes | `eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c` | `ACQUIRED_AND_VERIFIED` |
 

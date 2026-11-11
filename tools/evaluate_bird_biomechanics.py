@@ -30,17 +30,17 @@ RESULTS_JSON = CYCLE12_DIR / "biomechanics_validation_results.json"
 REPORT_MD = CYCLE12_DIR / "BIOMECHANICAL_VALIDATION_REPORT.md"
 
 OFFICIAL_DRYAD_FILE_DIGESTS = {
-    "README.md": {
-        "size_bytes": 14751,
-        "sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b",
+    "CODE_Generate_LSTM_Training_Data.zip": {
+        "size_bytes": 1770680319,
+        "sha256": "9b28c56c1eead02a3997b0cc2951121c8ad8728f92b5a61d7d401f50eceec7e8",
     },
-    "DATA_Isometric_Knee.xlsx": {
-        "size_bytes": 19879,
-        "sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
+    "CODE_LME_Estimate_Torque.m": {
+        "size_bytes": 3306,
+        "sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8",
     },
-    "DATA_Isometric_Ankle.xlsx": {
-        "size_bytes": 14591,
-        "sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3",
+    "CODE_Train_LSTM_Models.py": {
+        "size_bytes": 7184,
+        "sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e",
     },
     "DATA_Dynamic_Knee.mat": {
         "size_bytes": 5212093,
@@ -54,13 +54,33 @@ OFFICIAL_DRYAD_FILE_DIGESTS = {
         "size_bytes": 681704952,
         "sha256": "08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25",
     },
-    "CODE_LME_Estimate_Torque.m": {
-        "size_bytes": 3306,
-        "sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8",
+    "DATA_Isometric_Ankle.xlsx": {
+        "size_bytes": 14591,
+        "sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3",
     },
-    "CODE_Train_LSTM_Models.py": {
-        "size_bytes": 7184,
-        "sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e",
+    "DATA_Isometric_Knee.xlsx": {
+        "size_bytes": 19879,
+        "sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
+    },
+    "LME_Data_Outputs.mat": {
+        "size_bytes": 40628,
+        "sha256": "f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7",
+    },
+    "LME_Trained_Models.mat": {
+        "size_bytes": 28145117,
+        "sha256": "6f729e8b00b862d58eef866ca383eebf069b7ecd9d392094cf0019ad2cba4476",
+    },
+    "LSTM_Data_Outputs.zip": {
+        "size_bytes": 8939260,
+        "sha256": "863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0",
+    },
+    "LSTM_Trained_Models.zip": {
+        "size_bytes": 101796528,
+        "sha256": "9cf8f31433e0938a3fa64cad86b3083560b39cdfc609a186c23f11e3930f845f",
+    },
+    "README.md": {
+        "size_bytes": 14751,
+        "sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b",
     },
     "arxiv_2510_20866.pdf": {
         "size_bytes": 5494859,

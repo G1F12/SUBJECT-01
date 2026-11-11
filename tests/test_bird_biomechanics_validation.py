@@ -48,6 +48,32 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
             files_audit["DATA_Isometric_Knee.xlsx"]["expected_sha256"],
             "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
         )
+        # Verify LSTM_Data_Outputs.zip has actual 64-char SHA256 (not byte size!)
+        self.assertEqual(
+            files_audit["LSTM_Data_Outputs.zip"]["expected_sha256"],
+            "863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0",
+        )
+        # Verify LME_Data_Outputs.mat has distinct official SHA256 from CODE_LME_Estimate_Torque.m
+        self.assertEqual(
+            files_audit["LME_Data_Outputs.mat"]["expected_sha256"],
+            "f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7",
+        )
+        self.assertEqual(
+            files_audit["CODE_LME_Estimate_Torque.m"]["expected_sha256"],
+            "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8",
+        )
+        self.assertNotEqual(
+            files_audit["LME_Data_Outputs.mat"]["expected_sha256"],
+            files_audit["CODE_LME_Estimate_Torque.m"]["expected_sha256"],
+        )
+        # Rule: No unacquired file shall be marked VERIFIED
+        for fname, fmeta in files_audit.items():
+            if fname != "arxiv_2510_20866.pdf":
+                self.assertEqual(
+                    fmeta["status"],
+                    "PENDING_OWNER_ASSISTED_ACQUISITION",
+                    f"Unacquired file {fname} must not be marked VERIFIED",
+                )
 
     def test_manuscript_sha256_and_unabridged_pdf(self):
         """Verify that acquired primary manuscript PDF matches verified SHA256 and size."""

@@ -24,20 +24,20 @@
     "license": "CC0-1.0 (Public Domain Dedication)",
     "provenance_standard": "Evidence Gate V2 Cryptographic Verification",
     "files_audit": {
-      "README.md": {
+      "CODE_Generate_LSTM_Training_Data.zip": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
-        "expected_size_bytes": 14751,
-        "expected_sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b"
+        "expected_size_bytes": 1770680319,
+        "expected_sha256": "9b28c56c1eead02a3997b0cc2951121c8ad8728f92b5a61d7d401f50eceec7e8"
       },
-      "DATA_Isometric_Knee.xlsx": {
+      "CODE_LME_Estimate_Torque.m": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
-        "expected_size_bytes": 19879,
-        "expected_sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f"
+        "expected_size_bytes": 3306,
+        "expected_sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8"
       },
-      "DATA_Isometric_Ankle.xlsx": {
+      "CODE_Train_LSTM_Models.py": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
-        "expected_size_bytes": 14591,
-        "expected_sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3"
+        "expected_size_bytes": 7184,
+        "expected_sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e"
       },
       "DATA_Dynamic_Knee.mat": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
@@ -54,15 +54,40 @@
         "expected_size_bytes": 681704952,
         "expected_sha256": "08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25"
       },
-      "CODE_LME_Estimate_Torque.m": {
+      "DATA_Isometric_Ankle.xlsx": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
-        "expected_size_bytes": 3306,
-        "expected_sha256": "f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8"
+        "expected_size_bytes": 14591,
+        "expected_sha256": "30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3"
       },
-      "CODE_Train_LSTM_Models.py": {
+      "DATA_Isometric_Knee.xlsx": {
         "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
-        "expected_size_bytes": 7184,
-        "expected_sha256": "7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e"
+        "expected_size_bytes": 19879,
+        "expected_sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f"
+      },
+      "LME_Data_Outputs.mat": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 40628,
+        "expected_sha256": "f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7"
+      },
+      "LME_Trained_Models.mat": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 28145117,
+        "expected_sha256": "6f729e8b00b862d58eef866ca383eebf069b7ecd9d392094cf0019ad2cba4476"
+      },
+      "LSTM_Data_Outputs.zip": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 8939260,
+        "expected_sha256": "863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0"
+      },
+      "LSTM_Trained_Models.zip": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 101796528,
+        "expected_sha256": "9cf8f31433e0938a3fa64cad86b3083560b39cdfc609a186c23f11e3930f845f"
+      },
+      "README.md": {
+        "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+        "expected_size_bytes": 14751,
+        "expected_sha256": "5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b"
       },
       "arxiv_2510_20866.pdf": {
         "status": "ACQUIRED_AND_VERIFIED",
