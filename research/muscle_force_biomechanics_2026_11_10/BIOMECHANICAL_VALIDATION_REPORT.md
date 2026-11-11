@@ -122,6 +122,35 @@ During active dynamic contractions, torque is decoupled from static proxies:
 - With $N=6$, M4 projected $R^2$ 95% Student-t confidence interval is $[0.68, 0.81]$.
 - **Negative Result (NEG-0038)**: Single-muscle vastus lateralis knee extension torque CANNOT be extrapolated to whole-body maximum strength or athletic capacity.
 
+### Empirical Raw Data Scientific Audit (Stages 1-4)
+1. **Raw Observation Discrepancy Resolved (Stage 1)**:
+   - Total dynamic observations: **3,226** rows across 6 human participants in `DATA_Dynamic_Knee.mat`.
+   - Passive joint motions (torque == 0.0 Nm): **1,382** observations.
+   - Active dynamic contractions (torque > 0.0 Nm): **1,821** observations.
+   - Active baseline negative sensor drift (torque < 0.0 Nm): **23** observations (small load cell baseline drift $[-0.0207, -0.00066]$ Nm near 84-90° knee angle in participants 1, 3, 4, 5).
+   - Exact sum: $1382 + 1821 + 23 = 3226$ (100% accounted for, zero missing observations, zero NaNs across all channels).
+   - Including passive points ($T=0$) artificially inflates apparent linear fit by providing an origin anchor (M1 sEMG $R^2 = 0.463$, M4 $R^2 = 0.325$). On strictly active dynamic contractions ($N=1821$), all uncalibrated cross-subject models collapse below zero (M1 $R^2 = -0.088$, M3 $R^2 = -0.162$, M4 $R^2 = -0.141$, UWB Radar $R^2 = -6.663$).
+
+2. **Cross-Validation Schemes & Leakage Controls (Stage 2)**:
+   - `INTRA_SUBJECT_CV`: 5-fold cross-validation with interleaved 1-in-5 data points within participant time series (author method; severe temporal autocorrelation leakage between adjacent points at $\pm 100$ ms).
+   - `BLOCKED_TEMPORAL_CV`: Holding out contiguous temporal multi-second blocks to control autocorrelation.
+   - `LEAVE_ONE_SUBJECT_OUT`: True population generalization holding out an entire participant ($N=6$).
+   - `AUTHOR_REPORTED_PRECOMPUTED_OUTPUTS`: Independently reproduced from `.mat`/`.zip` arrays (LME $R^2 = 0.9844 \pm 0.0046$, LSTM $R^2 = 0.9882 \pm 0.0059$).
+   - `FULL_MODEL_RETRAINING`: Guaranteed strict inner-fold feature scaling, normalization, and fitting with zero leakage from held-out subjects.
+
+3. **UWB Radar Cross-Subject Generalization Collapse (Stage 3, NEG-0039)**:
+   - While UWB Ridge achieves near-perfect intra-subject accuracy ($R^2 = 0.9763 \pm 0.0097$, NRMSE = 4.19%), it collapses under cross-subject LOSO to $R^2 = -2.4457 \pm 2.2077$ (NRMSE = 47.25%).
+   - All 6 fold $R^2$: P1: -3.0565, P2: +0.1702, P3: -5.8375, P4: -2.3939, P5: -3.3205, P6: -0.2361.
+   - Sensitivity analysis confirms collapse across 15 distinct configurations: Ridge $\alpha \in [10^-3, 10^3]$ (best $\alpha=1000$ $R^2 = -0.4599$), inner-fold StandardScaler ($R^2 = -2.7490$), RobustScaler ($R^2 = -5.2989$), S11-only ($R^2 = -0.8431$), S21-only ($R^2 = -9.5060$), Magnitude-only ($R^2 = -0.7495$), Phase-only ($R^2 = -2.5501$), and Active-only ($R^2 = -6.6627$).
+
+4. **SUBJECT-01 M4 Biomechanical Falsification (Stage 4, NEG-0039)**:
+   - M1 sEMG baseline achieves LOSO $R^2 = 0.4628 \pm 0.0651$ (NRMSE = 19.50%).
+   - M3 Hill dynamic model achieves LOSO $R^2 = 0.3103 \pm 0.0819$ (NRMSE = 22.19%).
+   - M4 Multiscale architecture achieves LOSO $R^2 = 0.3251 \pm 0.0946$ (NRMSE = 21.93%).
+   - Statistical testing: M4 vs M3 $\Delta R^2 = +0.0148$ is statistically insignificant (paired $t = 1.080, p = 0.3294$; Wilcoxon $p = 0.3125$).
+   - M4 is **substantially inferior to simple sEMG baseline M1** ($\Delta R^2 = -0.1377$, paired $t = -2.462, p = 0.0571$).
+   - Mechanistic explanation: Single-plane ultrasound tracks only vastus lateralis, failing to represent 4-head quadriceps moment arm variability, bi-articular rectus femoris action, and antagonist hamstring co-contraction. Adding uncalibrated geometric terms amplifies measurement noise over direct surface EMG neural drive. M4 superiority is falsified on uncalibrated human data.
+
 ---
 
 ## 5. Neuromuscular Fatigue & Functional Loss (Stage 4)
@@ -189,6 +218,15 @@ To prevent unmeasured literature constants or theoretical assumptions from being
 
 ## 8. Conclusions & Next Scientific Steps (Stage 7)
 
+### Answers to the Three Final Scientific Audit Questions:
+1. **Is the UWB Ridge collapse confirmed?**
+   **YES**. Under cross-subject Leave-One-Subject-Out (LOSO) cross-validation across the 6 participants, UWB Ridge regression collapses to $R^2 = -2.4457 \pm 2.2077$ (NRMSE = 47.25%), failing on 5 of 6 held-out human participants. Comprehensive sensitivity testing across 15 configurations (regularization sweep $\alpha \in [10^-3, 10^3]$, inner-fold StandardScaler, RobustScaler, S11/S21/magnitude/phase sub-bands, and active-only conditions) confirms that mean $R^2$ remains negative across all configurations (`NEG-0039`). Raw UWB radar cannot predict joint torque on unseen human subjects without subject-specific calibration.
+2. **Is $R^2 = 0.3251$ for SUBJECT-01 M4 confirmed?**
+   **YES**. On all 3,226 raw dynamic observations (including passive points), M4 achieves cross-subject LOSO $R^2 = 0.3251 \pm 0.0946$ (NRMSE = 21.93%). However, on strictly active dynamic contractions ($N=1,821$, excluding passive 0-torque points), M4 drops to $R^2 = -0.1411 \pm 0.2387$.
+3. **Does M4 have an advantage over M1 (sEMG) or M3 (Hill)?**
+   **NO**. M4 yields only an insignificant $+0.0148$ $\Delta R^2$ over standard Hill model M3 ($p = 0.3294$, Wilcoxon $p = 0.3125$). Crucially, M4 is **substantially inferior to simple linear sEMG baseline M1** ($R^2 = 0.4628 \pm 0.0651$, $\Delta R^2 = -0.1377$, $p = 0.0571$). Incorporating single-muscle ultrasound fascicle tracking adds geometric measurement noise without capturing net 4-head quadriceps moment arm variability or load sharing, falsifying M4 superiority over surface EMG on uncalibrated cross-subject predictions (`NEG-0039`).
+
+### Final Scientific Invariants
 1. **New Ground Truth Acquired**: Bird et al. (2026) manuscript confirms simultaneous joint torque, sEMG, ultrasound fascicle geometry, and neuromuscular fatigue in healthy human adults.
 2. **Decoupling Demonstrated**: Dynamic movement decouples torque from sEMG ($R^2=0.13$) and fascicle length ($R^2=0.01$), falsifying naive static models.
 3. **Four-Tier Taxonomy Established**: Author-reported radar models ($R^2 \approx 0.984\dots 0.988$) are strictly separated from SUBJECT-01 theoretical ODE simulation baselines.

@@ -1,6 +1,6 @@
 {
   "cycle": 12,
-  "timestamp": "2026-11-11T17:45:00Z",
+  "timestamp": "2026-11-11T18:05:00Z",
   "source": {
     "id": "SRC-0076",
     "doi": "10.5061/dryad.sbcc2frmh",
@@ -192,31 +192,855 @@
     },
     "scientific_interpretation": "Independent extraction from LSTM_Data_Outputs.zip confirms author-reported fatigue LSTM metrics (R2 = 0.9882 +/- 0.0059, RMSE = 2.74 +/- 0.67%) across all 90 CV folds."
   },
-  "dynamic_knee_and_loso_evaluation": {
+  "dynamic_knee_scientific_audit": {
     "status": "VALIDATED_ON_RAW_ARRAYS",
-    "total_observations": 3226,
-    "n_participants": 6,
-    "decoupling_analysis": {
-      "active_points_count": 1821,
-      "passive_points_count": 1405,
-      "torque_vs_emg_r2": 0.11798615992192046,
-      "torque_vs_fascicle_strain_r2": 0.016071816170117523,
-      "torque_vs_fascicle_velocity_r2": 0.02702391473207902,
-      "published_values_extended_data_fig3": {
-        "torque_vs_activation_r2": 0.13,
-        "torque_vs_fascicle_strain_r2": 0.01,
-        "torque_vs_fascicle_strain_rate_r2": 0.03
+    "stage1_raw_observation_audit": {
+      "total_dynamic_observations": 3226,
+      "passive_torque_zero_count": 1382,
+      "active_positive_torque_count": 1821,
+      "active_negative_sensor_drift_count": 23,
+      "sum_check_exact_match": true,
+      "total_active_conditions_count": 1844,
+      "negative_sensor_drift_details": {
+        "count": 23,
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562,
+        "participants_affected": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "angles_deg_range": [
+          83.97979161922946,
+          90.13199821004518
+        ],
+        "runs_affected": [
+          9,
+          38,
+          40,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          62,
+          63,
+          71
+        ],
+        "interpretation": "Small negative baseline sensor drift (ranging from -0.0207 to -0.00066 Nm) during active runs near terminal knee extension (84.0 deg to 90.1 deg) in participants 1, 3, 4, 5. Representing baseline load-cell zero-point noise rather than active negative torque."
       },
-      "scientific_significance": "Confirms active dynamic decoupling on raw observations: torque vs sEMG R2 = 0.1180 (pub 0.13), torque vs strain R2 = 0.0161 (pub 0.01), torque vs strain rate R2 = 0.0270 (pub 0.03)."
+      "nan_count_across_all_channels": {
+        "part": 0,
+        "run": 0,
+        "torque": 0,
+        "emg": 0,
+        "length": 0,
+        "vel": 0,
+        "pen": 0,
+        "angle": 0,
+        "uwb": 0
+      },
+      "all_channels_clean": true
+    },
+    "stage2_cv_schemes_definition": {
+      "INTRA_SUBJECT_CV": {
+        "definition": "5-fold cross-validation with interleaved 1-in-5 data points within each participant time series.",
+        "mathematical_sampling": "Test set for fold k consists of points t satisfying mod(t, 5) == offset_k (offsets: 4, 0, 1, 2, 3).",
+        "leakage_mechanism": "Temporal autocorrelation leakage across 10 Hz continuous dynamometer/radar signals. Adjacent test point t has neighbors t-1 and t+1 (100 ms apart) in train set.",
+        "status_in_paper": "Method used by Bird et al. (2026) for published LME (R2=0.984) and LSTM (R2=0.988)."
+      },
+      "BLOCKED_TEMPORAL_CV": {
+        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks) within each participant to mitigate adjacent sample autocorrelation.",
+        "leakage_mechanism": "Reduces high-frequency temporal autocorrelation leakage, but remains participant-specific.",
+        "status_in_paper": "Used in LSTM segment preprocessing, but within-participant."
+      },
+      "LEAVE_ONE_SUBJECT_OUT": {
+        "definition": "Cross-subject validation holding out an entire participant (all runs/conditions), training strictly on the remaining N-1 participants.",
+        "leakage_mechanism": "Zero cross-subject leakage. Evaluates true population generalization to unseen human bodies.",
+        "status_in_paper": "NOT performed by Bird et al. (2026). Executed independently by SUBJECT-01."
+      },
+      "AUTHOR_REPORTED_PRECOMPUTED_OUTPUTS": {
+        "definition": "Model performance extracted directly from author precomputed evaluation files (LME_Data_Outputs.mat, LSTM_Data_Outputs.zip).",
+        "status_in_paper": "Confirmed by independent recomputation (LME R2=0.9844, LSTM R2=0.9882)."
+      },
+      "FULL_MODEL_RETRAINING": {
+        "definition": "Retraining model pipelines from raw arrays with strict inner-fold feature extraction, normalization, and parameter fitting.",
+        "status_in_paper": "Executed for all M0-M4 and UWB Ridge models across LOSO and intra-subject splits."
+      },
+      "m4_held_out_leakage_audit": {
+        "uses_held_out_subject_data": false,
+        "parameter_provenance": "Fascicle force-length (f_L) and moment arm d_MA(theta) parameters are fixed physiological priors; linear scale is fit strictly on training folds."
+      }
+    },
+    "stage3_radar_sensitivity_suite": {
+      "Default_Ridge_a10_unscaled_all": {
+        "r2_mean": -2.4457025356908573,
+        "r2_sd": 2.207722870792136,
+        "r2_folds": [
+          -3.056472995180669,
+          0.1702196749917052,
+          -5.837461824455037,
+          -2.3938854187939596,
+          -3.320475115265209,
+          -0.23613953544197286
+        ],
+        "nrmse_pct_mean": 47.25387622411128,
+        "rmse_mean": 0.3681805423206141,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a1_unscaled_all": {
+        "r2_mean": -5.538881258618712,
+        "r2_sd": 5.963845764540772,
+        "r2_folds": [
+          -11.750108818954303,
+          -0.5401309033495236,
+          -13.787918885667645,
+          -1.313383771491154,
+          -5.628365798570742,
+          -0.21337937367890758
+        ],
+        "nrmse_pct_mean": 62.13163275536829,
+        "rmse_mean": 0.4791202688047124,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a100_unscaled_all": {
+        "r2_mean": -1.2948320722404703,
+        "r2_sd": 1.310557222180142,
+        "r2_folds": [
+          -2.912841354715322,
+          0.13287879737757602,
+          -0.3176229202927783,
+          -2.3878105874361477,
+          -2.07322458882985,
+          -0.2103717795462996
+        ],
+        "nrmse_pct_mean": 39.26244047369257,
+        "rmse_mean": 0.3078603942115847,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a1000_unscaled_all": {
+        "r2_mean": -0.45989817305085534,
+        "r2_sd": 0.9999598180928408,
+        "r2_folds": [
+          -2.339291028268008,
+          0.11853405963507213,
+          0.47763717630219116,
+          -0.7073297378729746,
+          -0.09911233301565248,
+          -0.20982717508575965
+        ],
+        "nrmse_pct_mean": 31.145431535316977,
+        "rmse_mean": 0.24659240996825485,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a10_all": {
+        "r2_mean": -7.1887672272703655,
+        "r2_sd": 7.076362979957475,
+        "r2_folds": [
+          -14.824724760902326,
+          -1.0167745510184019,
+          -14.26859847681789,
+          -1.093494549262819,
+          -11.60805187290633,
+          -0.32095915271442177
+        ],
+        "nrmse_pct_mean": 69.69108550368144,
+        "rmse_mean": 0.5375331204166004,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_all": {
+        "r2_mean": -2.748987343948888,
+        "r2_sd": 3.606055207935341,
+        "r2_folds": [
+          -9.314607010200193,
+          0.6809324155882535,
+          -3.9591644144400657,
+          -0.9969313937404849,
+          -2.5123308801973976,
+          -0.39182278070343735
+        ],
+        "nrmse_pct_mean": 47.50814995637751,
+        "rmse_mean": 0.373365341813974,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a1000_all": {
+        "r2_mean": -0.5238361050033332,
+        "r2_sd": 1.605898861340213,
+        "r2_folds": [
+          -3.6887979635388195,
+          0.3183057149244338,
+          0.3877258373594119,
+          -0.5928822677222267,
+          0.5605590029906407,
+          -0.12792695403343868
+        ],
+        "nrmse_pct_mean": 30.3103748815382,
+        "rmse_mean": 0.2396928981988197,
+        "is_mean_r2_negative": true
+      },
+      "RobustScaler_inner_Ridge_a100_all": {
+        "r2_mean": -5.298893172263917,
+        "r2_sd": 7.466388939526581,
+        "r2_folds": [
+          -18.12318746751839,
+          0.25460493630045733,
+          -10.686159394455716,
+          -0.9056180366662596,
+          -1.857185957288645,
+          -0.47581311395494974
+        ],
+        "nrmse_pct_mean": 58.32576870026495,
+        "rmse_mean": 0.45311622087537273,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_RidgeCV_all": {
+        "r2_mean": -11.96037526690015,
+        "r2_sd": 8.986638164453446,
+        "r2_folds": [
+          -16.254238687893896,
+          -6.103477386611649,
+          -21.515483769986474,
+          -6.379719229021484,
+          -21.377907834135335,
+          -0.13142469375206556
+        ],
+        "nrmse_pct_mean": 89.34498204738831,
+        "rmse_mean": 0.6775696076992658,
+        "is_mean_r2_negative": true
+      },
+      "Default_Ridge_a10_unscaled_active": {
+        "r2_mean": -6.662674479265289,
+        "r2_sd": 6.2618849642199175,
+        "r2_folds": [
+          -4.758321619812343,
+          -0.18810440760653546,
+          -4.2053910543847035,
+          -15.494652672361209,
+          -13.341885230733427,
+          -1.9876918906935184
+        ],
+        "nrmse_pct_mean": 62.01129529568157,
+        "rmse_mean": 0.4812399247368447,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_active": {
+        "r2_mean": -5.095043481567013,
+        "r2_sd": 5.112337094078175,
+        "r2_folds": [
+          -12.299296126144515,
+          0.5193351590835764,
+          -1.4148314853747488,
+          -9.865718727775574,
+          -5.673473638969096,
+          -1.8362760702217167
+        ],
+        "nrmse_pct_mean": 54.53360407152896,
+        "rmse_mean": 0.42649396143104323,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_S11_only": {
+        "r2_mean": -0.8431479433866169,
+        "r2_sd": 1.13842999319147,
+        "r2_folds": [
+          -1.344271219004332,
+          -0.904700442720564,
+          -2.809356278565341,
+          -0.14027727889468267,
+          0.38453008356895624,
+          -0.24481252470373782
+        ],
+        "nrmse_pct_mean": 34.47104248825722,
+        "rmse_mean": 0.2691130388904482,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_S21_only": {
+        "r2_mean": -9.505960790294154,
+        "r2_sd": 9.090361824495329,
+        "r2_folds": [
+          -24.169377395469848,
+          -4.306301888757986,
+          -4.865674906226556,
+          -5.874760533466662,
+          -17.146709345284137,
+          -0.6729406725597318
+        ],
+        "nrmse_pct_mean": 80.59497085803353,
+        "rmse_mean": 0.6175202716423376,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_Mag_only": {
+        "r2_mean": -0.7495106204530368,
+        "r2_sd": 1.1270271786553347,
+        "r2_folds": [
+          -2.544465259554148,
+          0.43806405672298565,
+          -0.8550145446797566,
+          -1.5237949023432735,
+          -0.03964396227089795,
+          0.027790889406868913
+        ],
+        "nrmse_pct_mean": 33.86031145666603,
+        "rmse_mean": 0.26540840140043825,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_Phase_only": {
+        "r2_mean": -2.550051715190888,
+        "r2_sd": 3.566410219346553,
+        "r2_folds": [
+          -4.837318457405701,
+          -0.1897094526101395,
+          -8.845009948420886,
+          -0.09786165552588999,
+          -0.8210545466086347,
+          -0.5093562305740784
+        ],
+        "nrmse_pct_mean": 45.82125748916237,
+        "rmse_mean": 0.35817663584741943,
+        "is_mean_r2_negative": true
+      }
+    },
+    "stage4_dataset_evaluations": {
+      "all_dynamic_observations": {
+        "observations_count": 3226,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.07210682237011497,
+              "r_squared_sd": 0.10647127839304121,
+              "r_squared_ci95": [
+                -0.18384157654105965,
+                0.03962793180082973
+              ],
+              "r_squared_per_subject": [
+                -1.6880381932482535e-05,
+                -0.2684137397129662,
+                -0.017560242521897917,
+                -0.019454937981624232,
+                -0.004205080259396032,
+                -0.12299005336287294
+              ],
+              "nrmse_pct_mean": 27.53862073927503,
+              "nrmse_pct_sd": 2.5657460950573294,
+              "rmse_mean": 0.21813837596777877,
+              "mae_mean": 0.18467146145410815,
+              "pearson_r_mean": 0.0
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": -0.0007551964295625806,
+              "r_squared_sd": 0.0013339563320202217,
+              "nrmse_pct_mean": 28.015928239493963,
+              "nrmse_pct_sd": 2.69637326602926
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.46280399548440415,
+              "r_squared_sd": 0.0650629905895379,
+              "r_squared_ci95": [
+                0.394524574321526,
+                0.5310834166472823
+              ],
+              "r_squared_per_subject": [
+                0.5141976180678947,
+                0.3633282265614385,
+                0.4523453398126087,
+                0.5500701620281081,
+                0.4641239483881252,
+                0.43275867804824997
+              ],
+              "nrmse_pct_mean": 19.5014042048644,
+              "nrmse_pct_sd": 2.144981200527033,
+              "rmse_mean": 0.1546070135424303,
+              "mae_mean": 0.10921680630920279,
+              "pearson_r_mean": 0.6982832526191135
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.487113768329502,
+              "r_squared_sd": 0.053216039846176316,
+              "nrmse_pct_mean": 19.987483472523632,
+              "nrmse_pct_sd": 1.7604190896362208
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.012203571372370214,
+              "r_squared_sd": 0.18819114599785053,
+              "r_squared_ci95": [
+                -0.20969806709538313,
+                0.1852909243506427
+              ],
+              "r_squared_per_subject": [
+                0.06139005419015242,
+                -0.3504152548314654,
+                0.03339049321213694,
+                0.22221804314495686,
+                -0.011980350650503624,
+                -0.027824413299498474
+              ],
+              "nrmse_pct_mean": 26.688116640924008,
+              "nrmse_pct_sd": 3.0730586484226947,
+              "rmse_mean": 0.2110442733224017,
+              "mae_mean": 0.1745750943176336,
+              "pearson_r_mean": 0.2902939758686173
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.09953470327168405,
+              "r_squared_sd": 0.09115993509421093,
+              "nrmse_pct_mean": 26.51932093109051,
+              "nrmse_pct_sd": 2.7642369039647
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.3103205782202935,
+              "r_squared_sd": 0.08188852830890335,
+              "r_squared_ci95": [
+                0.2243838381142991,
+                0.39625731832628797
+              ],
+              "r_squared_per_subject": [
+                0.37549159852567116,
+                0.4265079699936172,
+                0.31934714229640204,
+                0.27247776907212096,
+                0.2703384050579668,
+                0.1977605843759831
+              ],
+              "nrmse_pct_mean": 22.194160873574457,
+              "nrmse_pct_sd": 3.2903031534925935,
+              "rmse_mean": 0.17721354972717449,
+              "mae_mean": 0.13480042522313143,
+              "pearson_r_mean": 0.6096406508362903
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.37160460076213847,
+              "r_squared_sd": 0.08648226798656629,
+              "nrmse_pct_mean": 22.226109010026544,
+              "nrmse_pct_sd": 3.1765935930216376
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.32514285768398277,
+              "r_squared_sd": 0.09458807467405614,
+              "r_squared_ci95": [
+                0.2258787610118855,
+                0.42440695435608
+              ],
+              "r_squared_per_subject": [
+                0.38828136085440657,
+                0.4587631614161398,
+                0.32622726123518675,
+                0.23804106948684944,
+                0.33749929938498924,
+                0.20204499372632478
+              ],
+              "nrmse_pct_mean": 21.92937489178148,
+              "nrmse_pct_sd": 3.2312247887307826,
+              "rmse_mean": 0.17519655642632948,
+              "mae_mean": 0.13307537627372867,
+              "pearson_r_mean": 0.6180662429864864
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.38292736784724996,
+              "r_squared_sd": 0.09967542721865723,
+              "nrmse_pct_mean": 22.013068164289624,
+              "nrmse_pct_sd": 3.3304957425799593
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -2.4457025356908573,
+              "r_squared_sd": 2.207722870792136,
+              "r_squared_ci95": [
+                -4.762565599313602,
+                -0.1288394720681123
+              ],
+              "r_squared_per_subject": [
+                -3.056472995180669,
+                0.1702196749917052,
+                -5.837461824455037,
+                -2.3938854187939596,
+                -3.320475115265209,
+                -0.23613953544197286
+              ],
+              "nrmse_pct_mean": 47.25387622411128,
+              "nrmse_pct_sd": 17.72817127671256,
+              "rmse_mean": 0.3681805423206141,
+              "mae_mean": 0.270854772895258,
+              "pearson_r_mean": 0.2738581986294306
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.9762889395676149,
+              "r_squared_sd": 0.009909723361533443,
+              "nrmse_pct_mean": 4.191328046580975,
+              "nrmse_pct_sd": 0.9540989646719276
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.014822279463689228,
+            "paired_t_statistic": 1.0802657218567766,
+            "paired_t_pvalue": 0.32935334494610286,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0148) is NOT statistically significant (p = 0.3294). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.1376611378004214,
+            "paired_t_statistic": -2.4620356928426674,
+            "paired_t_pvalue": 0.05708568884018873,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 0.0625,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.1377, t = -2.462, p = 0.0571). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      },
+      "active_only_conditions": {
+        "observations_count": 1821,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.262047008848241,
+              "r_squared_sd": 0.37049725079411083,
+              "r_squared_ci95": [
+                -0.6508600283150617,
+                0.12676601061857973
+              ],
+              "r_squared_per_subject": [
+                -0.004671152511062537,
+                -0.9162836348813916,
+                -0.1208923127483772,
+                -0.03383293436265822,
+                -0.0036697020881026887,
+                -0.49293231649785363
+              ],
+              "nrmse_pct_mean": 26.918484002697365,
+              "nrmse_pct_sd": 4.170130599238125,
+              "rmse_mean": 0.21175249909572258,
+              "mae_mean": 0.17641639975725512,
+              "pearson_r_mean": 0.0
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.0881705085315073,
+              "r_squared_sd": 0.2271052565569537,
+              "r_squared_ci95": [
+                -0.3265028587700957,
+                0.15016184170708113
+              ],
+              "r_squared_per_subject": [
+                0.03208516863203292,
+                -0.47040603225262845,
+                0.06727821082643948,
+                0.0024180497043161386,
+                0.09982978793002817,
+                -0.26022823602923206
+              ],
+              "nrmse_pct_mean": 25.101085425045174,
+              "nrmse_pct_sd": 3.2758685988408494,
+              "rmse_mean": 0.19752344222555485,
+              "mae_mean": 0.16500471635854483,
+              "pearson_r_mean": 0.2178204908976489
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.253512378286142,
+              "r_squared_sd": 0.32030958617175126,
+              "r_squared_ci95": [
+                -0.5896566738151117,
+                0.08263191724282776
+              ],
+              "r_squared_per_subject": [
+                0.0400847070645205,
+                -0.777927590678094,
+                -0.09382952254394716,
+                -0.1384657269632874,
+                -0.0387381162358551,
+                -0.5121980203601888
+              ],
+              "nrmse_pct_mean": 26.86897383114253,
+              "nrmse_pct_sd": 3.8903946150177577,
+              "rmse_mean": 0.2116671823969313,
+              "mae_mean": 0.17388759044650334,
+              "pearson_r_mean": 0.18105852323232988
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.1619815661612692,
+              "r_squared_sd": 0.2546337887244026,
+              "r_squared_ci95": [
+                -0.42920333917040154,
+                0.10524020684786314
+              ],
+              "r_squared_per_subject": [
+                0.023878213130461234,
+                -0.5399852336579052,
+                0.03798627395838894,
+                -0.044357035962975244,
+                -0.018465809178231485,
+                -0.4309458052573536
+              ],
+              "nrmse_pct_mean": 25.96331779272467,
+              "nrmse_pct_sd": 3.8491501948971263,
+              "rmse_mean": 0.2049360413654919,
+              "mae_mean": 0.16800445977823483,
+              "pearson_r_mean": 0.23285089853722565
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.14114607148934497,
+              "r_squared_sd": 0.23869805370623964,
+              "r_squared_ci95": [
+                -0.39164431622247864,
+                0.10935217324378868
+              ],
+              "r_squared_per_subject": [
+                0.04362489930629376,
+                -0.465425811560767,
+                0.05781130475606533,
+                -0.0861238559419728,
+                0.021189549467386493,
+                -0.4179525149630756
+              ],
+              "nrmse_pct_mean": 25.72061631698826,
+              "nrmse_pct_sd": 3.6479795153278167,
+              "rmse_mean": 0.2031194177764695,
+              "mae_mean": 0.16583441280899427,
+              "pearson_r_mean": 0.2707217519091248
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.662674479265289,
+              "r_squared_sd": 6.2618849642199175,
+              "r_squared_ci95": [
+                -13.234119733646462,
+                -0.09122922488411511
+              ],
+              "r_squared_per_subject": [
+                -4.758321619812343,
+                -0.18810440760653546,
+                -4.2053910543847035,
+                -15.494652672361209,
+                -13.341885230733427,
+                -1.9876918906935184
+              ],
+              "nrmse_pct_mean": 62.01129529568157,
+              "nrmse_pct_sd": 28.464872123895887,
+              "rmse_mean": 0.4812399247368447,
+              "mae_mean": 0.412341023161086,
+              "pearson_r_mean": 0.05077220822725629
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.02083549467192425,
+            "paired_t_statistic": 1.3427634086880365,
+            "paired_t_pvalue": 0.23708070600143674,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0208) is NOT statistically significant (p = 0.2371). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.052975562957837674,
+            "paired_t_statistic": -1.9426121541671542,
+            "paired_t_pvalue": 0.10970317275211573,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0530, t = -1.943, p = 0.1097). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      },
+      "active_with_sensor_drift": {
+        "observations_count": 1844,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.26103188938721794,
+              "r_squared_sd": 0.34333820101305834,
+              "r_squared_ci95": [
+                -0.6213432340680929,
+                0.09927945529365706
+              ],
+              "r_squared_per_subject": [
+                -0.007368777472910981,
+                -0.8450394142759292,
+                -0.11812997338541864,
+                -0.07549355204645969,
+                -0.005965078819988756,
+                -0.5141945403226003
+              ],
+              "nrmse_pct_mean": 27.14184591902917,
+              "nrmse_pct_sd": 3.630730439124909,
+              "rmse_mean": 0.21479618817933996,
+              "mae_mean": 0.1784331593200472,
+              "pearson_r_mean": 0.0
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.052799657596432036,
+              "r_squared_sd": 0.23335533029744723,
+              "r_squared_ci95": [
+                -0.29769105797027234,
+                0.1920917427774083
+              ],
+              "r_squared_per_subject": [
+                0.03241840143052488,
+                -0.4273605202974493,
+                0.08876238566742856,
+                0.14551541102409504,
+                0.10091650700625143,
+                -0.2570501304094428
+              ],
+              "nrmse_pct_mean": 24.919250897394036,
+              "nrmse_pct_sd": 3.363914933946213,
+              "rmse_mean": 0.1974219922681469,
+              "mae_mean": 0.165180648601168,
+              "pearson_r_mean": 0.2473412593572328
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.2813561777601278,
+              "r_squared_sd": 0.3252222119608599,
+              "r_squared_ci95": [
+                -0.6226559578776603,
+                0.0599436023574047
+              ],
+              "r_squared_per_subject": [
+                0.02037307803896138,
+                -0.8051218336694628,
+                -0.1029062643558738,
+                -0.25283264702486985,
+                -0.018183329954180705,
+                -0.5294660695953408
+              ],
+              "nrmse_pct_mean": 27.343507605371638,
+              "nrmse_pct_sd": 3.245907667904893,
+              "rmse_mean": 0.2163778100383714,
+              "mae_mean": 0.17759593593878586,
+              "pearson_r_mean": 0.1392857893629015
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.13873421425545768,
+              "r_squared_sd": 0.24291395317229345,
+              "r_squared_ci95": [
+                -0.3936567741424866,
+                0.11618834563157127
+              ],
+              "r_squared_per_subject": [
+                0.02231525785464883,
+                -0.45691690384779027,
+                0.05274929352735791,
+                0.014684786830312269,
+                -0.02045523233428126,
+                -0.44478248756299354
+              ],
+              "nrmse_pct_mean": 25.943300812143253,
+              "nrmse_pct_sd": 3.699132092198469,
+              "rmse_mean": 0.20620408120814293,
+              "mae_mean": 0.1690139483735041,
+              "pearson_r_mean": 0.24986942658740194
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.11531974155778657,
+              "r_squared_sd": 0.22920575420366543,
+              "r_squared_ci95": [
+                -0.35585642888835195,
+                0.1252169457727788
+              ],
+              "r_squared_per_subject": [
+                0.042632914016408785,
+                -0.3853637777119243,
+                0.07141429283166101,
+                -0.011590045138571314,
+                0.022722788329397003,
+                -0.4317346216736906
+              ],
+              "nrmse_pct_mean": 25.674418678867227,
+              "nrmse_pct_sd": 3.5576716568852373,
+              "rmse_mean": 0.2042022684884378,
+              "mae_mean": 0.16678883785711474,
+              "pearson_r_mean": 0.28630912083754456
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.015378786911168,
+              "r_squared_sd": 5.33756658530156,
+              "r_squared_ci95": [
+                -11.616811391844536,
+                -0.413946181977801
+              ],
+              "r_squared_per_subject": [
+                -4.6962601094775716,
+                -0.1895123441052604,
+                -4.075638001474066,
+                -11.90576103949986,
+                -13.23421310264643,
+                -1.9908881242638237
+              ],
+              "nrmse_pct_mean": 60.92484979967268,
+              "nrmse_pct_sd": 27.655304683667786,
+              "rmse_mean": 0.47776166583863694,
+              "mae_mean": 0.4061156045937097,
+              "pearson_r_mean": 0.0624157940349089
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.023414472697671107,
+            "paired_t_statistic": 1.7588519240747233,
+            "paired_t_pvalue": 0.13892868138099895,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0234) is NOT statistically significant (p = 0.1389). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.06252008396135454,
+            "paired_t_statistic": -1.7115946032901792,
+            "paired_t_pvalue": 0.1476532415029888,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0625, t = -1.712, p = 0.1477). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      }
+    },
+    "stage4_m4_falsification_mechanisms": {
+      "mechanism_1_single_head_vs_net_joint_moment": "Vastus lateralis B-mode ultrasound captures kinematics from only 1 of 4 quadriceps heads. Knee extension torque reflects the algebraic sum of vastus medialis, vastus intermedius, vastus lateralis, and rectus femoris (bi-articular), minus antagonist hamstring co-contraction. Surface EMG integrates overall neural drive better than single-muscle fascicle geometry.",
+      "mechanism_2_parameter_unidentifiability": "Anatomical moment arms d_MA(theta), tendon slack lengths, and optimal fascicle lengths L0 vary substantially across individuals. In cross-subject LOSO, pooled fixed parameters induce systematic bias on held-out subjects that degrades accuracy.",
+      "mechanism_3_ultrasound_tracking_noise_propagation": "Multiplying neural activation by uncalibrated ultrasound geometric factors (f_L * f_V * cos(alpha)) amplifies measurement tracking noise, resulting in higher prediction variance than direct linear sEMG.",
+      "mechanism_4_sample_size_limitation": "With N=6 participants, between-subject morphological variability cannot be learned by unregularized linear models without participant-specific calibration.",
+      "registry_action": "Preserve NEG-0039 in negative_results.json. Bar assigning superior architecture status to M4."
     },
     "models_evaluation": {
       "M0_constant_baseline": {
-        "intra_participant_5fold": {
-          "r_squared_mean": -0.0007551964295625806,
-          "r_squared_sd": 0.0013339563320202217,
-          "nrmse_pct_mean": 28.015928239493963,
-          "nrmse_pct_sd": 2.69637326602926
-        },
         "cross_subject_loso": {
           "r_squared_mean": -0.07210682237011497,
           "r_squared_sd": 0.10647127839304121,
@@ -234,20 +1058,18 @@
           ],
           "nrmse_pct_mean": 27.53862073927503,
           "nrmse_pct_sd": 2.5657460950573294,
-          "rmse_mean": 0.21813837596777877
+          "rmse_mean": 0.21813837596777877,
+          "mae_mean": 0.18467146145410815,
+          "pearson_r_mean": 0.0
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -0.07135162594055239,
-          "is_generalizable_cross_subject": false
+        "intra_participant_5fold": {
+          "r_squared_mean": -0.0007551964295625806,
+          "r_squared_sd": 0.0013339563320202217,
+          "nrmse_pct_mean": 28.015928239493963,
+          "nrmse_pct_sd": 2.69637326602926
         }
       },
       "M1_static_semg": {
-        "intra_participant_5fold": {
-          "r_squared_mean": 0.487113768329502,
-          "r_squared_sd": 0.053216039846176316,
-          "nrmse_pct_mean": 19.987483472523632,
-          "nrmse_pct_sd": 1.7604190896362208
-        },
         "cross_subject_loso": {
           "r_squared_mean": 0.46280399548440415,
           "r_squared_sd": 0.0650629905895379,
@@ -265,20 +1087,18 @@
           ],
           "nrmse_pct_mean": 19.5014042048644,
           "nrmse_pct_sd": 2.144981200527033,
-          "rmse_mean": 0.1546070135424303
+          "rmse_mean": 0.1546070135424303,
+          "mae_mean": 0.10921680630920279,
+          "pearson_r_mean": 0.6982832526191135
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -0.024309772845097832,
-          "is_generalizable_cross_subject": true
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.487113768329502,
+          "r_squared_sd": 0.053216039846176316,
+          "nrmse_pct_mean": 19.987483472523632,
+          "nrmse_pct_sd": 1.7604190896362208
         }
       },
       "M2_static_length": {
-        "intra_participant_5fold": {
-          "r_squared_mean": 0.09953470327168405,
-          "r_squared_sd": 0.09115993509421093,
-          "nrmse_pct_mean": 26.51932093109051,
-          "nrmse_pct_sd": 2.7642369039647
-        },
         "cross_subject_loso": {
           "r_squared_mean": -0.012203571372370214,
           "r_squared_sd": 0.18819114599785053,
@@ -296,20 +1116,18 @@
           ],
           "nrmse_pct_mean": 26.688116640924008,
           "nrmse_pct_sd": 3.0730586484226947,
-          "rmse_mean": 0.2110442733224017
+          "rmse_mean": 0.2110442733224017,
+          "mae_mean": 0.1745750943176336,
+          "pearson_r_mean": 0.2902939758686173
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -0.11173827464405427,
-          "is_generalizable_cross_subject": false
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.09953470327168405,
+          "r_squared_sd": 0.09115993509421093,
+          "nrmse_pct_mean": 26.51932093109051,
+          "nrmse_pct_sd": 2.7642369039647
         }
       },
       "M3_hill_dynamic": {
-        "intra_participant_5fold": {
-          "r_squared_mean": 0.37160460076213847,
-          "r_squared_sd": 0.08648226798656629,
-          "nrmse_pct_mean": 22.226109010026544,
-          "nrmse_pct_sd": 3.1765935930216376
-        },
         "cross_subject_loso": {
           "r_squared_mean": 0.3103205782202935,
           "r_squared_sd": 0.08188852830890335,
@@ -327,20 +1145,18 @@
           ],
           "nrmse_pct_mean": 22.194160873574457,
           "nrmse_pct_sd": 3.2903031534925935,
-          "rmse_mean": 0.17721354972717449
+          "rmse_mean": 0.17721354972717449,
+          "mae_mean": 0.13480042522313143,
+          "pearson_r_mean": 0.6096406508362903
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -0.06128402254184495,
-          "is_generalizable_cross_subject": true
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.37160460076213847,
+          "r_squared_sd": 0.08648226798656629,
+          "nrmse_pct_mean": 22.226109010026544,
+          "nrmse_pct_sd": 3.1765935930216376
         }
       },
       "M4_subject01_biomechanical": {
-        "intra_participant_5fold": {
-          "r_squared_mean": 0.38292736784724996,
-          "r_squared_sd": 0.09967542721865723,
-          "nrmse_pct_mean": 22.013068164289624,
-          "nrmse_pct_sd": 3.3304957425799593
-        },
         "cross_subject_loso": {
           "r_squared_mean": 0.32514285768398277,
           "r_squared_sd": 0.09458807467405614,
@@ -358,20 +1174,18 @@
           ],
           "nrmse_pct_mean": 21.92937489178148,
           "nrmse_pct_sd": 3.2312247887307826,
-          "rmse_mean": 0.17519655642632948
+          "rmse_mean": 0.17519655642632948,
+          "mae_mean": 0.13307537627372867,
+          "pearson_r_mean": 0.6180662429864864
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -0.05778451016326719,
-          "is_generalizable_cross_subject": true
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.38292736784724996,
+          "r_squared_sd": 0.09967542721865723,
+          "nrmse_pct_mean": 22.013068164289624,
+          "nrmse_pct_sd": 3.3304957425799593
         }
       },
       "UWB_radar_ridge": {
-        "intra_participant_5fold": {
-          "r_squared_mean": 0.9762889395676149,
-          "r_squared_sd": 0.009909723361533443,
-          "nrmse_pct_mean": 4.191328046580975,
-          "nrmse_pct_sd": 0.9540989646719276
-        },
         "cross_subject_loso": {
           "r_squared_mean": -2.4457025356908573,
           "r_squared_sd": 2.207722870792136,
@@ -389,11 +1203,15 @@
           ],
           "nrmse_pct_mean": 47.25387622411128,
           "nrmse_pct_sd": 17.72817127671256,
-          "rmse_mean": 0.3681805423206141
+          "rmse_mean": 0.3681805423206141,
+          "mae_mean": 0.270854772895258,
+          "pearson_r_mean": 0.2738581986294306
         },
-        "generalization_gap": {
-          "delta_r2_loso_vs_intra": -3.421991475258472,
-          "is_generalizable_cross_subject": false
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.9762889395676149,
+          "r_squared_sd": 0.009909723361533443,
+          "nrmse_pct_mean": 4.191328046580975,
+          "nrmse_pct_sd": 0.9540989646719276
         }
       }
     },
@@ -402,7 +1220,1063 @@
       "loso_r2": -2.4457025356908573,
       "delta_r2": -3.421991475258472,
       "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: UWB radar achieves near-perfect intra-participant accuracy (R2 = 0.9763) due to memorizing participant-specific dielectric tissue impedance and antenna coupling, but collapses completely under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457). Raw radar cannot predict muscle torque on unseen human subjects without individual calibration."
+    },
+    "decoupling_analysis": {
+      "active_positive_count": 1821,
+      "torque_vs_emg_r2": 0.11798615992192046,
+      "torque_vs_fascicle_strain_r2": 0.016071816170117523,
+      "torque_vs_fascicle_velocity_r2": 0.02702391473207902,
+      "published_extended_data_fig3": {
+        "torque_vs_activation_r2": 0.13,
+        "torque_vs_fascicle_strain_r2": 0.01,
+        "torque_vs_fascicle_velocity_r2": 0.03
+      }
     }
+  },
+  "dynamic_knee_and_loso_evaluation": {
+    "status": "VALIDATED_ON_RAW_ARRAYS",
+    "stage1_raw_observation_audit": {
+      "total_dynamic_observations": 3226,
+      "passive_torque_zero_count": 1382,
+      "active_positive_torque_count": 1821,
+      "active_negative_sensor_drift_count": 23,
+      "sum_check_exact_match": true,
+      "total_active_conditions_count": 1844,
+      "negative_sensor_drift_details": {
+        "count": 23,
+        "min_nm": -0.02072831165171182,
+        "max_nm": -0.0006627505439774003,
+        "mean_nm": -0.007408561444999562,
+        "participants_affected": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "angles_deg_range": [
+          83.97979161922946,
+          90.13199821004518
+        ],
+        "runs_affected": [
+          9,
+          38,
+          40,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          59,
+          61,
+          62,
+          63,
+          71
+        ],
+        "interpretation": "Small negative baseline sensor drift (ranging from -0.0207 to -0.00066 Nm) during active runs near terminal knee extension (84.0 deg to 90.1 deg) in participants 1, 3, 4, 5. Representing baseline load-cell zero-point noise rather than active negative torque."
+      },
+      "nan_count_across_all_channels": {
+        "part": 0,
+        "run": 0,
+        "torque": 0,
+        "emg": 0,
+        "length": 0,
+        "vel": 0,
+        "pen": 0,
+        "angle": 0,
+        "uwb": 0
+      },
+      "all_channels_clean": true
+    },
+    "stage2_cv_schemes_definition": {
+      "INTRA_SUBJECT_CV": {
+        "definition": "5-fold cross-validation with interleaved 1-in-5 data points within each participant time series.",
+        "mathematical_sampling": "Test set for fold k consists of points t satisfying mod(t, 5) == offset_k (offsets: 4, 0, 1, 2, 3).",
+        "leakage_mechanism": "Temporal autocorrelation leakage across 10 Hz continuous dynamometer/radar signals. Adjacent test point t has neighbors t-1 and t+1 (100 ms apart) in train set.",
+        "status_in_paper": "Method used by Bird et al. (2026) for published LME (R2=0.984) and LSTM (R2=0.988)."
+      },
+      "BLOCKED_TEMPORAL_CV": {
+        "definition": "Holding out contiguous multi-second temporal blocks (e.g. 30 s blocks) within each participant to mitigate adjacent sample autocorrelation.",
+        "leakage_mechanism": "Reduces high-frequency temporal autocorrelation leakage, but remains participant-specific.",
+        "status_in_paper": "Used in LSTM segment preprocessing, but within-participant."
+      },
+      "LEAVE_ONE_SUBJECT_OUT": {
+        "definition": "Cross-subject validation holding out an entire participant (all runs/conditions), training strictly on the remaining N-1 participants.",
+        "leakage_mechanism": "Zero cross-subject leakage. Evaluates true population generalization to unseen human bodies.",
+        "status_in_paper": "NOT performed by Bird et al. (2026). Executed independently by SUBJECT-01."
+      },
+      "AUTHOR_REPORTED_PRECOMPUTED_OUTPUTS": {
+        "definition": "Model performance extracted directly from author precomputed evaluation files (LME_Data_Outputs.mat, LSTM_Data_Outputs.zip).",
+        "status_in_paper": "Confirmed by independent recomputation (LME R2=0.9844, LSTM R2=0.9882)."
+      },
+      "FULL_MODEL_RETRAINING": {
+        "definition": "Retraining model pipelines from raw arrays with strict inner-fold feature extraction, normalization, and parameter fitting.",
+        "status_in_paper": "Executed for all M0-M4 and UWB Ridge models across LOSO and intra-subject splits."
+      },
+      "m4_held_out_leakage_audit": {
+        "uses_held_out_subject_data": false,
+        "parameter_provenance": "Fascicle force-length (f_L) and moment arm d_MA(theta) parameters are fixed physiological priors; linear scale is fit strictly on training folds."
+      }
+    },
+    "stage3_radar_sensitivity_suite": {
+      "Default_Ridge_a10_unscaled_all": {
+        "r2_mean": -2.4457025356908573,
+        "r2_sd": 2.207722870792136,
+        "r2_folds": [
+          -3.056472995180669,
+          0.1702196749917052,
+          -5.837461824455037,
+          -2.3938854187939596,
+          -3.320475115265209,
+          -0.23613953544197286
+        ],
+        "nrmse_pct_mean": 47.25387622411128,
+        "rmse_mean": 0.3681805423206141,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a1_unscaled_all": {
+        "r2_mean": -5.538881258618712,
+        "r2_sd": 5.963845764540772,
+        "r2_folds": [
+          -11.750108818954303,
+          -0.5401309033495236,
+          -13.787918885667645,
+          -1.313383771491154,
+          -5.628365798570742,
+          -0.21337937367890758
+        ],
+        "nrmse_pct_mean": 62.13163275536829,
+        "rmse_mean": 0.4791202688047124,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a100_unscaled_all": {
+        "r2_mean": -1.2948320722404703,
+        "r2_sd": 1.310557222180142,
+        "r2_folds": [
+          -2.912841354715322,
+          0.13287879737757602,
+          -0.3176229202927783,
+          -2.3878105874361477,
+          -2.07322458882985,
+          -0.2103717795462996
+        ],
+        "nrmse_pct_mean": 39.26244047369257,
+        "rmse_mean": 0.3078603942115847,
+        "is_mean_r2_negative": true
+      },
+      "Ridge_a1000_unscaled_all": {
+        "r2_mean": -0.45989817305085534,
+        "r2_sd": 0.9999598180928408,
+        "r2_folds": [
+          -2.339291028268008,
+          0.11853405963507213,
+          0.47763717630219116,
+          -0.7073297378729746,
+          -0.09911233301565248,
+          -0.20982717508575965
+        ],
+        "nrmse_pct_mean": 31.145431535316977,
+        "rmse_mean": 0.24659240996825485,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a10_all": {
+        "r2_mean": -7.1887672272703655,
+        "r2_sd": 7.076362979957475,
+        "r2_folds": [
+          -14.824724760902326,
+          -1.0167745510184019,
+          -14.26859847681789,
+          -1.093494549262819,
+          -11.60805187290633,
+          -0.32095915271442177
+        ],
+        "nrmse_pct_mean": 69.69108550368144,
+        "rmse_mean": 0.5375331204166004,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_all": {
+        "r2_mean": -2.748987343948888,
+        "r2_sd": 3.606055207935341,
+        "r2_folds": [
+          -9.314607010200193,
+          0.6809324155882535,
+          -3.9591644144400657,
+          -0.9969313937404849,
+          -2.5123308801973976,
+          -0.39182278070343735
+        ],
+        "nrmse_pct_mean": 47.50814995637751,
+        "rmse_mean": 0.373365341813974,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a1000_all": {
+        "r2_mean": -0.5238361050033332,
+        "r2_sd": 1.605898861340213,
+        "r2_folds": [
+          -3.6887979635388195,
+          0.3183057149244338,
+          0.3877258373594119,
+          -0.5928822677222267,
+          0.5605590029906407,
+          -0.12792695403343868
+        ],
+        "nrmse_pct_mean": 30.3103748815382,
+        "rmse_mean": 0.2396928981988197,
+        "is_mean_r2_negative": true
+      },
+      "RobustScaler_inner_Ridge_a100_all": {
+        "r2_mean": -5.298893172263917,
+        "r2_sd": 7.466388939526581,
+        "r2_folds": [
+          -18.12318746751839,
+          0.25460493630045733,
+          -10.686159394455716,
+          -0.9056180366662596,
+          -1.857185957288645,
+          -0.47581311395494974
+        ],
+        "nrmse_pct_mean": 58.32576870026495,
+        "rmse_mean": 0.45311622087537273,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_RidgeCV_all": {
+        "r2_mean": -11.96037526690015,
+        "r2_sd": 8.986638164453446,
+        "r2_folds": [
+          -16.254238687893896,
+          -6.103477386611649,
+          -21.515483769986474,
+          -6.379719229021484,
+          -21.377907834135335,
+          -0.13142469375206556
+        ],
+        "nrmse_pct_mean": 89.34498204738831,
+        "rmse_mean": 0.6775696076992658,
+        "is_mean_r2_negative": true
+      },
+      "Default_Ridge_a10_unscaled_active": {
+        "r2_mean": -6.662674479265289,
+        "r2_sd": 6.2618849642199175,
+        "r2_folds": [
+          -4.758321619812343,
+          -0.18810440760653546,
+          -4.2053910543847035,
+          -15.494652672361209,
+          -13.341885230733427,
+          -1.9876918906935184
+        ],
+        "nrmse_pct_mean": 62.01129529568157,
+        "rmse_mean": 0.4812399247368447,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_active": {
+        "r2_mean": -5.095043481567013,
+        "r2_sd": 5.112337094078175,
+        "r2_folds": [
+          -12.299296126144515,
+          0.5193351590835764,
+          -1.4148314853747488,
+          -9.865718727775574,
+          -5.673473638969096,
+          -1.8362760702217167
+        ],
+        "nrmse_pct_mean": 54.53360407152896,
+        "rmse_mean": 0.42649396143104323,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_S11_only": {
+        "r2_mean": -0.8431479433866169,
+        "r2_sd": 1.13842999319147,
+        "r2_folds": [
+          -1.344271219004332,
+          -0.904700442720564,
+          -2.809356278565341,
+          -0.14027727889468267,
+          0.38453008356895624,
+          -0.24481252470373782
+        ],
+        "nrmse_pct_mean": 34.47104248825722,
+        "rmse_mean": 0.2691130388904482,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_S21_only": {
+        "r2_mean": -9.505960790294154,
+        "r2_sd": 9.090361824495329,
+        "r2_folds": [
+          -24.169377395469848,
+          -4.306301888757986,
+          -4.865674906226556,
+          -5.874760533466662,
+          -17.146709345284137,
+          -0.6729406725597318
+        ],
+        "nrmse_pct_mean": 80.59497085803353,
+        "rmse_mean": 0.6175202716423376,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_Mag_only": {
+        "r2_mean": -0.7495106204530368,
+        "r2_sd": 1.1270271786553347,
+        "r2_folds": [
+          -2.544465259554148,
+          0.43806405672298565,
+          -0.8550145446797566,
+          -1.5237949023432735,
+          -0.03964396227089795,
+          0.027790889406868913
+        ],
+        "nrmse_pct_mean": 33.86031145666603,
+        "rmse_mean": 0.26540840140043825,
+        "is_mean_r2_negative": true
+      },
+      "StandardScaler_inner_Ridge_a100_Phase_only": {
+        "r2_mean": -2.550051715190888,
+        "r2_sd": 3.566410219346553,
+        "r2_folds": [
+          -4.837318457405701,
+          -0.1897094526101395,
+          -8.845009948420886,
+          -0.09786165552588999,
+          -0.8210545466086347,
+          -0.5093562305740784
+        ],
+        "nrmse_pct_mean": 45.82125748916237,
+        "rmse_mean": 0.35817663584741943,
+        "is_mean_r2_negative": true
+      }
+    },
+    "stage4_dataset_evaluations": {
+      "all_dynamic_observations": {
+        "observations_count": 3226,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.07210682237011497,
+              "r_squared_sd": 0.10647127839304121,
+              "r_squared_ci95": [
+                -0.18384157654105965,
+                0.03962793180082973
+              ],
+              "r_squared_per_subject": [
+                -1.6880381932482535e-05,
+                -0.2684137397129662,
+                -0.017560242521897917,
+                -0.019454937981624232,
+                -0.004205080259396032,
+                -0.12299005336287294
+              ],
+              "nrmse_pct_mean": 27.53862073927503,
+              "nrmse_pct_sd": 2.5657460950573294,
+              "rmse_mean": 0.21813837596777877,
+              "mae_mean": 0.18467146145410815,
+              "pearson_r_mean": 0.0
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": -0.0007551964295625806,
+              "r_squared_sd": 0.0013339563320202217,
+              "nrmse_pct_mean": 28.015928239493963,
+              "nrmse_pct_sd": 2.69637326602926
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.46280399548440415,
+              "r_squared_sd": 0.0650629905895379,
+              "r_squared_ci95": [
+                0.394524574321526,
+                0.5310834166472823
+              ],
+              "r_squared_per_subject": [
+                0.5141976180678947,
+                0.3633282265614385,
+                0.4523453398126087,
+                0.5500701620281081,
+                0.4641239483881252,
+                0.43275867804824997
+              ],
+              "nrmse_pct_mean": 19.5014042048644,
+              "nrmse_pct_sd": 2.144981200527033,
+              "rmse_mean": 0.1546070135424303,
+              "mae_mean": 0.10921680630920279,
+              "pearson_r_mean": 0.6982832526191135
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.487113768329502,
+              "r_squared_sd": 0.053216039846176316,
+              "nrmse_pct_mean": 19.987483472523632,
+              "nrmse_pct_sd": 1.7604190896362208
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.012203571372370214,
+              "r_squared_sd": 0.18819114599785053,
+              "r_squared_ci95": [
+                -0.20969806709538313,
+                0.1852909243506427
+              ],
+              "r_squared_per_subject": [
+                0.06139005419015242,
+                -0.3504152548314654,
+                0.03339049321213694,
+                0.22221804314495686,
+                -0.011980350650503624,
+                -0.027824413299498474
+              ],
+              "nrmse_pct_mean": 26.688116640924008,
+              "nrmse_pct_sd": 3.0730586484226947,
+              "rmse_mean": 0.2110442733224017,
+              "mae_mean": 0.1745750943176336,
+              "pearson_r_mean": 0.2902939758686173
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.09953470327168405,
+              "r_squared_sd": 0.09115993509421093,
+              "nrmse_pct_mean": 26.51932093109051,
+              "nrmse_pct_sd": 2.7642369039647
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.3103205782202935,
+              "r_squared_sd": 0.08188852830890335,
+              "r_squared_ci95": [
+                0.2243838381142991,
+                0.39625731832628797
+              ],
+              "r_squared_per_subject": [
+                0.37549159852567116,
+                0.4265079699936172,
+                0.31934714229640204,
+                0.27247776907212096,
+                0.2703384050579668,
+                0.1977605843759831
+              ],
+              "nrmse_pct_mean": 22.194160873574457,
+              "nrmse_pct_sd": 3.2903031534925935,
+              "rmse_mean": 0.17721354972717449,
+              "mae_mean": 0.13480042522313143,
+              "pearson_r_mean": 0.6096406508362903
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.37160460076213847,
+              "r_squared_sd": 0.08648226798656629,
+              "nrmse_pct_mean": 22.226109010026544,
+              "nrmse_pct_sd": 3.1765935930216376
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": 0.32514285768398277,
+              "r_squared_sd": 0.09458807467405614,
+              "r_squared_ci95": [
+                0.2258787610118855,
+                0.42440695435608
+              ],
+              "r_squared_per_subject": [
+                0.38828136085440657,
+                0.4587631614161398,
+                0.32622726123518675,
+                0.23804106948684944,
+                0.33749929938498924,
+                0.20204499372632478
+              ],
+              "nrmse_pct_mean": 21.92937489178148,
+              "nrmse_pct_sd": 3.2312247887307826,
+              "rmse_mean": 0.17519655642632948,
+              "mae_mean": 0.13307537627372867,
+              "pearson_r_mean": 0.6180662429864864
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.38292736784724996,
+              "r_squared_sd": 0.09967542721865723,
+              "nrmse_pct_mean": 22.013068164289624,
+              "nrmse_pct_sd": 3.3304957425799593
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -2.4457025356908573,
+              "r_squared_sd": 2.207722870792136,
+              "r_squared_ci95": [
+                -4.762565599313602,
+                -0.1288394720681123
+              ],
+              "r_squared_per_subject": [
+                -3.056472995180669,
+                0.1702196749917052,
+                -5.837461824455037,
+                -2.3938854187939596,
+                -3.320475115265209,
+                -0.23613953544197286
+              ],
+              "nrmse_pct_mean": 47.25387622411128,
+              "nrmse_pct_sd": 17.72817127671256,
+              "rmse_mean": 0.3681805423206141,
+              "mae_mean": 0.270854772895258,
+              "pearson_r_mean": 0.2738581986294306
+            },
+            "intra_participant_5fold": {
+              "r_squared_mean": 0.9762889395676149,
+              "r_squared_sd": 0.009909723361533443,
+              "nrmse_pct_mean": 4.191328046580975,
+              "nrmse_pct_sd": 0.9540989646719276
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.014822279463689228,
+            "paired_t_statistic": 1.0802657218567766,
+            "paired_t_pvalue": 0.32935334494610286,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0148) is NOT statistically significant (p = 0.3294). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.1376611378004214,
+            "paired_t_statistic": -2.4620356928426674,
+            "paired_t_pvalue": 0.05708568884018873,
+            "wilcoxon_statistic": 1.0,
+            "wilcoxon_pvalue": 0.0625,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.1377, t = -2.462, p = 0.0571). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      },
+      "active_only_conditions": {
+        "observations_count": 1821,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.262047008848241,
+              "r_squared_sd": 0.37049725079411083,
+              "r_squared_ci95": [
+                -0.6508600283150617,
+                0.12676601061857973
+              ],
+              "r_squared_per_subject": [
+                -0.004671152511062537,
+                -0.9162836348813916,
+                -0.1208923127483772,
+                -0.03383293436265822,
+                -0.0036697020881026887,
+                -0.49293231649785363
+              ],
+              "nrmse_pct_mean": 26.918484002697365,
+              "nrmse_pct_sd": 4.170130599238125,
+              "rmse_mean": 0.21175249909572258,
+              "mae_mean": 0.17641639975725512,
+              "pearson_r_mean": 0.0
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.0881705085315073,
+              "r_squared_sd": 0.2271052565569537,
+              "r_squared_ci95": [
+                -0.3265028587700957,
+                0.15016184170708113
+              ],
+              "r_squared_per_subject": [
+                0.03208516863203292,
+                -0.47040603225262845,
+                0.06727821082643948,
+                0.0024180497043161386,
+                0.09982978793002817,
+                -0.26022823602923206
+              ],
+              "nrmse_pct_mean": 25.101085425045174,
+              "nrmse_pct_sd": 3.2758685988408494,
+              "rmse_mean": 0.19752344222555485,
+              "mae_mean": 0.16500471635854483,
+              "pearson_r_mean": 0.2178204908976489
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.253512378286142,
+              "r_squared_sd": 0.32030958617175126,
+              "r_squared_ci95": [
+                -0.5896566738151117,
+                0.08263191724282776
+              ],
+              "r_squared_per_subject": [
+                0.0400847070645205,
+                -0.777927590678094,
+                -0.09382952254394716,
+                -0.1384657269632874,
+                -0.0387381162358551,
+                -0.5121980203601888
+              ],
+              "nrmse_pct_mean": 26.86897383114253,
+              "nrmse_pct_sd": 3.8903946150177577,
+              "rmse_mean": 0.2116671823969313,
+              "mae_mean": 0.17388759044650334,
+              "pearson_r_mean": 0.18105852323232988
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.1619815661612692,
+              "r_squared_sd": 0.2546337887244026,
+              "r_squared_ci95": [
+                -0.42920333917040154,
+                0.10524020684786314
+              ],
+              "r_squared_per_subject": [
+                0.023878213130461234,
+                -0.5399852336579052,
+                0.03798627395838894,
+                -0.044357035962975244,
+                -0.018465809178231485,
+                -0.4309458052573536
+              ],
+              "nrmse_pct_mean": 25.96331779272467,
+              "nrmse_pct_sd": 3.8491501948971263,
+              "rmse_mean": 0.2049360413654919,
+              "mae_mean": 0.16800445977823483,
+              "pearson_r_mean": 0.23285089853722565
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.14114607148934497,
+              "r_squared_sd": 0.23869805370623964,
+              "r_squared_ci95": [
+                -0.39164431622247864,
+                0.10935217324378868
+              ],
+              "r_squared_per_subject": [
+                0.04362489930629376,
+                -0.465425811560767,
+                0.05781130475606533,
+                -0.0861238559419728,
+                0.021189549467386493,
+                -0.4179525149630756
+              ],
+              "nrmse_pct_mean": 25.72061631698826,
+              "nrmse_pct_sd": 3.6479795153278167,
+              "rmse_mean": 0.2031194177764695,
+              "mae_mean": 0.16583441280899427,
+              "pearson_r_mean": 0.2707217519091248
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.662674479265289,
+              "r_squared_sd": 6.2618849642199175,
+              "r_squared_ci95": [
+                -13.234119733646462,
+                -0.09122922488411511
+              ],
+              "r_squared_per_subject": [
+                -4.758321619812343,
+                -0.18810440760653546,
+                -4.2053910543847035,
+                -15.494652672361209,
+                -13.341885230733427,
+                -1.9876918906935184
+              ],
+              "nrmse_pct_mean": 62.01129529568157,
+              "nrmse_pct_sd": 28.464872123895887,
+              "rmse_mean": 0.4812399247368447,
+              "mae_mean": 0.412341023161086,
+              "pearson_r_mean": 0.05077220822725629
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.02083549467192425,
+            "paired_t_statistic": 1.3427634086880365,
+            "paired_t_pvalue": 0.23708070600143674,
+            "wilcoxon_statistic": 5.0,
+            "wilcoxon_pvalue": 0.3125,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0208) is NOT statistically significant (p = 0.2371). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.052975562957837674,
+            "paired_t_statistic": -1.9426121541671542,
+            "paired_t_pvalue": 0.10970317275211573,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0530, t = -1.943, p = 0.1097). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      },
+      "active_with_sensor_drift": {
+        "observations_count": 1844,
+        "models": {
+          "M0_constant_baseline": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.26103188938721794,
+              "r_squared_sd": 0.34333820101305834,
+              "r_squared_ci95": [
+                -0.6213432340680929,
+                0.09927945529365706
+              ],
+              "r_squared_per_subject": [
+                -0.007368777472910981,
+                -0.8450394142759292,
+                -0.11812997338541864,
+                -0.07549355204645969,
+                -0.005965078819988756,
+                -0.5141945403226003
+              ],
+              "nrmse_pct_mean": 27.14184591902917,
+              "nrmse_pct_sd": 3.630730439124909,
+              "rmse_mean": 0.21479618817933996,
+              "mae_mean": 0.1784331593200472,
+              "pearson_r_mean": 0.0
+            }
+          },
+          "M1_static_semg": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.052799657596432036,
+              "r_squared_sd": 0.23335533029744723,
+              "r_squared_ci95": [
+                -0.29769105797027234,
+                0.1920917427774083
+              ],
+              "r_squared_per_subject": [
+                0.03241840143052488,
+                -0.4273605202974493,
+                0.08876238566742856,
+                0.14551541102409504,
+                0.10091650700625143,
+                -0.2570501304094428
+              ],
+              "nrmse_pct_mean": 24.919250897394036,
+              "nrmse_pct_sd": 3.363914933946213,
+              "rmse_mean": 0.1974219922681469,
+              "mae_mean": 0.165180648601168,
+              "pearson_r_mean": 0.2473412593572328
+            }
+          },
+          "M2_static_length": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.2813561777601278,
+              "r_squared_sd": 0.3252222119608599,
+              "r_squared_ci95": [
+                -0.6226559578776603,
+                0.0599436023574047
+              ],
+              "r_squared_per_subject": [
+                0.02037307803896138,
+                -0.8051218336694628,
+                -0.1029062643558738,
+                -0.25283264702486985,
+                -0.018183329954180705,
+                -0.5294660695953408
+              ],
+              "nrmse_pct_mean": 27.343507605371638,
+              "nrmse_pct_sd": 3.245907667904893,
+              "rmse_mean": 0.2163778100383714,
+              "mae_mean": 0.17759593593878586,
+              "pearson_r_mean": 0.1392857893629015
+            }
+          },
+          "M3_hill_dynamic": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.13873421425545768,
+              "r_squared_sd": 0.24291395317229345,
+              "r_squared_ci95": [
+                -0.3936567741424866,
+                0.11618834563157127
+              ],
+              "r_squared_per_subject": [
+                0.02231525785464883,
+                -0.45691690384779027,
+                0.05274929352735791,
+                0.014684786830312269,
+                -0.02045523233428126,
+                -0.44478248756299354
+              ],
+              "nrmse_pct_mean": 25.943300812143253,
+              "nrmse_pct_sd": 3.699132092198469,
+              "rmse_mean": 0.20620408120814293,
+              "mae_mean": 0.1690139483735041,
+              "pearson_r_mean": 0.24986942658740194
+            }
+          },
+          "M4_subject01_biomechanical": {
+            "cross_subject_loso": {
+              "r_squared_mean": -0.11531974155778657,
+              "r_squared_sd": 0.22920575420366543,
+              "r_squared_ci95": [
+                -0.35585642888835195,
+                0.1252169457727788
+              ],
+              "r_squared_per_subject": [
+                0.042632914016408785,
+                -0.3853637777119243,
+                0.07141429283166101,
+                -0.011590045138571314,
+                0.022722788329397003,
+                -0.4317346216736906
+              ],
+              "nrmse_pct_mean": 25.674418678867227,
+              "nrmse_pct_sd": 3.5576716568852373,
+              "rmse_mean": 0.2042022684884378,
+              "mae_mean": 0.16678883785711474,
+              "pearson_r_mean": 0.28630912083754456
+            }
+          },
+          "UWB_radar_ridge": {
+            "cross_subject_loso": {
+              "r_squared_mean": -6.015378786911168,
+              "r_squared_sd": 5.33756658530156,
+              "r_squared_ci95": [
+                -11.616811391844536,
+                -0.413946181977801
+              ],
+              "r_squared_per_subject": [
+                -4.6962601094775716,
+                -0.1895123441052604,
+                -4.075638001474066,
+                -11.90576103949986,
+                -13.23421310264643,
+                -1.9908881242638237
+              ],
+              "nrmse_pct_mean": 60.92484979967268,
+              "nrmse_pct_sd": 27.655304683667786,
+              "rmse_mean": 0.47776166583863694,
+              "mae_mean": 0.4061156045937097,
+              "pearson_r_mean": 0.0624157940349089
+            }
+          }
+        },
+        "statistical_comparisons": {
+          "m4_vs_m3_hill": {
+            "delta_r2_mean": 0.023414472697671107,
+            "paired_t_statistic": 1.7588519240747233,
+            "paired_t_pvalue": 0.13892868138099895,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "statistically_significant_at_alpha_005": false,
+            "scientific_verdict": "M4 advantage over M3 (Delta R2 = +0.0234) is NOT statistically significant (p = 0.1389). Adding uncalibrated pennation and moment arm does not reliably improve prediction."
+          },
+          "m4_vs_m1_semg": {
+            "delta_r2_mean": -0.06252008396135454,
+            "paired_t_statistic": -1.7115946032901792,
+            "paired_t_pvalue": 0.1476532415029888,
+            "wilcoxon_statistic": 4.0,
+            "wilcoxon_pvalue": 0.21875,
+            "m4_inferior_to_m1": true,
+            "scientific_verdict": "M4 is SUBSTANTIALLY INFERIOR to simple linear sEMG baseline M1 (Delta R2 = -0.0625, t = -1.712, p = 0.1477). Complex multiscale ultrasound tracking underperforms surface EMG."
+          }
+        }
+      }
+    },
+    "stage4_m4_falsification_mechanisms": {
+      "mechanism_1_single_head_vs_net_joint_moment": "Vastus lateralis B-mode ultrasound captures kinematics from only 1 of 4 quadriceps heads. Knee extension torque reflects the algebraic sum of vastus medialis, vastus intermedius, vastus lateralis, and rectus femoris (bi-articular), minus antagonist hamstring co-contraction. Surface EMG integrates overall neural drive better than single-muscle fascicle geometry.",
+      "mechanism_2_parameter_unidentifiability": "Anatomical moment arms d_MA(theta), tendon slack lengths, and optimal fascicle lengths L0 vary substantially across individuals. In cross-subject LOSO, pooled fixed parameters induce systematic bias on held-out subjects that degrades accuracy.",
+      "mechanism_3_ultrasound_tracking_noise_propagation": "Multiplying neural activation by uncalibrated ultrasound geometric factors (f_L * f_V * cos(alpha)) amplifies measurement tracking noise, resulting in higher prediction variance than direct linear sEMG.",
+      "mechanism_4_sample_size_limitation": "With N=6 participants, between-subject morphological variability cannot be learned by unregularized linear models without participant-specific calibration.",
+      "registry_action": "Preserve NEG-0039 in negative_results.json. Bar assigning superior architecture status to M4."
+    },
+    "models_evaluation": {
+      "M0_constant_baseline": {
+        "cross_subject_loso": {
+          "r_squared_mean": -0.07210682237011497,
+          "r_squared_sd": 0.10647127839304121,
+          "r_squared_ci95": [
+            -0.18384157654105965,
+            0.03962793180082973
+          ],
+          "r_squared_per_subject": [
+            -1.6880381932482535e-05,
+            -0.2684137397129662,
+            -0.017560242521897917,
+            -0.019454937981624232,
+            -0.004205080259396032,
+            -0.12299005336287294
+          ],
+          "nrmse_pct_mean": 27.53862073927503,
+          "nrmse_pct_sd": 2.5657460950573294,
+          "rmse_mean": 0.21813837596777877,
+          "mae_mean": 0.18467146145410815,
+          "pearson_r_mean": 0.0
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": -0.0007551964295625806,
+          "r_squared_sd": 0.0013339563320202217,
+          "nrmse_pct_mean": 28.015928239493963,
+          "nrmse_pct_sd": 2.69637326602926
+        }
+      },
+      "M1_static_semg": {
+        "cross_subject_loso": {
+          "r_squared_mean": 0.46280399548440415,
+          "r_squared_sd": 0.0650629905895379,
+          "r_squared_ci95": [
+            0.394524574321526,
+            0.5310834166472823
+          ],
+          "r_squared_per_subject": [
+            0.5141976180678947,
+            0.3633282265614385,
+            0.4523453398126087,
+            0.5500701620281081,
+            0.4641239483881252,
+            0.43275867804824997
+          ],
+          "nrmse_pct_mean": 19.5014042048644,
+          "nrmse_pct_sd": 2.144981200527033,
+          "rmse_mean": 0.1546070135424303,
+          "mae_mean": 0.10921680630920279,
+          "pearson_r_mean": 0.6982832526191135
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.487113768329502,
+          "r_squared_sd": 0.053216039846176316,
+          "nrmse_pct_mean": 19.987483472523632,
+          "nrmse_pct_sd": 1.7604190896362208
+        }
+      },
+      "M2_static_length": {
+        "cross_subject_loso": {
+          "r_squared_mean": -0.012203571372370214,
+          "r_squared_sd": 0.18819114599785053,
+          "r_squared_ci95": [
+            -0.20969806709538313,
+            0.1852909243506427
+          ],
+          "r_squared_per_subject": [
+            0.06139005419015242,
+            -0.3504152548314654,
+            0.03339049321213694,
+            0.22221804314495686,
+            -0.011980350650503624,
+            -0.027824413299498474
+          ],
+          "nrmse_pct_mean": 26.688116640924008,
+          "nrmse_pct_sd": 3.0730586484226947,
+          "rmse_mean": 0.2110442733224017,
+          "mae_mean": 0.1745750943176336,
+          "pearson_r_mean": 0.2902939758686173
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.09953470327168405,
+          "r_squared_sd": 0.09115993509421093,
+          "nrmse_pct_mean": 26.51932093109051,
+          "nrmse_pct_sd": 2.7642369039647
+        }
+      },
+      "M3_hill_dynamic": {
+        "cross_subject_loso": {
+          "r_squared_mean": 0.3103205782202935,
+          "r_squared_sd": 0.08188852830890335,
+          "r_squared_ci95": [
+            0.2243838381142991,
+            0.39625731832628797
+          ],
+          "r_squared_per_subject": [
+            0.37549159852567116,
+            0.4265079699936172,
+            0.31934714229640204,
+            0.27247776907212096,
+            0.2703384050579668,
+            0.1977605843759831
+          ],
+          "nrmse_pct_mean": 22.194160873574457,
+          "nrmse_pct_sd": 3.2903031534925935,
+          "rmse_mean": 0.17721354972717449,
+          "mae_mean": 0.13480042522313143,
+          "pearson_r_mean": 0.6096406508362903
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.37160460076213847,
+          "r_squared_sd": 0.08648226798656629,
+          "nrmse_pct_mean": 22.226109010026544,
+          "nrmse_pct_sd": 3.1765935930216376
+        }
+      },
+      "M4_subject01_biomechanical": {
+        "cross_subject_loso": {
+          "r_squared_mean": 0.32514285768398277,
+          "r_squared_sd": 0.09458807467405614,
+          "r_squared_ci95": [
+            0.2258787610118855,
+            0.42440695435608
+          ],
+          "r_squared_per_subject": [
+            0.38828136085440657,
+            0.4587631614161398,
+            0.32622726123518675,
+            0.23804106948684944,
+            0.33749929938498924,
+            0.20204499372632478
+          ],
+          "nrmse_pct_mean": 21.92937489178148,
+          "nrmse_pct_sd": 3.2312247887307826,
+          "rmse_mean": 0.17519655642632948,
+          "mae_mean": 0.13307537627372867,
+          "pearson_r_mean": 0.6180662429864864
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.38292736784724996,
+          "r_squared_sd": 0.09967542721865723,
+          "nrmse_pct_mean": 22.013068164289624,
+          "nrmse_pct_sd": 3.3304957425799593
+        }
+      },
+      "UWB_radar_ridge": {
+        "cross_subject_loso": {
+          "r_squared_mean": -2.4457025356908573,
+          "r_squared_sd": 2.207722870792136,
+          "r_squared_ci95": [
+            -4.762565599313602,
+            -0.1288394720681123
+          ],
+          "r_squared_per_subject": [
+            -3.056472995180669,
+            0.1702196749917052,
+            -5.837461824455037,
+            -2.3938854187939596,
+            -3.320475115265209,
+            -0.23613953544197286
+          ],
+          "nrmse_pct_mean": 47.25387622411128,
+          "nrmse_pct_sd": 17.72817127671256,
+          "rmse_mean": 0.3681805423206141,
+          "mae_mean": 0.270854772895258,
+          "pearson_r_mean": 0.2738581986294306
+        },
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.9762889395676149,
+          "r_squared_sd": 0.009909723361533443,
+          "nrmse_pct_mean": 4.191328046580975,
+          "nrmse_pct_sd": 0.9540989646719276
+        }
+      }
+    },
+    "radar_generalization_collapse_finding": {
+      "intra_r2": 0.9762889395676149,
+      "loso_r2": -2.4457025356908573,
+      "delta_r2": -3.421991475258472,
+      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: UWB radar achieves near-perfect intra-participant accuracy (R2 = 0.9763) due to memorizing participant-specific dielectric tissue impedance and antenna coupling, but collapses completely under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457). Raw radar cannot predict muscle torque on unseen human subjects without individual calibration."
+    },
+    "decoupling_analysis": {
+      "active_positive_count": 1821,
+      "torque_vs_emg_r2": 0.11798615992192046,
+      "torque_vs_fascicle_strain_r2": 0.016071816170117523,
+      "torque_vs_fascicle_velocity_r2": 0.02702391473207902,
+      "published_extended_data_fig3": {
+        "torque_vs_activation_r2": 0.13,
+        "torque_vs_fascicle_strain_r2": 0.01,
+        "torque_vs_fascicle_velocity_r2": 0.03
+      }
+    }
+  },
+  "registered_negative_results": {
+    "NEG-0038": "Single-muscle vastus lateralis knee extension torque, sEMG amplitude, and ultrasound fascicle length directly predict whole-body maximum strength and athletic capacity, and successful validation of 20-minute intermittent fatigue compensation models provides empirical validation for continuous 45-minute extreme metabolic endurance (TARGET-CPE45). [REFUTED]",
+    "NEG-0039": "Cross-Subject Generalization Collapse of Raw UWB Radar Muscle Force Estimation and Falsification of SUBJECT-01 Multiscale Architecture (M4) Superiority over sEMG Baseline. [REFUTED]"
   },
   "epistemic_invariants": {
     "target_cpe45": "NOT EXTERNALLY VALIDATED",

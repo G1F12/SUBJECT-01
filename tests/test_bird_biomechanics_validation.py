@@ -293,6 +293,111 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         errors = verify_biomechanics_structural_consistency(md_text, self.results)
         self.assertGreater(len(errors), 0, "Missing SRC-0076 must trigger error")
 
+    def test_stage1_observation_discrepancy_resolution(self):
+        """Verify resolution of the 3,226 dynamic observations (1,382 passive, 1,821 active, 23 sensor drift)."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        self.assertTrue(empirical_file.is_file(), "Empirical JSON must exist")
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_scientific_audit"]
+        stage1 = dyn["stage1_raw_observation_audit"]
+        self.assertEqual(stage1["total_dynamic_observations"], 3226)
+        self.assertEqual(stage1["passive_torque_zero_count"], 1382)
+        self.assertEqual(stage1["active_positive_torque_count"], 1821)
+        self.assertEqual(stage1["active_negative_sensor_drift_count"], 23)
+        self.assertTrue(stage1["sum_check_exact_match"])
+        self.assertTrue(stage1["all_channels_clean"])
+        # Check negative sensor drift details
+        neg = stage1["negative_sensor_drift_details"]
+        self.assertLess(neg["max_nm"], 0.0)
+        self.assertGreater(neg["min_nm"], -0.05)
+
+    def test_stage2_cross_validation_scheme_separation(self):
+        """Verify strict separation of INTRA_SUBJECT_CV, BLOCKED_TEMPORAL_CV, LOSO, PRECOMPUTED, RETRAINING."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_scientific_audit"]
+        cv_schemes = dyn["stage2_cv_schemes_definition"]
+        self.assertIn("INTRA_SUBJECT_CV", cv_schemes)
+        self.assertIn("BLOCKED_TEMPORAL_CV", cv_schemes)
+        self.assertIn("LEAVE_ONE_SUBJECT_OUT", cv_schemes)
+        self.assertIn("AUTHOR_REPORTED_PRECOMPUTED_OUTPUTS", cv_schemes)
+        self.assertIn("FULL_MODEL_RETRAINING", cv_schemes)
+        self.assertFalse(cv_schemes["m4_held_out_leakage_audit"]["uses_held_out_subject_data"])
+
+    def test_stage3_uwb_radar_sensitivity_suite(self):
+        """Verify UWB radar collapse persists across all 15 sensitivity configurations (all mean R2 < 0)."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_scientific_audit"]
+        suite = dyn["stage3_radar_sensitivity_suite"]
+        self.assertEqual(len(suite), 15, "Sensitivity suite must contain exactly 15 configurations")
+        for cfg_name, cfg_res in suite.items():
+            self.assertTrue(
+                cfg_res["is_mean_r2_negative"],
+                f"Configuration {cfg_name} must produce negative mean R2 under LOSO (got {cfg_res['r2_mean']:.4f})",
+            )
+            self.assertLess(cfg_res["r2_mean"], 0.0)
+
+    def test_stage4_m4_falsification_vs_semg_and_hill(self):
+        """Verify M4 is falsified as superior architecture: underperforms M1 sEMG, no benefit over M3 Hill."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_scientific_audit"]
+        all_dset = dyn["stage4_dataset_evaluations"]["all_dynamic_observations"]
+        models = all_dset["models"]
+        stats_comp = all_dset["statistical_comparisons"]
+
+        m1_r2 = models["M1_static_semg"]["cross_subject_loso"]["r_squared_mean"]
+        m3_r2 = models["M3_hill_dynamic"]["cross_subject_loso"]["r_squared_mean"]
+        m4_r2 = models["M4_subject01_biomechanical"]["cross_subject_loso"]["r_squared_mean"]
+
+        self.assertAlmostEqual(m1_r2, 0.4628, delta=0.005)
+        self.assertAlmostEqual(m3_r2, 0.3103, delta=0.005)
+        self.assertAlmostEqual(m4_r2, 0.3251, delta=0.005)
+
+        # M4 vs M3 advantage is statistically insignificant
+        self.assertFalse(stats_comp["m4_vs_m3_hill"]["statistically_significant_at_alpha_005"])
+        self.assertGreater(stats_comp["m4_vs_m3_hill"]["paired_t_pvalue"], 0.05)
+
+        # M4 underperforms M1 sEMG
+        self.assertTrue(stats_comp["m4_vs_m1_semg"]["m4_inferior_to_m1"])
+        self.assertLess(m4_r2, m1_r2)
+
+        # On active-only points (torque > 0), both M1 and M4 collapse below zero
+        act_dset = dyn["stage4_dataset_evaluations"]["active_only_conditions"]
+        act_m1 = act_dset["models"]["M1_static_semg"]["cross_subject_loso"]["r_squared_mean"]
+        act_m4 = act_dset["models"]["M4_subject01_biomechanical"]["cross_subject_loso"]["r_squared_mean"]
+        self.assertLess(act_m1, 0.0)
+        self.assertLess(act_m4, 0.0)
+
+    def test_registry_neg0038_and_neg0039_integrity(self):
+        """Verify NEG-0038 and NEG-0039 presence, uniqueness, and proper referencing."""
+        neg_file = ROOT / "registry" / "negative_results.json"
+        with open(neg_file, "r", encoding="utf-8") as f:
+            negs = json.load(f)
+
+        neg_ids = {n["id"]: n for n in negs}
+        self.assertIn("NEG-0038", neg_ids)
+        self.assertIn("NEG-0039", neg_ids)
+
+        neg38 = neg_ids["NEG-0038"]
+        self.assertIn("TARGET-CPE45", neg38["hypothesis"])
+        self.assertIn("extrapolate", neg38["impact"].lower())
+
+        neg39 = neg_ids["NEG-0039"]
+        self.assertIn("UWB radar", neg39["hypothesis"])
+        self.assertIn("Architecture M4", neg39["hypothesis"])
+        self.assertIn("-2.4457", neg39["result"])
+        self.assertIn("M4 Falsification", neg39["result"])
+
 
 if __name__ == "__main__":
     unittest.main()

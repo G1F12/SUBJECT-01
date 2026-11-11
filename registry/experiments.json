@@ -1236,6 +1236,24 @@
         "m4_subject01_sim_r2": 0.748,
         "fatigue_m2_sim_r2": 0.812
       },
+      "stage1_raw_observation_audit": {
+        "total_observations": 3226,
+        "passive_torque_zero_count": 1382,
+        "active_positive_torque_count": 1821,
+        "negative_sensor_drift_count": 23,
+        "negative_sensor_drift_range_nm": [-0.020728, -0.000663]
+      },
+      "stage4_statistical_falsification": {
+        "m4_vs_m3_delta_r2": 0.0148,
+        "m4_vs_m3_paired_t_pvalue": 0.3294,
+        "m4_vs_m1_delta_r2": -0.1377,
+        "m4_vs_m1_paired_t_pvalue": 0.0571,
+        "verdict": "M4_FALSIFIED_AS_SUPERIOR_ARCHITECTURE_TO_M1_SEMG"
+      },
+      "negative_results_registered": [
+        "NEG-0038",
+        "NEG-0039"
+      ],
       "validation_verdict": "EMPIRICAL_RAW_DATA_VERIFIED_AND_LOSO_EVALUATED",
       "target_cpe45_status": "NOT EXTERNALLY VALIDATED",
       "biological_interventions": "NO_GO_MAINTAINED"
@@ -1249,7 +1267,7 @@
       "research/muscle_force_biomechanics_2026_11_10/bird2026_empirical_validation.json"
     ],
     "reproduction_command": "python tools/evaluate_bird_biomechanics.py",
-    "limits": "Raw binary arrays (DATA_Dynamic_Knee.mat 5.2 MB, DATA_Fatiguing_Isometric_Knee.xlsx 681 MB) remain pending local acquisition due to upstream Dryad bot-protection gating; M4 (R2 = 0.748) and Fatigue M2 (R2 = 0.812) are theoretical simulation baselines and must NOT be claimed as empirical fits on raw data until raw arrays are processed; author radar models used intra-participant 5-fold CV with zero cross-subject LOSO; dynamic knee extension cohort is N=6 (wide CI95 [0.68, 0.81]); dynamometer torque conflates four quadriceps heads, antagonist co-contraction, and variable moment arm; 20-min submaximal protocol does not observe intracellular phosphates or validate continuous 45-min endurance (TARGET-CPE45); biological interventions remain strictly NO_GO.",
+    "limits": "Raw binary arrays DATA_Dynamic_Knee.mat (5.2 MB, 3,226 rows), DATA_Isometric_Knee.xlsx (19.9 KB), LME_Data_Outputs.mat (40.6 KB), and LSTM_Data_Outputs.zip (8.9 MB) are acquired and SHA256-verified. Only 681 MB DATA_Fatiguing_Isometric_Knee.xlsx remains pending due to upstream Dryad bot-protection gating. Cross-subject Leave-One-Subject-Out (LOSO) cross-validation on raw dynamic data demonstrates complete UWB radar generalization collapse (R2 = -2.4457 +/- 2.2077, NEG-0039), persisting across 15 sensitivity suite variations (scaling, regularization, frequency bands, active/passive splits). Empirical multiscale model M4 (R2 = 0.3251) underperforms simple linear sEMG baseline M1 (R2 = 0.4628, Delta R2 = -0.1377) and provides no statistically significant benefit over standard Hill model M3 (p = 0.3294), falsifying M4 architectural superiority on uncalibrated cross-subject predictions. Single-joint dynamometer torque cannot be extrapolated to whole-body maximum strength or continuous 45-min endurance (TARGET-CPE45, NEG-0038). TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and biological interventions strictly NO_GO.",
     "external_validation": "empirical_raw_data_and_cross_subject_loso_validated",
     "data_type": "ORIGINAL_BINARY_FILE",
     "experiment_tag": "EXP-0045_BIOMECHANICS_FATIGUE_VALIDATED",

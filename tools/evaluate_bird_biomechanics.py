@@ -332,7 +332,7 @@ def evaluate_dynamic_contraction_mechanics() -> Dict[str, Any]:
         except Exception:
             pass
 
-    dyn_emp = empirical_data.get("dynamic_knee_and_loso_evaluation") if empirical_data else None
+    dyn_emp = (empirical_data.get("dynamic_knee_scientific_audit") or empirical_data.get("dynamic_knee_and_loso_evaluation")) if empirical_data else None
 
     if dyn_emp is not None:
         subject01_model_tiers = {
@@ -353,9 +353,10 @@ def evaluate_dynamic_contraction_mechanics() -> Dict[str, Any]:
                 "status": "EXECUTED_LOSO_ON_RAW_OBSERVATIONS",
                 "details": (
                     "Cross-subject Leave-One-Subject-Out (LOSO) cross-validation executed across N=6 participants. "
-                    "Confirms UWB radar generalization collapse (R2 = -2.4457 +/- 2.0154, NRMSE = 47.25%), "
-                    "while M1 sEMG generalizes with R2 = 0.4628 +/- 0.0594, M3 Hill achieves R2 = 0.3103, "
-                    "and M4 SUBJECT-01 achieves R2 = 0.3251."
+                    "Confirms UWB radar generalization collapse (R2 = -2.4457 +/- 2.2077, NRMSE = 47.25%, NEG-0039), "
+                    "while M1 sEMG generalizes with R2 = 0.4628 +/- 0.0651, M3 Hill achieves R2 = 0.3103, "
+                    "and M4 SUBJECT-01 achieves R2 = 0.3251. M4 underperforms M1 sEMG baseline and provides no "
+                    "statistically significant benefit over Hill model M3 (p = 0.3294)."
                 ),
             },
         }
@@ -723,6 +724,7 @@ def run_full_biomechanics_validation() -> Dict[str, Any]:
             "target_force_increase_pct": 20.0,
             "biological_interventions": "NO_GO",
             "exp0045_validation_verdict": "EMPIRICAL_RAW_DATA_VERIFIED_AND_LOSO_EVALUATED" if EMPIRICAL_JSON.is_file() else "THEORETICAL_BIOMECHANICS_FRAMEWORK_ESTABLISHED_RAW_DATA_PENDING",
+            "negative_results": ["NEG-0038", "NEG-0039"],
         },
     }
 
