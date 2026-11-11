@@ -1,0 +1,412 @@
+{
+  "cycle": 12,
+  "timestamp": "2026-11-11T17:45:00Z",
+  "source": {
+    "id": "SRC-0076",
+    "doi": "10.5061/dryad.sbcc2frmh",
+    "article_doi": "10.1126/scirobotics.aed5865",
+    "title": "Ultra-wideband radar to measure in vivo muscle forces",
+    "authors": [
+      "Christopher S. Bird",
+      "Antonio P. L. Bo",
+      "Wei Lu",
+      "Taylor J. M. Dick"
+    ],
+    "license": "CC0-1.0 (Public Domain Dedication)"
+  },
+  "files_cryptographic_audit": {
+    "DATA_Isometric_Knee.xlsx": {
+      "status": "ACQUIRED_AND_VERIFIED",
+      "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\DATA_Isometric_Knee.xlsx",
+      "size_bytes": 19879,
+      "sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
+      "expected_sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
+      "priority": 1,
+      "verified": true
+    },
+    "LME_Data_Outputs.mat": {
+      "status": "ACQUIRED_AND_VERIFIED",
+      "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\LME_Data_Outputs.mat",
+      "size_bytes": 40628,
+      "sha256": "f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7",
+      "expected_sha256": "f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7",
+      "priority": 2,
+      "verified": true
+    },
+    "DATA_Dynamic_Knee.mat": {
+      "status": "ACQUIRED_AND_VERIFIED",
+      "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\DATA_Dynamic_Knee.mat",
+      "size_bytes": 5212093,
+      "sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9",
+      "expected_sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9",
+      "priority": 3,
+      "verified": true
+    },
+    "DATA_Dynamic_Knee.xlsx": {
+      "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+      "expected_size_bytes": 10035204,
+      "expected_sha256": "5101bc530624b9d4f604fc8f92143d0c7ee7aced5ea1af1079a83cf11fd82c15",
+      "dryad_file_id": 4845349,
+      "priority": 3,
+      "verified": false
+    },
+    "LSTM_Data_Outputs.zip": {
+      "status": "ACQUIRED_AND_VERIFIED",
+      "path": "D:\\SUBJECT-01\\research\\muscle_force_biomechanics_2026_11_10\\raw_data\\LSTM_Data_Outputs.zip",
+      "size_bytes": 8939260,
+      "sha256": "863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0",
+      "expected_sha256": "863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0",
+      "priority": 4,
+      "verified": true
+    },
+    "DATA_Fatiguing_Isometric_Knee.xlsx": {
+      "status": "PENDING_OWNER_ASSISTED_ACQUISITION",
+      "expected_size_bytes": 681704952,
+      "expected_sha256": "08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25",
+      "dryad_file_id": 4845340,
+      "priority": 5,
+      "verified": false
+    }
+  },
+  "isometric_knee_schema": {
+    "status": "VERIFIED",
+    "sheets_found": [
+      "S11 Mag",
+      "S11 Pha",
+      "sEMG",
+      "Fasc. Len"
+    ],
+    "all_expected_sheets_present": true,
+    "sheets_info": {
+      "S11 Mag": {
+        "num_rows": 80,
+        "num_participants": 16,
+        "force_levels_per_part": 5,
+        "measure_column": "Effect (dB)",
+        "fixed_regression": {
+          "slope": 0.003922266432945676,
+          "intercept": 0.09180086887204601,
+          "r_squared": 0.4537641549021935,
+          "p_value": 7.544001135456617e-12
+        },
+        "mean_per_participant_r2": 0.9178481959891128,
+        "sd_per_participant_r2": 0.07647532049336463
+      },
+      "S11 Pha": {
+        "num_rows": 80,
+        "num_participants": 16,
+        "force_levels_per_part": 5,
+        "measure_column": "Effect (°)",
+        "fixed_regression": {
+          "slope": 0.03933442080199353,
+          "intercept": 0.619386776135332,
+          "r_squared": 0.10884961147176181,
+          "p_value": 0.0028021730364927986
+        },
+        "mean_per_participant_r2": 0.8221640886653669,
+        "sd_per_participant_r2": 0.1955299237325043
+      },
+      "sEMG": {
+        "num_rows": 80,
+        "num_participants": 16,
+        "force_levels_per_part": 5,
+        "measure_column": "Effect (mV)",
+        "fixed_regression": {
+          "slope": 0.0032662115842856418,
+          "intercept": -0.004932585629575312,
+          "r_squared": 0.38725381018826177,
+          "p_value": 7.181842831072122e-10
+        },
+        "mean_per_participant_r2": 0.9809360006374641,
+        "sd_per_participant_r2": 0.022650532272113923
+      },
+      "Fasc. Len": {
+        "num_rows": 80,
+        "num_participants": 16,
+        "force_levels_per_part": 5,
+        "measure_column": "Effect (%)",
+        "fixed_regression": {
+          "slope": 0.152963339213811,
+          "intercept": 1.657642144080838,
+          "r_squared": 0.4495058382967523,
+          "p_value": 1.0258213449385031e-11
+        },
+        "mean_per_participant_r2": 0.9147307997741954,
+        "sd_per_participant_r2": 0.0858797794152138
+      }
+    }
+  },
+  "reproduced_author_lme_outputs": {
+    "status": "REPRODUCED_CONFIRMED",
+    "n_participants": 6,
+    "n_cv_folds": 5,
+    "total_evaluated_folds": 30,
+    "mean_r2": 0.9844394743899613,
+    "sd_r2": 0.004623671957375541,
+    "mean_nrmse_pct": 3.2829855405708623,
+    "sd_nrmse_pct": 0.576859456594624,
+    "per_participant_mean_r2": [
+      0.9845035742396654,
+      0.9825931331699664,
+      0.9827556231165916,
+      0.9838401558572285,
+      0.9929898441055224,
+      0.9799545158507932
+    ],
+    "per_participant_mean_nrmse_pct": [
+      3.5124585182442907,
+      2.99844160841955,
+      3.3570077106105876,
+      3.205076104311805,
+      2.4354549165774384,
+      4.189474385261503
+    ],
+    "published_benchmark_comparison": {
+      "published_mean_r2": 0.984,
+      "published_sd_r2": 0.005,
+      "published_mean_nrmse_pct": 3.3,
+      "published_sd_nrmse_pct": 0.6,
+      "delta_r2": 0.00043947438996128074,
+      "delta_nrmse": -0.017014459429137485
+    },
+    "scientific_interpretation": "Independent extraction from LME_Data_Outputs.mat confirms author-reported metrics (R2 = 0.984 +/- 0.005, NRMSE = 3.28 +/- 0.58%) across all 30 intra-participant CV folds."
+  },
+  "reproduced_author_lstm_outputs": {
+    "status": "REPRODUCED_CONFIRMED",
+    "n_participants": 18,
+    "n_cv_folds": 5,
+    "total_evaluated_folds": 90,
+    "mean_r2": 0.988198514117135,
+    "sd_r2": 0.005887981611028017,
+    "min_r2": 0.9704465270042419,
+    "max_r2": 0.997087299823761,
+    "mean_rmse_pct": 2.7361958714364647,
+    "sd_rmse_pct": 0.666160840745041,
+    "published_benchmark_comparison": {
+      "published_mean_r2": 0.988,
+      "published_sd_r2": 0.005,
+      "published_mean_rmse_pct": 2.7,
+      "published_sd_rmse_pct": 0.6,
+      "delta_r2": 0.00019851411713500688,
+      "delta_rmse": 0.03619587143646452
+    },
+    "scientific_interpretation": "Independent extraction from LSTM_Data_Outputs.zip confirms author-reported fatigue LSTM metrics (R2 = 0.9882 +/- 0.0059, RMSE = 2.74 +/- 0.67%) across all 90 CV folds."
+  },
+  "dynamic_knee_and_loso_evaluation": {
+    "status": "VALIDATED_ON_RAW_ARRAYS",
+    "total_observations": 3226,
+    "n_participants": 6,
+    "decoupling_analysis": {
+      "active_points_count": 1821,
+      "passive_points_count": 1405,
+      "torque_vs_emg_r2": 0.11798615992192046,
+      "torque_vs_fascicle_strain_r2": 0.016071816170117523,
+      "torque_vs_fascicle_velocity_r2": 0.02702391473207902,
+      "published_values_extended_data_fig3": {
+        "torque_vs_activation_r2": 0.13,
+        "torque_vs_fascicle_strain_r2": 0.01,
+        "torque_vs_fascicle_strain_rate_r2": 0.03
+      },
+      "scientific_significance": "Confirms active dynamic decoupling on raw observations: torque vs sEMG R2 = 0.1180 (pub 0.13), torque vs strain R2 = 0.0161 (pub 0.01), torque vs strain rate R2 = 0.0270 (pub 0.03)."
+    },
+    "models_evaluation": {
+      "M0_constant_baseline": {
+        "intra_participant_5fold": {
+          "r_squared_mean": -0.0007551964295625806,
+          "r_squared_sd": 0.0013339563320202217,
+          "nrmse_pct_mean": 28.015928239493963,
+          "nrmse_pct_sd": 2.69637326602926
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": -0.07210682237011497,
+          "r_squared_sd": 0.10647127839304121,
+          "r_squared_ci95": [
+            -0.18384157654105965,
+            0.03962793180082973
+          ],
+          "r_squared_per_subject": [
+            -1.6880381932482535e-05,
+            -0.2684137397129662,
+            -0.017560242521897917,
+            -0.019454937981624232,
+            -0.004205080259396032,
+            -0.12299005336287294
+          ],
+          "nrmse_pct_mean": 27.53862073927503,
+          "nrmse_pct_sd": 2.5657460950573294,
+          "rmse_mean": 0.21813837596777877
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -0.07135162594055239,
+          "is_generalizable_cross_subject": false
+        }
+      },
+      "M1_static_semg": {
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.487113768329502,
+          "r_squared_sd": 0.053216039846176316,
+          "nrmse_pct_mean": 19.987483472523632,
+          "nrmse_pct_sd": 1.7604190896362208
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": 0.46280399548440415,
+          "r_squared_sd": 0.0650629905895379,
+          "r_squared_ci95": [
+            0.394524574321526,
+            0.5310834166472823
+          ],
+          "r_squared_per_subject": [
+            0.5141976180678947,
+            0.3633282265614385,
+            0.4523453398126087,
+            0.5500701620281081,
+            0.4641239483881252,
+            0.43275867804824997
+          ],
+          "nrmse_pct_mean": 19.5014042048644,
+          "nrmse_pct_sd": 2.144981200527033,
+          "rmse_mean": 0.1546070135424303
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -0.024309772845097832,
+          "is_generalizable_cross_subject": true
+        }
+      },
+      "M2_static_length": {
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.09953470327168405,
+          "r_squared_sd": 0.09115993509421093,
+          "nrmse_pct_mean": 26.51932093109051,
+          "nrmse_pct_sd": 2.7642369039647
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": -0.012203571372370214,
+          "r_squared_sd": 0.18819114599785053,
+          "r_squared_ci95": [
+            -0.20969806709538313,
+            0.1852909243506427
+          ],
+          "r_squared_per_subject": [
+            0.06139005419015242,
+            -0.3504152548314654,
+            0.03339049321213694,
+            0.22221804314495686,
+            -0.011980350650503624,
+            -0.027824413299498474
+          ],
+          "nrmse_pct_mean": 26.688116640924008,
+          "nrmse_pct_sd": 3.0730586484226947,
+          "rmse_mean": 0.2110442733224017
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -0.11173827464405427,
+          "is_generalizable_cross_subject": false
+        }
+      },
+      "M3_hill_dynamic": {
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.37160460076213847,
+          "r_squared_sd": 0.08648226798656629,
+          "nrmse_pct_mean": 22.226109010026544,
+          "nrmse_pct_sd": 3.1765935930216376
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": 0.3103205782202935,
+          "r_squared_sd": 0.08188852830890335,
+          "r_squared_ci95": [
+            0.2243838381142991,
+            0.39625731832628797
+          ],
+          "r_squared_per_subject": [
+            0.37549159852567116,
+            0.4265079699936172,
+            0.31934714229640204,
+            0.27247776907212096,
+            0.2703384050579668,
+            0.1977605843759831
+          ],
+          "nrmse_pct_mean": 22.194160873574457,
+          "nrmse_pct_sd": 3.2903031534925935,
+          "rmse_mean": 0.17721354972717449
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -0.06128402254184495,
+          "is_generalizable_cross_subject": true
+        }
+      },
+      "M4_subject01_biomechanical": {
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.38292736784724996,
+          "r_squared_sd": 0.09967542721865723,
+          "nrmse_pct_mean": 22.013068164289624,
+          "nrmse_pct_sd": 3.3304957425799593
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": 0.32514285768398277,
+          "r_squared_sd": 0.09458807467405614,
+          "r_squared_ci95": [
+            0.2258787610118855,
+            0.42440695435608
+          ],
+          "r_squared_per_subject": [
+            0.38828136085440657,
+            0.4587631614161398,
+            0.32622726123518675,
+            0.23804106948684944,
+            0.33749929938498924,
+            0.20204499372632478
+          ],
+          "nrmse_pct_mean": 21.92937489178148,
+          "nrmse_pct_sd": 3.2312247887307826,
+          "rmse_mean": 0.17519655642632948
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -0.05778451016326719,
+          "is_generalizable_cross_subject": true
+        }
+      },
+      "UWB_radar_ridge": {
+        "intra_participant_5fold": {
+          "r_squared_mean": 0.9762889395676149,
+          "r_squared_sd": 0.009909723361533443,
+          "nrmse_pct_mean": 4.191328046580975,
+          "nrmse_pct_sd": 0.9540989646719276
+        },
+        "cross_subject_loso": {
+          "r_squared_mean": -2.4457025356908573,
+          "r_squared_sd": 2.207722870792136,
+          "r_squared_ci95": [
+            -4.762565599313602,
+            -0.1288394720681123
+          ],
+          "r_squared_per_subject": [
+            -3.056472995180669,
+            0.1702196749917052,
+            -5.837461824455037,
+            -2.3938854187939596,
+            -3.320475115265209,
+            -0.23613953544197286
+          ],
+          "nrmse_pct_mean": 47.25387622411128,
+          "nrmse_pct_sd": 17.72817127671256,
+          "rmse_mean": 0.3681805423206141
+        },
+        "generalization_gap": {
+          "delta_r2_loso_vs_intra": -3.421991475258472,
+          "is_generalizable_cross_subject": false
+        }
+      }
+    },
+    "radar_generalization_collapse_finding": {
+      "intra_r2": 0.9762889395676149,
+      "loso_r2": -2.4457025356908573,
+      "delta_r2": -3.421991475258472,
+      "scientific_conclusion": "CRITICAL SCIENTIFIC AUDIT: UWB radar achieves near-perfect intra-participant accuracy (R2 = 0.9763) due to memorizing participant-specific dielectric tissue impedance and antenna coupling, but collapses completely under cross-subject Leave-One-Subject-Out (LOSO) cross-validation (R2 = -2.4457). Raw radar cannot predict muscle torque on unseen human subjects without individual calibration."
+    }
+  },
+  "epistemic_invariants": {
+    "target_cpe45": "NOT EXTERNALLY VALIDATED",
+    "biological_interventions": "NO_GO",
+    "distinction_enforced": "AUTHOR_REPORTED != INDEPENDENT_REPRODUCTION != CROSS_SUBJECT_LOSO != THEORETICAL_SIMULATION"
+  }
+}

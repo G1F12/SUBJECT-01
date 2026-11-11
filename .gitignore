@@ -10,3 +10,6 @@ tmp/
 *.log
 # Raw binary data archives pending distribution license clearance
 2024_829_Ergometer_Dryad_Raw_V3.xlsx
+research/muscle_force_biomechanics_2026_11_10/raw_data/*.xlsx
+research/muscle_force_biomechanics_2026_11_10/raw_data/*.mat
+research/muscle_force_biomechanics_2026_11_10/raw_data/*.zip

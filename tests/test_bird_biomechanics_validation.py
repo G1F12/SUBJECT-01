@@ -66,9 +66,23 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
             files_audit["LME_Data_Outputs.mat"]["expected_sha256"],
             files_audit["CODE_LME_Estimate_Torque.m"]["expected_sha256"],
         )
-        # Rule: No unacquired file shall be marked VERIFIED
+        # Rule: Acquired files must be ACQUIRED_AND_VERIFIED, unacquired files must be PENDING
+        acquired_files = {
+            "arxiv_2510_20866.pdf",
+            "DATA_Dynamic_Knee.mat",
+            "DATA_Isometric_Knee.xlsx",
+            "LME_Data_Outputs.mat",
+            "LSTM_Data_Outputs.zip",
+        }
         for fname, fmeta in files_audit.items():
-            if fname != "arxiv_2510_20866.pdf":
+            if fname in acquired_files:
+                self.assertEqual(
+                    fmeta["status"],
+                    "ACQUIRED_AND_VERIFIED",
+                    f"Acquired file {fname} must be ACQUIRED_AND_VERIFIED",
+                )
+                self.assertEqual(fmeta["sha256"], fmeta["expected_sha256"])
+            else:
                 self.assertEqual(
                     fmeta["status"],
                     "PENDING_OWNER_ASSISTED_ACQUISITION",
@@ -173,9 +187,55 @@ class TestBirdBiomechanicsValidation(unittest.TestCase):
         self.assertIn("model_taxonomy_status", dyn)
 
         status = dyn["model_taxonomy_status"]
-        self.assertEqual(status["SUBJECT01_INDEPENDENT_REPRODUCTION"]["status"], "BLOCKED_PENDING_RAW_DATA_ARRAYS")
-        self.assertEqual(status["SUBJECT01_NEW_MODEL_FIT"]["status"], "NOT_FIT_ON_RAW_ARRAYS")
-        self.assertEqual(status["SUBJECT01_HELD_OUT_PREDICTION"]["status"], "NOT_EXECUTED_ON_RAW_OBSERVATIONS")
+        self.assertEqual(status["SUBJECT01_INDEPENDENT_REPRODUCTION"]["status"], "REPRODUCED_CONFIRMED_ON_RAW_ARRAYS")
+        self.assertEqual(status["SUBJECT01_NEW_MODEL_FIT"]["status"], "FIT_ON_RAW_OBSERVATIONS")
+        self.assertEqual(status["SUBJECT01_HELD_OUT_PREDICTION"]["status"], "EXECUTED_LOSO_ON_RAW_OBSERVATIONS")
+
+    def test_empirical_author_metrics_reproduction(self):
+        """Verify independent reproduction of author LME and LSTM metrics from raw outputs."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        self.assertTrue(empirical_file.is_file(), "Empirical validation JSON must exist")
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        lme = emp["reproduced_author_lme_outputs"]
+        self.assertEqual(lme["status"], "REPRODUCED_CONFIRMED")
+        self.assertAlmostEqual(lme["mean_r2"], 0.984, delta=0.002)
+        self.assertAlmostEqual(lme["mean_nrmse_pct"], 3.3, delta=0.1)
+
+        lstm = emp["reproduced_author_lstm_outputs"]
+        self.assertEqual(lstm["status"], "REPRODUCED_CONFIRMED")
+        self.assertAlmostEqual(lstm["mean_r2"], 0.988, delta=0.002)
+        self.assertAlmostEqual(lstm["mean_rmse_pct"], 2.7, delta=0.1)
+
+    def test_cross_subject_loso_radar_generalization_collapse(self):
+        """Verify critical audit finding: UWB radar collapses under cross-subject LOSO (R2 < 0)."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_and_loso_evaluation"]
+        radar = dyn["models_evaluation"]["UWB_radar_ridge"]
+        # Intra-participant 5-fold CV achieves high accuracy
+        self.assertGreater(radar["intra_participant_5fold"]["r_squared_mean"], 0.95)
+        # Cross-subject LOSO completely collapses (R2 < 0)
+        self.assertLess(radar["cross_subject_loso"]["r_squared_mean"], 0.0)
+        self.assertGreater(radar["cross_subject_loso"]["nrmse_pct_mean"], 35.0)
+
+    def test_cross_subject_loso_physiological_models(self):
+        """Verify that physiological models maintain positive generalization across human subjects."""
+        empirical_file = CYCLE12_DIR / "bird2026_empirical_validation.json"
+        with open(empirical_file, "r", encoding="utf-8") as f:
+            emp = json.load(f)
+
+        dyn = emp["dynamic_knee_and_loso_evaluation"]
+        m1 = dyn["models_evaluation"]["M1_static_semg"]
+        m4 = dyn["models_evaluation"]["M4_subject01_biomechanical"]
+
+        # sEMG maintains positive cross-subject generalization
+        self.assertGreater(m1["cross_subject_loso"]["r_squared_mean"], 0.40)
+        # Multiscale model maintains positive cross-subject generalization
+        self.assertGreater(m4["cross_subject_loso"]["r_squared_mean"], 0.25)
 
     def test_physical_constraints_audit(self):
         """Verify that all physical constraints are marked unmeasured in Bird 2026 and classified appropriately."""

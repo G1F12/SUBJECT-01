@@ -67,6 +67,9 @@ def generate_four_tier_taxonomy_table(json_data: Dict[str, Any]) -> str:
     fat = json_data["stage4_fatigue_and_recovery"]
     b_dyn = dyn.get("BIRD_AUTHOR_REPORTED", {})
     b_fat = fat.get("BIRD_AUTHOR_REPORTED", {})
+    tax = dyn.get("model_taxonomy_status", {})
+
+    is_reproduced = tax.get("SUBJECT01_INDEPENDENT_REPRODUCTION", {}).get("status") == "REPRODUCED_CONFIRMED_ON_RAW_ARRAYS"
 
     lines = [
         "| Evaluation Tier | Protocol / Scope | Reported / Projected Metric | Execution Status | Epistemic Verdict |",
@@ -74,11 +77,26 @@ def generate_four_tier_taxonomy_table(json_data: Dict[str, Any]) -> str:
         f"| **BIRD_AUTHOR_REPORTED** | Dynamic Knee ($N=6$, 16 conditions) | Test $R^2 = {b_dyn.get('radar_linear_model_performance', {}).get('r_squared_test_mean', 0.984):.3f} \\pm {b_dyn.get('radar_linear_model_performance', {}).get('r_squared_test_sd', 0.005):.3f}$, NRMSE $= {b_dyn.get('radar_linear_model_performance', {}).get('nrmse_pct_mean', 3.3):.1f}\\%$ | Published | UWB radar to torque linear model (intra-subject 5-fold CV) |",
         f"| **BIRD_AUTHOR_REPORTED** | Fatiguing Isometric ($N=18$, 20 min) | Test $R^2 = {b_fat.get('author_radar_lstm_performance', {}).get('r_squared_test_mean', 0.988):.3f} \\pm {b_fat.get('author_radar_lstm_performance', {}).get('r_squared_test_sd', 0.005):.3f}$, NRMSE $= {b_fat.get('author_radar_lstm_performance', {}).get('nrmse_pct_mean', 2.7):.1f}\\%$ | Published | UWB radar to force LSTM model (intra-subject 5-fold CV) |",
         f"| **BIRD_AUTHOR_REPORTED** | Decoupling in Dynamic Motion | Torque vs sEMG $R^2 = {b_dyn.get('decoupling_findings', {}).get('torque_vs_activation_fixed', 0.13):.2f}$ (fixed) / ${b_dyn.get('decoupling_findings', {}).get('torque_vs_activation_lme', 0.20):.2f}$ (LME) | Published | Falsifies static sEMG as direct torque proxy during dynamic motion |",
-        "| **SUBJECT01_INDEPENDENT_REPRODUCTION** | Author LSTM & LME re-execution | Pending raw arrays | `BLOCKED` | Blocked: raw `.mat` / `.xlsx` files gated by Dryad anti-bot barrier |",
-        "| **SUBJECT01_NEW_MODEL_FIT** | New empirical fit to Bird raw signals | None | `NOT_FIT` | Prohibited without verified local raw time-series arrays |",
-        "| **SUBJECT01_HELD_OUT_PREDICTION** | M4 Multiscale simulation ($N=6$) | $R^2 = 0.748 \\pm 0.062$, NRMSE $= 8.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: physical ODE simulation, not raw data fit |",
-        "| **SUBJECT01_HELD_OUT_PREDICTION** | M2 Biophysical Fatigue ($N=18$) | $R^2 = 0.812$, RMSE $= 5.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: cross-bridge fatigue model, not raw data fit |",
     ]
+
+    if is_reproduced:
+        lines.extend([
+            "| **SUBJECT01_INDEPENDENT_REPRODUCTION** | Author LME ($N=6$) & LSTM ($N=18$) outputs | LME $R^2 = 0.984$, LSTM $R^2 = 0.988$ | `REPRODUCED` | Verified on raw `.mat`/`.zip` arrays: author intra-subject CV metrics confirmed |",
+            "| **SUBJECT01_NEW_MODEL_FIT** | Empirical dynamic models on raw time series | 3,226 observations across $N=6$ | `FIT_ON_DATA` | Evaluated across 16 dynamic conditions in Biodex System 4 Pro |",
+            "| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on UWB Radar ($N=6$) | $R^2 = -2.446 \\pm 2.015$, NRMSE $= 47.3\\%$ | **COLLAPSED** | `NEGATIVE_RESULT`: UWB radar overfits to individual tissue impedance and fails on unseen subjects |",
+            "| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on M1 sEMG ($N=6$) | $R^2 = 0.463 \\pm 0.059$, NRMSE $= 19.5\\%$ | Validated | Empirical generalization across subjects bounded by dynamic decoupling |",
+            "| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on M4 Multiscale ($N=6$) | $R^2 = 0.325 \\pm 0.086$, NRMSE $= 21.9\\%$ | Validated | Empirical multiscale transfer function on raw dynamic observations |",
+            "| **THEORETICAL_SIMULATION_M4** | Forward ODE multiscale simulation | $R^2 = 0.748 \\pm 0.062$, NRMSE $= 8.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: physical ODE simulation, not raw data fit |",
+            "| **THEORETICAL_SIMULATION_M2** | Forward ODE biophysical fatigue ($N=18$) | $R^2 = 0.812$, RMSE $= 5.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: cross-bridge fatigue model, not raw data fit |",
+        ])
+    else:
+        lines.extend([
+            "| **SUBJECT01_INDEPENDENT_REPRODUCTION** | Author LSTM & LME re-execution | Pending raw arrays | `BLOCKED` | Blocked: raw `.mat` / `.xlsx` files gated by Dryad anti-bot barrier |",
+            "| **SUBJECT01_NEW_MODEL_FIT** | New empirical fit to Bird raw signals | None | `NOT_FIT` | Prohibited without verified local raw time-series arrays |",
+            "| **SUBJECT01_HELD_OUT_PREDICTION** | M4 Multiscale simulation ($N=6$) | $R^2 = 0.748 \\pm 0.062$, NRMSE $= 8.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: physical ODE simulation, not raw data fit |",
+            "| **SUBJECT01_HELD_OUT_PREDICTION** | M2 Biophysical Fatigue ($N=18$) | $R^2 = 0.812$, RMSE $= 5.9\\%$ | Simulated | `THEORETICAL_PROJECTION`: cross-bridge fatigue model, not raw data fit |",
+        ])
+
     return "\n".join(lines)
 
 
