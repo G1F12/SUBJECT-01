@@ -448,5 +448,35 @@
     "hypothesis_id": "HYP-0044",
     "status": "COMPLETED",
     "description": "Formulated three testable computational questions, missing mechanisms, and falsification criteria for morphogenetic synthesis, maintenance turnover, and multiscale mechanics."
+  },
+  {
+    "id": "EXP-0104",
+    "name": "Li et al. (2010) Forensic Recalculation & Dual-Baseline Verification",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0105",
+    "name": "Tombolato et al. (2010) Mode Conflation & Graphical Provenance Audit",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0106",
+    "name": "Cryptographic & Chronological Pre-Registration Audit",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0107",
+    "name": "Leakage-Free Prospective VML LOSO Cross-Validation",
+    "cycle": "Cycle 11",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0108",
+    "name": "TARGET-CPE45 Mass-Energy Thermodynamic Reconciliation Simulation",
+    "cycle": "Cycle 11",
+    "status": "COMPLETED"
   }
 ]

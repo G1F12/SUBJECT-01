@@ -808,11 +808,12 @@
   },
   {
     "id": "SRC-0151",
-    "citation": "Tombolato L, Novitskaya EE, Chen PY, Sheppard FA, McKittrick J (2010). Microstructure, elastic properties and deformation mechanisms of horn keratin. Acta Biomaterialia 6(2):319-330. DOI: 10.1016/j.actbio.2009.08.033.",
+    "citation": "Tombolato L, Novitskaya EE, Chen PY, Sheppard FA, McKittrick J (2010). Microstructure, elastic properties and deformation mechanisms of horn keratin. Acta Biomaterialia 6(2):319-330. DOI: 10.1016/j.actbio.2009.06.033.",
     "cycle": "Cycle 10",
     "supports_hypotheses": [
       "HYP-0044"
-    ]
+    ],
+    "doi": "10.1016/j.actbio.2009.06.033"
   },
   {
     "id": "SRC-0152",
@@ -820,6 +821,27 @@
     "cycle": "Cycle 10",
     "supports_hypotheses": [
       "HYP-0044"
+    ]
+  },
+  {
+    "id": "SRC-0153",
+    "citation": "Spei M, Holzem R (1987). Thermoanalytical investigations on extended and chemically modified keratins. Colloid Polym Sci 265:965-970.",
+    "supports_hypotheses": [
+      "HYP-0045"
+    ]
+  },
+  {
+    "id": "SRC-0154",
+    "citation": "Chapman BM (1969). A mechanical model for alpha-keratin fibres. J Text Inst 60:127-143.",
+    "supports_hypotheses": [
+      "HYP-0045"
+    ]
+  },
+  {
+    "id": "SRC-0155",
+    "citation": "Meyer W et al. (2013). The skin of the pangolin (Pholidota) - a unique morphological adaptation. Zoology 116(4):247-257.",
+    "supports_hypotheses": [
+      "HYP-0047"
     ]
   }
 ]

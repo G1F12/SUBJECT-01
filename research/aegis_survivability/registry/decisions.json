@@ -197,5 +197,54 @@
     "cycle": "Cycle 10",
     "rationale": "Forensic audit proved Cycle 9 parameters were post-hoc fitted to Zhang 2018. Status MATERIALS_TRUE_HOLDOUT = PASS on Zhang 2018 is revoked. True holdout status is ratified on Li et al. (2010). Core temperature 40.0°C is designated as an epistemic scenario threshold, not a medical diagnosis.",
     "status": "RATIFIED"
+  },
+  {
+    "id": "DEC-0056",
+    "title": "Rectify Tombolato 2010 DOI and Classify Holdout as NOT_VERIFIED",
+    "cycle": "Cycle 10B",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0057",
+    "title": "Adopt Four-Tier Pre-Registration Epistemic Taxonomy",
+    "cycle": "Cycle 10B",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0058",
+    "title": "Formulate 9-Parameter Physics-Informed Keratin Micromechanics Model",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0059",
+    "title": "Eliminate Dynamic LOSO Leakage and Document Single-Cluster Dependency",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0060",
+    "title": "Classify Biological Protection Architecture Feasibility as CONDITIONAL",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0061",
+    "title": "Reconcile TARGET-CPE45 Composite Heat Capacity (270,450 J/K)",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0062",
+    "title": "Ratify Cycle 11 Forensic Grounding and Authorize Cycle 12 Empirical Scope",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
   }
 ]

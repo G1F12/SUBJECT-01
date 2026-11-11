@@ -138,5 +138,47 @@
     "cycle": "Cycle 9A Forensic Repair",
     "status": "RESOLVED",
     "resolution": "Rectified citation to Zhang et al. (2018) JRSI 15:20180093; reconstructed canonical 28 group means matrix in KERATIN_PRIMARY_DATA_RECONSTRUCTION.csv; eliminated synthetic rows H25-H28; reclassified parameters as POST_HOC_CALIBRATED; validated model on independent Li et al. (2010) dataset."
+  },
+  {
+    "id": "ISS-0045",
+    "title": "Misattribution of Tombolato DOI and Graphical Bending Curve Conflation",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0046",
+    "title": "Conflation of Code String Hash with Chronological Pre-Registration",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0047",
+    "title": "Single-Parameter Disulfide Dogma in Keratin Mechanics",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0048",
+    "title": "Single Collaborative Lab Cluster and Denervation Leakage in VML Cohorts",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0049",
+    "title": "Conflation of Mathematical Optimization with Biological Realizability",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0050",
+    "title": "Genealogy Drift in TARGET-CPE45 Heat Capacity Constant (270,450 J/K)",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0051",
+    "title": "Git Credential Manager Publication Failure for Pull Request #9",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
   }
 ]

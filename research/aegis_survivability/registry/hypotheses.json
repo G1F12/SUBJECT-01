@@ -409,5 +409,32 @@
     "related_experiments": [
       "EXP-0099"
     ]
+  },
+  {
+    "id": "HYP-0045",
+    "statement": "Hydration softening in alpha-keratin is governed by glass transition depression driven by [SS] crosslinks and water sorption.",
+    "cycle": "Cycle 11",
+    "status": "PARTIALLY_SUPPORTED",
+    "related_experiments": [
+      "EXP-0104"
+    ]
+  },
+  {
+    "id": "HYP-0046",
+    "statement": "Equine hoof wall high dry stiffness (>14 GPa) is driven by ultra-low porosity and crystalline microfibrils rather than chemical IF variation.",
+    "cycle": "Cycle 11",
+    "status": "UNDER_INVESTIGATION",
+    "related_experiments": [
+      "EXP-0104"
+    ]
+  },
+  {
+    "id": "HYP-0047",
+    "statement": "Imbricated segmented epidermal scales minimize locomotor and metabolic impedance while providing puncture deflection.",
+    "cycle": "Cycle 11",
+    "status": "CONDITIONAL",
+    "related_experiments": [
+      "EXP-0108"
+    ]
   }
 ]

@@ -414,5 +414,41 @@
     "title": "Thermodynamic Parametric Uncertainty and Conservative 40.0°C Safety Threshold Demarcation",
     "cycle": "Cycle 10",
     "description": "The 1-node model confirms 45-minute sprint thermal survivability (T_core = 39.88°C) under nominal conditions, but identifies 40.0°C as an epistemic scenario safety threshold rather than a clinical heat stroke diagnosis."
+  },
+  {
+    "id": "FND-0116",
+    "experiment_id": "EXP-0104",
+    "title": "Li et al. (2010) Corrected MAE is 0.27833 GPa with 8% Moisture Overprediction",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0117",
+    "experiment_id": "EXP-0105",
+    "title": "Tombolato et al. (2010) Bending Lacks Tabular Ground Truth and Had Corrupted DOI",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0118",
+    "experiment_id": "EXP-0106",
+    "title": "Pre-Registration Hash Is Reproducible Code String but Lacks Chronological Precedence",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0119",
+    "experiment_id": "EXP-0107",
+    "title": "VML Cohorts Represent Single Research Cluster; Prospective LOSO Achieves +51.13% Reduction",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0120",
+    "experiment_id": "EXP-0108",
+    "title": "Architecture B Leads Multi-Criteria Trade-offs (72.5/100) but Lacks Primate Placodes",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0121",
+    "experiment_id": "EXP-0108",
+    "title": "TARGET-CPE45 Reconciled to 270,450 J/K from 75 kg Tissue + 6.8 kg Armor First Principles",
+    "cycle": "Cycle 11"
   }
 ]

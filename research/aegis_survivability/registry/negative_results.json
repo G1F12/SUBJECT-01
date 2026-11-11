@@ -317,5 +317,29 @@
     "title": "Refutation of Monolithic Biological Armor for Active Cursorial Human Defense",
     "cycle": "Cycle 10",
     "description": "Continuous rigid osteoderm shells (Architecture A) fail cursorial locomotion requirements due to brittle fracture at >1.75% strain, acute compartment syndrome surge (>45 mmHg), and complete blockage of cutaneous evaporative cooling."
+  },
+  {
+    "id": "NEG-0094",
+    "experiment_id": "EXP-0107",
+    "title": "Refutation of Unassisted Biomaterial Scaffolds for Human-Scale VML Translation",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "NEG-0095",
+    "experiment_id": "EXP-0108",
+    "title": "Refutation of Biological Realization of Scale Armor in Human Physiology",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "NEG-0096",
+    "experiment_id": "EXP-0104",
+    "title": "Refutation of Single-Parameter Disulfide Density Dogma for Keratin Mechanics",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "NEG-0097",
+    "experiment_id": "EXP-0105",
+    "title": "Refutation of Tombolato 2010 Bending as a Validated Prospective Holdout",
+    "cycle": "Cycle 10B"
   }
 ]
