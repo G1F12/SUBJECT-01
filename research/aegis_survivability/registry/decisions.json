@@ -246,5 +246,47 @@
     "cycle": "Cycle 11",
     "status": "RATIFIED",
     "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0063",
+    "title": "Demarcate Linear Tg Parameters as MODEL_ASSUMPTIONS and Benchmark Fox Equation",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0064",
+    "title": "Retain Model 4 (Hill+Microarchitecture) and Record NO_VERIFIED_IMPROVEMENT Across Materials",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0065",
+    "title": "Reclassify VML Multi-Center Validation as INSUFFICIENT_DATA Due to Endpoint Incommensurability",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0066",
+    "title": "Prove Pareto Non-Dominance of Architecture B and Formulate Scale Kinematics Model",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0067",
+    "title": "Incorporate Thermal Conduction Resistance and Cardiac Drift into TARGET-CPE45",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0068",
+    "title": "Ratify Cycle 12 Deliverables and Authorize Cycle 13 Empirical Roadmap",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
   }
 ]

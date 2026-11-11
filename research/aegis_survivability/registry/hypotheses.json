@@ -436,5 +436,32 @@
     "related_experiments": [
       "EXP-0108"
     ]
+  },
+  {
+    "id": "HYP-0048",
+    "statement": "Fox equation models water-plasticized Tg curvature in alpha-keratin without unphysical linear divergence at w > 0.25.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0109"
+    ]
+  },
+  {
+    "id": "HYP-0049",
+    "statement": "Acellular ECM scaffolds fail to restore tetanic contractile force in isolated muscle preparations without viable satellite cells.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0110"
+    ]
+  },
+  {
+    "id": "HYP-0050",
+    "statement": "Segmented scale sliding accommodates limb bending up to 50% skin strain before tile gaping or edge jamming occurs.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0111"
+    ]
   }
 ]

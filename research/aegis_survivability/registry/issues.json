@@ -180,5 +180,29 @@
     "title": "Git Credential Manager Publication Failure for Pull Request #9",
     "cycle": "Cycle 10B",
     "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0052",
+    "title": "Unphysical Divergence of Linear Tg Model at High Hydration (w > 0.25)",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0053",
+    "title": "Incommensurability of Joint Torque and Isolated Contractile Force in VML Literature",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0054",
+    "title": "Conflation of Pareto Optimality with Strict Pareto Dominance in Biological Architecture Selection",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0055",
+    "title": "Cardiac Output Allocation Conflict Between Working Skeletal Muscle and Cutaneous Vasodilation",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
   }
 ]

@@ -450,5 +450,29 @@
     "experiment_id": "EXP-0108",
     "title": "TARGET-CPE45 Reconciled to 270,450 J/K from 75 kg Tissue + 6.8 kg Armor First Principles",
     "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0122",
+    "experiment_id": "EXP-0109",
+    "title": "Linear Tg Model Diverges from Fox Equation by -91°C at w=0.35; 9-Param Model Fails Hoof Wall (>11 GPa Error)",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0123",
+    "experiment_id": "EXP-0110",
+    "title": "Regeneration Priors Are Cluster-Specific; External Isolated Muscle Data (Merritt 2010) Shows 0% ECM Force Gain",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0124",
+    "experiment_id": "EXP-0111",
+    "title": "Architecture B Does Not Strictly Pareto-Dominate A or C; Wins 90.16% of Simplex Weights but Non-Dominated",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0125",
+    "experiment_id": "EXP-0112",
+    "title": "High Humidity (90% RH) Breaches 40°C Threshold at 38.0 min Due to Vapor Deficit Collapse",
+    "cycle": "Cycle 12"
   }
 ]

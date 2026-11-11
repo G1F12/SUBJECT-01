@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Keratin Model Parameter Provenance & Epistemic Audit",
+  "cycle": 12,
+  "date": "2026-11-11",
+  "model_commit": "dd40f36",
+  "evaluated_function": "predict_keratin_mechanics_cycle11",
+  "parameters": {
+    "Tg0_dry": {
+      "symbol": "T_{g0}",
+      "value": 145.0,
+      "unit": "celsius",
+      "canonical_kelvin": 418.15,
+      "literature_sources": [
+        {
+          "citation": "Phillips, D. G. (1985). Effects of water on the thermal transitions of wool and silk. Polymer, 26(10), 1433-1436.",
+          "doi": "10.1016/0032-3861(85)90089-5",
+          "reported_value": "160-175 C dry wool keratin",
+          "conditions": "Wool fibers, dry state (conditioned over P2O5), heating rate 10-20 C/min"
+        },
+        {
+          "citation": "Wortmann, F. J., Rigby, B. J., & Phillips, D. G. (1984). Glass transition temperature of wool. Textile Research Journal, 54(1), 6-8.",
+          "reported_value": "170 C dry",
+          "conditions": "Extrapolated dry DSC peak"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_DERIVED_APPROXIMATION",
+      "uncertainty": "+/- 15.0 C",
+      "notes": "145 C represents an underestimate for completely anhydrous wool keratin (which transitions between 160 C and 175 C). 145 C approximates keratin retaining ~1-2% residual bound water or lower crosslink density horn keratin."
+    },
+    "kappa_ss": {
+      "symbol": "kappa_{[SS]}",
+      "value": 2.5,
+      "unit": "celsius / (mol% cystine)",
+      "literature_sources": [],
+      "provenance_status": "MODEL_ASSUMPTIONS",
+      "uncertainty": "UNQUANTIFIED_HEURISTIC",
+      "notes": "Hypothesized linear shift of Tg with cystine mol% relative to standard wool (7.0 mol%). No direct empirical calorimetric series exists measuring dTg/d[SS] in isolated keratin matrices under matched hydration. Marked strictly as MODEL_ASSUMPTIONS."
+    },
+    "lambda_water_linear": {
+      "symbol": "lambda_w",
+      "value": -750.0,
+      "unit": "celsius / (g water / g dry protein)",
+      "literature_sources": [
+        {
+          "citation": "Phillips, D. G. (1985). Polymer, 26(10), 1433-1436.",
+          "reported_value": "Initial slope dTg/dw ~ -500 to -800 C / (g/g) for w < 0.10",
+          "conditions": "Hydration range w in [0.0, 0.10]"
+        }
+      ],
+      "provenance_status": "MODEL_ASSUMPTIONS",
+      "uncertainty": "HIGH (diverges catastrophically for w > 0.15)",
+      "notes": "Linear slope of -750 C/(g/g) is valid strictly for tangent approximation at low hydration (w < 0.08). At w = 0.35 (saturation), it yields unphysical Tg = -116.2 C (157 K), whereas empirical water-saturated keratin Tg asymptotes at -10 C to -25 C. Replaced by the Fox equation."
+    },
+    "Tg_fox_dry_keratin": {
+      "symbol": "T_{g,ker}",
+      "value": 433.15,
+      "unit": "kelvin",
+      "literature_sources": [
+        {
+          "citation": "Phillips, D. G. (1985). Polymer, 26(10), 1433-1436.",
+          "reported_value": "433.15 K (160 C)"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 10 K",
+      "notes": "Dry keratin reference temperature in the classic Fox plasticization equation."
+    },
+    "Tg_fox_water": {
+      "symbol": "T_{g,water}",
+      "value": 138.15,
+      "unit": "kelvin",
+      "literature_sources": [
+        {
+          "citation": "Johari, G. P., Hallbrucker, A., & Mayer, E. (1987). The glass-liquid transition of hyperquenched glassy water. Nature, 330, 552-553.",
+          "doi": "10.1038/330552a0",
+          "reported_value": "136-140 K"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 2 K",
+      "notes": "Glass transition temperature of pure amorphous solid water."
+    },
+    "phi_IF": {
+      "symbol": "phi_{IF}",
+      "value": 0.45,
+      "unit": "dimensionless volume fraction",
+      "literature_sources": [
+        {
+          "citation": "Feughelman, M. (1997). Mechanical Properties and Structure of Alpha-keratin Fibres: Wool, Human Hair and Related Fibres. UNSW Press.",
+          "reported_value": "0.40 - 0.50 volume fraction of microfibrils (IF) in cortex"
+        },
+        {
+          "citation": "Kasapi, M. A., & Gosline, J. M. (1997). Design complexity and fracture toughness of equine hoof wall. J. Exp. Biol., 200, 1639-1659.",
+          "reported_value": "0.35 - 0.45 for equine hoof matrix"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 0.05",
+      "notes": "Volume fraction of crystalline intermediate filaments embedded in the amorphous disulfide-rich matrix."
+    },
+    "E_IF_axial": {
+      "symbol": "E_{IF}",
+      "value": 4.20,
+      "unit": "GPa",
+      "literature_sources": [
+        {
+          "citation": "Feughelman, M. (1997); Hearle, J. W. S. (2000). A critical review of the structural mechanics of wool and hair fibres. Int. J. Biol. Macromol., 27(2), 123-138.",
+          "reported_value": "4.0 - 4.5 GPa dry axial modulus of isolated microfibrils"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 0.40 GPa",
+      "notes": "Axial Young's modulus of alpha-helical intermediate filaments. Insensitive to water below 80 C."
+    },
+    "E_matrix_dry": {
+      "symbol": "E_{m,dry}",
+      "value": 2.50,
+      "unit": "GPa",
+      "literature_sources": [
+        {
+          "citation": "Feughelman, M. (1997).",
+          "reported_value": "2.0 - 2.8 GPa"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 0.35 GPa",
+      "notes": "Anhydrous modulus of the isotropic sulfur-rich amorphous keratin matrix."
+    },
+    "E_matrix_wet": {
+      "symbol": "E_{m,wet}",
+      "value": 0.020,
+      "unit": "GPa",
+      "literature_sources": [
+        {
+          "citation": "Feughelman, M. (1997); Phillips, D. G. (1985).",
+          "reported_value": "10 - 50 MPa in fully swollen state (rubbery plateau above Tg)"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 0.010 GPa",
+      "notes": "Hydrated rubbery plateau modulus of the matrix when fully plasticized by water."
+    },
+    "porosity_exponent": {
+      "symbol": "m_{porosity}",
+      "value": 2.0,
+      "unit": "dimensionless",
+      "literature_sources": [
+        {
+          "citation": "Gibson, L. J., & Ashby, M. F. (1997). Cellular Solids: Structure and Properties (2nd ed.). Cambridge University Press.",
+          "reported_value": "E/E_s = (1 - p)^2 for isotropic open-cell foams or axial pore alignment"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_THEORY",
+      "uncertainty": "+/- 0.2",
+      "notes": "Gibson-Ashby power law exponent for cellular/porous biomaterials with micro-tubules."
+    },
+    "orientation_order": {
+      "symbol": "n_{fiber}",
+      "value": 4.0,
+      "unit": "dimensionless (cos^4 theta)",
+      "literature_sources": [
+        {
+          "citation": "Krenchel, H. (1964). Fibre Reinforcement. Copenhagen: Akademisk Forlag.",
+          "reported_value": "cos^4(theta) orientation efficiency factor for non-interacting aligned fiber composite"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_THEORY",
+      "uncertainty": "+/- 0.5",
+      "notes": "Classical fiber orientation factor for axial load along orientation angle theta."
+    },
+    "strain_rate_sensitivity": {
+      "symbol": "m_{rate}",
+      "value": 0.08,
+      "unit": "dimensionless",
+      "literature_sources": [
+        {
+          "citation": "Bertram, J. E., & Gosline, J. M. (1987). Functional design of horse hoof keratin: the modulation of mechanical properties through hydration effects. J. Exp. Biol., 130(1), 121-136.",
+          "reported_value": "d(log E)/d(log edot) ~ 0.06 - 0.10"
+        }
+      ],
+      "provenance_status": "EMPIRICAL_BENCHMARK",
+      "uncertainty": "+/- 0.02",
+      "notes": "Logarithmic strain rate sensitivity factor (E proportional to (edot/edot0)^m)."
+    }
+  },
+  "epistemic_verdict": {
+    "empirically_anchored_parameters": 6,
+    "theoretical_standard_exponents": 2,
+    "unverified_model_assumptions": 2,
+    "model_assumption_keys": ["kappa_ss", "lambda_water_linear"],
+    "epistemic_status": "PARTIALLY_CONSTRAINED_PHYSICAL_MODEL"
+  }
+}

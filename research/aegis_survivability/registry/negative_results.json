@@ -341,5 +341,23 @@
     "experiment_id": "EXP-0105",
     "title": "Refutation of Tombolato 2010 Bending as a Validated Prospective Holdout",
     "cycle": "Cycle 10B"
+  },
+  {
+    "id": "NEG-0098",
+    "experiment_id": "EXP-0109",
+    "title": "Refutation of 9-Parameter Keratin Model Generalizability to Equine Hoof Wall Without Constituent Modulus Revision",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "NEG-0099",
+    "experiment_id": "EXP-0111",
+    "title": "Refutation of Pareto Dominance Claim for Architecture B Over Monolithic (A) and Fibrous (C) Architectures",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "NEG-0100",
+    "experiment_id": "EXP-0110",
+    "title": "Refutation of Universal Cross-Laboratory Transferability of Preclinical VML Treatment Priors",
+    "cycle": "Cycle 12"
   }
 ]

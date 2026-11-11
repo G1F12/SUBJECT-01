@@ -478,5 +478,29 @@
     "name": "TARGET-CPE45 Mass-Energy Thermodynamic Reconciliation Simulation",
     "cycle": "Cycle 11",
     "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0109",
+    "name": "Five-Model Physical Comparison on Li 2010 Horn and Kasapi/Bertram Hoof Wall",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0110",
+    "name": "VML Treatment Prior Sensitivity Sweep and External Multi-Center Lab Audit",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0111",
+    "name": "Monte Carlo 100,000-Draw Weight Permutation and Scale Kinematics Modeling",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0112",
+    "name": "TARGET-CPE45 Coupled Thermal Conduction, Cardiovascular Drift, and Humidity Sweep",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
   }
 ]

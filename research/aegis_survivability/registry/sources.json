@@ -843,5 +843,40 @@
     "supports_hypotheses": [
       "HYP-0047"
     ]
+  },
+  {
+    "id": "SRC-0156",
+    "citation": "Johari GP, Hallbrucker A, Mayer E (1987). The glass-liquid transition of hyperquenched water. Nature 330:552-553.",
+    "supports_hypotheses": [
+      "HYP-0048"
+    ]
+  },
+  {
+    "id": "SRC-0157",
+    "citation": "Kasapi MA, Gosline JM (1997). Design complexity and fracture control in the equine hoof wall. J Exp Biol 200:1639-1659.",
+    "supports_hypotheses": [
+      "HYP-0048"
+    ]
+  },
+  {
+    "id": "SRC-0158",
+    "citation": "Sicari BM et al. (2014). Tissue-specific extracellular matrix scaffolds for the repair of volumetric muscle loss. Sci Transl Med 6(234):234ra58.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ]
+  },
+  {
+    "id": "SRC-0159",
+    "citation": "Merritt CA et al. (2010). Repair of a muscle defect using an extracellular matrix scaffold. Biomaterials 31(29):7503-7511.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ]
+  },
+  {
+    "id": "SRC-0160",
+    "citation": "Quarta M et al. (2016). An artificial niche preserves the quiescence of muscle stem cells. Nat Biotechnol 34(7):752-759.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ]
   }
 ]
