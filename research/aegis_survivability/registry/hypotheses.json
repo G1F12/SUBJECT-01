@@ -399,5 +399,15 @@
       "EXP-0095",
       "EXP-0096"
     ]
+  },
+  {
+    "id": "HYP-0044",
+    "title": "Bovid Horn Hydration-Softening Model Transferability Across True Independent Holdouts",
+    "statement": "The Hill-type matrix softening and microbuckling model calibrated in Cycle 9 transfers to unseen bovid horn sheaths (Bos taurus) with positive error reduction over the naive baseline (MAE < 0.50 GPa), but fails on ungulate hoof wall without macromolecular crosslink scaling.",
+    "cycle": "Cycle 10",
+    "status": "VALIDATED",
+    "related_experiments": [
+      "EXP-0099"
+    ]
   }
 ]

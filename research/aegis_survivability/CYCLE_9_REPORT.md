@@ -1,6 +1,9 @@
 # AEGIS-01 — Research Cycle 9 Report
 ## Independent Prediction, Biological Architecture & Canonical Integration
 
+> [!NOTE] HISTORICAL CONTEXT & CYCLE 9A CORRIGENDUM
+> This report documents the historical Cycle 9 research. For critical forensic repairs, citation rectification (Zhang et al. 2018 JRSI 15:20180093), reclassification of the dataset as `DEVELOPMENT_SET`, and genuine pre-registered true holdout validation on Li et al. (2010), refer to [`CYCLE_9A_FORENSIC_REPORT.md`](file:///D:/AEGIS-01/CYCLE_9A_FORENSIC_REPORT.md) and [`CYCLE_10_RESEARCH_REPORT.md`](file:///D:/AEGIS-01/CYCLE_10_RESEARCH_REPORT.md).
+
 **Document ID:** AEGIS-REP-C9-001  
 **Cycle:** 9  
 **Date:** November 11, 2026  
@@ -73,10 +76,10 @@ Tracing the provenance of each micromechanical parameter in `aegis/cycle8_models
 
 ---
 
-## 4. Phase 2: Independent Validation on True Holdout (Huang et al. 2018)
+## 4. Phase 2: Independent Validation & Reclassification (Zhang et al. 2018)
 
-### 4.1 True Holdout Experimental Matrix
-Rather than re-evaluating previously calibrated pangolin or horn data, 28 independent experimental observations were extracted from Huang et al. (2018) (*Microstructure and mechanical properties of different keratinous horns*, J. R. Soc. Interface 15:20180217, PMC6030630; [`SRC-0149`](file:///D:/AEGIS-01/registry/sources.json)):
+### 4.1 Development Experimental Matrix
+Rather than re-evaluating previously calibrated pangolin or horn data, 28 independent experimental observations (group means) were extracted from Zhang et al. (2018) (*Microstructure and mechanical properties of different keratinous horns*, J. R. Soc. Interface 15:20180093, PMC6030630; [`SRC-0149`](file:///D:/AEGIS-01/registry/sources.json)):
 - 4 species: Mountain goat ($p = 0.00$), Pronghorn ($p = 0.058$), Domestic sheep ($p = 0.077$), Bighorn sheep ($p = 0.113$).
 - 3 orientations: Longitudinal ($L$), Radial ($R$), Transverse ($T$).
 - 2 hydration states: Ambient dry ($w \approx 0.10\text{--}0.12$) vs Fully hydrated ($w \approx 0.22\text{--}0.52$).

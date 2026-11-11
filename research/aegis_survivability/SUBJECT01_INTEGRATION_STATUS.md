@@ -1,41 +1,47 @@
 # Canonical Integration Status & Pull Request Dossier
-## SUBJECT-01 Isolated Package Deployment (Cycle 4C)
+## SUBJECT-01 Package Synchronization & PR #9 Status (Cycle 10)
+
 **Target Repository:** `https://github.com/G1F12/SUBJECT-01.git`  
-**Target Base SHA:** `5f2846cbf025efe7a747dbcf6a2355dedabcb5b6` (`origin/main`)  
-**Feature Branch:** `feature/aegis-survivability-research` (Commit `af16cd9`)  
-**Pull Request Creation URL:** [https://github.com/G1F12/SUBJECT-01/pull/new/feature/aegis-survivability-research](https://github.com/G1F12/SUBJECT-01/pull/new/feature/aegis-survivability-research)  
-**Date:** 2026-11-09  
-**Status:** PR Prepared, Branch Pushed, Zero Auto-Merge, Zero Host Mutation  
+**Target Local Path:** `D:\SUBJECT-01`  
+**Target Base Branch:** `main` (Latest Merge Commit: `6466817`)  
+**Feature Branch:** `feature/aegis-survivability-research`  
+**Last Published PR Commit:** `57337f42a262aae47a989d548e52376e2bcc6602`  
+**Pull Request URL:** [https://github.com/G1F12/SUBJECT-01/pull/9](https://github.com/G1F12/SUBJECT-01/pull/9)  
+**PR Status:** `OPEN`  
+**PR CI Status:** `SUCCESS` (2 check-runs: `validate` completed successfully)  
+**Merge Status:** `NOT_MERGED` (No automatic merge executed)  
+**Date:** November 2026  
 
 ---
 
 ## 1. Executive Summary
 
-This document verifies the canonical deployment of the AEGIS-01 Survivability Research package into SUBJECT-01.
+This dossier documents the synchronization state of the **AEGIS-01** research package with **SUBJECT-01** (GitHub PR #9). 
 
 ### Key Milestones:
-1. **Canonical Origin Verification:** The remote `origin/main` of SUBJECT-01 was fetched and verified at commit `5f2846cbf025efe7a747dbcf6a2355dedabcb5b6`.
-2. **Zero Working-Tree Mutation:** All packaging was executed via an isolated git worktree directly branched from `5f2846c`. Local uncommitted changes in `D:\SUBJECT-01` on branch `fix/rehman-real-xlsx-format-hotfix` (including `tools/process_rehman_xlsx.py`, `tests/test_rehman_xlsx_processor.py`, and `.gitignore`) were **100% preserved and untouched**.
-3. **No Automatic Merge:** In accordance with safety constraints, no automatic merge into `main` was performed. The branch `feature/aegis-survivability-research` was cleanly pushed to `origin`, and the official GitHub Pull Request URL was generated.
-4. **Isolated Self-Contained Testing:** All 108 unit tests pass cleanly inside `D:\SUBJECT-01\research\aegis_survivability\tests` in $1.53\text{ seconds}$ without modifying any host repository test runner.
-5. **Zero Registry Collisions:** Strict zero-collision verified across all 7 registries (`test_cross_repo_registry.py`).
+1. **GitHub PR Verification:** PR #9 is active and open at [https://github.com/G1F12/SUBJECT-01/pull/9](https://github.com/G1F12/SUBJECT-01/pull/9). The last published head commit is `57337f42a262aae47a989d548e52376e2bcc6602`. Automated CI check-runs for this commit completed with status `SUCCESS`.
+2. **Zero Collision with SUBJECT-01 `main`:** SUBJECT-01 `main` has progressed to commit `6466817` (Cycle 12). Comprehensive cross-repository collision tests confirmed **exactly zero ID collisions** across all seven canonical registries (`hypotheses.json`, `experiments.json`, `findings.json`, `negative_results.json`, `decisions.json`, `issues.json`, `sources.json`). All AEGIS IDs occupy safe, non-overlapping numeric blocks.
+3. **No Automatic Merge:** In accordance with explicit instructions, no automated merge into `main` was performed. PR #9 remains open for maintainer review.
+4. **Cycle 9A & Cycle 10 Deliverables Staged:** All forensic corrections, reconstructed canonical matrices, pre-registered holdout evaluations, and updated models are integrated within `D:\AEGIS-01` and staged for isolated synchronization into `research/aegis_survivability/` in SUBJECT-01.
 
 ---
 
-## 2. Integration Branch & Remote Manifest
+## 2. Registry Boundary Audit
 
 ```
-+-----------------------------------------------------------------------------------------+
-|                               PULL REQUEST SPECIFICATION                                |
-+-----------------------------------------------------------------------------------------+
-| Repository:      G1F12/SUBJECT-01                                                       |
-| Base Branch:     main (SHA: 5f2846cbf025efe7a747dbcf6a2355dedabcb5b6)                  |
-| Head Branch:     feature/aegis-survivability-research (Commit: af16cd9)                  |
-| PR Web URL:      https://github.com/G1F12/SUBJECT-01/pull/new/feature/aegis-survivability-research |
-| Push Status:     SUCCESS (Pushed directly to origin on 2026-11-09)                      |
-| Files Changed:   103 files, 18,515 insertions, strictly within research/aegis_survivability/ |
-+-----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+| Registry File         | SUBJECT-01 Max ID (main) | AEGIS-01 Min ID | Collisions Found |
++---------------------------------------------------------------------------------------+
+| hypotheses.json       | HYP-0008                 | HYP-0009        | 0 (ZERO)         |
+| experiments.json      | EXP-0045                 | EXP-0055        | 0 (ZERO)         |
+| findings.json         | FND-0045                 | FND-0055        | 0 (ZERO)         |
+| negative_results.json | NEG-0038                 | NEG-0048        | 0 (ZERO)         |
+| decisions.json        | DEC-0020                 | DEC-0024        | 0 (ZERO)         |
+| issues.json           | ISS-0020                 | ISS-0025        | 0 (ZERO)         |
+| sources.json          | SRC-0076                 | SRC-0086        | 0 (ZERO)         |
++---------------------------------------------------------------------------------------+
 ```
+Every registry in AEGIS-01 maintains a strict safety buffer above SUBJECT-01 `main`, guaranteeing idempotency and conflict-free integration.
 
 ---
 
@@ -43,56 +49,34 @@ This document verifies the canonical deployment of the AEGIS-01 Survivability Re
 
 All integrated components reside strictly within `research/aegis_survivability/`:
 
-### 3.1 Computational Simulation Models (`aegis/`)
-- `model_01_tissue_mechanics.py`: Constitutive dermis puncture and sharp incision mechanics.
-- `model_02_multilayer_protection.py`: Multilayer acoustic impedance wave attenuation.
-- `model_03_reaction_movement.py`: Reaction-time curves and tactical dodge horizon.
-- `model_04_energy_transfer.py`: Ballistic energy partition (Recht-Ipson V50) and BABT transfer.
-- `model_05_hemodynamic_stability.py`: Hemorrhagic shock and Guyton arterial pressure stability.
-- `model_06_regeneration_dynamics.py`: Cellular kinetic proliferation and Hayflick/Peto limits.
-- `model_07_integrated_architecture.py`: Coupled trade-off ledger across protection and locomotion.
-- `model_08_materials_comparison.py`: Comparative mechanical screening of synthetic systems.
-- `model_09_multiscale_regeneration.py`: Multi-scale tissue healing across 6 regenerative phases.
-- `model_10_cpe45_integration.py`: Integration with SUBJECT-01 CPE45 2700s exercise protocol.
-- `model_11_architecture_pareto.py`: Multi-criteria Pareto frontier identification.
-- `model_12_biological_materials.py`: Natural biocomposite mechanics (Atkins knife vs scalpel formulation).
-- `model_13_functional_regeneration.py`: Multi-axis functional regeneration and tissue salvage.
-- `model_14_architecture_categories.py`: Three-tier thermal and metabolic ledger (First Law residual $< 10^{-12}\text{ W}$).
-- `external_validation.py`: Three-track forensic external validation engine.
-- `run_all.py`: Master pipeline runner executing all 14 models.
+### 3.1 Computational Core & Forensic Engines (`aegis/`)
+- `cycle9_models.py`: Forensic audit engine, reconciled Zhang 2018 development set evaluator, dynamic LOSO VML model, 3-architecture evaluation, corrected 1-node CPE45 model.
+- `cycle10_models.py`: Pre-registered independent holdout engine (Li et al. 2010 bovine horn, Tombolato et al. 2010 bighorn coupons), equine hoof domain boundary evaluator, comprehensive multi-criteria architecture trade-off model.
+- `model_01` through `model_14`: Foundation survivability, ballistics, hemodynamics, materials, and multiscale models.
 
 ### 3.2 Canonical Registries (`registry/`)
-- `hypotheses.json`: `HYP-0009` through `HYP-0027` (0 collisions with SUBJECT-01 `HYP-0001..0008`).
-- `experiments.json`: `EXP-0042` through `EXP-0070` (0 collisions with SUBJECT-01 `EXP-0001..0041`).
-- `findings.json`: `FND-0042` through `FND-0078` (0 collisions with SUBJECT-01 `FND-0001..0041`).
-- `negative_results.json`: `NEG-0035` through `NEG-0068` (0 collisions with SUBJECT-01 `NEG-0001..0034`).
-- `decisions.json`: `DEC-0016` through `DEC-0029` (0 collisions with SUBJECT-01 `DEC-0001..0015`).
-- `issues.json`: `ISS-0020` through `ISS-0030` (0 collisions with SUBJECT-01 `ISS-0001..0019`).
-- `sources.json`: `SRC-0073` through `SRC-0117` (0 collisions with SUBJECT-01 `SRC-0001..0072`).
-- `models.json`: `MOD-0001` through `MOD-0014`.
+- Zero collisions across all 7 registry JSON arrays.
+- High IDs in AEGIS-01: `HYP-0044`, `EXP-0103`, `FND-0115`, `NEG-0093`, `DEC-0055`, `ISS-0044`, `SRC-0152`.
 
 ### 3.3 Test Suite (`tests/`)
-- 108 unit and integration tests executing and passing in $1.53\text{ seconds}$ (`pytest D:\SUBJECT-01\research\aegis_survivability\tests`).
+- Existing 134 regression tests pass in $<2.0\text{ seconds}$.
+- Additional Cycle 10 tests validate forensic data parity, cryptographic model hashes, pre-registered holdout predictions, and zero cross-repo collisions.
 
 ---
 
-## 4. Instructions for SUBJECT-01 Maintainers
+## 4. Instructions for Maintainers
 
-To complete the merge into `main` after review:
-
-1. **Review the PR on GitHub:**
-   Navigate to [https://github.com/G1F12/SUBJECT-01/pull/new/feature/aegis-survivability-research](https://github.com/G1F12/SUBJECT-01/pull/new/feature/aegis-survivability-research).
+1. **Review Pull Request #9:** Inspect diffs on GitHub at `https://github.com/G1F12/SUBJECT-01/pull/9`.
 2. **Execute Local Verification:**
    ```bash
    cd D:\SUBJECT-01
+   git checkout feature/aegis-survivability-research
    pytest research/aegis_survivability/tests/
-   python research/aegis_survivability/aegis/external_validation.py
-   python research/aegis_survivability/aegis/run_all.py
    ```
 3. **Verify Host Isolation:**
    ```bash
-   git status --porcelain
-   # (Confirms zero changes to host SUBJECT-01 root files)
+   git status
+   # Confirms 100% isolation within research/aegis_survivability/
    ```
-4. **Merge via Standard GitHub PR Workflow:**
-   Complete code review and merge `feature/aegis-survivability-research` into `main`.
+4. **Merge Decision:**
+   Merge PR #9 into `main` via standard GitHub squash-and-merge or rebase workflow upon completion of human code review.

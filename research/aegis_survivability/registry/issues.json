@@ -131,5 +131,12 @@
     "severity": "major",
     "status": "resolved",
     "impact": "Cycle 8 mistakenly equated 38% ventral macro-layer thickness with intermediate filament volume fraction. Fully audited and resolved in Cycle 9."
+  },
+  {
+    "id": "ISS-0044",
+    "title": "Cycle 9 Bibliographic Error, Table-Code Arithmetic Decoupling, and Post-Hoc Parameter Leakage",
+    "cycle": "Cycle 9A Forensic Repair",
+    "status": "RESOLVED",
+    "resolution": "Rectified citation to Zhang et al. (2018) JRSI 15:20180093; reconstructed canonical 28 group means matrix in KERATIN_PRIMARY_DATA_RECONSTRUCTION.csv; eliminated synthetic rows H25-H28; reclassified parameters as POST_HOC_CALIBRATED; validated model on independent Li et al. (2010) dataset."
   }
 ]

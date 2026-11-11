@@ -408,5 +408,45 @@
     "id": "EXP-0098",
     "title": "Thermodynamically Sound CPE45 1-Node Simulation and Sensitivity Sweep",
     "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0099",
+    "title": "Pre-Registered True Independent Holdout Validation on Li et al. (2010) Bovine Horn Sheath",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0044",
+    "status": "COMPLETED",
+    "description": "Evaluated frozen Cycle 9/10 micromechanics model (SHA-256: 225d6994...) against unseen experimental measurements from Li et al. 2010 (Bos taurus) across dry, intermediate, and wet hydration states."
+  },
+  {
+    "id": "EXP-0100",
+    "title": "Forensic Audit and Preclinical Boundary Demarcation of 11 VML Regeneration Cohorts",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0042",
+    "status": "COMPLETED",
+    "description": "Audited cohort provenance, animal counts, shared laboratory authorship, and denervation parameter leakage across Corona, Greising, and Garg VML datasets."
+  },
+  {
+    "id": "EXP-0101",
+    "title": "Multi-Criteria Physics-Bounded Modeling of Three Biological Protective Architectures",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0043",
+    "status": "COMPLETED",
+    "description": "Simulated mass, joint mobility, skin strain, compartment pressure, fatigue resistance, perfusion demand, and thermoregulation across monolithic, segmented imbricated, and fibrous architectures."
+  },
+  {
+    "id": "EXP-0102",
+    "title": "TARGET-CPE45 First-Principles Thermodynamic Modeling and Parametric Uncertainty Sweeps",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0036",
+    "status": "COMPLETED",
+    "description": "Evaluated 1-node thermodynamic model with explicit J/K heat capacity, locomotor transport cost, and decoupled sweat evaporation under multi-parametric uncertainty."
+  },
+  {
+    "id": "EXP-0103",
+    "title": "In Silico Breakthrough Priority Formulation for Cycle 11 Endogenous Biological Architecture",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0044",
+    "status": "COMPLETED",
+    "description": "Formulated three testable computational questions, missing mechanisms, and falsification criteria for morphogenetic synthesis, maintenance turnover, and multiscale mechanics."
   }
 ]

@@ -794,7 +794,32 @@
   },
   {
     "id": "SRC-0149",
-    "citation": "Huang W, Zaheri A, Jung JY, Suvannasara V, Naleway SE, Frank NJ, McKittrick J, Espinosa HD (2018). Microstructure and mechanical properties of different keratinous horns. Journal of the Royal Society Interface 15:20180217. DOI: 10.1098/rsif.2018.0217. PMC6030630.",
-    "cycle": "Cycle 9"
+    "citation": "Zhang Y, Huang W, Hayashi C, Gatesy J, McKittrick J (2018). Microstructure and mechanical properties of different keratinous horns. Journal of the Royal Society Interface 15(143):20180093. DOI: 10.1098/rsif.2018.0093. PMCID: PMC6030630.",
+    "cycle": "Cycle 9A Forensic Repair",
+    "status": "RECTIFIED_PRIMARY_SOURCE"
+  },
+  {
+    "id": "SRC-0150",
+    "citation": "Li BW, Zhao HP, Feng XQ, Guo WW, Shan S (2010). Experimental study on the mechanical properties of the horn sheaths from cattle. Journal of Experimental Biology 213(3):479-486. DOI: 10.1242/jeb.036079. PMID: 20107065.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ]
+  },
+  {
+    "id": "SRC-0151",
+    "citation": "Tombolato L, Novitskaya EE, Chen PY, Sheppard FA, McKittrick J (2010). Microstructure, elastic properties and deformation mechanisms of horn keratin. Acta Biomaterialia 6(2):319-330. DOI: 10.1016/j.actbio.2009.08.033.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ]
+  },
+  {
+    "id": "SRC-0152",
+    "citation": "Bertram JEA, Gosline JM (1987). Functional design of horse hoof keratin: the modulation of mechanical properties through hydration effects. Journal of Experimental Biology 130:121-136. DOI: 10.1242/jeb.130.1.121.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ]
   }
 ]

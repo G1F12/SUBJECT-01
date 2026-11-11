@@ -1,13 +1,18 @@
-# Independent Keratin Holdout: 28 Experimental Observations from Huang et al. (2018)
+# Independent Keratin Holdout: 28 Experimental Group Means from Zhang et al. (2018)
+
+> [!WARNING] FORENSIC CORRIGENDUM (Cycle 9A / Cycle 10)
+> **Source Rectification:** First author is Yuchen Zhang (Wei Huang is co-first author). Correct citation: **Zhang Y., Huang W., Hayashi C., Gatesy J., McKittrick J. (2018). *Microstructure and mechanical properties of different keratinous horns*, J. R. Soc. Interface 15:20180093 (PMCID: PMC6030630; DOI: 10.1098/rsif.2018.0093)**.
+> **Status Reclassification:** Reclassified from `TRUE_INDEPENDENT_HOLDOUT` to `DEVELOPMENT_SET_CALIBRATION_ONLY` due to post-hoc model tuning.
+> **Canonical Single Source of Truth:** See [`KERATIN_PRIMARY_DATA_RECONSTRUCTION.csv`](file:///D:/AEGIS-01/KERATIN_PRIMARY_DATA_RECONSTRUCTION.csv) and [`CYCLE9_TABLE_CODE_RECONCILIATION.md`](file:///D:/AEGIS-01/CYCLE9_TABLE_CODE_RECONCILIATION.md). The 28 observations are group means (24 compression + 4 tension; 148 physical coupons), not 28 individual samples. Rows H25–H28 below were synthetic. Genuine independent holdouts are evaluated in [`TRUE_HOLDOUT_VALIDATION.md`](file:///D:/AEGIS-01/TRUE_HOLDOUT_VALIDATION.md).
 
 **Document ID:** AEGIS-DOC-C9-003  
-**Cycle:** 9  
-**Source Literature:** Huang et al. (2018) *Microstructure and mechanical properties of different keratinous horns*, J. R. Soc. Interface 15:20180217 (PMC6030630)  
+**Cycle:** 9 (Corrigendum Applied in Cycle 9A)  
+**Source Literature:** Zhang Y., Huang W., Hayashi C., Gatesy J., McKittrick J. (2018) *Microstructure and mechanical properties of different keratinous horns*, J. R. Soc. Interface 15:20180093 (PMCID: PMC6030630; DOI: 10.1098/rsif.2018.0093)  
 **Registered Source:** [`SRC-0149`](file:///D:/AEGIS-01/registry/sources.json)  
 **Related Experiment:** [`EXP-0096`](file:///D:/AEGIS-01/registry/experiments.json)  
 **Related Finding:** [`FND-0108`](file:///D:/AEGIS-01/registry/findings.json)  
 **Related Negative Result:** [`NEG-0089`](file:///D:/AEGIS-01/registry/negative_results.json)  
-**Holdout Status:** `TRUE_INDEPENDENT_HOLDOUT`  
+**Holdout Status:** `DEVELOPMENT_SET_CALIBRATION_ONLY` (Reclassified from TRUE_INDEPENDENT_HOLDOUT)  
 
 ---
 

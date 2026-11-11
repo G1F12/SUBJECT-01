@@ -296,5 +296,26 @@
     "title": "Invalidity of 38% Macroscopic Ventral Layer Thickness Fraction as Microstructural Intermediate Filament Volume Fraction",
     "experiment_id": "EXP-0095",
     "cycle": "Cycle 9"
+  },
+  {
+    "id": "NEG-0091",
+    "experiment_id": "EXP-0099",
+    "title": "Failure of Horn-Calibrated Micromechanics on Equine Hoof Wall Keratin",
+    "cycle": "Cycle 10",
+    "description": "Horn-derived model severely underpredicts dry equine hoof wall stiffness (predicting 2.40 GPa vs observed 14.6 GPa; MAE = 4.05 GPa), refuting cross-tissue transferability without macromolecular disulfide crosslink scaling."
+  },
+  {
+    "id": "NEG-0092",
+    "experiment_id": "EXP-0100",
+    "title": "Refutation of Direct Human VML Clinical Extrapolation from Preclinical Rodent/Pig Models",
+    "cycle": "Cycle 10",
+    "description": "Unvascularized minced graft and decellularized ECM scaffolds fail to scale from rodent (0.1 cm^3) to human (>50 cm^3) defect volumes due to central ischemic necrosis, rapid fibro-adipogenic scarring, and motor endplate senescence."
+  },
+  {
+    "id": "NEG-0093",
+    "experiment_id": "EXP-0101",
+    "title": "Refutation of Monolithic Biological Armor for Active Cursorial Human Defense",
+    "cycle": "Cycle 10",
+    "description": "Continuous rigid osteoderm shells (Architecture A) fail cursorial locomotion requirements due to brittle fracture at >1.75% strain, acute compartment syndrome surge (>45 mmHg), and complete blockage of cutaneous evaporative cooling."
   }
 ]

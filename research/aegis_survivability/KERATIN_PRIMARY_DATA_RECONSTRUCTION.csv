@@ -1,0 +1,29 @@
+row_id,species_common,species_scientific,tubule_porosity,test_mode,orientation,angle_deg,hydration_state,water_content_wt_pct,strain_rate_s_inv,n_samples,youngs_modulus_mean_gpa,youngs_modulus_sd_gpa,yield_strength_mean_mpa,yield_strength_sd_mpa,toughness_mean_mj_m3,toughness_sd_mj_m3,source_table,data_provenance
+ZHANG2018-C01,Mountain Goat,Oreamnos americanus,0.0,compression,longitudinal,0.0,ambient_dry,10.0,0.001,5,2.1,0.6,81.6,22.2,103.4,5.8,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C02,Mountain Goat,Oreamnos americanus,0.0,compression,radial,90.0,ambient_dry,10.0,0.001,5,1.5,0.2,82.3,9.8,141.0,16.0,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C03,Mountain Goat,Oreamnos americanus,0.0,compression,transverse,90.0,ambient_dry,10.0,0.001,5,1.4,0.4,76.1,2.5,120.1,8.8,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C04,Pronghorn,Antilocapra americana,0.058,compression,longitudinal,0.0,ambient_dry,10.0,0.001,5,1.8,0.2,85.5,6.4,72.5,2.5,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C05,Pronghorn,Antilocapra americana,0.058,compression,radial,90.0,ambient_dry,10.0,0.001,5,0.9,0.3,67.5,4.2,82.0,5.6,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C06,Pronghorn,Antilocapra americana,0.058,compression,transverse,90.0,ambient_dry,10.0,0.001,5,1.2,0.2,59.9,7.9,78.1,5.7,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C07,Domestic Sheep,Ovis aries,0.077,compression,longitudinal,0.0,ambient_dry,10.0,0.001,5,2.0,0.2,64.3,13.5,83.5,5.1,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C08,Domestic Sheep,Ovis aries,0.077,compression,radial,90.0,ambient_dry,10.0,0.001,5,1.3,0.5,63.1,8.9,98.1,5.6,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C09,Domestic Sheep,Ovis aries,0.077,compression,transverse,90.0,ambient_dry,10.0,0.001,5,0.9,0.3,59.5,6.1,85.2,3.0,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C10,Bighorn Sheep,Ovis canadensis,0.113,compression,longitudinal,0.0,ambient_dry,10.0,0.001,5,1.7,0.5,67.8,7.9,92.1,9.5,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C11,Bighorn Sheep,Ovis canadensis,0.113,compression,radial,90.0,ambient_dry,10.0,0.001,5,1.2,0.2,57.3,5.3,117.0,4.5,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C12,Bighorn Sheep,Ovis canadensis,0.113,compression,transverse,90.0,ambient_dry,10.0,0.001,5,1.3,0.6,49.3,9.0,98.4,5.4,Table 1,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C13,Mountain Goat,Oreamnos americanus,0.0,compression,longitudinal,0.0,fully_hydrated,22.0,0.001,5,0.5,0.23,13.9,4.1,18.4,2.7,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C14,Mountain Goat,Oreamnos americanus,0.0,compression,radial,90.0,fully_hydrated,22.0,0.001,5,0.14,0.03,8.6,0.8,27.1,2.6,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C15,Mountain Goat,Oreamnos americanus,0.0,compression,transverse,90.0,fully_hydrated,22.0,0.001,5,0.23,0.14,7.2,1.7,26.5,2.0,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C16,Pronghorn,Antilocapra americana,0.058,compression,longitudinal,0.0,fully_hydrated,52.0,0.001,5,0.11,0.04,1.6,0.9,3.5,0.7,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C17,Pronghorn,Antilocapra americana,0.058,compression,radial,90.0,fully_hydrated,52.0,0.001,5,0.02,0.007,1.7,0.5,7.2,1.5,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C18,Pronghorn,Antilocapra americana,0.058,compression,transverse,90.0,fully_hydrated,52.0,0.001,5,0.02,0.003,1.0,0.3,6.8,0.4,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C19,Domestic Sheep,Ovis aries,0.077,compression,longitudinal,0.0,fully_hydrated,29.0,0.001,5,0.26,0.13,4.9,1.1,16.7,3.6,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C20,Domestic Sheep,Ovis aries,0.077,compression,radial,90.0,fully_hydrated,29.0,0.001,5,0.11,0.03,5.4,0.5,21.5,5.3,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C21,Domestic Sheep,Ovis aries,0.077,compression,transverse,90.0,fully_hydrated,29.0,0.001,5,0.15,0.06,3.6,1.1,15.4,3.5,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C22,Bighorn Sheep,Ovis canadensis,0.113,compression,longitudinal,0.0,fully_hydrated,40.0,0.001,5,0.14,0.08,3.4,0.8,13.3,1.7,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C23,Bighorn Sheep,Ovis canadensis,0.113,compression,radial,90.0,fully_hydrated,40.0,0.001,5,0.09,0.04,5.2,0.6,20.1,1.1,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-C24,Bighorn Sheep,Ovis canadensis,0.113,compression,transverse,90.0,fully_hydrated,40.0,0.001,5,0.16,0.05,3.2,0.4,15.5,1.1,Table 2,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-T01,Mountain Goat,Oreamnos americanus,0.0,tension,longitudinal,0.0,ambient_dry,10.0,0.001,7,1.54,0.2,88.0,12.5,11.9,1.7,Table 3,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-T02,Pronghorn,Antilocapra americana,0.058,tension,longitudinal,0.0,ambient_dry,10.0,0.001,7,1.06,0.2,69.6,12.3,6.1,1.6,Table 3,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-T03,Domestic Sheep,Ovis aries,0.077,tension,longitudinal,0.0,ambient_dry,10.0,0.001,7,1.33,0.1,41.9,9.9,2.1,0.9,Table 3,PRIMARY_PUBLISHED_GROUP_MEAN
+ZHANG2018-T04,Bighorn Sheep,Ovis canadensis,0.113,tension,longitudinal,0.0,ambient_dry,10.0,0.001,7,1.15,0.1,38.9,7.3,2.3,0.7,Table 3,PRIMARY_PUBLISHED_GROUP_MEAN

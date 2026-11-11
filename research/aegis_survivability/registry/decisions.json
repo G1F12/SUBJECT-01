@@ -190,5 +190,12 @@
     "id": "DEC-0054",
     "title": "Classify Armor Mass as Scenario Assumption and Designate TARGET-CPE45 as Not Externally Validated",
     "cycle": "Cycle 9"
+  },
+  {
+    "id": "DEC-0055",
+    "title": "Reclassification of Zhang 2018 as Development Set, Ratification of Li 2010 as True Holdout, and Formalization of 40°C Scenario Threshold",
+    "cycle": "Cycle 10",
+    "rationale": "Forensic audit proved Cycle 9 parameters were post-hoc fitted to Zhang 2018. Status MATERIALS_TRUE_HOLDOUT = PASS on Zhang 2018 is revoked. True holdout status is ratified on Li et al. (2010). Core temperature 40.0°C is designated as an epistemic scenario threshold, not a medical diagnosis.",
+    "status": "RATIFIED"
   }
 ]

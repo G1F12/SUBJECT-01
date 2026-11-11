@@ -379,5 +379,40 @@
     "title": "Taylor Locomotor Transport Cost Adds 95.2 W and Breaches Critical 40.0 C Threshold When Open Skin Under 10%",
     "experiment_id": "EXP-0098",
     "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0111",
+    "experiment_id": "EXP-0099",
+    "title": "Pre-Registered True Holdout Success on Li et al. (2010) Bovine Horn Sheath",
+    "cycle": "Cycle 10",
+    "description": "Frozen model predicted tensile Young's modulus across 3 hydration states with MAE = 0.235 GPa vs Baseline MAE = 0.500 GPa (+52.95% error reduction), successfully passing true holdout validation."
+  },
+  {
+    "id": "FND-0112",
+    "experiment_id": "EXP-0099",
+    "title": "Independent Bending Coupon Cross-Validation on Tombolato et al. (2010)",
+    "cycle": "Cycle 10",
+    "description": "Frozen model predicted bighorn sheep bending modulus across 4 orientation/hydration conditions with MAE = 0.090 GPa vs Baseline MAE = 0.760 GPa (+88.11% error reduction)."
+  },
+  {
+    "id": "FND-0113",
+    "experiment_id": "EXP-0100",
+    "title": "Preclinical Limitation & Human Clinical Translation Refutation for VML Scaffolds",
+    "cycle": "Cycle 10",
+    "description": "Strict dynamic LOSO reproduced preclinical MAE = 6.02%, but translation to human clinical volumes (>50 cm^3) is refuted without axial vascularization due to the 200 um capillary diffusion limit and 1 mm/day neurotization speed limit."
+  },
+  {
+    "id": "FND-0114",
+    "experiment_id": "EXP-0101",
+    "title": "Multi-Criteria Pareto Analysis Confirms Inherent Biophysical Trade-Offs Across All Three Protective Architectures",
+    "cycle": "Cycle 10",
+    "description": "No architecture dominates universally: Architecture A maximizes blunt deflection but fails kinematics and thermoregulation; Architecture B optimizes mobility and mass (6.8 kg) but leaves seam vulnerabilities; Architecture C maximizes tear resistance but imposes fatal thermal insulation (blubber effect) and heavy mass (16 kg)."
+  },
+  {
+    "id": "FND-0115",
+    "experiment_id": "EXP-0102",
+    "title": "Thermodynamic Parametric Uncertainty and Conservative 40.0°C Safety Threshold Demarcation",
+    "cycle": "Cycle 10",
+    "description": "The 1-node model confirms 45-minute sprint thermal survivability (T_core = 39.88°C) under nominal conditions, but identifies 40.0°C as an epistemic scenario safety threshold rather than a clinical heat stroke diagnosis."
   }
 ]

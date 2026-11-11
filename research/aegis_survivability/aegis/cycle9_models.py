@@ -101,7 +101,7 @@ class HoldoutKeratinSpecimen:
     observed_sd_gpa: float
     tubule_porosity: float
     architecture: str
-    study_doi: str = "10.1098/rsif.2018.0217"
+    study_doi: str = "10.1098/rsif.2018.0093"
 
 
 # 28 completely independent experimental observations from Huang et al. 2018 (PMC6030630)
