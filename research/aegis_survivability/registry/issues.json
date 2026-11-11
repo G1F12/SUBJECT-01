@@ -60,14 +60,14 @@
     "issue": "Unsubstantiated claim of 92% muscle force recovery in 5 days post PEG-fusion and rodent-human equivalence in VML",
     "severity": "critical",
     "status": "resolved",
-    "impact": "Resolved by formal retraction (INV-0013, NEG-0051), calibration with human clinical trials (SRC-0099, SRC-0100, SRC-0101, SRC-0102), and updated MODEL-13."
+    "impact": "Resolved by formal retraction (INV-0013, NEG-0061), calibration with human clinical trials (SRC-0109, SRC-0110, SRC-0111, SRC-0112), and updated MODEL-13."
   },
   {
     "id": "ISS-0034",
     "issue": "Epistemic discrepancies in VML volume recovery metrics, Atkins slicing factor multiplier, and thermoregulatory flux definitions",
     "severity": "critical",
     "status": "resolved",
-    "impact": "Resolved in Cycle 4B by formal retractions (INV-0015, INV-0016), independent 3-track external validation gate (EXP-0059), knife/scalpel geometric distinction in MODEL-12, and unified first-law energy balance in MODEL-14."
+    "impact": "Resolved in Cycle 4B by formal retractions (INV-0015, INV-0016), independent 3-track external validation gate (EXP-0069), knife/scalpel geometric distinction in MODEL-12, and unified first-law energy balance in MODEL-14."
   },
   {
     "id": "ISS-0035",
@@ -96,5 +96,26 @@
     "severity": "major",
     "status": "resolved",
     "impact": "Resolved in Cycle 6 Question C by simulating strictly matched 50% RH and 1.5 clo uncompensable heat stress conditions."
+  },
+  {
+    "id": "ISS-0039",
+    "issue": "Conflation of group aggregate averages with independent individual specimen measurements in Cycle 6",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 1 by forensic audit, CSV provenance ledger, and classification of all 11 VML records as cohort means."
+  },
+  {
+    "id": "ISS-0040",
+    "issue": "Bibliographic attribution errors for pangolin scales (Wang 2016 Acta Biomater) and sheep horn (Trim 2011 Acta Biomater)",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 2 by correcting DOIs and primary publication details."
+  },
+  {
+    "id": "ISS-0041",
+    "issue": "Inaccurate air velocity (1.0 m/s vs authentic 2.2 m/s) in Montain et al. 1994 thermoregulation simulation",
+    "severity": "minor",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 4 by re-running simulation under true 2.2 m/s wind speed."
   }
 ]

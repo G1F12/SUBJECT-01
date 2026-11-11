@@ -63,12 +63,12 @@ All integrated components reside strictly within `research/aegis_survivability/`
 
 ### 3.2 Canonical Registries (`registry/`)
 - `hypotheses.json`: `HYP-0009` through `HYP-0027` (0 collisions with SUBJECT-01 `HYP-0001..0008`).
-- `experiments.json`: `EXP-0042` through `EXP-0060` (0 collisions with SUBJECT-01 `EXP-0001..0041`).
-- `findings.json`: `FND-0042` through `FND-0068` (0 collisions with SUBJECT-01 `FND-0001..0041`).
-- `negative_results.json`: `NEG-0035` through `NEG-0058` (0 collisions with SUBJECT-01 `NEG-0001..0034`).
+- `experiments.json`: `EXP-0042` through `EXP-0070` (0 collisions with SUBJECT-01 `EXP-0001..0041`).
+- `findings.json`: `FND-0042` through `FND-0078` (0 collisions with SUBJECT-01 `FND-0001..0041`).
+- `negative_results.json`: `NEG-0035` through `NEG-0068` (0 collisions with SUBJECT-01 `NEG-0001..0034`).
 - `decisions.json`: `DEC-0016` through `DEC-0029` (0 collisions with SUBJECT-01 `DEC-0001..0015`).
 - `issues.json`: `ISS-0020` through `ISS-0030` (0 collisions with SUBJECT-01 `ISS-0001..0019`).
-- `sources.json`: `SRC-0073` through `SRC-0107` (0 collisions with SUBJECT-01 `SRC-0001..0072`).
+- `sources.json`: `SRC-0073` through `SRC-0117` (0 collisions with SUBJECT-01 `SRC-0001..0072`).
 - `models.json`: `MOD-0001` through `MOD-0014`.
 
 ### 3.3 Test Suite (`tests/`)

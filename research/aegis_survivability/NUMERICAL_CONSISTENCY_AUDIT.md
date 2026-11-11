@@ -11,7 +11,7 @@
 This audit establishes mathematical and thermodynamic closure across all computational models in AEGIS-01, resolving three critical numerical discrepancies identified in previous cycles:
 1. **Thermoregulation Energy Balance Closure:** Unified ledger distinguishing gross metabolic expenditure ($1227.2\text{ W}$), net metabolic heat production ($977.2\text{ W}$), dry heat losses ($518.2\text{ W}$ temperate vs $105.2\text{ W}$ jungle), required evaporative cooling ($E_{\text{req}} = 459.0\text{ W}$), maximal evaporative capacity ($E_{\text{max}} = 810.0\text{ W}$ temperate vs $340.0\text{ W}$ jungle), and actual heat storage rate ($\dot{S}$). Energy conservation is strictly verified with residual $\Delta \dot{E} < 10^{-4}\text{ W}$.
 2. **Atkins Draw Slicing Mechanics:** Elimination of the arbitrary $\times 0.20$ multiplier (`INV-0016`). Physical demonstration that the discrepancy between $48.6\text{ N}$ and $680\text{ N}$ cutting resistance originates from blade geometry: macro-wedge combat knife flank compression ($F_{\text{push}} = 679.8\text{ N} \to F_{\text{draw}} = 164.9\text{ N}$ at $\xi = 4$) versus razor-thin scalpel Mode I crack propagation ($w \to 0$, $F_{\text{push}} = 125.4\text{ N} \to F_{\text{draw}} = 30.4\text{ N}$).
-3. **Volumetric Muscle Loss (VML) Parameter Audit:** Formal retraction of the synthetic $78.4\%$ volumetric recovery and $36.2\%$ residual deficit claims (`INV-0015`, `NEG-0054`). Re-anchoring of Model 13 strictly to experimentally measured functional torque improvements ($+37.3\%$ cohort mean).
+3. **Volumetric Muscle Loss (VML) Parameter Audit:** Formal retraction of the synthetic $78.4\%$ volumetric recovery and $36.2\%$ residual deficit claims (`INV-0015`, `NEG-0064`). Re-anchoring of Model 13 strictly to experimentally measured functional torque improvements ($+37.3\%$ cohort mean).
 
 ---
 
@@ -113,7 +113,7 @@ The discrepancy between $48.6\text{ N}$ and $680\text{ N}$ was **not** an error 
   - Dziki et al. evaluated 13 human trauma patients treated with xenogeneic acellular dermal/urinary bladder ECM scaffolds.
   - Quantitative volumetric muscle tissue replacement was **never measured** via MRI or CT volumetry. The study explicitly noted that biopsy samples demonstrated *islands of de novo myogenesis* surrounded by dense fibrotic tissue, but did not quantify whole-defect volumetric reconstitution.
   - The measured primary clinical outcome was **isometric maximal contractile torque**, which showed an average **$+37.3\%$ improvement** ($p < 0.05$) relative to pre-operative baseline after 6 months of physical therapy.
-- The claim of $78.4\%$ volume reconstitution is formally retracted (`INV-0015`, `NEG-0054`).
+- The claim of $78.4\%$ volume reconstitution is formally retracted (`INV-0015`, `NEG-0064`).
 
 ### 4.2 Parameter Calibration in Model 13
 `MODEL-13` (`aegis/model_13_functional_regeneration.py`) has been audited:

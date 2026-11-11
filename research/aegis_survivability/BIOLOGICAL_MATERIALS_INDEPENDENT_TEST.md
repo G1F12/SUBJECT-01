@@ -3,7 +3,7 @@
 **Document ID:** `AEGIS-DOC-C6-MAT-TEST`  
 **Execution Date:** 2026-11-10  
 **Test Module:** `aegis.cycle6_validation`  
-**Experiment ID:** `EXP-0071` | **Finding ID:** `FND-0081` | **Hypothesis ID:** `HYP-0035`
+**Experiment ID:** `EXP-0081` | **Finding ID:** `FND-0091` | **Hypothesis ID:** `HYP-0035`
 
 ---
 

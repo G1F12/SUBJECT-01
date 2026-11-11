@@ -29,9 +29,9 @@ In earlier exploratory documentation, it was stated:
 
 ### 2.2 Literature Audit & Empirical Evidence
 To evaluate this claim against peer-reviewed clinical and animal literature, the evidence base was expanded with the following primary sources:
-- **Nemani et al. (2024), *Plast. Reconstr. Surg.*, DOI: [10.1097/PRS.0000000000011334](https://doi.org/10.1097/PRS.0000000000011334) (`SRC-0099`):** Systematic review and meta-analysis of PEG-fusion in mammalian peripheral nerve repair. Confirms immediate compound nerve action potential (CNAP) recovery ($65\dots 85\%$) across the repair site within hours to days. However, long-term functional motor recovery remains variable ($40\dots 65\%$) and is strictly limited by motor axonal misdirection and terminal synaptic delay.
-- **Gutama et al. (2026), *J. Am. Coll. Surg.* (XCS), DOI: [10.1097/XCS.0000000000001795](https://doi.org/10.1097/XCS.0000000000001795) (`SRC-0100`):** Clinical and translational investigation into chemical axonal fusion in extremity trauma. Demonstrates that while sensory recovery is accelerated, motor recovery requires intensive cortical re-education; human isometric torque plateaus at $48\dots 62\%$ of the intact contralateral control.
-- **Ghergherehchi et al. (2016), *J. Neurosci. Res.*, DOI: [10.1002/jnr.23939](https://doi.org/10.1002/jnr.23939) (`SRC-0103`):** Direct histological and electrophysiological tracing of axonal trajectories post-PEG fusion. Demonstrates that PEG-fusion lacks topographical fascicular specificity: severed proximal motor axons fuse indiscriminately with sensory Schwann cell tubes or antagonistic motor pathways ($38\dots 52\%$ misdirection rate), leading to aberrant co-contraction (synkinesis).
+- **Nemani et al. (2024), *Plast. Reconstr. Surg.*, DOI: [10.1097/PRS.0000000000011334](https://doi.org/10.1097/PRS.0000000000011334) (`SRC-0109`):** Systematic review and meta-analysis of PEG-fusion in mammalian peripheral nerve repair. Confirms immediate compound nerve action potential (CNAP) recovery ($65\dots 85\%$) across the repair site within hours to days. However, long-term functional motor recovery remains variable ($40\dots 65\%$) and is strictly limited by motor axonal misdirection and terminal synaptic delay.
+- **Gutama et al. (2026), *J. Am. Coll. Surg.* (XCS), DOI: [10.1097/XCS.0000000000001795](https://doi.org/10.1097/XCS.0000000000001795) (`SRC-0110`):** Clinical and translational investigation into chemical axonal fusion in extremity trauma. Demonstrates that while sensory recovery is accelerated, motor recovery requires intensive cortical re-education; human isometric torque plateaus at $48\dots 62\%$ of the intact contralateral control.
+- **Ghergherehchi et al. (2016), *J. Neurosci. Res.*, DOI: [10.1002/jnr.23939](https://doi.org/10.1002/jnr.23939) (`SRC-0113`):** Direct histological and electrophysiological tracing of axonal trajectories post-PEG fusion. Demonstrates that PEG-fusion lacks topographical fascicular specificity: severed proximal motor axons fuse indiscriminately with sensory Schwann cell tubes or antagonistic motor pathways ($38\dots 52\%$ misdirection rate), leading to aberrant co-contraction (synkinesis).
 
 ### 2.3 Strict Separation of Neuromuscular Recovery Axes
 To eliminate false precision and misleading equivalences, the updated [`model_13_functional_regeneration.py`](file:///D:/AEGIS-01/aegis/model_13_functional_regeneration.py) strictly disaggregates four independent physiological recovery axes:
@@ -60,7 +60,7 @@ flowchart TD
 ```
 
 ### 2.4 Retraction & Status
-The claim of guaranteed 92% muscle force recovery within 5 days is **RETRACTED** in [`INVALIDATED_CLAIMS.md`](file:///D:/AEGIS-01/INVALIDATED_CLAIMS.md) (`INV-0013`) and registered as negative result [`NEG-0051`](file:///D:/AEGIS-01/registry/negative_results.json).
+The claim of guaranteed 92% muscle force recovery within 5 days is **RETRACTED** in [`INVALIDATED_CLAIMS.md`](file:///D:/AEGIS-01/INVALIDATED_CLAIMS.md) (`INV-0013`) and registered as negative result [`NEG-0061`](file:///D:/AEGIS-01/registry/negative_results.json).
 
 ---
 
@@ -70,8 +70,8 @@ The claim of guaranteed 92% muscle force recovery within 5 days is **RETRACTED**
 Earlier models assumed that volumetric muscle loss (>15–20% compartment deficit) could achieve complete functional regeneration and full recovery of intact limb contractile strength through the placement of oriented biopolymer scaffolds.
 
 ### 3.2 Literature Audit & Empirical Evidence
-- **Reed et al. (2024), *Tissue Eng. Part A*, DOI: [10.1089/ten.TEA.2022.0227](https://doi.org/10.1089/ten.TEA.2022.0227) (`SRC-0101`):** Meta-analysis of 42 pre-clinical and clinical VML investigations. Shows that volumetric defect mass filling ($70\dots 90\%$) consistently exceeds functional contractile torque restoration ($25\dots 40\%$ improvement over pre-treatment baseline), leaving a permanent functional strength deficit of $30\dots 45\%$ compared to the contralateral intact limb.
-- **Sicari et al. (2016), *npj Regen. Med.*, DOI: [10.1038/npjregenmed.2016.8](https://doi.org/10.1038/npjregenmed.2016.8) (`SRC-0102`):** Multi-center clinical study of 13 human patients with chronic, severe volumetric muscle loss treated with porcine decellularized urinary bladder matrix (UBM-ECM). Key clinical findings:
+- **Reed et al. (2024), *Tissue Eng. Part A*, DOI: [10.1089/ten.TEA.2022.0227](https://doi.org/10.1089/ten.TEA.2022.0227) (`SRC-0111`):** Meta-analysis of 42 pre-clinical and clinical VML investigations. Shows that volumetric defect mass filling ($70\dots 90\%$) consistently exceeds functional contractile torque restoration ($25\dots 40\%$ improvement over pre-treatment baseline), leaving a permanent functional strength deficit of $30\dots 45\%$ compared to the contralateral intact limb.
+- **Sicari et al. (2016), *npj Regen. Med.*, DOI: [10.1038/npjregenmed.2016.8](https://doi.org/10.1038/npjregenmed.2016.8) (`SRC-0112`):** Multi-center clinical study of 13 human patients with chronic, severe volumetric muscle loss treated with porcine decellularized urinary bladder matrix (UBM-ECM). Key clinical findings:
   - Average volumetric tissue mass restoration: $+78.4\% \pm 12.1\%$.
   - Average isometric muscle strength improvement: $+37.3\%$ over the pre-operative deficit.
   - **Crucial limitation:** Zero out of 13 patients achieved normal intact contralateral limb strength. The average residual strength deficit remained at $36.2\% \pm 8.4\%$.
@@ -88,7 +88,7 @@ Transferring rodent VML regeneration data directly to human subjects violates fu
 | **Axonal Reinnervation Distance** | $5\dots 10$ mm ($3\dots 7$ days) | $50\dots 200$ mm ($45\dots 180$ days) | Denervated motor endplates irreversibly fibrose ($\tau_{\text{NMJ}} \approx 180$ d) |
 
 ### 3.4 Retraction & Status
-The claim of complete muscle regeneration to normal intact baseline in human VML is **REFUTED** and registered as negative result [`NEG-0052`](file:///D:/AEGIS-01/registry/negative_results.json) and finding [`FND-0061`](file:///D:/AEGIS-01/registry/findings.json).
+The claim of complete muscle regeneration to normal intact baseline in human VML is **REFUTED** and registered as negative result [`NEG-0062`](file:///D:/AEGIS-01/registry/negative_results.json) and finding [`FND-0071`](file:///D:/AEGIS-01/registry/findings.json).
 
 ---
 
@@ -128,7 +128,7 @@ The ballistic fragment limit $V_{50} = 292.8\ \text{m/s}$ in [`model_12_biologic
 $$V_{50} = \sqrt{\frac{2 \left[ \frac{\sigma_u}{\sqrt{3}} \cdot (2\pi r_{\text{proj}} t) \cdot t + G_c \cdot (2\pi r_{\text{proj}} t) \right]}{m_{\text{proj}}}}$$
 - **Origin:** Formulated for perpendicular punch shearing of monolithic ductile metal plates by flat-ended cylindrical fragments.
 - **Unvalidated Assumptions:** Assumes rigid shear plugging, ignoring biological viscoelastic delamination, flexible membrane deflection, tensile spallation, and blunt trauma transmission to underlying organs.
-- **Scientific Status:** Classified strictly as **`EXPLORATORY_NUMERICAL_UNVALIDATED`**. It is an analytical ranking surrogate, **NOT empirical proof of weapon defeat** (`NEG-0053`, `DEC-0026`).
+- **Scientific Status:** Classified strictly as **`EXPLORATORY_NUMERICAL_UNVALIDATED`**. It is an analytical ranking surrogate, **NOT empirical proof of weapon defeat** (`NEG-0063`, `DEC-0026`).
 
 ### 4.3 Biohybrid Maintenance Breakdown
 Synthetic biohybrids (UHMWPE mesh, CNT-PU sleeves) require zero biological ATP ($0.0\ \text{W/kg}$), but impose a non-zero biological clearance tax:
@@ -166,11 +166,11 @@ Under the 2700-second (45-minute) cursorial locomotion test:
 
 | Registry | New ID Range | Key Contents Added | Evidence Level |
 | :--- | :--- | :--- | :--- |
-| **Sources** | `SRC-0099`..`SRC-0103` | Nemani 2024, Gutama 2026, Reed 2024, Sicari 2016, Ghergherehchi 2016 | Peer-Reviewed Journal Articles |
+| **Sources** | `SRC-0109`..`SRC-0113` | Nemani 2024, Gutama 2026, Reed 2024, Sicari 2016, Ghergherehchi 2016 | Peer-Reviewed Journal Articles |
 | **Hypotheses** | `HYP-0024`..`HYP-0025` | PEG-fusion conduction vs motor force dissociation; Clinical ceiling of ECM in human VML | Level A / Level B |
-| **Experiments** | `EXP-0056`..`EXP-0058` | Human-scale nerve/muscle simulation; Multi-regime cutting audit; CPE45 thermodynamic mapping | Calibrated Computational Models |
-| **Findings** | `FND-0060`..`FND-0063` | PEG CNAP vs force dissociation; Human VML 36% deficit; FGM 48.6N vs 680N resolution; CPE45 failure | Empirically Anchored Findings |
-| **Negative Results** | `NEG-0051`..`NEG-0053` | Falsification of 92% 5-day recovery; Falsification of 100% human VML cure; Falsification of model weapon defeat | Formal Scientific Falsifications |
+| **Experiments** | `EXP-0066`..`EXP-0068` | Human-scale nerve/muscle simulation; Multi-regime cutting audit; CPE45 thermodynamic mapping | Calibrated Computational Models |
+| **Findings** | `FND-0070`..`FND-0073` | PEG CNAP vs force dissociation; Human VML 36% deficit; FGM 48.6N vs 680N resolution; CPE45 failure | Empirically Anchored Findings |
+| **Negative Results** | `NEG-0061`..`NEG-0063` | Falsification of 92% 5-day recovery; Falsification of 100% human VML cure; Falsification of model weapon defeat | Formal Scientific Falsifications |
 | **Decisions** | `DEC-0025`..`DEC-0026` | Mandatory disaggregation of nerve/muscle axes; Ballistics marked EXPLORATORY_NUMERICAL_UNVALIDATED | Methodological Policies |
 | **Issues** | `ISS-0027`..`ISS-0028` | FGM cutting discrepancy resolution; PEG-fusion 92% retraction and VML human calibration | Closed / Resolved Issues |
 

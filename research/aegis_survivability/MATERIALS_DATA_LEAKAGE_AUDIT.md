@@ -18,7 +18,7 @@ This audit performs a rigorous forensic examination of the claim asserted in Cyc
 2. **The Mechanism of Tautology:** Code inspection of `aegis/external_validation.py` in Cycle 4B revealed that for these 11 properties, the `model_prediction` field was hardcoded to be identical to the `measured_mean` copied from the literature (e.g., Wang et al. 2016, Chen et al. 2011, Silver et al. 2001). These 11 values were **input constants** stored in `MODEL-12` dictionaries. Comparing an input constant against the paper it was copied from is circular testing (data leakage), not an independent model prediction.
 3. **Genuine Derived Physical Predictions:** Only **ONE** property in Cycle 4B (Dermis blunt puncture resistance, $26.8\text{ N}$) was actually derived from constitutive physics equations.
 4. **Forensic Reconstruction with Held-Out Physics Derivations:** By evaluating genuine physical derivations—including Linear Elastic Fracture Mechanics ($K_{1c} = \sqrt{E \cdot G_c}$) for pangolin keratin and Atkins Mode I scalpel cutting force in human dermis—we establish that the **real mean relative error of genuine predictions is $9.15\%$**, with all 3/3 predictions falling within experimental $1\sigma$ uncertainty.
-5. **Verdict:** **`VALIDATION_MATERIALS = PARTIAL`**. The claim of "12 independent validations with 0.50% error" is **formally revoked (`INV-0018`, `NEG-0057`)**.
+5. **Verdict:** **`VALIDATION_MATERIALS = PARTIAL`**. The claim of "12 independent validations with 0.50% error" is **formally revoked (`INV-0018`, `NEG-0067`)**.
 
 ---
 

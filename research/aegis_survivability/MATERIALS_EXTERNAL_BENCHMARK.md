@@ -83,5 +83,5 @@ While native biological materials are rigorously validated against peer-reviewed
 +-----------------------------------------------------------------------------------------+
 ```
 
-### Ballistic Limit Demarcation (`NEG-0053`, `DEC-0026`)
+### Ballistic Limit Demarcation (`NEG-0063`, `DEC-0026`)
 Calculated ballistic limits ($V_{50}$) generated via Recht-Ipson analytical equations in `MODEL-04` and `MODEL-12` are **mathematical models of energy partition**, not proof of armor performance. Real-world armor defeated by projectile impacts suffers dynamic localized shock heating, multi-axial strain-rate hardening, delamination, and blunt force deformation (BABT) transfer that analytical equations cannot capture without experimental range testing. AEGIS-01 maintains strict adherence to Decision `DEC-0026`: no ballistic protection claim is accepted as proven without empirical ballistic range testing.

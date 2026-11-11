@@ -10,11 +10,11 @@
 
 Research Cycle 4B marked the definitive transition of AEGIS-01 from theoretical model accumulation to **rigorous external quantitative validation**.
 
-Through the execution of the Three-Track External Validation Gate (`EXP-0059`):
+Through the execution of the Three-Track External Validation Gate (`EXP-0069`):
 1. Native biomaterials mechanics (`MODEL-12`) were validated against peer-reviewed test coupons with $0.50\%$ mean error.
 2. Clinical functional muscle recovery (`MODEL-13`) was verified against the 13-patient IPD cohort of Dziki et al. (2016) with a validation set $\text{MAE} = 5.92\%$.
 3. Coupled thermoregulatory strain under CPE45 (`MODEL-14`) was calibrated against ISO 7933:2023 with a warming rate discrepancy of just $0.005\text{ K/min}$.
-4. Critical numerical and epistemic errors were permanently excised (`INV-0015`, `INV-0016`, `NEG-0054`, `NEG-0055`).
+4. Critical numerical and epistemic errors were permanently excised (`INV-0015`, `INV-0016`, `NEG-0064`, `NEG-0065`).
 
 With 14 models verified, 108 automated unit tests passing, zero cross-repo collisions, and physical conservation laws verified to $<10^{-12}\text{ W}$, the project faces a pivotal strategic choice for Cycle 5.
 

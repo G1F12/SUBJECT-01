@@ -1,6 +1,6 @@
 [
   {
-    "id": "SRC-0076",
+    "id": "SRC-0086",
     "title": "Pangolin armor: Overlapping, structure, and mechanical properties of the keratinous scales",
     "authors": "Wang, B., Yang, W., Sherman, V. R., Meyers, M. A.",
     "year": 2016,
@@ -19,7 +19,7 @@
     "original_id": "SRC-0068"
   },
   {
-    "id": "SRC-0077",
+    "id": "SRC-0087",
     "title": "Armadillo armor: mechanical testing and micro-structural evaluation",
     "authors": "Chen, I. H., Kiang, J. H., Correa, V., Lopez, M. I., Chen, P. Y., McKittrick, J., Meyers, M. A.",
     "year": 2011,
@@ -38,7 +38,7 @@
     "original_id": "SRC-0069"
   },
   {
-    "id": "SRC-0078",
+    "id": "SRC-0088",
     "title": "Biological materials: Structure and mechanical properties",
     "authors": "Meyers, M. A., Chen, P. Y., Lin, A. Y., Seki, Y.",
     "year": 2008,
@@ -58,7 +58,7 @@
     "original_id": "SRC-0070"
   },
   {
-    "id": "SRC-0079",
+    "id": "SRC-0089",
     "title": "A viscous tolerance criterion for soft tissue injury assessment",
     "authors": "Viano, D. C., Lau, I. V.",
     "year": 1988,
@@ -77,7 +77,7 @@
     "original_id": "SRC-0071"
   },
   {
-    "id": "SRC-0080",
+    "id": "SRC-0090",
     "title": "A methodology for evaluating behind armor blunt trauma based on a study of thoracic injury from blunt impact",
     "authors": "Bass, C. R., Salzar, R. S., Lucas, S. R., Davis, M., Donnellan, L., Folk, B., Hughes, C., Meyer, C., Waclawik, S.",
     "year": 2006,
@@ -96,7 +96,7 @@
     "original_id": "SRC-0072"
   },
   {
-    "id": "SRC-0081",
+    "id": "SRC-0091",
     "title": "Conduction Velocity and Diameter of Nerve Fibers",
     "authors": "Hursh, J. B.",
     "year": 1939,
@@ -115,7 +115,7 @@
     "original_id": "SRC-0073"
   },
   {
-    "id": "SRC-0082",
+    "id": "SRC-0092",
     "title": "Electromechanical delay in human skeletal muscle under concentric and eccentric contractions",
     "authors": "Cavanagh, P. R., Komi, P. V.",
     "year": 1979,
@@ -134,7 +134,7 @@
     "original_id": "SRC-0074"
   },
   {
-    "id": "SRC-0083",
+    "id": "SRC-0093",
     "title": "Increased rate of force development and neural drive of human skeletal muscle following resistance training",
     "authors": "Aagaard, P., Simonsen, E. B., Andersen, J. L., Magnusson, P., Dyhre-Poulsen, P.",
     "year": 2002,
@@ -153,7 +153,7 @@
     "original_id": "SRC-0075"
   },
   {
-    "id": "SRC-0084",
+    "id": "SRC-0094",
     "title": "Impact of hemorrhage on trauma outcome: an overview of epidemiology, clinical presentations, and therapeutic considerations",
     "authors": "Kauvar, D. S., Lefering, R., Wade, C. E.",
     "year": 2006,
@@ -170,10 +170,10 @@
       "HYP-0013",
       "HYP-0014"
     ],
-    "original_id": "SRC-0076"
+    "original_id": "SRC-0086"
   },
   {
-    "id": "SRC-0085",
+    "id": "SRC-0095",
     "title": "Skin shedding and tissue regeneration in African spiny mice (Acomys)",
     "authors": "Seifert, A. W., Kiama, S. G., Seifert, M. G., Goheen, J. R., Palmer, T. M., Maden, M.",
     "year": 2012,
@@ -189,10 +189,10 @@
     "supports_hypotheses": [
       "HYP-0015"
     ],
-    "original_id": "SRC-0077"
+    "original_id": "SRC-0087"
   },
   {
-    "id": "SRC-0086",
+    "id": "SRC-0096",
     "title": "Cells keep a memory of their tissue origin during axolotl limb regeneration",
     "authors": "Kragl, M., Knapp, D., Nacu, E., Khattak, S., Maden, M., Epperlein, H. H., Tanaka, E. M.",
     "year": 2009,
@@ -208,10 +208,10 @@
     "supports_hypotheses": [
       "HYP-0015"
     ],
-    "original_id": "SRC-0078"
+    "original_id": "SRC-0088"
   },
   {
-    "id": "SRC-0087",
+    "id": "SRC-0097",
     "title": "Scar-free healing: from embryonic mechanisms to adult therapeutic intervention",
     "authors": "Ferguson, M. W. J., O'Kane, S.",
     "year": 2004,
@@ -227,10 +227,10 @@
     "supports_hypotheses": [
       "HYP-0015"
     ],
-    "original_id": "SRC-0079"
+    "original_id": "SRC-0089"
   },
   {
-    "id": "SRC-0088",
+    "id": "SRC-0098",
     "title": "Crack deflection at an interface between dissimilar materials",
     "authors": "He, M. Y., Hutchinson, J. W.",
     "year": 1989,
@@ -246,10 +246,10 @@
     "supports_hypotheses": [
       "HYP-0010"
     ],
-    "original_id": "SRC-0080"
+    "original_id": "SRC-0090"
   },
   {
-    "id": "SRC-0089",
+    "id": "SRC-0099",
     "title": "The strength of highly elastic materials",
     "authors": "Lake, G. J., Thomas, A. G.",
     "year": 1967,
@@ -265,10 +265,10 @@
     "supports_hypotheses": [
       "HYP-0009"
     ],
-    "original_id": "SRC-0081"
+    "original_id": "SRC-0091"
   },
   {
-    "id": "SRC-0090",
+    "id": "SRC-0100",
     "title": "Epidemiology, multistage models, and short-term mutagenicity tests",
     "authors": "Peto, R.",
     "year": 1977,
@@ -280,10 +280,10 @@
     "supports_hypotheses": [
       "HYP-0015"
     ],
-    "original_id": "SRC-0082"
+    "original_id": "SRC-0092"
   },
   {
-    "id": "SRC-0091",
+    "id": "SRC-0101",
     "title": "Nerves and Nerve Injuries / Surgical Disorders of the Peripheral Nerves",
     "authors": "Sunderland, S. / Seddon, H. J.",
     "year": 1978,
@@ -299,10 +299,10 @@
     "supports_hypotheses": [
       "HYP-0015"
     ],
-    "original_id": "SRC-0083"
+    "original_id": "SRC-0093"
   },
   {
-    "id": "SRC-0092",
+    "id": "SRC-0102",
     "title": "Numerical evaluation of behind armor blunt trauma to the human thorax",
     "authors": "Roberts, J. C., Ward, E. E., Merkle, A. C., O'Connor, J. V.",
     "year": 2007,
@@ -318,10 +318,10 @@
     "supports_hypotheses": [
       "HYP-0012"
     ],
-    "original_id": "SRC-0084"
+    "original_id": "SRC-0094"
   },
   {
-    "id": "SRC-0093",
+    "id": "SRC-0103",
     "title": "Volumetric muscle loss",
     "authors": "Grogan, B. F., Hsu, J. R.",
     "year": 2011,
@@ -337,10 +337,10 @@
     "supports_hypotheses": [
       "HYP-0018"
     ],
-    "original_id": "SRC-0085"
+    "original_id": "SRC-0095"
   },
   {
-    "id": "SRC-0094",
+    "id": "SRC-0104",
     "title": "Energetics and mechanics of terrestrial locomotion. I. Metabolic energy consumption as a function of speed and body size in birds and mammals",
     "authors": "Taylor, C. R., Heglund, N. C., Maloiy, G. M.",
     "year": 1982,
@@ -356,10 +356,10 @@
     "supports_hypotheses": [
       "HYP-0019"
     ],
-    "original_id": "SRC-0086"
+    "original_id": "SRC-0096"
   },
   {
-    "id": "SRC-0095",
+    "id": "SRC-0105",
     "title": "American College of Sports Medicine position stand: Exercise and fluid replacement",
     "authors": "Sawka, M. N., Burke, L. M., Eichner, E. R., Maughan, R. J., Montain, S. J., Stachenfeld, N. S.",
     "year": 2007,
@@ -375,10 +375,10 @@
     "supports_hypotheses": [
       "HYP-0019"
     ],
-    "original_id": "SRC-0087"
+    "original_id": "SRC-0097"
   },
   {
-    "id": "SRC-0096",
+    "id": "SRC-0106",
     "title": "The Science and Engineering of Cutting: The Mechanics and Processes of Separating, Scratching and Puncturing Biomaterials, Metals and Non-metals",
     "authors": "Atkins, A. G.",
     "year": 2009,
@@ -394,10 +394,10 @@
     "supports_hypotheses": [
       "HYP-0017"
     ],
-    "original_id": "SRC-0088"
+    "original_id": "SRC-0098"
   },
   {
-    "id": "SRC-0097",
+    "id": "SRC-0107",
     "title": "The Stomatopod Dactyl Club: A Formidable Damage-Tolerant Biological Composite",
     "authors": "Weaver, J. C., Milliron, G. W., Miserez, A., Evans-Lutterodt, K., Herrera, S., Gallana, I., Mershon, W. J., Swanson, B., Zavattieri, P., DiMasi, E., Kisailus, D.",
     "year": 2012,
@@ -415,7 +415,7 @@
     ]
   },
   {
-    "id": "SRC-0098",
+    "id": "SRC-0108",
     "title": "Brief post-surgical electrical stimulation accelerates axon regeneration and muscle reinnervation without affecting the functional success in humans and rodents",
     "authors": "Gordon, T., Amirjani, N., Edwards, D. C., Chan, K. M.",
     "year": 2008,
@@ -433,7 +433,7 @@
     ]
   },
   {
-    "id": "SRC-0099",
+    "id": "SRC-0109",
     "title": "Rapid, effective, and long-lasting behavioral recovery produced by microsutures, methylene blue, and polyethylene glycol after completely severing rat sciatic nerves",
     "authors": "Bittner, G. D., Keating, C. P., Kane, J. R., Britt, J. M., Spaeth, C. S., Fan, J. D., Zuzek, A., Wilcock, R. W., Edison, N. A., Bushman, J. S.",
     "year": 2012,
@@ -451,7 +451,7 @@
     ]
   },
   {
-    "id": "SRC-0100",
+    "id": "SRC-0110",
     "title": "Infiltration of chitin by protein coacervates defines the architectural design for stiffness gradient in squid beaks",
     "authors": "Tan, Y., Hoon, S., Guerette, P. A., Wei, W., Savun, A., Kumar, P., Lim, S., Miserez, A.",
     "year": 2015,
@@ -469,7 +469,7 @@
     ]
   },
   {
-    "id": "SRC-0101",
+    "id": "SRC-0111",
     "title": "Volumetric muscle loss: Pathophysiology and current treatment strategies",
     "authors": "Corona, B. T., Rivera, J. C., Owens, J. G., Wenke, J. C., Rathbone, C. R.",
     "year": 2015,
@@ -487,7 +487,7 @@
     ]
   },
   {
-    "id": "SRC-0102",
+    "id": "SRC-0112",
     "title": "Polyethylene Glycol Fusion for Peripheral Nerve Repair: A Systematic Review and Meta-Analysis of Functional Outcomes",
     "authors": "Nemani, V. M., Patel, R. R., Isaacs, J. E., et al.",
     "year": 2024,
@@ -506,7 +506,7 @@
     ]
   },
   {
-    "id": "SRC-0103",
+    "id": "SRC-0113",
     "title": "Current Status, Translation Barriers, and Synkinesis Pitfalls of Chemical Axonal Fusion in Traumatic Extremity Nerve Injury",
     "authors": "Gutama, R. A., Morrison, W. A., Borschel, G. H., et al.",
     "year": 2026,
@@ -525,7 +525,7 @@
     ]
   },
   {
-    "id": "SRC-0104",
+    "id": "SRC-0114",
     "title": "Biomaterial and Cellular Approaches to Volumetric Muscle Loss: Systematic Review of Contractile Force vs Mass Restoration",
     "authors": "Reed, L. C., Greising, S. M., Corona, B. T., et al.",
     "year": 2024,
@@ -544,7 +544,7 @@
     ]
   },
   {
-    "id": "SRC-0105",
+    "id": "SRC-0115",
     "title": "Tissue bioscaffolds for the treatment of volumetric muscle loss: an open-label, non-randomized, multi-center study in 13 patients",
     "authors": "Sicari, B. M., Dziki, J. L., Siu, B. F., Medberry, C. J., Dearth, C. L., Badylak, S. F., et al.",
     "year": 2016,
@@ -563,7 +563,7 @@
     ]
   },
   {
-    "id": "SRC-0106",
+    "id": "SRC-0116",
     "title": "Axonal misdirection and motor synkinesis following polyethylene glycol-mediated nerve repair in mammalian models",
     "authors": "Ghergherehchi, C. L., Mikesh, M., Sengelaub, D. R., Jackson, B. F., Smith, R., Bittner, G. D.",
     "year": 2016,
@@ -581,7 +581,7 @@
     ]
   },
   {
-    "id": "SRC-0107",
+    "id": "SRC-0117",
     "title": "Ergonomics of the thermal environment - Analytical determination and interpretation of heat strain using calculation of the predicted heat strain",
     "authors": "International Organization for Standardization",
     "year": 2023,
@@ -599,7 +599,7 @@
     ]
   },
   {
-    "id": "SRC-0108",
+    "id": "SRC-0118",
     "title": "Mechanisms of deep penetration into soft solids, with application to the puncture of skin",
     "authors": "Shergold, O. A., Fleck, N. A.",
     "year": 2004,
@@ -617,7 +617,7 @@
     ]
   },
   {
-    "id": "SRC-0109",
+    "id": "SRC-0119",
     "title": "Viscoelastic properties of human skin and processed dermis",
     "authors": "Silver, F. H., Freeman, J. W., DeVore, D.",
     "year": 2001,
@@ -635,7 +635,7 @@
     ]
   },
   {
-    "id": "SRC-0110",
+    "id": "SRC-0120",
     "title": "Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate",
     "authors": "Montain, S. J., Sawka, M. N., Cadarette, B. S., Quigley, M. D., McKay, J. M.",
     "year": 1994,
@@ -653,93 +653,133 @@
     ]
   },
   {
-    "id": "SRC-0111",
+    "id": "SRC-0121",
     "citation": "Montain SJ, Sawka MN, Cadarette BS, et al. Physiological tolerance to uncompensable heat stress. J Appl Physiol 1994;77(1):216-22.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0112",
+    "id": "SRC-0122",
     "citation": "Sawka MN, Montain SJ, Latzka WA. Hydration effects on thermoregulation and performance in the heat. Comp Biochem Physiol A 2001;128(4):679-90.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0113",
+    "id": "SRC-0123",
     "citation": "Shergold OA, Fleck NA. Mechanisms of deep penetration of soft solids. Proc R Soc Lond A 2004;460:3037-58.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0114",
+    "id": "SRC-0124",
     "citation": "Atkins AG. The Science and Engineering of Cutting. Oxford: Butterworth-Heinemann, 2009.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0115",
+    "id": "SRC-0125",
     "citation": "Dziki JL, et al. An acellular biologic scaffold treatment for volumetric muscle loss. npj Regen Med 2016;1:16008.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0116",
+    "id": "SRC-0126",
     "citation": "Corona BT, et al. Contribution of neuromuscular junction disruption to muscle dysfunction following volumetric muscle loss. Muscle Nerve 2015;52(5):789-97.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0117",
+    "id": "SRC-0127",
     "citation": "Greising SM, et al. Unresolved pathophysiology following volumetric muscle loss injury: an urgent need for multi-targeted therapies. Front Physiol 2020;11:565.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0118",
+    "id": "SRC-0128",
     "citation": "Chen PY, et al. Armadillo armor: mechanical testing and micro-structural characterization. J Mech Behav Biomed Mater 2011;4(5):713-22.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0119",
+    "id": "SRC-0129",
     "citation": "Wang B, et al. Pangolin scales: Structure, properties and peeling mechanism. Acta Biomater 2016;36:224-35.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0120",
+    "id": "SRC-0130",
     "citation": "ISO 7933:2023 Ergonomics of the thermal environment -- Analytical determination and interpretation of heat stress using calculation of the predicted heat strain.",
     "cycle": "Cycle 5"
   },
   {
-    "id": "SRC-0121",
+    "id": "SRC-0131",
     "citation": "Wang et al. (2016). The mechanical properties and structure of pangolin scales. Nature Communications 7:13024. DOI: 10.1038/ncomms13024.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0122",
+    "id": "SRC-0132",
     "citation": "McKittrick et al. (2012). The structure and mechanics of sheep horns. Journal of the Mechanical Behavior of Biomedical Materials 12:87-108.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0123",
+    "id": "SRC-0133",
     "citation": "Corona et al. (2015). Functional muscle recovery after volumetric muscle loss: role of autologous cell-based therapies and exercise. Journal of Applied Physiology 118:1115-1126.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0124",
+    "id": "SRC-0134",
     "citation": "Greising et al. (2017). Quantitative assessment of muscle function following volumetric muscle loss. Journal of Orthopaedic Research 35:106-114.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0125",
+    "id": "SRC-0135",
     "citation": "Greising et al. (2020). Neuromuscular and extracellular matrix remodeling after volumetric muscle loss. Tissue Engineering Part A 26:581-591.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0126",
+    "id": "SRC-0136",
     "citation": "Garg et al. (2015). Autologous minced muscle grafts improve functional recovery after volumetric muscle loss. Stem Cells Translational Medicine 4:1072-1082.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0127",
+    "id": "SRC-0137",
     "citation": "Anderson et al. (2008). Foreign body reaction to biomaterials. Seminars in Immunology 20:86-100.",
     "cycle": "Cycle 6"
   },
   {
-    "id": "SRC-0128",
+    "id": "SRC-0138",
     "citation": "Zammit et al. (2004). Muscle satellite cells adopt divergent fates: a mechanism for self-renewal. Journal of Cell Biology 166:347-357.",
     "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0139",
+    "citation": "Wang et al. (2016). Pangolin armor: Overlapping, structure, and mechanical properties of the keratinous scales. Acta Biomaterialia 41:264-274. DOI: 10.1016/j.actbio.2016.05.028.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0140",
+    "citation": "Trim et al. (2011). The effects of water and microstructure on the mechanical properties of bighorn sheep (Ovis canadensis) horn keratin. Acta Biomaterialia 7(3):1228-1240. DOI: 10.1016/j.actbio.2010.11.024.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0141",
+    "citation": "Bertram & Gosline (1986). Functional design of horse hoof keratin: the modulation of mechanical properties through hydration effects. Journal of Experimental Biology 125:29-47.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0142",
+    "citation": "Corona et al. (2015). Functional muscle recovery after volumetric muscle loss: role of autologous cell-based therapies and exercise. Journal of Applied Physiology 118(9):1115-1126. DOI: 10.1152/japplphysiol.01150.2014.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0143",
+    "citation": "Garg et al. (2015). Volumetric muscle loss: persistent functional deficits beyond frank loss of tissue. Journal of Orthopaedic Research 33(1):40-46. DOI: 10.1002/jor.22730.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0144",
+    "citation": "Greising et al. (2017). Unwavering pathobiology of volumetric muscle loss injury. Scientific Reports 7:13179. DOI: 10.1038/s41598-017-13306-2.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0145",
+    "citation": "Greising et al. (2020). Neuromuscular and extracellular matrix remodeling after volumetric muscle loss. Tissue Engineering Part A 26(11-12):581-591. DOI: 10.1089/ten.tea.2019.0329.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0146",
+    "citation": "Montain et al. (1994). Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate. Journal of Applied Physiology 77(1):216-222. DOI: 10.1152/jappl.1994.77.1.216.",
+    "cycle": "Cycle 7"
   }
 ]

@@ -2,7 +2,7 @@
 ## Мультимасштабное моделирование 6 фаз регенерации тканей и биофизические пределы
 **Исследовательский цикл:** Cycle 2A  
 **Модуль моделирования:** [`aegis/model_09_multiscale_regeneration.py`](file:///D:/AEGIS-01/aegis/model_09_multiscale_regeneration.py)  
-**Реестр эксперимента:** `EXP-0045`  
+**Реестр эксперимента:** `EXP-0055`  
 **Статус верификации:** `PHYSICS_CONSISTENT` / `EXPERIMENTALLY_SUPPORTED`
 
 ---

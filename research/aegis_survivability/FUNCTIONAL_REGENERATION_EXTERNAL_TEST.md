@@ -3,7 +3,7 @@
 **Document ID:** `AEGIS-DOC-C6-REGEN-TEST`  
 **Execution Date:** 2026-11-10  
 **Test Module:** `aegis.cycle6_validation`  
-**Experiment ID:** `EXP-0072` | **Finding ID:** `FND-0082`, `FND-0083` | **Negative Result:** `NEG-0070` | **Hypothesis ID:** `HYP-0036`
+**Experiment ID:** `EXP-0082` | **Finding ID:** `FND-0092`, `FND-0093` | **Negative Result:** `NEG-0080` | **Hypothesis ID:** `HYP-0036`
 
 ---
 
@@ -85,7 +85,7 @@ Root Mean Square Error     7.41%                  17.58%                  57.85%
 
 ### Key Scientific Findings
 1. **Physical Significance of Lateral Shear Loss:** Accounting for myofascial shear transmission disruption drops MAE from $14.25\%$ down to $6.69\%$, beating the simple cohort baseline by $> 53\%$.
-2. **Negative Result (`NEG-0070`): Acellular ECM Ineffectiveness Alone:**
+2. **Negative Result (`NEG-0080`): Acellular ECM Ineffectiveness Alone:**
    In critical-size defects (35%), decellularized ECM scaffold alone produces an observed force recovery of $43.5 \pm 4.7\%$ vs $41.2 \pm 5.1\%$ for untreated defect controls. **This $+2.3\text{ percentage point}$ difference is statistically insignificant ($p > 0.05$)**. Acellular scaffolds act merely as space fillers unless combined with mechanical stimulation or viable autologous myogenic cells.
 3. **Translational Warning:** Translating animal VML findings to humans must remain conditional due to the quadratic increase in reinnervation distance and diffusion volume in human skeletal muscle compartments.
 

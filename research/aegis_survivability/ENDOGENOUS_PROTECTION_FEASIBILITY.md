@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-ENDOGENOUS-FEASIBILITY-C5`  
-**Related Registries:** `EXP-0067`, `HYP-0031`, `FND-0075`, `NEG-0065`, `DEC-0036`, `SRC-0118`, `SRC-0119`
+**Related Registries:** `EXP-0077`, `HYP-0031`, `FND-0085`, `NEG-0075`, `DEC-0036`, `SRC-0128`, `SRC-0129`
 
 ---
 

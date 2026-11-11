@@ -59,7 +59,7 @@ When a mixed peripheral nerve (containing thousands of motor, sensory, and sympa
 - Regenerating sensory axons cross into motor endoneurial tubes.
 - Motor axons destined for flexor motor pools regenerate into extensor fascicles.
 
-In humans and large primates, the **motor axonal misdirection rate is $35\dots 55\%$** (Gutama et al. 2026, `SRC-0100`; Ghergherehchi et al. 2016, `SRC-0103`). The clinical consequence is **synkinesis**: voluntary attempts to activate an agonist muscle produce simultaneous, involuntary co-contraction of its antagonist, drastically reducing net joint torque and fine motor dexterity.
+In humans and large primates, the **motor axonal misdirection rate is $35\dots 55\%$** (Gutama et al. 2026, `SRC-0110`; Ghergherehchi et al. 2016, `SRC-0113`). The clinical consequence is **synkinesis**: voluntary attempts to activate an agonist muscle produce simultaneous, involuntary co-contraction of its antagonist, drastically reducing net joint torque and fine motor dexterity.
 
 ### 3.2 Neuromuscular Junction (NMJ) Senescence Kinetics
 A denervated motor endplate does not wait indefinitely for the regenerating axon. Upon loss of the presynaptic terminal:
@@ -116,8 +116,8 @@ graph TD
 ```
 
 #### Synthesis of Key Evidence:
-- **Nemani et al. (2024, `SRC-0099`):** Meta-analysis of PEG-fusion clinical and mammalian trials showed compound nerve action potential (CNAP) recovery within 24 hours in $78\%$ of repaired nerves. However, functional muscle contraction at 5 days averaged only **$18.4\% \pm 6.2\%$** of intact control. Full recovery of 92% force was never observed in any mammalian study.
-- **Gutama et al. (2026, `SRC-0100`):** In clinical extremity nerve lacerations, PEG-fusion provided superior sensory discrimination (two-point discrimination $< 6\ \text{mm}$ in $70\%$ of patients), but motor recovery in mixed nerves achieved an average long-term plateau of only **$54.2\%$** of contralateral intact force due to profound motor synkinesis.
+- **Nemani et al. (2024, `SRC-0109`):** Meta-analysis of PEG-fusion clinical and mammalian trials showed compound nerve action potential (CNAP) recovery within 24 hours in $78\%$ of repaired nerves. However, functional muscle contraction at 5 days averaged only **$18.4\% \pm 6.2\%$** of intact control. Full recovery of 92% force was never observed in any mammalian study.
+- **Gutama et al. (2026, `SRC-0110`):** In clinical extremity nerve lacerations, PEG-fusion provided superior sensory discrimination (two-point discrimination $< 6\ \text{mm}$ in $70\%$ of patients), but motor recovery in mixed nerves achieved an average long-term plateau of only **$54.2\%$** of contralateral intact force due to profound motor synkinesis.
 
 ---
 
@@ -132,7 +132,7 @@ In wounds exceeding this threshold:
 3. Collagen type I is deposited rapidly, forming a dense, non-contractile scar before myogenic cells can migrate into the core.
 
 ### 5.2 The 13-Patient Human Clinical Cohort (Sicari et al., 2016)
-The landmark study by Sicari, Dziki, Badylak et al. (*npj Regen. Med.*, 2016, `SRC-0102`) represents the definitive human clinical benchmark for acellular bioscaffolds in severe VML:
+The landmark study by Sicari, Dziki, Badylak et al. (*npj Regen. Med.*, 2016, `SRC-0112`) represents the definitive human clinical benchmark for acellular bioscaffolds in severe VML:
 - **Cohort:** $N = 13$ military and civilian patients with severe, chronic VML (>6 months post-trauma, failed conventional physical therapy).
 - **Intervention:** Surgical debridement of scar tissue followed by implantation of porcine extracellular matrix (ECM) bioscaffolds coupled with aggressive post-operative physical rehabilitation.
 - **Measured Outcomes:**
@@ -142,7 +142,7 @@ The landmark study by Sicari, Dziki, Badylak et al. (*npj Regen. Med.*, 2016, `S
   - **Zero patients (0/13)** returned to normal uninjured baseline strength.
 
 ### 5.3 Systematic Review Benchmark (Reed et al., 2024)
-Reed et al. (2024, `SRC-0101`) audited 42 pre-clinical and clinical VML studies:
+Reed et al. (2024, `SRC-0111`) audited 42 pre-clinical and clinical VML studies:
 - **Mass fill vs Force disconnect:** Across all studies, volumetric defect filling averaged $82\%$, whereas functional contractile force recovery averaged only **$31.8\%$** improvement over the injured state.
 - **Core Ischemia Barrier:** In human-scale defects (>20 mm thickness), unvascularized implanted ECM scaffolds suffer from central avascular necrosis. Endogenous angiogenesis ($0.2\dots 0.4\ \text{mm/day}$) requires $50\dots 100\ \text{days}$ to reach the scaffold core, by which time implanted or infiltrating progenitor cells have undergone anoxic death.
 

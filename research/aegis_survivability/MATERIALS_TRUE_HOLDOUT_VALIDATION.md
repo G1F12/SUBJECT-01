@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-MAT-AUDIT-C5`  
-**Related Registries:** `EXP-0065`, `HYP-0029`, `FND-0073`, `NEG-0063`, `DEC-0034`, `SRC-0113`, `SRC-0118`, `SRC-0119`
+**Related Registries:** `EXP-0075`, `HYP-0029`, `FND-0083`, `NEG-0073`, `DEC-0034`, `SRC-0123`, `SRC-0128`, `SRC-0129`
 
 ---
 

@@ -6,11 +6,11 @@ by shifting AEGIS-01 IDs strictly beyond the current published SUBJECT-01 HEAD (
 
 Collision Inventory:
 - HYP-0008 (1 collision) -> renumbered to HYP-0009..HYP-0020 (shift +1)
-- EXP-0037..0041 (5 collisions) -> renumbered to EXP-0042..EXP-0052 (shift +5)
-- FND-0038..0041 (4 collisions) -> renumbered to FND-0042..FND-0056 (shift +4)
-- NEG-0029..0031 (3 collisions) -> renumbered to NEG-0032..NEG-0044 (shift +3)
+- EXP-0037..0041 (5 collisions) -> renumbered to EXP-0042..EXP-0062 (shift +5)
+- FND-0038..0041 (4 collisions) -> renumbered to FND-0042..FND-0066 (shift +4)
+- NEG-0029..0031 (3 collisions) -> renumbered to NEG-0032..NEG-0054 (shift +3)
 - DEC-0015 (1 collision) -> renumbered to DEC-0016..DEC-0022 (shift +1)
-- SRC-0068..0072 (5 collisions) -> renumbered to SRC-0073..SRC-0093 (shift +5)
+- SRC-0068..0072 (5 collisions) -> renumbered to SRC-0073..SRC-0103 (shift +5)
 Total: 19 collisions resolved to EXACTLY 0.
 
 Idempotency:
@@ -96,8 +96,8 @@ def is_already_migrated() -> bool:
         return False
     data = json.loads(negs_file.read_text(encoding="utf-8"))
     ids = [item.get("id") for item in data]
-    # If NEG-0038 is present or NEG-0035 is present and NEG-0029 is absent, already migrated
-    return ("NEG-0038" in ids or "NEG-0035" in ids) and ("NEG-0029" not in ids)
+    # If NEG-0048 is present or NEG-0035 is present and NEG-0029 is absent, already migrated
+    return ("NEG-0048" in ids or "NEG-0035" in ids) and ("NEG-0029" not in ids)
 
 
 def run_migration():

@@ -10,14 +10,14 @@
 
 This document presents the first rigorous external quantitative validation of AEGIS-01 functional regeneration models against independent clinical individual participant data (IPD) from human Volumetric Muscle Loss (VML) trials.
 
-Using the landmark human clinical cohort of 13 patients treated with extracellular matrix (ECM) scaffolds (Dziki et al., 2016, *npj Regenerative Medicine*, DOI `10.1038/npjregenmed.2016.8`, `SRC-0101`), we evaluated the predictive accuracy of `MODEL-13` across three partitioned splits: Calibration ($N=6$), Validation ($N=4$), and Holdout ($N=3$).
+Using the landmark human clinical cohort of 13 patients treated with extracellular matrix (ECM) scaffolds (Dziki et al., 2016, *npj Regenerative Medicine*, DOI `10.1038/npjregenmed.2016.8`, `SRC-0111`), we evaluated the predictive accuracy of `MODEL-13` across three partitioned splits: Calibration ($N=6$), Validation ($N=4$), and Holdout ($N=3$).
 
 ### Key Results:
 - **Observed Cohort Mean Force Improvement:** $+37.29\%$ (range: $-5.2\%$ to $+112.4\%$).
 - **Model 13 Predicted Cohort Mean:** $+34.69\%$ (Mean Bias Error: $-2.60\%$).
 - **Overall Error:** Mean Absolute Error ($\text{MAE}$) = $10.42\%$, $\text{RMSE} = 15.55\%$.
 - **Validation Split ($N=4$):** $\text{MAE} = 5.92\%$, $\text{RMSE} = 6.39\%$.
-- **Formal Retraction of Volumetric Recovery Claim (`INV-0015`, `NEG-0054`):** Dziki et al. did **not** measure whole-defect volumetric fill. The previously reported figure of $78.4\%$ volume recovery was a synthetic assumption and is formally retracted.
+- **Formal Retraction of Volumetric Recovery Claim (`INV-0015`, `NEG-0064`):** Dziki et al. did **not** measure whole-defect volumetric fill. The previously reported figure of $78.4\%$ volume recovery was a synthetic assumption and is formally retracted.
 
 ---
 
@@ -34,7 +34,7 @@ To avoid scientific overreach, AEGIS-01 establishes four strictly differentiated
 1. **Volumetric Muscle Mass Reconstitution:** Quantitative imaging (MRI/CT volumetry) of functional contractile muscle tissue volume within the initial defect. **Dziki et al. did NOT measure this.** Biopsy samples showed scattered *islands of de novo desmin-positive myogenesis*, but the vast majority of the scaffold remodeled into dense, vascularized fibro-collagenous connective tissue.
 2. **Contractile Isometric Torque Improvement over Pre-Op Baseline:** The actual primary outcome measured by Dziki et al. via Biodex isokinetic dynamometry. Patients improved their maximal voluntary isometric torque by a cohort mean of **$+37.3\%$** relative to their pre-operative baseline.
 3. **Return to Normal Contralateral Strength:** A $+37.3\%$ gain relative to a severely atrophied pre-op baseline ($20\dots 40\text{ Nm}$) does **not** restore normal strength. Dziki et al.'s patients remained severely impaired relative to their healthy, uninjured contralateral limbs ($40\dots 65\%$ residual deficit).
-4. **Animal vs. Human Scaling:** Rodent VML models (e.g. Reed et al., 2024, DOI `10.1089/ten.TEA.2022.0227`, `SRC-0102`) frequently report $60\dots 85\%$ functional recovery because rodent muscle defects have a diffusion distance of $<2\text{ mm}$. Human critical-size defects ($>20\text{ cm}^3$, diffusion distance $>15\text{ mm}$) suffer from ischemic central necrosis without microvascular anastomosis, preventing complete myogenic repopulation.
+4. **Animal vs. Human Scaling:** Rodent VML models (e.g. Reed et al., 2024, DOI `10.1089/ten.TEA.2022.0227`, `SRC-0112`) frequently report $60\dots 85\%$ functional recovery because rodent muscle defects have a diffusion distance of $<2\text{ mm}$. Human critical-size defects ($>20\text{ cm}^3$, diffusion distance $>15\text{ mm}$) suffer from ischemic central necrosis without microvascular anastomosis, preventing complete myogenic repopulation.
 
 ---
 
@@ -90,5 +90,5 @@ Patient P12 achieved an extreme $+112.4\%$ torque improvement. Clinical review r
 
 In accordance with scientific integrity guidelines:
 - **`INV-0015`:** The statement *"Human VML trials with ECM scaffolds prove 78.4% volumetric muscle mass replacement"* is permanently revoked.
-- **`NEG-0054`:** Formally recorded in `registry/negative_results.json` as falsification of volumetric recovery quantification in Dziki et al. (2016).
+- **`NEG-0064`:** Formally recorded in `registry/negative_results.json` as falsification of volumetric recovery quantification in Dziki et al. (2016).
 - **Epistemic Classification:** Model 13's VML prediction is officially classified as **`PARTIALLY_EXTERNALLY_VALIDATED`** for functional voluntary torque gains ($+37.3\%$), while volumetric defect repopulation remains **`UNVALIDATED_MODEL_ASSUMPTION`**.

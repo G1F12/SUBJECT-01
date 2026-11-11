@@ -62,12 +62,12 @@ Cross-repository registry synchronization was audited against the latest publish
 | Registry Entity | SUBJECT-01 Maximum ID | AEGIS-01 Allocated Range | ID Count | Overlap / Collision Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Hypotheses** | `HYP-0008` | `HYP-0009` .. `HYP-0025` | 17 | **STRICTLY ZERO COLLISIONS (OFFSET = +8)** |
-| **Experiments** | `EXP-0041` | `EXP-0042` .. `EXP-0058` | 17 | **STRICTLY ZERO COLLISIONS (OFFSET = +41)** |
-| **Findings** | `FND-0041` | `FND-0042` .. `FND-0063` | 22 | **STRICTLY ZERO COLLISIONS (OFFSET = +41)** |
-| **Negative Results**| `NEG-0034` | `NEG-0035` .. `NEG-0053` | 19 | **STRICTLY ZERO COLLISIONS (OFFSET = +34)** |
+| **Experiments** | `EXP-0041` | `EXP-0042` .. `EXP-0068` | 17 | **STRICTLY ZERO COLLISIONS (OFFSET = +41)** |
+| **Findings** | `FND-0041` | `FND-0042` .. `FND-0073` | 22 | **STRICTLY ZERO COLLISIONS (OFFSET = +41)** |
+| **Negative Results**| `NEG-0034` | `NEG-0035` .. `NEG-0063` | 19 | **STRICTLY ZERO COLLISIONS (OFFSET = +34)** |
 | **Decisions** | `DEC-0015` | `DEC-0016` .. `DEC-0026` | 11 | **STRICTLY ZERO COLLISIONS (OFFSET = +15)** |
 | **Issues** | `ISS-0019` | `ISS-0020` .. `ISS-0028` | 9 | **STRICTLY ZERO COLLISIONS (OFFSET = +19)** |
-| **Sources** | `SRC-0072` | `SRC-0073` .. `SRC-0103` | 31 | **STRICTLY ZERO COLLISIONS (OFFSET = +72)** |
+| **Sources** | `SRC-0072` | `SRC-0073` .. `SRC-0113` | 31 | **STRICTLY ZERO COLLISIONS (OFFSET = +72)** |
 
 ### Cross-Repository Automated Test Verification
 The deterministic test [`tests/test_cross_repo_registry.py`](file:///D:/AEGIS-01/tests/test_cross_repo_registry.py) confirms:

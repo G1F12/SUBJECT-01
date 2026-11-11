@@ -55,11 +55,11 @@ When SUBJECT-01 merged Cycle 10 & 11, it added new entries ending at `EXP-0044`,
 
 **Remediation in Cycle 5:**
 AEGIS-01 registries were deterministically shifted by $+3$ across the colliding entities:
-- `experiments.json`: `EXP-0042..0060` $\to$ `EXP-0045..0063` (SUBJECT-01 max: `EXP-0044`).
-- `findings.json`: `FND-0042..0068` $\to$ `FND-0045..0071` (SUBJECT-01 max: `FND-0044`).
-- `negative_results.json`: `NEG-0035..0058` $\to$ `NEG-0038..0061` (SUBJECT-01 max: `NEG-0037`).
+- `experiments.json`: `EXP-0042..0060` $\to$ `EXP-0055..0063` (SUBJECT-01 max: `EXP-0044`).
+- `findings.json`: `FND-0042..0068` $\to$ `FND-0055..0071` (SUBJECT-01 max: `FND-0044`).
+- `negative_results.json`: `NEG-0035..0058` $\to$ `NEG-0048..0061` (SUBJECT-01 max: `NEG-0037`).
 - `decisions.json`: `DEC-0016..0029` $\to$ `DEC-0019..0032` (SUBJECT-01 max: `DEC-0018`).
-- `sources.json`: `SRC-0073..0107` $\to$ `SRC-0076..0110` (SUBJECT-01 max: `SRC-0075`).
+- `sources.json`: `SRC-0073..0107` $\to$ `SRC-0086..0110` (SUBJECT-01 max: `SRC-0075`).
 - `tests/test_cross_repo_registry.py`: Executed and passing with **strictly 0 cross-repo collisions**.
 
 ---
@@ -86,7 +86,7 @@ A comprehensive audit of `MODEL-13` against the authentic 13-patient clinical co
      $$\text{Trained Group LOPO: } \text{MAE} = \mathbf{42.91\text{ pp}}, \quad \text{RMSE} = \mathbf{52.51\text{ pp}}$$
    - **Key Finding:** When only complete cases are analyzed, the physiological model is **worse on both MAE and RMSE**.
 3. **Cohort-Mean Fallacy:** The fact that the model predicts a cohort average of $+37.34\%$ (matching the published $+37.3\%$) is a mathematically trivial property of unbiased averaging. It provides **zero evidence** of an ability to predict individual patient outcomes.
-4. **Epistemic Reclassification:** `MODEL-13` is formally reclassified as **`UNVALIDATED_FOR_INDIVIDUAL_PREDICTIONS`** (`DEC-0033`, `NEG-0062`).
+4. **Epistemic Reclassification:** `MODEL-13` is formally reclassified as **`UNVALIDATED_FOR_INDIVIDUAL_PREDICTIONS`** (`DEC-0033`, `NEG-0072`).
 
 ---
 

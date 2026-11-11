@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-REGEN-RESEARCH-C5`  
-**Related Registries:** `EXP-0069`, `HYP-0033`, `HYP-0034`, `FND-0077`, `FND-0078`, `FND-0080`, `NEG-0067`, `DEC-0037`, `SRC-0115`, `SRC-0116`, `SRC-0117`
+**Related Registries:** `EXP-0079`, `HYP-0033`, `HYP-0034`, `FND-0087`, `FND-0088`, `FND-0090`, `NEG-0077`, `DEC-0037`, `SRC-0125`, `SRC-0126`, `SRC-0127`
 
 ---
 

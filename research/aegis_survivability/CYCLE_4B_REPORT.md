@@ -14,15 +14,15 @@ AEGIS-01 Research Cycle 4B marks the definitive transition of the survivability 
 In this cycle, the project established three independent empirical validation gates, conducted a comprehensive numerical audit that closed all thermodynamic and mechanical discrepancies, formally retracted unsupported historical claims, and verified 108 automated unit tests with $100\%$ pass rate and strictly zero cross-repository collisions with SUBJECT-01.
 
 ### Core Achievements of Cycle 4B:
-1. **Three-Track Independent External Validation Gate (`EXP-0059`):**
+1. **Three-Track Independent External Validation Gate (`EXP-0069`):**
    - **Track 1 (Human Muscle VML):** Validated against the 13-patient IPD clinical trial of Dziki et al. (2016, DOI `10.1038/npjregenmed.2016.8`). Achieved an overall $\text{MAE} = 10.42\%$ (Validation split $\text{MAE} = 5.92\%$).
    - **Track 2 (Biological Materials Mechanics):** Evaluated against 12 independent mechanical properties from published test coupons (Wang et al. 2016, Chen et al. 2011, Silver et al. 2001). Achieved a mean relative prediction error of **$0.50\%$** (all 12/12 within $1\sigma$).
    - **Track 3 (Human Thermoregulation):** Calibrated against ISO 7933:2023 Predicted Heat Strain (PHS) standards and Stolwijk 25-node models. In temperate conditions, predicted equilibrium ($0.000\text{ K/min}$ warming, error $0.005\text{ K/min}$); in tropical jungle conditions, accurately reproduced uncompensable heat storage ($0.0907\text{ K/min}$ warming, error $0.0057\text{ K/min}$).
 2. **Resolution of Numerical & Scientific Discrepancies:**
    - **Thermodynamic First Law Closure:** Built a unified energy balance ledger in `MODEL-14` reconciling gross metabolic power ($1227.2\text{ W}$), net metabolic heat ($977.2\text{ W}$), dry heat losses ($518.2\text{ W}$ temperate vs $105.2\text{ W}$ jungle), required evaporative cooling ($459.0\text{ W}$), and maximum sweat capacity ($810.0\text{ W}$). First Law residual is strictly $\Delta \dot{E} < 10^{-12}\text{ W}$.
    - **Atkins Cutting Mechanics:** Eliminated the arbitrary $\times 0.20$ multiplier (`INV-0016`). Demonstrated physically that the $48.6\text{ N}$ vs $680\text{ N}$ discrepancy is explained by blade flank geometry (combat knife wedge $F_{\text{push}} = 679.8\text{ N} \to 164.9\text{ N}$ at $\xi=4$ vs scalpel razor $F_{\text{push}} = 125.4\text{ N} \to 30.4\text{ N}$).
-   - **VML Volume Fill Retraction:** Formally retracted the unverified claims of $78.4\%$ volume reconstitution and $36.2\%$ residual deficit in Dziki et al. 2016 (`INV-0015`, `NEG-0054`), restricting validated claims to measured torque gains ($+37.3\%$).
-   - **PEG-Fusion Epistemic Demarcation:** Demonstrated that Nemani et al. (2024) evaluated *pure sensory digital nerves* with zero motor axons, falsified the continuous conversion of Gutama et al. (2026) ordinal MRCC scores (`NEG-0055`), and tagged unmeasured parameters as `MODEL_ASSUMPTION`.
+   - **VML Volume Fill Retraction:** Formally retracted the unverified claims of $78.4\%$ volume reconstitution and $36.2\%$ residual deficit in Dziki et al. 2016 (`INV-0015`, `NEG-0064`), restricting validated claims to measured torque gains ($+37.3\%$).
+   - **PEG-Fusion Epistemic Demarcation:** Demonstrated that Nemani et al. (2024) evaluated *pure sensory digital nerves* with zero motor axons, falsified the continuous conversion of Gutama et al. (2026) ordinal MRCC scores (`NEG-0065`), and tagged unmeasured parameters as `MODEL_ASSUMPTION`.
 3. **Six-Tier Model Scientific Status Classification (`DEC-0027`):**
    - Established strict classification across all 14 models: `CODE_VERIFIED`, `PHYSICS_CONSISTENT`, `CALIBRATION_ONLY`, `EXTERNALLY_VALIDATED`, `UNVALIDATED`, and `INVALIDATED`.
 4. **Clean Isolated Integration Package:**
@@ -47,7 +47,7 @@ In this cycle, the project established three independent empirical validation ga
 
 ### 3.1 PEG-Fusion & Peripheral Nerve Repair Re-analysis
 - **Nemani et al. (2024) Evaluation:** Verified that this multicenter cohort study examined exclusively proper palmar digital nerves in 21 digits. Digital nerves contain zero motor axons and zero neuromuscular junctions. Prior statements citing Nemani et al. as proof of motor strength restoration were an empirical category error.
-- **Gutama et al. (2026) Re-examination:** Gutama et al. evaluated mixed median/ulnar transections using the ordinal Medical Research Council Scale ($M_0\dots M_5$). Converting ordinal grades into continuous percentages (e.g. $M_3/M_4 \to 45\dots 65\%$ force) is non-linear and mathematically uncalibrated (`NEG-0055`).
+- **Gutama et al. (2026) Re-examination:** Gutama et al. evaluated mixed median/ulnar transections using the ordinal Medical Research Council Scale ($M_0\dots M_5$). Converting ordinal grades into continuous percentages (e.g. $M_3/M_4 \to 45\dots 65\%$ force) is non-linear and mathematically uncalibrated (`NEG-0065`).
 - **Patient Clustering:** In high-energy limb trauma, multiple transected nerves in the same patient cannot be treated as statistically independent. Hierarchical mixed-effects modeling confirms that while PEG accelerates sensory axon continuity, motor recovery is governed by motor synkinesis and distal endplate degeneration.
 - **Epistemic Parameter Reclassification:**
   - Axonal continuity ($65\dots 85\%$): `MODEL_ASSUMPTION` (rodent dye exclusion).
@@ -56,7 +56,7 @@ In this cycle, the project established three independent empirical validation ga
   - Guaranteed 92% force recovery in 5 days: **PERMANENTLY RETRACTED (`INV-0013`)**.
 
 ### 3.2 Volumetric Muscle Loss (VML) Clinical Data Rectification
-- **Dziki et al. (2016) Audit:** Biopsies showed isolated islands of de novo myogenesis within dense fibrotic tissue; MRI/CT whole-defect volumetric fill was never quantitatively measured. The synthetic claim of $78.4\%$ volume restoration and $36.2\%$ residual deficit is formally retracted (`INV-0015`, `NEG-0054`).
+- **Dziki et al. (2016) Audit:** Biopsies showed isolated islands of de novo myogenesis within dense fibrotic tissue; MRI/CT whole-defect volumetric fill was never quantitatively measured. The synthetic claim of $78.4\%$ volume restoration and $36.2\%$ residual deficit is formally retracted (`INV-0015`, `NEG-0064`).
 - **Measured Endpoint:** The confirmed clinical endpoint is an average **$+37.3\%$ improvement** in maximal isometric contractile torque over pre-operative baseline.
 - **Animal-to-Human Scaling:** Small rodent VML defects ($<2\text{ mm}$ diffusion distance, Reed et al. 2024) exhibit spontaneous vascularization that fails in human critical-size defects ($>20\text{ cm}^3$), leading to ischemic core necrosis unless vascularized transfer is provided.
 
@@ -66,7 +66,7 @@ In this cycle, the project established three independent empirical validation ga
   - Combat Knife Wedge ($w = 10.2\text{ mm}$, flank plastic displacement dominates): $F_{\text{push}} = 679.8\text{ N} \to F_{\text{draw}} = 164.9\text{ N}$ at $\xi=4$.
   - Ultra-Thin Scalpel Razor ($w \to 0$, flank compression is eliminated): $F_{\text{push}} = 125.4\text{ N} \to F_{\text{draw}} = 30.4\text{ N}$ at $\xi=4$.
 - **Retraction of 0.20 Multiplier:** The arbitrary $\times 0.20$ multiplier previously inserted into the draw slicing calculation has been eliminated (`INV-0016`). `MODEL-12` now explicitly parameterizes blade geometry.
-- **Ballistic Limit Demarcation:** Recht-Ipson analytical calculations of $V_{50}$ are categorized as exploratory numerical energy partitions and cannot be declared proven armor limits without empirical live-fire range tests (`NEG-0053`, `DEC-0026`).
+- **Ballistic Limit Demarcation:** Recht-Ipson analytical calculations of $V_{50}$ are categorized as exploratory numerical energy partitions and cannot be declared proven armor limits without empirical live-fire range tests (`NEG-0063`, `DEC-0026`).
 
 ### 3.4 Thermoregulatory Energy Balance Closure
 - **Unified Thermodynamic Ledger:** Reconciled gross metabolic energy expenditure ($1227.2\text{ W}$), basal + maintenance metabolism ($140.2\text{ W}$), net metabolic heat production ($977.2\text{ W}$), dry convective/radiative loss ($518.2\text{ W}$ temperate vs $105.2\text{ W}$ jungle), required evaporative cooling ($459.0\text{ W}$ temperate vs $872.0\text{ W}$ jungle), and actual evaporative cooling ($459.0\text{ W}$ temperate vs $340.0\text{ W}$ jungle).
@@ -138,7 +138,7 @@ The external validation engine (`aegis/external_validation.py`) generated canoni
   - $45\dots 65\%$ long-term force: Uncalibrated continuous heuristic mapping of ordinal MRCC $M_3/M_4$ grades from Gutama 2026. Tagged as `MODEL_ASSUMPTION`.
   - $75\%$ conduction recovery: Rodent ex-vivo CNAP amplitude. Tagged as `MODEL_ASSUMPTION`.
   - Guaranteed 92% force recovery in 5 days: Fictitious artifact. Formally retracted (`INV-0013`).
-  - $78.4\%$ VML volume recovery: Unverified synthesis claim. Formally retracted (`INV-0015`, `NEG-0054`).
+  - $78.4\%$ VML volume recovery: Unverified synthesis claim. Formally retracted (`INV-0015`, `NEG-0064`).
 
 ### Question 3: Physical Explanation of Atkins Slicing Discrepancy
 - The discrepancy between $48.6\text{ N}$ and $680\text{ N}$ was caused by blade geometry, not tissue inconsistency.

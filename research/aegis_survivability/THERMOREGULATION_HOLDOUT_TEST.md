@@ -3,7 +3,7 @@
 **Document ID:** `AEGIS-DOC-C6-THERMAL-TEST`  
 **Execution Date:** 2026-11-10  
 **Test Module:** `aegis.cycle6_validation`  
-**Experiment ID:** `EXP-0073` | **Finding ID:** `FND-0084` | **Negative Result:** `NEG-0069` | **Hypothesis ID:** `HYP-0037`
+**Experiment ID:** `EXP-0083` | **Finding ID:** `FND-0094` | **Negative Result:** `NEG-0079` | **Hypothesis ID:** `HYP-0037`
 
 ---
 
@@ -69,11 +69,11 @@ MAE            --                   0.02025 C/min        0.01899 C/min       -6.
 
 ---
 
-## 5. Epistemic Audit & Negative Result (`NEG-0069`)
+## 5. Epistemic Audit & Negative Result (`NEG-0079`)
 
 1. **Marginal Improvement:** The 3-node dynamic model yields only a **6.2% error reduction** over the 1-node baseline (MAE $0.01899$ vs $0.02025^\circ\text{C/min}$).
 2. **Physical Causes of Divergence:**
    - **Rectal Sensor Lag:** Clinical rectal thermistors lag arterial blood temperature by $10\text{--}15\text{ minutes}$ during exercise transitions. Both models track true core blood temperature, which rises faster than rectal temperature in early exercise.
    - **Clothing Sweat Microclimate:** In live subjects, unevaporated liquid sweat pools in undergarments and on the skin surface, increasing thermal conduction and transiently buffering early heat rise.
 3. **Formal Negative Result:** Per Cycle 6 research rules (*"Если новая модель не уменьшает ошибку прогноза [существенно], оставь прежнюю простую модель и зарегистрируй отрицательный результат"*), adding 3-node complexity without empirical clothing sweat-pumping dynamics does not justify discarding the simple baseline.
-4. **Epistemic Verdict:** `THERMAL_EXTERNAL_VALIDATION = PARTIAL` (1-node baseline retained as the primary parsimonious model; negative result `NEG-0069` registered).
+4. **Epistemic Verdict:** `THERMAL_EXTERNAL_VALIDATION = PARTIAL` (1-node baseline retained as the primary parsimonious model; negative result `NEG-0079` registered).

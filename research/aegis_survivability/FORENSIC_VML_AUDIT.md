@@ -20,7 +20,7 @@ This forensic audit investigates the clinical validity of the Volumetric Muscle 
 5. **Real Error Metrics:** When evaluated against authentic clinical outcomes:
    - `MODEL-13` Categorical Innervation Predictor: **$\text{MAE} = 25.74\%$**, **$\text{RMSE} = 42.00\%$**, **$\text{MBE} = +4.97\%$**.
    - Leave-One-Patient-Out Cross-Validation (LOPO-CV): **$\text{MAE} = 36.21\%$**, **$\text{RMSE} = 48.94\%$**, **$\text{MBE} = 0.00\%$**.
-6. **Verdict:** **`VALIDATION_VML = PARTIAL`**. The prior unconditional validation claim (`PASS` / $\text{MAE} = 5.92\%$) is **formally revoked (`INV-0017`, `NEG-0056`)**.
+6. **Verdict:** **`VALIDATION_VML = PARTIAL`**. The prior unconditional validation claim (`PASS` / $\text{MAE} = 5.92\%$) is **formally revoked (`INV-0017`, `NEG-0066`)**.
 
 ---
 
@@ -140,7 +140,7 @@ $$\text{MAE} = \frac{1}{N}\sum_{i=1}^N |\hat{y}_i - y_i|, \quad \text{RMSE} = \s
 ## 6. Regulatory & Epistemic Corrective Actions
 
 1. **`INV-0017` Enacted:** The synthetic dataset `DZIKI_2016_COHORT`, the fabricated $+112.4\%$ value for S12, and the fictitious $6/4/3$ split are permanently invalidated.
-2. **`NEG-0056` Recorded:** Formally logged in `registry/negative_results.json`.
+2. **`NEG-0066` Recorded:** Formally logged in `registry/negative_results.json`.
 3. **Model 13 Update:** `DZIKI_2016_AUTHENTIC_COHORT` in `aegis/external_validation.py` now embeds the exact, immutable data from PMC5744714 Tables 1 and 2.
 4. **Validation Status Reclassification:**
    $$\mathbf{VALIDATION\_VML = PARTIAL}$$

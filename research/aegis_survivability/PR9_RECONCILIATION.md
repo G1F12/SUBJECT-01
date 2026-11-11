@@ -28,11 +28,11 @@ Through dynamic offset mapping, all AEGIS identifiers were non-destructively rem
 | Registry File | Colliding Range in PR #9 | Canonical Range in `SUBJECT-01` | Remapped Disjoint Range in AEGIS-01 | Overlap Count |
 | :--- | :--- | :--- | :--- | :--- |
 | `decisions.json` | `DEC-0016`..`DEC-0019` | `DEC-0001`..`DEC-0019` | `DEC-0024`..`DEC-0046` | **0** |
-| `experiments.json` | `EXP-0042`..`EXP-0044` | `EXP-0001`..`EXP-0044` | `EXP-0045`..`EXP-0075` | **0** |
-| `findings.json` | `FND-0042`..`FND-0044` | `FND-0001`..`FND-0044` | `FND-0045`..`FND-0086` | **0** |
+| `experiments.json` | `EXP-0042`..`EXP-0044` | `EXP-0001`..`EXP-0044` | `EXP-0055`..`EXP-0085` | **0** |
+| `findings.json` | `FND-0042`..`FND-0044` | `FND-0001`..`FND-0044` | `FND-0055`..`FND-0096` | **0** |
 | `issues.json` | `ISS-0020` | `ISS-0001`..`ISS-0020` | `ISS-0025`..`ISS-0038` | **0** |
-| `negative_results.json` | `NEG-0035`..`NEG-0037` | `NEG-0001`..`NEG-0037` | `NEG-0038`..`NEG-0072` | **0** |
-| `sources.json` | `SRC-0073`..`SRC-0075` | `SRC-0001`..`SRC-0075` | `SRC-0076`..`SRC-0128` | **0** |
+| `negative_results.json` | `NEG-0035`..`NEG-0037` | `NEG-0001`..`NEG-0037` | `NEG-0048`..`NEG-0082` | **0** |
+| `sources.json` | `SRC-0073`..`SRC-0075` | `SRC-0001`..`SRC-0075` | `SRC-0086`..`SRC-0138` | **0** |
 | `hypotheses.json` | *(None)* | `HYP-0001`..`HYP-0008` | `HYP-0009`..`HYP-0038` | **0** |
 
 **Verification Verdict:** `CROSS_REPO_REGISTRY = PASS` (zero collisions across all 7 registries).

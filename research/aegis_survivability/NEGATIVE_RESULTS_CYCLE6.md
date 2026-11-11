@@ -2,7 +2,7 @@
 **Research Cycle 6 — Scientific Audit & Hypothesis Falsification**  
 **Document ID:** `AEGIS-DOC-C6-NEG-RESULTS`  
 **Execution Date:** 2026-11-10  
-**Registry Range:** `NEG-0069` through `NEG-0072`
+**Registry Range:** `NEG-0079` through `NEG-0082`
 
 ---
 
@@ -17,8 +17,8 @@ In accordance with advanced scientific integrity standards:
 
 ## 2. Cycle 6 Canonical Negative Results Ledger
 
-### 2.1 `NEG-0069`: Failure of 3-Node Dynamic Thermal Model Under Encapsulation
-- **Associated Experiment:** `EXP-0073`
+### 2.1 `NEG-0079`: Failure of 3-Node Dynamic Thermal Model Under Encapsulation
+- **Associated Experiment:** `EXP-0083`
 - **Falsified Hypothesis:** `HYP-0037` ("A 3-node dynamic thermal model significantly reduces rectal temperature prediction error relative to a 1-node lumped baseline under matched Montain 1994 conditions")
 - **Quantitative Finding:**
   - 1-Node Lumped Baseline MAE: $0.02025^\circ\text{C/min}$
@@ -29,8 +29,8 @@ In accordance with advanced scientific integrity standards:
 
 ---
 
-### 2.2 `NEG-0070`: Inability of Acellular ECM Scaffolds Alone to Restore Contractile Force
-- **Associated Experiment:** `EXP-0072`
+### 2.2 `NEG-0080`: Inability of Acellular ECM Scaffolds Alone to Restore Contractile Force
+- **Associated Experiment:** `EXP-0082`
 - **Source Evidences:** Greising et al. (2017) (*J Orthop Res* 35:106–114); Corona et al. (2015) (*J Appl Physiol* 118:1115–1126)
 - **Quantitative Finding:**
   - Rat Tibialis Anterior, 35% Critical Defect, Untreated: $41.2 \pm 5.1\%$ force recovery
@@ -41,8 +41,8 @@ In accordance with advanced scientific integrity standards:
 
 ---
 
-### 2.3 `NEG-0071`: Refutation of Zero Metabolic Cost for Biohybrid Armor
-- **Associated Experiment:** `EXP-0074`
+### 2.3 `NEG-0081`: Refutation of Zero Metabolic Cost for Biohybrid Armor
+- **Associated Experiment:** `EXP-0084`
 - **Falsified Hypothesis:** `HYP-0038` ("Indwelling synthetic armor implants operate with zero ongoing metabolic energy or immune maintenance cost")
 - **Quantitative Finding:** Obligate continuous metabolic overhead of **$20\text{--}50\text{ kcal/day}$** in humans.
 - **Scientific Root Cause:** Host macrophages, dendritic cells, and foreign body giant cells (FBGC) persistently adhere to synthetic abiotic surfaces (titanium, PEEK, UHMWPE). The body maintains a continuous dynamic collagen turnover in the surrounding dense fibrous capsule, secreting inflammatory cytokines ($IL-6$, $TNF-\alpha$). This chronic biological maintenance incurs continuous ATP expenditure and localized vascular remodeling costs.
@@ -50,8 +50,8 @@ In accordance with advanced scientific integrity standards:
 
 ---
 
-### 2.4 `NEG-0072`: Inability to Predict Whole-Body Kinematics Deterministically
-- **Associated Experiment:** `EXP-0075`
+### 2.4 `NEG-0082`: Inability to Predict Whole-Body Kinematics Deterministically
+- **Associated Experiment:** `EXP-0085`
 - **Quantitative Finding:** Deterministic point predictions of running velocity (+14.2%) and acceleration (+18.5%) exhibit uncalibrated residual errors exceeding $\pm 25\%$.
 - **Scientific Root Cause:** Locomotion is an emergent property of multi-segment skeletal kinematics, non-linear tendon stretch-shortening dynamics, and motor cortex recruitment patterns. Isolated improvements in muscle isometric torque do not translate linearly into running speed due to limb inertia and stance-time constraints.
 - **Decision:** Deterministic kinematic point claims are permanently replaced by bounded interval estimates.
@@ -65,9 +65,9 @@ In accordance with advanced scientific integrity standards:
 HYPOTHESIS ID | STATEMENT TITLE                           | VERDICT  | REGISTERED NEGATIVE
 ========================================================================================
 HYP-0034      | Satellite Hayflick Replicative Limit      | DOWNGRADED | Context-dependent
-HYP-0037      | Thermal 3-Node Nodal Superiority          | REFUTED  | NEG-0069
-HYP-0038      | Zero Metabolic Overhead of Biohybrids     | REFUTED  | NEG-0071
---            | Acellular ECM Alone Restores VML Force    | REFUTED  | NEG-0070
---            | Deterministic Kinematic Point Predictions | REFUTED  | NEG-0072
+HYP-0037      | Thermal 3-Node Nodal Superiority          | REFUTED  | NEG-0079
+HYP-0038      | Zero Metabolic Overhead of Biohybrids     | REFUTED  | NEG-0081
+--            | Acellular ECM Alone Restores VML Force    | REFUTED  | NEG-0080
+--            | Deterministic Kinematic Point Predictions | REFUTED  | NEG-0082
 ========================================================================================
 ```

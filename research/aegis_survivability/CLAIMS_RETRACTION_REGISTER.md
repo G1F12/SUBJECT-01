@@ -21,7 +21,7 @@ Every retracted claim is permanently documented in this register, assigned a can
 - **Forensic Discovery:** Direct retrieval of primary paper PMC5744714 (Tables 1 & 2) proved that the `DZIKI_2016_COHORT` array used in Cycle 4B was an artificial fabrication. Patient 12 (39-year-old male, sartorius electrocution) actually showed **$-3.5\%$** (hip flexion) and **$-1.1\%$** (knee extension) at 24–28 weeks (mean **$-2.30\%$**). The value $+112.4\%$ does not exist in the primary publication.
 - **Root Cause:** LLM generation of synthetic records with target mean $37.29\%$ rather than authentic data extraction.
 - **Scientific Replacement:** Authentic 13-patient IPD from PMC5744714 with true mean $+37.34 \pm 44.62\%$. Actual `MODEL-13` error is $\text{MAE} = 25.74\%$, $\text{RMSE} = 42.00\%$, and Leave-One-Patient-Out Cross-Validation (LOPO-CV) $\text{MAE} = 36.21\%$.
-- **Negative Result ID:** `NEG-0056`.
+- **Negative Result ID:** `NEG-0066`.
 - **Status:** **PERMANENTLY RETRACTED & FALSIFIED**.
 
 ---
@@ -31,7 +31,7 @@ Every retracted claim is permanently documented in this register, assigned a can
 - **Forensic Discovery:** Code audit revealed that 11 of the 12 properties were hardcoded input constants copied directly into `MODEL-12` dictionaries. The model was evaluated against its own inputs, producing artificial $0.00\%$ error. The claimed $0.50\%$ error was produced by dividing the single real error ($5.96\%$) by 12.
 - **Root Cause:** Data leakage (tautology / zero degrees of freedom) masquerading as external validation.
 - **Scientific Replacement:** Clean demarcation separating the 11 input constants (`CALIBRATION_VALUE`) from genuine physical predictions. Across 3 genuine derived mechanical predictions (dermis puncture, keratin $K_{1c}$, scalpel incision), real mean relative error is **$9.15\%$** (all within $1\sigma$).
-- **Negative Result ID:** `NEG-0057`.
+- **Negative Result ID:** `NEG-0067`.
 - **Status:** **PERMANENTLY RETRACTED & RECLASSIFIED TO PARTIAL**.
 
 ---
@@ -51,7 +51,7 @@ Every retracted claim is permanently documented in this register, assigned a can
 - **Forensic Discovery:** Clinical trials have proven *only* localized dental/orthopedic osseointegration and small-defect ECM patching. Whole-body multi-site biohybrid armor integration has never been tested in vivo. Chronic fatigue, foreign body giant-cell reactions, osteolysis, and ballistic shock transmission remain unquantified.
 - **Root Cause:** Over-extrapolation of localized medical implants to systemic whole-body armor architectures.
 - **Scientific Replacement:** ARCH-BIO and ARCH-HYBRID are maintained as parallel, active research avenues. ARCH-HYBRID is reclassified as a promising bioengineering hypothesis with **`CONDITIONAL`** feasibility.
-- **Negative Result ID:** `NEG-0058`.
+- **Negative Result ID:** `NEG-0068`.
 - **Status:** **PERMANENTLY RETRACTED (ARCH-HYBRID IS NOT PROVEN)**.
 
 ---
@@ -60,14 +60,14 @@ Every retracted claim is permanently documented in this register, assigned a can
 
 | Invalidation ID | Original Claim | Forensic Reason for Revocation | Scientific Replacement | Registry Reference |
 | :--- | :--- | :--- | :--- | :--- |
-| **INV-0013** | 92% force recovery guaranteed in 5 days post-PEG | Completely fictitious; unsupported by any literature | Model assumption: 15–25% rodent twitch force | `NEG-0051` |
-| **INV-0014** | V50 analytical formulas prove weapon protection | Recht-Ipson plugging ignores BABT and blunt rupture | Analytical V50 is `EXPLORATORY_UNVALIDATED` | `NEG-0053`, `DEC-0026` |
-| **INV-0015** | 78.4% volumetric fill in Dziki 2016 human VML | Never measured in primary publication | Confirmed: $+37.3\%$ force improvement over pre-op | `NEG-0054` |
-| **INV-0016** | Arbitrary $\times 0.20$ multiplier in Atkins draw slicing | Ad-hoc fudge factor masking knife vs scalpel geometry | Macro knife wedge ($164.9\text{ N}$) vs razor scalpel ($30.4\text{ N}$) | `FND-0065` |
+| **INV-0013** | 92% force recovery guaranteed in 5 days post-PEG | Completely fictitious; unsupported by any literature | Model assumption: 15–25% rodent twitch force | `NEG-0061` |
+| **INV-0014** | V50 analytical formulas prove weapon protection | Recht-Ipson plugging ignores BABT and blunt rupture | Analytical V50 is `EXPLORATORY_UNVALIDATED` | `NEG-0063`, `DEC-0026` |
+| **INV-0015** | 78.4% volumetric fill in Dziki 2016 human VML | Never measured in primary publication | Confirmed: $+37.3\%$ force improvement over pre-op | `NEG-0064` |
+| **INV-0016** | Arbitrary $\times 0.20$ multiplier in Atkins draw slicing | Ad-hoc fudge factor masking knife vs scalpel geometry | Macro knife wedge ($164.9\text{ N}$) vs razor scalpel ($30.4\text{ N}$) | `FND-0075` |
 | **INV-0006** | 91.2% wave attenuation protects from trauma | Acoustic mismatch reflects spallation shock wave | Momentum transfer is conserved; internal organ BABT | `NEG-0036` |
 | **INV-0005** | Cancer probability 99.6% vs 6.1% with TP53 copies | False precision derived from uncalibrated power law | Peto's paradox is qualitative biological trend | `NEG-0035` |
 | **INV-0003** | Ferguson & O'Kane mathematical scarless index $\ge 2.5$| Formula never existed in original paper | TGF-$\beta 3 / \beta 1$ ratio is qualitative biological regulator | `NEG-0037` |
-| **INV-0001** | Kragl et al. (2009) axon regeneration $1-2.2\text{ mm/day}$ | Paper examined axolotl blastema, not axon velocity | Nerve elongation confirmed via Sunderland (1947) | `NEG-0038` |
+| **INV-0001** | Kragl et al. (2009) axon regeneration $1-2.2\text{ mm/day}$ | Paper examined axolotl blastema, not axon velocity | Nerve elongation confirmed via Sunderland (1947) | `NEG-0048` |
 
 ---
 

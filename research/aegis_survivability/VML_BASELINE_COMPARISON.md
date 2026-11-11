@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-VML-AUDIT-C5`  
-**Related Registries:** `EXP-0064`, `HYP-0028`, `FND-0072`, `NEG-0062`, `DEC-0033`, `SRC-0115`  
+**Related Registries:** `EXP-0074`, `HYP-0028`, `FND-0082`, `NEG-0072`, `DEC-0033`, `SRC-0125`  
 **Primary Empirical Anchor:** Dziki et al. (2016). *An acellular biologic scaffold treatment for volumetric muscle loss: results of a 13-patient cohort study*. npj Regenerative Medicine 1:16008; DOI: 10.1038/npjregenmed.2016.8 (PMC5744714).
 
 ---
@@ -134,5 +134,5 @@ The failure of the physiological innervation model to beat a featureless baselin
 ## 7. Forensic Verification & Retraction Ledger
 
 1. **Retraction of Predictive Utility Claims:** Previous claims that `MODEL-13` constitutes a validated individual predictive model for human volumetric muscle loss are formally retracted.
-2. **Registration of Negative Finding:** Formally entered into `registry/negative_results.json` as `NEG-0062`.
+2. **Registration of Negative Finding:** Formally entered into `registry/negative_results.json` as `NEG-0072`.
 3. **Mandatory Benchmarking Policy:** In all future AEGIS research cycles, no complex physiological or computational model may be claimed as useful unless it strictly surpasses an independent, featureless baseline on pre-registered holdout metrics (MAE and RMSE).

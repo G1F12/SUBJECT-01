@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-SUB01-COMPAT-C5`  
-**Related Registries:** `EXP-0070`, `FND-0079`, `NEG-0065`, `NEG-0066`, `DEC-0036`  
+**Related Registries:** `EXP-0080`, `FND-0089`, `NEG-0075`, `NEG-0076`, `DEC-0036`  
 **Target Canonical Repository:** `D:\SUBJECT-01` (Upstream HEAD: `68ed513`)
 
 ---

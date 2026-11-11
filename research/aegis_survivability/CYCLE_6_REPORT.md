@@ -26,7 +26,7 @@ All objectives have been rigorously executed:
 3. **Three Verifiable Research Questions with True Holdouts (Phase 2):**
    - **Question A (Materials):** Evaluated a viscoelastic-hydration model on 8 independent held-out coupons (Wang et al. 2016 pangolin keratin and McKittrick et al. 2012 sheep horn), reducing prediction error by **84.8% for modulus** and **79.4% for yield stress** relative to independent baselines (`PASS`).
    - **Question B (Regeneration):** Evaluated a mechanistic VML model against 11 multi-species animal specimens (Corona et al. 2015, Greising et al. 2017/2020, Garg et al. 2015), reducing MAE from $14.25\%$ down to $6.69\%$ (**53.0% error reduction**) and exposing that acellular ECM scaffold alone yields statistically insignificant functional gains ($+2.3\text{--}3.5\text{ pp}$, $p > 0.05$) without active mechanical rehabilitation or living cells (`PASS`, strictly tagged `TRANSLATIONAL_UNVALIDATED`).
-   - **Question C (Thermoregulation):** Evaluated 1-node vs 3-node thermal models on Montain et al. (1994) matched uncompensable heat stress trials ($35^\circ\text{C}$, 50% RH, $1.5\text{ clo}$, 425 W & 600 W). Discovered that 3-node dynamic modeling yields only a **6.2% error reduction** over the simple 1-node baseline without sensor-lag calibration; registered negative result `NEG-0069` and retained the 1-node model as the parsimonious standard (`PARTIAL`).
+   - **Question C (Thermoregulation):** Evaluated 1-node vs 3-node thermal models on Montain et al. (1994) matched uncompensable heat stress trials ($35^\circ\text{C}$, 50% RH, $1.5\text{ clo}$, 425 W & 600 W). Discovered that 3-node dynamic modeling yields only a **6.2% error reduction** over the simple 1-node baseline without sensor-lag calibration; registered negative result `NEG-0079` and retained the 1-node model as the parsimonious standard (`PARTIAL`).
 4. **Feasibility & Architecture Breakdown (Phase 3):** Established comprehensive necessary condition maps for ARCH-BIO, ARCH-HYBRID, and ARCH-SPEC.
 5. **SUBJECT-01 System Compatibility (Phase 4):** Evaluated added armor mass overhead, thermal penalty, and demonstrated that rigid armor plating increases intracompartmental peak muscle pressure to $54.2\text{--}62.8\text{ mmHg}$, exacerbating Chronic Exertional Compartment Syndrome (TARGET-CPE45). Preserved CPE45 external validation status as `UNVALIDATED`.
 
@@ -41,7 +41,7 @@ METRIC / DELIVERABLE                                   VALUE / STATUS         SO
 PR #9 Live GitHub Status                               UPDATED (SHA d17c5e0)  Verified via GitHub API v3
 Cross-Repository Identifier Collisions                 0 (Strict Zero)        All 7 registries disjoint
 New Independently Tested Experimental Results          21 results             8 mat, 11 VML, 2 thermal
-Scientifically Refuted / Downgraded Dogmas             6 dogmas               ABS-01..06, NEG-0069..0072
+Scientifically Refuted / Downgraded Dogmas             6 dogmas               ABS-01..06, NEG-0079..0072
 Materials Modulus Error Reduction over Baseline        84.79%                 0.177 GPa vs 1.164 GPa
 Materials Yield Stress Error Reduction over Baseline   79.37%                 5.21 MPa vs 25.26 MPa
 VML Regeneration MAE Reduction over Baseline           53.05%                 6.69% vs 14.25%

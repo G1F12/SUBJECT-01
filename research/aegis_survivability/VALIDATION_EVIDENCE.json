@@ -43,7 +43,7 @@
       {"id": "S13", "age": 30, "sex": "M", "site": "Hamstring (left)", "cause": "Sports injury", "deficit_pct": 27.0, "innervation": "INTACT", "observed_pct": -1.45, "model_pred_pct": 65.0, "residual_pct": 66.45}
     ],
     "forensic_status": "PARTIAL_VALIDATION (Cohort mean verified; individual predictive variance high)",
-    "retracted_claims": ["INV-0015", "INV-0017", "NEG-0054", "NEG-0056"]
+    "retracted_claims": ["INV-0015", "INV-0017", "NEG-0064", "NEG-0066"]
   },
   "track_2_biomaterials_mechanics": {
     "total_properties_audited": 14,
@@ -81,7 +81,7 @@
       }
     ],
     "forensic_status": "PARTIAL_VALIDATION (Calibration separated from derived predictions)",
-    "retracted_claims": ["INV-0016", "INV-0018", "NEG-0057"]
+    "retracted_claims": ["INV-0016", "INV-0018", "NEG-0067"]
   },
   "track_3_human_thermoregulation": {
     "tier_1_energy_conservation": {
@@ -123,6 +123,6 @@
       "feasibility_status": "UNVALIDATED_SPECULATIVE",
       "status_notes": ["Theoretical sp2 carbon properties valid", "Biosynthetic pathways in living cells completely non-existent"]
     },
-    "retracted_claims": ["INV-0020", "NEG-0058"]
+    "retracted_claims": ["INV-0020", "NEG-0068"]
   }
 }

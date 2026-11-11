@@ -3,7 +3,7 @@
 **Document ID:** `AEGIS-DOC-C6-SYS-INTEG`  
 **Execution Date:** 2026-11-10  
 **Target Repository:** `D:\SUBJECT-01` (`origin/main` at `9911e1e`)  
-**Experiment ID:** `EXP-0075` | **Finding ID:** `FND-0086` | **Decision ID:** `DEC-0046`
+**Experiment ID:** `EXP-0085` | **Finding ID:** `FND-0096` | **Decision ID:** `DEC-0046`
 
 ---
 

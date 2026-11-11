@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-THERM-AUDIT-C5`  
-**Related Registries:** `EXP-0066`, `HYP-0030`, `FND-0074`, `NEG-0064`, `DEC-0035`, `SRC-0111`, `SRC-0112`, `SRC-0120`  
+**Related Registries:** `EXP-0076`, `HYP-0030`, `FND-0084`, `NEG-0074`, `DEC-0035`, `SRC-0121`, `SRC-0122`, `SRC-0130`  
 **Primary Empirical Anchor:** Montain SJ, Sawka MN, Cadarette BS, Quigley MD, McKay JM. *Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate*. Journal of Applied Physiology 1994;77(1):216–222.
 
 ---

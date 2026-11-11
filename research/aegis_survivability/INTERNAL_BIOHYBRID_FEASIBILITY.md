@@ -2,7 +2,7 @@
 
 **Program:** AEGIS-01 / Research Cycle 5  
 **Document ID:** `AEGIS-HYBRID-FEASIBILITY-C5`  
-**Related Registries:** `EXP-0068`, `HYP-0032`, `FND-0076`, `NEG-0066`, `DEC-0036`
+**Related Registries:** `EXP-0078`, `HYP-0032`, `FND-0086`, `NEG-0076`, `DEC-0036`
 
 ---
 

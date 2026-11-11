@@ -85,7 +85,7 @@ ISO 7933:2023 specifies analytical formulas for predicted sweat rate ($SW_p$), r
 ## 5. Tier 3: Independent Human Validation (Living Subject Trials)
 
 To assess real-world physiological validity, `MODEL-14` was benchmarked against classic empirical human uncompensable heat stress datasets:
-- **Primary Source:** Montain, S. J., Sawka, M. N., et al. (1994). *Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate.* Journal of Applied Physiology, 77(1):216-222 (`SRC-0107`).
+- **Primary Source:** Montain, S. J., Sawka, M. N., et al. (1994). *Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate.* Journal of Applied Physiology, 77(1):216-222 (`SRC-0117`).
 - **Secondary Source:** Sawka, M. N., et al. (2001). *Physiologic tolerance to uncompensable heat: intermittent exercise, field vs laboratory.* Med Sci Sports Exerc, 33(7):1104-1110.
 
 ### 5.1 Empirical Human Trial Protocol

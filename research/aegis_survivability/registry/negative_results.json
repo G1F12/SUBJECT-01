@@ -1,252 +1,276 @@
 [
   {
-    "id": "NEG-0038",
-    "experiment_id": "EXP-0047",
+    "id": "NEG-0048",
+    "experiment_id": "EXP-0057",
     "falsified_claim": "Organisms can reactively dodge already-fired supersonic or high-velocity handgun bullets at close-to-medium combat distances (7-25m).",
     "reason": "Direct violation of physical causality and biological reaction latency. Projectile flight time (19.4-69.4 ms) is shorter than sensorimotor latency (30.2-108.2 ms). Bodily displacement is strictly 0.0 mm at impact.",
     "evidence": "MODEL-03 simulation, Hursh conduction velocity limit (v <= 120 m/s), Cavanagh & Komi EMD (30-50 ms).",
     "original_id": "NEG-0029"
   },
   {
-    "id": "NEG-0039",
-    "experiment_id": "EXP-0048",
+    "id": "NEG-0049",
+    "experiment_id": "EXP-0058",
     "falsified_claim": "Flexible biological armor that stops projectile penetration guarantees ballistic survivability.",
     "reason": "Unbacked flexible armor allows catastrophic dynamic backface intrusion (BFD 45-55 mm) and Viscous Criterion VC > 1.2 m/s, causing fatal cardiac rupture, commotio cordis, or pulmonary laceration.",
     "evidence": "MODEL-04 Lobdell thoracic dynamic model; Viano & Lau 1988, Roberts et al. 2007.",
     "original_id": "NEG-0030"
   },
   {
-    "id": "NEG-0040",
-    "experiment_id": "EXP-0049",
+    "id": "NEG-0050",
+    "experiment_id": "EXP-0059",
     "falsified_claim": "Chemical or enzymatic hypercoagulation can prevent fatal hemorrhage from transected major conduit arteries (aorta, common femoral).",
     "reason": "Hydraulic discharge rate (>1.5-3.5 L/min) and hemodynamic wall shear stress (>40 Pa) mechanically wash away unanchored platelet plugs before fibrin polymerization can occur, leading to lethal Class IV exsanguination in <120s.",
     "evidence": "MODEL-05 Torricelli vascular orifice dynamics with critical wall shear stress yield limit.",
     "original_id": "NEG-0031"
   },
   {
-    "id": "NEG-0041",
-    "experiment_id": "EXP-0049",
+    "id": "NEG-0051",
+    "experiment_id": "EXP-0059",
     "falsified_claim": "Systemic acceleration of coagulation cascade (clotting time < 10s) is a safe defense against hemorrhage.",
     "reason": "Systemic hypercoagulability induces disseminated intravascular coagulation (DIC), widespread microvascular thrombosis, pulmonary thromboembolism, and acute ischemic organ failure.",
     "evidence": "MODEL-05 hemostatic risk evaluation; Kauvar et al. 2006.",
     "original_id": "NEG-0032"
   },
   {
-    "id": "NEG-0042",
-    "experiment_id": "EXP-0050",
+    "id": "NEG-0052",
+    "experiment_id": "EXP-0060",
     "falsified_claim": "Biological regeneration can restore severed complex limbs or damaged deep neural tracts within seconds or minutes during combat.",
     "reason": "Peripheral axonal elongation is biologically rate-limited by slow axonal transport of tubulin and neurofilaments to 1.0 - 2.2 mm/day. Functional re-innervation of a 100 mm lesion takes >60-90 days regardless of metabolic rate.",
     "evidence": "MODEL-06 multi-scale regeneration dynamics; Kragl et al. 2009, Seifert et al. 2012.",
     "original_id": "NEG-0033"
   },
   {
-    "id": "NEG-0043",
-    "experiment_id": "EXP-0050",
+    "id": "NEG-0053",
+    "experiment_id": "EXP-0060",
     "falsified_claim": "Mammalian epimorphic blastema regeneration can be induced safely without expanding the genomic tumor suppression machinery.",
     "reason": "Massive somatic cell division in an adult long-lived mammal without enhanced p53/tumor suppression causes an exponential rise in malignant transformation hazard (>99% 10-year risk).",
     "evidence": "MODEL-06 Peto's paradox Armitage-Doll multi-stage carcinogenesis analysis; Peto 1977.",
     "original_id": "NEG-0034"
   },
   {
-    "id": "NEG-0044",
-    "experiment_id": "EXP-0051",
+    "id": "NEG-0054",
+    "experiment_id": "EXP-0061",
     "falsified_claim": "Full-body continuous rigid bio-armor (osteoderm shell) is viable for active combat survivability.",
     "reason": "Continuous armor blocks cutaneous evaporative perspiration (>70% occlusion), triggering fatal hyperthermic collapse (core temp >= 41.5 C) within 54 minutes of moderate physical exertion, and imposes a 40% sprint velocity reduction.",
     "evidence": "MODEL-07 whole-organism heat balance and Kleiber allometric scaling; Wenger 1988.",
     "original_id": "NEG-0035"
   },
   {
-    "id": "NEG-0045",
-    "experiment_id": "EXP-0051",
+    "id": "NEG-0055",
+    "experiment_id": "EXP-0061",
     "falsified_claim": "ARCH-4 is a proven, validated architecture capable of indefinite combat thermal sustainability and guaranteed 9mm protection.",
     "reason": "ARCH-4 is an unvalidated top-level conceptual hypothesis. Indefinite thermal sustainability ignored sweat dehydration limits (1.5 L/hr water loss causes collapse within 2-3 hours) and environmental humidity limits. Furthermore, biomineral tile spallation and load-bearing skeletal bridging remain unproven.",
     "evidence": "Cycle 1A Scientific Audit; MODEL-07 recalibration.",
     "original_id": "NEG-0036"
   },
   {
-    "id": "NEG-0046",
-    "experiment_id": "EXP-0052",
+    "id": "NEG-0056",
+    "experiment_id": "EXP-0062",
     "falsified_claim": "Unmineralized cross-linked collagen or hydrogel biological composites can achieve guaranteed >800 N cutting resistance under dynamic draw slicing.",
     "reason": "Kinematic blade draw slicing (xi = 4.0) reduces blade penetration forces by 70-85% down to 15-60 N via Mode-I crack propagation. No unmineralized soft biomaterial can guarantee >800 N cut resistance against sharp edges.",
     "evidence": "Lake-Thomas Atkins fracture formulation, MODEL-01 / MODEL-08.",
     "original_id": "NEG-0037"
   },
   {
-    "id": "NEG-0047",
-    "experiment_id": "EXP-0052",
+    "id": "NEG-0057",
+    "experiment_id": "EXP-0062",
     "falsified_claim": "Monolithic rigid biomineral plates (osteoderms) provide reliable protection against high-energy shock waves without spallation risk.",
     "reason": "Acoustic impedance mismatch between rigid bone/mineral (Z = 7.0-7.8 MRayl) and soft subdermal tissue (Z = 1.6-1.7 MRayl) causes a strong reflected tensile wave (R = -0.615) that exceeds the low tensile strength of bone, inducing catastrophic backface spallation fracture.",
     "evidence": "Acoustic impedance reflection mechanics; MODEL-02 / MODEL-08.",
-    "original_id": "NEG-0038"
-  },
-  {
-    "id": "NEG-0048",
-    "experiment_id": "EXP-0053",
-    "falsified_claim": "Acomys spiny mouse dermal autotomy mechanisms provide a biological pathway for full mammalian volumetric muscle loss (VML) regeneration.",
-    "reason": "Acomys regenerative capability is strictly restricted to thin cutaneous and ear punch defects. Volumetric muscle loss exceeding 5-10 mm suffers from ischemic cavity collapse and fibrotic scar contraction, leaving permanent functional motor deficits (<35% strength retention).",
-    "evidence": "MODEL-09 multi-scale regeneration dynamics; Grogan & Hsu 2011, Seifert et al. 2012.",
-    "original_id": "NEG-0039"
-  },
-  {
-    "id": "NEG-0049",
-    "experiment_id": "EXP-0054",
-    "falsified_claim": "Heavy biological armor (ARCH-1) can maintain physical combat work output across varied climate environments.",
-    "reason": "In the 2700-second CPE45 protocol, ARCH-1 delivers 71.2% less external mechanical work than baseline (25.6 kJ vs 88.9 kJ) and triggers fatal hyperthermia (+5.3 K core elevation) in hot-dry and hot-humid conditions within ~20 minutes.",
-    "evidence": "SUBJECT-01 CPE45 model execution; MODEL-10.",
-    "original_id": "NEG-0040"
-  },
-  {
-    "id": "NEG-0050",
-    "experiment_id": "EXP-0055",
-    "falsified_claim": "Uniform flexible viscoelastic composite armor (ARCH-2) is a Pareto-optimal defense compromise.",
-    "reason": "ARCH-2 is mathematically dominated by ARCH-4: ARCH-4 achieves 2.4x superior puncture resistance, 43% higher slicing resistance, 38% lower parasitic mass, 33% higher thermal dissipation, and higher sprint speed retention.",
-    "evidence": "Non-dominated sorting analysis; MODEL-11.",
-    "original_id": "NEG-0041"
-  },
-  {
-    "id": "NEG-0051",
-    "experiment_id": "EXP-0056",
-    "falsified_claim": "Endogenous biological human armor can stop intermediate rifle bullets (7.62x39mm, 2100J) without lethal skeletal crush.",
-    "reason": "Hydrodynamic penetration velocity of a 720 m/s steel-core projectile exceeds yield/shear strength of all biological minerals, causing shear plugging. Defeating it endogenously requires >35 kg/m^2 areal density, destroying human locomotion and causing lethal BABT.",
-    "evidence": "Tate-Alekseevskii hydrodynamic penetration model, Lake-Thomas fracture mechanics.",
-    "original_id": "NEG-0046"
-  },
-  {
-    "id": "NEG-0052",
-    "experiment_id": "EXP-0057",
-    "falsified_claim": "Universal dogmatic prohibition that peripheral nerve regeneration cannot exceed 2 mm/day under any circumstances.",
-    "reason": "Contradicted by empirical mammalian evidence: Brief electrical stimulation achieves 3.0-3.5 mm/day (Gordon et al. 2008), and chemical fusogens restore functional conduction within 1-7 days by salvaging severed axolemmas (Bittner et al. 2012).",
-    "evidence": "Gordon et al. 2008 Exp Neurol; Bittner et al. 2012 J Neurosci Res.",
-    "original_id": "NEG-0047"
-  },
-  {
-    "id": "NEG-0053",
-    "experiment_id": "EXP-0057",
-    "falsified_claim": "Deterministic assertion that tissue growth at 5 mm/day inevitably causes cancer (99.6% risk).",
-    "reason": "Contradicted by human physiological wound re-epithelialization (3-5 mm/day without malignancy, Gurtner et al. 2008) and scar-free mammalian regeneration in Acomys without elevated tumor incidence.",
-    "evidence": "Gurtner et al. 2008 Nature; Seifert et al. 2012 Nature.",
     "original_id": "NEG-0048"
   },
   {
-    "id": "NEG-0054",
-    "experiment_id": "EXP-0059",
+    "id": "NEG-0058",
+    "experiment_id": "EXP-0063",
+    "falsified_claim": "Acomys spiny mouse dermal autotomy mechanisms provide a biological pathway for full mammalian volumetric muscle loss (VML) regeneration.",
+    "reason": "Acomys regenerative capability is strictly restricted to thin cutaneous and ear punch defects. Volumetric muscle loss exceeding 5-10 mm suffers from ischemic cavity collapse and fibrotic scar contraction, leaving permanent functional motor deficits (<35% strength retention).",
+    "evidence": "MODEL-09 multi-scale regeneration dynamics; Grogan & Hsu 2011, Seifert et al. 2012.",
+    "original_id": "NEG-0049"
+  },
+  {
+    "id": "NEG-0059",
+    "experiment_id": "EXP-0064",
+    "falsified_claim": "Heavy biological armor (ARCH-1) can maintain physical combat work output across varied climate environments.",
+    "reason": "In the 2700-second CPE45 protocol, ARCH-1 delivers 71.2% less external mechanical work than baseline (25.6 kJ vs 88.9 kJ) and triggers fatal hyperthermia (+5.3 K core elevation) in hot-dry and hot-humid conditions within ~20 minutes.",
+    "evidence": "SUBJECT-01 CPE45 model execution; MODEL-10.",
+    "original_id": "NEG-0050"
+  },
+  {
+    "id": "NEG-0060",
+    "experiment_id": "EXP-0065",
+    "falsified_claim": "Uniform flexible viscoelastic composite armor (ARCH-2) is a Pareto-optimal defense compromise.",
+    "reason": "ARCH-2 is mathematically dominated by ARCH-4: ARCH-4 achieves 2.4x superior puncture resistance, 43% higher slicing resistance, 38% lower parasitic mass, 33% higher thermal dissipation, and higher sprint speed retention.",
+    "evidence": "Non-dominated sorting analysis; MODEL-11.",
+    "original_id": "NEG-0051"
+  },
+  {
+    "id": "NEG-0061",
+    "experiment_id": "EXP-0066",
+    "falsified_claim": "Endogenous biological human armor can stop intermediate rifle bullets (7.62x39mm, 2100J) without lethal skeletal crush.",
+    "reason": "Hydrodynamic penetration velocity of a 720 m/s steel-core projectile exceeds yield/shear strength of all biological minerals, causing shear plugging. Defeating it endogenously requires >35 kg/m^2 areal density, destroying human locomotion and causing lethal BABT.",
+    "evidence": "Tate-Alekseevskii hydrodynamic penetration model, Lake-Thomas fracture mechanics.",
+    "original_id": "NEG-0056"
+  },
+  {
+    "id": "NEG-0062",
+    "experiment_id": "EXP-0067",
+    "falsified_claim": "Universal dogmatic prohibition that peripheral nerve regeneration cannot exceed 2 mm/day under any circumstances.",
+    "reason": "Contradicted by empirical mammalian evidence: Brief electrical stimulation achieves 3.0-3.5 mm/day (Gordon et al. 2008), and chemical fusogens restore functional conduction within 1-7 days by salvaging severed axolemmas (Bittner et al. 2012).",
+    "evidence": "Gordon et al. 2008 Exp Neurol; Bittner et al. 2012 J Neurosci Res.",
+    "original_id": "NEG-0057"
+  },
+  {
+    "id": "NEG-0063",
+    "experiment_id": "EXP-0067",
+    "falsified_claim": "Deterministic assertion that tissue growth at 5 mm/day inevitably causes cancer (99.6% risk).",
+    "reason": "Contradicted by human physiological wound re-epithelialization (3-5 mm/day without malignancy, Gurtner et al. 2008) and scar-free mammalian regeneration in Acomys without elevated tumor incidence.",
+    "evidence": "Gurtner et al. 2008 Nature; Seifert et al. 2012 Nature.",
+    "original_id": "NEG-0058"
+  },
+  {
+    "id": "NEG-0064",
+    "experiment_id": "EXP-0069",
     "falsified_claim": "Guaranteed 92% contractile muscle force recovery within 5 days via chemical fusogen (PEG-fusion)",
     "reason": "Fundamental biological mismatch: PEG rapidly restores axolemmal membrane continuity and compound action potentials, but cannot circumvent neuromuscular junction stabilization latency, acute denervation shock, or axonal misdirection (38-52% misrouting in mixed nerves).",
-    "evidence": "Nemani et al. 2024 (SRC-0099), Gutama et al. 2026 (SRC-0100), and Ghergherehchi et al. 2016 (SRC-0103)."
+    "evidence": "Nemani et al. 2024 (SRC-0109), Gutama et al. 2026 (SRC-0110), and Ghergherehchi et al. 2016 (SRC-0113)."
   },
   {
-    "id": "NEG-0055",
-    "experiment_id": "EXP-0059",
+    "id": "NEG-0065",
+    "experiment_id": "EXP-0069",
     "falsified_claim": "Complete functional regeneration to normal uninjured baseline in severe human Volumetric Muscle Loss (>15-20%) via ECM bioscaffolds",
     "reason": "Human clinical trial data prove that while ECM scaffolds promote volumetric defect fill and moderate strength improvement over pre-treatment baseline (+27-37%), all patients retain a 30-45% strength deficit compared to the healthy uninjured contralateral limb due to dense collagen scarring and capillary diffusion limits.",
-    "evidence": "Sicari et al. 2016 (SRC-0102) and Reed et al. 2024 (SRC-0101)."
+    "evidence": "Sicari et al. 2016 (SRC-0112) and Reed et al. 2024 (SRC-0111)."
   },
   {
-    "id": "NEG-0056",
-    "experiment_id": "EXP-0060",
+    "id": "NEG-0066",
+    "experiment_id": "EXP-0070",
     "falsified_claim": "Experimental confirmation of armor protection against specific weapons based solely on mathematical simulation (Recht-Ipson V50)",
     "reason": "Analytical plugging equations (Recht-Ipson) assume rigid homogeneous metallic shearing and do not account for flexible delamination, fiber pull-out, or blunt trauma transfer to deep organs. Numerical models cannot substitute for live-fire ballistic range testing.",
     "evidence": "MATERIALS_PARAMETER_AUDIT.md and INV-0014."
   },
   {
-    "id": "NEG-0057",
-    "experiment_id": "EXP-0062",
+    "id": "NEG-0067",
+    "experiment_id": "EXP-0072",
     "falsified_claim": "78.4% volumetric muscle mass restoration and 36.2% residual deficit in clinical human VML (Dziki et al. 2016)",
     "reason": "Dziki et al. (2016) reported only qualitative histological de novo muscle islands and measured functional force improvement (+37.3% mean over pre-op); volumetric defect fill percentage was never quantitatively measured. The 78.4% figure was an unverified synthesis assumption.",
     "evidence": "Dziki et al. (2016) DOI 10.1038/npjregenmed.2016.8, Table 1/2, and INV-0015."
   },
   {
-    "id": "NEG-0058",
-    "experiment_id": "EXP-0062",
+    "id": "NEG-0068",
+    "experiment_id": "EXP-0072",
     "falsified_claim": "Direct linear conversion of ordinal Medical Research Council Scale (MRCC M0-M5) scores to continuous percentages of axonal regeneration or muscle contractile force",
     "reason": "The MRCC scale is an ordinal clinical rating where increments between grades are highly non-linear (e.g. M3 is movement against gravity, M4 against resistance, M5 full power). Converting M3/M4 directly into continuous force percentages without an empirically calibrated measurement model introduces severe systematic bias.",
     "evidence": "Gutama et al. (2026) DOI 10.1097/XCS.0000000000001795 and PEG_HUMAN_EVIDENCE_REANALYSIS.md."
   },
   {
-    "id": "NEG-0059",
-    "experiment_id": "EXP-0063",
+    "id": "NEG-0069",
+    "experiment_id": "EXP-0073",
     "falsified_claim": "Synthetic Dziki et al. 2016 cohort dataset (DZIKI_2016_COHORT in Cycle 4B), claim of +112.4% force recovery in Patient S12, and claim of 5.92% validation MAE",
     "reason": "Forensic extraction of PMC5744714 proved that patient S12 had -2.30% mean change, not +112.4%. The Cycle 4B cohort was synthetic; real patient data yields MAE = 25.74% and LOPO-CV MAE = 36.21%.",
     "evidence": "PMC5744714 Tables 1 and 2, and INV-0017."
   },
   {
-    "id": "NEG-0060",
-    "experiment_id": "EXP-0063",
+    "id": "NEG-0070",
+    "experiment_id": "EXP-0073",
     "falsified_claim": "12 independent external mechanical property validations of Model 12 with 0.50% mean relative error",
     "reason": "11 of the 12 properties were hardcoded calibration constants copied from publications into the model dictionary. Evaluating the model against its own input constants is circular tautology (data leakage). Real prediction error across 3 genuine physical derivations is 9.15%.",
     "evidence": "MATERIALS_DATA_LEAKAGE_AUDIT.md and INV-0018."
   },
   {
-    "id": "NEG-0061",
-    "experiment_id": "EXP-0063",
+    "id": "NEG-0071",
+    "experiment_id": "EXP-0073",
     "falsified_claim": "Clinical proof of ARCH-HYBRID as an integrated, whole-body protective system",
     "reason": "Osseointegration and biocompatibility are proven only for localized dental/orthopedic implants. Whole-body multi-site biohybrid armor integration has never been tested in vivo; dynamic shock fatigue and systemic chronic foreign body safety remain unvalidated.",
     "evidence": "UPDATED_ARCHITECTURE_VERDICT.md and INV-0020."
   },
   {
-    "id": "NEG-0062",
-    "title": "MODEL-13 Innervation Model Fails to Beat Featureless Baseline on Out-of-Sample RMSE",
-    "experiment_id": "EXP-0064",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0063",
-    "title": "LEFM Irwin Identity Check Does Not Constitute Independent Material Holdout Validation",
-    "experiment_id": "EXP-0065",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0064",
-    "title": "Physical Inequivalence of 50% RH Experimental Protocol and 80% RH Model Scenario",
-    "experiment_id": "EXP-0066",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0065",
-    "title": "Fully Endogenous Living Armor Cannot Defeat 7.62x39mm Rifle Threats Under Human Physiological Constraints",
-    "experiment_id": "EXP-0067",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0066",
-    "title": "Inability of Subdermal Non-Living Synthetic Implants to Autonomously Self-Repair Fatigue Microcracks",
-    "experiment_id": "EXP-0068",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0067",
-    "title": "Failure of Acellular ECM Bioscaffolds to Reconstitute Voluntary Force in Complete Nerve Avulsion",
-    "experiment_id": "EXP-0069",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0068",
-    "title": "Absence of Known Biological Pathways for Ribosomal or Enzymatic Synthesis of Macromolecular Graphene Sheets",
-    "experiment_id": "EXP-0067",
-    "cycle": "Cycle 5"
-  },
-  {
-    "id": "NEG-0069",
-    "title": "Failure of 3-Node Dynamic Thermal Model to Substantially Outperform 1-Node Baseline Under Encapsulated Uncompensable Conditions",
-    "experiment_id": "EXP-0073",
-    "cycle": "Cycle 6"
-  },
-  {
-    "id": "NEG-0070",
-    "title": "Inability of Decellularized Acellular ECM Scaffolds to Restore Contractile Function in Absence of Motor Reinnervation or Myoblast Seeding",
-    "experiment_id": "EXP-0072",
-    "cycle": "Cycle 6"
-  },
-  {
-    "id": "NEG-0071",
-    "title": "Refutation of Zero-Metabolic-Cost Assumption for Internal Biohybrid Armor Implants",
-    "experiment_id": "EXP-0074",
-    "cycle": "Cycle 6"
-  },
-  {
     "id": "NEG-0072",
-    "title": "Inability to Produce Deterministic Kinematic Performance Predictions Without Dynamic Multi-Joint Empirical Calibration",
+    "title": "MODEL-13 Innervation Model Fails to Beat Featureless Baseline on Out-of-Sample RMSE",
+    "experiment_id": "EXP-0074",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0073",
+    "title": "LEFM Irwin Identity Check Does Not Constitute Independent Material Holdout Validation",
     "experiment_id": "EXP-0075",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0074",
+    "title": "Physical Inequivalence of 50% RH Experimental Protocol and 80% RH Model Scenario",
+    "experiment_id": "EXP-0076",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0075",
+    "title": "Fully Endogenous Living Armor Cannot Defeat 7.62x39mm Rifle Threats Under Human Physiological Constraints",
+    "experiment_id": "EXP-0077",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0076",
+    "title": "Inability of Subdermal Non-Living Synthetic Implants to Autonomously Self-Repair Fatigue Microcracks",
+    "experiment_id": "EXP-0078",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0077",
+    "title": "Failure of Acellular ECM Bioscaffolds to Reconstitute Voluntary Force in Complete Nerve Avulsion",
+    "experiment_id": "EXP-0079",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0078",
+    "title": "Absence of Known Biological Pathways for Ribosomal or Enzymatic Synthesis of Macromolecular Graphene Sheets",
+    "experiment_id": "EXP-0077",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "NEG-0079",
+    "title": "Failure of 3-Node Dynamic Thermal Model to Substantially Outperform 1-Node Baseline Under Encapsulated Uncompensable Conditions",
+    "experiment_id": "EXP-0083",
     "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0080",
+    "title": "Inability of Decellularized Acellular ECM Scaffolds to Restore Contractile Function in Absence of Motor Reinnervation or Myoblast Seeding",
+    "experiment_id": "EXP-0082",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0081",
+    "title": "Refutation of Zero-Metabolic-Cost Assumption for Internal Biohybrid Armor Implants",
+    "experiment_id": "EXP-0084",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0082",
+    "title": "Inability to Produce Deterministic Kinematic Performance Predictions Without Dynamic Multi-Joint Empirical Calibration",
+    "experiment_id": "EXP-0085",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "NEG-0083",
+    "title": "Failure of Direct Cross-Material Horn Keratin Model Transfer to Crossed-Lamellar Pangolin Scale Armor",
+    "experiment_id": "EXP-0086",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "NEG-0084",
+    "title": "Inability to Prove 3-Node Thermal Model Advantage Over 1-Node Baseline Under Authentic 2.2 m/s Wind Speed",
+    "experiment_id": "EXP-0088",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "NEG-0085",
+    "title": "Absence of Direct In Vivo Catheter Pressure Measurements for Subcutaneous Bio-Armor Compartment Pressure",
+    "experiment_id": "EXP-0090",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "NEG-0086",
+    "title": "Invalidity of Treating Preclinical Group Means as Independent Individual Biological Replicates",
+    "experiment_id": "EXP-0089",
+    "cycle": "Cycle 7"
   }
 ]

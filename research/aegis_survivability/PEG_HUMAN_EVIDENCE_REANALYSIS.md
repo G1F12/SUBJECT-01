@@ -21,7 +21,7 @@ Previous cycles in AEGIS-01 introduced assertions regarding axonal integrity res
 ## 2. Deep-Dive on Primary Clinical Publications
 
 ### 2.1 Nemani et al. (2024): Human Sensory Digital Nerve Repair
-- **Citation:** Nemani, V. M., et al. (2024). *Polyethylene Glycol-Mediated Axonal Fusion for Acute Digital Nerve Transection: A Multicenter Clinical Cohort Study.* Plastic and Reconstructive Surgery, DOI: `10.1097/PRS.0000000000011334` (`SRC-0099`).
+- **Citation:** Nemani, V. M., et al. (2024). *Polyethylene Glycol-Mediated Axonal Fusion for Acute Digital Nerve Transection: A Multicenter Clinical Cohort Study.* Plastic and Reconstructive Surgery, DOI: `10.1097/PRS.0000000000011334` (`SRC-0109`).
 - **Anatomical Substrate:** Proper and common palmar digital nerves distal to the superficial palmar arch.
 - **Histological Composition:** Strictly sensory afferent fibers (A-beta touch/pressure, A-delta sharp pain/temperature, C-fiber dull pain). **Zero alpha-motor axons. Zero gamma-motor axons. Zero neuromuscular junctions (NMJs).**
 - **Reported Outcomes:**
@@ -33,7 +33,7 @@ Previous cycles in AEGIS-01 introduced assertions regarding axonal integrity res
   - **Critical Failure in Prior AEGIS Cycles:** Previous documentation cited Nemani et al. as proof of rapid motor restoration and preserved muscular contractile force. Because digital nerves innervate zero muscle fibers, this attribution was clinically impossible.
 
 ### 2.2 Gutama et al. (2026): Mixed Nerve Trauma and the MRCC Ordinal Trap
-- **Citation:** Gutama, A. D., et al. (2026). *Functional Motor and Sensory Outcomes Following Acute PEG-Fusion of Transected Major Peripheral Trunks: A 24-Month Follow-Up.* Journal of the American College of Surgeons, DOI: `10.1097/XCS.0000000000001795` (`SRC-0100`).
+- **Citation:** Gutama, A. D., et al. (2026). *Functional Motor and Sensory Outcomes Following Acute PEG-Fusion of Transected Major Peripheral Trunks: A 24-Month Follow-Up.* Journal of the American College of Surgeons, DOI: `10.1097/XCS.0000000000001795` (`SRC-0110`).
 - **Anatomical Substrate:** Mixed motor-sensory nerve trunks (median nerve, ulnar nerve, radial nerve).
 - **Outcome Metric Used:** Medical Research Council Scale for Muscle Strength:
   - $M_0$: No contraction visible or palpable.
@@ -42,7 +42,7 @@ Previous cycles in AEGIS-01 introduced assertions regarding axonal integrity res
   - $M_3$: Active movement against gravity, but no resistance.
   - $M_4$: Active movement against gravity and moderate resistance.
   - $M_5$: Normal strength against full resistance.
-- **Methodological Vulnerability: The Ordinal-to-Continuous Fallacy (`NEG-0055`):**
+- **Methodological Vulnerability: The Ordinal-to-Continuous Fallacy (`NEG-0065`):**
   - The MRCC scale is **ordinal**, not interval or ratio. The biomechanical difference between $M_2$ and $M_3$ (overcoming the gravitational limb moment) represents a completely different physiological recruitment threshold than the difference between $M_4$ and $M_5$ (supramaximal recruitment and physiological hypertrophy).
   - In Cycle 3A, the report converted Gutama et al.'s findings that "82% of patients achieved $\ge M_3$ and 45% achieved $M_4$" into continuous statements: *"45-65% long-term contractile force recovery"*.
   - This conversion is statistically invalid. An $M_3$ motor grade can correspond to as little as $5\dots 15\%$ of contralateral healthy maximum voluntary isometric torque (MVIC) in large human muscle groups.
@@ -74,7 +74,7 @@ A primary limitation of non-targeted chemical PEG fusion in mixed motor-sensory 
 1. When PEG (polyethylene glycol 50% w/w, 2000 Da) and calcium-free hypotonic saline are applied following sharp transection, membrane fusion occurs indiscriminately between proximal and distal severed axonal stumps that are brought into close physical apposition.
 2. An alpha-motor axon originating in the median nerve motor nucleus that previously innervated the *abductor pollicis brevis* (APB) may fuse with a sensory distal endoneurial tube leading to the index finger pulp.
 3. Conversely, a sensory axon from the thumb may fuse with a motor endplate on the *flexor pollicis brevis*.
-4. **Physiological Consequence:** Ghergherehchi et al. (2016, `SRC-0103`) proved that while PEG eliminates Wallerian degeneration in $60\dots 75\%$ of fused axons, it does **not** guide correct target re-innervation. In mixed nerves, $38\dots 52\%$ of regenerated motor axons exhibit aberrant targeting, leading to co-contraction of antagonist muscles and defective tactile sensory processing.
+4. **Physiological Consequence:** Ghergherehchi et al. (2016, `SRC-0113`) proved that while PEG eliminates Wallerian degeneration in $60\dots 75\%$ of fused axons, it does **not** guide correct target re-innervation. In mixed nerves, $38\dots 52\%$ of regenerated motor axons exhibit aberrant targeting, leading to co-contraction of antagonist muscles and defective tactile sensory processing.
 5. In pure sensory nerves (Nemani et al. 2024), synkinesis does not produce motor impairment, explaining why human digital clinical trials show uniformly superior sensory outcomes compared to mixed-trunk repairs.
 
 ---

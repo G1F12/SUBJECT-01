@@ -9,7 +9,7 @@
 ## 1. Executive Summary
 
 This report provides the first external quantitative benchmark of AEGIS-01 human thermoregulatory models (`MODEL-07`, `MODEL-10`, `MODEL-14`) against international standard human physiological benchmarks:
-- **ISO 7933:2023:** *Ergonomics of the thermal environment — Analytical determination and interpretation of heat strain using calculation of the predicted heat strain (PHS)* (`SRC-0104`).
+- **ISO 7933:2023:** *Ergonomics of the thermal environment — Analytical determination and interpretation of heat strain using calculation of the predicted heat strain (PHS)* (`SRC-0114`).
 - **Stolwijk 25-Node Human Thermoregulation Model** and Gagge two-node empirical heat strain databases.
 
 ### Benchmark Outcomes:
