@@ -183,7 +183,15 @@ PHYSICAL_CONSTRAINTS_AUDIT = {
             "Henneman's Size Principle strictly governs the orderly motor unit recruitment hierarchy "
             "(low-threshold Type I recruited first, high-threshold Type II recruited with increasing force demand). "
             "It does NOT govern the transcriptional conflict between mitochondrial biogenesis (AMPK/PGC-1a) "
-            "and myofibrillar protein synthesis (mTORC1), which is the biochemical basis of the interference effect."
+            "and myofibrillar protein synthesis (mTORC1), which is the biochemical basis of the interference effect. "
+            "Furthermore, the concurrent training interference effect is a multifactorial physiological phenomenon "
+            "(involving glycogen depletion, satellite cell dynamics, and neuromuscular fatigue) and is NOT completely "
+            "or exclusively explained by the AMPK-mTORC1 cascade alone."
+        ),
+        "epistemic_warning": (
+            "Literature-derived constraints (tendon rupture forces, strain limits, fascial compartment volume, "
+            "and capillary diffusion distances) represent empirical reference estimates and heuristic modeling assumptions. "
+            "They MUST NOT be treated as universal, invariant biological thresholds across all individuals or conditions."
         ),
     },
 }

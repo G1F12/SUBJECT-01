@@ -99,6 +99,8 @@ During active dynamic contractions, torque is decoupled from static proxies:
 ### Theoretical Dynamic Model Comparisons
 > [!NOTE]
 > The metrics below represent theoretical ODE simulation baselines. They are strictly classified as `THEORETICAL_COMPUTATIONAL_PROJECTION` and are NOT claimed as empirical fits on the unacquired raw `.mat` arrays.
+> **Cross-subject biomechanical validation across independent human populations was NOT performed.**
+> **These theoretical $R^2$ values are strictly prohibited from being included in the general table of empirical accuracy of SUBJECT-01 as confirmed results.**
 
 | Model ID | Model Name & Formula | Projected $R^2$ (Mean $\pm$ SD) | NRMSE (%) | Epistemic Classification |
 | :--- | :--- | :---: | :---: | :--- |
@@ -140,6 +142,9 @@ In the 20-minute fatiguing protocol ($N=18$), intermittent isometric knee extens
 
 To prevent unmeasured literature constants or theoretical assumptions from being mistakenly attributed to Bird et al. (2026), each physical parameter is audited and classified:
 
+> [!NOTE]
+> Literature-derived values (tendon failure forces, ultimate strain, fascial volume bounds, and microvascular diffusion limits) represent empirical reference estimates and heuristic modeling assumptions. They MUST NOT be treated as universal, immutable biological thresholds across all individuals, muscle architectures, training statuses, or physiological conditions.
+
 | Parameter / Bound | Value / Range | Epistemic Classification | Literature Grounding | Measured in Bird 2026? |
 | :--- | :--- | :---: | :--- | :---: |
 | **specific_muscle_tension_sigma_max** | 25 to 30 N/cm^2 | `LITERATURE_DERIVED` | Narici et al. (1996), Maganaris et al. (2001); in vivo human quadriceps specific tension benchmark | **NO** (External) |
@@ -154,6 +159,7 @@ To prevent unmeasured literature constants or theoretical assumptions from being
 > [!WARNING]
 > **Henneman's Size Principle** (Henneman et al., 1965) governs the orderly recruitment of motor units from low-threshold Type I to high-threshold Type II under increasing neural drive.
 > Attributing the antagonism between mitochondrial biogenesis (AMPK/PGC-1$\alpha$) and myofibrillar hypertrophy (mTORC1/p70S6K) to Henneman's Principle was a conceptual category error. That phenotypic antagonism is the **AMPK-mTORC1 Molecular Interference Effect** (Hickson 1980, Baar 2014).
+> Crucially, the concurrent training interference effect is a multifactorial physiological phenomenon (involving chronic glycogen depletion, neuromuscular fatigue, satellite cell competition, and microdamage repair resources) and is **NOT** completely or exclusively explained by the AMPK-mTORC1 signaling pathway alone.
 
 ---
 
