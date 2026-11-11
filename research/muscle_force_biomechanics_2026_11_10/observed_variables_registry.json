@@ -1,0 +1,114 @@
+{
+  "dataset_metadata": {
+    "source_id": "SRC-0076",
+    "doi": "10.5061/dryad.sbcc2frmh",
+    "associated_article_doi": "10.1126/scirobotics.aed5865",
+    "arxiv_preprint_id": "arXiv:2510.20866",
+    "title": "Data from: Ultra-wideband radar to measure in vivo muscle forces",
+    "authors": [
+      "Christopher S. Bird",
+      "Antonio P. L. Bo",
+      "Wei Lu",
+      "Taylor J. M. Dick"
+    ],
+    "institutions": [
+      "The University of Queensland",
+      "CSIRO Health and Biosecurity",
+      "Oslo Metropolitan University"
+    ],
+    "license": "CC0-1.0 (Public Domain Dedication)",
+    "publication_date": "2026-07-02"
+  },
+  "variable_ontology_and_epistemic_classification": {
+    "joint_torque": {
+      "symbol": "T_joint",
+      "units": "N*m (absolute) or % MVC (normalized)",
+      "instrument": "Biodex System 4 Pro Isokinetic Dynamometer (500 Hz) / Forsentek F3F 3-axis load cell (40 Hz)",
+      "epistemic_status": "MEASURED_JOINT_LEVEL",
+      "biomechanical_relationship": "Net rotational moment around joint axis: T_joint = T_agonists - T_antagonists + T_passive. It is NOT the force of an individual muscle.",
+      "critical_caveats": [
+        "Cannot be directly equated to vastus lateralis muscle force",
+        "Conflates load-sharing among all four quadriceps heads (VL, VM, VI, RF)",
+        "Tendon moment arm d_MA(theta) varies continuously with knee flexion angle (from ~3.5 cm at 90 deg to ~4.8 cm at 20 deg)",
+        "Antagonist co-activation of hamstrings is present and opposes knee extension torque"
+      ]
+    },
+    "joint_angle": {
+      "symbol": "theta_knee",
+      "units": "degrees (0 deg = full extension, 90 deg = flexion)",
+      "instrument": "Biodex optical shaft encoder (500 Hz)",
+      "epistemic_status": "MEASURED_KINEMATICS",
+      "biomechanical_relationship": "Defines muscle-tendon unit length L_MTU(theta) and moment arm d_MA(theta)"
+    },
+    "joint_angular_velocity": {
+      "symbol": "omega_knee",
+      "units": "deg/s (positive for extension, negative for flexion)",
+      "instrument": "Biodex velocity tachometer (500 Hz)",
+      "epistemic_status": "MEASURED_KINEMATICS",
+      "modes_tested": [
+        "passive_30_deg_s", "passive_60_deg_s", "passive_90_deg_s", "passive_120_deg_s",
+        "isokinetic_30_deg_s", "isokinetic_60_deg_s", "isokinetic_90_deg_s", "isokinetic_120_deg_s",
+        "threshold45_30_deg_s", "threshold45_60_deg_s", "threshold45_90_deg_s", "threshold45_120_deg_s",
+        "isotonic_15pct_mvc", "isotonic_30pct_mvc", "isotonic_45pct_mvc", "isotonic_60pct_mvc"
+      ]
+    },
+    "surface_electromyography": {
+      "symbol": "a_sEMG",
+      "units": "normalized to MVC activation [0.0, 1.0]",
+      "instrument": "Bipolar surface electrodes over vastus lateralis belly (2048 Hz)",
+      "epistemic_status": "MEASURED_NEUROLOGICAL_SURFACE_PROXY",
+      "processing_pipeline": "Bandpass filtered, rectified, low-pass smoothed, normalized to peak MVC amplitude",
+      "critical_caveats": [
+        "Represents spatial average of superficial motor unit action potentials under electrode footprint",
+        "Subject to amplitude cancellation and tissue filtering (subcutaneous fat)",
+        "Under fatigue, increases by +26% +/- 15% for the exact same mechanical torque output (decoupling)",
+        "Does NOT measure intracellular ATP, PCr, or glycogen stores"
+      ]
+    },
+    "fascicle_length": {
+      "symbol": "L_fas",
+      "units": "mm or strain relative to resting length [L / L_rest]",
+      "instrument": "Telemed ArtUs B-mode ultrasound (100 Hz, LV8-5N60-A2 transducer)",
+      "epistemic_status": "MEASURED_FASCICLE_GEOMETRY",
+      "processing_pipeline": "UltraTrack v5.0 semi-automated optical flow fascicle tracking, 5 Hz low-pass filter",
+      "biomechanical_relationship": "Determines contractile operating point on actin-myosin overlap force-length curve f_L(L)"
+    },
+    "fascicle_velocity": {
+      "symbol": "v_fas",
+      "units": "resting lengths / second (s^-1)",
+      "instrument": "Numerical time-derivative of ultrasound-tracked fascicle length",
+      "epistemic_status": "DERIVED_TIME_DERIVATIVE_OF_GEOMETRY",
+      "biomechanical_relationship": "Determines contractile operating point on Hill hyperbolic force-velocity curve f_V(v)"
+    },
+    "pennation_angle": {
+      "symbol": "alpha",
+      "units": "degrees (angle between fascicle line and deep aponeurosis)",
+      "instrument": "Telemed B-mode ultrasound and UltraTrack v5.0",
+      "epistemic_status": "MEASURED_FASCICLE_GEOMETRY",
+      "biomechanical_relationship": "Resolves fascicle force along tendon line of action: F_tendon = F_fascicle * cos(alpha)"
+    },
+    "radar_scattering_parameters": {
+      "symbol": "S_11, S_21",
+      "units": "complex reflection and transmission coefficients (magnitude in dB, phase in radians)",
+      "instrument": "Vector Network Analyzer (VNA) with body-coupled UWB antenna (100 MHz to 2.9 GHz, 51 frequencies, 10.8 Hz)",
+      "epistemic_status": "MEASURED_ELECTROMAGNETIC_PROXY",
+      "biomechanical_relationship": "Tracks electromagnetic dielectric and geometric shifts of contracting tissue under antenna footprint",
+      "critical_caveats": [
+        "Requires participant-specific machine learning (LSTM or LME) calibration",
+        "Does not provide physical force in Newtons without dynamometer ground-truth training",
+        "Correlates with muscle force even when EMG and fascicle length decouple under fatigue"
+      ]
+    },
+    "muscle_force_absolute": {
+      "symbol": "F_muscle",
+      "units": "Newtons (N)",
+      "instrument": "NONE (NOT MEASURED DIRECTLY)",
+      "epistemic_status": "UNOBSERVED_MODEL_DEPENDENT_ESTIMATION",
+      "critical_caveats": [
+        "Direct measurement requires invasive buckle transducers or optic fiber tendon probes (prohibited on human subjects in vivo)",
+        "Approximating F_VL = T_joint / d_MA ignores vastus medialis, vastus intermedius, rectus femoris load-sharing and hamstring co-contraction",
+        "Evidence Gate V2 strictly forbids presenting uncalibrated model inferences as measured Newtons"
+      ]
+    }
+  }
+}

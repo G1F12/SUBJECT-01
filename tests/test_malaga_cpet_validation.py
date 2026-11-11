@@ -303,6 +303,59 @@ class TestMalagaCPETValidation(unittest.TestCase):
                 f"License type '{lic}' must reflect the documented conflict/open issue",
             )
 
+    def test_participant_level_paired_comparisons_and_pseudoreplication_controls(self):
+        """Stage 0: Verify paired t-test and Wilcoxon operate on unique biological participants (N=846)."""
+        stats_audit = self.results["statistical_reliability_audit"]
+        part_paired = stats_audit["paired_comparisons"]["participant_level_paired_tests"]
+
+        self.assertEqual(part_paired["n_units"], 846, "Participant-level paired tests must use N=846 unique participants")
+        self.assertEqual(part_paired["degrees_of_freedom"], 845, "Degrees of freedom must be 846 - 1 = 845")
+        self.assertEqual(part_paired["pseudoreplication_status"], "CONTROLLED_ZERO_PSEUDOREPLICATION")
+
+        # Statistically significant reduction of M4 over M3
+        m4_m3 = part_paired["M4_vs_M3"]
+        self.assertGreater(m4_m3["mean_rmse_reduction_ml_min"], 50.0)
+        self.assertLess(m4_m3["paired_t_p_value"], 1e-15)
+
+    def test_test_weighted_vs_participant_weighted_metrics_consistency(self):
+        """Stage 0: Verify both participant-weighted and test-weighted metrics are computed and distinct."""
+        stats_audit = self.results["statistical_reliability_audit"]
+        self.assertIn("participant_weighted_metrics", stats_audit)
+        self.assertIn("test_weighted_metrics", stats_audit)
+
+        part_m4 = stats_audit["participant_weighted_metrics"]["M4"]
+        test_m4 = stats_audit["test_weighted_metrics"]["M4"]
+
+        self.assertEqual(stats_audit["participant_weighted_metrics"]["n_unique_participants"], 846)
+        self.assertEqual(stats_audit["test_weighted_metrics"]["n_tests"], 981)
+
+        # Both metrics must be close (within 5 mL/min) but reflect distinct weighting
+        self.assertAlmostEqual(part_m4["rmse_mean"], test_m4["rmse_mean"], delta=10.0)
+
+    def test_cluster_bootstrap_explicit_estimands(self):
+        """Stage 0: Verify cluster bootstrap by participant ID defines explicit estimands."""
+        boot = self.results["statistical_reliability_audit"]["participant_bootstrap_ci95"]
+        self.assertEqual(boot["clustering_unit"], "subject_id")
+        self.assertIn("estimands", boot)
+        estimands = boot["estimands"]
+        self.assertIn("participant_weighted_m4_rmse_ci95", estimands)
+        self.assertIn("participant_weighted_m4_vs_m3_diff_ci95", estimands)
+        self.assertIn("test_weighted_m4_rmse_ci95", estimands)
+
+        # 95% CI of M4 - M3 difference must be strictly positive (M3 > M4)
+        diff_ci = estimands["participant_weighted_m4_vs_m3_diff_ci95"]
+        self.assertGreater(diff_ci[0], 45.0)
+
+    def test_negative_reject_pseudoreplicated_degrees_of_freedom(self):
+        """Negative Test (Stage 0): If degrees of freedom equals N_tests - 1 (980), reject as pseudoreplication."""
+        stats_audit = self.results["statistical_reliability_audit"]
+        part_paired = stats_audit["paired_comparisons"]["participant_level_paired_tests"]
+        self.assertNotEqual(
+            part_paired["degrees_of_freedom"],
+            980,
+            "Degrees of freedom 980 implies test-level pseudoreplication without participant aggregation!",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

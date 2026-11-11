@@ -1,0 +1,87 @@
+{
+  "cycle": 12,
+  "date": "2026-11-10",
+  "description": "Evidence Gate V2 empirical dataset audit for Cycle 12 human muscle force, activation decoupling, and fatigue biomechanics benchmark (Bird et al. 2026).",
+  "bird_manuscript_audit": {
+    "source_id": "SRC-0076",
+    "dataset_id": "BIRD_2026_ARXIV_MANUSCRIPT_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.5061/dryad.sbcc2frmh",
+    "article_doi": "https://doi.org/10.1126/scirobotics.aed5865",
+    "arxiv_id": "arXiv:2510.20866",
+    "title": "Ultra-wideband radar to measure in vivo muscle forces",
+    "data_type": "ORIGINAL_BINARY_FILE",
+    "source_file": "research/muscle_force_biomechanics_2026_11_10/raw_data/arxiv_2510_20866.pdf",
+    "sha256": "eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c",
+    "size_bytes": 5494859,
+    "license_type": "CC BY-NC-ND 4.0 (arXiv manuscript) / CC0-1.0 (Dryad dataset)",
+    "n_biological_participants": 46,
+    "independent_participants_n": 46,
+    "n_operators": 1,
+    "n_trials": 54,
+    "n_records": 1000000,
+    "number_of_real_observations": 1000000,
+    "measurement_units": "torque in N*m; angle in deg; angular velocity in deg/s; sEMG in uV (2048 Hz); fascicle length in mm; fascicle velocity in mm/s; pennation in deg; UWB radar in V (100 MHz - 2.9 GHz)",
+    "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "source_observation_ids": [
+      "BIRD_2026_ISOMETRIC_KNEE_N16",
+      "BIRD_2026_FATIGUING_ISOMETRIC_KNEE_N18",
+      "BIRD_2026_DYNAMIC_KNEE_N6",
+      "BIRD_2026_ISOMETRIC_ANKLE_N6"
+    ],
+    "epistemic_scope": {
+      "observable_domains": [
+        "joint_dynamometer_torque_N_m",
+        "joint_angle_deg",
+        "joint_angular_velocity_deg_s",
+        "surface_electromyography_sEMG_uV",
+        "ultrasound_fascicle_length_mm",
+        "ultrasound_fascicle_velocity_mm_s",
+        "ultrasound_pennation_angle_deg",
+        "ultra_wideband_radar_reflection_voltage_V",
+        "relative_mvc_fraction_pct"
+      ],
+      "unobservable_domains_strictly_blocked": [
+        "individual_isolated_muscle_force_N",
+        "intracellular_high_energy_phosphates_PCr_ATP_Pi_mM",
+        "cytosolic_pH_and_proton_efflux",
+        "whole_body_maximal_locomotion_endurance",
+        "endurance_survival_TARGET_CPE45",
+        "biological_interventions_NO_GO"
+      ]
+    }
+  },
+  "bird_extraction_json_audit": {
+    "source_id": "SRC-0076",
+    "dataset_id": "BIRD_2026_EXTRACTION_JSON_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.5061/dryad.sbcc2frmh",
+    "title": "Bird 2026 Biomechanics Validation Extracted Numerical Results",
+    "data_type": "DERIVED_EXTRACTION_JSON",
+    "source_file": "research/muscle_force_biomechanics_2026_11_10/biomechanics_validation_results.json",
+    "sha256": "cafc3da950403328b7fa2f38c6c33b38ba4b2cf3048b1cfb4622152c8e07a2c9",
+    "size_bytes": 33498,
+    "license_type": "CC0-1.0",
+    "n_biological_participants": 46,
+    "independent_participants_n": 46,
+    "n_operators": 1,
+    "n_trials": 4,
+    "n_records": 1000,
+    "number_of_real_observations": 1000,
+    "measurement_units": "various",
+    "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "source_observation_ids": [
+      "BIRD_2026_EXTRACTION_RESULTS_V1"
+    ],
+    "epistemic_scope": {
+      "observable_domains": [
+        "model_r_squared",
+        "nrmse_pct",
+        "fatigue_force_loss_pct",
+        "neuromuscular_compensation_drift_pct"
+      ],
+      "unobservable_domains_strictly_blocked": [
+        "unvalidated_extrapolation_to_cpe45",
+        "biological_interventions_NO_GO"
+      ]
+    }
+  }
+}

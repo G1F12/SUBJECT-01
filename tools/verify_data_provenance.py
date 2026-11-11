@@ -71,6 +71,7 @@ def audit_dataset_provenance_records(custom_data=None):
         c9_datasets_file = ROOT / 'research' / 'empirical_recruitment_2026_11_08' / 'empirical_datasets_cycle9.json'
         c10_datasets_file = ROOT / 'research' / 'cpet_cycloergometer_2026_11_09' / 'empirical_datasets_cycle10.json'
         c11_datasets_file = ROOT / 'research' / 'treadmill_cpet_2026_11_09' / 'empirical_datasets_cycle11.json'
+        c12_datasets_file = ROOT / 'research' / 'muscle_force_biomechanics_2026_11_10' / 'empirical_datasets_cycle12.json'
         if not c9_datasets_file.is_file():
             problems.append(f"Missing empirical datasets file: {c9_datasets_file}")
             return problems
@@ -98,6 +99,16 @@ def audit_dataset_provenance_records(custom_data=None):
                         data[f"c11_{k}"] = v
             except Exception as e:
                 problems.append(f"Failed to parse {c11_datasets_file}: {e}")
+                return problems
+
+        if c12_datasets_file.is_file():
+            try:
+                c12_data = json.loads(c12_datasets_file.read_text(encoding='utf-8'))
+                for k, v in c12_data.items():
+                    if k not in ('cycle', 'date', 'description'):
+                        data[f"c12_{k}"] = v
+            except Exception as e:
+                problems.append(f"Failed to parse {c12_datasets_file}: {e}")
                 return problems
     else:
         data = custom_data
