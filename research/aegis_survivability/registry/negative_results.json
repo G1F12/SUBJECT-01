@@ -272,5 +272,29 @@
     "title": "Invalidity of Treating Preclinical Group Means as Independent Individual Biological Replicates",
     "experiment_id": "EXP-0089",
     "cycle": "Cycle 7"
+  },
+  {
+    "id": "NEG-0087",
+    "title": "Failure of Single Exponential E0*exp(-kw*w) to Model Keratin Glassy Plateau Below 10 wt% Hydration",
+    "experiment_id": "EXP-0091",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "NEG-0088",
+    "title": "Failure of Small-Animal VML Data to Support Universal Clinical Scaling to Human TA Without Microvascular Ingrowth",
+    "experiment_id": "EXP-0093",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "NEG-0089",
+    "title": "Failure of Unmodified Voigt Rule-of-Mixtures to Predict Compressive Modulus of Hydrated Cellular Keratins (-115.7% Reduction)",
+    "experiment_id": "EXP-0096",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "NEG-0090",
+    "title": "Invalidity of 38% Macroscopic Ventral Layer Thickness Fraction as Microstructural Intermediate Filament Volume Fraction",
+    "experiment_id": "EXP-0095",
+    "cycle": "Cycle 9"
   }
 ]

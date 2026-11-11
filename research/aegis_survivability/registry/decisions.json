@@ -9,7 +9,7 @@
   },
   {
     "id": "DEC-0025",
-    "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D \u2014 CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
+    "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D — CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
     "rationale": "Physics and neurophysiology strictly prove that projectile flight time at combat distances (<70 ms) is shorter than biological sensorimotor latency (>= 30-108 ms). Claiming reactive bullet evasion violates physical causality.",
     "status": "CONFIRMED",
     "date": "2026-11-08",
@@ -170,5 +170,25 @@
     "id": "DEC-0050",
     "title": "Retain 1-Node Lumped Thermal Model as Parsimonious Default Based on Authentic Montain 1994 Re-Analysis",
     "cycle": "Cycle 7"
+  },
+  {
+    "id": "DEC-0051",
+    "title": "Formal Adoption of Tier 4 Micromechanical Composite Formulation Replacing Ad-Hoc Scaling Factor 0.45",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "DEC-0052",
+    "title": "Assign Status INSUFFICIENT_EVIDENCE to Human Scale Functional Muscle Regeneration Across 150g Defects",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "DEC-0053",
+    "title": "Adopt Cellular Microbuckling Mechanics for Hydrated Biological Keratins Across All Functional Subsystems",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "DEC-0054",
+    "title": "Classify Armor Mass as Scenario Assumption and Designate TARGET-CPE45 as Not Externally Validated",
+    "cycle": "Cycle 9"
   }
 ]

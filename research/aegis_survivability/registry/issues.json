@@ -117,5 +117,19 @@
     "severity": "minor",
     "status": "resolved",
     "impact": "Resolved in Cycle 7 Phase 4 by re-running simulation under true 2.2 m/s wind speed."
+  },
+  {
+    "id": "ISS-0042",
+    "issue": "Diffusion-limited central core necrosis and motor endplate senescence in human-scale VML translation",
+    "severity": "major",
+    "status": "identified",
+    "impact": "Highlights critical bio-engineering gap: pre-vascularized scaffolds and neurotrophic guiding channels required for human translation."
+  },
+  {
+    "id": "ISS-0043",
+    "issue": "Conflation of Macroscopic Layer Geometry with Nanoscale Fibrillar Volume Fractions in Published Literature",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Cycle 8 mistakenly equated 38% ventral macro-layer thickness with intermediate filament volume fraction. Fully audited and resolved in Cycle 9."
   }
 ]

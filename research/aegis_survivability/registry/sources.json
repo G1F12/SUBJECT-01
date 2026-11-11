@@ -370,7 +370,7 @@
       "verified_via": "MSSE ACSM DOI / PubMed PMID 17277604",
       "checked_date": "2026-11-08"
     },
-    "measured_quantities": "Human sweating rates (1.0-2.5 L/h), dehydration hyperthermia threshold (core T > 39.5\u00b0C), and evaporative thermoregulatory failure",
+    "measured_quantities": "Human sweating rates (1.0-2.5 L/h), dehydration hyperthermia threshold (core T > 39.5°C), and evaporative thermoregulatory failure",
     "biological_species": "Homo sapiens exercise physiology",
     "supports_hypotheses": [
       "HYP-0019"
@@ -781,5 +781,20 @@
     "id": "SRC-0146",
     "citation": "Montain et al. (1994). Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate. Journal of Applied Physiology 77(1):216-222. DOI: 10.1152/jappl.1994.77.1.216.",
     "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0147",
+    "citation": "McKittrick et al. (2012). The structure, functions, and mechanical properties of keratin. JOM 64(4):449-468. DOI: 10.1007/s11837-012-0302-8.",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "SRC-0148",
+    "citation": "Kitchener (1987). Fracture toughness of bighorn sheep horn keratin. Journal of Zoology 213(4):621-638. DOI: 10.1111/j.1469-7998.1987.tb03730.x.",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "SRC-0149",
+    "citation": "Huang W, Zaheri A, Jung JY, Suvannasara V, Naleway SE, Frank NJ, McKittrick J, Espinosa HD (2018). Microstructure and mechanical properties of different keratinous horns. Journal of the Royal Society Interface 15:20180217. DOI: 10.1098/rsif.2018.0217. PMC6030630.",
+    "cycle": "Cycle 9"
   }
 ]

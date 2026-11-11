@@ -368,5 +368,45 @@
     "id": "EXP-0090",
     "title": "SUBJECT-01 Cycle 12 Consistency Check and Compartment Pressure Biomechanical Boundary Audit",
     "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0091",
+    "title": "Mathematical Audit and Reconciliation of Keratin Hydration Non-Linearity and Glass-Transition Plasticization",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0092",
+    "title": "Leave-One-Material-Out (LOMO) Cross-Validation of 4 Model Tiers on Keratinous Armor Tissues",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0093",
+    "title": "Forensic Multi-Level Evaluation of Preclinical VML Functional Regeneration under Strict Dynamic LOSO",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0094",
+    "title": "TARGET-CPE45 Seven-Parameter Physiological Sensitivity Sweep Under Parsimonious 1-Node Thermoregulation",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0095",
+    "title": "Keratin Parameter Forensic Provenance and Conflation Audit",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0096",
+    "title": "Independent Holdout Validation on Ruminant Horn Keratins (Huang 2018)",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0097",
+    "title": "Strict Dynamic LOSO Functional Regeneration Multi-Level Audit",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0098",
+    "title": "Thermodynamically Sound CPE45 1-Node Simulation and Sensitivity Sweep",
+    "cycle": "Cycle 9"
   }
 ]

@@ -122,7 +122,7 @@
   {
     "id": "FND-0070",
     "experiment_id": "EXP-0068",
-    "finding": "Thermodynamic reconciliation of climate-dependent heating rates: 0.038 \u00b0C/min is strictly valid for temperate running (25\u00b0C, 50% RH) stabilizing at 38.4\u00b0C; under hot-humid conditions (35\u00b0C, 80% RH) net heat storage of 420-710 W drives 0.095-0.150 \u00b0C/min heating, reaching 40.0\u00b0C in 20.2-32.0 minutes.",
+    "finding": "Thermodynamic reconciliation of climate-dependent heating rates: 0.038 °C/min is strictly valid for temperate running (25°C, 50% RH) stabilizing at 38.4°C; under hot-humid conditions (35°C, 80% RH) net heat storage of 420-710 W drives 0.095-0.150 °C/min heating, reaching 40.0°C in 20.2-32.0 minutes.",
     "claim_level": "LEVEL_A_VERIFIED_PHYSICAL_MODEL",
     "evidence": "Coupled energy ledger with Tetens equation; Wenger 1988, Sawka 2007, ISO 7933:2023.",
     "original_id": "FND-0067"
@@ -331,5 +331,53 @@
     "title": "Acellular ECM Scaffold Ineffectiveness Confirmed Across All 3 Independent Animal VML Series",
     "experiment_id": "EXP-0087",
     "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0103",
+    "title": "Keratin Hydration Mathematical Divergence (E0=8.54 GPa vs 4.60 GPa) Reconciled by Amorphous Matrix Glass Transition",
+    "experiment_id": "EXP-0091",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0104",
+    "title": "Tier 4 Micromechanical Composite Model Eliminates Post-Hoc Factor 0.45 and Reduces Pangolin Scale Error by 82.3%",
+    "experiment_id": "EXP-0092",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0105",
+    "title": "Strict Dynamic LOSO Cross-Validation Confirms Preclinical VML Error of 6.02% But Precludes Human Clinical Generalization",
+    "experiment_id": "EXP-0093",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0106",
+    "title": "TARGET-CPE45 Thermal Strain is Governed Dominated by Metabolic Power (4.86 C Delta) and Open Skin Fraction (1.24 C Delta)",
+    "experiment_id": "EXP-0094",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0107",
+    "title": "Identification of 38% Pangolin Scale Ventral Macro-Layer Conflation in Literature Microstructural Models",
+    "experiment_id": "EXP-0095",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0108",
+    "title": "True Holdout Failure of Voigt Composite Rule and +34.55% Error Reduction via Reconciled Cellular Microbuckling Model",
+    "experiment_id": "EXP-0096",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0109",
+    "title": "VML Strict Dynamic LOSO Preserves Preclinical MAE 6.02% While Human Scaling Remains INSUFFICIENT_EVIDENCE",
+    "experiment_id": "EXP-0097",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0110",
+    "title": "Taylor Locomotor Transport Cost Adds 95.2 W and Breaches Critical 40.0 C Threshold When Open Skin Under 10%",
+    "experiment_id": "EXP-0098",
+    "cycle": "Cycle 9"
   }
 ]

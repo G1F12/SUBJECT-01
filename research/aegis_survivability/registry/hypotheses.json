@@ -139,7 +139,7 @@
     "related_experiments": [
       "EXP-0064"
     ],
-    "description": "Extensive cutaneous armor coverage (>70%) severely restricts evaporative cooling, inducing fatal hyperthermic core temperature increases (+5.3 K, exceeding 39.5\u00b0C in ~20 minutes) during sustained physical activity in warm environments.",
+    "description": "Extensive cutaneous armor coverage (>70%) severely restricts evaporative cooling, inducing fatal hyperthermic core temperature increases (+5.3 K, exceeding 39.5°C in ~20 minutes) during sustained physical activity in warm environments.",
     "original_id": "HYP-0018"
   },
   {
@@ -376,6 +376,28 @@
     "cycle": "Cycle 7",
     "related_experiments": [
       "EXP-0088"
+    ]
+  },
+  {
+    "id": "HYP-0042",
+    "title": "Microarchitecture-Governed Composite Transfer of Keratin Stiffness Across Divergent Taxonomic Structures",
+    "statement": "A micromechanical composite model incorporating measured intermediate filament fraction (phi_if), classical laminate layup factors (eta), and tubule porosity (p) predicts hydration-dependent stiffness across horn, hoof, and pangolin scale without post-hoc scaling factors.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 8",
+    "related_experiments": [
+      "EXP-0091",
+      "EXP-0092"
+    ]
+  },
+  {
+    "id": "HYP-0043",
+    "title": "Cellular Microbuckling and Porosity Scaling Across Ruminant Horn Keratins",
+    "statement": "Hydrated keratinous tissues experience severe compressive modulus reduction because the water-softened amorphous protein matrix permits lamellar microbuckling under axial load; incorporating matrix-softening and porosity scaling explains holdout variation without overpredicting hydrated modulus.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 9",
+    "related_experiments": [
+      "EXP-0095",
+      "EXP-0096"
     ]
   }
 ]
