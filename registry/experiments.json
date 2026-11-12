@@ -1341,7 +1341,7 @@
     },
     "research_date": "2026-11-12",
     "model": "research/cycle13_decision_experiment/functional_force_bridge.py",
-    "inputs": "research/muscle_force_biomechanics_2026_11_10/raw_data/DATA_Dynamic_Knee.mat",
+    "inputs": "research/cycle13_decision_experiment/experiment_data_manifest.json",
     "report": "research/cycle13_decision_experiment/results/EXPERIMENT_REPORT.md",
     "outputs": [
       "research/cycle13_decision_experiment/results/experiment_results.json",
