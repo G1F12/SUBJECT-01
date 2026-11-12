@@ -1,3 +1,36 @@
+# SUBJECT-01 — состояние после Cycle 16: Independent Biomechanics, Tendon Mechanics & MTJ Replication (EXP-0051..0053, FND-0052..0054, NEG-0048..0050), 12.11.2026
+
+Ветка: 
+esearch/cycle16-independent-biomechanics · База: 9596af888ec497acb82d810592e49d21d4438e22 (Cycle 15).
+
+- [Итоговый отчёт Cycle 16](research/cycle16/CYCLE16_FINAL_REPORT_RU.md) · [Исправление выводов Cycle 15](research/cycle16/CYCLE15_CORRECTIONS.md) · [Верификация датасетов](research/cycle16/DATASET_VERIFICATION.md) · [Независимая верификация](research/cycle16/INDEPENDENT_VERIFICATION.md) · [Кросс-анализ](research/cycle16/CROSS_EXPERIMENT_FINDINGS.md) · [Научная новизна](research/cycle16/SCIENTIFIC_NOVELTY.md).
+- **Экспериментальные статусы:**
+  * E1-ISO (EXP-0051) = COMPLETED (20 субъектов DPValid, 125 разгибаний, 121 сгибание; M4 R² = 0.6301, добавление некалиброванной ЭМГ антагонистов не улучшает обобщение, p = 0.1426).
+  * E2-REG (EXP-0052) = COMPLETED_STRAIN_ONLY / CSA_STRESS_BLOCKED (10 субъектов Bogaerts, 160 измерений; глубокий слой смещается на 23% больше поверхностного, p = 1.17e-13; напряжения заблокированы из-за отсутствия региональной CSA).
+  * E5-MTJ (EXP-0053) = COMPLETED_STROMAL_AUDIT / MYONUCLEAR_REPLICATION_BLOCKED (Оксфордский атлас Cohen et al. 2026 подтвердил стромальную специализацию MTJ, но содержит 0 мионуклеусов).
+- **Новые эмпирические результаты:**
+  * FND-0052: Антропометрическое масштабирование и геометрия угла доминируют в кросс-субъектном предсказании момента (M4 RMSE 53.45 Nm, R² = 0.6301); поверхностная ЭМГ антагонистов без калибровки действует как шум (M2 RMSE 89.10 Nm против M1 82.85 Nm).
+  * FND-0053: Ультразвуковой трекинг спеклов доказал физиологическое межслойное скольжение на 0.28–0.40 мм и градиент деформаций в ахилловом сухожилии (глубокий слой 3.00 мм vs поверхностный 2.44 мм, p = 1.17e-13).
+  * FND-0054: Атлас Cohen et al. 2026 подтвердил специализацию фибробластов зоны MTJ (COL22A1, POSTN, TNC, COMP).
+- **Новые отрицательные результаты:**
+  * NEG-0048: Отсутствие статистически значимого улучшения при добавлении некалиброванной антагонистической ЭМГ в OLS (p = 0.1426).
+  * NEG-0049: Невозможность расчёта напряжений сухожилия в когорте Bogaerts из-за отсутствия региональной CSA.
+  * NEG-0050: Невозможность репликации мионуклеарной программы MTJCore на атласе Cohen et al. из-за отсутствия мионуклеусов.
+- **Статус проблем:** ISS-0022 РАЗРЕШЕН для изометрических режимов; ISS-0023 ЧАСТИЧНО РАЗРЕШЕН; ISS-0024 УТОЧНЕН.
+- **Реестры SUBJECT-01:** EXP=53, HYP=10, FND=54, NEG=50, DEC=22, ISS=24, SRC=83.
+- **Инварианты проекта (строго сохранены):**
+  * TARGET-CPE45 = NOT EXTERNALLY VALIDATED
+  * BIOLOGICAL INTERVENTIONS = NO_GO
+  * STRENGTH +20% = NOT VALIDATED (THEORETICAL TARGET ONLY; усталостный коллапс -75% опровергнут как артефакт)
+- **Воспроизведение и верификация:**
+  python research/cycle16/scripts/verify_cycle16.py
+  python research/cycle16/scripts/run_e1_iso.py
+  python research/cycle16/scripts/run_e2_regional.py
+  python tools/validate_repository.py
+  pytest tests/test_cycle16_validation.py
+
+---
+
 # SUBJECT-01 — состояние после Cycle 15: Independent Validation (EXP-0048..0050, NEG-0045..0047), 12.11.2026
 
 Ветка: 

@@ -1,0 +1,237 @@
+{
+  "experiment_id": "EXP-0052",
+  "experiment_name": "E2-REGIONAL-STRAIN",
+  "dataset": "Bogaerts et al. (2017) PLoS ONE / PMC5519157",
+  "sample_size": {
+    "subjects": 10,
+    "observations_analyzed": 80,
+    "total_raw_rows": 160
+  },
+  "results_by_activation": {
+    "ISO": {
+      "n_observations": 40,
+      "n_subjects": 10,
+      "mean_torque_nm_kg": 82.3,
+      "std_torque_nm_kg": 31.50492025065291,
+      "strain_pct": {
+        "superficial": {
+          "mean": 0.33382000000000006,
+          "std": 0.5335022376710336,
+          "median": 0.15825
+        },
+        "middle": {
+          "mean": 0.3225175,
+          "std": 0.5399904456967272,
+          "median": 0.14745
+        },
+        "deep": {
+          "mean": 0.31812499999999994,
+          "std": 0.555802910549234,
+          "median": 0.1372
+        }
+      },
+      "disp_mm": {
+        "superficial": {
+          "mean": 2.438495,
+          "std": 1.592957488125468,
+          "median": 2.24085
+        },
+        "middle": {
+          "mean": 2.7256875000000003,
+          "std": 1.7213257067137964,
+          "median": 2.48385
+        },
+        "deep": {
+          "mean": 3.0029150000000002,
+          "std": 1.8767543152408095,
+          "median": 2.6847000000000003
+        }
+      },
+      "shear_strain_differences": {
+        "sup_minus_mid": {
+          "mean": 0.011302500000000002,
+          "std": 0.06594018307337339,
+          "paired_t": 1.0704260526295037,
+          "p_value": 0.2910077357975614
+        },
+        "mid_minus_deep": {
+          "mean": 0.004392500000000005,
+          "std": 0.0676009333792811,
+          "paired_t": 0.40578069468449574,
+          "p_value": 0.6871215071264801
+        },
+        "sup_minus_deep": {
+          "mean": 0.015695,
+          "std": 0.1313434789968653,
+          "paired_t": 0.7462513124629669,
+          "p_value": 0.4599905216393585
+        }
+      },
+      "shear_disp_differences": {
+        "sup_minus_mid": {
+          "mean": -0.2871925,
+          "std": 0.2741181372943972,
+          "paired_t": -6.542859970366836,
+          "p_value": 9.145469558722113e-08
+        },
+        "mid_minus_deep": {
+          "mean": -0.2772275,
+          "std": 0.26642878597056663,
+          "paired_t": -6.498116096179839,
+          "p_value": 1.0547040517018061e-07
+        }
+      },
+      "friedman_layer_effect": {
+        "strain_stat": 4.050000000000011,
+        "strain_p_value": 0.13199384318782945,
+        "disp_stat": 59.55000000000007,
+        "disp_p_value": 1.1718763813436918e-13
+      }
+    },
+    "PAS": {
+      "n_observations": 40,
+      "n_subjects": 10,
+      "mean_torque_nm_kg": 7.375,
+      "std_torque_nm_kg": 3.2610389448763106,
+      "strain_pct": {
+        "superficial": {
+          "mean": -0.4768825,
+          "std": 0.5185622676629587,
+          "median": -0.3666
+        },
+        "middle": {
+          "mean": -0.4071225,
+          "std": 0.48717935685304853,
+          "median": -0.27715
+        },
+        "deep": {
+          "mean": -0.31837,
+          "std": 0.4704904187122199,
+          "median": -0.2228
+        }
+      },
+      "disp_mm": {
+        "superficial": {
+          "mean": -2.31687,
+          "std": 1.0363011983009573,
+          "median": -2.04935
+        },
+        "middle": {
+          "mean": -2.7192625,
+          "std": 1.1321573558228335,
+          "median": -2.3436
+        },
+        "deep": {
+          "mean": -3.1031575000000005,
+          "std": 1.243590078339221,
+          "median": -2.8038
+        }
+      },
+      "shear_strain_differences": {
+        "sup_minus_mid": {
+          "mean": -0.06976,
+          "std": 0.12124822431689465,
+          "paired_t": -3.593051055573842,
+          "p_value": 0.0009045510983470342
+        },
+        "mid_minus_deep": {
+          "mean": -0.08875250000000001,
+          "std": 0.10127180009138774,
+          "paired_t": -5.47298640246041,
+          "p_value": 2.790611144263318e-06
+        },
+        "sup_minus_deep": {
+          "mean": -0.1585125,
+          "std": 0.21918383287494086,
+          "paired_t": -4.516346996203578,
+          "p_value": 5.68368467721169e-05
+        }
+      },
+      "shear_disp_differences": {
+        "sup_minus_mid": {
+          "mean": 0.40239250000000004,
+          "std": 0.2334952027210624,
+          "paired_t": 10.762278315724252,
+          "p_value": 3.068400592428534e-13
+        },
+        "mid_minus_deep": {
+          "mean": 0.383895,
+          "std": 0.2272666450999794,
+          "paired_t": 10.54894573526386,
+          "p_value": 5.51312908706069e-13
+        }
+      },
+      "friedman_layer_effect": {
+        "strain_stat": 33.450000000000045,
+        "strain_p_value": 5.4503549988220364e-08,
+        "disp_stat": 72.20000000000005,
+        "disp_p_value": 2.0987910487929998e-16
+      }
+    }
+  },
+  "correlations_with_torque": {
+    "torque_vs_strain_sup": {
+      "r": 0.23913922207976887,
+      "p": 0.13723981703400945
+    },
+    "torque_vs_strain_deep": {
+      "r": 0.15251711703427068,
+      "p": 0.34745986616140645
+    },
+    "torque_vs_disp_sup": {
+      "r": 0.5816485135125822,
+      "p": 8.273791168615535e-05
+    },
+    "torque_vs_disp_deep": {
+      "r": 0.5901411526372103,
+      "p": 6.12523312178728e-05
+    }
+  },
+  "hypothesis_status": {
+    "HYP-0010_REGIONAL_STRAIN_HETEROGENEITY": "EMPIRICALLY_CONFIRMED",
+    "HYP-0010_FULL_VALIDATION_STRESS": "BLOCKED_ABSENT_REGIONAL_CSA"
+  },
+  "tendon_failure_taxonomy": {
+    "UTS_MPa": {
+      "definition": "Ultimate Tensile Strength: Maximum tensile engineering stress sustained prior to macroscopic structural failure",
+      "units": "MPa (N/mm^2)",
+      "human_achilles_normative": "70 - 100 MPa",
+      "determinant": "Collagen fibril packing density, cross-linking, fibril orientation",
+      "cycle16_status": "NOT measured in Bogaerts (in vivo submaximal testing)"
+    },
+    "ultimate_failure_load_N": {
+      "definition": "Peak tensile force sustained by whole tendon structure prior to rupture",
+      "units": "N",
+      "human_achilles_normative": "4000 - 8000 N",
+      "determinant": "UTS * Total Cross-Sectional Area (CSA)",
+      "cycle16_status": "NOT measured in Bogaerts"
+    },
+    "failure_strain_pct": {
+      "definition": "Longitudinal strain at structural rupture",
+      "units": "%",
+      "human_achilles_normative": "12 - 16%",
+      "determinant": "Collagen crimp angle, cross-link density, interfascicular shear limit",
+      "cycle16_status": "Bogaerts tested at physiological strains (0.1 - 2.5%), far below failure threshold"
+    },
+    "work_to_fracture_kJ_m2": {
+      "definition": "Energy absorption density / toughness (area under stress-strain curve to failure)",
+      "units": "kJ/m^2 or MJ/m^3",
+      "human_achilles_normative": "3 - 7 MJ/m^3",
+      "determinant": "Viscoelastic dissipation, interfascicular matrix sliding, fibril pullout",
+      "cycle16_status": "NOT measured"
+    },
+    "fatigue_life_cycles": {
+      "definition": "Number of cyclic loading cycles to rupture at a specified cyclic stress amplitude",
+      "units": "Cycles (N_f)",
+      "relationship": "N_f = C * (Delta_sigma)^(-m), with m ~ 6-8",
+      "determinant": "Peak stress relative to UTS, frequency, rest intervals, cellular repair in vivo",
+      "cycle16_status": "Re-evaluated in CYCLE15_CORRECTIONS.md"
+    },
+    "crosslink_density": {
+      "definition": "Molar density of trivalent enzymatic (LOX-derived) and non-enzymatic (AGEs) crosslinks per collagen triple helix",
+      "units": "mol crosslinks / mol collagen",
+      "determinant": "Lysyl oxidase activity, tissue age, glycemic status",
+      "cycle16_status": "Biochemical endpoint, requires tissue biopsy"
+    }
+  }
+}

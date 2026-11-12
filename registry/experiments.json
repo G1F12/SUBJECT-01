@@ -1482,5 +1482,90 @@
     "limits": "DATA_BLOCKED: No third independent, publicly accessible human adult musculotendinous junction transcriptomic dataset exists outside the Copenhagen research group.",
     "external_validation": "DATA_BLOCKED",
     "data_type": "GENOMIC_REPOSITORY_REPLICATION_AUDIT"
+  },
+  {
+    "id": "EXP-0051",
+    "date": "2026-11-12",
+    "name": "E1-ISO: Independent Human Isometric Knee Strength & Antagonist sEMG Validation",
+    "sources": [
+      "SRC-0081"
+    ],
+    "design": "Leave-One-Subject-Out (LOSO) 20-fold cross-validation of 5 nested regression models (M0-M4) on DPValid dataset (20 healthy adults, 125 extension and 121 flexion trials) testing whether antagonist sEMG improves torque estimation over agonist-only models.",
+    "status": "completed",
+    "model": "research/cycle16/scripts/run_e1_iso.py",
+    "inputs": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "report": "research/cycle16/E1_ISOMETRIC_STRENGTH.md",
+    "outputs": [
+      "research/cycle16/E1_MODEL_COMPARISON.json",
+      "research/cycle16/E1_REPRODUCIBILITY.md"
+    ],
+    "reproduction_command": "python research/cycle16/scripts/run_e1_iso.py",
+    "results": {
+      "findings": [
+        "FND-0052"
+      ],
+      "negative_results": [
+        "NEG-0048"
+      ]
+    },
+    "limits": "Isometric contractions only; dynamic isokinetic trials reserved for E1-DYN.",
+    "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "EXP-0052",
+    "date": "2026-11-12",
+    "name": "E2-REG: In Vivo Achilles Tendon Regional Displacement and Strain Analysis",
+    "sources": [
+      "SRC-0082"
+    ],
+    "design": "High-frame-rate ultrasound speckle tracking analysis of intra-tendinous displacement and strain across superficial, middle, and deep layers in 10 healthy adults (160 observations) under passive rotation and isometric plantarflexion.",
+    "status": "completed",
+    "model": "research/cycle16/scripts/run_e2_regional.py",
+    "inputs": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+    "report": "research/cycle16/E2_REGIONAL_TENDON.md",
+    "outputs": [
+      "research/cycle16/E2_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle16/scripts/run_e2_regional.py",
+    "results": {
+      "findings": [
+        "FND-0053"
+      ],
+      "negative_results": [
+        "NEG-0049"
+      ]
+    },
+    "limits": "Regional CSA not measured; mechanical stress cannot be computed. Designated as E2-REGIONAL-STRAIN.",
+    "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "EXP-0053",
+    "date": "2026-11-12",
+    "name": "E5-OXFORD-MTJ: Oxford Human Achilles Single-Cell Atlas Microanatomy Audit",
+    "sources": [
+      "SRC-0083"
+    ],
+    "design": "Systematic cell-type and spatial transcriptomic audit of Cohen et al. (2026) single-cell atlas of human Achilles microanatomy to evaluate feasibility of replicating the Karlsen MTJCore gene program.",
+    "status": "completed",
+    "model": "research/cycle16/scripts/run_e5_mtj_audit.py",
+    "inputs": "research/cycle16/DATASET_VERIFICATION.md",
+    "report": "research/cycle16/E5_OXFORD_MTJ.md",
+    "outputs": [
+      "research/cycle16/E5_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle16/scripts/run_e5_mtj_audit.py",
+    "results": {
+      "findings": [
+        "FND-0054"
+      ],
+      "negative_results": [
+        "NEG-0050"
+      ]
+    },
+    "limits": "Only stromal fibroblasts/tenocytes profiled; skeletal muscle myonuclei excluded.",
+    "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

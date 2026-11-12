@@ -1,0 +1,63 @@
+{
+  "cycle": 16,
+  "created_at": "2026-11-12T21:24:00+03:00",
+  "provenance_standard": "SUBJECT-01 Reproducible Science Initiative",
+  "datasets": [
+    {
+      "dataset_id": "DATASET-A-DPVALID",
+      "name": "DPValid Collection - Knee Isometric & Dynamic Neuromechanics",
+      "authors": "DPValid Consortium, University of Bologna",
+      "repository": "AMS Acta",
+      "doi": "10.6092/unibo/amsacta/7710",
+      "url": "https://amsacta.unibo.it/7710/",
+      "archive_url": "https://amsacta.unibo.it/7710/1/DPValid_v0.zip",
+      "license": "CC BY 4.0",
+      "sample_size": {
+        "participants": 20,
+        "females": 10,
+        "males": 10,
+        "age_range": [21.6, 40.7],
+        "mass_kg_range": [49.0, 98.0]
+      },
+      "local_extracted_path": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+      "experiments_supported": ["EXP-0051 (E1-ISO)"],
+      "status": "INGESTED_AND_VERIFIED"
+    },
+    {
+      "dataset_id": "DATASET-B-BOGAERTS2017",
+      "name": "Achilles Tendon Regional Displacement and Strain under Speckle Tracking",
+      "authors": "Bogaerts A, De Wall M, Peers K, et al.",
+      "journal": "PLoS ONE",
+      "pmcid": "PMC5519157",
+      "doi": "10.1371/journal.pone.0181364",
+      "license": "CC BY 4.0",
+      "sample_size": {
+        "participants": 10,
+        "females": 5,
+        "males": 5,
+        "age_range": [21, 33],
+        "mass_kg_range": [49.0, 102.0],
+        "observations": 160
+      },
+      "local_extracted_path": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+      "experiments_supported": ["EXP-0052 (E2-REGIONAL-STRAIN)"],
+      "status": "INGESTED_AND_VERIFIED",
+      "limitations": "Lacks individual layer-specific cross-sectional area (CSA); stress cannot be computed."
+    },
+    {
+      "dataset_id": "DATASET-C-COHEN2026",
+      "name": "Single-cell and spatial transcriptomics of human Achilles tendon microanatomy",
+      "authors": "Cohen KE, et al., Kennedy Institute of Rheumatology, University of Oxford",
+      "journal": "American Journal of Physiology - Cell Physiology",
+      "doi": "10.1152/ajpcell.00838.2025",
+      "license": "Open Access",
+      "sample_size": {
+        "anatomical_regions": ["enthesis", "midbody", "MTJ", "paratenon"],
+        "fibroblast_clusters": 6
+      },
+      "experiments_supported": ["EXP-0053 (E5-OXFORD-MTJ)"],
+      "status": "AUDITED_AND_MAPPED",
+      "limitations": "Cell fraction contains fibroblasts/tenocytes only; skeletal muscle myonuclei were not isolated."
+    }
+  ]
+}

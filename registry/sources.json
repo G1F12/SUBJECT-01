@@ -1403,5 +1403,38 @@
     "doi": "10.1111/j.1748-1716.2007.01714.x",
     "url": "https://pubmed.ncbi.nlm.nih.gov/17524067/",
     "provenance_notes": "Primary abstract checked for regional CSA, structural stiffness and modulus. Context for HYP-0010; no population calibration imported."
+  },
+  {
+    "id": "SRC-0081",
+    "date": "2026-11-12",
+    "name": "DPValid Collection - Knee Isometric & Dynamic Neuromechanics",
+    "type": "primary_data",
+    "verification": "not_independently_checked",
+    "audit_report": "research/cycle16/DATASET_VERIFICATION.md",
+    "doi": "10.6092/unibo/amsacta/7710",
+    "url": "https://amsacta.unibo.it/7710/",
+    "provenance_notes": "Open-access CC BY 4.0 dataset from University of Bologna. 20 healthy adults, knee isometric & dynamic torque and 8-channel sEMG."
+  },
+  {
+    "id": "SRC-0082",
+    "date": "2026-11-12",
+    "name": "Bogaerts et al. (2017), In vivo regional displacement and strain in human Achilles tendon",
+    "type": "primary_data",
+    "verification": "not_independently_checked",
+    "audit_report": "research/cycle16/DATASET_VERIFICATION.md",
+    "doi": "10.1371/journal.pone.0181364",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5519157/",
+    "provenance_notes": "Open-access CC BY 4.0 Supporting Information S1 Table. 10 healthy adults, speckle tracking of 3 layers (superficial, middle, deep) under passive motion and isometric contraction."
+  },
+  {
+    "id": "SRC-0083",
+    "date": "2026-11-12",
+    "name": "Cohen et al. (2026), Oxford Single-Cell and Spatial Atlas of Human Achilles Tendon",
+    "type": "primary_literature",
+    "verification": "not_independently_checked",
+    "audit_report": "research/cycle16/DATASET_VERIFICATION.md",
+    "doi": "10.1152/ajpcell.00838.2025",
+    "url": "https://doi.org/10.1152/ajpcell.00838.2025",
+    "provenance_notes": "Single-nucleus and spatial transcriptomic atlas of human Achilles microanatomy (enthesis, midbody, MTJ, paratenon). Profiles stromal fibroblasts/tenocytes."
   }
 ]

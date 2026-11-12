@@ -415,5 +415,32 @@
       "SRC-0078"
     ],
     "finding": "Systematic audit of MTJCore replication history clarified that the myonuclear program has NOT achieved three independent replications: Stage 5 had high within-study concordance (92.09%) but was dominated by a single donor (51.2% of myonuclei); Stage 6 failed its pre-registered replication threshold (0.5818 vs 0.60); and Stage 7 showed only 23.1% directional agreement between RNA and protein, confirming an extensive translational gap between transcript abundance and structural extracellular matrix."
+  },
+  {
+    "id": "FND-0052",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0051",
+    "title": "Anthropometric-Kinematic Dominance and Antagonist sEMG Noise in Cross-Subject Knee Torque Prediction",
+    "statement": "In Leave-One-Subject-Out cross-validation across 20 healthy adults (125 extension trials), raw uncalibrated surface antagonist EMG does not improve torque prediction over agonist-only models (RMSE 89.10 Nm vs 82.85 Nm, paired p = 0.1426). Incorporating joint angle and anthropometrics (mass, height, biological sex) reduces RMSE by 41% to 53.45 Nm and explains 63.0% of torque variance.",
+    "confidence": "high",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "FND-0053",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0052",
+    "title": "In Vivo Intra-Tendinous Sliding and Layer-Dependent Displacement Gradient in Human Achilles Tendon",
+    "statement": "Ultrasound speckle tracking across 10 healthy adults (160 observations) demonstrates statistically significant displacement non-uniformity across depth layers (Friedman p = 1.17e-13). During isometric plantarflexion, the deep tendon layer displaces 23.1% more than the superficial layer (3.00 mm vs 2.44 mm), with inter-layer sliding differences of 0.28 to 0.40 mm.",
+    "confidence": "high",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "FND-0054",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0053",
+    "title": "Stromal Microanatomical Specialization at the Human Myotendinous Junction in the Oxford Single-Cell Atlas",
+    "statement": "Cohen et al. (2026) single-cell atlas independently confirms that stromal fibroblasts residing at the human MTJ are transcriptionally distinct and upregulate COL22A1, POSTN, TNC, and COMP, validating stromal participation in the myotendinous attachment matrix.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

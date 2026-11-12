@@ -115,7 +115,8 @@
       "EXP-0038",
       "EXP-0039",
       "EXP-0040",
-      "EXP-0041"
+      "EXP-0041",
+      "EXP-0051"
     ],
     "notes": "Formulated and confirmed in Research Cycle 9 via biophysical modeling and empirical HD-sEMG / 31P-MRS cross-validation."
   },
@@ -148,7 +149,8 @@
     "status": "unverified",
     "related_experiments": [
       "EXP-0047",
-      "EXP-0049"
+      "EXP-0049",
+      "EXP-0052"
     ],
     "sources": [
       "SRC-0080"

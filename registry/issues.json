@@ -187,7 +187,7 @@
     "date": "2026-11-12",
     "title": "External active-only torque benchmark and missing antagonist observations",
     "description": "NEG-0044 reproduces weaker active bridge performance than sEMG in the original Bird cohort. E1 requires another cohort with directly recorded antagonist and agonist EMG, protocol groups, measured torque and subject-level normalization.",
-    "status": "open",
+    "status": "resolved",
     "priority": "high",
     "related_experiments": [
       "EXP-0047",
@@ -195,34 +195,37 @@
     ],
     "related_issues": [
       "ISS-0021"
-    ]
+    ],
+    "resolution": "Resolved for isometric knee extension/flexion in Cycle 16 (EXP-0051): LOSO evaluation on 20 subjects proved uncalibrated antagonist sEMG acts as noise (p = 0.1426), while anthropometrics and angle kinematics dominate (M4 R2 = 0.6301). Dynamic isokinetic regimes remain open for E1-DYN."
   },
   {
     "id": "ISS-0023",
     "date": "2026-11-12",
     "title": "Absence of open synchronized multi-region tendon morphometry and local strain datasets",
     "description": "EXP-0049 and NEG-0046 established that HYP-0010 is DATA_BLOCKED because no public repository contains participant-specific regional patellar tendon CSA paired with local segmental strain measurements (speckle tracking/MRI) under calibrated tendon load.",
-    "status": "open",
+    "status": "partially_resolved",
     "priority": "high",
     "related_experiments": [
       "EXP-0049"
     ],
     "related_issues": [
       "ISS-0021"
-    ]
+    ],
+    "resolution": "Partially resolved in Cycle 16 (EXP-0052): In vivo displacement and strain non-uniformity confirmed on Bogaerts (p = 1.17e-13). Full stress validation blocked by absent regional CSA."
   },
   {
     "id": "ISS-0024",
     "date": "2026-11-12",
     "title": "Lack of non-Copenhagen independent human adult MTJ transcriptomic cohorts",
     "description": "EXP-0050 and NEG-0047 demonstrated that third-cohort replication of the MTJCore myonuclear transcriptional program is DATA_BLOCKED due to lack of publicly accessible human MTJ datasets outside the original Copenhagen research group.",
-    "status": "open",
+    "status": "clarified_and_blocked",
     "priority": "medium",
     "related_experiments": [
       "EXP-0050"
     ],
     "related_issues": [
       "ISS-0022"
-    ]
+    ],
+    "resolution": "Clarified in Cycle 16 (EXP-0053): NEG-0044 provenance explained by vastus lateralis mid-belly mismatch; Oxford atlas (Cohen 2026) audited and determined to lack myonuclei. Replicating myonuclear MTJCore requires intact co-harvested myofiber-tendon specimens."
   }
 ]

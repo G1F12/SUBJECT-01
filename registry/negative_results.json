@@ -384,5 +384,29 @@
     "hypothesis": "An independent third public human adult MTJ transcriptomic dataset exists to replicate the frozen MTJCore myonuclear program.",
     "result": "Systematic audit across GEO, ArrayExpress, CELLxGENE, and GSA-Human identified 0 open independent cohorts outside Copenhagen. E-MTAB-12529 is discovery; E-MTAB-15400 already failed in Stage 6 (0.5818 < 0.60); E-MTAB-12530 has identical donors; HRA002803 is controlled-access. Experiment E5 is DATA_BLOCKED.",
     "impact": "MTJCore cannot be claimed as a replicated universal marker of tissue strength. Directional RNA concordance does not equal protein translation or mechanical tensile strength."
+  },
+  {
+    "id": "NEG-0048",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0051",
+    "title": "Failure of Uncalibrated Surface Antagonist EMG to Improve Cross-Subject Isometric Torque Estimation",
+    "statement": "Adding uncalibrated antagonist hamstrings surface EMG (M2) to an agonist-only OLS model (M1) failed to achieve statistically significant improvement in Leave-One-Subject-Out prediction error across 20 adults (Delta RMSE = -3.94 Nm, paired t-test p = 0.1426, Wilcoxon p = 0.2863).",
+    "reason": "Antagonist co-activation magnitude is low (~8-11% of agonist amplitude) and subject to inter-individual skin impedance variance, causing unregularized cross-subject models to fit individual noise."
+  },
+  {
+    "id": "NEG-0049",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0052",
+    "title": "Impossibility of Mechanical Stress Determination in Bogaerts Cohort Due to Absent Layer CSA",
+    "statement": "Full mechanical validation of HYP-0010 (regional stress distribution) was blocked in Bogaerts et al. (2017) because individual sub-tendon cross-sectional areas were not measured, preventing conversion of force into engineering stress.",
+    "reason": "Ultrasound imaging was restricted to sagittal 2D displacement tracking without transverse axial sub-tendon morphometry."
+  },
+  {
+    "id": "NEG-0050",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0053",
+    "title": "Inability to Replicate Myonuclear MTJCore Program on Oxford Achilles Single-Cell Atlas",
+    "statement": "Attempted replication of Karlsen's myonuclear MTJCore signature on Cohen et al. (2026) was blocked due to cell-type boundary: Cohen et al. dissociated and isolated tendon fibroblasts/tenocytes only, with zero myonuclei present in the dataset.",
+    "reason": "Surgical dissection protocols removed skeletal muscle myofibers to enrich for tendon fibroblasts, precluding myonuclear evaluation."
   }
 ]
