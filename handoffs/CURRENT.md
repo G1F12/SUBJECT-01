@@ -1,65 +1,62 @@
-# SUBJECT-01 — handoff: Cycle 12 Human Muscle Force, Fatigue & Biomechanical Validation (EXP-0045 & Аудит)
+# SUBJECT-01 — handoff: Cycle 13 Strategic Reorientation, Evidence Audit & Decision-Driven Research (EXP-0046, DEC-0021)
 
-Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD с origin/main.
-База: 9911e1e476138fb339510be0e21a7d7e0ff55a33 (origin/main).
-Ветка: feature/cycle12-human-muscle-force-and-fatigue (слияние в main, ожидает интерактивного push владельцем).
+Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD.  
+База: 55b06564619d854ce4c219662b6c9053ebbb57b3 (feature/cycle12-bird-raw-empirical-validation).  
+Ветка: feature/cycle13-strategic-reorientation.  
 
-Ключевые документы и инструменты:
-- research/muscle_force_biomechanics_2026_11_10/BIOMECHANICAL_VALIDATION_REPORT.md (мастер-отчёт биомеханической валидации силы мышц и утомления Bird et al. 2026)
-- research/muscle_force_biomechanics_2026_11_10/biomechanics_validation_results.json (канонический JSON валидации биомеханики Bird 2026, EXP-0045)
-- research/muscle_force_biomechanics_2026_11_10/observed_variables_registry.json (реестр онтологии наблюдаемых и расчётных переменных)
-- research/muscle_force_biomechanics_2026_11_10/empirical_datasets_cycle12.json (реестр эмпирических датасетов Cycle 12)
-- research/muscle_force_biomechanics_2026_11_10/sources.json (реестр источников Cycle 12, SRC-0076)
-- tools/generate_biomechanics_report_tables.py (генератор структурных таблиц Markdown из JSON для биомеханики)
-- tools/evaluate_bird_biomechanics.py (движок сократительной биомеханики, декуплинга, утомления, 4-уровневой таксономии и аудита ограничений)
-- tests/test_bird_biomechanics_validation.py (17 юнит-тестов биомеханики: криптография SHA-256, таксономия, ограничения, когорты, декуплинг, иерархия моделей, утомление, 4 негативных теста)
-- tools/evaluate_malaga_treadmill.py (движок Malaga с агрегацией по 846 участникам и кластерным бутстрепом)
-- research/treadmill_cpet_2026_11_09/malaga_validation_results.json (канонический JSON Malaga с участник-уровневой статистикой)
-- tests/test_malaga_cpet_validation.py (20 юнит-тестов Malaga, включая контроль псевдорепликации df)
-- registry/experiments.json (EXP-0045: статус completed_theoretical_framework_raw_data_pending)
-- registry/findings.json (FND-0045: динамический декуплинг, нейромышечная компенсация +26%, 4-уровневая таксономия и аудит ограничений)
-- registry/negative_results.json (NEG-0038: запрет экстраполяции момента одного сустава на выносливость TARGET-CPE45 и запрет объявления эмпирической валидации до получения сырых массивов)
-- registry/decisions.json (DEC-0020: утверждение онтологии, 4-уровневой таксономии, аудита физических ограничений и приоритизации архитектур аугментации)
-- tools/verify_data_provenance.py / tools/validate_repository.py (сквозные валидаторы целостности реестров)
+Ключевые документы и инструменты Cycle 13:
+- docs/cycle13/BASELINE_AUDIT.md (мастер-аудит состояния репозитория, PR и CI)
+- docs/cycle13/FULL_EVIDENCE_AUDIT.md (полный доказательный аудит всех исследований Cycles 1–12)
+- docs/cycle13/EVIDENCE_MATRIX.json (машиночитаемый реестр доказательной классификации 45 экспериментов)
+- docs/cycle13/TARGET_TRACEABILITY_MATRIX.md (матрица прослеживаемости по 11 функциональным направлениям)
+- docs/cycle13/PROGRESS_VS_ORIGINAL_GOAL.md (анализ дистанции до исходной цели и 4 фундаментальных разрывов)
+- docs/cycle13/TOP_10_BLOCKERS.md (рейтинг Топ-10 научно-инженерных препятствий с анализом чувствительности)
+- docs/cycle13/BREAKTHROUGH_DEPENDENCIES.md (Mermaid DAG зависимостей прорывов и критический путь)
+- docs/cycle13/ARCHITECTURE_COMPARISON.md (сравнительный анализ Архитектур A, B, C при идентичных ограничениях)
+- docs/cycle13/ARCHITECTURE_DECISION_MATRIX.json (машиночитаемая матрица решений по архитектурам усиления)
+- docs/cycle13/VALIDATION_GAPS_AND_EXECUTION.md (аудит незакрытых проверок Bird 2026, ACTES, Malaga, Rehman)
+- docs/cycle13/AEGIS_INTEGRATION_DECISION.md (аудит PR #9 и обоснование решения CONDITIONAL HOLD)
+- MASTER_ROADMAP.md (главная дорожная карта на 12 недель, Cycles 14–18)
+- research/cycle13_decision_experiment/functional_force_bridge.py (движок многомышечного моста и аугментации)
+- research/cycle13_decision_experiment/run_experiment.py (воспроизводимый CLI раннер эксперимента EXP-0046)
+- research/cycle13_decision_experiment/test_functional_force_bridge.py (5 юнит-тестов эксперимента EXP-0046)
+- research/cycle13_decision_experiment/results/EXPERIMENT_REPORT.md (мастер-отчёт эксперимента EXP-0046)
+- research/cycle13_decision_experiment/results/experiment_results.json (канонические результаты EXP-0046)
+- registry/experiments.json (EXP-0046: многомышечный мост, ко-активация, аугментация колена)
+- registry/findings.json (FND-0046: штраф перистости при гипертрофии, эффективность передачи момента, синергетический контроль)
+- registry/negative_results.json (NEG-0040: геометрический штраф перистости при гипертрофии и дефицит момента)
+- registry/decisions.json (DEC-0021: дисквалификация Архитектуры B, заморозка C, утверждение A и дорожной карты)
+- registry/issues.json (ISS-0021: многосуставная кинематическая цепь и предел прочности сухожилий)
+- registry/hypotheses.json (HYP-0009: синергетическая координация и адаптированная связка)
 
-Результаты этапов (Cycle 12 & Научный аудит):
-0. **Диагностика публикации (Stage 1 Аудита)**:
-   - `origin/main` на коммите Cycle 11 (`9911e1e476138fb339510be0e21a7d7e0ff55a33`).
-   - Локальная ветка опережает remote на 3 коммита. Блокировка push вызвана неинтерактивным запуском Git Credential Manager в консоли.
-   - Команда для владельца: `git push origin feature/cycle12-human-muscle-force-and-fatigue`.
-1. **Аудит данных Bird и 4-уровневая таксономия (Stages 2-3 Аудита)**:
-   - Сырые массивы `.mat` (5.2 МБ) и `.xlsx` (681 МБ) заблокированы Techaro Anubis BotStopper и ожидают загрузки владельцем.
-   - Модели M4 ($R^2=0.748$) и M2 ($R^2=0.812$) зафиксированы как теоретические симуляции; статус на сырых массивах: `NOT_INDEPENDENTLY_VALIDATED_ON_RAW_ARRAYS_PENDING_ACQUISITION`.
-   - Авторские радарные модели обучались с intra-participant 5-fold CV (без cross-subject LOSO across N=6). 16 условий относятся к одним и тем же 6 людям ($N=6$, а не $N=96$).
-2. **Аудит физических ограничений (Stage 4 Аудита)**:
-   - 7 параметров (удельное напряжение $25\dots 30\text{ Н/см}^2$, силы сухожилия $5.5\dots 8.4\text{ кН}$, деформация $6\dots 8\%$, запас $<1.5$, гипертрофия $10\dots 15\%$, диффузия $>200$ мкм) не измерялись в Bird 2026 и классифицированы как литературные референсы.
-   - Конфликт выносливости и силы при параллельной тренировке отнесён к **молекулярному интерференционному эффекту AMPK-mTORC1**, а не к Принципу Ханнемана.
-3. **Закрытие остаточного статистического аудита Cycle 11 (Stage 0, EXP-0044)**:
-   - Ликвидирована псевдорепликация в t-тестах: агрегация переведена на 846 участников ($df=845$). Превосходство M4 подтверждено ($p = 2.41 \times 10^{-22}$).
-   - Кластерный бутстреп подтвердил $\Delta\text{RMSE}(\text{M4}-\text{M3}) = -66.0$ мл/мин (95% ДИ $[-75.5, -56.3]$).
-   - Раздельно вычислены participant-weighted и test-weighted метрики (RMSE $= 404.0$ мл/мин, $R^2 = 0.665$).
-   - Добавлены 4 теста, проверяющие корректность степеней свободы. Референс $\tau=35$ с и `ISS-0020` сохранены.
-2. **Первоисточник Bird et al. 2026 (Stage 1, SRC-0076)**:
-   - Dryad DOI `10.5061/dryad.sbcc2frmh`, Science Robotics DOI `10.1126/scirobotics.aed5865`, arXiv:2510.20866.
-   - Извлечены официальные SHA-256 для 13 файлов архива из API. Защита Anubis BotStopper / OAuth не обходилась.
-   - Полный препринт манускрипта получен из arXiv (5.5 МБ, SHA-256 проверен).
-3. **Онтология переменных (Stage 2)**:
-   - Разграничены измеренные переменные (момент, угол, скорость, sEMG, УЗИ пучков, радар), расчётные (плечо силы, нормализованное напряжение, MVC) и ненаблюдаемые (сила отдельной мышцы, фосфаты, pH, импульсация ДЕ).
-   - Инвариант: суставной момент динамометра не равен силе отдельной мышцы квадрицепса.
-4. **Биомеханика сокращения и декуплинг (Stage 3, NEG-0038)**:
-   - Подтверждён декуплинг момента от статических прокси в динамике ($R^2 < 0.25$ против sEMG, деформации пучков и скорости деформации).
-   - Динамические модели: M4 SUBJECT-01 ($R^2 = 0.748 \pm 0.062$, NRMSE $= 8.9\%$) и M3 Hill ($R^2 = 0.612 \pm 0.084$) превосходят M1 ($R^2 = 0.185$) и M0 ($R^2 = -0.452$).
-   - Для $N=6$ зафиксирован широкий 95% ДИ ($[0.68, 0.81]$).
-5. **Динамика утомления (Stage 4, FND-0045)**:
-   - 20-минутный тест ($N=18$) выявил рост sEMG-активации на $+26 \pm 15\%$ ($p = 0.0008$, 17 утомлены, 1 резистентен).
-   - Биофизическая модель утомления M2 ($R^2 = 0.812$, RMSE $= 5.9\%$) превосходит линейный дрейф M1 ($R^2 = 0.654$) и M0 ($R^2 = -0.842$).
-   - sEMG-дрейф не является прямым измерением фосфатов и не валидирует `TARGET-CPE45`.
-6. **Мультимасштабный мост (Stage 5)**:
-   - Установлено концептуальное отображение: Rehman (MRS) $\leftrightarrow$ Bird (механика) $\leftrightarrow$ ACTES/Malaga (системная вентиляция).
-7. **Архитектуры аугментации (Stage 6, DEC-0020)**:
-   - Архитектура A (биологическая) приоритизирована с барьерами метаболизма массы и прочности связок.
-   - Архитектуры B и C заблокированы барьерами иннервации, фиксации к кости, перфузии и пространства.
-8. **Эпистемические инварианты**:
-   - `TARGET-CPE45`: **`NOT EXTERNALLY VALIDATED`**.
-   - Биологические вмешательства: **`NO_GO`**.
-   - Реестры: HYP=8, EXP=45, FND=45, NEG=38, DEC=20, ISS=20, SRC=76.
+Результаты этапов Cycle 13:
+1. **STAGE 0 — Аудит состояния**:
+   - `main` зафиксирован на коммите `6466817`.
+   - Ветка `feature/cycle12-bird-raw-empirical-validation` содержит финальные результаты Cycle 12 (коммит `55b0656`, NEG=39, CI Run #43050173457 успешен).
+   - Создана чистая рабочая ветка `feature/cycle13-strategic-reorientation`.
+2. **STAGE 1 — Доказательный аудит Cycles 1–12**:
+   - Классифицированы 45 исследований по 9-уровневой таксономии.
+   - Установлено: только 4 эксперимента опираются на реальные in vivo измерения человека (EXP-0042 .. EXP-0045).
+3. **STAGE 2 — Прослеживаемость и прогресс**:
+   - Описаны 4 критических разрыва («сустав -> тело», «легкие -> мышца», «сила -> тепло», «мышца -> сухожилие»). Категорически запрещены субъективные проценты готовности.
+4. **STAGE 3 — Топ-10 препятствий**:
+   - Ранжированы 10 блокеров; Топ-3: тепловой барьер (+35% тепла), предел прочности сухожилий, кинематическая цепь.
+5. **STAGE 4 — Архитектурное решение (DEC-0021)**:
+   - Архитектура B (дополнительные мышцы) дисквалифицирована (`DISQUALIFIED_NO_GO`).
+   - Архитектура C (внутренние приводы) заморожена (`HOLD / BREAKTHROUGH-DEPENDENT`).
+   - Архитектура A (нативное био-усиление) утверждена как единственный приоритет (`PRIMARY_RECOMMENDED_DIRECTION`).
+6. **STAGE 5 — Незакрытые проверки**:
+   - Подтверждены хеши сырых архивов Bird 2026; проверены границы системного CPET и локальной спектроскопии.
+7. **STAGE 6 — Аудит PR #9 (AEGIS-01)**:
+   - Статус: `CONDITIONAL HOLD / НЕ СЛИВАТЬ В MAIN` из-за бандлов (>10 МБ) и конфликта брони с охлаждением.
+8. **STAGE 7 — Эксперимент EXP-0046**:
+   - Модель `M_Bridge_CoActivation` обобщается в 0-leakage LOSO (Mean Fold $R^2 = 0.3363$).
+   - Доказан штраф перистости (+20% силы волокон дают +18.3% момента, $\eta = 0.917$, `NEG-0040`).
+   - Проверено напряжение связки надколенника (35.5 -> 42.0 МПа, $SF = 2.38 \ge 1.5$; при адаптации связки $SF = 2.86$).
+   - Синергетическое снижение ко-активации на 25% дает чистый прирост момента +23.6% ($\eta = 1.178$).
+9. **STAGE 8 — Дорожная карта**:
+   - Утвержден `MASTER_ROADMAP.md` на 12 недель (Cycles 14–18).
+10. **Целостность и CI**:
+   - Реестры: HYP=9, EXP=46, FND=46, NEG=40, DEC=21, ISS=21, SRC=76.
+   - 130 тестов (125 в tests/ + 5 в research/cycle13_decision_experiment/) проходят на 100% за 3.1 с.
+   - Инварианты сохранены: `TARGET-CPE45 = NOT EXTERNALLY VALIDATED`, `BIOLOGICAL INTERVENTIONS = NO_GO`.

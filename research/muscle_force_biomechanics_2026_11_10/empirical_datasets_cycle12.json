@@ -57,8 +57,8 @@
     "title": "Bird 2026 Biomechanics Validation Extracted Numerical Results",
     "data_type": "DERIVED_EXTRACTION_JSON",
     "source_file": "research/muscle_force_biomechanics_2026_11_10/biomechanics_validation_results.json",
-    "sha256": "cafc3da950403328b7fa2f38c6c33b38ba4b2cf3048b1cfb4622152c8e07a2c9",
-    "size_bytes": 33498,
+    "sha256": "d0ec3a850363fc547bb23f0af9a75c6ab23ad4120decc8708436d633b951d0d2",
+    "size_bytes": 35492,
     "license_type": "CC0-1.0",
     "n_biological_participants": 46,
     "independent_participants_n": 46,
@@ -77,6 +77,43 @@
         "nrmse_pct",
         "fatigue_force_loss_pct",
         "neuromuscular_compensation_drift_pct"
+      ],
+      "unobservable_domains_strictly_blocked": [
+        "unvalidated_extrapolation_to_cpe45",
+        "biological_interventions_NO_GO"
+      ]
+    }
+  },
+  "bird_loso_empirical_json_audit": {
+    "source_id": "SRC-0076",
+    "dataset_id": "BIRD_2026_LOSO_EMPIRICAL_JSON_AUDIT",
+    "source_url_or_doi": "https://doi.org/10.5061/dryad.sbcc2frmh",
+    "title": "Bird 2026 Raw Observations Independent Reproduction and LOSO Cross-Validation Results",
+    "data_type": "DERIVED_EXTRACTION_JSON",
+    "source_file": "research/muscle_force_biomechanics_2026_11_10/bird2026_empirical_validation.json",
+    "sha256": "dcfa1d57a087233671989bc56859154750589ae5e71b1a17a7c294659f90814b",
+    "size_bytes": 169606,
+    "license_type": "CC0-1.0",
+    "n_biological_participants": 46,
+    "independent_participants_n": 46,
+    "n_operators": 1,
+    "n_trials": 4,
+    "n_records": 3226,
+    "number_of_real_observations": 3226,
+    "measurement_units": "torque in fraction of MVC [0.0, 1.0]; angle in deg; velocity in mm/s; sEMG in mV; UWB radar in dB/deg",
+    "validation_status": "EMPIRICAL_RAW_DATA_VERIFIED",
+    "source_observation_ids": [
+      "BIRD_2026_DYNAMIC_KNEE_N6",
+      "BIRD_2026_ISOMETRIC_KNEE_N16",
+      "BIRD_2026_FATIGUING_ISOMETRIC_KNEE_N18"
+    ],
+    "epistemic_scope": {
+      "observable_domains": [
+        "loso_cross_subject_r_squared",
+        "loso_cross_subject_nrmse_pct",
+        "intra_participant_cv_r_squared",
+        "radar_generalization_collapse",
+        "dynamic_decoupling_r_squared"
       ],
       "unobservable_domains_strictly_blocked": [
         "unvalidated_extrapolation_to_cpe45",

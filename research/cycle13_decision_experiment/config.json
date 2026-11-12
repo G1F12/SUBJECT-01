@@ -1,0 +1,66 @@
+{
+  "experiment_id": "EXP-0046",
+  "experiment_name": "Functional Biomechanical Multi-Muscle Bridge and Augmentation Feasibility Under Dynamic Antagonist Co-Activation",
+  "governing_cycle": 13,
+  "date": "2026-11-12",
+  "random_seed": 42,
+  "cv_scheme": "LEAVE_ONE_SUBJECT_OUT",
+  "dataset": {
+    "file_path": "research/muscle_force_biomechanics_2026_11_10/raw_data/DATA_Dynamic_Knee.mat",
+    "expected_sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9",
+    "total_observations": 3226,
+    "active_observations": 1844,
+    "subjects_count": 6
+  },
+  "physiological_constants": {
+    "quadriceps_pcsa_fractions": {
+      "vastus_lateralis": 0.32,
+      "vastus_medialis": 0.25,
+      "vastus_intermedius": 0.28,
+      "rectus_femoris": 0.15
+    },
+    "specific_tension_N_per_cm2": 27.5,
+    "nominal_quadriceps_pcsa_cm2": 140.0,
+    "patellar_tendon": {
+      "nominal_csa_mm2": 105.0,
+      "csa_range_mm2": [80.0, 135.0],
+      "ultimate_tensile_strength_MPa": 100.0,
+      "yield_strength_MPa": 80.0,
+      "safety_factor_threshold": 1.5
+    },
+    "antagonist_coactivation": {
+      "nominal_fraction_gamma": 0.15,
+      "sensitivity_range_gamma": [0.05, 0.30]
+    },
+    "pennation_angle": {
+      "nominal_rest_deg": 14.5,
+      "hypertrophy_pennation_increase_deg": 2.8
+    }
+  },
+  "augmentation_scenarios": {
+    "nominal": {
+      "force_multiplier": 1.0,
+      "pennation_delta_deg": 0.0,
+      "tendon_csa_multiplier": 1.0
+    },
+    "TARGET_FORCE20_isolated_muscle": {
+      "force_multiplier": 1.20,
+      "pennation_delta_deg": 2.8,
+      "tendon_csa_multiplier": 1.0,
+      "description": "+20% fiber force with unadapted tendon and increased pennation angle"
+    },
+    "TARGET_FORCE20_adapted_tendon": {
+      "force_multiplier": 1.20,
+      "pennation_delta_deg": 2.8,
+      "tendon_csa_multiplier": 1.20,
+      "description": "+20% fiber force with co-adapted +20% tendon cross-sectional area"
+    },
+    "TARGET_FORCE20_synergistic_control": {
+      "force_multiplier": 1.20,
+      "pennation_delta_deg": 2.8,
+      "tendon_csa_multiplier": 1.20,
+      "antagonist_suppression_factor": 0.75,
+      "description": "+20% fiber force, adapted tendon, and optimized reciprocal inhibition (antagonist co-activation reduced by 25%)"
+    }
+  }
+}

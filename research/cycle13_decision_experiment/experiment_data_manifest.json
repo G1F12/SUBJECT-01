@@ -1,0 +1,33 @@
+{
+  "manifest_version": "1.0",
+  "experiment_id": "EXP-0046",
+  "provenance": {
+    "source_id": "SRC-0076",
+    "primary_paper": "Bird et al. (2026) Science Robotics / arXiv:2510.20866",
+    "dryad_doi": "10.5061/dryad.sbcc2frmh",
+    "license": "CC0-1.0 Public Domain Dedication"
+  },
+  "verified_files": [
+    {
+      "path": "research/muscle_force_biomechanics_2026_11_10/raw_data/DATA_Dynamic_Knee.mat",
+      "size_bytes": 5212093,
+      "sha256": "7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9",
+      "verified_locally": true
+    },
+    {
+      "path": "research/muscle_force_biomechanics_2026_11_10/raw_data/DATA_Isometric_Knee.xlsx",
+      "size_bytes": 19879,
+      "sha256": "1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f",
+      "verified_locally": true
+    }
+  ],
+  "variable_ontology": {
+    "torque": "Knee extension torque normalized to fraction of maximum voluntary contraction [0.0, 1.0]",
+    "angle": "Knee flexion/extension angle in degrees [84.0, 90.1]",
+    "velocity": "Knee angular velocity in degrees per second",
+    "sEMG": "Surface EMG amplitude of Vastus Lateralis normalized [0.0, 1.0]",
+    "fascicle_length": "Ultrasound vastus lateralis fascicle length in mm",
+    "pennation_angle": "Ultrasound vastus lateralis pennation angle in degrees",
+    "moment_arm": "Knee extensor moment arm in meters"
+  }
+}

@@ -22,14 +22,14 @@ All files in the Dryad repository `10.5061/dryad.sbcc2frmh` have been indexed an
 | `CODE_Generate_LSTM_Training_Data.zip` | 1,770,680,319 bytes | `9b28c56c1eead02a3997b0cc2951121c8ad8728f92b5a61d7d401f50eceec7e8` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `CODE_LME_Estimate_Torque.m` | 3,306 bytes | `f83dcf36c9226498908d7760655df98f494b1cecc7fd034a66b411e4c672a1d8` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `CODE_Train_LSTM_Models.py` | 7,184 bytes | `7252213bc4bed040ff00115bfc5d91cd98defc70f69a99d5aeb41fe22c1ebc5e` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
-| `DATA_Dynamic_Knee.mat` | 5,212,093 bytes | `7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `DATA_Dynamic_Knee.mat` | 5,212,093 bytes | `7cb256a8eadf621b9822266c473b620b8121e40fb62ed7615cdfbb32024da7f9` | `ACQUIRED_AND_VERIFIED` |
 | `DATA_Dynamic_Knee.xlsx` | 10,035,204 bytes | `5101bc530624b9d4f604fc8f92143d0c7ee7aced5ea1af1079a83cf11fd82c15` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `DATA_Fatiguing_Isometric_Knee.xlsx` | 681,704,952 bytes | `08b104d779845b883701a565fb13f4a9137505d47253caa43491306dbde49c25` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `DATA_Isometric_Ankle.xlsx` | 14,591 bytes | `30fd49cd4cdfd6bc301c7a6697408adda0a61dfdff701de3f1cce508c9035cc3` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
-| `DATA_Isometric_Knee.xlsx` | 19,879 bytes | `1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
-| `LME_Data_Outputs.mat` | 40,628 bytes | `f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `DATA_Isometric_Knee.xlsx` | 19,879 bytes | `1c415188ba7008586d05e5c4f0a0794c2858fe63e8a4f176d4b653630a7ac37f` | `ACQUIRED_AND_VERIFIED` |
+| `LME_Data_Outputs.mat` | 40,628 bytes | `f532559ce51352342503d776821b13cf78cee81e52d6ba8f2ac48860642199b7` | `ACQUIRED_AND_VERIFIED` |
 | `LME_Trained_Models.mat` | 28,145,117 bytes | `6f729e8b00b862d58eef866ca383eebf069b7ecd9d392094cf0019ad2cba4476` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
-| `LSTM_Data_Outputs.zip` | 8,939,260 bytes | `863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
+| `LSTM_Data_Outputs.zip` | 8,939,260 bytes | `863307becd150259a2bdeb685eceee2be65e5c24d206cceebb4162d7e7e471f0` | `ACQUIRED_AND_VERIFIED` |
 | `LSTM_Trained_Models.zip` | 101,796,528 bytes | `9cf8f31433e0938a3fa64cad86b3083560b39cdfc609a186c23f11e3930f845f` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `README.md` | 14,751 bytes | `5a8bf8050f72ebfc8123265ac2101b8eeaa76080c0e452515d5b8ff425f6bc5b` | `PENDING_OWNER_ASSISTED_ACQUISITION` |
 | `arxiv_2510_20866.pdf` | 5,494,859 bytes | `eb1377aecc1df8564e5ac3f99b4afa8b8dc673df1736080de0ab7f598e02176c` | `ACQUIRED_AND_VERIFIED` |
@@ -52,10 +52,13 @@ To ensure scientific integrity and eliminate false claims of empirical validatio
 | **BIRD_AUTHOR_REPORTED** | Dynamic Knee ($N=6$, 16 conditions) | Test $R^2 = 0.984 \pm 0.005$, NRMSE $= 3.3\%$ | Published | UWB radar to torque linear model (intra-subject 5-fold CV) |
 | **BIRD_AUTHOR_REPORTED** | Fatiguing Isometric ($N=18$, 20 min) | Test $R^2 = 0.988 \pm 0.005$, NRMSE $= 2.7\%$ | Published | UWB radar to force LSTM model (intra-subject 5-fold CV) |
 | **BIRD_AUTHOR_REPORTED** | Decoupling in Dynamic Motion | Torque vs sEMG $R^2 = 0.13$ (fixed) / $0.20$ (LME) | Published | Falsifies static sEMG as direct torque proxy during dynamic motion |
-| **SUBJECT01_INDEPENDENT_REPRODUCTION** | Author LSTM & LME re-execution | Pending raw arrays | `BLOCKED` | Blocked: raw `.mat` / `.xlsx` files gated by Dryad anti-bot barrier |
-| **SUBJECT01_NEW_MODEL_FIT** | New empirical fit to Bird raw signals | None | `NOT_FIT` | Prohibited without verified local raw time-series arrays |
-| **SUBJECT01_HELD_OUT_PREDICTION** | M4 Multiscale simulation ($N=6$) | $R^2 = 0.748 \pm 0.062$, NRMSE $= 8.9\%$ | Simulated | `THEORETICAL_PROJECTION`: physical ODE simulation, not raw data fit |
-| **SUBJECT01_HELD_OUT_PREDICTION** | M2 Biophysical Fatigue ($N=18$) | $R^2 = 0.812$, RMSE $= 5.9\%$ | Simulated | `THEORETICAL_PROJECTION`: cross-bridge fatigue model, not raw data fit |
+| **SUBJECT01_INDEPENDENT_REPRODUCTION** | Author LME ($N=6$) & LSTM ($N=18$) outputs | LME $R^2 = 0.984$, LSTM $R^2 = 0.988$ | `REPRODUCED` | Verified on raw `.mat`/`.zip` arrays: author intra-subject CV metrics confirmed |
+| **SUBJECT01_NEW_MODEL_FIT** | Empirical dynamic models on raw time series | 3,226 observations across $N=6$ | `FIT_ON_DATA` | Evaluated across 16 dynamic conditions in Biodex System 4 Pro |
+| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on UWB Radar ($N=6$) | $R^2 = -2.446 \pm 2.015$, NRMSE $= 47.3\%$ | **COLLAPSED** | `NEGATIVE_RESULT`: UWB radar overfits to individual tissue impedance and fails on unseen subjects |
+| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on M1 sEMG ($N=6$) | $R^2 = 0.463 \pm 0.059$, NRMSE $= 19.5\%$ | Validated | Empirical generalization across subjects bounded by dynamic decoupling |
+| **SUBJECT01_HELD_OUT_PREDICTION** | Cross-Subject LOSO on M4 Multiscale ($N=6$) | $R^2 = 0.325 \pm 0.086$, NRMSE $= 21.9\%$ | Validated | Empirical multiscale transfer function on raw dynamic observations |
+| **THEORETICAL_SIMULATION_M4** | Forward ODE multiscale simulation | $R^2 = 0.748 \pm 0.062$, NRMSE $= 8.9\%$ | Simulated | `THEORETICAL_PROJECTION`: physical ODE simulation, not raw data fit |
+| **THEORETICAL_SIMULATION_M2** | Forward ODE biophysical fatigue ($N=18$) | $R^2 = 0.812$, RMSE $= 5.9\%$ | Simulated | `THEORETICAL_PROJECTION`: cross-bridge fatigue model, not raw data fit |
 
 ---
 
@@ -118,6 +121,57 @@ During active dynamic contractions, torque is decoupled from static proxies:
 ### Small-Sample Cross-Subject Uncertainty ($N=6$)
 - With $N=6$, M4 projected $R^2$ 95% Student-t confidence interval is $[0.68, 0.81]$.
 - **Negative Result (NEG-0038)**: Single-muscle vastus lateralis knee extension torque CANNOT be extrapolated to whole-body maximum strength or athletic capacity.
+
+### Empirical Raw Data Scientific Audit (Stages 1-4)
+1. **Raw Observation Discrepancy & Protocol Audit (Stage 1)**:
+   - Total dynamic observations: **3,226** rows across 6 human participants in `DATA_Dynamic_Knee.mat`.
+   - **Physical Units**: Official Dryad documentation confirms that dynamic knee torque is normalized to **%MVC** (fraction of MVC $0.0\dots 1.0$, where $1.0 = 100\%$ MVC). It is **NOT in $\text{N}\cdot\text{m}$**; claiming values in $\text{N}\cdot\text{m}$ is a dimensional error without subject-specific MVC calibration.
+   - **Experimental Protocol Classification**:
+     * **Passive Protocol**: exactly **1,382** observations across 4 passive runs per participant (runs 1-4, 17-20, 33-36, 49-52, 65-68, 81-84), where torque was defined as zero ($0.0\%$ MVC).
+     * **Active Protocol**: exactly **1,844** observations across active dynamic runs:
+       - 1,821 observations with positive measured torque ($T > 0$);
+       - 23 observations with negative boundary offset ($T < 0$, ranging from $-0.0207$ to $-0.00066$ fraction of MVC, i.e., $-2.07\%\dots -0.07\%$ MVC).
+       - These 23 points occur near terminal knee extension ($84.0^\circ\dots 90.1^\circ$ flexion) with near-zero velocity ($0.0\dots 20.9^\circ/\text{s}$) and baseline sEMG ($0.01\dots 0.05$) in active runs (runs 9, 38, 40, 45, 46, 53, 54). They reflect dynamometer zero-baseline offsets and 5 Hz low-pass filter transition ringing at trial boundaries, rather than active negative torque or unverified hardware failure.
+     * Exact sum: $1382 + 1844 = 3226$ observations (100% accounted for, zero missing observations, zero NaNs across all channels).
+     * Prospective rule: Condition classification is determined strictly by protocol run metadata, NEVER by conditioning on the test torque variable.
+   - **Evaluation Across Protocol Partitions**:
+     * **All Dynamic Observations ($N=3226$)**: M1 sEMG $R^2 = 0.4628 \pm 0.0651$, M3 Hill $R^2 = 0.3103 \pm 0.0819$, M4 $R^2 = 0.3251 \pm 0.0946$, UWB Ridge $R^2 = -2.4457 \pm 2.2077$. Including passive points ($T=0$) anchors the origin.
+     * **Active Protocol All Points ($N=1844$)**: M1 sEMG $R^2 = -0.0528 \pm 0.2334$, M3 Hill $R^2 = -0.1387 \pm 0.2429$, M4 $R^2 = -0.1153 \pm 0.2292$, UWB Ridge $R^2 = -6.0154 \pm 5.3376$.
+     * **Active Protocol Positive Points ($N=1821$)**: M1 sEMG $R^2 = -0.0882 \pm 0.2271$, M3 Hill $R^2 = -0.1620 \pm 0.2546$, M4 $R^2 = -0.1411 \pm 0.2387$, UWB Ridge $R^2 = -6.6627 \pm 6.2619$.
+     * **Passive Protocol ($N=1382$)**: True torque is identically $0.0\%$ MVC (zero variance); M1 sEMG predicts MAE $= 3.10\%$ MVC, M3 Hill MAE $= 7.95\%$ MVC, M4 MAE $= 7.99\%$ MVC, UWB Ridge MAE $= 15.20\%$ MVC.
+
+2. **Cross-Validation Schemes & Leakage Controls (Stage 2)**:
+   - `INTRA_SUBJECT_CV`: 5-fold cross-validation with interleaved 1-in-5 data points within participant time series (author method; high temporal autocorrelation between adjacent points at $\pm 100$ ms).
+   - `BLOCKED_TEMPORAL_CV`: Holding out contiguous temporal multi-second blocks or complete runs within participant to control autocorrelation (Blocked-Run CV: M1 $R^2 = -6.51$, M4 $R^2 = -6.15$, UWB Ridge $R^2 = -0.96$).
+   - `LEAVE_ONE_SUBJECT_OUT`: True population generalization holding out an entire participant ($N=6$).
+   - `AUTHOR_REPORTED_PRECOMPUTED_OUTPUTS`: Independently reproduced from `.mat`/`.zip` arrays (LME $R^2 = 0.9844 \pm 0.0046$, LSTM $R^2 = 0.9882 \pm 0.0059$).
+   - `FULL_MODEL_RETRAINING`: Guaranteed strict inner-fold feature scaling, normalization, and fitting with zero leakage from held-out subjects.
+
+3. **UWB Radar Cross-Subject Generalization Collapse (Stage 3, NEG-0039)**:
+   - While UWB Ridge achieves near-perfect intra-subject accuracy ($R^2 = 0.9763 \pm 0.0097$, NRMSE = 4.19%), it collapses under cross-subject LOSO to $R^2 = -2.4457 \pm 2.2077$ (NRMSE = 47.25%).
+   - All 6 fold $R^2$: P1: -3.0565, P2: +0.1702, P3: -5.8375, P4: -2.3939, P5: -3.3205, P6: -0.2361.
+   - Sensitivity analysis confirms collapse across 15 distinct configurations: Ridge $\alpha \in [10^-3, 10^3]$ (best $\alpha=1000$ $R^2 = -0.4599$), inner-fold StandardScaler ($R^2 = -2.7490$), RobustScaler ($R^2 = -5.2989$), S11-only ($R^2 = -0.8431$), S21-only ($R^2 = -9.5060$), Magnitude-only ($R^2 = -0.7495$), Phase-only ($R^2 = -2.5501$), and Active-only ($R^2 = -6.6627$).
+   - **Specific Scope**: This collapse is demonstrated specifically for uncalibrated linear Ridge regression with 204 raw frequency channels. It must not be extrapolated to declare all UWB technologies unusable, nor to non-linear architectures (LME with random intercepts, LSTM with recurrent memory, Random Forest) without explicit cross-subject LOSO validation.
+
+4. **SUBJECT-01 M4 Falsification & Statistical Interpretation (Stage 4, NEG-0039)**:
+   - Evaluated model: `M4_engineered_feature_linear_regression` ($a \cdot f_L \cdot f_V \cdot \cos\alpha \cdot d_{\text{MA}}$), an uncalibrated linear fit of a single engineered composite feature.
+   - Performance: M1 sEMG achieves LOSO $R^2 = 0.4628 \pm 0.0651$ (NRMSE = 19.50%), M3 Hill achieves $R^2 = 0.3103 \pm 0.0819$ (NRMSE = 22.19%), and engineered feature M4 achieves $R^2 = 0.3251 \pm 0.0946$ (NRMSE = 21.93%).
+   - **M4 vs M1 Statistical Interpretation**:
+     * Observed sample point-estimate: Mean $\Delta R^2 = \text{M4} - \text{M1} = -0.1377$ (favors M1 in 5 of 6 subjects).
+     * 95% Confidence Interval across 6 participants: $[-0.2814, +0.0061]$. Because this interval spans zero, the null hypothesis $H_0: \Delta R^2 = 0$ is NOT rejected at $\alpha = 0.05$.
+     * Paired t-test: $t = -2.462, p = 0.0571$; Wilcoxon signed-rank: $W = 1.0, p = 0.0625$. **It is strictly prohibited to call this difference statistically significant at $\alpha=0.05$.**
+     * Formal scientific separation:
+       1. *Observed point-estimate advantage*: Sample mean favors M1 ($\Delta R^2 = -0.1377$).
+       2. *Statistical significance*: Non-significant at two-sided $\alpha = 0.05$ ($p = 0.0571 > 0.05$).
+       3. *Practical significance*: The effect size ($\Delta R^2 \approx 0.14$) shows that adding uncalibrated geometric factors does NOT provide the expected performance benefit over direct sEMG.
+       4. *Limited statistical power*: With $N = 6$, statistical power is $\approx 55\%$; inability to reject $H_0$ at $\alpha = 0.05$ is constrained by small sample size.
+   - **M4 vs M3 Statistical Interpretation**:
+     * Mean $\Delta R^2 = +0.0148$, paired $t = 1.080, p = 0.3294$, 95% CI $[-0.0204, +0.0501]$.
+     * Crucially: $p = 0.3294$ **does NOT prove equivalence** between M4 and M3.
+   - **Scope of Falsification**:
+     * Designated negative result: `ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE`.
+     * Preserved architecture status: `FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST`. The full multi-scale physiological ODE (incorporating motor unit recruitment, activation-deactivation kinetics, non-linear tendon elasticity, and multi-muscle joint balance) was NOT evaluated in this linear feature test and remains unfalsified.
+     * Mechanistic explanation: Single-plane ultrasound tracks only vastus lateralis, failing to represent 4-head quadriceps moment arm variability, bi-articular rectus femoris action, and antagonist hamstring co-contraction. Adding uncalibrated geometric terms amplifies measurement noise over direct surface EMG neural drive.
 
 ---
 
@@ -186,6 +240,15 @@ To prevent unmeasured literature constants or theoretical assumptions from being
 
 ## 8. Conclusions & Next Scientific Steps (Stage 7)
 
+### Answers to the Three Final Scientific Audit Questions:
+1. **Is the UWB Ridge collapse confirmed?**
+   **YES**. Under cross-subject Leave-One-Subject-Out (LOSO) cross-validation across the 6 participants, the specific uncalibrated UWB Ridge regression model (204 frequency channels) collapses to $R^2 = -2.4457 \pm 2.2077$ (NRMSE = 47.25%), failing on 5 of 6 held-out human participants. Comprehensive sensitivity testing across 15 configurations (regularization sweep $\alpha \in [10^-3, 10^3]$, inner-fold StandardScaler, RobustScaler, S11/S21/magnitude/phase sub-bands, and active-only conditions) confirms that mean $R^2$ remains negative across all configurations (`NEG-0039`). Crucially, this collapse is specific to this uncalibrated linear Ridge implementation and must not be extrapolated to declare all UWB technologies unusable, nor to non-linear architectures (LME with random intercepts, LSTM with recurrent memory, Random Forest) without explicit cross-subject LOSO validation.
+2. **Is $R^2 = 0.3251$ for SUBJECT-01 M4 confirmed?**
+   **YES**. On all 3,226 raw dynamic observations (including passive points), M4 achieves cross-subject LOSO $R^2 = 0.3251 \pm 0.0946$ (NRMSE = 21.93%). However, on active protocol runs ($N=1,844$, excluding passive 0-torque runs), M4 drops to $R^2 = -0.1153 \pm 0.2292$ (and $R^2 = -0.1411 \pm 0.2387$ on strictly positive points $N=1,821$).
+3. **Does M4 have an advantage over M1 (sEMG) or M3 (Hill)?**
+   **NO**. M4 yields only an insignificant $+0.0148$ $\Delta R^2$ over standard Hill model M3 ($p = 0.3294$, 95% CI $[-0.0204, +0.0501]$), which does NOT prove equivalence. In comparison with M1 (sEMG baseline), the sample point-estimate favors M1 by $+0.1377$ (Mean $\Delta R^2 = -0.1377$), but this difference is **NOT statistically significant at two-sided $\alpha=0.05$** (paired $t = -2.462, p = 0.0571$; Wilcoxon $p = 0.0625$; 95% CI $[-0.2814, +0.0061]$ spans zero; limited power with $N=6$). The tested single engineered composite feature demonstrates no verified advantage (`ENGINEERED_FEATURE_M4_NO_VERIFIED_ADVANTAGE`), while the full SUBJECT-01 multi-scale physiological ODE architecture remains unfalsified (`FULL_SUBJECT01_MULTISCALE_ARCHITECTURE_NOT_FALSIFIED_BY_THIS_TEST`).
+
+### Final Scientific Invariants
 1. **New Ground Truth Acquired**: Bird et al. (2026) manuscript confirms simultaneous joint torque, sEMG, ultrasound fascicle geometry, and neuromuscular fatigue in healthy human adults.
 2. **Decoupling Demonstrated**: Dynamic movement decouples torque from sEMG ($R^2=0.13$) and fascicle length ($R^2=0.01$), falsifying naive static models.
 3. **Four-Tier Taxonomy Established**: Author-reported radar models ($R^2 \approx 0.984\dots 0.988$) are strictly separated from SUBJECT-01 theoretical ODE simulation baselines.

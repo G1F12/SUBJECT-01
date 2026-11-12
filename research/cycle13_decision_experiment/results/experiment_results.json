@@ -1,0 +1,276 @@
+{
+  "experiment_id": "EXP-0046",
+  "experiment_title": "Functional Biomechanical Multi-Muscle Bridge and Augmentation Feasibility Under Dynamic Antagonist Co-Activation",
+  "cycle": 13,
+  "dataset_provenance": "Bird et al. (2026) Science Robotics / Dryad, CC0-1.0",
+  "loso_cross_validation_all_conditions": {
+    "condition": "all",
+    "total_observations_evaluated": 3226,
+    "held_out_subjects_count": 6,
+    "models_summary": {
+      "M0_Mean": {
+        "pooled_r2": -0.018657531091377244,
+        "pooled_rmse": 0.2250754516058078,
+        "pooled_nrmse_percent": 20.57528387796566,
+        "pooled_pearson_r": -0.20978274835953908,
+        "mean_fold_r2": -0.07210682237011497,
+        "std_fold_r2": 0.0971945348371351,
+        "mean_fold_rmse": 0.21813837596777877,
+        "mean_fold_nrmse_percent": 27.53862073927503,
+        "mean_fold_pearson_r": 0.0,
+        "fold_r2_values": [
+          -1.6880381932482535e-05,
+          -0.2684137397129662,
+          -0.017560242521897917,
+          -0.019454937981624232,
+          -0.004205080259396032,
+          -0.12299005336287294
+        ]
+      },
+      "M1_sEMG": {
+        "pooled_r2": 0.4847941660761923,
+        "pooled_rmse": 0.16006796222033268,
+        "pooled_nrmse_percent": 14.632620923133336,
+        "pooled_pearson_r": 0.6962922287041017,
+        "mean_fold_r2": 0.46280399548440415,
+        "std_fold_r2": 0.059394112674393734,
+        "mean_fold_rmse": 0.1546070135424303,
+        "mean_fold_nrmse_percent": 19.5014042048644,
+        "mean_fold_pearson_r": 0.6982832526191135,
+        "fold_r2_values": [
+          0.5141976180678945,
+          0.3633282265614386,
+          0.4523453398126087,
+          0.5500701620281081,
+          0.4641239483881253,
+          0.43275867804824986
+        ]
+      },
+      "M3_Hill": {
+        "pooled_r2": 0.31198920713746836,
+        "pooled_rmse": 0.18497441205788676,
+        "pooled_nrmse_percent": 16.909445304219076,
+        "pooled_pearson_r": 0.5601393725580663,
+        "mean_fold_r2": 0.31032057822029363,
+        "std_fold_r2": 0.07475365692614448,
+        "mean_fold_rmse": 0.17721354972717449,
+        "mean_fold_nrmse_percent": 22.194160873574457,
+        "mean_fold_pearson_r": 0.6096406508362903,
+        "fold_r2_values": [
+          0.37549159852567116,
+          0.42650796999361695,
+          0.31934714229640215,
+          0.2724777690721214,
+          0.2703384050579668,
+          0.1977605843759831
+        ]
+      },
+      "M4_Hill_Composite": {
+        "pooled_r2": 0.3280529686950564,
+        "pooled_rmse": 0.18280225543926362,
+        "pooled_nrmse_percent": 16.710877496238634,
+        "pooled_pearson_r": 0.5736244520799927,
+        "mean_fold_r2": 0.32514285768398277,
+        "std_fold_r2": 0.0863467036166062,
+        "mean_fold_rmse": 0.17519655642632948,
+        "mean_fold_nrmse_percent": 21.92937489178148,
+        "mean_fold_pearson_r": 0.6180662429864863,
+        "fold_r2_values": [
+          0.3882813608544067,
+          0.45876316141613993,
+          0.32622726123518664,
+          0.2380410694868491,
+          0.33749929938498935,
+          0.20204499372632478
+        ]
+      },
+      "M_Bridge_CoActivation": {
+        "pooled_r2": 0.33632222285669977,
+        "pooled_rmse": 0.18167395381052553,
+        "pooled_nrmse_percent": 16.607733745351418,
+        "pooled_pearson_r": 0.5806945364920447,
+        "mean_fold_r2": 0.3363494435946162,
+        "std_fold_r2": 0.08714380015152401,
+        "mean_fold_rmse": 0.1738882514723535,
+        "mean_fold_nrmse_percent": 21.750373345929685,
+        "mean_fold_pearson_r": 0.6253425958987521,
+        "fold_r2_values": [
+          0.4017600991859521,
+          0.4715278683022197,
+          0.329872307202576,
+          0.263376839182892,
+          0.34757171970671474,
+          0.2039878279873425
+        ]
+      }
+    }
+  },
+  "loso_cross_validation_active_only": {
+    "condition": "active_only",
+    "total_observations_evaluated": 1844,
+    "held_out_subjects_count": 6,
+    "models_summary": {
+      "M0_Mean": {
+        "pooled_r2": -0.06296591836007814,
+        "pooled_rmse": 0.22288289148207743,
+        "pooled_nrmse_percent": 20.37485088252612,
+        "pooled_pearson_r": -0.3869675212923324,
+        "mean_fold_r2": -0.26103188938721794,
+        "std_fold_r2": 0.3134234625801586,
+        "mean_fold_rmse": 0.21479618817933996,
+        "mean_fold_nrmse_percent": 27.14184591902917,
+        "mean_fold_pearson_r": 0.0,
+        "fold_r2_values": [
+          -0.007368777472910981,
+          -0.8450394142759292,
+          -0.11812997338541864,
+          -0.07549355204645969,
+          -0.005965078819988756,
+          -0.5141945403226003
+        ]
+      },
+      "M1_sEMG": {
+        "pooled_r2": 0.10081250182493218,
+        "pooled_rmse": 0.20499449252801982,
+        "pooled_nrmse_percent": 18.73958198058185,
+        "pooled_pearson_r": 0.3191876827277113,
+        "mean_fold_r2": -0.052799657596432105,
+        "std_fold_r2": 0.2130232971966343,
+        "mean_fold_rmse": 0.1974219922681469,
+        "mean_fold_nrmse_percent": 24.919250897394036,
+        "mean_fold_pearson_r": 0.2473412593572328,
+        "fold_r2_values": [
+          0.03241840143052477,
+          -0.4273605202974493,
+          0.08876238566742856,
+          0.14551541102409504,
+          0.10091650700625132,
+          -0.257050130409443
+        ]
+      },
+      "M3_Hill": {
+        "pooled_r2": 0.0102280188501368,
+        "pooled_rmse": 0.21507237995812803,
+        "pooled_nrmse_percent": 19.66085257355534,
+        "pooled_pearson_r": 0.1569415289061038,
+        "mean_fold_r2": -0.13873421425545768,
+        "std_fold_r2": 0.2217490861420312,
+        "mean_fold_rmse": 0.20620408120814293,
+        "mean_fold_nrmse_percent": 25.943300812143253,
+        "mean_fold_pearson_r": 0.24986942658740194,
+        "fold_r2_values": [
+          0.02231525785464883,
+          -0.45691690384779027,
+          0.05274929352735791,
+          0.014684786830312269,
+          -0.02045523233428126,
+          -0.44478248756299354
+        ]
+      },
+      "M4_Hill_Composite": {
+        "pooled_r2": 0.02943551069741268,
+        "pooled_rmse": 0.21297531141884254,
+        "pooled_nrmse_percent": 19.4691489461739,
+        "pooled_pearson_r": 0.19924783520284797,
+        "mean_fold_r2": -0.11531974155778657,
+        "std_fold_r2": 0.20923526981222035,
+        "mean_fold_rmse": 0.2042022684884378,
+        "mean_fold_nrmse_percent": 25.674418678867227,
+        "mean_fold_pearson_r": 0.2863091208375445,
+        "fold_r2_values": [
+          0.042632914016408785,
+          -0.38536377771192476,
+          0.07141429283166123,
+          -0.011590045138571092,
+          0.022722788329397003,
+          -0.4317346216736906
+        ]
+      },
+      "M_Bridge_CoActivation": {
+        "pooled_r2": 0.028986931842709174,
+        "pooled_rmse": 0.21302452256661486,
+        "pooled_nrmse_percent": 19.47364758575521,
+        "pooled_pearson_r": 0.1978850417188468,
+        "mean_fold_r2": -0.11482435693844141,
+        "std_fold_r2": 0.21227256081713772,
+        "mean_fold_rmse": 0.20417525659970184,
+        "mean_fold_nrmse_percent": 25.66668349722232,
+        "mean_fold_pearson_r": 0.28739283768645335,
+        "fold_r2_values": [
+          0.043879982046371446,
+          -0.38761600889920733,
+          0.07144784789984326,
+          -0.005214243331866042,
+          0.026139159642793786,
+          -0.4375828789885836
+        ]
+      }
+    }
+  },
+  "augmentation_feasibility_simulation": {
+    "nominal": {
+      "fiber_force_N": 3850.0,
+      "pennation_angle_deg": 14.5,
+      "cos_pennation": 0.9681476403781077,
+      "patellar_tendon_force_N": 3727.368415455715,
+      "patellar_tendon_csa_mm2": 105.0,
+      "tendon_stress_MPa": 35.49874681386395,
+      "safety_factor": 2.817000851448233,
+      "safety_threshold_met": true,
+      "agonist_torque_Nm": 167.73157869550718,
+      "antagonist_torque_Nm": 25.159736804326077,
+      "net_joint_torque_Nm": 142.5718418911811,
+      "description": "",
+      "net_torque_gain_percent": 0.0,
+      "torque_transmission_efficiency": 1.0
+    },
+    "TARGET_FORCE20_isolated_muscle": {
+      "fiber_force_N": 4620.0,
+      "pennation_angle_deg": 17.3,
+      "cos_pennation": 0.9547607995027975,
+      "patellar_tendon_force_N": 4410.994893702924,
+      "patellar_tendon_csa_mm2": 105.0,
+      "tendon_stress_MPa": 42.00947517812308,
+      "safety_factor": 2.3804153604869636,
+      "safety_threshold_met": true,
+      "agonist_torque_Nm": 198.49477021663157,
+      "antagonist_torque_Nm": 29.774215532494733,
+      "net_joint_torque_Nm": 168.72055468413683,
+      "description": "+20% fiber force with unadapted tendon and increased pennation angle",
+      "net_torque_gain_percent": 18.34072734566613,
+      "torque_transmission_efficiency": 0.9170363672833066
+    },
+    "TARGET_FORCE20_adapted_tendon": {
+      "fiber_force_N": 4620.0,
+      "pennation_angle_deg": 17.3,
+      "cos_pennation": 0.9547607995027975,
+      "patellar_tendon_force_N": 4410.994893702924,
+      "patellar_tendon_csa_mm2": 126.0,
+      "tendon_stress_MPa": 35.00789598176924,
+      "safety_factor": 2.856498432584356,
+      "safety_threshold_met": true,
+      "agonist_torque_Nm": 198.49477021663157,
+      "antagonist_torque_Nm": 29.774215532494733,
+      "net_joint_torque_Nm": 168.72055468413683,
+      "description": "+20% fiber force with co-adapted +20% tendon cross-sectional area",
+      "net_torque_gain_percent": 18.34072734566613,
+      "torque_transmission_efficiency": 0.9170363672833066
+    },
+    "TARGET_FORCE20_synergistic_control": {
+      "fiber_force_N": 4620.0,
+      "pennation_angle_deg": 17.3,
+      "cos_pennation": 0.9547607995027975,
+      "patellar_tendon_force_N": 4410.994893702924,
+      "patellar_tendon_csa_mm2": 126.0,
+      "tendon_stress_MPa": 35.00789598176924,
+      "safety_factor": 2.856498432584356,
+      "safety_threshold_met": true,
+      "agonist_torque_Nm": 198.49477021663157,
+      "antagonist_torque_Nm": 22.33066164937105,
+      "net_joint_torque_Nm": 176.1641085672605,
+      "description": "+20% fiber force, adapted tendon, and optimized reciprocal inhibition (antagonist co-activation reduced by 25%)",
+      "net_torque_gain_percent": 23.561641787386698,
+      "torque_transmission_efficiency": 1.178082089369335
+    }
+  }
+}
