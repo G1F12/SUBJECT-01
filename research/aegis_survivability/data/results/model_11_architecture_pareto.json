@@ -1,0 +1,269 @@
+{
+  "model_id": "MODEL-11",
+  "description": "Multi-Criteria Architecture Comparison & Pareto Optimization (Cycle 2B Refined)",
+  "architectures": {
+    "ARCH-0": {
+      "arch_id": "ARCH-0",
+      "name": "Baseline Unmodified Human",
+      "description": "Standard adult human biological morphology without artificial or transgenic armor.",
+      "puncture_depth_300N_mm": 32.0,
+      "slicing_resistance_N": 18.0,
+      "specific_energy_kJ_m2": 1.4,
+      "bfd_200J_impact_mm": 42.0,
+      "acoustic_spallation_risk": "LOW (Homogeneous viscoelastic soft tissue)",
+      "added_mass_kg": 0.0,
+      "total_mass_kg": 75.0,
+      "bmr_maintenance_W": 128.7,
+      "running_power_4_5ms_W": 940.0,
+      "combat_energy_1h_MJ": 2.38,
+      "sprint_vmax_m_s": 9.85,
+      "initial_accel_0_5s_m_s2": 6.8,
+      "cpe45_work_net_kJ": 88.94,
+      "speed_retention_2700s_pct": 72.0,
+      "free_sweating_skin_pct": 100.0,
+      "heat_dissipation_capacity_W": 780.0,
+      "time_to_hyperthermia_temperate_min": 999.0,
+      "time_to_hyperthermia_hot_humid_min": 29.6,
+      "skin_cut_closure_days": 15.0,
+      "muscle_defect_recovery_days": 365.0,
+      "nerve_50mm_reinnervation_days": 52.7,
+      "functional_return_90pct_days": 365.0,
+      "epistemic_uncertainty_score": 1.0,
+      "evolutionary_precedent": "Homo sapiens sapiens (cursorial endurance primate)",
+      "developmental_viability": "VALIDATED_NATURAL_ONTOGENY"
+    },
+    "ARCH-1": {
+      "arch_id": "ARCH-1",
+      "name": "Heavy Shell Bio-Armor (Osteoderms + Dense Keratin)",
+      "description": "Maximal mechanical shell with osteoderm core and overlapping pangolin-like keratin tiles.",
+      "puncture_depth_300N_mm": 0.8,
+      "slicing_resistance_N": 285.0,
+      "specific_energy_kJ_m2": 12.8,
+      "bfd_200J_impact_mm": 14.2,
+      "acoustic_spallation_risk": "HIGH (Impedance mismatch at bone-soft tissue boundary, R = -0.615)",
+      "added_mass_kg": 14.8,
+      "total_mass_kg": 89.8,
+      "bmr_maintenance_W": 145.7,
+      "running_power_4_5ms_W": 1460.0,
+      "combat_energy_1h_MJ": 3.42,
+      "sprint_vmax_m_s": 7.42,
+      "initial_accel_0_5s_m_s2": 4.6,
+      "cpe45_work_net_kJ": 25.58,
+      "speed_retention_2700s_pct": 52.3,
+      "free_sweating_skin_pct": 25.0,
+      "heat_dissipation_capacity_W": 220.0,
+      "time_to_hyperthermia_temperate_min": 36.4,
+      "time_to_hyperthermia_hot_humid_min": 20.4,
+      "skin_cut_closure_days": 120.0,
+      "muscle_defect_recovery_days": 365.0,
+      "nerve_50mm_reinnervation_days": 52.7,
+      "functional_return_90pct_days": 365.0,
+      "epistemic_uncertainty_score": 2.5,
+      "evolutionary_precedent": "Cingulata (Dasypodidae), Glyptodontidae, Ankylosauria (all non-cursorial)",
+      "developmental_viability": "DERMAL_OSSIFICATION_VIOLATES_MAMMALIAN_LOCOMOTOR_THERMAL_HOMEOSTASIS"
+    },
+    "ARCH-2": {
+      "arch_id": "ARCH-2",
+      "name": "Flexible Viscoelastic Composite",
+      "description": "Cross-linked multilayer collagenous dermis with non-Newtonian hydrogel interlayers.",
+      "puncture_depth_300N_mm": 8.5,
+      "slicing_resistance_N": 115.0,
+      "specific_energy_kJ_m2": 6.4,
+      "bfd_200J_impact_mm": 26.5,
+      "acoustic_spallation_risk": "MODERATE (Damped shock reflection)",
+      "added_mass_kg": 6.8,
+      "total_mass_kg": 81.8,
+      "bmr_maintenance_W": 136.5,
+      "running_power_4_5ms_W": 1150.0,
+      "combat_energy_1h_MJ": 2.85,
+      "sprint_vmax_m_s": 8.75,
+      "initial_accel_0_5s_m_s2": 5.7,
+      "cpe45_work_net_kJ": 49.79,
+      "speed_retention_2700s_pct": 58.9,
+      "free_sweating_skin_pct": 55.0,
+      "heat_dissipation_capacity_W": 450.0,
+      "time_to_hyperthermia_temperate_min": 999.0,
+      "time_to_hyperthermia_hot_humid_min": 23.4,
+      "skin_cut_closure_days": 28.0,
+      "muscle_defect_recovery_days": 240.0,
+      "nerve_50mm_reinnervation_days": 52.7,
+      "functional_return_90pct_days": 210.0,
+      "epistemic_uncertainty_score": 3.5,
+      "evolutionary_precedent": "Pachyderm dermis / Cetacean blubber (lacks synthetic STF colloid production)",
+      "developmental_viability": "BIOLOGICAL_SYNTHESIS_OF_CONCENTRATED_COLLOIDAL_SUSPENSIONS_UNPROVEN"
+    },
+    "ARCH-3": {
+      "arch_id": "ARCH-3",
+      "name": "Hyper-Regenerative Light Architecture",
+      "description": "Minimal passive defense combined with hyper-activated regenerative blastema and expanded stem cell beds.",
+      "puncture_depth_300N_mm": 28.0,
+      "slicing_resistance_N": 22.0,
+      "specific_energy_kJ_m2": 1.6,
+      "bfd_200J_impact_mm": 40.0,
+      "acoustic_spallation_risk": "LOW",
+      "added_mass_kg": 0.8,
+      "total_mass_kg": 75.8,
+      "bmr_maintenance_W": 135.0,
+      "running_power_4_5ms_W": 955.0,
+      "combat_energy_1h_MJ": 2.42,
+      "sprint_vmax_m_s": 9.78,
+      "initial_accel_0_5s_m_s2": 6.7,
+      "cpe45_work_net_kJ": 88.25,
+      "speed_retention_2700s_pct": 71.9,
+      "free_sweating_skin_pct": 95.0,
+      "heat_dissipation_capacity_W": 740.0,
+      "time_to_hyperthermia_temperate_min": 999.0,
+      "time_to_hyperthermia_hot_humid_min": 29.6,
+      "skin_cut_closure_days": 5.0,
+      "muscle_defect_recovery_days": 75.0,
+      "nerve_50mm_reinnervation_days": 44.3,
+      "functional_return_90pct_days": 95.0,
+      "epistemic_uncertainty_score": 4.0,
+      "evolutionary_precedent": "Acomys cahirinus (skin only), Pleurodeles waltl (urodele blastema)",
+      "developmental_viability": "SEVERE_ONCOGENIC_AND_IMMUNOLOGICAL_RISK_IN_HOMOTHERMIC_ADULT_MAMMALS"
+    },
+    "ARCH-4": {
+      "arch_id": "ARCH-4",
+      "name": "Balanced Adaptive Architecture (Selective FGM Plating)",
+      "description": "Functionally graded material plates focused on vital corridors (thorax, carotid, femoral), sparing joints and sweating zones.",
+      "puncture_depth_300N_mm": 3.5,
+      "slicing_resistance_N": 165.0,
+      "specific_energy_kJ_m2": 8.2,
+      "bfd_200J_impact_mm": 18.5,
+      "acoustic_spallation_risk": "LOW (FGM acoustic impedance matching suppresses tensile spallation)",
+      "added_mass_kg": 4.2,
+      "total_mass_kg": 79.2,
+      "bmr_maintenance_W": 133.5,
+      "running_power_4_5ms_W": 1045.0,
+      "combat_energy_1h_MJ": 2.62,
+      "sprint_vmax_m_s": 9.35,
+      "initial_accel_0_5s_m_s2": 6.2,
+      "cpe45_work_net_kJ": 65.76,
+      "speed_retention_2700s_pct": 64.7,
+      "free_sweating_skin_pct": 75.0,
+      "heat_dissipation_capacity_W": 600.0,
+      "time_to_hyperthermia_temperate_min": 999.0,
+      "time_to_hyperthermia_hot_humid_min": 27.4,
+      "skin_cut_closure_days": 8.0,
+      "muscle_defect_recovery_days": 90.0,
+      "nerve_50mm_reinnervation_days": 44.3,
+      "functional_return_90pct_days": 110.0,
+      "epistemic_uncertainty_score": 2.8,
+      "evolutionary_precedent": "Tolypeutes matacus (articulated bands), Chelonia plastron-carapace sutures",
+      "developmental_viability": "ANATOMICALLY_FEASIBLE_SELECTIVE_CORRIDOR_INTEGRATION"
+    }
+  },
+  "pareto_frontier": [
+    "ARCH-0",
+    "ARCH-1",
+    "ARCH-3",
+    "ARCH-4"
+  ],
+  "dominance_relations": {
+    "dominates": {
+      "ARCH-0": [],
+      "ARCH-1": [],
+      "ARCH-2": [],
+      "ARCH-3": [],
+      "ARCH-4": [
+        "ARCH-2"
+      ]
+    },
+    "dominated_by": {
+      "ARCH-0": [],
+      "ARCH-1": [],
+      "ARCH-2": [
+        "ARCH-4"
+      ],
+      "ARCH-3": [],
+      "ARCH-4": []
+    }
+  },
+  "arch2_suboptimality_proof": {
+    "protection_puncture_mm": {
+      "ARCH-2": 8.5,
+      "ARCH-4": 3.5,
+      "winner": "ARCH-4"
+    },
+    "cutting_resistance_N": {
+      "ARCH-2": 115.0,
+      "ARCH-4": 165.0,
+      "winner": "ARCH-4"
+    },
+    "mass_kg": {
+      "ARCH-2": 6.8,
+      "ARCH-4": 4.2,
+      "winner": "ARCH-4"
+    },
+    "sprint_speed_m_s": {
+      "ARCH-2": 8.75,
+      "ARCH-4": 9.35,
+      "winner": "ARCH-4"
+    },
+    "cpe45_work_net_kJ": {
+      "ARCH-2": 49.79,
+      "ARCH-4": 65.76,
+      "winner": "ARCH-4"
+    },
+    "heat_dissipation_W": {
+      "ARCH-2": 450.0,
+      "ARCH-4": 600.0,
+      "winner": "ARCH-4"
+    },
+    "epistemic_uncertainty": {
+      "ARCH-2": 3.5,
+      "ARCH-4": 2.8,
+      "winner": "ARCH-4"
+    }
+  },
+  "robustness_scenarios": {
+    "baseline_mixed_temperate": {
+      "description": "Standard multi-threat assault in temperate climate (25 C)",
+      "frontier": [
+        "ARCH-0",
+        "ARCH-1",
+        "ARCH-3",
+        "ARCH-4"
+      ],
+      "arch2_status": "DOMINATED_BY_ARCH4"
+    },
+    "cold_climate_laceration_priority": {
+      "description": "Sub-arctic environment (<10 C) where thermal occlusion is beneficial and cutting/tearing threats dominate",
+      "frontier": [
+        "ARCH-0",
+        "ARCH-1",
+        "ARCH-2",
+        "ARCH-3",
+        "ARCH-4"
+      ],
+      "arch2_status": "NON_DOMINATED_ON_FRONTIER (Superior compliance and cold-weather thermal retention)"
+    },
+    "stealth_high_articulation_silent": {
+      "description": "Close-quarters stealth operations requiring silent articulation without plate contact clatter",
+      "frontier": [
+        "ARCH-0",
+        "ARCH-2",
+        "ARCH-3",
+        "ARCH-4"
+      ],
+      "arch2_status": "NON_DOMINATED_ON_FRONTIER (Zero acoustic plate impingement)"
+    }
+  },
+  "monte_carlo_frontier_probabilities": {
+    "ARCH-0": 1.0,
+    "ARCH-1": 1.0,
+    "ARCH-2": 0.702,
+    "ARCH-3": 1.0,
+    "ARCH-4": 1.0
+  },
+  "conclusions": {
+    "pareto_frontier_members": [
+      "ARCH-0",
+      "ARCH-1",
+      "ARCH-3",
+      "ARCH-4"
+    ],
+    "tradeoff_analysis": "The primary Pareto frontier in standard temperate mixed assault consists of ARCH-0, ARCH-1, ARCH-3, and ARCH-4. ARCH-0 represents maximum unmodified cursorial efficiency; ARCH-1 represents maximum localized penetration hardness (at fatal thermal cost); ARCH-3 represents maximum wound closure velocity (with near-zero ballistic defense); ARCH-4 represents the optimal compromise for mobile combat survivability.",
+    "reassessment_of_arch2": "While ARCH-2 is quasi-dominated by ARCH-4 in the baseline temperate ballistic scenario, it is NOT unconditionally obsolete: Monte Carlo sensitivity testing demonstrates that ARCH-2 enters the Pareto frontier in 70.2% of randomized parameter realizations, specifically dominating when operational conditions prioritize silent elastomeric articulation, cold-climate insulation, or high-strain laceration energy absorption without brittle fracture."
+  }
+}

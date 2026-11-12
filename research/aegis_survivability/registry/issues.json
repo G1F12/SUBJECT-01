@@ -1,0 +1,229 @@
+[
+  {
+    "id": "ISS-0025",
+    "issue": "High-velocity rifle penetration vs biological areal density limits",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "impact": "Arresting 7.62x39mm or 5.56x45mm rifle projectiles requires areal density > 25 kg/m^2. A biological organism cannot carry this weight over full torso without severe locomotor collapse."
+  },
+  {
+    "id": "ISS-0026",
+    "issue": "Major conduit vascular transection remains unsolvable by biochemistry alone",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "Transection of abdominal aorta or proximal femoral artery loses >1.5 L/min under high shear stress; biological survival requires active mechanical vascular clamping or external tourniquets."
+  },
+  {
+    "id": "ISS-0027",
+    "issue": "Axon regeneration velocity biological rate limit (1-2 mm/day)",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "Functional motor re-innervation after severe nerve laceration takes months. No known molecular mechanism can accelerate tubulin transport by an order of magnitude without axonal death."
+  },
+  {
+    "id": "ISS-0028",
+    "issue": "Thermoregulation during prolonged high-intensity combat exertion in humid ambient conditions",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "In hot/humid environments (wet-bulb > 30 C), evaporative sweat dissipation drops sharply; even zoned armor (30% occlusion) may cause core temperature accumulation during sustained running."
+  },
+  {
+    "id": "ISS-0029",
+    "issue": "Mineral turnover and calcium-phosphate dietary metabolic demands of osteoderm armor",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "Maintaining and repairing 7-10 kg of mineralized osteoderms requires massive calcium, phosphate, and vitamin D metabolic mobilization, straining parathyroid and renal regulation."
+  },
+  {
+    "id": "ISS-0030",
+    "issue": "Developmental and ontogenetic morphogenesis of rigid subdermal plates",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "impact": "How rigid osteoderms grow during embryogenesis and childhood without restricting organismal growth requires coordinated sutural expansion and osteoclast remodeling."
+  },
+  {
+    "id": "ISS-0031",
+    "issue": "Absence of empirical in vivo ballistic impact data on living bioengineered dermal composites",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "impact": "Current tissue mechanics and wave attenuation models are derived from excised animal carapaces and finite element analogs; in vivo dynamic biological validation is currently prohibited (NO_GO)."
+  },
+  {
+    "id": "ISS-0032",
+    "issue": "Discrepancy between Mode I crack propagation (48.6 N) and blunt guillotine wedging (680 N) for FGM biomaterials",
+    "severity": "high",
+    "status": "resolved",
+    "impact": "Resolved by updating MODEL-12 and MODEL-14 to explicitly calculate both regimes and document draw slicing reduction (32.4 N)."
+  },
+  {
+    "id": "ISS-0033",
+    "issue": "Unsubstantiated claim of 92% muscle force recovery in 5 days post PEG-fusion and rodent-human equivalence in VML",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved by formal retraction (INV-0013, NEG-0061), calibration with human clinical trials (SRC-0109, SRC-0110, SRC-0111, SRC-0112), and updated MODEL-13."
+  },
+  {
+    "id": "ISS-0034",
+    "issue": "Epistemic discrepancies in VML volume recovery metrics, Atkins slicing factor multiplier, and thermoregulatory flux definitions",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 4B by formal retractions (INV-0015, INV-0016), independent 3-track external validation gate (EXP-0069), knife/scalpel geometric distinction in MODEL-12, and unified first-law energy balance in MODEL-14."
+  },
+  {
+    "id": "ISS-0035",
+    "issue": "Forensic discovery of synthetic clinical records, biomaterials data leakage, and premature whole-body biohybrid claims",
+    "severity": "critical",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 4C by authentic data reconstruction (PMC5744714), LOPO-CV evaluation, true prediction error re-calculation (9.15%), and formal downgrading of validation verdicts in DEC-0029."
+  },
+  {
+    "id": "ISS-0036",
+    "issue": "Dogmatic assertion of universal 3-5 satellite cell cycle limit and 200 um tissue death in previous cycles",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Rectified in Cycle 6 Phase 1 by establishing metabolic-rate-dependent diffusion scaling and asymmetric stem cell self-renewal dynamics."
+  },
+  {
+    "id": "ISS-0037",
+    "issue": "Lack of independent multi-species external holdout verification for volumetric muscle loss recovery beyond Dziki 2016",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 6 Question B by evaluating independent rodent and porcine holdouts (Corona 2015, Greising 2017/2020, Garg 2015) with TRANSLATIONAL_UNVALIDATED flags."
+  },
+  {
+    "id": "ISS-0038",
+    "issue": "Discrepancy in environmental relative humidity between Montain 1994 experimental data (50% RH) and model simulation (80% RH)",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 6 Question C by simulating strictly matched 50% RH and 1.5 clo uncompensable heat stress conditions."
+  },
+  {
+    "id": "ISS-0039",
+    "issue": "Conflation of group aggregate averages with independent individual specimen measurements in Cycle 6",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 1 by forensic audit, CSV provenance ledger, and classification of all 11 VML records as cohort means."
+  },
+  {
+    "id": "ISS-0040",
+    "issue": "Bibliographic attribution errors for pangolin scales (Wang 2016 Acta Biomater) and sheep horn (Trim 2011 Acta Biomater)",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 2 by correcting DOIs and primary publication details."
+  },
+  {
+    "id": "ISS-0041",
+    "issue": "Inaccurate air velocity (1.0 m/s vs authentic 2.2 m/s) in Montain et al. 1994 thermoregulation simulation",
+    "severity": "minor",
+    "status": "resolved",
+    "impact": "Resolved in Cycle 7 Phase 4 by re-running simulation under true 2.2 m/s wind speed."
+  },
+  {
+    "id": "ISS-0042",
+    "issue": "Diffusion-limited central core necrosis and motor endplate senescence in human-scale VML translation",
+    "severity": "major",
+    "status": "identified",
+    "impact": "Highlights critical bio-engineering gap: pre-vascularized scaffolds and neurotrophic guiding channels required for human translation."
+  },
+  {
+    "id": "ISS-0043",
+    "issue": "Conflation of Macroscopic Layer Geometry with Nanoscale Fibrillar Volume Fractions in Published Literature",
+    "severity": "major",
+    "status": "resolved",
+    "impact": "Cycle 8 mistakenly equated 38% ventral macro-layer thickness with intermediate filament volume fraction. Fully audited and resolved in Cycle 9."
+  },
+  {
+    "id": "ISS-0044",
+    "title": "Cycle 9 Bibliographic Error, Table-Code Arithmetic Decoupling, and Post-Hoc Parameter Leakage",
+    "cycle": "Cycle 9A Forensic Repair",
+    "status": "RESOLVED",
+    "resolution": "Rectified citation to Zhang et al. (2018) JRSI 15:20180093; reconstructed canonical 28 group means matrix in KERATIN_PRIMARY_DATA_RECONSTRUCTION.csv; eliminated synthetic rows H25-H28; reclassified parameters as POST_HOC_CALIBRATED; validated model on independent Li et al. (2010) dataset."
+  },
+  {
+    "id": "ISS-0045",
+    "title": "Misattribution of Tombolato DOI and Graphical Bending Curve Conflation",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0046",
+    "title": "Conflation of Code String Hash with Chronological Pre-Registration",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0047",
+    "title": "Single-Parameter Disulfide Dogma in Keratin Mechanics",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0048",
+    "title": "Single Collaborative Lab Cluster and Denervation Leakage in VML Cohorts",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0049",
+    "title": "Conflation of Mathematical Optimization with Biological Realizability",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0050",
+    "title": "Genealogy Drift in TARGET-CPE45 Heat Capacity Constant (270,450 J/K)",
+    "cycle": "Cycle 11",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0051",
+    "title": "Git Credential Manager Publication Failure for Pull Request #9",
+    "cycle": "Cycle 10B",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0052",
+    "title": "Unphysical Divergence of Linear Tg Model at High Hydration (w > 0.25)",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0053",
+    "title": "Incommensurability of Joint Torque and Isolated Contractile Force in VML Literature",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0054",
+    "title": "Conflation of Pareto Optimality with Strict Pareto Dominance in Biological Architecture Selection",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0055",
+    "title": "Cardiac Output Allocation Conflict Between Working Skeletal Muscle and Cutaneous Vasodilation",
+    "cycle": "Cycle 12",
+    "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0056",
+    "title": "Micro-Scale Research Capture Diverted Focus from Foundational Whole-Organism Survivability",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Cycles 8-12 overfocused on keratin glass transition and rodent VML priors to the exclusion of hemostasis, ballistic shock wave physics, and sensorimotor reaction limits. Resolved via Strategic Roadmap 2.0."
+  },
+  {
+    "id": "ISS-0057",
+    "title": "Conflation of Software Unit Test Pass with Scientific Empirical Validation",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Code execution asserts were historically conflated with empirical validation in early models 01-07. Formally resolved by demarcating code verification from out-of-sample empirical validation."
+  },
+  {
+    "id": "ISS-0058",
+    "title": "Discrepant Mathematical Formulations Between Code and Documentation in Cycle 12",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Scoring matrices, scale kinematics equations, and time duration labels diverged between cycle12_models.py and markdown reports. Formally reconciled and corrected in Cycle 13."
+  }
+]

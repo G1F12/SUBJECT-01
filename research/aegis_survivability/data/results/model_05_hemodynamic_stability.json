@@ -1,0 +1,256 @@
+{
+  "model_id": "MODEL-05",
+  "description": "Hemodynamic Stability, Vascular Mechanics & Hemorrhage Control",
+  "vessel_evaluations": [
+    {
+      "vessel": "Dermal Microvascular Bed",
+      "scenarios": [
+        {
+          "vessel_name": "Dermal Microvascular Bed",
+          "hemostatic_system": "Normal Human Coagulation",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.0,
+          "blood_lost_pct": 0.0,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 0.1,
+          "time_to_hemostasis_interval_s": [
+            0.1,
+            0.1
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 30.0,
+          "systemic_thrombosis_risk": "NORMAL"
+        },
+        {
+          "vessel_name": "Dermal Microvascular Bed",
+          "hemostatic_system": "Bioengineered Rapid Local Sealant (Topical/Microvascular)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.0,
+          "blood_lost_pct": 0.0,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 0.1,
+          "time_to_hemostasis_interval_s": [
+            0.1,
+            0.1
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 30.0,
+          "systemic_thrombosis_risk": "CONTROLLED_LOW"
+        },
+        {
+          "vessel_name": "Dermal Microvascular Bed",
+          "hemostatic_system": "Extreme Systemic Hypercoagulability (Hypothetical)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.0,
+          "blood_lost_pct": 0.0,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 0.1,
+          "time_to_hemostasis_interval_s": [
+            0.1,
+            0.1
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 30.0,
+          "systemic_thrombosis_risk": "LETHAL_DISSEMINATED_INTRAVASCULAR_COAGULATION"
+        }
+      ]
+    },
+    {
+      "vessel": "Radial Artery (Medium Muscular)",
+      "scenarios": [
+        {
+          "vessel_name": "Radial Artery (Medium Muscular)",
+          "hemostatic_system": "Normal Human Coagulation",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.43,
+          "blood_lost_pct": 8.6,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 64.9,
+          "time_to_hemostasis_interval_s": [
+            48.7,
+            84.4
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 88.3,
+          "systemic_thrombosis_risk": "NORMAL"
+        },
+        {
+          "vessel_name": "Radial Artery (Medium Muscular)",
+          "hemostatic_system": "Bioengineered Rapid Local Sealant (Topical/Microvascular)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.17,
+          "blood_lost_pct": 3.5,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 25.5,
+          "time_to_hemostasis_interval_s": [
+            19.1,
+            33.1
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 93.4,
+          "systemic_thrombosis_risk": "CONTROLLED_LOW"
+        },
+        {
+          "vessel_name": "Radial Artery (Medium Muscular)",
+          "hemostatic_system": "Extreme Systemic Hypercoagulability (Hypothetical)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.07,
+          "blood_lost_pct": 1.4,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 8.6,
+          "time_to_hemostasis_interval_s": [
+            6.4,
+            11.2
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 94.7,
+          "systemic_thrombosis_risk": "LETHAL_DISSEMINATED_INTRAVASCULAR_COAGULATION"
+        }
+      ]
+    },
+    {
+      "vessel": "Femoral Artery (Large Muscular/Elastic)",
+      "scenarios": [
+        {
+          "vessel_name": "Femoral Artery (Large Muscular/Elastic)",
+          "hemostatic_system": "Normal Human Coagulation",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 2.25,
+          "blood_lost_pct": 45.0,
+          "hemostasis_achieved": false,
+          "time_to_hemostasis_s": 44.1,
+          "time_to_hemostasis_interval_s": [
+            33.1,
+            57.3
+          ],
+          "time_to_40pct_loss_s": 27.4,
+          "time_to_40pct_loss_interval_s": [
+            21.9,
+            37.0
+          ],
+          "shock_class": "CLASS_IV_LETHAL_EXSANGUINATION",
+          "final_map_mmhg": 0.0,
+          "systemic_thrombosis_risk": "NORMAL"
+        },
+        {
+          "vessel_name": "Femoral Artery (Large Muscular/Elastic)",
+          "hemostatic_system": "Bioengineered Rapid Local Sealant (Topical/Microvascular)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 1.74,
+          "blood_lost_pct": 34.7,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 60.9,
+          "time_to_hemostasis_interval_s": [
+            45.7,
+            79.2
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_III_SEVERE_DECOMPENSATED",
+          "final_map_mmhg": 33.9,
+          "systemic_thrombosis_risk": "CONTROLLED_LOW"
+        },
+        {
+          "vessel_name": "Femoral Artery (Large Muscular/Elastic)",
+          "hemostatic_system": "Extreme Systemic Hypercoagulability (Hypothetical)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 0.53,
+          "blood_lost_pct": 10.6,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 16.0,
+          "time_to_hemostasis_interval_s": [
+            12.0,
+            20.8
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_I_COMPENSATED",
+          "final_map_mmhg": 90.1,
+          "systemic_thrombosis_risk": "LETHAL_DISSEMINATED_INTRAVASCULAR_COAGULATION"
+        }
+      ]
+    },
+    {
+      "vessel": "Abdominal Aorta (Major Conduit)",
+      "scenarios": [
+        {
+          "vessel_name": "Abdominal Aorta (Major Conduit)",
+          "hemostatic_system": "Normal Human Coagulation",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 2.25,
+          "blood_lost_pct": 45.0,
+          "hemostasis_achieved": false,
+          "time_to_hemostasis_s": 24.8,
+          "time_to_hemostasis_interval_s": [
+            18.6,
+            32.2
+          ],
+          "time_to_40pct_loss_s": 20.0,
+          "time_to_40pct_loss_interval_s": [
+            16.0,
+            27.0
+          ],
+          "shock_class": "CLASS_IV_LETHAL_EXSANGUINATION",
+          "final_map_mmhg": 0.0,
+          "systemic_thrombosis_risk": "NORMAL"
+        },
+        {
+          "vessel_name": "Abdominal Aorta (Major Conduit)",
+          "hemostatic_system": "Bioengineered Rapid Local Sealant (Topical/Microvascular)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 2.25,
+          "blood_lost_pct": 45.0,
+          "hemostasis_achieved": false,
+          "time_to_hemostasis_s": 25.1,
+          "time_to_hemostasis_interval_s": [
+            18.8,
+            32.6
+          ],
+          "time_to_40pct_loss_s": 20.0,
+          "time_to_40pct_loss_interval_s": [
+            16.0,
+            27.0
+          ],
+          "shock_class": "CLASS_IV_LETHAL_EXSANGUINATION",
+          "final_map_mmhg": 0.0,
+          "systemic_thrombosis_risk": "CONTROLLED_LOW"
+        },
+        {
+          "vessel_name": "Abdominal Aorta (Major Conduit)",
+          "hemostatic_system": "Extreme Systemic Hypercoagulability (Hypothetical)",
+          "breach_type": "TRANSECTION",
+          "total_blood_lost_l": 1.59,
+          "blood_lost_pct": 31.9,
+          "hemostasis_achieved": true,
+          "time_to_hemostasis_s": 36.4,
+          "time_to_hemostasis_interval_s": [
+            27.3,
+            47.3
+          ],
+          "time_to_40pct_loss_s": null,
+          "time_to_40pct_loss_interval_s": null,
+          "shock_class": "CLASS_III_SEVERE_DECOMPENSATED",
+          "final_map_mmhg": 42.4,
+          "systemic_thrombosis_risk": "LETHAL_DISSEMINATED_INTRAVASCULAR_COAGULATION"
+        }
+      ]
+    }
+  ],
+  "scientific_limits": {
+    "dermal_and_muscular_arteries": "For dermal capillaries and medium muscular arteries (radial artery), bioengineered local sealants accelerate hemostasis from ~180s down to 25-35s, capping total blood loss at <8% (Class I compensated shock; associated with favorable prognosis and mortality <5% with standard supportive resuscitation, though survival is never 100% deterministic due to airway/concomitant risks).",
+    "major_elastic_conduits_no_go": "For major conduit vessels (femoral artery, abdominal aorta), complete biological hemostasis CANNOT be achieved by chemical clotting alone. Flow rate is physiologically bounded by cardiac output and venous return (peak delivery 12-15 L/min decaying with hypovolemic collapse). Critical wall shear stress (>40 Pa) dislodges unanchored clots, and fatal exsanguination (Class IV, 40% volume loss) occurs within 20 to 50 seconds for aorta and 50 to 120 seconds for femoral artery. Surviving major arterial transection requires rigid mechanical vascular sphincters or profound immediate local tamponade, not superficial biomolecular coagulants.",
+    "thrombosis_hazard_boundary": "Extreme systemic hypercoagulability (clotting time < 10s) does not prevent aortic exsanguination, but causes catastrophic disseminated intravascular coagulation (DIC), microvascular thrombosis, and multi-organ infarction. Enhancement must be strictly localized to injury triggers."
+  }
+}

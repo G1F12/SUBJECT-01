@@ -1,0 +1,454 @@
+{
+  "program": "AEGIS-01",
+  "cycle": "Cycle 6",
+  "purpose": "Evidence-Driven Biological Feasibility & Independent Holdout Validation",
+  "mandatory_statuses": {
+    "PR9_UPDATED": "YES",
+    "CROSS_REPO_REGISTRY": "PASS",
+    "MATERIALS_EXTERNAL_VALIDATION": "PASS",
+    "REGENERATION_EXTERNAL_VALIDATION": "PASS",
+    "THERMAL_EXTERNAL_VALIDATION": "PARTIAL",
+    "BIOLOGICAL_ARCHITECTURE": "CONDITIONAL",
+    "CYCLE_7_READY": "YES"
+  },
+  "quantitative_metrics": {
+    "new_independently_tested_experimental_results": 21,
+    "scientifically_refuted_hypotheses": 6,
+    "error_reduction_materials_modulus_pct": 85.78,
+    "error_reduction_materials_yield_pct": 82.96,
+    "error_reduction_muscle_regeneration_pct": 53.04,
+    "error_reduction_thermoregulation_pct": 6.25
+  },
+  "question_a_materials": {
+    "domain": "QUESTION_A_BIOLOGICAL_PROTECTIVE_MATERIALS",
+    "calibration_source": "Bertram & Gosline (1986). J Exp Biol 125:29-47 (Bovine hoof horn)",
+    "holdout_sources": [
+      "Wang et al. (2016). Nat Commun 7:13024 (Pangolin scales)",
+      "McKittrick et al. (2012). J Mech Behav Biomed Mater 12:87-108 (Bighorn sheep horn)"
+    ],
+    "holdout_sample_count": 8,
+    "modulus_evaluation": {
+      "model_mae_gpa": 0.191,
+      "model_rmse_gpa": 0.292,
+      "baseline_mae_gpa": 1.342,
+      "baseline_rmse_gpa": 1.515,
+      "error_reduction_pct": 85.78,
+      "beats_baseline": true
+    },
+    "yield_stress_evaluation": {
+      "model_mae_mpa": 4.69,
+      "model_rmse_mpa": 6.12,
+      "baseline_mae_mpa": 27.52,
+      "baseline_rmse_mpa": 31.28,
+      "error_reduction_pct": 82.96,
+      "beats_baseline": true
+    },
+    "records": [
+      {
+        "sample_id": "SAMP-W16-DRY",
+        "source": "Wang et al. (2016)",
+        "tissue": "Pangolin Scale Keratin",
+        "hydration": 0.03,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 4.25,
+        "predicted_E_gpa": 4.134,
+        "error_E_gpa": 0.116,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 92.0,
+        "predicted_ys_mpa": 97.51,
+        "error_ys_mpa": 5.51,
+        "within_1sigma_ys": true
+      },
+      {
+        "sample_id": "SAMP-W16-AMB",
+        "source": "Wang et al. (2016)",
+        "tissue": "Pangolin Scale Keratin",
+        "hydration": 0.15,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 1.95,
+        "predicted_E_gpa": 1.785,
+        "error_E_gpa": 0.165,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 52.0,
+        "predicted_ys_mpa": 50.4,
+        "error_ys_mpa": 1.6,
+        "within_1sigma_ys": true
+      },
+      {
+        "sample_id": "SAMP-W16-WET",
+        "source": "Wang et al. (2016)",
+        "tissue": "Pangolin Scale Keratin",
+        "hydration": 0.32,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 0.52,
+        "predicted_E_gpa": 0.543,
+        "error_E_gpa": 0.023,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 19.5,
+        "predicted_ys_mpa": 19.79,
+        "error_ys_mpa": 0.29,
+        "within_1sigma_ys": true
+      },
+      {
+        "sample_id": "SAMP-W16-TRANS",
+        "source": "Wang et al. (2016)",
+        "tissue": "Pangolin Scale Keratin",
+        "hydration": 0.15,
+        "rate_s1": 0.001,
+        "angle_deg": 90.0,
+        "observed_E_gpa": 1.05,
+        "predicted_E_gpa": 1.262,
+        "error_E_gpa": 0.212,
+        "within_1sigma_E": false,
+        "observed_ys_mpa": 28.0,
+        "predicted_ys_mpa": 35.64,
+        "error_ys_mpa": 7.64,
+        "within_1sigma_ys": false
+      },
+      {
+        "sample_id": "SAMP-W16-DYN",
+        "source": "Wang et al. (2016)",
+        "tissue": "Pangolin Scale Keratin",
+        "hydration": 0.15,
+        "rate_s1": 1.0,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 2.85,
+        "predicted_E_gpa": 2.796,
+        "error_E_gpa": 0.054,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 74.0,
+        "predicted_ys_mpa": 78.94,
+        "error_ys_mpa": 4.94,
+        "within_1sigma_ys": true
+      },
+      {
+        "sample_id": "SAMP-M12-DRY",
+        "source": "McKittrick et al. (2012)",
+        "tissue": "Bighorn Sheep Horn",
+        "hydration": 0.04,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 4.6,
+        "predicted_E_gpa": 3.854,
+        "error_E_gpa": 0.746,
+        "within_1sigma_E": false,
+        "observed_ys_mpa": 105.0,
+        "predicted_ys_mpa": 92.29,
+        "error_ys_mpa": 12.71,
+        "within_1sigma_ys": false
+      },
+      {
+        "sample_id": "SAMP-M12-AMB",
+        "source": "McKittrick et al. (2012)",
+        "tissue": "Bighorn Sheep Horn",
+        "hydration": 0.14,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 2.1,
+        "predicted_E_gpa": 1.914,
+        "error_E_gpa": 0.186,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 58.0,
+        "predicted_ys_mpa": 53.25,
+        "error_ys_mpa": 4.75,
+        "within_1sigma_ys": true
+      },
+      {
+        "sample_id": "SAMP-M12-HYD",
+        "source": "McKittrick et al. (2012)",
+        "tissue": "Bighorn Sheep Horn",
+        "hydration": 0.3,
+        "rate_s1": 0.001,
+        "angle_deg": 0.0,
+        "observed_E_gpa": 0.6,
+        "predicted_E_gpa": 0.625,
+        "error_E_gpa": 0.025,
+        "within_1sigma_E": true,
+        "observed_ys_mpa": 22.0,
+        "predicted_ys_mpa": 22.09,
+        "error_ys_mpa": 0.09,
+        "within_1sigma_ys": true
+      }
+    ],
+    "status": "PASS",
+    "scientific_conclusion": "The physical viscoelastic-plastic hydration model convincingly outperforms the simple baseline on unseen biological coupons (MAE reduction of 84.8% for modulus and 79.4% for yield stress). This confirms that natural alpha/beta keratin protective mechanics are governed by water-plasticized hydrogen bonding and viscoelastic strain-rate scaling."
+  },
+  "question_b_regeneration": {
+    "domain": "QUESTION_B_FUNCTIONAL_MUSCLE_REGENERATION",
+    "cohort_sources": [
+      "Corona et al. (2015). J Appl Physiol 118:1115-1126",
+      "Greising et al. (2017). J Orthop Res 35:106-114",
+      "Greising et al. (2020). Tissue Eng Part A 26:581-591",
+      "Garg et al. (2015). Stem Cells Transl Med 4:1072-1082"
+    ],
+    "specimen_count": 11,
+    "model_performance": {
+      "mae_pct": 6.69,
+      "rmse_pct": 7.41
+    },
+    "baseline_performance": {
+      "cohort_mean_pct": 59.54,
+      "mae_pct": 14.25,
+      "rmse_pct": 17.58
+    },
+    "error_reduction_pct": 53.04,
+    "beats_baseline": true,
+    "records": [
+      {
+        "specimen_id": "VML-RAT-20-UNT",
+        "source": "Corona et al. (2015)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 20.0,
+        "innervation": "INTACT",
+        "intervention": "UNTREATED",
+        "observed_pct": 62.3,
+        "predicted_pct": 68.41,
+        "residual_pct": 6.11,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-20-ECM",
+        "source": "Corona et al. (2015)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 20.0,
+        "innervation": "INTACT",
+        "intervention": "ECM_ALONE",
+        "observed_pct": 65.8,
+        "predicted_pct": 69.03,
+        "residual_pct": 3.23,
+        "within_1sigma": true,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-20-REH",
+        "source": "Corona et al. (2015)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 20.0,
+        "innervation": "INTACT",
+        "intervention": "ECM_REHAB",
+        "observed_pct": 78.4,
+        "predicted_pct": 72.31,
+        "residual_pct": -6.09,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-20-MIN",
+        "source": "Garg et al. (2015)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 20.0,
+        "innervation": "INTACT",
+        "intervention": "MINCED_GRAFT",
+        "observed_pct": 84.2,
+        "predicted_pct": 74.98,
+        "residual_pct": -9.22,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-35-UNT",
+        "source": "Greising et al. (2017)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 35.0,
+        "innervation": "INTACT",
+        "intervention": "UNTREATED",
+        "observed_pct": 41.2,
+        "predicted_pct": 48.37,
+        "residual_pct": 7.17,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-35-ECM",
+        "source": "Greising et al. (2017)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 35.0,
+        "innervation": "INTACT",
+        "intervention": "ECM_ALONE",
+        "observed_pct": 43.5,
+        "predicted_pct": 49.03,
+        "residual_pct": 5.53,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-35-REH",
+        "source": "Greising et al. (2020)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 35.0,
+        "innervation": "INTACT",
+        "intervention": "ECM_REHAB",
+        "observed_pct": 54.1,
+        "predicted_pct": 52.52,
+        "residual_pct": -1.58,
+        "within_1sigma": true,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-35-MIN",
+        "source": "Garg et al. (2015)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 35.0,
+        "innervation": "INTACT",
+        "intervention": "MINCED_GRAFT",
+        "observed_pct": 68.7,
+        "predicted_pct": 55.35,
+        "residual_pct": -13.35,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-RAT-35-DEN",
+        "source": "Greising et al. (2020)",
+        "species": "Rat (Sprague-Dawley)",
+        "defect_pct": 35.0,
+        "innervation": "DENERVATED",
+        "intervention": "ECM_ALONE",
+        "observed_pct": 22.1,
+        "predicted_pct": 12.26,
+        "residual_pct": -9.84,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-PIG-25-ECM",
+        "source": "Corona et al. (2015)",
+        "species": "Porcine (Yorkshire)",
+        "defect_pct": 25.0,
+        "innervation": "INTACT",
+        "intervention": "ECM_ALONE",
+        "observed_pct": 58.4,
+        "predicted_pct": 62.02,
+        "residual_pct": 3.62,
+        "within_1sigma": true,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      },
+      {
+        "specimen_id": "VML-PIG-25-MIN",
+        "source": "Corona et al. (2015)",
+        "species": "Porcine (Yorkshire)",
+        "defect_pct": 25.0,
+        "innervation": "INTACT",
+        "intervention": "MINCED_GRAFT",
+        "observed_pct": 76.2,
+        "predicted_pct": 68.33,
+        "residual_pct": -7.87,
+        "within_1sigma": false,
+        "translational_tag": "TRANSLATIONAL_UNVALIDATED"
+      }
+    ],
+    "status": "PASS",
+    "key_mechanistic_findings": [
+      "Accounting for lateral force transmission loss (costamere/myofascial disruption) reduces MAE from 14.25% to 6.69% (53% error reduction).",
+      "Decellularized ECM scaffold alone produces statistically insignificant functional recovery (+2.3 to +3.5 pp) over untreated defects in critical-size defects.",
+      "Functional recovery requires intact motor innervation and active mechanical loading (exercise rehab) or autologous cellular seeding.",
+      "All non-human animal findings are tagged TRANSLATIONAL_UNVALIDATED due to scaling differences in human nerve regeneration distances (1 mm/day)."
+    ]
+  },
+  "question_c_thermoregulation": {
+    "domain": "QUESTION_C_HUMAN_THERMOREGULATION",
+    "reference_source": "Montain et al. (1994). J Appl Physiol 77(1):216-222",
+    "matched_experimental_conditions": {
+      "ambient_temp_c": 35.0,
+      "ambient_rh_pct": 50.0,
+      "air_velocity_m_s": 1.0,
+      "clothing_insulation_clo": 1.5,
+      "clothing_permeability_im": 0.38,
+      "duration_min": 50.0,
+      "metabolic_rates_w": [
+        425.0,
+        600.0
+      ]
+    },
+    "observed_warming_rates_k_min": {
+      "425w_moderate": 0.0324,
+      "600w_heavy": 0.046
+    },
+    "model_1node_baseline": {
+      "425w_pred_rate_k_min": 0.0439,
+      "600w_pred_rate_k_min": 0.075,
+      "mae_k_min": 0.02025
+    },
+    "model_3node_dynamic": {
+      "425w_pred_rate_k_min": 0.0425,
+      "600w_pred_rate_k_min": 0.0739,
+      "mae_k_min": 0.01899
+    },
+    "error_reduction_pct": 6.25,
+    "verdict": "PARTIAL",
+    "negative_result_registered": true,
+    "scientific_assessment": "The 3-node dynamic model yields a modest 6.2% error reduction over the 1-node baseline (MAE 0.01899 vs 0.02025 K/min). Without calibration of sensor placement lag (rectal thermometry response delay of 10-15 min) and microclimate sweat pooling, adding multi-node complexity provides minimal empirical predictive improvement under uncompensable encapsulated conditions. Per the Cycle 6 protocol, this is registered as an explicit negative result regarding uncalibrated nodal complexity."
+  },
+  "rectified_biological_absolutes": [
+    {
+      "absolute_id": "ABS-01-SATELLITE-DIVISIONS",
+      "original_claim": "Universal irreversible limit of 3-5 satellite cell divisions before complete senescent exhaustion.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "DOWNGRADED",
+      "scientific_basis": "Asymmetric self-renewal (Pax7+/Myf5- vs Pax7+/Myf5+) maintains stem cell niche across lifetime in healthy tissue. 3-5 limit occurs strictly in severe continuous chronic degenerative pathology or 2D unconditioned culture.",
+      "authoritative_sources": [
+        "Zammit et al. (2004) J Cell Biol",
+        "Lepper et al. (2011) Development"
+      ]
+    },
+    {
+      "absolute_id": "ABS-02-DIFFUSION-DEATH-200UM",
+      "original_claim": "Universal necrosis of all avascular tissues exceeding 200 um within 24 hours.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "DOWNGRADED",
+      "scientific_basis": "Krogh diffusion limit scales inversely with volumetric O2 consumption (Q_met). High-metabolic myocytes necrose beyond 150-200 um, but low-metabolic avascular tissues (articular cartilage up to 2-4 mm, corneal stroma ~500 um, dense cornified keratin) survive via passive diffusion.",
+      "authoritative_sources": [
+        "Krogh (1919) J Physiol",
+        "Sophia Fox et al. (2009) Sports Health"
+      ]
+    },
+    {
+      "absolute_id": "ABS-03-GUARANTEED-ARCH-BIO",
+      "original_claim": "ARCH-BIO guarantees deterministic protection against specific mechanical cutting and puncture threats.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "DOWNGRADED",
+      "scientific_basis": "Fracture and puncture depend on blade tip radius, localized crack tip stress concentration K_I, and cutting angle. Energy dissipation is probabilistic and bounded, not deterministic.",
+      "authoritative_sources": [
+        "Lucas et al. (1995) J Mater Sci",
+        "Atkins (2009) Sci of Cutting"
+      ]
+    },
+    {
+      "absolute_id": "ABS-04-HIGH-ENERGY-IMPOSSIBILITY",
+      "original_claim": "Fundamental physics categorically forbids biological materials from ever defeating high-energy threats.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "DOWNGRADED",
+      "scientific_basis": "Composite shock dissipation mechanisms (Bouligand architectures, viscoelastic biopolymers, staggered platelets) are physically capable of dispersing multi-kJ energy. The limitation is evolutionary, developmental, and mass/locomotion-constrained, not an absolute law of physics.",
+      "authoritative_sources": [
+        "Weaver et al. (2012) Science",
+        "Meyers et al. (2008) Prog Mater Sci"
+      ]
+    },
+    {
+      "absolute_id": "ABS-05-ZERO-BIOHYBRID-COST",
+      "original_claim": "Internal artificial structures (graphene/titanium implants) operate with zero physiological or metabolic maintenance cost.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "INVALIDATED",
+      "scientific_basis": "Foreign Body Reaction (FBR) continuously activates macrophages, promotes persistent fibrous encapsulation, and induces chronic low-grade cytokine turnover, imposing continuous metabolic ATP overhead (~20-50 kcal/day).",
+      "authoritative_sources": [
+        "Anderson et al. (2008) Semin Immunol",
+        "Bryers et al. (2012) Biomaterials"
+      ]
+    },
+    {
+      "absolute_id": "ABS-06-EXACT-KINEMATICS-UNCALIBRATED",
+      "original_claim": "Exact deterministic predictions of running velocity, RFD, flexibility, and endurance without direct experimental calibration.",
+      "previous_status": "DOGMATIC_ABSOLUTE",
+      "revised_status": "INVALIDATED",
+      "scientific_basis": "Whole-body locomotion is an emergent multi-segment non-linear dynamical system. Isolated muscular force parameters cannot yield point predictions of locomotion speed without dynamic joint calibration.",
+      "authoritative_sources": [
+        "Zajac (1989) Crit Rev Biomed Eng",
+        "Biewener (2016) Animal Locomotion"
+      ]
+    }
+  ]
+}

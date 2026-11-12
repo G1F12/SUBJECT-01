@@ -1,0 +1,230 @@
+{
+  "model_id": "MODEL-09",
+  "description": "Multi-Scale Tissue Regeneration Dynamics Across 6 Coupled Phases (Cycle 2A)",
+  "trauma_benchmarks": [
+    {
+      "defect_name": "Tier I: Deep Dermal Laceration with Minor Nerve Defect",
+      "tissue_loss_cm3": 1.5,
+      "nerve_gap_mm": 6.0,
+      "evaluations": [
+        {
+          "profile": "Adult Human Clinical Standard (Fibrotic Repair)",
+          "defect": "Tier I: Deep Dermal Laceration with Minor Nerve Defect",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 15.0,
+            "axon_target_contact_day": 16.0,
+            "full_neurotization_day": 37.0,
+            "functional_strength_50pct_day": 34.0,
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 64.7,
+            "muscle_mass_recovery_pct": 97.7,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.75,
+            "vml_permanent_deficit": true
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Acomys Spiny Mouse Dermal Reference",
+          "defect": "Tier I: Deep Dermal Laceration with Minor Nerve Defect",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED_IN_RODENTS_UNPROVEN_IN_HUMANS",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 5.0,
+            "axon_target_contact_day": 15.0,
+            "full_neurotization_day": 36.0,
+            "functional_strength_50pct_day": 25.5,
+            "functional_strength_90pct_day": 35.0
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 95.5,
+            "muscle_mass_recovery_pct": 97.7,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.0,
+            "vml_permanent_deficit": false
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Theoretical Bioengineered Scaffold & Neurotrophic Matrix",
+          "defect": "Tier I: Deep Dermal Laceration with Minor Nerve Defect",
+          "provenance_status": "THEORETICAL_SPECULATIVE_DESIGN",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 4.0,
+            "axon_target_contact_day": 14.0,
+            "full_neurotization_day": 35.0,
+            "functional_strength_50pct_day": 23.5,
+            "functional_strength_90pct_day": 34.0
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 95.5,
+            "muscle_mass_recovery_pct": 100.0,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.1,
+            "vml_permanent_deficit": false
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        }
+      ]
+    },
+    {
+      "defect_name": "Tier II: Penetrating Muscle Puncture / Behind-Armor Injury",
+      "tissue_loss_cm3": 8.5,
+      "nerve_gap_mm": 35.0,
+      "evaluations": [
+        {
+          "profile": "Adult Human Clinical Standard (Fibrotic Repair)",
+          "defect": "Tier II: Penetrating Muscle Puncture / Behind-Armor Injury",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 12.5,
+            "axon_target_contact_day": 41.7,
+            "full_neurotization_day": 62.7,
+            "functional_strength_50pct_day": 60.0,
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 57.7,
+            "muscle_mass_recovery_pct": 87.1,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.75,
+            "vml_permanent_deficit": true
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Acomys Spiny Mouse Dermal Reference",
+          "defect": "Tier II: Penetrating Muscle Puncture / Behind-Armor Injury",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED_IN_RODENTS_UNPROVEN_IN_HUMANS",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 4.2,
+            "axon_target_contact_day": 35.6,
+            "full_neurotization_day": 56.6,
+            "functional_strength_50pct_day": 46.5,
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 85.1,
+            "muscle_mass_recovery_pct": 87.1,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.0,
+            "vml_permanent_deficit": false
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Theoretical Bioengineered Scaffold & Neurotrophic Matrix",
+          "defect": "Tier II: Penetrating Muscle Puncture / Behind-Armor Injury",
+          "provenance_status": "THEORETICAL_SPECULATIVE_DESIGN",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 3.3,
+            "axon_target_contact_day": 29.4,
+            "full_neurotization_day": 50.4,
+            "functional_strength_50pct_day": 39.0,
+            "functional_strength_90pct_day": 49.0
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 95.5,
+            "muscle_mass_recovery_pct": 100.0,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.1,
+            "vml_permanent_deficit": false
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        }
+      ]
+    },
+    {
+      "defect_name": "Tier III: Severe Blast / Volumetric Muscle Loss Trauma",
+      "tissue_loss_cm3": 45.0,
+      "nerve_gap_mm": 90.0,
+      "evaluations": [
+        {
+          "profile": "Adult Human Clinical Standard (Fibrotic Repair)",
+          "defect": "Tier III: Severe Blast / Volumetric Muscle Loss Trauma",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 50.0,
+            "axon_target_contact_day": 96.1,
+            "full_neurotization_day": 117.1,
+            "functional_strength_50pct_day": "NOT_ACHIEVED",
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 20.9,
+            "muscle_mass_recovery_pct": 31.6,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.75,
+            "vml_permanent_deficit": true
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Acomys Spiny Mouse Dermal Reference",
+          "defect": "Tier III: Severe Blast / Volumetric Muscle Loss Trauma",
+          "provenance_status": "EXPERIMENTALLY_SUPPORTED_IN_RODENTS_UNPROVEN_IN_HUMANS",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 16.7,
+            "axon_target_contact_day": 79.1,
+            "full_neurotization_day": 100.1,
+            "functional_strength_50pct_day": "NOT_ACHIEVED",
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 30.9,
+            "muscle_mass_recovery_pct": 31.6,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.0,
+            "vml_permanent_deficit": true
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        },
+        {
+          "profile": "Theoretical Bioengineered Scaffold & Neurotrophic Matrix",
+          "defect": "Tier III: Severe Blast / Volumetric Muscle Loss Trauma",
+          "provenance_status": "THEORETICAL_SPECULATIVE_DESIGN",
+          "milestones_days": {
+            "hemostatic_matrix_closure_day": 0.6,
+            "vascularization_half_day": 4.0,
+            "epithelial_closure_day": 13.3,
+            "axon_target_contact_day": 62.1,
+            "full_neurotization_day": 83.1,
+            "functional_strength_50pct_day": 73.5,
+            "functional_strength_90pct_day": "PERMANENT_DEFICIT"
+          },
+          "final_outcomes_365d": {
+            "functional_strength_pct": 84.0,
+            "muscle_mass_recovery_pct": 88.0,
+            "nerve_reinnervation_pct": 100.0,
+            "residual_scar_tissue_fraction": 0.1,
+            "vml_permanent_deficit": true
+          },
+          "methodological_caveat": "Biomarker presence (e.g. Pax7, TGF-beta3, VEGF) is NOT causally sufficient for functional regeneration. Axonal elongation remains strictly bound to 1.0-2.0 mm/day by tubulin transport. Volumetric muscle loss >5mm results in permanent functional deficit in unassisted adult humans."
+        }
+      ]
+    }
+  ],
+  "scientific_conclusions": {
+    "temporal_hierarchy": "Wound healing exhibits rigid physical time decoupling: vascularization occurs in days (4-8d), epithelial dermal closure occurs in 1-2 weeks, but functional muscle and nerve regeneration spans 2 to 6 months. Combat-ready instantaneous healing is a biological impossibility.",
+    "volumetric_muscle_loss_wall": "For Tier III trauma (45 cm^3 volumetric muscle loss), standard human biology achieves only 25-35% functional recovery due to fibrotic cavity collapse (VML barrier). Acomys-like dermal mechanisms do NOT solve large mammalian skeletal muscle loss.",
+    "nerve_regeneration_bottleneck": "For a 90 mm nerve defect, axonal contact with target endplates requires at least 56 to 86 days even under the most optimistic biological growth velocity (1.5-2.0 mm/day). Target muscle motor endplates undergo progressive irreversible atrophy if denervated beyond 12-18 months."
+  }
+}

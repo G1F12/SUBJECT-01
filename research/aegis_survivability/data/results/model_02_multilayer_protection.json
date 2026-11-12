@@ -1,0 +1,126 @@
+{
+  "model_id": "MODEL-02",
+  "description": "Multilayer Protection & Wave Attenuation",
+  "tri_layer_armor": {
+    "wave_attenuation": {
+      "initial_stress_mpa": 300.0,
+      "exit_stress_mpa": 26.38,
+      "total_stress_attenuation_pct": 91.21,
+      "peak_reflected_tensile_stress_mpa": 272.31,
+      "spall_fracture_risk": true,
+      "momentum_conserved": true,
+      "layer_history": [
+        {
+          "layer_index": 0,
+          "layer_name": "Biomineral Hydroxyapatite Tile",
+          "incident_stress_mpa": 300.0,
+          "internal_damped_stress_mpa": 299.01,
+          "transmitted_to_next_mpa": 26.7,
+          "reflected_stress_mpa": -272.31,
+          "interface_trans_coeff": 0.089,
+          "interface_refl_coeff": -0.911
+        },
+        {
+          "layer_index": 1,
+          "layer_name": "Synthetic Colloidal STF (Silica in PEG, Engineering Analog)",
+          "incident_stress_mpa": 26.7,
+          "internal_damped_stress_mpa": 18.09,
+          "transmitted_to_next_mpa": 28.93,
+          "reflected_stress_mpa": 10.85,
+          "interface_trans_coeff": 1.6,
+          "interface_refl_coeff": 0.6
+        },
+        {
+          "layer_index": 2,
+          "layer_name": "Cross-Pied Collagen Backing",
+          "incident_stress_mpa": 28.93,
+          "internal_damped_stress_mpa": 26.38,
+          "transmitted_to_next_mpa": 26.38,
+          "reflected_stress_mpa": 0.0,
+          "interface_trans_coeff": 1.0,
+          "interface_refl_coeff": 0.0
+        }
+      ]
+    },
+    "energy_dissipation": {
+      "total_energy_capacity_j": 94.21,
+      "interfacial_delamination_j": 4.8,
+      "total_areal_density_kg_m2": 12.82,
+      "specific_energy_j_per_kg_m2": 7.35,
+      "layer_breakdown": [
+        {
+          "name": "Biomineral Hydroxyapatite Tile",
+          "crush_energy_j": 33.0,
+          "fracture_energy_j": 1.5,
+          "viscous_energy_j": 0.69,
+          "layer_total_energy_j": 35.19
+        },
+        {
+          "name": "Synthetic Colloidal STF (Silica in PEG, Engineering Analog)",
+          "crush_energy_j": 0.38,
+          "fracture_energy_j": 4.5,
+          "viscous_energy_j": 2.19,
+          "layer_total_energy_j": 7.07
+        },
+        {
+          "name": "Cross-Pied Collagen Backing",
+          "crush_energy_j": 13.0,
+          "fracture_energy_j": 28.0,
+          "viscous_energy_j": 6.15,
+          "layer_total_energy_j": 47.15
+        }
+      ]
+    }
+  },
+  "monolithic_bone_reference": {
+    "wave_attenuation": {
+      "initial_stress_mpa": 300.0,
+      "exit_stress_mpa": 295.75,
+      "total_stress_attenuation_pct": 1.42,
+      "peak_reflected_tensile_stress_mpa": 0.0,
+      "spall_fracture_risk": false,
+      "momentum_conserved": true,
+      "layer_history": [
+        {
+          "layer_index": 0,
+          "layer_name": "Monolithic Cortical Bone Reference",
+          "incident_stress_mpa": 300.0,
+          "internal_damped_stress_mpa": 295.75,
+          "transmitted_to_next_mpa": 295.75,
+          "reflected_stress_mpa": 0.0,
+          "interface_trans_coeff": 1.0,
+          "interface_refl_coeff": 0.0
+        }
+      ]
+    },
+    "energy_dissipation": {
+      "total_energy_capacity_j": 80.86,
+      "interfacial_delamination_j": 0.0,
+      "total_areal_density_kg_m2": 16.15,
+      "specific_energy_j_per_kg_m2": 5.01,
+      "layer_breakdown": [
+        {
+          "name": "Monolithic Cortical Bone Reference",
+          "crush_energy_j": 76.5,
+          "fracture_energy_j": 2.0,
+          "viscous_energy_j": 2.36,
+          "layer_total_energy_j": 80.86
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "exit_stress_reduction_ratio": 11.21,
+    "energy_capacity_gain_ratio": 1.17,
+    "specific_energy_gain_ratio": 1.47
+  },
+  "verdict": {
+    "tri_layer_attenuation_advantage": "CONFIRMED_LEVEL_B",
+    "stf_material_distinction": {
+      "synthetic_colloidal_stf": "EXTERNALLY_SUPPORTED (Industrial silica-glycol suspensions, Lee et al. 2003)",
+      "biological_fluid_synthesis": "UNVALIDATED_SPECULATION (Natural vertebrate fluids are shear-thinning; in vivo shear-thickening risks fatal microvascular occlusion)"
+    },
+    "physical_warning": "91.21% attenuation applies strictly to transmitted compressive stress amplitude into backing. The reflected wave creates -271.7 MPa tensile stress in the outer tile, posing an extreme risk of destructive tensile spallation. Total momentum delivered to the thorax is identical.",
+    "cook_gordon_delamination_gain": "SIGNIFICANT_CRACK_BLUNTING"
+  }
+}

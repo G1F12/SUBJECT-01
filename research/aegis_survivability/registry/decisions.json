@@ -1,0 +1,346 @@
+[
+  {
+    "id": "DEC-0024",
+    "decision": "Establish AEGIS-01 as an autonomous, scientifically rigorous survivability track within SUBJECT-01 without modifying main branch.",
+    "rationale": "AEGIS-01 focuses on mechanical survivability, ballistics, hemostasis, and regeneration, complementing the metabolic/endurance research of SUBJECT-01 while maintaining strict ID isolation and zero collision.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0015"
+  },
+  {
+    "id": "DEC-0025",
+    "decision": "Classify reactive bullet dodging (AEGIS-NEU) as LEVEL D — CONTRADICTED / NO-GO; redirect neural focus to anticipatory perception and motor reflex optimization.",
+    "rationale": "Physics and neurophysiology strictly prove that projectile flight time at combat distances (<70 ms) is shorter than biological sensorimotor latency (>= 30-108 ms). Claiming reactive bullet evasion violates physical causality.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0016"
+  },
+  {
+    "id": "DEC-0026",
+    "decision": "Adopt the Viscous Criterion (VC) and Backface Deformation (BFD <= 25mm) as mandatory non-negotiable pass criteria for AEGIS-BAL.",
+    "rationale": "Arresting penetration while allowing fatal blunt force cardiac/thoracic crush (BABT) is an engineering failure. Real protection requires skeletal load-bridging.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0017"
+  },
+  {
+    "id": "DEC-0027",
+    "decision": "Mandate localized hemostasis mechanisms (topical sealants, sphincter-like microvascular spasm) and reject systemic hypercoagulation.",
+    "rationale": "Systemic prothrombotic alterations induce lethal DIC, stroke, and pulmonary embolism, violating whole-organism viability criteria.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0018"
+  },
+  {
+    "id": "DEC-0028",
+    "decision": "Adopt the Acomys-inspired fibrosis-control model (TGF-beta3 / M2 macrophage polarization) and couple blastema activation with Peto-scale TP53 expansion.",
+    "rationale": "Scarless dermal repair is biologically proven in mammals (Acomys), but unlimited somatic blastema cycling requires robust tumor suppressor expansion to prevent lethal malignancy.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0019"
+  },
+  {
+    "id": "DEC-0029",
+    "decision": "Reject continuous monolithic carapace architectures (ARCH-1) in favor of zoned modular protection (ARCH-4).",
+    "rationale": "Full carapaces induce fatal exertion-induced heat stroke in <60 minutes due to sweat occlusion and degrade sprint speed by 40%. Zoned protection (55% vital area coverage) preserves thermoregulation and mobility.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0020"
+  },
+  {
+    "id": "DEC-0030",
+    "decision": "Enforce strict sequential ID namespace starting at HYP-0008, EXP-0037, FND-0038, NEG-0029, DEC-0015, ISS-0020, SRC-0068 for turnkey compatibility with SUBJECT-01 validator.",
+    "rationale": "Guarantees zero identifier collision with SUBJECT-01 registry and satisfies tools/validate_repository.py stdlib validation constraints.",
+    "status": "CONFIRMED",
+    "date": "2026-11-08",
+    "original_id": "DEC-0021"
+  },
+  {
+    "id": "DEC-0031",
+    "decision": "Formal partitioning of research architectures into three isolated tiers: ARCH-BIO (Fully Endogenous), ARCH-HYBRID (Internal Biohybrid), and ARCH-SPEC (Speculative Biological Architecture). Rejection of external exoskeletons and wearable armor as primary endpoints.",
+    "rationale": "Prevents conflation of biological feasibility with synthetic or speculative technologies, keeping core priority on internal biological solutions.",
+    "status": "CONFIRMED",
+    "date": "2026-11-09",
+    "original_id": "DEC-0023"
+  },
+  {
+    "id": "DEC-0032",
+    "decision": "Adoption of multi-axis functional regeneration framework (8 physiological recovery dimensions) and prioritization of tissue preservation (PEG membrane fusion) to bypass prolonged de novo axonal regrowth.",
+    "rationale": "True recovery requires returning coordinated muscle strength, innervation, vascularity, and joint mobility rather than superficial wound closure.",
+    "status": "CONFIRMED",
+    "date": "2026-11-09",
+    "original_id": "DEC-0024"
+  },
+  {
+    "id": "DEC-0033",
+    "decision": "Mandatory Disaggregation of Peripheral Nerve and Muscle Recovery Metrics",
+    "rationale": "To prevent false claims of rapid functional recovery, all future models and reports must independently report: (1) electrophysiological CNAP conduction, (2) sensory recovery, (3) motor axonal misdirection rate, and (4) contractile muscle torque.",
+    "status": "active",
+    "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0034",
+    "decision": "Classification of Ballistic and Knife Resistance Predictions as EXPLORATORY_NUMERICAL_UNVALIDATED",
+    "rationale": "Mathematical formulations of V50 and blade cut resistance serve as comparative design guides but must never be declared as proven weapon protection without empirical live-fire or drop-tower testing.",
+    "status": "active",
+    "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0035",
+    "decision": "Adoption of Multi-Tier Scientific Model Status Classification (CODE_VERIFIED, PHYSICS_CONSISTENT, CALIBRATION_ONLY, EXTERNALLY_VALIDATED, UNVALIDATED, INVALIDATED)",
+    "rationale": "To prevent epistemic over-claiming and conflation of numerical test passage with real-world empirical validation, all models, parameters, and claims must be assigned explicit scientific status labels based on verifiable physical and empirical criteria.",
+    "status": "active",
+    "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0036",
+    "decision": "Strategic Adoption of Option C (Focused Biohybrid Engineering & Live Empirical Protocol Design) for Cycle 5",
+    "rationale": "Directs research to focus on empirical drop-tower and FEA bio-heat protocols rather than adding more unvalidated models.",
+    "status": "active",
+    "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0037",
+    "decision": "Forensic Revocation and Downgrade of Cycle 4B Validation Claims to PARTIAL and CONDITIONAL",
+    "rationale": "Following discovery of synthetic VML data, biomaterials circular calibration, and normative ISO model substitution, all validation verdicts are formally downgraded to PARTIAL and ARCHITECTURE_BIOLOGICAL_FEASIBILITY is set to CONDITIONAL.",
+    "status": "active",
+    "date": "2026-11-09"
+  },
+  {
+    "id": "DEC-0038",
+    "title": "Reclassify MODEL-13 to UNVALIDATED_FOR_INDIVIDUAL_PREDICTION",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0039",
+    "title": "Adoption of 5-Tier Epistemic Classification for All Mechanical Material Properties",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0040",
+    "title": "Adoption of Exact Matched Climatic Parameters for Thermal Benchmarks (Montain 1994)",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0041",
+    "title": "Epistemic Demarcation Between Endogenous Living Tissues and Internal Biohybrids",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0042",
+    "title": "Mandate Functional Contractile and Neuromuscular Endpoints for Tissue Regeneration",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "DEC-0043",
+    "title": "Formally Downgrade Universal Dogmatic Biological Absolutes to Context-Dependent Physical Envelopes",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0044",
+    "title": "Mandate Non-Human Regeneration Data Tagging with TRANSLATIONAL_UNVALIDATED Flag",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0045",
+    "title": "Retain 1-Node Thermal Baseline as Parsimonious Default Due to Minimal Multi-Node Advantage Under Encapsulation",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0046",
+    "title": "Transition AEGIS Biological Architecture Assessment to CONDITIONAL Pending Whole-Organism Live Integration",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "DEC-0047",
+    "title": "Mandate Microstructural Lamellar Parameter Scaling for Cross-Material Biological Armor Transfer",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "DEC-0048",
+    "title": "Formally Classify Unmeasured Biohybrid Metabolic and Compartment Pressure Values as SCENARIO_ASSUMPTIONS",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "DEC-0049",
+    "title": "Adopt Leave-One-Study-Out (LOSO) Cross-Validation as Mandatory Multi-Study Regeneration Standard",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "DEC-0050",
+    "title": "Retain 1-Node Lumped Thermal Model as Parsimonious Default Based on Authentic Montain 1994 Re-Analysis",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "DEC-0051",
+    "title": "Formal Adoption of Tier 4 Micromechanical Composite Formulation Replacing Ad-Hoc Scaling Factor 0.45",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "DEC-0052",
+    "title": "Assign Status INSUFFICIENT_EVIDENCE to Human Scale Functional Muscle Regeneration Across 150g Defects",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "DEC-0053",
+    "title": "Adopt Cellular Microbuckling Mechanics for Hydrated Biological Keratins Across All Functional Subsystems",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "DEC-0054",
+    "title": "Classify Armor Mass as Scenario Assumption and Designate TARGET-CPE45 as Not Externally Validated",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "DEC-0055",
+    "title": "Reclassification of Zhang 2018 as Development Set, Ratification of Li 2010 as True Holdout, and Formalization of 40°C Scenario Threshold",
+    "cycle": "Cycle 10",
+    "rationale": "Forensic audit proved Cycle 9 parameters were post-hoc fitted to Zhang 2018. Status MATERIALS_TRUE_HOLDOUT = PASS on Zhang 2018 is revoked. True holdout status is ratified on Li et al. (2010). Core temperature 40.0°C is designated as an epistemic scenario threshold, not a medical diagnosis.",
+    "status": "RATIFIED"
+  },
+  {
+    "id": "DEC-0056",
+    "title": "Rectify Tombolato 2010 DOI and Classify Holdout as NOT_VERIFIED",
+    "cycle": "Cycle 10B",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0057",
+    "title": "Adopt Four-Tier Pre-Registration Epistemic Taxonomy",
+    "cycle": "Cycle 10B",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0058",
+    "title": "Formulate 9-Parameter Physics-Informed Keratin Micromechanics Model",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0059",
+    "title": "Eliminate Dynamic LOSO Leakage and Document Single-Cluster Dependency",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0060",
+    "title": "Classify Biological Protection Architecture Feasibility as CONDITIONAL",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0061",
+    "title": "Reconcile TARGET-CPE45 Composite Heat Capacity (270,450 J/K)",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0062",
+    "title": "Ratify Cycle 11 Forensic Grounding and Authorize Cycle 12 Empirical Scope",
+    "cycle": "Cycle 11",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0063",
+    "title": "Demarcate Linear Tg Parameters as MODEL_ASSUMPTIONS and Benchmark Fox Equation",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0064",
+    "title": "Retain Model 4 (Hill+Microarchitecture) and Record NO_VERIFIED_IMPROVEMENT Across Materials",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0065",
+    "title": "Reclassify VML Multi-Center Validation as INSUFFICIENT_DATA Due to Endpoint Incommensurability",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0066",
+    "title": "Prove Pareto Non-Dominance of Architecture B and Formulate Scale Kinematics Model",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0067",
+    "title": "Incorporate Thermal Conduction Resistance and Cardiac Drift into TARGET-CPE45",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0068",
+    "title": "Ratify Cycle 12 Deliverables and Authorize Cycle 13 Empirical Roadmap",
+    "cycle": "Cycle 12",
+    "status": "RATIFIED",
+    "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0069",
+    "title": "Strategic Realignment: Restore AEGIS-01 Core Multi-Domain Survivability Mission",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Following extensive deep-dives into keratin microarchitecture and VML rodent models in Cycles 8-12, AEGIS-01 realigns with its foundational multi-vector survivability mission: tissue resistance, ballistic blunt trauma, neuromuscular reaction, hemostatic stability, functional regeneration, and whole-body metabolic-thermal integration.",
+    "status": "APPROVED",
+    "impact": "Eliminates mono-thematic research capture; establishes comprehensive whole-organism interface contract."
+  },
+  {
+    "id": "DEC-0070",
+    "title": "Rectification of Cycle 12 Deficiencies and Errata",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Resolves all six identified Cycle 12 errors: reconciled architecture scoring matrices between code and documentation; harmonized scale kinematics equations; corrected 45-minute vs 60-minute duration labels; corrected literature citations for Merritt 2010, Quarta 2016, Sicari 2014, and Dziki 2016.",
+    "status": "APPROVED",
+    "impact": "Eliminates documentation-code contradictions; restores bibliographic integrity."
+  },
+  {
+    "id": "DEC-0071",
+    "title": "Adoption of Whole-Organism Model Contract Architecture",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Replaces heuristic composite survival scores with a modular, 9-subsystem interdependent contract. Each linkage explicitly defines inputs, outputs, units, parameter provenance, aleatory/epistemic uncertainty, and empirical validation status.",
+    "status": "APPROVED",
+    "impact": "Prevents false scalar precision; establishes mathematically rigorous whole-body coupling."
+  },
+  {
+    "id": "DEC-0072",
+    "title": "Epistemic Demarcation of Biological Impossibility vs Evolutionary Absence",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Categorical claims of 'biological impossibility' are refined. Clear epistemic boundaries are established between absolute thermodynamic constraints, terrestrial phylogenetic limits, and uncharacterized synthetic biology pathways.",
+    "status": "APPROVED",
+    "impact": "Restores scientific precision to feasibility classifications."
+  },
+  {
+    "id": "DEC-0073",
+    "title": "Reclassification of Simplified Mechanical Thresholds as Exploratory Scenarios",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Early models (MODEL-01 through MODEL-07) mapped simplified mechanical parameters directly to clinical injury scores (AIS, survival). These are formally reclassified as exploratory simulation scenarios marked NOT_EXTERNALLY_VALIDATED, separating code testability from empirical validation.",
+    "status": "APPROVED",
+    "impact": "Eliminates overclaimed clinical predictive validity."
+  },
+  {
+    "id": "DEC-0074",
+    "title": "Cycle 14 Research Prioritization Gate",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "In accordance with strict priority criteria, exactly two research hypotheses are selected for active development in Cycle 14: HYP-0051 (Dynamic Arterial Vasospasm & Hemostatic Shear Limits) and HYP-0052 (Viscoelastic Multilayer Stress-Wave Attenuation). Keratin Tg modeling and scale kinematics are formally transitioned to MAINTENANCE.",
+    "status": "APPROVED",
+    "impact": "Focuses research velocity on high-information-value neglected domains."
+  }
+]

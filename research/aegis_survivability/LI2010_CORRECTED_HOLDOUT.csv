@@ -1,0 +1,4 @@
+specimen_id,hydration_state,water_content_wt_fraction,specimen_count_n,obs_primary_mean_gpa,obs_primary_sd_gpa,interval_lower_1sigma_gpa,interval_upper_1sigma_gpa,cycle10_reported_obs_gpa,cycle10_model_pred_gpa,signed_error_gpa,abs_error_gpa,interval_1sigma_violation_gpa,baseline_retrospective_test_mean_gpa,baseline_prospective_train_all_mean_gpa,baseline_prospective_train_tension_mean_gpa
+LI2010-W00,Desiccated (0% moisture),0.0,6,2.34,0.12,2.22,2.46,2.3,2.189,-0.151,0.151,0.031,1.58333,0.86821,1.835
+LI2010-W08,Ambient equilibrium (8% moisture),0.08,6,1.56,0.06,1.5,1.62,1.65,2.022,0.462,0.462,0.402,1.58333,0.86821,1.835
+LI2010-W19,Fully hydrated (19% moisture),0.19,6,0.85,0.09,0.76,0.94,0.85,1.072,0.222,0.222,0.132,1.58333,0.86821,1.835

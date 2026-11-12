@@ -1,0 +1,490 @@
+[
+  {
+    "id": "HYP-0009",
+    "title": "Hierarchical Bio-Mineral and Cross-Linked Dermal Armor Resistance",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-MAT: Biological Protective Materials",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Quantify sharp puncture and blade cutting resistance of layered osteoderm-collagen-adipose composites vs human skin",
+    "related_experiments": [
+      "EXP-0055"
+    ],
+    "description": "A composite integument of mineralized osteoderms and high-density cross-linked collagen increases cut and puncture resistance by >5x over human baseline.",
+    "original_id": "HYP-0008"
+  },
+  {
+    "id": "HYP-0010",
+    "title": "Acoustic Impedance Mismatch in Biological Multilayers for Shock Wave Attenuation",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-MAT / AEGIS-BAL: Ballistic Survivability",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Measure high-frequency compressive stress pulse transmission through alternating mineral-gel-collagen layers vs monolithic bone",
+    "related_experiments": [
+      "EXP-0056"
+    ],
+    "description": "Alternating high-impedance biomineral tiles with low-impedance viscoelastic interlayers attenuates shock wave amplitude by >90% via interface reflections and Cook-Gordon crack blunting.",
+    "original_id": "HYP-0009"
+  },
+  {
+    "id": "HYP-0011",
+    "title": "Reactive Sensorimotor Evasion of Supersonic Ballistic Projectiles (Bullet Dodging)",
+    "status": "CONTRADICTED",
+    "scope": "AEGIS-NEU: Neural & Motor Acceleration",
+    "claim_level": "LEVEL_D_CONTRADICTED_NO_GO",
+    "test": "Compare projectile flight time at combat distances (7-50m) against minimal theoretical biological sensorimotor latency and motor acceleration",
+    "related_experiments": [
+      "EXP-0057"
+    ],
+    "description": "Reactive dodging of an incoming high-speed bullet is physically impossible for an organism constrained by chemical synapses and biological mass.",
+    "original_id": "HYP-0010"
+  },
+  {
+    "id": "HYP-0012",
+    "title": "Behind-Armor Blunt Trauma and Thoracic Viscous Deceleration Thresholds",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-BAL: Ballistic Survivability",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Evaluate thoracic backface deformation (BFD) and Viscous Criterion (VC) under non-penetrating ballistic impacts with varied skeletal bridging",
+    "related_experiments": [
+      "EXP-0058"
+    ],
+    "description": "Stopping bullet penetration does not prevent lethal trauma; surviving ballistic impact requires rigid skeletal load dispersion over >= 120 mm diameter to keep VC < 0.6 m/s and BFD < 25 mm.",
+    "original_id": "HYP-0011"
+  },
+  {
+    "id": "HYP-0013",
+    "title": "Rapid Local Hemostasis in Dermal and Muscular Vasculature",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-HEM: Hemostasis & Vascular Resilience",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Simulate vascular spasm and accelerated clot formation under arterial pressures in medium muscular arteries",
+    "related_experiments": [
+      "EXP-0059"
+    ],
+    "description": "Engineered local hemostatic sealants accelerate clotting from 180s to <30s, capping blood loss in medium muscular artery transections to <3% (Class I shock).",
+    "original_id": "HYP-0012"
+  },
+  {
+    "id": "HYP-0014",
+    "title": "Chemical Clot-Mediated Sealing of Major Conduit Arteries (Aorta/Femoral)",
+    "status": "CONTRADICTED",
+    "scope": "AEGIS-HEM: Hemostasis & Vascular Resilience",
+    "claim_level": "LEVEL_D_CONTRADICTED_NO_GO",
+    "test": "Model high-shear orifice flow and platelet plug wash-away in transected aorta and femoral arteries",
+    "related_experiments": [
+      "EXP-0059"
+    ],
+    "description": "Chemical hemostasis cannot arrest major conduit arterial transection; high wall shear stress (>40 Pa) dislodges clots, leading to lethal Class IV exsanguination in <120s.",
+    "original_id": "HYP-0013"
+  },
+  {
+    "id": "HYP-0015",
+    "title": "Mammalian Epimorphic Regeneration Coupled with Peto-Scale Tumor Suppression",
+    "status": "CONDITIONAL",
+    "scope": "AEGIS-REG: Regeneration & Repair",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Model multi-scale tissue recovery times and Armitage-Doll multi-stage oncogenic hazard under hyper-proliferative blastema conditions",
+    "related_experiments": [
+      "EXP-0060"
+    ],
+    "description": "Acomys-like scarless healing is viable in mammals, but whole-limb epimorphic regeneration requires 10-20x TP53 tumor suppressor duplication to prevent catastrophic malignancy.",
+    "original_id": "HYP-0014"
+  },
+  {
+    "id": "HYP-0016",
+    "title": "Integrated Zoned Bio-Armor Architecture Resolving the Thermoregulatory Bottleneck",
+    "status": "UNVALIDATED",
+    "scope": "AEGIS-SYS: Integrated Biological Architecture",
+    "claim_level": "LEVEL_C_THEORETICAL_SPECULATIVE",
+    "test": "Whole-organism multi-criteria optimization balancing mass, 9mm ballistic protection, sprint mobility, and thermal heat dissipation",
+    "related_experiments": [
+      "EXP-0061"
+    ],
+    "description": "Zoned armor (55% vital area coverage) is hypothesized to balance 9mm ballistic protection with thermoregulation, but remains an unvalidated top-level conceptual hypothesis (ARCH-4 = UNVALIDATED) requiring experimental verification of skeletal bridging, spall suppression, and multi-tier oncogenic stability.",
+    "original_id": "HYP-0015"
+  },
+  {
+    "id": "HYP-0017",
+    "title": "Universal Puncture Resistance Ceiling for Unmineralized Dermal Composites",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-MAT: Materials Mechanics",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "test": "Evaluate sharp needle indentation (r <= 0.1 mm) across collagenous and hydrogel tissues vs biomineral plates",
+    "related_experiments": [
+      "EXP-0062"
+    ],
+    "description": "All unmineralized soft tissues (human skin, collagen cross-linked hydrogels) are penetrated by sharp blades and needles (r <= 0.1 mm) at forces under 35 N due to Mode-I crack propagation. High puncture resistance (>100 N) strictly requires hard mineral or dense keratinized crystalline plates.",
+    "original_id": "HYP-0016"
+  },
+  {
+    "id": "HYP-0018",
+    "title": "Decoupled Multi-Scale Biological Regeneration Across Acute and Functional Timelines",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-REG: Regenerative Kinetics",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "test": "Simulate 6 coupled phases of tissue regeneration across 365 days under clinical trauma defect tiers",
+    "related_experiments": [
+      "EXP-0063"
+    ],
+    "description": "Regeneration operates on strictly decoupled biological timescales: hemostasis occurs in hours, vascularization in 4-8 days, and dermal re-epithelialization in 1-2 weeks. However, skeletal muscle volumetric defects (>5 mm gap) and peripheral nerve re-innervation (capped at 1.0-2.0 mm/day by tubulin SCa transport) mandate months for recovery, refuting instantaneous combat self-repair.",
+    "original_id": "HYP-0017"
+  },
+  {
+    "id": "HYP-0019",
+    "title": "Cutaneous Evaporative Cooling Collapse in Heavy Biological Armor",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-SYS / SUBJECT-01 CPE45 Integration",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Simulate 2700-second combat performance endurance protocol across temperate, hot-dry, and hot-humid climates",
+    "related_experiments": [
+      "EXP-0064"
+    ],
+    "description": "Extensive cutaneous armor coverage (>70%) severely restricts evaporative cooling, inducing fatal hyperthermic core temperature increases (+5.3 K, exceeding 39.5°C in ~20 minutes) during sustained physical activity in warm environments.",
+    "original_id": "HYP-0018"
+  },
+  {
+    "id": "HYP-0020",
+    "title": "Pareto Dominance of Functionally Graded Selective Plating over Uniform Viscoelastic Coatings",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-SYS: Multi-Criteria Architecture Optimization",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Perform multi-objective non-dominated sorting across ARCH-0 to ARCH-4 over 6 standardized criteria groups",
+    "related_experiments": [
+      "EXP-0065"
+    ],
+    "description": "Functionally graded selective plating (ARCH-4) Pareto-dominates uniform flexible viscoelastic composites (ARCH-2) by delivering 2.4x higher puncture protection with 38% less parasitic mass, 33% higher heat dissipation, and superior sprint retention.",
+    "original_id": "HYP-0019"
+  },
+  {
+    "id": "HYP-0021",
+    "title": "Chemical membrane fusogens (PEG-fusion) bypass slow axonal transport for rapid neurotization",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-REGEN: Functional Neurotization & Preservation",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Simulate 8-axis functional recovery comparing PEG membrane fusion vs unassisted spontaneous elongation",
+    "related_experiments": [
+      "EXP-0067"
+    ],
+    "description": "Application of polyethylene glycol (PEG) immediately post-severance salvages >70% of motor and sensory axolemmas, preventing Wallerian degeneration and restoring motor conduction within 7 days instead of months.",
+    "original_id": "HYP-0021"
+  },
+  {
+    "id": "HYP-0022",
+    "title": "Internal biohybrid subdermal micro-armor decouples protection from cutaneous evaporative cooling",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-HYBRID: Biohybrid Materials & CPE45 Compatibility",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Integrate subdermal micro-armor in 2700-second CPE45 thermodynamic protocol across 3 climate zones",
+    "related_experiments": [
+      "EXP-0068"
+    ],
+    "description": "Placing articulated high-toughness micro-tiles in the subdermal fascial plane limits epidermal sweat gland occlusion to <10%, preventing hyperthermic collapse during the 2700-second CPE45 endurance protocol across temperate and hot-dry climates.",
+    "original_id": "HYP-0022"
+  },
+  {
+    "id": "HYP-0023",
+    "title": "Endogenous selective FGM and keratin scales achieve slash and puncture protection within human locomotor mass budget",
+    "status": "CONFIRMED",
+    "scope": "AEGIS-BIO: Endogenous Biological Armor Systems",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "test": "Quantify mass penalty, flexural stiffness, and cutting/puncture resistance in Muscle Architecture A",
+    "related_experiments": [
+      "EXP-0066"
+    ],
+    "description": "A selective 4.2 kg endogenous dermal composite combining pangolin-like keratin scales and continuous FGM sternal bridges elevates puncture resistance to >160 N and slash resistance to >650 N while preserving >90% sprint speed and acceleration in Muscle Architecture A.",
+    "original_id": "HYP-0023"
+  },
+  {
+    "id": "HYP-0024",
+    "title": "Chemical Axonal Fusogen Disconnect between Electrophysiological Conduction and Motor Force",
+    "status": "supported",
+    "scope": "functional_neuromuscular_regeneration",
+    "claim_level": "LEVEL_B_EMPIRICAL_ANIMAL_AND_CLINICAL",
+    "test": "Compare compound nerve action potential (CNAP) restoration with long-term isometric muscle force and synkinesis rate",
+    "related_experiments": [
+      "EXP-0069"
+    ],
+    "description": "PEG-fusion restores immediate axolemmal integrity and action potential transmission (65-85%), but functional contractile torque is delayed and limited to 45-65% at 1 year due to 35-50% motor axonal misdirection and terminal synaptic remodeling."
+  },
+  {
+    "id": "HYP-0025",
+    "title": "Clinical Ceiling of Extracellular Matrix Bioscaffolds in Human Volumetric Muscle Loss",
+    "status": "supported",
+    "scope": "skeletal_muscle_reconstruction",
+    "claim_level": "LEVEL_A_CLINICAL_COHORT",
+    "test": "Audit 13-patient clinical cohort and pre-clinical data separating volumetric defect mass from peak contractile torque vs intact limb",
+    "related_experiments": [
+      "EXP-0069"
+    ],
+    "description": "Acellular ECM scaffolds in human VML (>15-20% muscle volume loss) provide structural filling and +25-38% strength gains over pre-operative deficit, but persistent fibrotic scarring and vascular diffusion limits preclude return to uninjured baseline strength."
+  },
+  {
+    "id": "HYP-0026",
+    "title": "Empirical External Validation Gate for Native Biomaterials, Human VML, and ISO 7933 Thermoregulation",
+    "statement": "Biological architecture models for native tissues (dermis, keratin, osteoderm) and human VML achieve external validation with mean relative error <15% against published empirical cohorts, whereas speculative materials and live ballistic resistance exhibit epistemic uncertainty that must remain classified as exploratory numerical assumptions.",
+    "status": "supported",
+    "confidence": 0.92,
+    "related_experiments": [
+      "EXP-0072"
+    ]
+  },
+  {
+    "id": "HYP-0027",
+    "title": "Forensic Model Realism & Partial Validation Boundaries",
+    "statement": "When clinical individual participant data and derived physical predictions are evaluated without circular calibration or synthetic data, models exhibit bounded predictive utility (VML MAE ~ 25.7%, Materials error ~ 9.2%, Thermal rate error ~ 0.01 K/min), requiring strict PARTIAL classification rather than unconditional validation.",
+    "status": "supported",
+    "confidence": 0.95,
+    "related_experiments": [
+      "EXP-0073"
+    ]
+  },
+  {
+    "id": "HYP-0028",
+    "title": "Non-Physiological Baseline Equivalence in Clinical VML Prediction",
+    "statement": "Discrete 3-tier host innervation categories fail to outperform a featureless cohort-mean baseline in out-of-sample LOPO-CV RMSE on authentic human VML data (Dziki et al. 2016).",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0074"
+    ]
+  },
+  {
+    "id": "HYP-0029",
+    "title": "LEFM Keratin Irwin Relation Parameter Degeneracy",
+    "statement": "Pangolin Keratin fracture toughness K1c = sqrt(E*Gc) represents verification of the LEFM Irwin identity rather than an independent holdout material prediction.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0075"
+    ]
+  },
+  {
+    "id": "HYP-0030",
+    "title": "Extreme Psychrometric Vapor Pressure Ceiling in Uncompensable Heat Stress",
+    "statement": "Evaporative heat loss capacity under protective armor drops by >50% between 50% RH and 80% RH at 35C, making 80% RH comparisons to Montain et al. (1994) physically invalid.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0076"
+    ]
+  },
+  {
+    "id": "HYP-0031",
+    "title": "Microvascular Canal Compressive Strength Tradeoff in Living Osteoderms",
+    "statement": "Metabolic perfusion of endogenous dermal armor requires vascular canals that reduce solid load-bearing fraction by 20-35%, limiting compressive yield strength below 200 MPa.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0077"
+    ]
+  },
+  {
+    "id": "HYP-0032",
+    "title": "Interfacial Shear Fatigue and Debris Osteolysis in Subdermal Biohybrids",
+    "statement": "Subdermal synthetic ceramic/polymeric armor micro-tiles experience interfacial shear stresses > 5 MPa during cutting maneuvers, causing fatigue loosening within 10^6 cycles.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0078"
+    ]
+  },
+  {
+    "id": "HYP-0033",
+    "title": "Synkinetic Pathfinding and Neuromuscular Transmission Limits in Massive VML",
+    "statement": "Functional contractile force recovery in large VML defects is bottlenecked by aberrant poly-innervation and failed neuromuscular junction maturation rather than myofiber cross-sectional area.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0079"
+    ]
+  },
+  {
+    "id": "HYP-0034",
+    "title": "Satellite Cell Hayflick Exhaustion Under Repeated Muscle Regeneration Cycles",
+    "statement": "Constitutive regeneration over repeated severe volumetric muscle injuries causes Pax7+ stem cell senescence and progressive fibro-adipogenic substitution within 3-5 cycles. (Rectified in Cycle 6: Limit applies under unremitting dystrophic stress; healthy asymmetric division preserves pool).",
+    "status": "DOWNGRADED",
+    "cycle": "Cycle 5",
+    "related_experiments": [
+      "EXP-0079"
+    ]
+  },
+  {
+    "id": "HYP-0035",
+    "title": "Viscoelastic-Hydration Scaling of Biological Alpha/Beta Keratins",
+    "statement": "Natural keratin protective structures obey water-plasticized hydrogen bond disruption and logarithmic strain-rate hardening, allowing accurate modulus prediction across diverse species.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0081"
+    ]
+  },
+  {
+    "id": "HYP-0036",
+    "title": "Lateral Force Transmission Disruption in Volumetric Muscle Loss",
+    "statement": "Contractile recovery after VML is bounded primarily by perilesional myofascial force transmission loss and vascular perfusion limits, rendering ECM scaffold alone ineffective without motor reinnervation and mechanical loading.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0082"
+    ]
+  },
+  {
+    "id": "HYP-0037",
+    "title": "Thermal Nodal Superiority Under Uncompensable Encapsulated Heat Strain",
+    "statement": "A 3-node dynamic thermal model significantly reduces rectal temperature prediction error relative to a 1-node lumped baseline under matched Montain 1994 conditions.",
+    "status": "REFUTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0083"
+    ]
+  },
+  {
+    "id": "HYP-0038",
+    "title": "Zero Metabolic Overhead of Subcutaneous Synthetic Biohybrids",
+    "statement": "Indwelling synthetic armor implants operate with zero ongoing metabolic energy or immune maintenance cost.",
+    "status": "REFUTED",
+    "cycle": "Cycle 6",
+    "related_experiments": [
+      "EXP-0084"
+    ]
+  },
+  {
+    "id": "HYP-0039",
+    "title": "Microstructural Lamellar Scaling Factor for Cross-Material Keratin Transfer",
+    "statement": "Direct cross-material transfer of horn-calibrated modulus to pangolin scales fails (error > 80%) unless scaled by a structural lamellar packing parameter Phi_lamellar ~ 0.45.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 7",
+    "related_experiments": [
+      "EXP-0086"
+    ]
+  },
+  {
+    "id": "HYP-0040",
+    "title": "Multi-Study Invariance of Mechanistic VML Functional Recovery Model",
+    "statement": "A mechanistic VML force recovery model incorporating lateral myofascial shear transmission loss maintains an MAE < 7.0% across independent rodent and porcine studies under Leave-One-Study-Out cross-validation.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 7",
+    "related_experiments": [
+      "EXP-0087"
+    ]
+  },
+  {
+    "id": "HYP-0041",
+    "title": "Thermal Nodal Indistinguishability Under Authentic 2.2 m/s Wind Speed",
+    "statement": "Under authentic Montain 1994 uncompensable heat stress conditions (wind speed 2.2 m/s), core heating rate differences between 1-node and 3-node models are smaller than physiological inter-subject measurement uncertainty.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 7",
+    "related_experiments": [
+      "EXP-0088"
+    ]
+  },
+  {
+    "id": "HYP-0042",
+    "title": "Microarchitecture-Governed Composite Transfer of Keratin Stiffness Across Divergent Taxonomic Structures",
+    "statement": "A micromechanical composite model incorporating measured intermediate filament fraction (phi_if), classical laminate layup factors (eta), and tubule porosity (p) predicts hydration-dependent stiffness across horn, hoof, and pangolin scale without post-hoc scaling factors.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 8",
+    "related_experiments": [
+      "EXP-0091",
+      "EXP-0092"
+    ]
+  },
+  {
+    "id": "HYP-0043",
+    "title": "Cellular Microbuckling and Porosity Scaling Across Ruminant Horn Keratins",
+    "statement": "Hydrated keratinous tissues experience severe compressive modulus reduction because the water-softened amorphous protein matrix permits lamellar microbuckling under axial load; incorporating matrix-softening and porosity scaling explains holdout variation without overpredicting hydrated modulus.",
+    "status": "SUPPORTED",
+    "cycle": "Cycle 9",
+    "related_experiments": [
+      "EXP-0095",
+      "EXP-0096"
+    ]
+  },
+  {
+    "id": "HYP-0044",
+    "title": "Bovid Horn Hydration-Softening Model Transferability Across True Independent Holdouts",
+    "statement": "The Hill-type matrix softening and microbuckling model calibrated in Cycle 9 transfers to unseen bovid horn sheaths (Bos taurus) with positive error reduction over the naive baseline (MAE < 0.50 GPa), but fails on ungulate hoof wall without macromolecular crosslink scaling.",
+    "cycle": "Cycle 10",
+    "status": "VALIDATED",
+    "related_experiments": [
+      "EXP-0099"
+    ]
+  },
+  {
+    "id": "HYP-0045",
+    "statement": "Hydration softening in alpha-keratin is governed by glass transition depression driven by [SS] crosslinks and water sorption.",
+    "cycle": "Cycle 11",
+    "status": "PARTIALLY_SUPPORTED",
+    "related_experiments": [
+      "EXP-0104"
+    ]
+  },
+  {
+    "id": "HYP-0046",
+    "statement": "Equine hoof wall high dry stiffness (>14 GPa) is driven by ultra-low porosity and crystalline microfibrils rather than chemical IF variation.",
+    "cycle": "Cycle 11",
+    "status": "UNDER_INVESTIGATION",
+    "related_experiments": [
+      "EXP-0104"
+    ]
+  },
+  {
+    "id": "HYP-0047",
+    "statement": "Imbricated segmented epidermal scales minimize locomotor and metabolic impedance while providing puncture deflection.",
+    "cycle": "Cycle 11",
+    "status": "CONDITIONAL",
+    "related_experiments": [
+      "EXP-0108"
+    ]
+  },
+  {
+    "id": "HYP-0048",
+    "statement": "Fox equation models water-plasticized Tg curvature in alpha-keratin without unphysical linear divergence at w > 0.25.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0109"
+    ]
+  },
+  {
+    "id": "HYP-0049",
+    "statement": "Acellular ECM scaffolds fail to restore tetanic contractile force in isolated muscle preparations without viable satellite cells.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0110"
+    ]
+  },
+  {
+    "id": "HYP-0050",
+    "statement": "Segmented scale sliding accommodates limb bending up to 50% skin strain before tile gaping or edge jamming occurs.",
+    "cycle": "Cycle 12",
+    "status": "SUPPORTED",
+    "related_experiments": [
+      "EXP-0111"
+    ]
+  },
+  {
+    "id": "HYP-0051",
+    "title": "Dynamic Arterial Vasospasm and Platelet Plug Shear Stability Threshold",
+    "statement": "In penetrating arterial injuries, autonomous hemostasis without external compression is physically impossible above a critical wall shear stress threshold tau_crit (15-35 Pa), because flow-induced drag forces exceed platelet fibrin mesh tensile anchor strength, necessitating active vasoconstrictive lumen reduction r_lumen / r_0 < 0.35 to enable stable thrombus formation.",
+    "cycle": "Cycle 13",
+    "related_experiments": [
+      "EXP-0114"
+    ],
+    "status": "ACTIVE_FOR_CYCLE_14",
+    "relevance_to_subject01": "Directly impacts survival time and circulatory maintenance under trauma."
+  },
+  {
+    "id": "HYP-0052",
+    "title": "Viscoelastic Multilayer Acoustic Impedance Mismatching and Stress Wave Attenuation",
+    "statement": "Stratified tissue architecture with alternating acoustic impedance (keratinized dermis ~1.6 MRayl, adipose layer ~1.35 MRayl, deep fascia ~1.7 MRayl) disperses sharp impact shockwaves via multiple internal acoustic reflections, attenuating transmitted peak thoracic wall acceleration by >25% relative to a homogeneous soft-tissue baseline, thereby reducing the Viscous Criterion injury metric below lethal thresholds.",
+    "cycle": "Cycle 13",
+    "related_experiments": [
+      "EXP-0113",
+      "EXP-0114"
+    ],
+    "status": "ACTIVE_FOR_CYCLE_14",
+    "relevance_to_subject01": "Protects internal organs from Behind-Armor Blunt Trauma and blunt ballistic impacts without rigid monolithic armor."
+  }
+]

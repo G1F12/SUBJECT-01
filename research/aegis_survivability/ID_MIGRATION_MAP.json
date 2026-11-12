@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "title": "AEGIS-01 to SUBJECT-01 Registry Reconciliation & Deconfliction Map",
+    "cycle": "Cycle 2B",
+    "target_subject01_head": "9271a1eabbd8405f7152c151c52047ce54312c38",
+    "collisions_resolved_count": 19,
+    "total_records_migrated": 79,
+    "idempotent": true,
+    "offsets": {
+      "HYP": 1,
+      "EXP": 5,
+      "FND": 4,
+      "NEG": 3,
+      "DEC": 1,
+      "SRC": 5
+    },
+    "colliding_ranges": {
+      "HYP": "HYP-0008..HYP-0008",
+      "EXP": "EXP-0037..EXP-0041",
+      "FND": "FND-0038..FND-0041",
+      "NEG": "NEG-0029..NEG-0031",
+      "DEC": "DEC-0015..DEC-0015",
+      "SRC": "SRC-0068..SRC-0072"
+    }
+  },
+  "id_map": {
+    "HYP-0008": "HYP-0009",
+    "HYP-0009": "HYP-0010",
+    "HYP-0010": "HYP-0011",
+    "HYP-0011": "HYP-0012",
+    "HYP-0012": "HYP-0013",
+    "HYP-0013": "HYP-0014",
+    "HYP-0014": "HYP-0015",
+    "HYP-0015": "HYP-0016",
+    "HYP-0016": "HYP-0017",
+    "HYP-0017": "HYP-0018",
+    "HYP-0018": "HYP-0019",
+    "HYP-0019": "HYP-0020",
+    "EXP-0037": "EXP-0042",
+    "EXP-0038": "EXP-0043",
+    "EXP-0039": "EXP-0044",
+    "EXP-0040": "EXP-0055",
+    "EXP-0041": "EXP-0056",
+    "EXP-0042": "EXP-0057",
+    "EXP-0043": "EXP-0058",
+    "EXP-0044": "EXP-0059",
+    "EXP-0055": "EXP-0060",
+    "EXP-0056": "EXP-0061",
+    "EXP-0057": "EXP-0062",
+    "FND-0038": "FND-0042",
+    "FND-0039": "FND-0043",
+    "FND-0040": "FND-0044",
+    "FND-0041": "FND-0055",
+    "FND-0042": "FND-0056",
+    "FND-0043": "FND-0057",
+    "FND-0044": "FND-0058",
+    "FND-0055": "FND-0059",
+    "FND-0056": "FND-0060",
+    "FND-0057": "FND-0061",
+    "FND-0058": "FND-0062",
+    "FND-0059": "FND-0063",
+    "FND-0060": "FND-0064",
+    "FND-0061": "FND-0065",
+    "FND-0062": "FND-0066",
+    "NEG-0029": "NEG-0034",
+    "NEG-0030": "NEG-0035",
+    "NEG-0031": "NEG-0036",
+    "NEG-0032": "NEG-0037",
+    "NEG-0033": "NEG-0048",
+    "NEG-0034": "NEG-0049",
+    "NEG-0035": "NEG-0050",
+    "NEG-0036": "NEG-0051",
+    "NEG-0037": "NEG-0052",
+    "NEG-0048": "NEG-0053",
+    "NEG-0049": "NEG-0054",
+    "NEG-0050": "NEG-0055",
+    "NEG-0051": "NEG-0056",
+    "DEC-0015": "DEC-0016",
+    "DEC-0016": "DEC-0017",
+    "DEC-0017": "DEC-0018",
+    "DEC-0018": "DEC-0019",
+    "DEC-0019": "DEC-0020",
+    "DEC-0020": "DEC-0021",
+    "DEC-0021": "DEC-0022",
+    "SRC-0068": "SRC-0073",
+    "SRC-0069": "SRC-0074",
+    "SRC-0070": "SRC-0075",
+    "SRC-0071": "SRC-0086",
+    "SRC-0072": "SRC-0087",
+    "SRC-0073": "SRC-0088",
+    "SRC-0074": "SRC-0089",
+    "SRC-0075": "SRC-0090",
+    "SRC-0086": "SRC-0091",
+    "SRC-0087": "SRC-0092",
+    "SRC-0088": "SRC-0093",
+    "SRC-0089": "SRC-0094",
+    "SRC-0090": "SRC-0095",
+    "SRC-0091": "SRC-0096",
+    "SRC-0092": "SRC-0097",
+    "SRC-0093": "SRC-0098",
+    "SRC-0094": "SRC-0099",
+    "SRC-0095": "SRC-0100",
+    "SRC-0096": "SRC-0101",
+    "SRC-0097": "SRC-0102",
+    "SRC-0098": "SRC-0103"
+  },
+  "collisions_reconciled": [
+    {
+      "old_id": "DEC-0015",
+      "new_id": "DEC-0016",
+      "entity_type": "DEC",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "EXP-0037",
+      "new_id": "EXP-0042",
+      "entity_type": "EXP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "EXP-0038",
+      "new_id": "EXP-0043",
+      "entity_type": "EXP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "EXP-0039",
+      "new_id": "EXP-0044",
+      "entity_type": "EXP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "EXP-0040",
+      "new_id": "EXP-0055",
+      "entity_type": "EXP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "EXP-0041",
+      "new_id": "EXP-0056",
+      "entity_type": "EXP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "FND-0038",
+      "new_id": "FND-0042",
+      "entity_type": "FND",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "FND-0039",
+      "new_id": "FND-0043",
+      "entity_type": "FND",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "FND-0040",
+      "new_id": "FND-0044",
+      "entity_type": "FND",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "FND-0041",
+      "new_id": "FND-0055",
+      "entity_type": "FND",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "HYP-0008",
+      "new_id": "HYP-0009",
+      "entity_type": "HYP",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "NEG-0029",
+      "new_id": "NEG-0034",
+      "entity_type": "NEG",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "NEG-0030",
+      "new_id": "NEG-0035",
+      "entity_type": "NEG",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "NEG-0031",
+      "new_id": "NEG-0036",
+      "entity_type": "NEG",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "SRC-0068",
+      "new_id": "SRC-0073",
+      "entity_type": "SRC",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "SRC-0069",
+      "new_id": "SRC-0074",
+      "entity_type": "SRC",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "SRC-0070",
+      "new_id": "SRC-0075",
+      "entity_type": "SRC",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "SRC-0071",
+      "new_id": "SRC-0086",
+      "entity_type": "SRC",
+      "collided_with_subject01": true
+    },
+    {
+      "old_id": "SRC-0072",
+      "new_id": "SRC-0087",
+      "entity_type": "SRC",
+      "collided_with_subject01": true
+    }
+  ]
+}

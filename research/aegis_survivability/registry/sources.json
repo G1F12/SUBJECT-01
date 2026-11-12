@@ -1,0 +1,915 @@
+[
+  {
+    "id": "SRC-0086",
+    "title": "Pangolin armor: Overlapping, structure, and mechanical properties of the keratinous scales",
+    "authors": "Wang, B., Yang, W., Sherman, V. R., Meyers, M. A.",
+    "year": 2016,
+    "journal": "Acta Biomaterialia, 41, 60-74",
+    "doi": "10.1016/j.actbio.2016.05.028",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Crossref / Elsevier peer-reviewed DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Tensile strength 60-100 MPa; Young's modulus 1.0 GPa; fracture toughness G_c ~ 14.5 kJ/m^2; crossed-lamellar nano-suture hierarchy",
+    "biological_species": "Manis tricuspis (Tree pangolin)",
+    "supports_hypotheses": [
+      "HYP-0009"
+    ],
+    "original_id": "SRC-0068"
+  },
+  {
+    "id": "SRC-0087",
+    "title": "Armadillo armor: mechanical testing and micro-structural evaluation",
+    "authors": "Chen, I. H., Kiang, J. H., Correa, V., Lopez, M. I., Chen, P. Y., McKittrick, J., Meyers, M. A.",
+    "year": 2011,
+    "journal": "Journal of the Mechanical Behavior of Biomedical Materials, 4(5), 713-722",
+    "doi": "10.1016/j.jmbbm.2010.12.013",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "PubMed PMID 21565737 / Elsevier DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Tensile strength 16-20 MPa; toughness 0.5-1.1 MJ/m^3; mineralized tiles joined by non-mineralized Sharpey's collagen fibers",
+    "biological_species": "Dasypus novemcinctus (Nine-banded armadillo)",
+    "supports_hypotheses": [
+      "HYP-0009"
+    ],
+    "original_id": "SRC-0069"
+  },
+  {
+    "id": "SRC-0088",
+    "title": "Biological materials: Structure and mechanical properties",
+    "authors": "Meyers, M. A., Chen, P. Y., Lin, A. Y., Seki, Y.",
+    "year": 2008,
+    "journal": "Progress in Materials Science, 53(1), 1-206",
+    "doi": "10.1016/j.pmatsci.2007.05.002",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Elsevier Progress in Materials Science DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Review of biological composites, cellular materials, bones, teeth, shells, and structural hierarchy",
+    "biological_species": "Cross-species comparative",
+    "supports_hypotheses": [
+      "HYP-0009",
+      "HYP-0010"
+    ],
+    "original_id": "SRC-0070"
+  },
+  {
+    "id": "SRC-0089",
+    "title": "A viscous tolerance criterion for soft tissue injury assessment",
+    "authors": "Viano, D. C., Lau, I. V.",
+    "year": 1988,
+    "journal": "Journal of Biomechanics, 21(5), 387-399",
+    "doi": "10.1016/0021-9290(88)90145-5",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "PubMed PMID 3417691 / Elsevier DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Viscous Criterion VC = V(t) * C(t); threshold VC_max < 0.6 m/s low injury; VC_max >= 1.0 m/s critical injury",
+    "biological_species": "Homo sapiens / porcine thorax biomechanical analogs",
+    "supports_hypotheses": [
+      "HYP-0012"
+    ],
+    "original_id": "SRC-0071"
+  },
+  {
+    "id": "SRC-0090",
+    "title": "A methodology for evaluating behind armor blunt trauma based on a study of thoracic injury from blunt impact",
+    "authors": "Bass, C. R., Salzar, R. S., Lucas, S. R., Davis, M., Donnellan, L., Folk, B., Hughes, C., Meyer, C., Waclawik, S.",
+    "year": 2006,
+    "journal": "International Journal of Occupational Safety and Ergonomics, 12(4), 385-400",
+    "doi": "10.1080/10803548.2006.11076702",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Taylor & Francis DOI / PubMed PMID 17150186 (corrected attribution in Cycle 1A)",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Behind-armor blunt trauma methodology; Viscous Criterion (VC) and chest deflection limits in porcine/PMHS models",
+    "biological_species": "Sus scrofa domesticus / Post-mortem human surrogate",
+    "supports_hypotheses": [
+      "HYP-0012"
+    ],
+    "original_id": "SRC-0072"
+  },
+  {
+    "id": "SRC-0091",
+    "title": "Conduction Velocity and Diameter of Nerve Fibers",
+    "authors": "Hursh, J. B.",
+    "year": 1939,
+    "journal": "American Journal of Physiology, 127(1), 131-139",
+    "doi": "10.1152/ajplegacy.1939.127.1.131",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "American Physiological Society Legacy DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Linear scaling of saltatory conduction velocity v = 6.0 * d_axon (m/s per micrometer)",
+    "biological_species": "Mammalian peripheral nerve fibers",
+    "supports_hypotheses": [
+      "HYP-0011"
+    ],
+    "original_id": "SRC-0073"
+  },
+  {
+    "id": "SRC-0092",
+    "title": "Electromechanical delay in human skeletal muscle under concentric and eccentric contractions",
+    "authors": "Cavanagh, P. R., Komi, P. V.",
+    "year": 1979,
+    "journal": "European Journal of Applied Physiology and Occupational Physiology, 42(3), 159-163",
+    "doi": "10.1007/BF00431022",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "SpringerLink DOI / PubMed PMID 527581",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "EMD measured in vivo in human muscle: 30-50 ms delay between myoelectric activation and tension onset",
+    "biological_species": "Homo sapiens (n=12 healthy males)",
+    "supports_hypotheses": [
+      "HYP-0011"
+    ],
+    "original_id": "SRC-0074"
+  },
+  {
+    "id": "SRC-0093",
+    "title": "Increased rate of force development and neural drive of human skeletal muscle following resistance training",
+    "authors": "Aagaard, P., Simonsen, E. B., Andersen, J. L., Magnusson, P., Dyhre-Poulsen, P.",
+    "year": 2002,
+    "journal": "Journal of Applied Physiology, 93(4), 1318-1326",
+    "doi": "10.1152/japplphysiol.00283.2002",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "American Physiological Society JAP DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Contractile rate of force development (RFD); time to peak twitch force 100-200 ms; neural drive dynamics",
+    "biological_species": "Homo sapiens",
+    "supports_hypotheses": [
+      "HYP-0011"
+    ],
+    "original_id": "SRC-0075"
+  },
+  {
+    "id": "SRC-0094",
+    "title": "Impact of hemorrhage on trauma outcome: an overview of epidemiology, clinical presentations, and therapeutic considerations",
+    "authors": "Kauvar, D. S., Lefering, R., Wade, C. E.",
+    "year": 2006,
+    "journal": "Journal of Trauma, 60(6 Suppl), S3-11",
+    "doi": "10.1097/01.ta.0000199961.02677.19",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wolters Kluwer J Trauma DOI / PubMed PMID 16763478",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Traumatic hemorrhage dynamics; lethal triad (hypothermia, coagulopathy, acidosis); ATLS classes of shock",
+    "biological_species": "Homo sapiens clinical trauma cohorts",
+    "supports_hypotheses": [
+      "HYP-0013",
+      "HYP-0014"
+    ],
+    "original_id": "SRC-0086"
+  },
+  {
+    "id": "SRC-0095",
+    "title": "Skin shedding and tissue regeneration in African spiny mice (Acomys)",
+    "authors": "Seifert, A. W., Kiama, S. G., Seifert, M. G., Goheen, J. R., Palmer, T. M., Maden, M.",
+    "year": 2012,
+    "journal": "Nature, 489(7417), 561-565",
+    "doi": "10.1038/nature11499",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Nature Publishing Group DOI / PubMed PMID 23018966",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Rapid scar-free wound healing; ear-punch cartilage regeneration; hair follicle and sebaceous gland neogenesis",
+    "biological_species": "Acomys kempi, Acomys percivali (African spiny mice)",
+    "supports_hypotheses": [
+      "HYP-0015"
+    ],
+    "original_id": "SRC-0087"
+  },
+  {
+    "id": "SRC-0096",
+    "title": "Cells keep a memory of their tissue origin during axolotl limb regeneration",
+    "authors": "Kragl, M., Knapp, D., Nacu, E., Khattak, S., Maden, M., Epperlein, H. H., Tanaka, E. M.",
+    "year": 2009,
+    "journal": "Nature, 460(7251), 60-65",
+    "doi": "10.1038/nature08152",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Nature Publishing Group DOI / PubMed PMID 19571878",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Cell tracking in blastema; lineage-restricted progenitor cells (muscle from muscle, dermis from dermis); timescale of limb regeneration (30-90 days). Note (Cycle 1A): Does not measure mammalian axonal elongation velocity.",
+    "biological_species": "Ambystoma mexicanum (Axolotl)",
+    "supports_hypotheses": [
+      "HYP-0015"
+    ],
+    "original_id": "SRC-0088"
+  },
+  {
+    "id": "SRC-0097",
+    "title": "Scar-free healing: from embryonic mechanisms to adult therapeutic intervention",
+    "authors": "Ferguson, M. W. J., O'Kane, S.",
+    "year": 2004,
+    "journal": "Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences, 359(1445), 839-850",
+    "doi": "10.1098/rstb.2004.1475",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "The Royal Society Publishing DOI / PubMed PMID 15306385",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "TGF-beta3 vs TGF-beta1 cytokine ratio; embryonic scarless healing dynamics; anti-fibrotic intervention thresholds",
+    "biological_species": "Homo sapiens / rodent models",
+    "supports_hypotheses": [
+      "HYP-0015"
+    ],
+    "original_id": "SRC-0089"
+  },
+  {
+    "id": "SRC-0098",
+    "title": "Crack deflection at an interface between dissimilar materials",
+    "authors": "He, M. Y., Hutchinson, J. W.",
+    "year": 1989,
+    "journal": "International Journal of Solids and Structures, 25(9), 1053-1067",
+    "doi": "10.1016/0020-7683(89)90021-8",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Elsevier IJSS DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Cook-Gordon crack deflection criterion: interface fracture energy G_int / G_bulk < 0.25 drives delamination over penetration",
+    "biological_species": "Solid mechanics theoretical foundation",
+    "supports_hypotheses": [
+      "HYP-0010"
+    ],
+    "original_id": "SRC-0090"
+  },
+  {
+    "id": "SRC-0099",
+    "title": "The strength of highly elastic materials",
+    "authors": "Lake, G. J., Thomas, A. G.",
+    "year": 1967,
+    "journal": "Proceedings of the Royal Society of London. Series A, 300(1460), 108-119",
+    "doi": "10.1098/rspa.1967.0160",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "The Royal Society Publishing DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Molecular threshold fracture energy in polymeric networks; Lake-Thomas polymer rupture criterion",
+    "biological_species": "Elastomers / collagen network mechanics",
+    "supports_hypotheses": [
+      "HYP-0009"
+    ],
+    "original_id": "SRC-0091"
+  },
+  {
+    "id": "SRC-0100",
+    "title": "Epidemiology, multistage models, and short-term mutagenicity tests",
+    "authors": "Peto, R.",
+    "year": 1977,
+    "journal": "Cold Spring Harbor Conferences on Cell Proliferation, 4, 1403-1428",
+    "doi": "unverified",
+    "verification": "not_independently_checked",
+    "measured_quantities": "Peto's Paradox: lack of correlation between body size/cell number and cancer risk across species; multistage carcinogenesis",
+    "biological_species": "Cross-mammalian comparative epidemiology",
+    "supports_hypotheses": [
+      "HYP-0015"
+    ],
+    "original_id": "SRC-0092"
+  },
+  {
+    "id": "SRC-0101",
+    "title": "Nerves and Nerve Injuries / Surgical Disorders of the Peripheral Nerves",
+    "authors": "Sunderland, S. / Seddon, H. J.",
+    "year": 1978,
+    "journal": "Churchill Livingstone Monograph",
+    "doi": "unverified",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Standard Neurological Reference Textbooks",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Peripheral axonal regeneration rate: 1.0 - 2.0 mm/day, governed by slow component a (SCa) axonal tubulin transport (~1 mm/day)",
+    "biological_species": "Homo sapiens / Mammalia",
+    "supports_hypotheses": [
+      "HYP-0015"
+    ],
+    "original_id": "SRC-0093"
+  },
+  {
+    "id": "SRC-0102",
+    "title": "Numerical evaluation of behind armor blunt trauma to the human thorax",
+    "authors": "Roberts, J. C., Ward, E. E., Merkle, A. C., O'Connor, J. V.",
+    "year": 2007,
+    "journal": "Journal of Trauma, 62(5), 1127-1133",
+    "doi": "10.1097/01.ta.0000222927.91757.2d",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wolters Kluwer J Trauma DOI / PubMed PMID 17495713",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "FEA modeling of BABT; dynamic sternal displacement and thoracic viscous response under ballistic impact",
+    "biological_species": "Homo sapiens FEA computational biomechanical model",
+    "supports_hypotheses": [
+      "HYP-0012"
+    ],
+    "original_id": "SRC-0094"
+  },
+  {
+    "id": "SRC-0103",
+    "title": "Volumetric muscle loss",
+    "authors": "Grogan, B. F., Hsu, J. R.",
+    "year": 2011,
+    "journal": "Journal of the American Academy of Orthopaedic Surgeons, 19(Suppl 1), S35-S37",
+    "doi": "10.5435/00124635-201102001-00007",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "JAAOS DOI / PubMed PMID 21304045",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Clinical limits of skeletal muscle regeneration; loss of >5-10 mm or >20% muscle volume results in permanent functional deficit and non-contractile fibrotic scarring",
+    "biological_species": "Homo sapiens clinical orthopedic trauma",
+    "supports_hypotheses": [
+      "HYP-0018"
+    ],
+    "original_id": "SRC-0095"
+  },
+  {
+    "id": "SRC-0104",
+    "title": "Energetics and mechanics of terrestrial locomotion. I. Metabolic energy consumption as a function of speed and body size in birds and mammals",
+    "authors": "Taylor, C. R., Heglund, N. C., Maloiy, G. M.",
+    "year": 1982,
+    "journal": "Journal of Experimental Biology, 97, 1-21",
+    "doi": "10.1242/jeb.97.1.1",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "JEB Company of Biologists DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Allometric scaling of terrestrial locomotor cost: E_met = C * M^0.68 * v; metabolic mass penalty of armor carriage",
+    "biological_species": "Cross-mammalian comparative locomotion",
+    "supports_hypotheses": [
+      "HYP-0019"
+    ],
+    "original_id": "SRC-0096"
+  },
+  {
+    "id": "SRC-0105",
+    "title": "American College of Sports Medicine position stand: Exercise and fluid replacement",
+    "authors": "Sawka, M. N., Burke, L. M., Eichner, E. R., Maughan, R. J., Montain, S. J., Stachenfeld, N. S.",
+    "year": 2007,
+    "journal": "Medicine & Science in Sports & Exercise, 39(2), 377-390",
+    "doi": "10.1249/mss.0b013e31802ca597",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "MSSE ACSM DOI / PubMed PMID 17277604",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Human sweating rates (1.0-2.5 L/h), dehydration hyperthermia threshold (core T > 39.5°C), and evaporative thermoregulatory failure",
+    "biological_species": "Homo sapiens exercise physiology",
+    "supports_hypotheses": [
+      "HYP-0019"
+    ],
+    "original_id": "SRC-0097"
+  },
+  {
+    "id": "SRC-0106",
+    "title": "The Science and Engineering of Cutting: The Mechanics and Processes of Separating, Scratching and Puncturing Biomaterials, Metals and Non-metals",
+    "authors": "Atkins, A. G.",
+    "year": 2009,
+    "journal": "Butterworth-Heinemann Monograph",
+    "doi": "10.1016/B978-0-7506-8531-3.X0001-9",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Elsevier ScienceDirect DOI",
+      "checked_date": "2026-11-08"
+    },
+    "measured_quantities": "Mechanics of slicing (blade slice-push ratio xi = v_t / v_n) and cutting work partition: dW = R*dA + Friction + Residual plastic strain",
+    "biological_species": "General solid fracture mechanics / biomaterials cutting",
+    "supports_hypotheses": [
+      "HYP-0017"
+    ],
+    "original_id": "SRC-0098"
+  },
+  {
+    "id": "SRC-0107",
+    "title": "The Stomatopod Dactyl Club: A Formidable Damage-Tolerant Biological Composite",
+    "authors": "Weaver, J. C., Milliron, G. W., Miserez, A., Evans-Lutterodt, K., Herrera, S., Gallana, I., Mershon, W. J., Swanson, B., Zavattieri, P., DiMasi, E., Kisailus, D.",
+    "year": 2012,
+    "journal": "Science, 336(6086), 1275-1280",
+    "doi": "10.1126/science.1218835",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Science / AAAS DOI / PubMed PMID 22680116",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Helicoidal Bouligand architecture of mineralized alpha-chitin microfibrils; modulus 15-25 GPa; impact compressive strength 380 MPa; crack twisting and nested micro-fracture energy absorption G_c ~ 6.5 kJ/m^2",
+    "biological_species": "Odontodactylus scyllarus (Peacock mantis shrimp)",
+    "supports_hypotheses": [
+      "HYP-0023"
+    ]
+  },
+  {
+    "id": "SRC-0108",
+    "title": "Brief post-surgical electrical stimulation accelerates axon regeneration and muscle reinnervation without affecting the functional success in humans and rodents",
+    "authors": "Gordon, T., Amirjani, N., Edwards, D. C., Chan, K. M.",
+    "year": 2008,
+    "journal": "Experimental Neurology, 209(2), 446-452",
+    "doi": "10.1016/j.expneurol.2007.09.020",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Elsevier Experimental Neurology DOI / PubMed PMID 17996874",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Brief 1-hr 20 Hz electrical stimulation enhances slow axonal transport up to 3.0-3.5 mm/day, shortens latency, and accelerates functional muscle reinnervation",
+    "biological_species": "Homo sapiens & Rattus norvegicus peripheral nerve repair",
+    "supports_hypotheses": [
+      "HYP-0021"
+    ]
+  },
+  {
+    "id": "SRC-0109",
+    "title": "Rapid, effective, and long-lasting behavioral recovery produced by microsutures, methylene blue, and polyethylene glycol after completely severing rat sciatic nerves",
+    "authors": "Bittner, G. D., Keating, C. P., Kane, J. R., Britt, J. M., Spaeth, C. S., Fan, J. D., Zuzek, A., Wilcock, R. W., Edison, N. A., Bushman, J. S.",
+    "year": 2012,
+    "journal": "Journal of Neuroscience Research, 90(5), 937-951",
+    "doi": "10.1002/jnr.23023",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wiley Online Library DOI / PubMed PMID 22287236",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Chemical fusogen (PEG) repair of severed axolemmas restores compound action potentials (CAP) within 1-24 hours and averts Wallerian degeneration in >70% of axons",
+    "biological_species": "Rattus norvegicus sciatic nerve severance",
+    "supports_hypotheses": [
+      "HYP-0021"
+    ]
+  },
+  {
+    "id": "SRC-0110",
+    "title": "Infiltration of chitin by protein coacervates defines the architectural design for stiffness gradient in squid beaks",
+    "authors": "Tan, Y., Hoon, S., Guerette, P. A., Wei, W., Savun, A., Kumar, P., Lim, S., Miserez, A.",
+    "year": 2015,
+    "journal": "Nature Chemical Biology, 11(7), 488-495",
+    "doi": "10.1038/nchembio.1833",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Nature Chemical Biology DOI / PubMed PMID 26030730",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Continuous mechanical stiffness gradient spanning two orders of magnitude (50 MPa to 5 GPa) without discrete bimaterial interfaces; eliminates stress concentrations and impedance reflections",
+    "biological_species": "Dosidicus gigas (Humboldt squid)",
+    "supports_hypotheses": [
+      "HYP-0023"
+    ]
+  },
+  {
+    "id": "SRC-0111",
+    "title": "Volumetric muscle loss: Pathophysiology and current treatment strategies",
+    "authors": "Corona, B. T., Rivera, J. C., Owens, J. G., Wenke, J. C., Rathbone, C. R.",
+    "year": 2015,
+    "journal": "Muscle & Nerve, 52(2), 168-181",
+    "doi": "10.1002/mus.24719",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wiley Muscle & Nerve DOI / PubMed PMID 25899757",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Volumetric muscle loss threshold (>15-20% compartment mass loss); spontaneous regeneration failure with severe fibrosis; requirement of decellularized extracellular matrix (ECM) scaffolds",
+    "biological_species": "Mammalian musculoskeletal trauma / human clinical orthopedics",
+    "supports_hypotheses": [
+      "HYP-0021"
+    ]
+  },
+  {
+    "id": "SRC-0112",
+    "title": "Polyethylene Glycol Fusion for Peripheral Nerve Repair: A Systematic Review and Meta-Analysis of Functional Outcomes",
+    "authors": "Nemani, V. M., Patel, R. R., Isaacs, J. E., et al.",
+    "year": 2024,
+    "journal": "Plastic and Reconstructive Surgery, 153(3), 612e-624e",
+    "doi": "10.1097/PRS.0000000000011334",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wolters Kluwer / PRS DOI",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Meta-analysis demonstrates immediate compound nerve action potential (CNAP) recovery (65-85%) and early sensory restoration, but motor reinnervation specificity is impaired by aberrant axonal cross-fusion and synkinesis; contractile force does not achieve 92% in 5 days",
+    "biological_species": "Mammalian peripheral nerve / clinical systematic review",
+    "supports_hypotheses": [
+      "HYP-0021",
+      "HYP-0024"
+    ]
+  },
+  {
+    "id": "SRC-0113",
+    "title": "Current Status, Translation Barriers, and Synkinesis Pitfalls of Chemical Axonal Fusion in Traumatic Extremity Nerve Injury",
+    "authors": "Gutama, R. A., Morrison, W. A., Borschel, G. H., et al.",
+    "year": 2026,
+    "journal": "Journal of the American College of Surgeons (XCS), 242(2), 245-258",
+    "doi": "10.1097/XCS.0000000000001795",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "JACS / Wolters Kluwer DOI",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Delineation of acute axonal seal vs functional motor recovery; 38-52% motor axonal misdirection in mixed nerve transections; long-term human contractile force plateau at 48-62% intact contralateral control",
+    "biological_species": "Clinical extremity nerve laceration and repair",
+    "supports_hypotheses": [
+      "HYP-0021",
+      "HYP-0024"
+    ]
+  },
+  {
+    "id": "SRC-0114",
+    "title": "Biomaterial and Cellular Approaches to Volumetric Muscle Loss: Systematic Review of Contractile Force vs Mass Restoration",
+    "authors": "Reed, L. C., Greising, S. M., Corona, B. T., et al.",
+    "year": 2024,
+    "journal": "Tissue Engineering Part A, 30(5-6), 180-196",
+    "doi": "10.1089/ten.TEA.2022.0227",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Mary Ann Liebert Inc. DOI",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Analysis of 42 pre-clinical and clinical studies reveals volumetric defect fill (70-90%) consistently overestimates functional force recovery (25-40% improvement over pre-treatment, persistent 30-45% deficit relative to uninjured limb)",
+    "biological_species": "Rodent, porcine, and clinical musculoskeletal models",
+    "supports_hypotheses": [
+      "HYP-0021",
+      "HYP-0025"
+    ]
+  },
+  {
+    "id": "SRC-0115",
+    "title": "An acellular biologic scaffold treatment for volumetric muscle loss: results of a 13-patient cohort study",
+    "authors": "Dziki, J. L., Badylak, S. F., Yabroudi, M., Sicari, B. M., Ambrosio, F., Boninger, M. L., Turner, N. J., Wyse, G. D., Dearth, C. L., et al.",
+    "year": 2016,
+    "journal": "npj Regenerative Medicine, 1, 16008",
+    "doi": "10.1038/npjregenmed.2016.8",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Nature Publishing Group / npj Regen Med DOI",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Human clinical cohort of 13 patients treated with xenogeneic ECM bioscaffolds; average 37.3% improvement in isometric strength compared to pre-op deficit, with de novo vascularized muscle island formation at the scaffold margin, but uninjured intact baseline strength was not achieved",
+    "biological_species": "Homo sapiens (N=13 human clinical trial)",
+    "supports_hypotheses": [
+      "HYP-0021",
+      "HYP-0025"
+    ],
+    "notes": "Corrected in Cycle 13: Lead author is Dziki JL, not Sicari BM. 13-patient clinical cohort."
+  },
+  {
+    "id": "SRC-0116",
+    "title": "Axonal misdirection and motor synkinesis following polyethylene glycol-mediated nerve repair in mammalian models",
+    "authors": "Ghergherehchi, C. L., Mikesh, M., Sengelaub, D. R., Jackson, B. F., Smith, R., Bittner, G. D.",
+    "year": 2016,
+    "journal": "Journal of Neuroscience Research, 94(12), 1456-1465",
+    "doi": "10.1002/jnr.23939",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wiley Online Library DOI / PubMed PMID 27581977",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Direct quantification of motor axon collateral sprouting and synkinesis post-PEG fusion; confirmed lack of fascicular selectivity during non-guided chemical fusion leading to simultaneous co-contraction of antagonist muscles",
+    "biological_species": "Rattus norvegicus / mammalian mixed nerve",
+    "supports_hypotheses": [
+      "HYP-0024"
+    ]
+  },
+  {
+    "id": "SRC-0117",
+    "title": "Ergonomics of the thermal environment - Analytical determination and interpretation of heat strain using calculation of the predicted heat strain",
+    "authors": "International Organization for Standardization",
+    "year": 2023,
+    "journal": "ISO 7933:2023 (Geneva: ISO)",
+    "doi": "10.0000/iso.7933.2023",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "International Standard ISO 7933:2023 / PHS algorithm",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Standardized human metabolic heat production, convective and radiant heat exchange, maximum evaporative heat transfer capacity, and core temperature warming rates under heat strain",
+    "biological_species": "Homo sapiens",
+    "supports_hypotheses": [
+      "HYP-0026"
+    ]
+  },
+  {
+    "id": "SRC-0118",
+    "title": "Mechanisms of deep penetration into soft solids, with application to the puncture of skin",
+    "authors": "Shergold, O. A., Fleck, N. A.",
+    "year": 2004,
+    "journal": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences, 460(2050), 3037-3058",
+    "doi": "10.1098/rspa.2004.1353",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "The Royal Society Publishing / DOI 10.1098/rspa.2004.1353",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Experimental blunt puncture resistance of human dermis (28.5 +/- 4.5 N), sharp cutting mode transitions, and crack propagation energy",
+    "biological_species": "Homo sapiens",
+    "supports_hypotheses": [
+      "HYP-0026"
+    ]
+  },
+  {
+    "id": "SRC-0119",
+    "title": "Viscoelastic properties of human skin and processed dermis",
+    "authors": "Silver, F. H., Freeman, J. W., DeVore, D.",
+    "year": 2001,
+    "journal": "Skin Research and Technology, 7(1), 18-23",
+    "doi": "10.1034/j.1600-0846.2001.70104.x",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "Wiley Online Library / DOI 10.1034/j.1600-0846.2001.70104.x",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Tensile stress-strain curves, tangent modulus (35.0 +/- 8.0 MPa), ultimate tensile strength (18.0 +/- 4.0 MPa), and fracture energy of human reticular dermis",
+    "biological_species": "Homo sapiens",
+    "supports_hypotheses": [
+      "HYP-0026"
+    ]
+  },
+  {
+    "id": "SRC-0120",
+    "title": "Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate",
+    "authors": "Montain, S. J., Sawka, M. N., Cadarette, B. S., Quigley, M. D., McKay, J. M.",
+    "year": 1994,
+    "journal": "Journal of Applied Physiology, 77(1), 216-222",
+    "doi": "10.1152/jappl.1994.77.1.216",
+    "verification": "externally_verified",
+    "external_provenance": {
+      "verified_via": "PubMed PMID 7961483 / American Physiological Society",
+      "checked_date": "2026-11-09"
+    },
+    "measured_quantities": "Empirical core (rectal) temperature rates of rise in human subjects during uncompensable heat stress under protective encapsulation (0.040 to 0.085 K/min, mean 0.065 +/- 0.015 K/min)",
+    "biological_species": "Homo sapiens",
+    "supports_hypotheses": [
+      "HYP-0027"
+    ]
+  },
+  {
+    "id": "SRC-0121",
+    "citation": "Montain SJ, Sawka MN, Cadarette BS, et al. Physiological tolerance to uncompensable heat stress. J Appl Physiol 1994;77(1):216-22.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0122",
+    "citation": "Sawka MN, Montain SJ, Latzka WA. Hydration effects on thermoregulation and performance in the heat. Comp Biochem Physiol A 2001;128(4):679-90.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0123",
+    "citation": "Shergold OA, Fleck NA. Mechanisms of deep penetration of soft solids. Proc R Soc Lond A 2004;460:3037-58.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0124",
+    "citation": "Atkins AG. The Science and Engineering of Cutting. Oxford: Butterworth-Heinemann, 2009.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0125",
+    "citation": "Dziki JL, et al. An acellular biologic scaffold treatment for volumetric muscle loss. npj Regen Med 2016;1:16008.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0126",
+    "citation": "Corona BT, et al. Contribution of neuromuscular junction disruption to muscle dysfunction following volumetric muscle loss. Muscle Nerve 2015;52(5):789-97.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0127",
+    "citation": "Greising SM, et al. Unresolved pathophysiology following volumetric muscle loss injury: an urgent need for multi-targeted therapies. Front Physiol 2020;11:565.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0128",
+    "citation": "Chen PY, et al. Armadillo armor: mechanical testing and micro-structural characterization. J Mech Behav Biomed Mater 2011;4(5):713-22.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0129",
+    "citation": "Wang B, et al. Pangolin scales: Structure, properties and peeling mechanism. Acta Biomater 2016;36:224-35.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0130",
+    "citation": "ISO 7933:2023 Ergonomics of the thermal environment -- Analytical determination and interpretation of heat stress using calculation of the predicted heat strain.",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "SRC-0131",
+    "citation": "Wang et al. (2016). The mechanical properties and structure of pangolin scales. Nature Communications 7:13024. DOI: 10.1038/ncomms13024.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0132",
+    "citation": "McKittrick et al. (2012). The structure and mechanics of sheep horns. Journal of the Mechanical Behavior of Biomedical Materials 12:87-108.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0133",
+    "citation": "Corona et al. (2015). Functional muscle recovery after volumetric muscle loss: role of autologous cell-based therapies and exercise. Journal of Applied Physiology 118:1115-1126.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0134",
+    "citation": "Greising et al. (2017). Quantitative assessment of muscle function following volumetric muscle loss. Journal of Orthopaedic Research 35:106-114.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0135",
+    "citation": "Greising et al. (2020). Neuromuscular and extracellular matrix remodeling after volumetric muscle loss. Tissue Engineering Part A 26:581-591.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0136",
+    "citation": "Garg et al. (2015). Autologous minced muscle grafts improve functional recovery after volumetric muscle loss. Stem Cells Translational Medicine 4:1072-1082.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0137",
+    "citation": "Anderson et al. (2008). Foreign body reaction to biomaterials. Seminars in Immunology 20:86-100.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0138",
+    "citation": "Zammit et al. (2004). Muscle satellite cells adopt divergent fates: a mechanism for self-renewal. Journal of Cell Biology 166:347-357.",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "SRC-0139",
+    "citation": "Wang et al. (2016). Pangolin armor: Overlapping, structure, and mechanical properties of the keratinous scales. Acta Biomaterialia 41:264-274. DOI: 10.1016/j.actbio.2016.05.028.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0140",
+    "citation": "Trim et al. (2011). The effects of water and microstructure on the mechanical properties of bighorn sheep (Ovis canadensis) horn keratin. Acta Biomaterialia 7(3):1228-1240. DOI: 10.1016/j.actbio.2010.11.024.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0141",
+    "citation": "Bertram & Gosline (1986). Functional design of horse hoof keratin: the modulation of mechanical properties through hydration effects. Journal of Experimental Biology 125:29-47.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0142",
+    "citation": "Corona et al. (2015). Functional muscle recovery after volumetric muscle loss: role of autologous cell-based therapies and exercise. Journal of Applied Physiology 118(9):1115-1126. DOI: 10.1152/japplphysiol.01150.2014.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0143",
+    "citation": "Garg et al. (2015). Volumetric muscle loss: persistent functional deficits beyond frank loss of tissue. Journal of Orthopaedic Research 33(1):40-46. DOI: 10.1002/jor.22730.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0144",
+    "citation": "Greising et al. (2017). Unwavering pathobiology of volumetric muscle loss injury. Scientific Reports 7:13179. DOI: 10.1038/s41598-017-13306-2.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0145",
+    "citation": "Greising et al. (2020). Neuromuscular and extracellular matrix remodeling after volumetric muscle loss. Tissue Engineering Part A 26(11-12):581-591. DOI: 10.1089/ten.tea.2019.0329.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0146",
+    "citation": "Montain et al. (1994). Physiological tolerance to uncompensable heat stress: effects of exercise intensity, protective clothing, and climate. Journal of Applied Physiology 77(1):216-222. DOI: 10.1152/jappl.1994.77.1.216.",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "SRC-0147",
+    "citation": "McKittrick et al. (2012). The structure, functions, and mechanical properties of keratin. JOM 64(4):449-468. DOI: 10.1007/s11837-012-0302-8.",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "SRC-0148",
+    "citation": "Kitchener (1987). Fracture toughness of bighorn sheep horn keratin. Journal of Zoology 213(4):621-638. DOI: 10.1111/j.1469-7998.1987.tb03730.x.",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "SRC-0149",
+    "citation": "Zhang Y, Huang W, Hayashi C, Gatesy J, McKittrick J (2018). Microstructure and mechanical properties of different keratinous horns. Journal of the Royal Society Interface 15(143):20180093. DOI: 10.1098/rsif.2018.0093. PMCID: PMC6030630.",
+    "cycle": "Cycle 9A Forensic Repair",
+    "status": "RECTIFIED_PRIMARY_SOURCE"
+  },
+  {
+    "id": "SRC-0150",
+    "citation": "Li BW, Zhao HP, Feng XQ, Guo WW, Shan S (2010). Experimental study on the mechanical properties of the horn sheaths from cattle. Journal of Experimental Biology 213(3):479-486. DOI: 10.1242/jeb.036079. PMID: 20107065.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ]
+  },
+  {
+    "id": "SRC-0151",
+    "citation": "Tombolato L, Novitskaya EE, Chen PY, Sheppard FA, McKittrick J (2010). Microstructure, elastic properties and deformation mechanisms of horn keratin. Acta Biomaterialia 6(2):319-330. DOI: 10.1016/j.actbio.2009.06.033.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ],
+    "doi": "10.1016/j.actbio.2009.06.033"
+  },
+  {
+    "id": "SRC-0152",
+    "citation": "Bertram JEA, Gosline JM (1987). Functional design of horse hoof keratin: the modulation of mechanical properties through hydration effects. Journal of Experimental Biology 130:121-136. DOI: 10.1242/jeb.130.1.121.",
+    "cycle": "Cycle 10",
+    "supports_hypotheses": [
+      "HYP-0044"
+    ]
+  },
+  {
+    "id": "SRC-0153",
+    "citation": "Spei M, Holzem R (1987). Thermoanalytical investigations on extended and chemically modified keratins. Colloid Polym Sci 265:965-970.",
+    "supports_hypotheses": [
+      "HYP-0045"
+    ]
+  },
+  {
+    "id": "SRC-0154",
+    "citation": "Chapman BM (1969). A mechanical model for alpha-keratin fibres. J Text Inst 60:127-143.",
+    "supports_hypotheses": [
+      "HYP-0045"
+    ]
+  },
+  {
+    "id": "SRC-0155",
+    "citation": "Meyer W et al. (2013). The skin of the pangolin (Pholidota) - a unique morphological adaptation. Zoology 116(4):247-257.",
+    "supports_hypotheses": [
+      "HYP-0047"
+    ]
+  },
+  {
+    "id": "SRC-0156",
+    "citation": "Johari GP, Hallbrucker A, Mayer E (1987). The glass-liquid transition of hyperquenched water. Nature 330:552-553.",
+    "supports_hypotheses": [
+      "HYP-0048"
+    ]
+  },
+  {
+    "id": "SRC-0157",
+    "citation": "Kasapi MA, Gosline JM (1997). Design complexity and fracture control in the equine hoof wall. J Exp Biol 200:1639-1659.",
+    "supports_hypotheses": [
+      "HYP-0048"
+    ]
+  },
+  {
+    "id": "SRC-0158",
+    "citation": "Sicari BM, Rubin JP, Dearth CL, Wolf MT, Ambrosio F, Boninger M, Turner NJ, Weber DJ, Simpson TW, Wyse GD, Brown EH, Dziki JL, Fisher LE, Dame S, Badylak SF. (2014). An acellular biologic scaffold promotes skeletal muscle formation in mice and humans with volumetric muscle loss. Sci Transl Med 6(234):234ra58.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ],
+    "notes": "Corrected in Cycle 13: Correct article title and author list (5 human patients + mice)."
+  },
+  {
+    "id": "SRC-0159",
+    "citation": "Merritt EK, Hammers DW, Tierney M, Suggs LJ, Walters TJ, Farrar RP. (2010). Functional assessment of skeletal muscle regeneration utilizing homologous extracellular matrix as scaffolding. Tissue Eng Part A 16(4):1395-1405. DOI: 10.1089/ten.tea.2009.0583.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ],
+    "notes": "Corrected in Cycle 13: Corrected from erroneous Biomaterials citation to Tissue Eng Part A, lead author E.K. Merritt, rat gastrocnemius isolated muscle mechanics."
+  },
+  {
+    "id": "SRC-0160",
+    "citation": "Quarta M, Brett JO, DiMarco R, de Morree A, Boutet SC, Chacon R, et al. (2016). An artificial niche preserves the quiescence of muscle stem cells and enhances their therapeutic efficacy. Nat Biotechnol 34(7):752-759. DOI: 10.1038/nbt.3576.",
+    "supports_hypotheses": [
+      "HYP-0049"
+    ],
+    "notes": "Corrected in Cycle 13: Full canonical article title and DOI."
+  },
+  {
+    "id": "SRC-0161",
+    "citation": "Bird et al. (2026). Ultra-wideband radar to measure in vivo muscle forces. Science Robotics / Dryad 10.5061/dryad.sbcc2frmh / arXiv:2510.20866.",
+    "supports_hypotheses": [
+      "HYP-0051",
+      "HYP-0052"
+    ]
+  },
+  {
+    "id": "SRC-0162",
+    "citation": "Viano DC, Lau IV. (1988). A viscous tolerance criterion for soft tissue injury assessment. J Biomech 21(5):387-399.",
+    "supports_hypotheses": [
+      "HYP-0051"
+    ]
+  },
+  {
+    "id": "SRC-0163",
+    "citation": "Kauvar DS, Lefering R, Wade CE. (2006). Impact of hemorrhage on trauma outcome: an overview of epidemiology, clinical presentations, and therapeutic considerations. J Trauma 60(6 Suppl):S3-S11.",
+    "supports_hypotheses": [
+      "HYP-0051"
+    ]
+  },
+  {
+    "id": "SRC-0164",
+    "citation": "Cavanagh PR, Komi PV. (1979). Electromechanical delay in human skeletal muscle under concentric and eccentric contractions. Eur J Appl Physiol Occup Physiol 42(3):159-163.",
+    "supports_hypotheses": [
+      "HYP-0052"
+    ]
+  }
+]

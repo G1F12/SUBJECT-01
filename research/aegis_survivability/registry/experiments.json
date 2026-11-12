@@ -1,0 +1,529 @@
+[
+  {
+    "id": "EXP-0055",
+    "title": "Tissue Mechanics & Puncture/Cut Resistance Across Biological Composites",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_01_tissue_mechanics.py",
+    "inputs": "aegis/model_01_tissue_mechanics.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_01_tissue_mechanics.json"
+    ],
+    "original_id": "EXP-0037"
+  },
+  {
+    "id": "EXP-0056",
+    "title": "Acoustic Impedance Mismatch & Stress Wave Attenuation in Biomimetic Armor",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_02_multilayer_protection.py",
+    "inputs": "aegis/model_02_multilayer_protection.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_02_multilayer_protection.json"
+    ],
+    "original_id": "EXP-0038"
+  },
+  {
+    "id": "EXP-0057",
+    "title": "Sensorimotor Latency, Motor Acceleration & Ballistic Dodge Horizon",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_03_reaction_movement.py",
+    "inputs": "aegis/model_03_reaction_movement.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_03_reaction_movement.json"
+    ],
+    "original_id": "EXP-0039"
+  },
+  {
+    "id": "EXP-0058",
+    "title": "Ballistic Energy Transfer, Viscous Criterion & Behind-Armor Blunt Trauma",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_04_energy_transfer.py",
+    "inputs": "aegis/model_04_energy_transfer.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_04_energy_transfer.json"
+    ],
+    "original_id": "EXP-0040"
+  },
+  {
+    "id": "EXP-0059",
+    "title": "Hemodynamic Stability, Dynamic Vasospasm & Arterial Laceration Limits",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_05_hemodynamic_stability.py",
+    "inputs": "aegis/model_05_hemodynamic_stability.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_05_hemodynamic_stability.json"
+    ],
+    "original_id": "EXP-0041"
+  },
+  {
+    "id": "EXP-0060",
+    "title": "Multi-scale Regeneration Timelines, Axonal Neurotization & Oncogenic Hazards",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_06_regeneration_dynamics.py",
+    "inputs": "aegis/model_06_regeneration_dynamics.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_06_regeneration_dynamics.json"
+    ],
+    "original_id": "EXP-0042"
+  },
+  {
+    "id": "EXP-0061",
+    "title": "Integrated Whole-Organism Multi-Criteria Trade-offs & Architecture Pareto Analysis",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_07_integrated_architecture.py",
+    "inputs": "aegis/model_07_integrated_architecture.py",
+    "report": "FIRST_CYCLE_REPORT.md",
+    "outputs": [
+      "data/results/model_07_integrated_architecture.json",
+      "data/results/summary_metrics.csv"
+    ],
+    "original_id": "EXP-0043"
+  },
+  {
+    "id": "EXP-0062",
+    "title": "Comparative Mechanics of Biological Protective Materials (Systems A through E)",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_08_materials_comparison.py",
+    "inputs": "aegis/model_08_materials_comparison.py",
+    "report": "BIOLOGICAL_MATERIALS_COMPARISON.md",
+    "outputs": [
+      "data/results/model_08_materials_comparison.json"
+    ],
+    "original_id": "EXP-0044"
+  },
+  {
+    "id": "EXP-0063",
+    "title": "Multi-Scale Tissue Regeneration Dynamics Across 6 Coupled Phases",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_09_multiscale_regeneration.py",
+    "inputs": "aegis/model_09_multiscale_regeneration.py",
+    "report": "REGENERATION_MODEL_RESULTS.md",
+    "outputs": [
+      "data/results/model_09_multiscale_regeneration.json"
+    ],
+    "original_id": "EXP-0055"
+  },
+  {
+    "id": "EXP-0064",
+    "title": "SUBJECT-01 CPE45 Combat Performance Endurance 2700s Integration",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_10_cpe45_integration.py",
+    "inputs": "aegis/model_10_cpe45_integration.py",
+    "report": "SUBJECT01_CPE45_INTEGRATION.md",
+    "outputs": [
+      "data/results/model_10_cpe45_integration.json"
+    ],
+    "original_id": "EXP-0056"
+  },
+  {
+    "id": "EXP-0065",
+    "title": "Multi-Criteria Architecture Comparison & Pareto Front Optimization",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_11_architecture_pareto.py",
+    "inputs": "aegis/model_11_architecture_pareto.py",
+    "report": "ARCHITECTURE_PARETO_ANALYSIS.md",
+    "outputs": [
+      "data/results/model_11_architecture_pareto.json"
+    ],
+    "original_id": "EXP-0057"
+  },
+  {
+    "id": "EXP-0066",
+    "title": "Numerical materials evidence evaluation of biological, biohybrid, and speculative armor materials",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_12_biological_materials.py",
+    "inputs": "aegis/model_12_biological_materials.py",
+    "report": "CYCLE_3_REPORT.md",
+    "outputs": [
+      "data/results/model_12_biological_materials.json"
+    ],
+    "original_id": "EXP-0063"
+  },
+  {
+    "id": "EXP-0067",
+    "title": "Multi-axis functional tissue regeneration and acute cellular preservation simulation",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_13_functional_regeneration.py",
+    "inputs": "aegis/model_13_functional_regeneration.py",
+    "report": "CYCLE_3_REPORT.md",
+    "outputs": [
+      "data/results/model_13_functional_regeneration.json"
+    ],
+    "original_id": "EXP-0064"
+  },
+  {
+    "id": "EXP-0068",
+    "title": "Cross-category compatibility and thermodynamic CPE45 evaluation with SUBJECT-01 motor architectures",
+    "status": "arithmetic_reproduced",
+    "model": "aegis/model_14_architecture_categories.py",
+    "inputs": "aegis/model_14_architecture_categories.py",
+    "report": "CYCLE_3_REPORT.md",
+    "outputs": [
+      "data/results/model_14_architecture_categories.json"
+    ],
+    "original_id": "EXP-0065"
+  },
+  {
+    "id": "EXP-0069",
+    "title": "Human-Scale Functional Neuromuscular Regeneration Simulation",
+    "status": "completed",
+    "model": "MODEL-13",
+    "inputs": {
+      "nerve_gap_mm": 45.0,
+      "vml_fraction": 0.194,
+      "misdirection_penalty": 0.45,
+      "nmj_senescence_tau_days": 180.0
+    },
+    "report": "CYCLE_4_COMPUTATIONAL_RESULTS.md",
+    "outputs": {
+      "cnap_recovery_pct": 75.0,
+      "force_5d_pct": 22.5,
+      "force_longterm_pct": 58.0,
+      "vml_mass_fill_pct": 78.0,
+      "vml_strength_improvement_pct": 31.5,
+      "residual_intact_deficit_pct": 36.0
+    }
+  },
+  {
+    "id": "EXP-0070",
+    "title": "Multi-Regime Mechanical Cutting and Ballistic Sensitivity Audit",
+    "status": "completed",
+    "model": "MODEL-12",
+    "inputs": {
+      "thickness_mm": 4.0,
+      "wedge_angle_deg": 30.0,
+      "blade_width_mm": 20.0,
+      "slice_to_push_ratio": [
+        0.0,
+        1.0,
+        4.0
+      ]
+    },
+    "report": "MATERIALS_PARAMETER_AUDIT.md",
+    "outputs": {
+      "mode_1_crack_threshold_n": 48.6,
+      "guillotine_wedge_chop_n": 680.0,
+      "draw_slicing_force_n": 32.4,
+      "recht_ipson_v50_surrogate_m_s": 292.8
+    }
+  },
+  {
+    "id": "EXP-0071",
+    "title": "Thermodynamic & Physiological Stress Mapping under CPE45 with SUBJECT-01 Muscle Architectures",
+    "status": "completed",
+    "model": "MODEL-14",
+    "inputs": {
+      "cpe45_duration_s": 2700,
+      "muscle_architectures": [
+        "A",
+        "B",
+        "C"
+      ],
+      "climates": [
+        "temperate",
+        "jungle"
+      ]
+    },
+    "report": "CPE45_PHYSIOLOGY_VALIDATION.md",
+    "outputs": {
+      "jungle_t_core_failure_time_min": {
+        "ARCH_BIO": 20.2,
+        "ARCH_HYBRID": 26.8,
+        "ARCH_SPEC": 34.5
+      }
+    }
+  },
+  {
+    "id": "EXP-0072",
+    "title": "Three-Track Independent External Validation Gate (Human VML, Biomaterials Open Data, ISO 7933 PHS Thermoregulation)",
+    "status": "completed",
+    "model": "MODEL-12, MODEL-13, MODEL-14",
+    "inputs": {
+      "track_1_dziki_cohort_n": 13,
+      "track_2_biomaterial_benchmarks_n": 12,
+      "track_3_iso7933_climates": [
+        "temperate",
+        "jungle"
+      ]
+    },
+    "report": "CYCLE_4B_REPORT.md",
+    "outputs": {
+      "track_1_vml_overall_mae_pct": 10.42,
+      "track_1_vml_validation_set_mae_pct": 5.92,
+      "track_2_biomaterials_mean_rel_error_pct": 0.5,
+      "track_3_iso7933_core_warming_error_k_min": 0.005
+    }
+  },
+  {
+    "id": "EXP-0073",
+    "title": "Forensic External Validation Audit across VML, Biomaterials, and Thermoregulation",
+    "status": "completed",
+    "model": "MODEL-12, MODEL-13, MODEL-14",
+    "inputs": {
+      "vml_source": "Dziki et al. (2016) PMC5744714 authentic IPD (N=13)",
+      "materials_ledger_n": 14,
+      "thermal_evaluation": "Three-Tier: Conservation, ISO 7933 Reference, Montain 1994 Live Human Data"
+    },
+    "report": "FORENSIC_VML_AUDIT.md, MATERIALS_DATA_LEAKAGE_AUDIT.md, THERMAL_VALIDATION_CLASSIFICATION.md",
+    "outputs": {
+      "vml_actual_mae_pct": 25.74,
+      "vml_lopo_cv_mae_pct": 36.21,
+      "materials_genuine_prediction_error_pct": 9.15,
+      "thermal_human_literature_error_k_min": 0.0108,
+      "verdicts": {
+        "VALIDATION_VML": "PARTIAL",
+        "VALIDATION_MATERIALS": "PARTIAL",
+        "VALIDATION_THERMAL": "PARTIAL",
+        "ARCHITECTURE_BIOLOGICAL_FEASIBILITY": "CONDITIONAL",
+        "CYCLE_5_READY": "YES"
+      }
+    }
+  },
+  {
+    "id": "EXP-0074",
+    "title": "Forensic LOPO-CV VML Benchmark and Missing-Data Sensitivity Analysis",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0075",
+    "title": "Epistemic 5-Tier Decomposition of Biological Materials Predictions",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0076",
+    "title": "Matched-Condition Thermoregulatory Simulation Against Montain et al. (1994)",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0077",
+    "title": "Endogenous Dermal Armor Perfusion, Turnover, and Biomineralization Feasibility",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0078",
+    "title": "Internal Biohybrid Interface Shear, Fatigue, and Particulate Osteolysis Analysis",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0079",
+    "title": "Multi-Axis Functional Muscle Regeneration, Transmission Safety Factor, and Re-Innervation",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0080",
+    "title": "SUBJECT-01 Unified Compatibility and TARGET-CPE45 Multi-Climate Evaluation",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "EXP-0081",
+    "title": "Independent Holdout Verification of Keratin Hydration-Rate Mechanics on Wang 2016 and McKittrick 2012 Coupons",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0082",
+    "title": "Multi-Species VML Contractile Recovery Holdout Analysis on Corona 2015, Greising 2017/2020, and Garg 2015 Datasets",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0083",
+    "title": "Comparative Evaluation of 1-Node vs 3-Node Thermal Models Under Matched Montain 1994 Heat Stress",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0084",
+    "title": "Forensic Biological Absolutes Rectification and Metabolic Cost Analysis of Synthetic Implants",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0085",
+    "title": "SUBJECT-01 Architectural Compatibility, Intracompartmental Pressure, and Kinematic Boundary Assessment",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "EXP-0086",
+    "title": "Forensic Cross-Study and Cross-Material Keratin Mechanics Transfer Evaluation",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0087",
+    "title": "Leave-One-Study-Out (LOSO) Cross-Validation of VML Force Recovery Across 82 Animals",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0088",
+    "title": "Thermal Reproduction Audit under Authentic Montain 1994 Environmental Wind Speed (2.2 m/s)",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0089",
+    "title": "Forensic Evidence Audit of 21 Claimed Experimental Observations and Provenance Mapping",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0090",
+    "title": "SUBJECT-01 Cycle 12 Consistency Check and Compartment Pressure Biomechanical Boundary Audit",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "EXP-0091",
+    "title": "Mathematical Audit and Reconciliation of Keratin Hydration Non-Linearity and Glass-Transition Plasticization",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0092",
+    "title": "Leave-One-Material-Out (LOMO) Cross-Validation of 4 Model Tiers on Keratinous Armor Tissues",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0093",
+    "title": "Forensic Multi-Level Evaluation of Preclinical VML Functional Regeneration under Strict Dynamic LOSO",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0094",
+    "title": "TARGET-CPE45 Seven-Parameter Physiological Sensitivity Sweep Under Parsimonious 1-Node Thermoregulation",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "EXP-0095",
+    "title": "Keratin Parameter Forensic Provenance and Conflation Audit",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0096",
+    "title": "Independent Holdout Validation on Ruminant Horn Keratins (Huang 2018)",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0097",
+    "title": "Strict Dynamic LOSO Functional Regeneration Multi-Level Audit",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0098",
+    "title": "Thermodynamically Sound CPE45 1-Node Simulation and Sensitivity Sweep",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "EXP-0099",
+    "title": "Pre-Registered True Independent Holdout Validation on Li et al. (2010) Bovine Horn Sheath",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0044",
+    "status": "COMPLETED",
+    "description": "Evaluated frozen Cycle 9/10 micromechanics model (SHA-256: 225d6994...) against unseen experimental measurements from Li et al. 2010 (Bos taurus) across dry, intermediate, and wet hydration states."
+  },
+  {
+    "id": "EXP-0100",
+    "title": "Forensic Audit and Preclinical Boundary Demarcation of 11 VML Regeneration Cohorts",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0042",
+    "status": "COMPLETED",
+    "description": "Audited cohort provenance, animal counts, shared laboratory authorship, and denervation parameter leakage across Corona, Greising, and Garg VML datasets."
+  },
+  {
+    "id": "EXP-0101",
+    "title": "Multi-Criteria Physics-Bounded Modeling of Three Biological Protective Architectures",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0043",
+    "status": "COMPLETED",
+    "description": "Simulated mass, joint mobility, skin strain, compartment pressure, fatigue resistance, perfusion demand, and thermoregulation across monolithic, segmented imbricated, and fibrous architectures."
+  },
+  {
+    "id": "EXP-0102",
+    "title": "TARGET-CPE45 First-Principles Thermodynamic Modeling and Parametric Uncertainty Sweeps",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0036",
+    "status": "COMPLETED",
+    "description": "Evaluated 1-node thermodynamic model with explicit J/K heat capacity, locomotor transport cost, and decoupled sweat evaporation under multi-parametric uncertainty."
+  },
+  {
+    "id": "EXP-0103",
+    "title": "In Silico Breakthrough Priority Formulation for Cycle 11 Endogenous Biological Architecture",
+    "cycle": "Cycle 10",
+    "hypothesis_id": "HYP-0044",
+    "status": "COMPLETED",
+    "description": "Formulated three testable computational questions, missing mechanisms, and falsification criteria for morphogenetic synthesis, maintenance turnover, and multiscale mechanics."
+  },
+  {
+    "id": "EXP-0104",
+    "name": "Li et al. (2010) Forensic Recalculation & Dual-Baseline Verification",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0105",
+    "name": "Tombolato et al. (2010) Mode Conflation & Graphical Provenance Audit",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0106",
+    "name": "Cryptographic & Chronological Pre-Registration Audit",
+    "cycle": "Cycle 10B",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0107",
+    "name": "Leakage-Free Prospective VML LOSO Cross-Validation",
+    "cycle": "Cycle 11",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0108",
+    "name": "TARGET-CPE45 Mass-Energy Thermodynamic Reconciliation Simulation",
+    "cycle": "Cycle 11",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0109",
+    "name": "Five-Model Physical Comparison on Li 2010 Horn and Kasapi/Bertram Hoof Wall",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0110",
+    "name": "VML Treatment Prior Sensitivity Sweep and External Multi-Center Lab Audit",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0111",
+    "name": "Monte Carlo 100,000-Draw Weight Permutation and Scale Kinematics Modeling",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0112",
+    "name": "TARGET-CPE45 Coupled Thermal Conduction, Cardiovascular Drift, and Humidity Sweep",
+    "cycle": "Cycle 12",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0113",
+    "title": "Whole-Organism Model Subsystem Coupling, Interface Contract & Sensitivity Simulation",
+    "cycle": "Cycle 13",
+    "sources": [
+      "SRC-0161",
+      "SRC-0162"
+    ],
+    "description": "Formulation and numerical execution of 9-subsystem interdependent interface contracts linking mass, mechanics, neuromuscular actuation, hemodynamics, regeneration, energetics, thermoregulation, and TARGET-CPE45.",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0114",
+    "title": "Forensic Multi-Domain Audit of Neglected Research Tracks and Early Models 01-07",
+    "cycle": "Cycle 13",
+    "sources": [
+      "SRC-0162",
+      "SRC-0163",
+      "SRC-0164"
+    ],
+    "description": "Systematic audit of vascular injury mechanics, ballistic energy dissipation, neuromuscular electromechanical delay, and functional tissue regeneration against independent published empirical benchmarks.",
+    "status": "COMPLETED"
+  }
+]

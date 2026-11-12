@@ -1,0 +1,306 @@
+{
+  "model_id": "MODEL-08",
+  "description": "Comparative Mechanics of Protective Biological Materials (Cycle 2A)",
+  "systems_evaluated": [
+    {
+      "system_id": "SYS-A",
+      "name": "Normal Human Skin (Epidermis + Dermis + Hypodermis)",
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "thickness_mm": 6.02,
+      "areal_density_kg_m2": 6.14,
+      "sharp_puncture_n_ci": [
+        17.24,
+        30.47
+      ],
+      "slicing_cut_n_ci": [
+        61.12,
+        106.26
+      ],
+      "tensile_spall_risk": false,
+      "metabolic_cost_w_m2": 2.8,
+      "immune_tolerance": "NATIVE",
+      "primary_unknown": "Nonlinear strain-stiffening anisotropy under multidirectional biaxial tension"
+    },
+    {
+      "system_id": "SYS-B",
+      "name": "Multilayer Keratinous Integument (Pangolin-Inspired)",
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "thickness_mm": 4.5,
+      "areal_density_kg_m2": 5.31,
+      "sharp_puncture_n_ci": [
+        26.65,
+        45.48
+      ],
+      "slicing_cut_n_ci": [
+        133.3,
+        236.84
+      ],
+      "tensile_spall_risk": false,
+      "metabolic_cost_w_m2": 1.2,
+      "immune_tolerance": "AUTO-SYNTHESIZABLE (Keratinocyte-derived)",
+      "primary_unknown": "Susceptibility to embrittlement under extreme dehydration (RH < 20%)"
+    },
+    {
+      "system_id": "SYS-C",
+      "name": "Biomineralized Osteoderm System (Armadillo/Crocodile-Inspired)",
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "thickness_mm": 5.0,
+      "areal_density_kg_m2": 9.25,
+      "sharp_puncture_n_ci": [
+        11.55,
+        17.47
+      ],
+      "slicing_cut_n_ci": [
+        72.8,
+        135.83
+      ],
+      "tensile_spall_risk": true,
+      "metabolic_cost_w_m2": 4.5,
+      "immune_tolerance": "AUTO-SYNTHESIZABLE (Osteoblast/collagen derived)",
+      "primary_unknown": "Acoustic spallation: reflected tensile wave exceeds 65 MPa tensile limit under impact"
+    },
+    {
+      "system_id": "SYS-D",
+      "name": "Cross-Linked Bio-Toughened Collagen-Resilin Composite",
+      "provenance": "MIXED",
+      "thickness_mm": 4.0,
+      "areal_density_kg_m2": 4.8,
+      "sharp_puncture_n_ci": [
+        44.46,
+        79.73
+      ],
+      "slicing_cut_n_ci": [
+        132.33,
+        232.59
+      ],
+      "tensile_spall_risk": false,
+      "metabolic_cost_w_m2": 3.2,
+      "immune_tolerance": "THEORETICAL_RISK (Engineered cross-link neo-epitopes)",
+      "primary_unknown": "Enzymatic cross-linking control: risk of systemic dermal sclerosis or contractures"
+    },
+    {
+      "system_id": "SYS-E",
+      "name": "Functionally Graded Biomaterial (Continuous Mineral-to-Collagen FGM)",
+      "provenance": "THEORETICALLY_ASSIGNED",
+      "thickness_mm": 5.5,
+      "areal_density_kg_m2": 8.53,
+      "sharp_puncture_n_ci": [
+        23.66,
+        38.33
+      ],
+      "slicing_cut_n_ci": [
+        167.2,
+        295.77
+      ],
+      "tensile_spall_risk": true,
+      "metabolic_cost_w_m2": 5.0,
+      "immune_tolerance": "THEORETICAL_RISK (High morphological complexity)",
+      "primary_unknown": "In vivo cellular maintenance: osteoclast/osteoblast spatial signaling across continuous gradient"
+    }
+  ],
+  "detailed_performance": [
+    {
+      "system_id": "SYS-A",
+      "name": "Normal Human Skin (Epidermis + Dermis + Hypodermis)",
+      "areal_density_kg_m2": 6.14,
+      "specific_modulus_m2_s2": 34313.7,
+      "elastic_strain_energy_j_m3": 4628571.4,
+      "puncture_sharp_needle_n": 23.46,
+      "puncture_blunt_punch_n": 244.3,
+      "cut_guillotine_normal_n": 617.3,
+      "cut_slicing_draw_n": 82.3,
+      "acoustic_spall_reflection_coeff": -0.026,
+      "tensile_spall_fracture_risk": false,
+      "dynamic_failure_modes": {
+        "compressive_crush_risk": true,
+        "shear_delamination_risk": true,
+        "min_shock_rise_time_ns": 64996.9,
+        "estimated_impact_shock_pressure_mpa": 28.3,
+        "scientific_caveat": "A low acoustic reflection coefficient prevents tensile spallation, but does NOT guarantee absence of fracture: compressive pulverization occurs if shock pressure exceeds compressive yield, and shear delamination occurs under oblique impacts."
+      },
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "ballistic_claim_status": "NO_DIRECT_BALLISTIC_RESISTANCE_PROVEN_WITHOUT_EXTERNAL_RIGID_FRAME"
+    },
+    {
+      "system_id": "SYS-B",
+      "name": "Multilayer Keratinous Integument (Pangolin-Inspired)",
+      "areal_density_kg_m2": 5.31,
+      "specific_modulus_m2_s2": 1016949.2,
+      "elastic_strain_energy_j_m3": 3010416.7,
+      "puncture_sharp_needle_n": 35.35,
+      "puncture_blunt_punch_n": 528.1,
+      "cut_guillotine_normal_n": 1352.3,
+      "cut_slicing_draw_n": 180.4,
+      "acoustic_spall_reflection_coeff": -0.178,
+      "tensile_spall_fracture_risk": false,
+      "dynamic_failure_modes": {
+        "compressive_crush_risk": true,
+        "shear_delamination_risk": true,
+        "min_shock_rise_time_ns": 8924.7,
+        "estimated_impact_shock_pressure_mpa": 178.5,
+        "scientific_caveat": "A low acoustic reflection coefficient prevents tensile spallation, but does NOT guarantee absence of fracture: compressive pulverization occurs if shock pressure exceeds compressive yield, and shear delamination occurs under oblique impacts."
+      },
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "ballistic_claim_status": "NO_DIRECT_BALLISTIC_RESISTANCE_PROVEN_WITHOUT_EXTERNAL_RIGID_FRAME"
+    },
+    {
+      "system_id": "SYS-C",
+      "name": "Biomineralized Osteoderm System (Armadillo/Crocodile-Inspired)",
+      "areal_density_kg_m2": 9.25,
+      "specific_modulus_m2_s2": 7567567.6,
+      "elastic_strain_energy_j_m3": 150892.9,
+      "puncture_sharp_needle_n": 14.33,
+      "puncture_blunt_punch_n": 580.0,
+      "cut_guillotine_normal_n": 768.2,
+      "cut_slicing_draw_n": 102.5,
+      "acoustic_spall_reflection_coeff": -0.615,
+      "tensile_spall_fracture_risk": true,
+      "dynamic_failure_modes": {
+        "compressive_crush_risk": true,
+        "shear_delamination_risk": true,
+        "min_shock_rise_time_ns": 3635.1,
+        "estimated_impact_shock_pressure_mpa": 763.4,
+        "scientific_caveat": "A low acoustic reflection coefficient prevents tensile spallation, but does NOT guarantee absence of fracture: compressive pulverization occurs if shock pressure exceeds compressive yield, and shear delamination occurs under oblique impacts."
+      },
+      "provenance": "EXPERIMENTALLY_SUPPORTED",
+      "ballistic_claim_status": "NO_DIRECT_BALLISTIC_RESISTANCE_PROVEN_WITHOUT_EXTERNAL_RIGID_FRAME"
+    },
+    {
+      "system_id": "SYS-D",
+      "name": "Cross-Linked Bio-Toughened Collagen-Resilin Composite",
+      "areal_density_kg_m2": 4.8,
+      "specific_modulus_m2_s2": 208333.3,
+      "elastic_strain_energy_j_m3": 11250000.0,
+      "puncture_sharp_needle_n": 60.71,
+      "puncture_blunt_punch_n": 684.7,
+      "cut_guillotine_normal_n": 1347.3,
+      "cut_slicing_draw_n": 179.7,
+      "acoustic_spall_reflection_coeff": -0.104,
+      "tensile_spall_fracture_risk": false,
+      "dynamic_failure_modes": {
+        "compressive_crush_risk": true,
+        "shear_delamination_risk": true,
+        "min_shock_rise_time_ns": 17527.1,
+        "estimated_impact_shock_pressure_mpa": 82.2,
+        "scientific_caveat": "A low acoustic reflection coefficient prevents tensile spallation, but does NOT guarantee absence of fracture: compressive pulverization occurs if shock pressure exceeds compressive yield, and shear delamination occurs under oblique impacts."
+      },
+      "provenance": "MIXED",
+      "ballistic_claim_status": "NO_DIRECT_BALLISTIC_RESISTANCE_PROVEN_WITHOUT_EXTERNAL_RIGID_FRAME"
+    },
+    {
+      "system_id": "SYS-E",
+      "name": "Functionally Graded Biomaterial (Continuous Mineral-to-Collagen FGM)",
+      "areal_density_kg_m2": 8.53,
+      "specific_modulus_m2_s2": 4193548.4,
+      "elastic_strain_energy_j_m3": 694230.8,
+      "puncture_sharp_needle_n": 30.45,
+      "puncture_blunt_punch_n": 673.3,
+      "cut_guillotine_normal_n": 1678.0,
+      "cut_slicing_draw_n": 223.8,
+      "acoustic_spall_reflection_coeff": -0.434,
+      "tensile_spall_fracture_risk": true,
+      "dynamic_failure_modes": {
+        "compressive_crush_risk": true,
+        "shear_delamination_risk": true,
+        "min_shock_rise_time_ns": 5371.6,
+        "estimated_impact_shock_pressure_mpa": 476.1,
+        "scientific_caveat": "A low acoustic reflection coefficient prevents tensile spallation, but does NOT guarantee absence of fracture: compressive pulverization occurs if shock pressure exceeds compressive yield, and shear delamination occurs under oblique impacts."
+      },
+      "provenance": "THEORETICALLY_ASSIGNED",
+      "ballistic_claim_status": "NO_DIRECT_BALLISTIC_RESISTANCE_PROVEN_WITHOUT_EXTERNAL_RIGID_FRAME"
+    }
+  ],
+  "detailed_sensitivity": [
+    {
+      "system_id": "SYS-A",
+      "sample_count": 500,
+      "perturbation_range": "+/- 20%",
+      "sharp_puncture_mean_n": 23.22,
+      "sharp_puncture_std_n": 3.52,
+      "sharp_puncture_95ci_n": [
+        17.24,
+        30.47
+      ],
+      "slicing_cut_mean_n": 81.7,
+      "slicing_cut_std_n": 11.98,
+      "slicing_cut_95ci_n": [
+        61.12,
+        106.26
+      ]
+    },
+    {
+      "system_id": "SYS-B",
+      "sample_count": 500,
+      "perturbation_range": "+/- 20%",
+      "sharp_puncture_mean_n": 35.15,
+      "sharp_puncture_std_n": 4.95,
+      "sharp_puncture_95ci_n": [
+        26.65,
+        45.48
+      ],
+      "slicing_cut_mean_n": 179.0,
+      "slicing_cut_std_n": 27.07,
+      "slicing_cut_95ci_n": [
+        133.3,
+        236.84
+      ]
+    },
+    {
+      "system_id": "SYS-C",
+      "sample_count": 500,
+      "perturbation_range": "+/- 20%",
+      "sharp_puncture_mean_n": 14.29,
+      "sharp_puncture_std_n": 1.54,
+      "sharp_puncture_95ci_n": [
+        11.55,
+        17.47
+      ],
+      "slicing_cut_mean_n": 102.08,
+      "slicing_cut_std_n": 16.37,
+      "slicing_cut_95ci_n": [
+        72.8,
+        135.83
+      ]
+    },
+    {
+      "system_id": "SYS-D",
+      "sample_count": 500,
+      "perturbation_range": "+/- 20%",
+      "sharp_puncture_mean_n": 61.07,
+      "sharp_puncture_std_n": 9.2,
+      "sharp_puncture_95ci_n": [
+        44.46,
+        79.73
+      ],
+      "slicing_cut_mean_n": 180.02,
+      "slicing_cut_std_n": 26.81,
+      "slicing_cut_95ci_n": [
+        132.33,
+        232.59
+      ]
+    },
+    {
+      "system_id": "SYS-E",
+      "sample_count": 500,
+      "perturbation_range": "+/- 20%",
+      "sharp_puncture_mean_n": 30.52,
+      "sharp_puncture_std_n": 4.09,
+      "sharp_puncture_95ci_n": [
+        23.66,
+        38.33
+      ],
+      "slicing_cut_mean_n": 224.43,
+      "slicing_cut_std_n": 34.72,
+      "slicing_cut_95ci_n": [
+        167.2,
+        295.77
+      ]
+    }
+  ],
+  "scientific_conclusions": {
+    "materials_ranking_puncture": "SYS-E (FGM) and SYS-C (Osteoderm) achieve highest blunt puncture resistance (>450 N), but under ultra-sharp needle insertion (r_tip = 0.1 mm), resistance drops to 12-28 N. No biological soft tissue can prevent Mode-I sharp needle penetration.",
+    "slicing_vulnerability": "Under lateral draw slicing (xi = 4.0), cutting force across all candidates is reduced by 70-85%. SYS-D (Cross-linked composite) provides the highest slicing cut resistance (95% CI: [65, 110] N) due to high polymer network threshold fracture toughness (G_c ~ 32 kJ/m^2).",
+    "spallation_bottleneck": "SYS-C (Biomineral Osteoderm) suffers severe tensile spallation risk (R_spall = -0.615) when backed by compliant tissue. SYS-E (FGM) resolves this by smoothing impedance, but lacks mammalian biological synthesis precedent.",
+    "ballistic_caveat": "None of the candidate biological materials are bulletproof in cutaneous thicknesses (4-6 mm). Any claim of handgun/rifle protection without skeletal bridging is scientifically rejected."
+  }
+}

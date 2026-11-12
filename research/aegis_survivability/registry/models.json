@@ -1,0 +1,132 @@
+[
+  {
+    "id": "MOD-0001",
+    "name": "Tissue Mechanics & Puncture/Cut Model",
+    "implementation": "aegis/model_01_tissue_mechanics.py",
+    "equations": "Lake-Thomas & Atkins cutting mechanics with sharp indenter contact",
+    "physics_domain": "Biomechanics / Fracture Mechanics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0002",
+    "name": "Multilayer Protection & Acoustic Impedance Attenuation Model",
+    "implementation": "aegis/model_02_multilayer_protection.py",
+    "equations": "Acoustic impedance mismatch (Z = rho*c), Cook-Gordon crack deflection, viscoelastic damping",
+    "physics_domain": "Wave Dynamics / Impact Mechanics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0003",
+    "name": "Neural Latency, Motor Acceleration & Dodge Horizon Model",
+    "implementation": "aegis/model_03_reaction_movement.py",
+    "equations": "Hursh nerve conduction (v = 6*d), electromechanical delay (EMD), rate of force development, Newtonian kinematics",
+    "physics_domain": "Neurophysiology / Biokinematics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0004",
+    "name": "Ballistic Energy Transfer & Behind-Armor Blunt Trauma (BABT) Model",
+    "implementation": "aegis/model_04_energy_transfer.py",
+    "equations": "Nonlinear Lobdell thoracic dynamic compression, Viscous Criterion (VC = V*C), BFD intrusion",
+    "physics_domain": "Terminal Ballistics / Thoracic Biomechanics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0005",
+    "name": "Hemodynamic Stability & Arterial Laceration Flow Model",
+    "implementation": "aegis/model_05_hemodynamic_stability.py",
+    "equations": "Torricelli orifice discharge with dynamic smooth muscle spasm, shear stress wash-away, and ATLS hypovolemia stages",
+    "physics_domain": "Hemodynamics / Cardiovascular Physiology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0006",
+    "name": "Regeneration Dynamics & Oncogenic Hazard Multi-Scale Model",
+    "implementation": "aegis/model_06_regeneration_dynamics.py",
+    "equations": "Epithelial centripetal migration, slow axonal transport rate (1-2 mm/day), Armitage-Doll multi-stage carcinogenesis with Peto TP53 scaling",
+    "physics_domain": "Regenerative Biology / Oncology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0007",
+    "name": "Integrated Biological Architecture Whole-Organism Model",
+    "implementation": "aegis/model_07_integrated_architecture.py",
+    "equations": "Kleiber allometric metabolic scaling, convective/evaporative whole-body thermal balance, locomotor penalty, Pareto multi-criteria survivability",
+    "physics_domain": "Systems Biology / Bioengineering",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0008",
+    "name": "Comparative Protective Biomaterials Mechanics & Stress Analysis",
+    "implementation": "aegis/model_08_materials_comparison.py",
+    "equations": "Atkins slicing mechanics, Hertzian sharp-tip contact fracture, Mode-I crack wedging, 500-sample Monte Carlo 95% CIs",
+    "physics_domain": "Materials Science / Comparative Biomechanics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0009",
+    "name": "Multi-Scale Tissue Regeneration Dynamics Across 6 Coupled Phases",
+    "implementation": "aegis/model_09_multiscale_regeneration.py",
+    "equations": "Coupled ordinary differential dynamics of hemostasis, angiogenesis, dermal migration, VML-limited myogenesis, and SCa axonal re-innervation over 365 days",
+    "physics_domain": "Regenerative Medicine / Mathematical Physiology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0010",
+    "name": "SUBJECT-01 CPE45 Combat Performance Endurance Integration Engine",
+    "implementation": "aegis/model_10_cpe45_integration.py",
+    "equations": "Finite-volume energy ledger integration over 2700s, Tetens vapor pressure evaporative heat exchange across 3 climate zones",
+    "physics_domain": "Exercise Physiology / Energetics / Locomotor Mechanics",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0011",
+    "name": "Multi-Criteria Architecture Comparison & Pareto Front Optimization",
+    "implementation": "aegis/model_11_architecture_pareto.py",
+    "equations": "Multi-objective non-dominated sorting across 6 criteria dimensions (protection, metabolic cost, mobility, thermal load, recovery, feasibility)",
+    "physics_domain": "Operations Research / Systems Engineering / Evolutionary Morphology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0012",
+    "name": "Biological, Biohybrid & Speculative Materials Evidence Model",
+    "implementation": "aegis/model_12_biological_materials.py",
+    "equations": "Atkins slicing, Hertzian crack wedging, flexural rigidity, exploratory Recht-Ipson V50 with uncertainty boundaries",
+    "physics_domain": "Comparative Biomechanics / Materials Science",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0013",
+    "name": "Multi-System Functional Regeneration & Tissue Preservation Model",
+    "implementation": "aegis/model_13_functional_regeneration.py",
+    "equations": "8-axis coupled recovery kinetics: VML deficit, accelerated axonal elongation, collateral sprouting, and PEG-fusion membrane preservation",
+    "physics_domain": "Regenerative Medicine / Neurobiology / Cell Biology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0014",
+    "name": "Three-Tier Architectural Categorization & SUBJECT-01 Compatibility Engine",
+    "implementation": "aegis/model_14_architecture_categories.py",
+    "equations": "Coupled mass-locomotion-thermal-CPE45 ledger across ARCH-BIO, ARCH-HYBRID, and ARCH-SPEC tiers",
+    "physics_domain": "Systems Bioengineering / Exercise Physiology",
+    "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0015",
+    "name": "Whole-Organism Interdependent Multi-System Contract Architecture",
+    "cycle": "Cycle 13",
+    "script": "aegis/cycle13_models.py",
+    "subsystems": [
+      "Mass & Geometry",
+      "Mechanical Loads",
+      "Neuromuscular Actuation",
+      "Vascular & Organ Resilience",
+      "Functional Regeneration",
+      "Metabolic Energetics",
+      "Thermoregulation",
+      "Locomotor Performance",
+      "TARGET-CPE45"
+    ],
+    "status": "CONTRACT_ESTABLISHED_NOT_EXTERNALLY_VALIDATED"
+  }
+]

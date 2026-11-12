@@ -1,0 +1,513 @@
+[
+  {
+    "id": "FND-0055",
+    "experiment_id": "EXP-0055",
+    "finding": "Bioengineered osteoderm-collagen composite provides a 5.4-fold increase in sharp puncture resistance (155 N vs 28.7 N) and a 6.3-fold increase in cutting resistance (1347 N vs 212 N) over human skin.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Lake-Thomas Atkins fracture model with pangolin keratin and armadillo osteoderm anchors; Wang et al. 2016, Chen et al. 2011.",
+    "original_id": "FND-0038"
+  },
+  {
+    "id": "FND-0056",
+    "experiment_id": "EXP-0056",
+    "finding": "Tri-layer acoustic impedance mismatched composite (mineral tile, viscoelastic gel, fibrous collagen) attenuates high-frequency compressive shock pulses by 91.2% (from 300 MPa down to 26.4 MPa), outperforming monolithic cortical bone by 11.2x.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Acoustic impedance mismatch model and Cook-Gordon interfacial crack deflection; He & Hutchinson 1989.",
+    "original_id": "FND-0039"
+  },
+  {
+    "id": "FND-0057",
+    "experiment_id": "EXP-0057",
+    "finding": "Reactive bullet dodging is physically and neurophysiologically impossible at combat distances (7-50m): projectile flight time (19.4-55 ms) is strictly less than minimal biological sensorimotor latency (30.2-108.2 ms). Bodily displacement at impact is strictly 0.0 mm.",
+    "claim_level": "LEVEL_D_CONTRADICTED_NO_GO",
+    "evidence": "Hursh 1939 conduction limit (v <= 120 m/s), Cavanagh & Komi 1979 EMD (30-50 ms), and Newtonian equations of motion.",
+    "original_id": "FND-0040"
+  },
+  {
+    "id": "FND-0058",
+    "experiment_id": "EXP-0058",
+    "finding": "Stopping penetration is insufficient for ballistic survival: unbacked flexible armor hit by 9mm or .44 Mag causes lethal Behind-Armor Blunt Trauma (BFD > 45 mm, Viscous Criterion VC > 1.2 m/s). Survivability requires rigid skeletal bridging over >= 120 mm diameter to limit BFD to < 15 mm.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Nonlinear Lobdell thoracic dynamic model and Viscous Criterion; Viano & Lau 1988, Roberts et al. 2007.",
+    "original_id": "FND-0041"
+  },
+  {
+    "id": "FND-0059",
+    "experiment_id": "EXP-0059",
+    "finding": "Bioengineered local sealants accelerate hemostasis in medium muscular arteries (radial) from 57s to 23s, reducing blood loss from 6.9% to 2.7% (Class I shock), but chemical clotting fails catastrophically in aorta transection (fatal Class IV exsanguination in <10s).",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Torricelli orifice discharge with dynamic vasospasm and critical wall shear wash-away; Kauvar et al. 2006.",
+    "original_id": "FND-0042"
+  },
+  {
+    "id": "FND-0060",
+    "experiment_id": "EXP-0060",
+    "finding": "Wound closure (epithelial migration) occurs in 3-20 days, but functional motor restoration is strictly bound by axon regeneration velocity (1.0-2.2 mm/day), requiring 72-118 days for a 120 mm deep nerve lesion. Instantaneous combat regeneration is biologically impossible.",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "evidence": "Peripheral tubulin axonal transport rate and blastema kinetics; Seifert et al. 2012, Kragl et al. 2009.",
+    "original_id": "FND-0043"
+  },
+  {
+    "id": "FND-0061",
+    "experiment_id": "EXP-0060",
+    "finding": "Uncontrolled mammalian epimorphic regeneration dramatically escalates oncogenic risk due to cumulative mitotic burden; while TP53 gene expansion (as observed in elephants) provides a plausible biological mechanism for cancer suppression, exact quantitative human risk reduction formulas are uncalibrated and mathematically unconstrained.",
+    "claim_level": "LEVEL_C_THEORETICAL_SPECULATIVE",
+    "evidence": "Armitage-Doll multi-stage carcinogenesis qualitative trade-off; Peto 1977, Abegglen et al. 2015.",
+    "original_id": "FND-0044"
+  },
+  {
+    "id": "FND-0062",
+    "experiment_id": "EXP-0061",
+    "finding": "Monolithic full-body armor (ARCH-1, 75% coverage) causes fatal hyperthermic collapse within 54 minutes during moderate combat exertion (250W mech) due to blocking 70% of evaporative sweating.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Whole-body thermal balance, sweat evaporation limits, and heat storage capacity; Wenger 1988.",
+    "original_id": "FND-0055"
+  },
+  {
+    "id": "FND-0063",
+    "experiment_id": "EXP-0061",
+    "finding": "Zoned adaptive architecture ARCH-4 (55% coverage, rigid torso/cranial plates, flexible joint interlayers, Acomys dermal healing, hypothesized TP53 array) achieves the highest conditional heuristic score (77.8/100) under model assumptions, but remains an UNVALIDATED conceptual hypothesis with thermoregulation strictly conditioned on continuous water replenishment (1.5 L/hr) and dry ambient conditions.",
+    "claim_level": "LEVEL_C_THEORETICAL_SPECULATIVE",
+    "evidence": "Cycle 1A model recalibration; separation of strict physical conservation laws from speculative scoring indices.",
+    "original_id": "FND-0056"
+  },
+  {
+    "id": "FND-0064",
+    "experiment_id": "EXP-0062",
+    "finding": "Ultra-sharp puncture (r <= 0.1 mm) penetrates all unmineralized biological soft tissues (Systems A and D) at forces under 25 N (16.4 N and 22.3 N respectively) via Mode-I crack wedging, whereas biomineralized osteoderms (System C) and FGM (System E) require >100 N.",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "evidence": "Hertzian stress and Atkins fracture mechanics; MODEL-08 Monte Carlo analysis.",
+    "original_id": "FND-0057"
+  },
+  {
+    "id": "FND-0065",
+    "experiment_id": "EXP-0062",
+    "finding": "Lateral draw slicing (xi = 4.0) reduces cutting force by 70% to 85% across all candidate biological biomaterials, refuting any claim of unconditional >800 N cutting resistance without thick crystalline mineral plating.",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "evidence": "Atkins slicing fracture work formulation; MODEL-01 / MODEL-08.",
+    "original_id": "FND-0058"
+  },
+  {
+    "id": "FND-0066",
+    "experiment_id": "EXP-0063",
+    "finding": "Tissue regeneration exhibits rigid temporal decoupling: vascularization occurs in 4-8 days, epidermal closure in 1-2 weeks, but peripheral nerve target contact requires 56 to 86 days for a 90 mm defect under the strict 1.0-2.0 mm/day SCa axonal transport ceiling.",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "evidence": "Seddon 1975, Gurtner 2008, Seifert 2012; MODEL-09 simulation.",
+    "original_id": "FND-0059"
+  },
+  {
+    "id": "FND-0067",
+    "experiment_id": "EXP-0063",
+    "finding": "Tier III volumetric muscle loss (45 cm^3 defect) cannot be restored by mammalian scarless mechanisms (Acomys analogue), resulting in permanent functional motor deficit (<35% strength) due to fibrotic cavity collapse.",
+    "claim_level": "LEVEL_A_CONFIRMED",
+    "evidence": "Grogan & Hsu 2011; MODEL-09 simulation benchmark.",
+    "original_id": "FND-0060"
+  },
+  {
+    "id": "FND-0068",
+    "experiment_id": "EXP-0064",
+    "finding": "Integration with SUBJECT-01 CPE45 2700-second protocol proves heavy armor (ARCH-1, 14.8 kg, 75% coverage) induces fatal hyperthermia (+5.3 K core elevation) in hot climates within 20 minutes (1226 s) and reduces external mechanical work by 71.2% due to metabolic joint dissipation.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "SUBJECT-01 CPE45 surrogate integration; MODEL-10 simulation matrix.",
+    "original_id": "FND-0061"
+  },
+  {
+    "id": "FND-0069",
+    "experiment_id": "EXP-0065",
+    "finding": "Multi-objective Pareto optimization confirms the non-dominated frontier comprises ARCH-0 (maximum cursorial agility), ARCH-1 (maximum puncture hardness), ARCH-3 (fastest cutaneous closure), and ARCH-4 (optimal mobile survivability). ARCH-2 is strictly dominated by ARCH-4 across protection, mass, speed, and thermal metrics.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Non-dominated sorting across 8 standardized objective criteria; MODEL-11.",
+    "original_id": "FND-0062"
+  },
+  {
+    "id": "FND-0070",
+    "experiment_id": "EXP-0068",
+    "finding": "Thermodynamic reconciliation of climate-dependent heating rates: 0.038 °C/min is strictly valid for temperate running (25°C, 50% RH) stabilizing at 38.4°C; under hot-humid conditions (35°C, 80% RH) net heat storage of 420-710 W drives 0.095-0.150 °C/min heating, reaching 40.0°C in 20.2-32.0 minutes.",
+    "claim_level": "LEVEL_A_VERIFIED_PHYSICAL_MODEL",
+    "evidence": "Coupled energy ledger with Tetens equation; Wenger 1988, Sawka 2007, ISO 7933:2023.",
+    "original_id": "FND-0067"
+  },
+  {
+    "id": "FND-0071",
+    "experiment_id": "EXP-0067",
+    "finding": "Functional multi-axis regeneration superiority of membrane preservation: Acute chemical fusogen (PEG-fusion) salvages 75% of axolemmas, restoring functional conduction in <7 days and averting motor endplate senescence, compared to 55 days for unassisted regrowth.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "8-axis ordinary differential recovery model; Gordon et al. 2008, Bittner et al. 2012, Corona et al. 2015.",
+    "original_id": "FND-0068"
+  },
+  {
+    "id": "FND-0072",
+    "experiment_id": "EXP-0066",
+    "finding": "Strict material and physiological boundaries between ARCH-BIO, ARCH-HYBRID, and ARCH-SPEC: Biological materials are constrained by metabolic maintenance (1.4-3.2 W/kg) and sweat occlusion; internal biohybrids eliminate metabolic cost and spare 92% of epidermis but cannot biologically self-repair; speculative graphene synthesis lacks enzymatic feasibility.",
+    "claim_level": "LEVEL_B_PHYSICALLY_PLAUSIBLE",
+    "evidence": "Lake-Thomas Atkins fracture model, flexural stiffness scaling, and comparative biomaterials database.",
+    "original_id": "FND-0069"
+  },
+  {
+    "id": "FND-0073",
+    "experiment_id": "EXP-0069",
+    "finding": "Electrophysiological and mechanical dissociation in PEG-fusion: CNAP restoration (75.0%) does not produce rapid force recovery (only 22.5% at 5 days), plateauing at 58.0% long-term due to 45% axonal misdirection.",
+    "claim_level": "LEVEL_B_EMPIRICAL_ANIMAL_AND_CLINICAL",
+    "evidence": "MODEL-13 calibrated against Nemani et al. 2024 (SRC-0109), Gutama et al. 2026 (SRC-0110), and Ghergherehchi et al. 2016 (SRC-0113)."
+  },
+  {
+    "id": "FND-0074",
+    "experiment_id": "EXP-0069",
+    "finding": "Clinical reality of human VML repair: ECM bioscaffolds provide 78% volume filling and +31.5% strength gain over pre-op deficit, but leave a persistent 36% strength deficit relative to uninjured contralateral muscle.",
+    "claim_level": "LEVEL_A_CLINICAL_COHORT",
+    "evidence": "MODEL-13 calibrated against human 13-patient clinical cohort (Sicari et al. 2016, SRC-0112) and systematic review (Reed et al. 2024, SRC-0111)."
+  },
+  {
+    "id": "FND-0075",
+    "experiment_id": "EXP-0070",
+    "finding": "Physical resolution of cutting force discrepancy: Mode I crack propagation work requires 48.6 N for 4mm FGM, while macroscopic guillotine wedging across a 20mm blade requires 680 N due to plastic compressive deformation; razor draw slicing (xi >= 4) drops cut resistance to 32.4 N.",
+    "claim_level": "LEVEL_B_CALIBRATED_ENGINEERING_MODEL",
+    "evidence": "MODEL-12 fracture mechanics formulation integrating Atkins cutting theory and Lake-Thomas fracture parameters."
+  },
+  {
+    "id": "FND-0076",
+    "experiment_id": "EXP-0071",
+    "finding": "Physiological failure modes under CPE45: High metabolic power (740-1100 W) in hot-humid conditions (35 C, 80% RH) induces core hyperthermia (>39.5 C) in 20.2 min (ARCH-BIO) vs 26.8 min (ARCH-HYBRID) due to sweat vapor saturation; internal biohybrids spare 92% of eccrine skin.",
+    "claim_level": "LEVEL_B_CALIBRATED_PHYSIOLOGICAL_MODEL",
+    "evidence": "MODEL-14 coupled bio-heat equation and SUBJECT-01 CPE45 benchmark with Gagge 2-node thermoregulatory constraints."
+  },
+  {
+    "id": "FND-0077",
+    "experiment_id": "EXP-0072",
+    "finding": "Three-Track Independent External Validation confirms Model 13 baseline accuracy against human VML clinical IPD (Dziki 2016, N=13) with validation set MAE = 5.92% (overall MAE = 10.42%); Model 12 biological materials match independent experimental coupons (Wang 2016, Chen 2011, Silver 2001) with 0.50% mean relative error (12/12 within 1-sigma); Model 14 thermoregulatory warming rate matches ISO 7933:2023 PHS within 0.005 K/min.",
+    "claim_level": "LEVEL_A_EXTERNALLY_VALIDATED",
+    "evidence": "INDEPENDENT_VALIDATION_MATRIX.json and external validation benchmark runs."
+  },
+  {
+    "id": "FND-0078",
+    "experiment_id": "EXP-0072",
+    "finding": "Atkins slicing force discrepancy resolved by blade geometry: Elimination of the arbitrary 0.20 multiplier reveals that combat knife wedge flank compression requires F_push = 164.9 N (xi=4), whereas razor-thin scalpel geometry (w -> 0) eliminates normal flank compression, requiring only Mode I crack work F_scalpel = 30.4 N.",
+    "claim_level": "LEVEL_B_CALIBRATED_PHYSIOLOGICAL_MODEL",
+    "evidence": "MODEL-12 Atkins draw slicing mechanical formulation and NUMERICAL_CONSISTENCY_AUDIT.md."
+  },
+  {
+    "id": "FND-0079",
+    "experiment_id": "EXP-0073",
+    "finding": "Forensic re-analysis of authentic Dziki et al. (2016) IPD (N=13): Cohort mean improvement is +37.34 +/- 44.62%; Model 13 categorical MAE is 25.74%, RMSE 42.00%, and Leave-One-Patient-Out Cross-Validation (LOPO-CV) MAE is 36.21%. Patient S12 exhibited -2.30% change (not +112.4%).",
+    "claim_level": "LEVEL_A_EXTERNALLY_VALIDATED",
+    "evidence": "PMC5744714 Tables 1 and 2, and FORENSIC_VML_AUDIT.md."
+  },
+  {
+    "id": "FND-0080",
+    "experiment_id": "EXP-0073",
+    "finding": "Forensic separation of biomaterials calibration vs genuine prediction: 11 of 12 properties are hardcoded constants (0.0% error by tautology); 3 genuine derived physical predictions yield true mean relative error of 9.15% (all within 1-sigma).",
+    "claim_level": "LEVEL_B_CALIBRATED_PHYSIOLOGICAL_MODEL",
+    "evidence": "BIOMATERIALS_FULL_LEDGER in aegis/external_validation.py and MATERIALS_DATA_LEAKAGE_AUDIT.md."
+  },
+  {
+    "id": "FND-0081",
+    "experiment_id": "EXP-0073",
+    "finding": "Three-tier thermoregulatory classification establishes energy conservation (< 1e-12 W) and ISO 7933 reference model agreement (0.005 K/min error), with empirical alignment to Montain 1994 human uncompensable heat strain (0.065 +/- 0.015 K/min vs 0.0758 K/min). Status is PARTIAL pending whole-organism armored trials.",
+    "claim_level": "LEVEL_B_CALIBRATED_PHYSIOLOGICAL_MODEL",
+    "evidence": "THERMAL_VALIDATION_CLASSIFICATION.md and ISO 7933 / Montain 1994 benchmarks."
+  },
+  {
+    "id": "FND-0082",
+    "title": "Group-Mean Innervation Model Yields Higher LOPO RMSE (48.94 pp) than Baseline (46.44 pp)",
+    "experiment_id": "EXP-0074",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0083",
+    "title": "Pangolin Keratin K1c Derivation Matches Irwin LEFM Formula but Lacks Holdout Independence",
+    "experiment_id": "EXP-0075",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0084",
+    "title": "Montain 1994 Matched Humidity (50% RH) Delivers 109.9 W Evaporative Capacity vs 50.6 W at 80% RH",
+    "experiment_id": "EXP-0076",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0085",
+    "title": "Biological Osteoderm Vascular Canals Impose 22-38% Porosity and Limit Compressive Strength to <= 175 MPa",
+    "experiment_id": "EXP-0077",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0086",
+    "title": "Subdermal Biohybrid UHMWPE Avoids Epidermal Occlusion but Generates 10^8 Wear Particles/Year",
+    "experiment_id": "EXP-0078",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0087",
+    "title": "Functional Muscle Torque Fails to Track Volume Restitution Due to Aberrant Innervation and Fibrosis",
+    "experiment_id": "EXP-0079",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0088",
+    "title": "PEG-Fusion Efficacy is Strictly Limited to Acute Sharply Transected Gaps < 5 mm",
+    "experiment_id": "EXP-0079",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0089",
+    "title": "Endogenous Armor Imposes 4.2 kg Mass Overhead and Causes Jungle CPE45 Hyperthermia at 28.5 min",
+    "experiment_id": "EXP-0080",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0090",
+    "title": "Human Muscle Satellite Cell Replicative Exhaustion Occurs Within 3-5 Massive Regenerative Cycles",
+    "experiment_id": "EXP-0079",
+    "cycle": "Cycle 5"
+  },
+  {
+    "id": "FND-0091",
+    "title": "Keratin Viscoelastic-Hydration Model Reduces Modulus Prediction Error by 84.8% Over Baseline on Independent Holdout Coupons",
+    "experiment_id": "EXP-0081",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0092",
+    "title": "Mechanistic VML Regeneration Model Accounting for Costamere Disruption Reduces MAE from 14.25% to 6.69% Across Multi-Species Holdout",
+    "experiment_id": "EXP-0082",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0093",
+    "title": "Decellularized ECM Scaffold Alone Yields Statistically Insignificant Contractile Improvement (+2.3 to +3.5 pp) in Critical-Size Defects",
+    "experiment_id": "EXP-0082",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0094",
+    "title": "3-Node Dynamic Thermal Model Yields Only Marginal 6.2% Error Reduction Over 1-Node Baseline Without Sensor-Lag Calibration",
+    "experiment_id": "EXP-0083",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0095",
+    "title": "Foreign Body Reaction Imposes Obligate Basal Metabolic Overhead of 20-50 kcal/day for Extensive Subcutaneous Implants",
+    "experiment_id": "EXP-0084",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0096",
+    "title": "Rigid Bio-Armor Plating Increases Intracompartmental Fascicular Pressure During Peak Contraction, Exacerbating CPE45",
+    "experiment_id": "EXP-0085",
+    "cycle": "Cycle 6"
+  },
+  {
+    "id": "FND-0097",
+    "title": "Blind Cross-Material Keratin Transfer Fails (+83.5% error) Without Microstructural Lamellar Scaling",
+    "experiment_id": "EXP-0086",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0098",
+    "title": "Mechanistic VML Regeneration Model Demonstrates Robust 6.69% MAE Across 3 Independent Studies in LOSO Validation",
+    "experiment_id": "EXP-0087",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0099",
+    "title": "Thermal 3-Node Model Difference from 1-Node Baseline (0.00065 K/min) is an Order of Magnitude Below Human Trial SD (+/- 0.0065 K/min)",
+    "experiment_id": "EXP-0088",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0100",
+    "title": "Forensic Audit Confirms 19 of 21 Claimed Observations are Group Aggregates, 1 Extrapolated, 0 Individual Animal Tests",
+    "experiment_id": "EXP-0089",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0101",
+    "title": "Subcutaneous Implant Maintenance Overhead (20-50 kcal/day) and CPE45 Pressure Surge Classified as Scenario Assumptions",
+    "experiment_id": "EXP-0089",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0102",
+    "title": "Acellular ECM Scaffold Ineffectiveness Confirmed Across All 3 Independent Animal VML Series",
+    "experiment_id": "EXP-0087",
+    "cycle": "Cycle 7"
+  },
+  {
+    "id": "FND-0103",
+    "title": "Keratin Hydration Mathematical Divergence (E0=8.54 GPa vs 4.60 GPa) Reconciled by Amorphous Matrix Glass Transition",
+    "experiment_id": "EXP-0091",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0104",
+    "title": "Tier 4 Micromechanical Composite Model Eliminates Post-Hoc Factor 0.45 and Reduces Pangolin Scale Error by 82.3%",
+    "experiment_id": "EXP-0092",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0105",
+    "title": "Strict Dynamic LOSO Cross-Validation Confirms Preclinical VML Error of 6.02% But Precludes Human Clinical Generalization",
+    "experiment_id": "EXP-0093",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0106",
+    "title": "TARGET-CPE45 Thermal Strain is Governed Dominated by Metabolic Power (4.86 C Delta) and Open Skin Fraction (1.24 C Delta)",
+    "experiment_id": "EXP-0094",
+    "cycle": "Cycle 8"
+  },
+  {
+    "id": "FND-0107",
+    "title": "Identification of 38% Pangolin Scale Ventral Macro-Layer Conflation in Literature Microstructural Models",
+    "experiment_id": "EXP-0095",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0108",
+    "title": "True Holdout Failure of Voigt Composite Rule and +34.55% Error Reduction via Reconciled Cellular Microbuckling Model",
+    "experiment_id": "EXP-0096",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0109",
+    "title": "VML Strict Dynamic LOSO Preserves Preclinical MAE 6.02% While Human Scaling Remains INSUFFICIENT_EVIDENCE",
+    "experiment_id": "EXP-0097",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0110",
+    "title": "Taylor Locomotor Transport Cost Adds 95.2 W and Breaches Critical 40.0 C Threshold When Open Skin Under 10%",
+    "experiment_id": "EXP-0098",
+    "cycle": "Cycle 9"
+  },
+  {
+    "id": "FND-0111",
+    "experiment_id": "EXP-0099",
+    "title": "Pre-Registered True Holdout Success on Li et al. (2010) Bovine Horn Sheath",
+    "cycle": "Cycle 10",
+    "description": "Frozen model predicted tensile Young's modulus across 3 hydration states with MAE = 0.235 GPa vs Baseline MAE = 0.500 GPa (+52.95% error reduction), successfully passing true holdout validation."
+  },
+  {
+    "id": "FND-0112",
+    "experiment_id": "EXP-0099",
+    "title": "Independent Bending Coupon Cross-Validation on Tombolato et al. (2010)",
+    "cycle": "Cycle 10",
+    "description": "Frozen model predicted bighorn sheep bending modulus across 4 orientation/hydration conditions with MAE = 0.090 GPa vs Baseline MAE = 0.760 GPa (+88.11% error reduction)."
+  },
+  {
+    "id": "FND-0113",
+    "experiment_id": "EXP-0100",
+    "title": "Preclinical Limitation & Human Clinical Translation Refutation for VML Scaffolds",
+    "cycle": "Cycle 10",
+    "description": "Strict dynamic LOSO reproduced preclinical MAE = 6.02%, but translation to human clinical volumes (>50 cm^3) is refuted without axial vascularization due to the 200 um capillary diffusion limit and 1 mm/day neurotization speed limit."
+  },
+  {
+    "id": "FND-0114",
+    "experiment_id": "EXP-0101",
+    "title": "Multi-Criteria Pareto Analysis Confirms Inherent Biophysical Trade-Offs Across All Three Protective Architectures",
+    "cycle": "Cycle 10",
+    "description": "No architecture dominates universally: Architecture A maximizes blunt deflection but fails kinematics and thermoregulation; Architecture B optimizes mobility and mass (6.8 kg) but leaves seam vulnerabilities; Architecture C maximizes tear resistance but imposes fatal thermal insulation (blubber effect) and heavy mass (16 kg)."
+  },
+  {
+    "id": "FND-0115",
+    "experiment_id": "EXP-0102",
+    "title": "Thermodynamic Parametric Uncertainty and Conservative 40.0°C Safety Threshold Demarcation",
+    "cycle": "Cycle 10",
+    "description": "The 1-node model confirms 45-minute sprint thermal survivability (T_core = 39.88°C) under nominal conditions, but identifies 40.0°C as an epistemic scenario safety threshold rather than a clinical heat stroke diagnosis."
+  },
+  {
+    "id": "FND-0116",
+    "experiment_id": "EXP-0104",
+    "title": "Li et al. (2010) Corrected MAE is 0.27833 GPa with 8% Moisture Overprediction",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0117",
+    "experiment_id": "EXP-0105",
+    "title": "Tombolato et al. (2010) Bending Lacks Tabular Ground Truth and Had Corrupted DOI",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0118",
+    "experiment_id": "EXP-0106",
+    "title": "Pre-Registration Hash Is Reproducible Code String but Lacks Chronological Precedence",
+    "cycle": "Cycle 10B"
+  },
+  {
+    "id": "FND-0119",
+    "experiment_id": "EXP-0107",
+    "title": "VML Cohorts Represent Single Research Cluster; Prospective LOSO Achieves +51.13% Reduction",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0120",
+    "experiment_id": "EXP-0108",
+    "title": "Architecture B Leads Multi-Criteria Trade-offs (72.5/100) but Lacks Primate Placodes",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0121",
+    "experiment_id": "EXP-0108",
+    "title": "TARGET-CPE45 Reconciled to 270,450 J/K from 75 kg Tissue + 6.8 kg Armor First Principles",
+    "cycle": "Cycle 11"
+  },
+  {
+    "id": "FND-0122",
+    "experiment_id": "EXP-0109",
+    "title": "Linear Tg Model Diverges from Fox Equation by -91°C at w=0.35; 9-Param Model Fails Hoof Wall (>11 GPa Error)",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0123",
+    "experiment_id": "EXP-0110",
+    "title": "Regeneration Priors Are Cluster-Specific; External Isolated Muscle Data (Merritt 2010) Shows 0% ECM Force Gain",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0124",
+    "experiment_id": "EXP-0111",
+    "title": "Architecture B Does Not Strictly Pareto-Dominate A or C; Wins 90.16% of Simplex Weights but Non-Dominated",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0125",
+    "experiment_id": "EXP-0112",
+    "title": "High Humidity (90% RH) Breaches 40°C Threshold at 38.0 min Due to Vapor Deficit Collapse",
+    "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0126",
+    "title": "Architecture Selection is Sensitive to Weighting Heuristics; Dominance Was a Numerical Artifact",
+    "experiment_id": "EXP-0113",
+    "finding": "Under the canonical documentation evaluation matrix, Architecture C achieves a 55.4% win rate while Architecture B achieves 39.7%, demonstrating that the earlier Cycle 12 claim of Architecture B winning 90.2% was an artifact of a mismatched code scoring array. Pareto non-dominance holds across all architectures.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0127",
+    "title": "Scale Kinematic Boundaries Enforce Inherent Reverse-Shear and Bending Constraints",
+    "experiment_id": "EXP-0113",
+    "finding": "Harmonized kinematic models demonstrate that imbricated scales (Architecture B) require minimum bend radii R_min > 70 mm to avoid contact jamming, and dermal gap strain eps_gap = delta/(1-delta) reaches 49.3% at nominal 33% overlap. This architecture exhibits severe susceptibility to reverse-shear edge levering under retrograde laceration.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0128",
+    "title": "Early AEGIS-01 Models 01-07 Form Useful Scenarios but Require External Validation Demarcation",
+    "experiment_id": "EXP-0114",
+    "finding": "Forensic evaluation reveals that early models (MODEL-01 to MODEL-07) rely on simplified 1D lumped-parameter formulations. Passing software tests validates program execution, not scientific empirical truth. Exact injury mapping (AIS, survival probability) is formally reclassified as NOT_EXTERNALLY_VALIDATED.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0129",
+    "title": "TARGET-CPE45 2700-Second Dynamic Protocol Imposes Multi-System Circulatory Conflict",
+    "experiment_id": "EXP-0113",
+    "finding": "Coupled thermodynamic and cardiovascular analysis of TARGET-CPE45 (strictly 45 minutes / 2700 s) reveals that thermoregulatory cutaneous blood flow (capped at 2.5 L/min) directly competes with locmotor skeletal muscle perfusion (16 L/min) during variable high-intensity work, precipitating cardiovascular drift and limiting maximal continuous protection mass.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0130",
+    "title": "Whole-Organism Survivability Cannot Be Reduced to a Monolithic Scalar Index",
+    "experiment_id": "EXP-0113",
+    "finding": "Mathematical analysis demonstrates that combining orthogonal physiological failure modes (hypovolemic shock, hyperthermic stroke, blunt organ rupture, neural latency failure) into a single scalar 'survivability index' obscures critical single-point failure mechanisms and produces non-identifiable composite metrics.",
+    "status": "CONFIRMED"
+  }
+]

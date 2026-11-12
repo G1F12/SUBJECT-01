@@ -1,0 +1,205 @@
+{
+  "model_id": "MODEL-03",
+  "description": "Neural Latency, Motor Acceleration & Dodge Horizon Theorem",
+  "profiles": {
+    "Baseline Human (Visual)": {
+      "latencies": {
+        "conduction_velocity_m_s": 72.0,
+        "tau_sensory_ms": 25.0,
+        "tau_afferent_ms": 11.11,
+        "tau_central_ms": 12.0,
+        "tau_efferent_ms": 13.89,
+        "tau_nmj_ms": 1.2,
+        "total_neural_latency_ms": 63.2,
+        "tau_emd_ms": 45.0,
+        "total_sensorimotor_latency_ms": 108.2
+      },
+      "threat_evaluations": [
+        {
+          "threat_name": "9x19mm Parabellum (Close Combat, 7m)",
+          "flight_time_ms": 19.44,
+          "sensorimotor_latency_ms": 108.2,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 256.8,
+          "physical_verdict": "DODGE_IMPOSSIBLE_NO_GO"
+        },
+        {
+          "threat_name": "9x19mm Parabellum (Medium Distance, 25m)",
+          "flight_time_ms": 69.44,
+          "sensorimotor_latency_ms": 108.2,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 206.8,
+          "physical_verdict": "DODGE_IMPOSSIBLE_NO_GO"
+        },
+        {
+          "threat_name": "5.56x45mm NATO Rifle (50m)",
+          "flight_time_ms": 54.95,
+          "sensorimotor_latency_ms": 108.2,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 221.3,
+          "physical_verdict": "DODGE_IMPOSSIBLE_NO_GO"
+        },
+        {
+          "threat_name": "7.62x39mm Rifle (100m)",
+          "flight_time_ms": 138.89,
+          "sensorimotor_latency_ms": 108.2,
+          "displacement_at_impact_mm": 1.39,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 137.3,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "Hunting Compound Bow (30m)",
+          "flight_time_ms": 315.79,
+          "sensorimotor_latency_ms": 108.2,
+          "displacement_at_impact_mm": 260.4,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": true,
+          "time_deficit_ms": 0.0,
+          "physical_verdict": "EVASION_FEASIBLE"
+        }
+      ]
+    },
+    "Human Acoustic Startle (Brainstem)": {
+      "latencies": {
+        "conduction_velocity_m_s": 96.0,
+        "tau_sensory_ms": 10.0,
+        "tau_afferent_ms": 0.52,
+        "tau_central_ms": 2.4,
+        "tau_efferent_ms": 8.33,
+        "tau_nmj_ms": 1.0,
+        "total_neural_latency_ms": 22.25,
+        "tau_emd_ms": 32.0,
+        "total_sensorimotor_latency_ms": 54.25
+      },
+      "threat_evaluations": [
+        {
+          "threat_name": "9x19mm Parabellum (Close Combat, 7m)",
+          "flight_time_ms": 19.44,
+          "sensorimotor_latency_ms": 54.25,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 177.2,
+          "physical_verdict": "DODGE_IMPOSSIBLE_NO_GO"
+        },
+        {
+          "threat_name": "9x19mm Parabellum (Medium Distance, 25m)",
+          "flight_time_ms": 69.44,
+          "sensorimotor_latency_ms": 54.25,
+          "displacement_at_impact_mm": 0.32,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 127.2,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "5.56x45mm NATO Rifle (50m)",
+          "flight_time_ms": 54.95,
+          "sensorimotor_latency_ms": 54.25,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 141.7,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "7.62x39mm Rifle (100m)",
+          "flight_time_ms": 138.89,
+          "sensorimotor_latency_ms": 54.25,
+          "displacement_at_impact_mm": 38.62,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 57.8,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "Hunting Compound Bow (30m)",
+          "flight_time_ms": 315.79,
+          "sensorimotor_latency_ms": 54.25,
+          "displacement_at_impact_mm": 671.69,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": true,
+          "time_deficit_ms": 0.0,
+          "physical_verdict": "EVASION_FEASIBLE"
+        }
+      ]
+    },
+    "Theoretical Extreme Bioengineered Limit": {
+      "latencies": {
+        "conduction_velocity_m_s": 132.0,
+        "tau_sensory_ms": 5.0,
+        "tau_afferent_ms": 3.03,
+        "tau_central_ms": 0.5,
+        "tau_efferent_ms": 3.03,
+        "tau_nmj_ms": 0.6,
+        "total_neural_latency_ms": 12.16,
+        "tau_emd_ms": 18.0,
+        "total_sensorimotor_latency_ms": 30.16
+      },
+      "threat_evaluations": [
+        {
+          "threat_name": "9x19mm Parabellum (Close Combat, 7m)",
+          "flight_time_ms": 19.44,
+          "sensorimotor_latency_ms": 30.16,
+          "displacement_at_impact_mm": 0.0,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 105.2,
+          "physical_verdict": "DODGE_IMPOSSIBLE_NO_GO"
+        },
+        {
+          "threat_name": "9x19mm Parabellum (Medium Distance, 25m)",
+          "flight_time_ms": 69.44,
+          "sensorimotor_latency_ms": 30.16,
+          "displacement_at_impact_mm": 15.35,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 55.2,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "5.56x45mm NATO Rifle (50m)",
+          "flight_time_ms": 54.95,
+          "sensorimotor_latency_ms": 30.16,
+          "displacement_at_impact_mm": 4.34,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": false,
+          "time_deficit_ms": 69.7,
+          "physical_verdict": "DODGE_FAILED_INSUFFICIENT_DISPLACEMENT"
+        },
+        {
+          "threat_name": "7.62x39mm Rifle (100m)",
+          "flight_time_ms": 138.89,
+          "sensorimotor_latency_ms": 30.16,
+          "displacement_at_impact_mm": 215.82,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": true,
+          "time_deficit_ms": 0.0,
+          "physical_verdict": "EVASION_FEASIBLE"
+        },
+        {
+          "threat_name": "Hunting Compound Bow (30m)",
+          "flight_time_ms": 315.79,
+          "sensorimotor_latency_ms": 30.16,
+          "displacement_at_impact_mm": 1991.8,
+          "required_displacement_mm": 150.0,
+          "evasion_successful": true,
+          "time_deficit_ms": 0.0,
+          "physical_verdict": "EVASION_FEASIBLE"
+        }
+      ]
+    }
+  },
+  "scientific_conclusion": {
+    "reactive_bullet_dodging_status": "LEVEL_D_CONTRADICTED_NO_GO",
+    "justification": "At close combat distances (7-20m), projectile flight times (19.4 - 27.8 ms) are strictly shorter than the theoretical minimal sensorimotor latency (30.2 ms theoretical minimum, 108.2 ms human baseline), so muscle activation cannot physically begin before projectile impact. At medium combat distances (50m, flight time 69.4 ms for 7.62x39mm), flight time exceeds 30.2 ms, yet evasion remains physically impossible because whole-body displacement requires: Neural Latency (30.2 ms) + Electromechanical Delay (30-50 ms) + Inertial Acceleration Time (150-250 ms), yielding a total required evasive window of >210 - 350 ms to clear a 150 mm vital torso zone. At 69.4 ms, bodily displacement is <5 mm against the 150 mm requirement. This boundary strictly applies to reactive evasion after muzzle exit; it does NOT preclude anticipatory dodging (reacting to shooter body/barrel movement before firing) or long-range engagements (>150m)."
+  }
+}

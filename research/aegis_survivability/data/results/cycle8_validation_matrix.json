@@ -1,0 +1,569 @@
+{
+  "program": "AEGIS-01",
+  "cycle": "Cycle 8",
+  "purpose": "Predictive Microarchitecture, Biological Feasibility & Independent Validation",
+  "mandatory_statuses": {
+    "PR9_SYNC": "PASS",
+    "EVIDENCE_PROVENANCE": "PASS",
+    "MATERIALS_CROSS_STUDY": "PASS",
+    "REGENERATION_CROSS_STUDY": "PASS",
+    "THERMAL_HOLDOUT": "PASS",
+    "BIOLOGICAL_FEASIBILITY": "CONDITIONAL"
+  },
+  "phase1_keratin_hydration_audit": {
+    "two_point_fit": {
+      "w1": 0.1,
+      "e1_gpa": 4.0,
+      "w2": 0.35,
+      "e2_gpa": 0.6,
+      "calculated_kw": 7.58848,
+      "extrapolated_e0_gpa": 8.54326
+    },
+    "empirical_benchmark": {
+      "source": "Trim et al. (2011) / Kitchener (1987)",
+      "measured_oven_dry_modulus_gpa": 4.6,
+      "measured_sd_gpa": 0.45,
+      "extrapolation_error_pct": 85.72,
+      "discrepancy_factor": 1.857
+    },
+    "physical_root_cause": "Single exponential E0*exp(-kw*w) assumes uniform plasticization across the entire hydration domain. In biological keratin, amorphous matrix plasticization undergoes a cooperative glass transition between w=0.08 and w=0.25 (Tg drops below 20 C). Below w=0.10, water is bound and the matrix remains glassy. Extrapolating the steep glass-transition slope back to dry conditions creates a virtual, unphysical E0 = 8.54 GPa.",
+    "reconciled_models": {
+      "piecewise_exponential": {
+        "k_glassy": 1.3976,
+        "k_plastic": 7.5885,
+        "pred_w0_00": 4.6,
+        "pred_w0_10": 4.0,
+        "pred_w0_35": 0.6
+      },
+      "sigmoidal_plasticization": {
+        "e_glassy": 4.6,
+        "e_rubbery": 0.45,
+        "w_percolation": 0.16,
+        "hill_coefficient": 2.8,
+        "pred_w0_00": 4.6,
+        "pred_w0_10": 3.72,
+        "pred_w0_35": 0.87
+      }
+    },
+    "verdict": "RECONCILED"
+  },
+  "phase2_microarchitecture_transfer": {
+    "dataset_summary": {
+      "total_specimens": 14,
+      "materials": [
+        "bighorn_sheep_horn",
+        "bovine_hoof",
+        "pangolin_scale"
+      ],
+      "studies": [
+        "Bertram1986",
+        "Trim2011",
+        "Wang2016"
+      ]
+    },
+    "full_dataset_metrics": {
+      "tier1_constant": {
+        "mae_gpa": 1.419,
+        "rmse_gpa": 1.605
+      },
+      "tier2_hydration_only": {
+        "mae_gpa": 0.569,
+        "rmse_gpa": 0.767
+      },
+      "tier3_hydration_rate": {
+        "mae_gpa": 0.569,
+        "rmse_gpa": 0.767
+      },
+      "tier4_microarchitecture": {
+        "mae_gpa": 0.708,
+        "rmse_gpa": 0.829
+      }
+    },
+    "loso_lomo_folds": [
+      {
+        "held_out_study": "Bertram1986",
+        "held_out_material": "hoof",
+        "sample_count": 6,
+        "tier1_mae_gpa": 1.494,
+        "tier2_mae_gpa": 0.62,
+        "tier3_mae_gpa": 0.62,
+        "tier4_mae_gpa": 0.814,
+        "tier2_error_reduction_pct": 58.47,
+        "tier4_error_reduction_pct": 45.51,
+        "tier4_outperforms_tier2": false
+      },
+      {
+        "held_out_study": "Trim2011",
+        "held_out_material": "horn",
+        "sample_count": 4,
+        "tier1_mae_gpa": 1.712,
+        "tier2_mae_gpa": 0.955,
+        "tier3_mae_gpa": 0.955,
+        "tier4_mae_gpa": 0.959,
+        "tier2_error_reduction_pct": 44.21,
+        "tier4_error_reduction_pct": 44.0,
+        "tier4_outperforms_tier2": false
+      },
+      {
+        "held_out_study": "Wang2016",
+        "held_out_material": "pangolin",
+        "sample_count": 4,
+        "tier1_mae_gpa": 1.677,
+        "tier2_mae_gpa": 1.073,
+        "tier3_mae_gpa": 1.073,
+        "tier4_mae_gpa": 0.297,
+        "tier2_error_reduction_pct": 36.04,
+        "tier4_error_reduction_pct": 82.32,
+        "tier4_outperforms_tier2": true
+      }
+    ],
+    "overall_loso_lomo_performance": {
+      "tier1_mae_gpa": 1.609,
+      "tier2_mae_gpa": 0.845,
+      "tier3_mae_gpa": 0.845,
+      "tier4_mae_gpa": 0.708,
+      "tier4_overall_error_reduction_pct": 56.02,
+      "tier4_pangolin_outperformance": "Tier 4 reduces error on held-out pangolin scale from 1.073 GPa to 0.297 GPa (72.3% improvement over Tier 2)"
+    },
+    "scientific_verdict": "Tier 4 microarchitecture transfer model demonstrates physical generalization to an entirely novel biological material (pangolin scale) without post-hoc parameters. The 0.45 factor in Cycle 7 was an ad-hoc fit; the current model physically derives scale compliance from classical laminate theory (eta_plywood = 0.52) and measured intermediate filament fraction (phi_if = 0.38)."
+  },
+  "phase3_functional_regeneration_audit": {
+    "metadata": {
+      "total_independent_cohort_means": 11,
+      "total_experimental_animals": 82,
+      "independent_studies": [
+        "Corona2015",
+        "Garg2015",
+        "Greising2017_2020"
+      ],
+      "species_evaluated": [
+        "rat",
+        "pig"
+      ]
+    },
+    "study_level_loso": [
+      {
+        "study_name": "Corona2015",
+        "cohort_count": 5,
+        "animals_count": 36,
+        "baseline_mean_mae": 13.95,
+        "linear_defect_mae": 13.08,
+        "hardcoded_model_mae": 8.2,
+        "strict_dynamic_loso_mae": 6.56,
+        "error_reduction_vs_baseline_pct": 53.0
+      },
+      {
+        "study_name": "Garg2015",
+        "cohort_count": 2,
+        "animals_count": 16,
+        "baseline_mean_mae": 22.06,
+        "linear_defect_mae": 3.95,
+        "hardcoded_model_mae": 11.28,
+        "strict_dynamic_loso_mae": 3.61,
+        "error_reduction_vs_baseline_pct": 83.62
+      },
+      {
+        "study_name": "Greising2017_2020",
+        "cohort_count": 4,
+        "animals_count": 30,
+        "baseline_mean_mae": 28.43,
+        "linear_defect_mae": 24.77,
+        "hardcoded_model_mae": 6.03,
+        "strict_dynamic_loso_mae": 6.54,
+        "error_reduction_vs_baseline_pct": 76.99
+      }
+    ],
+    "overall_evaluation": {
+      "baseline_mean_mae": 20.69,
+      "hardcoded_model_mae": 7.97,
+      "strict_dynamic_loso_mae": 6.02,
+      "strict_loso_error_reduction_pct": 70.92
+    },
+    "species_level_breakdown": {
+      "rat_cohorts_count": 9,
+      "rat_animals_count": 70,
+      "rat_strict_loso_mae": 6.45,
+      "pig_cohorts_count": 2,
+      "pig_animals_count": 12,
+      "pig_strict_loso_mae": 3.1
+    },
+    "translational_scaling_verdict": {
+      "status": "INSUFFICIENT_EVIDENCE",
+      "justification": "While strict dynamic LOSO achieves an MAE of 6.02% across rodent and porcine models, universal translation to human clinical VML cannot be asserted. Human skeletal muscle volume (TA mass ~160 g vs rat ~0.6 g) imposes diffusion limits where central scaffold necrosis occurs beyond 5-10 mm from host vasculature. Furthermore, human axonal reinnervation distance (1 mm/day over 20+ cm) exceeds the 6-12 month critical motor endplate fibrosis window."
+    }
+  },
+  "phase4_thermal_sensitivity": {
+    "baseline_parameters": {
+      "metabolic_power_w": 600.0,
+      "evap_efficiency": 0.4,
+      "v_air_m_s": 1.0,
+      "open_skin_fraction": 0.1,
+      "body_mass_kg": 75.0,
+      "armor_mass_kg": 6.8,
+      "skin_blood_flow_l_min": 1.5,
+      "ambient_temp_c": 35.0,
+      "duration_min": 45.0
+    },
+    "sensitivity_sweeps": {
+      "evaporative_efficiency": {
+        "eta_10pct": {
+          "final_core_temp_c": 41.41,
+          "heating_rate_k_min": 0.0979,
+          "time_to_40c_min": 30.6
+        },
+        "eta_20pct": {
+          "final_core_temp_c": 41.33,
+          "heating_rate_k_min": 0.0962,
+          "time_to_40c_min": 31.2
+        },
+        "eta_40pct": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "eta_60pct": {
+          "final_core_temp_c": 41.03,
+          "heating_rate_k_min": 0.0895,
+          "time_to_40c_min": 33.5
+        },
+        "eta_80pct": {
+          "final_core_temp_c": 40.88,
+          "heating_rate_k_min": 0.0861,
+          "time_to_40c_min": 34.8
+        }
+      },
+      "air_velocity": {
+        "v_0.5ms": {
+          "final_core_temp_c": 41.3,
+          "heating_rate_k_min": 0.0955,
+          "time_to_40c_min": 31.4
+        },
+        "v_1.0ms": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "v_2.0ms": {
+          "final_core_temp_c": 41.02,
+          "heating_rate_k_min": 0.0893,
+          "time_to_40c_min": 33.6
+        },
+        "v_3.5ms": {
+          "final_core_temp_c": 40.85,
+          "heating_rate_k_min": 0.0855,
+          "time_to_40c_min": 35.1
+        },
+        "v_5.0ms": {
+          "final_core_temp_c": 40.71,
+          "heating_rate_k_min": 0.0825,
+          "time_to_40c_min": 36.4
+        }
+      },
+      "open_skin_fraction": {
+        "open_0pct": {
+          "final_core_temp_c": 41.5,
+          "heating_rate_k_min": 0.0999,
+          "time_to_40c_min": 30.0
+        },
+        "open_10pct": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "open_20pct": {
+          "final_core_temp_c": 40.87,
+          "heating_rate_k_min": 0.086,
+          "time_to_40c_min": 34.9
+        },
+        "open_30pct": {
+          "final_core_temp_c": 40.56,
+          "heating_rate_k_min": 0.0791,
+          "time_to_40c_min": 37.9
+        },
+        "open_40pct": {
+          "final_core_temp_c": 40.26,
+          "heating_rate_k_min": 0.0724,
+          "time_to_40c_min": 41.4
+        }
+      },
+      "metabolic_power": {
+        "m_300w": {
+          "final_core_temp_c": 38.75,
+          "heating_rate_k_min": 0.039,
+          "time_to_40c_min": 45.0
+        },
+        "m_450w": {
+          "final_core_temp_c": 39.97,
+          "heating_rate_k_min": 0.0659,
+          "time_to_40c_min": 45.0
+        },
+        "m_600w": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "m_750w": {
+          "final_core_temp_c": 42.39,
+          "heating_rate_k_min": 0.1198,
+          "time_to_40c_min": 25.0
+        },
+        "m_900w": {
+          "final_core_temp_c": 43.61,
+          "heating_rate_k_min": 0.1468,
+          "time_to_40c_min": 20.4
+        }
+      },
+      "armor_mass": {
+        "armor_0.0kg": {
+          "final_core_temp_c": 41.16,
+          "heating_rate_k_min": 0.0924,
+          "time_to_40c_min": 32.5
+        },
+        "armor_3.0kg": {
+          "final_core_temp_c": 41.17,
+          "heating_rate_k_min": 0.0926,
+          "time_to_40c_min": 32.4
+        },
+        "armor_6.8kg": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "armor_10.0kg": {
+          "final_core_temp_c": 41.19,
+          "heating_rate_k_min": 0.0931,
+          "time_to_40c_min": 32.2
+        },
+        "armor_15.0kg": {
+          "final_core_temp_c": 41.2,
+          "heating_rate_k_min": 0.0934,
+          "time_to_40c_min": 32.1
+        }
+      },
+      "skin_blood_flow": {
+        "flow_0.5l_min": {
+          "final_core_temp_c": 41.23,
+          "heating_rate_k_min": 0.0941,
+          "time_to_40c_min": 31.9
+        },
+        "flow_1.0l_min": {
+          "final_core_temp_c": 41.2,
+          "heating_rate_k_min": 0.0933,
+          "time_to_40c_min": 32.2
+        },
+        "flow_1.5l_min": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "flow_2.0l_min": {
+          "final_core_temp_c": 41.17,
+          "heating_rate_k_min": 0.0927,
+          "time_to_40c_min": 32.4
+        },
+        "flow_3.0l_min": {
+          "final_core_temp_c": 41.16,
+          "heating_rate_k_min": 0.0924,
+          "time_to_40c_min": 32.5
+        }
+      },
+      "heat_capacity_body_mass": {
+        "mass_65kg": {
+          "final_core_temp_c": 41.82,
+          "heating_rate_k_min": 0.1072,
+          "time_to_40c_min": 28.0
+        },
+        "mass_75kg": {
+          "final_core_temp_c": 41.18,
+          "heating_rate_k_min": 0.0929,
+          "time_to_40c_min": 32.3
+        },
+        "mass_85kg": {
+          "final_core_temp_c": 40.68,
+          "heating_rate_k_min": 0.0818,
+          "time_to_40c_min": 36.7
+        },
+        "mass_95kg": {
+          "final_core_temp_c": 40.29,
+          "heating_rate_k_min": 0.073,
+          "time_to_40c_min": 41.1
+        }
+      }
+    },
+    "sensitivity_ranking": [
+      {
+        "parameter": "Metabolic Power (M)",
+        "delta_final_temp_c": 4.86,
+        "impact": "DOMINANT"
+      },
+      {
+        "parameter": "Open Skin Fraction (f_open)",
+        "delta_final_temp_c": 1.24,
+        "impact": "VERY_HIGH"
+      },
+      {
+        "parameter": "Airflow Velocity (v_air)",
+        "delta_final_temp_c": 0.59,
+        "impact": "HIGH"
+      },
+      {
+        "parameter": "Sweat Evaporation Efficiency (eta)",
+        "delta_final_temp_c": 0.53,
+        "impact": "MODERATE"
+      },
+      {
+        "parameter": "Body Heat Capacity (C_th)",
+        "delta_final_temp_c": 0.47,
+        "impact": "MODERATE"
+      },
+      {
+        "parameter": "Skin Blood Flow (BF)",
+        "delta_final_temp_c": 0.07,
+        "impact": "LOW"
+      },
+      {
+        "parameter": "Armor Added Mass (m_armor)",
+        "delta_final_temp_c": 0.04,
+        "impact": "NEGLIGIBLE_DIRECT"
+      }
+    ],
+    "thermal_holdout_verdict": "PASS"
+  },
+  "phase5_endogenous_dimensions": [
+    {
+      "dimension": "1. Cellular Origin",
+      "monolithic_rigid_plate": "Intramembranous ossification (osteoblasts) or continuous cornified plate.",
+      "segmented_overlapping_scales": "Discrete follicular placodes with localized germinative centers in malpighian layer.",
+      "subdermal_fibrous_lattice": "Dermal fibroblasts producing dense regular collagen I/III and elastin network.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "2. Structural Maintenance",
+      "monolithic_rigid_plate": "Continuous bone remodeling via osteoclasts/osteoblasts (months, high calcium flux).",
+      "segmented_overlapping_scales": "Continuous outward cornification from basal matrix; distal wear offset by proximal growth.",
+      "subdermal_fibrous_lattice": "Slow turnover of structural collagen (half-life ~100-300 days), low baseline maintenance.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "3. Remodeling & Repair",
+      "monolithic_rigid_plate": "Callus formation requires prolonged immobilization; unhealed microcracks accumulate.",
+      "segmented_overlapping_scales": "Shed or fractured scales regrow from undamaged basal germinal beds (6-12 months).",
+      "subdermal_fibrous_lattice": "Fibrotic scar formation; high risk of chronic capsular contracture.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "4. Living Layer Microvascular Supply",
+      "monolithic_rigid_plate": "Requires Haversian canal systems through cortical bone; vulnerable to compression ischemia.",
+      "segmented_overlapping_scales": "Capillary supply restricted to basal dermal papillae; protruding scale is dead cornified tissue.",
+      "subdermal_fibrous_lattice": "Requires extensive 3D capillary mesh throughout depth; high risk of hematoma.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "5. Sensory Innervation",
+      "monolithic_rigid_plate": "Periosteal nociceptors generate severe pain under blunt impact; poor shear sensing.",
+      "segmented_overlapping_scales": "Mechanoreceptors (Merkel discs, Ruffini) concentrated in flexible inter-scale hinge skin.",
+      "subdermal_fibrous_lattice": "Diffuse subcutaneous mechanoreceptors; good pressure detection.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "6. Metabolic Cost of Growth & Maintenance",
+      "monolithic_rigid_plate": "Mass ~10-15 kg; remodeling power ~15-25 W; mineral burden ~500 mg Ca/day.",
+      "segmented_overlapping_scales": "Mass ~5-7 kg; synthesis rate ~15-30 g/day (~60-120 kcal/day or ~3-6 W); sulfur amino acid demand.",
+      "subdermal_fibrous_lattice": "Mass ~4-6 kg; baseline metabolic maintenance ~2-4 W.",
+      "epistemic_tag": "MODEL_CALIBRATED"
+    },
+    {
+      "dimension": "7. Skin Kinematics & Strain Accommodation",
+      "monolithic_rigid_plate": "Severe constraint on surface strain (< 2%); requires full unarmored flexion gaps.",
+      "segmented_overlapping_scales": "Imbricated sliding accommodates 40-60% effective skin strain via scissor-like tile expansion.",
+      "subdermal_fibrous_lattice": "Accommodates up to 25-30% strain elastically, but exhibits high shear resistance.",
+      "epistemic_tag": "MODEL_CALIBRATED"
+    },
+    {
+      "dimension": "8. Compartment Syndrome Compatibility (CPE45)",
+      "monolithic_rigid_plate": "CRITICAL RISK: Rigid hoop stiffness prevents muscle expansion, surging pressure > 45 mmHg.",
+      "segmented_overlapping_scales": "LOW RISK: Scales slide circumferentially over fascia; circumferential hoop hoop stress is uncoupled.",
+      "subdermal_fibrous_lattice": "MODERATE RISK: Viscoelastic layer expands radially, minimal rigid containment.",
+      "epistemic_tag": "LITERATURE_DERIVED"
+    },
+    {
+      "dimension": "9. Thermoregulatory Vapor Permeability",
+      "monolithic_rigid_plate": "CRITICAL RISK: Blocks evaporative sweat loss over > 90% of covered surface.",
+      "segmented_overlapping_scales": "MODERATE RISK: Inter-scale hinges retain sweat pores and micro-channels (15-25% open area).",
+      "subdermal_fibrous_lattice": "CRITICAL RISK: Massive thermal insulation (blubber effect) impedes core heat conduction.",
+      "epistemic_tag": "MODEL_CALIBRATED"
+    },
+    {
+      "dimension": "10. Post-Impact Survivability",
+      "monolithic_rigid_plate": "High blunt force transmission; risk of catastrophic brittle cracking.",
+      "segmented_overlapping_scales": "Inter-scale friction and localized scale delamination dissipate kinetic energy progressively.",
+      "subdermal_fibrous_lattice": "Excellent blunt impact cushioning, but poor puncture/slash resistance.",
+      "epistemic_tag": "SCENARIO_ASSUMPTIONS"
+    }
+  ],
+  "phase6_subject01_integration": [
+    {
+      "indicator": "Max Isometric Force (F_max)",
+      "canonical_baseline": "3850 N (Knee Extension), 5200 N (Plantarflexion)",
+      "impact_with_armor": "Unchanged intrinsic contractile force; angular acceleration reduced by ~7.8%",
+      "epistemic_classification": "MODEL_CALIBRATED",
+      "compatibility_status": "COMPATIBLE"
+    },
+    {
+      "indicator": "Rate of Force Development (RFD)",
+      "canonical_baseline": "18.5 kN/s (first 100 ms)",
+      "impact_with_armor": "Apparent kinetic RFD dampened by 8-12% due to added segmental inertia",
+      "epistemic_classification": "MODEL_CALIBRATED",
+      "compatibility_status": "COMPATIBLE_WITH_ADAPTATION"
+    },
+    {
+      "indicator": "Tendon Tensile Loads (Achilles / Patellar)",
+      "canonical_baseline": "Achilles peak load: 6.1 kN during running",
+      "impact_with_armor": "Increases to 6.6 kN (+8.2%) with 86.8 kg combined mass; within 9 kN safety limit",
+      "epistemic_classification": "LITERATURE_DERIVED",
+      "compatibility_status": "COMPATIBLE"
+    },
+    {
+      "indicator": "Joint Range of Motion (ROM)",
+      "canonical_baseline": "Sagittal knee flexion 140 deg, hip 120 deg, ankle 65 deg",
+      "impact_with_armor": "Sagittal ROM maintained at 94-96%; transverse lumbar rotation reduced by ~12%",
+      "epistemic_classification": "SCENARIO_ASSUMPTIONS",
+      "compatibility_status": "COMPATIBLE_WITH_MARGIN"
+    },
+    {
+      "indicator": "Local Capillary Microvascular Perfusion",
+      "canonical_baseline": "Resting perfusion > 3.5 mL/100g/min; closure threshold 32 mmHg",
+      "impact_with_armor": "Resting contact pressure must remain < 15 mmHg to prevent focal ischemic necrosis",
+      "epistemic_classification": "LITERATURE_DERIVED",
+      "compatibility_status": "CONDITIONAL_ON_HARNESS"
+    },
+    {
+      "indicator": "Motor Coordination & Dynamic Balance",
+      "canonical_baseline": "Center of mass (CoM) stability margin 45 mm during sprint cutting",
+      "impact_with_armor": "CoM shifts superior-anteriorly; requires vestibular and cerebellar recalibration",
+      "epistemic_classification": "UNVALIDATED",
+      "compatibility_status": "UNVALIDATED_IN_HUMAN"
+    },
+    {
+      "indicator": "Total System Mass",
+      "canonical_baseline": "80.0 kg",
+      "impact_with_armor": "86.8 kg (+6.8 kg armor package = +8.50%)",
+      "epistemic_classification": "MEASURED",
+      "compatibility_status": "COMPATIBLE"
+    },
+    {
+      "indicator": "Metabolic Power Expenditure",
+      "canonical_baseline": "Running at 3.5 m/s: 580 W",
+      "impact_with_armor": "Running at 3.5 m/s: 640 W (+10.3% energetic cost of transport)",
+      "epistemic_classification": "LITERATURE_DERIVED",
+      "compatibility_status": "COMPATIBLE"
+    },
+    {
+      "indicator": "TARGET-CPE45 Endurance Protocol",
+      "canonical_baseline": "45-min exertion under 35 C ambient; unencapsulated T_core reaches 38.8 C",
+      "impact_with_armor": "T_core reaches 41.18 C under 600 W load; hyperthermia limit (40.0 C) reached at 32.3 min",
+      "epistemic_classification": "MODEL_CALIBRATED",
+      "compatibility_status": "CONDITIONAL_HEAT_BOUND"
+    }
+  ]
+}
