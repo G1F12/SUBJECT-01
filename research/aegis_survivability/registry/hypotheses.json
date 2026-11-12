@@ -463,5 +463,28 @@
     "related_experiments": [
       "EXP-0111"
     ]
+  },
+  {
+    "id": "HYP-0051",
+    "title": "Dynamic Arterial Vasospasm and Platelet Plug Shear Stability Threshold",
+    "statement": "In penetrating arterial injuries, autonomous hemostasis without external compression is physically impossible above a critical wall shear stress threshold tau_crit (15-35 Pa), because flow-induced drag forces exceed platelet fibrin mesh tensile anchor strength, necessitating active vasoconstrictive lumen reduction r_lumen / r_0 < 0.35 to enable stable thrombus formation.",
+    "cycle": "Cycle 13",
+    "related_experiments": [
+      "EXP-0114"
+    ],
+    "status": "ACTIVE_FOR_CYCLE_14",
+    "relevance_to_subject01": "Directly impacts survival time and circulatory maintenance under trauma."
+  },
+  {
+    "id": "HYP-0052",
+    "title": "Viscoelastic Multilayer Acoustic Impedance Mismatching and Stress Wave Attenuation",
+    "statement": "Stratified tissue architecture with alternating acoustic impedance (keratinized dermis ~1.6 MRayl, adipose layer ~1.35 MRayl, deep fascia ~1.7 MRayl) disperses sharp impact shockwaves via multiple internal acoustic reflections, attenuating transmitted peak thoracic wall acceleration by >25% relative to a homogeneous soft-tissue baseline, thereby reducing the Viscous Criterion injury metric below lethal thresholds.",
+    "cycle": "Cycle 13",
+    "related_experiments": [
+      "EXP-0113",
+      "EXP-0114"
+    ],
+    "status": "ACTIVE_FOR_CYCLE_14",
+    "relevance_to_subject01": "Protects internal organs from Behind-Armor Blunt Trauma and blunt ballistic impacts without rigid monolithic armor."
   }
 ]

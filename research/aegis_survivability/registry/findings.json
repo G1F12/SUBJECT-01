@@ -474,5 +474,40 @@
     "experiment_id": "EXP-0112",
     "title": "High Humidity (90% RH) Breaches 40°C Threshold at 38.0 min Due to Vapor Deficit Collapse",
     "cycle": "Cycle 12"
+  },
+  {
+    "id": "FND-0126",
+    "title": "Architecture Selection is Sensitive to Weighting Heuristics; Dominance Was a Numerical Artifact",
+    "experiment_id": "EXP-0113",
+    "finding": "Under the canonical documentation evaluation matrix, Architecture C achieves a 55.4% win rate while Architecture B achieves 39.7%, demonstrating that the earlier Cycle 12 claim of Architecture B winning 90.2% was an artifact of a mismatched code scoring array. Pareto non-dominance holds across all architectures.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0127",
+    "title": "Scale Kinematic Boundaries Enforce Inherent Reverse-Shear and Bending Constraints",
+    "experiment_id": "EXP-0113",
+    "finding": "Harmonized kinematic models demonstrate that imbricated scales (Architecture B) require minimum bend radii R_min > 70 mm to avoid contact jamming, and dermal gap strain eps_gap = delta/(1-delta) reaches 49.3% at nominal 33% overlap. This architecture exhibits severe susceptibility to reverse-shear edge levering under retrograde laceration.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0128",
+    "title": "Early AEGIS-01 Models 01-07 Form Useful Scenarios but Require External Validation Demarcation",
+    "experiment_id": "EXP-0114",
+    "finding": "Forensic evaluation reveals that early models (MODEL-01 to MODEL-07) rely on simplified 1D lumped-parameter formulations. Passing software tests validates program execution, not scientific empirical truth. Exact injury mapping (AIS, survival probability) is formally reclassified as NOT_EXTERNALLY_VALIDATED.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0129",
+    "title": "TARGET-CPE45 2700-Second Dynamic Protocol Imposes Multi-System Circulatory Conflict",
+    "experiment_id": "EXP-0113",
+    "finding": "Coupled thermodynamic and cardiovascular analysis of TARGET-CPE45 (strictly 45 minutes / 2700 s) reveals that thermoregulatory cutaneous blood flow (capped at 2.5 L/min) directly competes with locmotor skeletal muscle perfusion (16 L/min) during variable high-intensity work, precipitating cardiovascular drift and limiting maximal continuous protection mass.",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "FND-0130",
+    "title": "Whole-Organism Survivability Cannot Be Reduced to a Monolithic Scalar Index",
+    "experiment_id": "EXP-0113",
+    "finding": "Mathematical analysis demonstrates that combining orthogonal physiological failure modes (hypovolemic shock, hyperthermic stroke, blunt organ rupture, neural latency failure) into a single scalar 'survivability index' obscures critical single-point failure mechanisms and produces non-identifiable composite metrics.",
+    "status": "CONFIRMED"
   }
 ]

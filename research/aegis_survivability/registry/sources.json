@@ -545,8 +545,8 @@
   },
   {
     "id": "SRC-0115",
-    "title": "Tissue bioscaffolds for the treatment of volumetric muscle loss: an open-label, non-randomized, multi-center study in 13 patients",
-    "authors": "Sicari, B. M., Dziki, J. L., Siu, B. F., Medberry, C. J., Dearth, C. L., Badylak, S. F., et al.",
+    "title": "An acellular biologic scaffold treatment for volumetric muscle loss: results of a 13-patient cohort study",
+    "authors": "Dziki, J. L., Badylak, S. F., Yabroudi, M., Sicari, B. M., Ambrosio, F., Boninger, M. L., Turner, N. J., Wyse, G. D., Dearth, C. L., et al.",
     "year": 2016,
     "journal": "npj Regenerative Medicine, 1, 16008",
     "doi": "10.1038/npjregenmed.2016.8",
@@ -560,7 +560,8 @@
     "supports_hypotheses": [
       "HYP-0021",
       "HYP-0025"
-    ]
+    ],
+    "notes": "Corrected in Cycle 13: Lead author is Dziki JL, not Sicari BM. 13-patient clinical cohort."
   },
   {
     "id": "SRC-0116",
@@ -860,23 +861,55 @@
   },
   {
     "id": "SRC-0158",
-    "citation": "Sicari BM et al. (2014). Tissue-specific extracellular matrix scaffolds for the repair of volumetric muscle loss. Sci Transl Med 6(234):234ra58.",
+    "citation": "Sicari BM, Rubin JP, Dearth CL, Wolf MT, Ambrosio F, Boninger M, Turner NJ, Weber DJ, Simpson TW, Wyse GD, Brown EH, Dziki JL, Fisher LE, Dame S, Badylak SF. (2014). An acellular biologic scaffold promotes skeletal muscle formation in mice and humans with volumetric muscle loss. Sci Transl Med 6(234):234ra58.",
     "supports_hypotheses": [
       "HYP-0049"
-    ]
+    ],
+    "notes": "Corrected in Cycle 13: Correct article title and author list (5 human patients + mice)."
   },
   {
     "id": "SRC-0159",
-    "citation": "Merritt CA et al. (2010). Repair of a muscle defect using an extracellular matrix scaffold. Biomaterials 31(29):7503-7511.",
+    "citation": "Merritt EK, Hammers DW, Tierney M, Suggs LJ, Walters TJ, Farrar RP. (2010). Functional assessment of skeletal muscle regeneration utilizing homologous extracellular matrix as scaffolding. Tissue Eng Part A 16(4):1395-1405. DOI: 10.1089/ten.tea.2009.0583.",
     "supports_hypotheses": [
       "HYP-0049"
-    ]
+    ],
+    "notes": "Corrected in Cycle 13: Corrected from erroneous Biomaterials citation to Tissue Eng Part A, lead author E.K. Merritt, rat gastrocnemius isolated muscle mechanics."
   },
   {
     "id": "SRC-0160",
-    "citation": "Quarta M et al. (2016). An artificial niche preserves the quiescence of muscle stem cells. Nat Biotechnol 34(7):752-759.",
+    "citation": "Quarta M, Brett JO, DiMarco R, de Morree A, Boutet SC, Chacon R, et al. (2016). An artificial niche preserves the quiescence of muscle stem cells and enhances their therapeutic efficacy. Nat Biotechnol 34(7):752-759. DOI: 10.1038/nbt.3576.",
     "supports_hypotheses": [
       "HYP-0049"
+    ],
+    "notes": "Corrected in Cycle 13: Full canonical article title and DOI."
+  },
+  {
+    "id": "SRC-0161",
+    "citation": "Bird et al. (2026). Ultra-wideband radar to measure in vivo muscle forces. Science Robotics / Dryad 10.5061/dryad.sbcc2frmh / arXiv:2510.20866.",
+    "supports_hypotheses": [
+      "HYP-0051",
+      "HYP-0052"
+    ]
+  },
+  {
+    "id": "SRC-0162",
+    "citation": "Viano DC, Lau IV. (1988). A viscous tolerance criterion for soft tissue injury assessment. J Biomech 21(5):387-399.",
+    "supports_hypotheses": [
+      "HYP-0051"
+    ]
+  },
+  {
+    "id": "SRC-0163",
+    "citation": "Kauvar DS, Lefering R, Wade CE. (2006). Impact of hemorrhage on trauma outcome: an overview of epidemiology, clinical presentations, and therapeutic considerations. J Trauma 60(6 Suppl):S3-S11.",
+    "supports_hypotheses": [
+      "HYP-0051"
+    ]
+  },
+  {
+    "id": "SRC-0164",
+    "citation": "Cavanagh PR, Komi PV. (1979). Electromechanical delay in human skeletal muscle under concentric and eccentric contractions. Eur J Appl Physiol Occup Physiol 42(3):159-163.",
+    "supports_hypotheses": [
+      "HYP-0052"
     ]
   }
 ]

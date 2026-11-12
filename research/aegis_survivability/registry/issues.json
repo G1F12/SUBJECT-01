@@ -204,5 +204,26 @@
     "title": "Cardiac Output Allocation Conflict Between Working Skeletal Muscle and Cutaneous Vasodilation",
     "cycle": "Cycle 12",
     "status": "RESOLVED"
+  },
+  {
+    "id": "ISS-0056",
+    "title": "Micro-Scale Research Capture Diverted Focus from Foundational Whole-Organism Survivability",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Cycles 8-12 overfocused on keratin glass transition and rodent VML priors to the exclusion of hemostasis, ballistic shock wave physics, and sensorimotor reaction limits. Resolved via Strategic Roadmap 2.0."
+  },
+  {
+    "id": "ISS-0057",
+    "title": "Conflation of Software Unit Test Pass with Scientific Empirical Validation",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Code execution asserts were historically conflated with empirical validation in early models 01-07. Formally resolved by demarcating code verification from out-of-sample empirical validation."
+  },
+  {
+    "id": "ISS-0058",
+    "title": "Discrepant Mathematical Formulations Between Code and Documentation in Cycle 12",
+    "status": "RESOLVED_IN_CYCLE_13",
+    "cycle": "Cycle 13",
+    "description": "Scoring matrices, scale kinematics equations, and time duration labels diverged between cycle12_models.py and markdown reports. Formally reconciled and corrected in Cycle 13."
   }
 ]

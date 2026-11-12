@@ -110,5 +110,23 @@
     "equations": "Coupled mass-locomotion-thermal-CPE45 ledger across ARCH-BIO, ARCH-HYBRID, and ARCH-SPEC tiers",
     "physics_domain": "Systems Bioengineering / Exercise Physiology",
     "status": "arithmetic_reproduced"
+  },
+  {
+    "id": "MOD-0015",
+    "name": "Whole-Organism Interdependent Multi-System Contract Architecture",
+    "cycle": "Cycle 13",
+    "script": "aegis/cycle13_models.py",
+    "subsystems": [
+      "Mass & Geometry",
+      "Mechanical Loads",
+      "Neuromuscular Actuation",
+      "Vascular & Organ Resilience",
+      "Functional Regeneration",
+      "Metabolic Energetics",
+      "Thermoregulation",
+      "Locomotor Performance",
+      "TARGET-CPE45"
+    ],
+    "status": "CONTRACT_ESTABLISHED_NOT_EXTERNALLY_VALIDATED"
   }
 ]

@@ -262,8 +262,8 @@ def audit_regeneration_priors_and_sensitivity() -> Dict[str, Any]:
             "comparability_verdict": "NOT_QUANTITATIVELY_COMMENSURATE (Human scale >100x rat TA; acellular ECM fails without vascular transfer).",
         },
         {
-            "study": "Merritt et al. (2010) Biomaterials 31(29):7503-7511",
-            "laboratory": "Christ Lab / Wake Forest Inst for Regenerative Medicine",
+            "study": "Merritt et al. (2010) Tissue Eng Part A 16(4):1395-1405",
+            "laboratory": "Walters / Farrar Labs (US Army ISR / Univ of Texas / Wake Forest)",
             "species": "Lewis Rat (N=24)",
             "defect_type": "Gastrocnemius critical VML (~20% mass)",
             "measurement": "Ex vivo isolated muscle tetanic force (Po)",
@@ -309,20 +309,31 @@ def evaluate_biological_protection_robustness() -> Dict[str, Any]:
     Monte Carlo weight sensitivity, Pareto dominance analysis,
     and minimal geometric kinematics model of segmented scale surfaces.
     """
+    # Legacy code matrix:
     scores = {
         "A": np.array([25.0, 30.0, 15.0, 10.0, 20.0, 95.0]),  # Monolithic Rigid
         "B": np.array([85.0, 55.0, 88.0, 50.0, 75.0, 82.0]),  # Segmented Imbricated
         "C": np.array([95.0, 70.0, 92.0, 15.0, 40.0, 60.0]),  # Mobile Fibrous
     }
 
+    # Canonical documentation matrix (from BIOLOGICAL_ARCHITECTURE_ROBUSTNESS.md):
+    scores_canonical = {
+        "A": np.array([95.0, 90.0, 45.0, 50.0, 40.0, 65.0]),  # Monolithic Rigid
+        "B": np.array([82.0, 85.0, 88.0, 75.0, 85.0, 55.0]),  # Segmented Imbricated
+        "C": np.array([60.0, 70.0, 92.0, 85.0, 95.0, 70.0]),  # Mobile Fibrous
+    }
+
     # 1. Pareto Non-Dominance Proof
     def dominates(x, y):
         return np.all(x >= y) and np.any(x > y)
 
-    b_dom_a = dominates(scores["B"], scores["A"])  # False: A has 95 vs 82 in Prot
-    b_dom_c = dominates(scores["B"], scores["C"])  # False: C has 95, 70, 92 vs 85, 55, 88
+    b_dom_a = dominates(scores["B"], scores["A"])  # False
+    b_dom_c = dominates(scores["B"], scores["C"])  # False
     a_dom_b = dominates(scores["A"], scores["B"])  # False
     c_dom_b = dominates(scores["C"], scores["B"])  # False
+
+    b_dom_a_canon = dominates(scores_canonical["B"], scores_canonical["A"])  # False
+    b_dom_c_canon = dominates(scores_canonical["B"], scores_canonical["C"])  # False
 
     # 2. Monte Carlo Weight Permutation (100,000 Dirichlet draws)
     np.random.seed(42)
@@ -337,6 +348,15 @@ def evaluate_biological_protection_robustness() -> Dict[str, Any]:
     win_B = float(np.sum((totals_B >= totals_A) & (totals_B >= totals_C)) / 1000.0)
     win_C = float(np.sum((totals_C > totals_A) & (totals_C > totals_B)) / 1000.0)
 
+    # Canonical doc matrix MC
+    totals_A_c = weights @ scores_canonical["A"]
+    totals_B_c = weights @ scores_canonical["B"]
+    totals_C_c = weights @ scores_canonical["C"]
+
+    win_A_canon = float(np.sum((totals_A_c > totals_B_c) & (totals_A_c > totals_C_c)) / 1000.0)
+    win_B_canon = float(np.sum((totals_B_c >= totals_A_c) & (totals_B_c >= totals_C_c)) / 1000.0)
+    win_C_canon = float(np.sum((totals_C_c > totals_A_c) & (totals_C_c > totals_B_c)) / 1000.0)
+
     # 3. Minimal Scale Kinematics Model
     # Tile length L (mm), thickness t (mm), overlap fraction delta (dimensionless)
     tile_length_mm = 30.0
@@ -349,10 +369,15 @@ def evaluate_biological_protection_robustness() -> Dict[str, Any]:
         max_sliding_disp_mm = tile_length_mm * delta
         # Maximum skin extension strain before inter-scale gap opens:
         eps_gap_pct = (delta / (1.0 - delta)) * 100.0
-        # Jamming angle during compression/flexion:
+        # Jamming angle during compression/flexion (across overlap):
         jamming_angle_deg = math.degrees(math.atan(tile_thickness_mm / (tile_length_mm * delta)))
+        # Jamming angle across exposed pitch:
+        sin_arg = min(1.0, tile_thickness_mm / effective_pitch_mm)
+        jamming_angle_pitch_deg = math.degrees(math.asin(sin_arg))
         # Minimum bend radius R_min (assuming 15 deg inter-tile articulation):
         r_min_mm = effective_pitch_mm / math.radians(15.0)
+        # Minimum bend radius R_min at physical contact jamming:
+        r_min_jam_mm = effective_pitch_mm / math.radians(jamming_angle_deg)
         
         kinematics_table.append({
             "overlap_ratio_delta": delta,
@@ -360,19 +385,33 @@ def evaluate_biological_protection_robustness() -> Dict[str, Any]:
             "max_shear_sliding_mm": round(max_sliding_disp_mm, 1),
             "max_skin_strain_pct": round(eps_gap_pct, 1),
             "jamming_angle_deg": round(jamming_angle_deg, 1),
+            "jamming_angle_pitch_deg": round(jamming_angle_pitch_deg, 1),
             "min_bend_radius_mm": round(r_min_mm, 1),
+            "min_bend_radius_jam_mm": round(r_min_jam_mm, 1),
         })
 
     return {
         "pareto_dominance_analysis": {
             "b_strictly_dominates_a": b_dom_a,
             "b_strictly_dominates_c": b_dom_c,
-            "conclusion": "All 3 architectures are strictly non-dominated (Pareto-optimal). Architecture B does NOT mathematically dominate A or C.",
+            "canonical_b_strictly_dominates_a": b_dom_a_canon,
+            "canonical_b_strictly_dominates_c": b_dom_c_canon,
+            "conclusion": "All 3 architectures are strictly non-dominated (Pareto-optimal). Architecture B does NOT mathematically dominate A or C in either matrix.",
         },
         "monte_carlo_weight_sensitivity_pct": {
             "architecture_b_wins": round(win_B, 2),
             "architecture_c_wins": round(win_C, 2),
             "architecture_a_wins": round(win_A, 2),
+            "canonical_matrix_results": {
+                "architecture_a_wins": round(win_A_canon, 2),
+                "architecture_b_wins": round(win_B_canon, 2),
+                "architecture_c_wins": round(win_C_canon, 2),
+            },
+            "reconciliation_note": (
+                f"Legacy code matrix yields B={win_B:.1f}%, C={win_C:.1f}%, A={win_A:.1f}%. "
+                f"Canonical doc matrix yields C={win_C_canon:.1f}%, B={win_B_canon:.1f}%, A={win_A_canon:.1f}%. "
+                "The shift proves that ranking is non-robust to subjective scoring."
+            ),
             "conditions_under_which_a_wins": "Protection weight > 0.80 (pure blunt trauma focus)",
             "conditions_under_which_c_wins": "Biological, Geometric, and Locomotor weights dominate (>0.75 combined)",
         },

@@ -502,5 +502,28 @@
     "name": "TARGET-CPE45 Coupled Thermal Conduction, Cardiovascular Drift, and Humidity Sweep",
     "cycle": "Cycle 12",
     "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0113",
+    "title": "Whole-Organism Model Subsystem Coupling, Interface Contract & Sensitivity Simulation",
+    "cycle": "Cycle 13",
+    "sources": [
+      "SRC-0161",
+      "SRC-0162"
+    ],
+    "description": "Formulation and numerical execution of 9-subsystem interdependent interface contracts linking mass, mechanics, neuromuscular actuation, hemodynamics, regeneration, energetics, thermoregulation, and TARGET-CPE45.",
+    "status": "COMPLETED"
+  },
+  {
+    "id": "EXP-0114",
+    "title": "Forensic Multi-Domain Audit of Neglected Research Tracks and Early Models 01-07",
+    "cycle": "Cycle 13",
+    "sources": [
+      "SRC-0162",
+      "SRC-0163",
+      "SRC-0164"
+    ],
+    "description": "Systematic audit of vascular injury mechanics, ballistic energy dissipation, neuromuscular electromechanical delay, and functional tissue regeneration against independent published empirical benchmarks.",
+    "status": "COMPLETED"
   }
 ]

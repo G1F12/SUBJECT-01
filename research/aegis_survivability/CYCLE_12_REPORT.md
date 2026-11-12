@@ -158,11 +158,11 @@ Full documentation: [`CPE45_THERMAL_COUPLING.md`](file:///d:/AEGIS-01/CPE45_THER
 - Scale Conductive Resistance: $R_{\text{cond}} = \frac{0.002\text{ m}}{0.22\text{ W/(m}\cdot\text{K)}} \approx 0.0091\text{ m}^2\cdot\text{K/W}$.
 
 ### 6.2 Humidity Sweep and Thermal Collapse
-At $T_{\text{ambient}} = 35.0^\circ\text{C}$ over 60 minutes of locomotion:
-- **30% RH:** Driving deficit $\Delta P = 4.25\text{ kPa}$; $T_{\text{core}} = 38.65^\circ\text{C}$ (Safe).
-- **50% RH:** Driving deficit $\Delta P = 3.13\text{ kPa}$; $T_{\text{core}} = 39.07^\circ\text{C}$ (Equilibrium).
-- **70% RH:** Driving deficit $\Delta P = 2.01\text{ kPa}$; $T_{\text{core}} = 39.75^\circ\text{C}$ (Severe thermal strain).
-- **90% RH:** Driving deficit collapses to **$0.56\text{ kPa}$**; $T_{\text{core}}$ breaches the dangerous $40.0^\circ\text{C}$ threshold at **$38.0\text{ minutes}$**, reaching **$40.44^\circ\text{C}$** at 60 minutes.
+At $T_{\text{ambient}} = 35.0^\circ\text{C}$ over 45 minutes (2700 s) of TARGET-CPE45 locomotion:
+- **30% RH:** Driving deficit $\Delta P = 3.94\text{ kPa}$; $T_{\text{core}} = 38.38^\circ\text{C}$ (Safe).
+- **50% RH:** Driving deficit $\Delta P = 2.81\text{ kPa}$; $T_{\text{core}} = 39.07^\circ\text{C}$ (Equilibrium).
+- **70% RH:** Driving deficit $\Delta P = 1.69\text{ kPa}$; $T_{\text{core}} = 39.75^\circ\text{C}$ (Severe thermal strain).
+- **90% RH:** Driving deficit collapses to **$0.56\text{ kPa}$**; $T_{\text{core}}$ breaches the dangerous $40.0^\circ\text{C}$ threshold at **$38.0\text{ minutes}$**, reaching **$40.44^\circ\text{C}$** at 45 minutes (2700 s). *(Note: Cycle 12 previously mislabeled the duration as 60 minutes; this was rectified in Cycle 13).*
 
 ### 6.3 Cardiovascular Drift Limit
 Cutaneous blood flow is physiologically capped at $2.5\text{ L/min}$. Under concurrent maximal leg muscle perfusion ($16\text{ L/min}$) and thermal strain, stroke volume declines by $\approx 22\%$, driving heart rate to maximum ($195\text{ bpm}$) and precipitating cardiovascular collapse.

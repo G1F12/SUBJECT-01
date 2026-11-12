@@ -359,5 +359,33 @@
     "experiment_id": "EXP-0110",
     "title": "Refutation of Universal Cross-Laboratory Transferability of Preclinical VML Treatment Priors",
     "cycle": "Cycle 12"
+  },
+  {
+    "id": "NEG-0101",
+    "title": "Failure of Monolithic Survivability Indices to Represent Multi-Vector Trauma Risk",
+    "experiment_id": "EXP-0113",
+    "evidence": "Whole-organism coupling simulations demonstrated that a single scalar survival probability index masks lethal threshold breaches: a subject may exhibit a 92% aggregate survival index while simultaneously suffering an unrecoverable 40.5°C core hyperthermia breach or fatal arterial exsanguination.",
+    "cycle": "Cycle 13"
+  },
+  {
+    "id": "NEG-0102",
+    "title": "Failure of Unconstrained Torricelli Orifice Flow in Closed Mammalian Hemodynamics",
+    "experiment_id": "EXP-0114",
+    "evidence": "Rigorous hemodynamic audit confirms that naive static orifice equations predict unphysical blood loss rates (>40 L/min) that violate venous return limits and total cardiac reserve. In vivo arterial hemorrhage is strictly rate-limited by stroke volume depletion and dynamic vascular resistance.",
+    "cycle": "Cycle 13"
+  },
+  {
+    "id": "NEG-0103",
+    "title": "Failure of Acellular Passive Scaffolds to Produce Active Contractile Force Recovery in Isolated Muscle",
+    "experiment_id": "EXP-0114",
+    "evidence": "Literature meta-analysis confirms Merritt et al. (2010) finding: acellular ECM scaffolds yield 0% statistically significant active tetanic force recovery in isolated muscle-tendon preparations (32% vs 28% Po, P > 0.05). Reported benefits in whole-limb preparations represent adjacent synergist compensation.",
+    "cycle": "Cycle 13"
+  },
+  {
+    "id": "NEG-0104",
+    "title": "Failure of 1D Static Conduction Models to Predict Dynamic Projectile Evasion Windows",
+    "experiment_id": "EXP-0114",
+    "evidence": "Static Hursh axon velocity models underestimate sensorimotor reaction times by neglecting central synaptic integration jitter (15-30 ms) and mechanical electromechanical delay (EMD, 30-55 ms), rendering ballistic evasion horizons at close range (<15 m) biophysically unattainable.",
+    "cycle": "Cycle 13"
   }
 ]

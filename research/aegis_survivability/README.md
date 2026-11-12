@@ -3,7 +3,17 @@
 **Автономное научно-инженерное исследовательское направление программы SUBJECT-01.**  
 Дата старта первого исследовательского цикла: **08 ноября 2026 г.**  
 Базовый проект: [SUBJECT-01 (G1F12/SUBJECT-01)](https://github.com/G1F12/SUBJECT-01).  
-Текущий научный статус: **CYCLE 1 COMPLETE — REPRODUCIBLE SCIENTIFIC BASELINE ESTABLISHED**.
+Текущий научный статус: **CYCLE 13 COMPLETE — STRATEGIC REALIGNMENT AND SCIENTIFIC BASELINE RATIFIED**.
+Ключевые документы Cycle 13:
+- [`ROADMAP_2_0.md`](file:///d:/AEGIS-01/ROADMAP_2_0.md) — Долгосрочная стратегия и исследовательские горизонты.
+- [`ORIGINAL_MISSION_TRACEABILITY.md`](file:///d:/AEGIS-01/ORIGINAL_MISSION_TRACEABILITY.md) — Матрица трассируемости шести базовых направлений.
+- [`SCIENTIFIC_DEBT_REGISTER.md`](file:///d:/AEGIS-01/SCIENTIFIC_DEBT_REGISTER.md) — Реестр научного долга и аудит моделей 01–07.
+- [`CYCLE_12_CORRECTIONS.md`](file:///d:/AEGIS-01/CYCLE_12_CORRECTIONS.md) — Исправление шести критических несоответствий Cycle 12.
+- [`WHOLE_ORGANISM_MODEL_CONTRACT.md`](file:///d:/AEGIS-01/WHOLE_ORGANISM_MODEL_CONTRACT.md) — Контракт взаимодействия 9 подсистем целого организма.
+- [`NEGLECTED_DOMAINS_AUDIT.md`](file:///d:/AEGIS-01/NEGLECTED_DOMAINS_AUDIT.md) — Аудит сосудистой физиологии, баллистики, нейромоторики и регенерации.
+- [`SUBJECT01_ALIGNMENT_REPORT.md`](file:///d:/AEGIS-01/SUBJECT01_ALIGNMENT_REPORT.md) — Сопряжение с новейшими данными Bird 2026 и TARGET-CPE45.
+- [`CYCLE_13_REPORT.md`](file:///d:/AEGIS-01/CYCLE_13_REPORT.md) — Итоговый синтетический отчет Cycle 13.
+- [`CYCLE_14_EXECUTION_PLAN.md`](file:///d:/AEGIS-01/CYCLE_14_EXECUTION_PLAN.md) — План выполнения и приоритизация Cycle 14.
 
 ---
 

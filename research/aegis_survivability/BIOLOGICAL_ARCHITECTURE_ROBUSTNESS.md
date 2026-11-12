@@ -79,20 +79,31 @@ Since Architecture C outperforms Architecture B across four out of six dimension
 
 ## 4. Monte Carlo Sensitivity Analysis
 
-A Monte Carlo simulation was conducted with $N = 100,000$ iterations in [`aegis.cycle12_models.evaluate_biological_protection_robustness()`](file:///d:/AEGIS-01/aegis/cycle12_models.py#L417-L545). In each iteration, a random weighting vector $\mathbf{w} \sim \text{Dirichlet}(\alpha_1, \dots, \alpha_6)$ with $\alpha_i = 1.0$ was generated, and total score $S = \sum_{i=1}^6 w_i x_i$ was calculated:
+A Monte Carlo simulation was conducted with $N = 100,000$ iterations in [`aegis.cycle12_models.evaluate_biological_protection_robustness()`](file:///d:/AEGIS-01/aegis/cycle12_models.py). In each iteration, a random weighting vector $\mathbf{w} \sim \text{Dirichlet}(\alpha_1, \dots, \alpha_6)$ with $\alpha_i = 1.0$ was generated, and total score $S = \sum_{i=1}^6 w_i x_i$ was calculated.
 
-- **Architecture B Win Rate:** **$90.16\%$** ($90,163 / 100,000$)
-- **Architecture C Win Rate:** **$9.79\%$** ($9,788 / 100,000$)
-- **Architecture A Win Rate:** **$0.05\%$** ($49 / 100,000$)
+### Reconciliation of Code vs. Documentation Scoring Matrix (Cycle 13 Audit):
+In Cycle 12, a significant discrepancy existed between the multi-criteria table in Section 2 and the scoring vector implemented in `cycle12_models.py`:
+- **Canonical Documentation Matrix (Section 2):**
+  - Architecture A: $[95, 90, 45, 50, 40, 65]$
+  - Architecture B: $[82, 85, 88, 75, 85, 55]$
+  - Architecture C: $[60, 70, 92, 85, 95, 70]$
+  - Result: **Architecture C wins 55.36%**, Architecture B wins 39.67%, Architecture A wins 4.97%.
+- **Legacy Code Array (`cycle12_models.py`):**
+  - Result: Architecture B wins 90.16%, Architecture C wins 9.79%, Architecture A wins 0.05%.
 
-### Interpretation:
-Architecture B wins in unconstrained random weighting because it operates as a compromise design (min score = 55), whereas Architecture A suffers severe penalties on ROM (45) and Conformity (40). However, if an organism prioritizes defense against apex predator bite forces ($w_{\text{blunt}} + w_{\text{puncture}} > 0.60$), Architecture A wins decisively. If an organism prioritizes energetic endurance and rapid locomotion ($w_{\text{flex}} + w_{\text{metabolic}} > 0.55$), Architecture C wins decisively. Architecture B's apparent dominance is entirely subjective and depends on equal weighting.
+### Scientific Interpretation:
+Both matrices confirm that all three architectures are strictly non-dominated (Pareto-optimal). However, the dramatic shift from B winning 90.16% in legacy code to C winning 55.36% under the canonical table proves that **ranking based on scalar weighted scores is entirely non-robust to subjective scoring weights**. 
+
+Therefore, in Cycle 13:
+- Architecture B's claimed "90% dominance" is formally retracted as an artifact of mismatched scoring vectors.
+- Neither architecture is selected based on a subjective score.
+- Architecture selection is governed by Pareto non-dominance and explicit uncertainty envelopes.
 
 ---
 
 ## 5. Kinematic Model of Imbricated Scales
 
-To quantify physical constraints on Architecture B, a geometric kinematic model was formulated:
+To quantify physical constraints on Architecture B, a geometric kinematic model was formulated and reconciled in Cycle 13:
 
 ```mermaid
 graph LR
@@ -108,24 +119,26 @@ graph LR
 - **Scale Length ($L$):** $30.0\text{ mm}$
 - **Scale Thickness ($t$):** $2.0\text{ mm}$
 - **Overlap Ratio ($\delta$):** $\delta \in [0.20, 0.50]$ (fraction of length covered by adjacent scale)
-- **Effective Pitch ($p$):** $p = L(1 - \delta)$
+- **Effective Exposed Pitch ($p$):** $p = L(1 - \delta)$
 - **Inter-Scale Gap Strain Capacity ($\epsilon_{\text{gap}}$):**
-  $$\epsilon_{\text{gap}} = \frac{\delta}{1 - \delta}$$
-  For full flexion without scale detachment, the underlying dermis must tolerate strain $\epsilon_{\text{gap}}$.
-- **Minimum Jamming Bend Radius ($R_{\min}$):**
-  $$R_{\min} \approx \frac{t}{1 - \delta}$$
-  When curvature radius $R < R_{\min}$, adjacent scale margins collide ("jamming").
-- **Jamming Flexion Angle ($\theta_{\text{jam}}$):**
-  $$\theta_{\text{jam}} = \arcsin\left(\frac{t}{L(1 - \delta)}\right)$$
+  $$\epsilon_{\text{gap}} = \frac{L \cdot \delta}{L(1 - \delta)} = \frac{\delta}{1 - \delta}$$
+  For full flexion without exposing unarmored dermis, the underlying integument must tolerate extension strain $\epsilon_{\text{gap}}$.
+- **Jamming Angle Across Overlap ($\theta_{\text{jam, ov}}$):**
+  $$\theta_{\text{jam, ov}} = \arctan\left(\frac{t}{L \cdot \delta}\right)$$
+- **Jamming Angle Across Exposed Pitch ($\theta_{\text{jam, pitch}}$):**
+  $$\theta_{\text{jam, pitch}} = \arcsin\left(\frac{t}{L(1 - \delta)}\right)$$
+- **Minimum Bend Radius ($R_{\min}$):**
+  - At contact jamming across overlap: $R_{\min, \text{jam}} = \frac{p}{\theta_{\text{jam, ov}}\text{ (rad)}}$
+  - At nominal $15^\circ$ ($0.2618\text{ rad}$) inter-scale articulation: $R_{\min, 15^\circ} = \frac{p}{0.2618}$
 
-### 5.2 Kinematic Evaluation Table
+### 5.2 Reconciled Kinematic Evaluation Table
 
-| Overlap Ratio $\delta$ | Pitch $p$ (mm) | Dermal Gap Strain $\epsilon_{\text{gap}}$ (%) | Min Bend Radius $R_{\min}$ (mm) | Jamming Angle $\theta_{\text{jam}}$ ($^\circ$) | Failure Vulnerability |
-| :---: | :---: | :---: | :---: | :---: | :--- |
-| **0.20** | 24.0 mm | **25.0%** | **37.5 mm** | **4.78$^\circ$** | High gap exposure under blunt puncture |
-| **0.33 (Nominal)** | 20.1 mm | **49.3%** | **59.7 mm** | **5.71$^\circ$** | Balanced kinematic regime |
-| **0.40** | 18.0 mm | **66.7%** | **66.7 mm** | **6.38$^\circ$** | Dermal fatigue at joint hinge points |
-| **0.50** | 15.0 mm | **100.0%** | **75.0 mm** | **7.66$^\circ$** | High weight; scale collision during sharp flexion |
+| Overlap Ratio $\delta$ | Pitch $p$ (mm) | Dermal Gap Strain $\epsilon_{\text{gap}}$ (%) | $\theta_{\text{jam, pitch}}$ ($^\circ$) | $\theta_{\text{jam, ov}}$ ($^\circ$) | $R_{\min, \text{jam}}$ (mm) | $R_{\min, 15^\circ}$ (mm) | Failure Mode / Vulnerability |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **0.20** | 24.0 mm | **25.0%** | **4.78$^\circ$** | **18.43$^\circ$** | **74.6 mm** | **91.7 mm** | High gap exposure under blunt puncture |
+| **0.33 (Nominal)** | 20.1 mm | **49.3%** | **5.71$^\circ$** | **11.42$^\circ$** | **100.8 mm** | **76.8 mm** | Balanced kinematic regime |
+| **0.40** | 18.0 mm | **66.7%** | **6.38$^\circ$** | **9.46$^\circ$** | **109.0 mm** | **68.8 mm** | Dermal fatigue at joint hinge points |
+| **0.50** | 15.0 mm | **100.0%** | **7.66$^\circ$** | **7.59$^\circ$** | **113.2 mm** | **57.3 mm** | High mass; scale collision during sharp flexion |
 
 ---
 

@@ -288,5 +288,59 @@
     "cycle": "Cycle 12",
     "status": "RATIFIED",
     "date": "2026-11-11"
+  },
+  {
+    "id": "DEC-0069",
+    "title": "Strategic Realignment: Restore AEGIS-01 Core Multi-Domain Survivability Mission",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Following extensive deep-dives into keratin microarchitecture and VML rodent models in Cycles 8-12, AEGIS-01 realigns with its foundational multi-vector survivability mission: tissue resistance, ballistic blunt trauma, neuromuscular reaction, hemostatic stability, functional regeneration, and whole-body metabolic-thermal integration.",
+    "status": "APPROVED",
+    "impact": "Eliminates mono-thematic research capture; establishes comprehensive whole-organism interface contract."
+  },
+  {
+    "id": "DEC-0070",
+    "title": "Rectification of Cycle 12 Deficiencies and Errata",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Resolves all six identified Cycle 12 errors: reconciled architecture scoring matrices between code and documentation; harmonized scale kinematics equations; corrected 45-minute vs 60-minute duration labels; corrected literature citations for Merritt 2010, Quarta 2016, Sicari 2014, and Dziki 2016.",
+    "status": "APPROVED",
+    "impact": "Eliminates documentation-code contradictions; restores bibliographic integrity."
+  },
+  {
+    "id": "DEC-0071",
+    "title": "Adoption of Whole-Organism Model Contract Architecture",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Replaces heuristic composite survival scores with a modular, 9-subsystem interdependent contract. Each linkage explicitly defines inputs, outputs, units, parameter provenance, aleatory/epistemic uncertainty, and empirical validation status.",
+    "status": "APPROVED",
+    "impact": "Prevents false scalar precision; establishes mathematically rigorous whole-body coupling."
+  },
+  {
+    "id": "DEC-0072",
+    "title": "Epistemic Demarcation of Biological Impossibility vs Evolutionary Absence",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Categorical claims of 'biological impossibility' are refined. Clear epistemic boundaries are established between absolute thermodynamic constraints, terrestrial phylogenetic limits, and uncharacterized synthetic biology pathways.",
+    "status": "APPROVED",
+    "impact": "Restores scientific precision to feasibility classifications."
+  },
+  {
+    "id": "DEC-0073",
+    "title": "Reclassification of Simplified Mechanical Thresholds as Exploratory Scenarios",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "Early models (MODEL-01 through MODEL-07) mapped simplified mechanical parameters directly to clinical injury scores (AIS, survival). These are formally reclassified as exploratory simulation scenarios marked NOT_EXTERNALLY_VALIDATED, separating code testability from empirical validation.",
+    "status": "APPROVED",
+    "impact": "Eliminates overclaimed clinical predictive validity."
+  },
+  {
+    "id": "DEC-0074",
+    "title": "Cycle 14 Research Prioritization Gate",
+    "cycle": "Cycle 13",
+    "date": "2026-11-12",
+    "rationale": "In accordance with strict priority criteria, exactly two research hypotheses are selected for active development in Cycle 14: HYP-0051 (Dynamic Arterial Vasospasm & Hemostatic Shear Limits) and HYP-0052 (Viscoelastic Multilayer Stress-Wave Attenuation). Keratin Tg modeling and scale kinematics are formally transitioned to MAINTENANCE.",
+    "status": "APPROVED",
+    "impact": "Focuses research velocity on high-information-value neglected domains."
   }
 ]
