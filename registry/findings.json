@@ -362,6 +362,30 @@
     "id": "FND-0046",
     "date": "2026-11-12",
     "experiment_id": "EXP-0046",
-    "finding": "Multi-muscle quadriceps force transmission bridge with dynamic antagonist co-activation evaluated on Bird 2026 raw dynamic arrays (N=6, 3,226 rows): (1) Achieved Mean Fold R2 = 0.3363 under strict 0-leakage LOSO cross-validation, outperforming single engineered composite feature M4 (R2 = 0.3251); (2) Established that isolated +20% muscle fiber hypertrophy suffers a geometric pennation angle penalty (Delta alpha = +2.8 deg), yielding +18.3% net joint torque (torque transmission efficiency eta_torque = 0.917, NEG-0040); (3) Patellar tendon stress under +20% force increases from 35.5 MPa to 42.0 MPa (safety factor drops from 2.82 to 2.38, remaining above 1.5 threshold); (4) Co-adapted tendon cross-sectional area (+20%) restores nominal stress to 35.0 MPa (SF = 2.86); (5) Synergistic neural tuning (25% suppression of antagonist hamstring co-activation) overcomes the pennation penalty, delivering +23.6% net torque (eta_torque = 1.178)."
+    "finding": "On Bird mixed protocols mean fold R2 for the bridge is 0.33635 (M4 0.32514, sEMG 0.46280). On active protocols the bridge is -0.11482 (M4 -0.11532, sEMG -0.05280). The modeled scenarios produce +18.34% and +23.56% net knee torque under their respective assumptions; stresses and UTS ratios are model outputs.",
+    "confidence": "same_cohort_loso_and_model_only_scenarios",
+    "notes": "Interpretation amended under DEC-0022; original text retained in Git at 113dbad16f2920ede49e679596a24b53fdf4af2e. See NEG-0044."
+  },
+  {
+    "id": "FND-0047",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0077"
+    ],
+    "finding": "Guarded Achilles to semitendinosus MTJ myonuclear sign concordance 1083/1176 (92.09%) on a distinct cohort of three donors. Post-hoc CAMERA retains enrichment in both expected directions.",
+    "confidence": "cross_cohort_observational_with_three_donors",
+    "notes": "Aggregate sign count reproduced from the frozen correspondence table. Gene-level uncertainty is not population uncertainty; differing contrasts and transcriptome-based labels limit inference."
+  },
+  {
+    "id": "FND-0048",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0077"
+    ],
+    "finding": "Native MTJ proteomics partially supports the RNA programme. Myonuclear rank enrichment p approximately 0.00047 with 50/216 matching signs. Fibroblast primary p approximately 0.122 with 33/156 matching signs.",
+    "confidence": "limited_orthogonal_correspondence",
+    "notes": "Four paired M/T–MTJ donors and four separate patellar tendon donors. No catalytic, crosslink or mechanical endpoint."
   }
 ]

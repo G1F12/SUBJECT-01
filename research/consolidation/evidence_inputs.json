@@ -1,0 +1,117 @@
+{
+  "baseline_commit": "113dbad16f2920ede49e679596a24b53fdf4af2e",
+  "loading_direction_threshold": 0.6,
+  "gate_minimum_fraction": 0.6,
+  "external_artifacts": {
+    "mtj_correspondence": {
+      "path": "MTJCore/results/replication/signature_gene_correspondence.tsv",
+      "sha256": "ba7dbd2cf337b97f7e690dd68bf8facfe5029494d21b2346cb062adf1b049e75"
+    },
+    "mtj_enrichment": {
+      "path": "MTJCore/results/replication/programme_enrichment.json",
+      "sha256": "384af7d9dc12157bc9694587c04c1fe7f6aaf17b6c11106e929a9aa85ad7a03d"
+    },
+    "mtj_camera": {
+      "path": "MTJCore/results/manuscript_sensitivity/correlation_aware_replication.tsv",
+      "sha256": "faf58454ccc1b761fe1558a0b32ae21d1ec0b85a4f99d5262bba87edb3dbd39b"
+    },
+    "mtj_replication_report": {
+      "path": "MTJCore/reports/REPLICATION_REPORT.md",
+      "sha256": "366d0dfcb01fbe2493ba31dd00f8d5993d360ea07c67ac364280586cdbad739e"
+    },
+    "mtj_loading": {
+      "path": "MTJCore/results/loading/myonuclear_condition_result.tsv",
+      "sha256": "8023c632bbcbf3ee3f25f432cccee1db71af4a88c55307fe8bc5a4b6447850fe"
+    },
+    "mtj_loading_report": {
+      "path": "MTJCore/reports/LOADING_REPORT.md",
+      "sha256": "015d35a2a676e9bba33e4fbe27dea69b29c257acb9275e4e24451964aaf39bc7"
+    },
+    "mtj_myoproteome": {
+      "path": "MTJCore/results/proteomics/myonuclear_programme_support.tsv",
+      "sha256": "0ead11c9b495649495ee1e57b0af5c24548a795fce4456910f658b3914fc50cd"
+    },
+    "mtj_fibroproteome": {
+      "path": "MTJCore/results/proteomics/fibroblast_programme_support.tsv",
+      "sha256": "13463e0aa7bb096086c27650b72e9af355776c01d8b005c8c9762453fac3824c"
+    },
+    "mtj_proteomics_report": {
+      "path": "MTJCore/reports/PROTEOMICS_REPORT.md",
+      "sha256": "42c7825bb560273f2f01992c950f2d32a67c0747247363d3e2ed9eb24728a58f"
+    },
+    "gate_coverage": {
+      "path": "MTJFidelityGate0/native_112_coverage.tsv",
+      "sha256": "3589d7f1d089e54c294223f058b3818e772078db9961dfa268ec07ce0f78e3fe"
+    },
+    "gate_samples": {
+      "path": "MTJFidelityGate0/sample_metadata.tsv",
+      "sha256": "ccd143a1944356eb6eb5197a59e38795b16b99f728ed2a5d7557b295cd92956b"
+    },
+    "gate_decision": {
+      "path": "MTJFidelityGate0/DECISION.txt",
+      "sha256": "23363325fdc0e5461aac723e68caa9e2da9c79a951f71c9f8c1857273746f737"
+    },
+    "soma_metrics": {
+      "path": "SomaBranch/somabranch/studies/pilot_v1/phase11a1_representation_transfer/VALIDATION_METRICS.json",
+      "sha256": "2a1635edc04790bed8da42eeb1ec17d271949e9109a0038b17d1c3a31ec5fcb9"
+    },
+    "soma_controls": {
+      "path": "SomaBranch/somabranch/studies/pilot_v1/phase11a1_representation_transfer/CONTROL_COMPARISON.json",
+      "sha256": "3d863e86cbde6ba8a650f0c6703ee9ed89b1d010dae0759f8a0e903869c9d118"
+    },
+    "soma_decision": {
+      "path": "SomaBranch/somabranch/studies/pilot_v1/phase11a1_representation_transfer/VALIDATION_GATE_RESULT.json",
+      "sha256": "d2c9a8aea6d7462dec3893e0e4f3744523008adca92744cd02dffed1fbb6b5cb"
+    },
+    "soma_report": {
+      "path": "SomaBranch/somabranch/studies/pilot_v1/phase11a1_representation_transfer/MODEL_DEVELOPMENT_REPORT.md",
+      "sha256": "c470560c4d05d09d94ff43f370014803458e273b280fb07e14754be39c6a1460"
+    },
+    "mtj_input_provenance": {
+      "path": "MTJCore/provenance/input_provenance.tsv",
+      "sha256": "a57850dda223c9ea5519dc3e6da845f03103e08a593d4f6212d9de1b1b5655cd"
+    },
+    "mtj_stage5_outputs": {
+      "path": "MTJCore/provenance/stage5_outputs.sha256",
+      "sha256": "28f93fb1ec0d68b90ed52309f9ef6eeb35f9acb6174e1779ff83d1a2f75d6c99"
+    },
+    "mtj_stage6_outputs": {
+      "path": "MTJCore/provenance/stage6_outputs.sha256",
+      "sha256": "c959bf18f305811c191dd45f51242847d971d8a444acfc0de2a0689c53c661bb"
+    },
+    "mtj_stage7_manifest": {
+      "path": "MTJCore/provenance/stage7_manifest.json",
+      "sha256": "ead1ec3f158e9aff82504b86d7be2ba54ae055ff49ae77f12f18336512b96780"
+    },
+    "gate_input_provenance": {
+      "path": "MTJFidelityGate0/input_provenance.tsv",
+      "sha256": "3bbb5ba7b0a51aaf67e544c070f972db17ac7222638446cd3ffbe14319b533ec"
+    }
+  },
+  "dataset_accessions": {
+    "FND-0047": [
+      "CELLxGENE:ef0fc6ac-4872-40e1-ab24-e445b19ca6e3",
+      "E-MTAB-12529"
+    ],
+    "NEG-0041": [
+      "E-MTAB-15400"
+    ],
+    "FND-0048": [
+      "PXD029307"
+    ],
+    "NEG-0042": [
+      "PXD029307",
+      "PXD072245"
+    ],
+    "NEG-0043": [
+      "Zenodo:4064409"
+    ],
+    "NEG-0044": [
+      "Dryad:10.5061/dryad.sbcc2frmh"
+    ],
+    "NEG-0037": [
+      "PhysioNet:10.13026/7ezk-j442"
+    ]
+  },
+  "bird_input_manifest": "../cycle13_decision_experiment/experiment_data_manifest.json"
+}

@@ -1,3 +1,16 @@
+# SUBJECT-01 — текущая передача после научной консолидации
+
+12.11.2026 · Ветка `research/scientific-consolidation` · База `113dbad16f2920ede49e679596a24b53fdf4af2e`.
+
+- [Итоговый отчёт](../research/consolidation/CONSOLIDATION_REPORT_RU.md), [доказательства](../research/consolidation/INTEGRATED_EVIDENCE.md), [следующие эксперименты](../research/consolidation/NEXT_EXPERIMENTS.md).
+- Из 24 проверенных директорий пять внешних результатов приняты из трёх источников. Новых модулей модели нет. SRC-0077–0080, FND-0047–0048, NEG-0041–0044, HYP-0010 и ISS-0022.
+- **Действующая трактовка EXP-0046.** На активных сериях Bird (6 человек, 1 844 строки) средний fold R² моста −0,1148 против −0,0528 у sEMG. 0,3363 относится к смешанным сериям. +18,34%, +23,56% и расчётные напряжения относятся к сценариям. HYP-0009 имеет статус unverified и поддержку MODEL_ONLY. Исторический текст Cycle 13 ниже сохранён как запись своего этапа.
+- Повторён NEG-0037 на Malaga с разбиением по человеку. CPE45 остаётся NOT EXTERNALLY VALIDATED, биологические вмешательства NO_GO, PR #9 CONDITIONAL HOLD по DEC-0021.
+- Следующий блокер — внешние активные данные с измеренным антагонистом (ISS-0022), затем региональная механика и переход к многосуставной задаче.
+- Проверка из корня: `python tools/validate_repository.py` и `python research/consolidation/reproduce_evidence.py --external-root D:/ --bird --malaga`.
+
+---
+
 # SUBJECT-01 — handoff: Cycle 13 Strategic Reorientation, Evidence Audit & Decision-Driven Research (EXP-0046, DEC-0021)
 
 Канон: G1F12/SUBJECT-01. Начать с git status, git fetch origin и сверки HEAD.  

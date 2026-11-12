@@ -153,5 +153,16 @@
     "date": "2026-11-12",
     "title": "Strategic Reorientation: Disqualification of Architecture B, Freezing of Architecture C, and Prioritization of Architecture A with Tendon/Thermal Roadmaps",
     "decision": "Formally adopted the Cycle 13 strategic reorientation and evidence audit: (1) Disqualified Architecture B (Supplemental Bioengineered Muscle) as NO_GO due to acute myofascial compartment syndrome, microvascular ischemia, and enthesis shear; (2) Placed Architecture C (Internal Biohybrid Actuation) on HOLD / BREAKTHROUGH-DEPENDENT due to internal cavity heat rejection ceilings (400-800 W) and electrochemical battery mass penalties inside intact limbs; (3) Approved Architecture A (Native Biological Enhancement) as PRIMARY_RECOMMENDED_DIRECTION (CONDITIONAL POTENTIAL); (4) Ratified the 12-week Master Roadmap (Cycles 14-18) focusing on multi-joint kinematic chains, tendon-enthesis FEA stress limits, and 3D Penne's bioheat dissipation; (5) Placed PR #9 on CONDITIONAL HOLD pending bundle removal and thermal re-audit; (6) Ratified experiment EXP-0046, finding FND-0046, and negative result NEG-0040."
+  },
+  {
+    "id": "DEC-0022",
+    "date": "2026-11-12",
+    "title": "Admit five scoped external evidence results and correct EXP-0046 interpretation",
+    "decision": "Admit FND-0047, FND-0048 and NEG-0041–0043 as linked evidence. Register NEG-0044. Treat active-only held-out results as primary for active torque; classify augmentation scenarios and HYP-0009 support as model-only. Preserve CPE45 NOT EXTERNALLY VALIDATED and interventions NO_GO.",
+    "rationale": "Independent functional calibration is absent. The numerical replay identifies weak active transfer and defines the next admission tests.",
+    "amends": [
+      "DEC-0021"
+    ],
+    "supersedes": []
   }
 ]

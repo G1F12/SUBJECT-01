@@ -300,7 +300,55 @@
     "date": "2026-11-12",
     "experiment_id": "EXP-0046",
     "hypothesis": "An isolated +20% increase in contractile muscle fiber force directly yields a +20% increase in net functional joint torque without neural co-activation tuning or pennation angle losses.",
-    "result": "Refuted across multi-muscle biomechanical bridge modeling on Bird et al. (2026) raw dynamic arrays. Hypertrophic fiber thickening increases dynamic pennation angle (Delta alpha approx +2.8 deg), dispersing 8.3% of axial contractile force radially (cos 17.3 deg = 0.955 vs cos 14.5 deg = 0.968). Coupled with dynamic antagonist hamstring co-activation (gamma = 0.08 + 0.14 * a), an isolated +20% increase in fiber force yields only +18.3% net joint torque (torque transmission efficiency eta_torque = 0.917). Achieving a full +20% functional gain requires co-adaptive neural tuning of reciprocal inhibition (suppression of excessive antagonist co-contraction).",
-    "impact": "Bars assuming 1:1 scalar transfer from muscle fiber hypertrophy to net functional joint torque; mandates modeling dynamic pennation geometry and reciprocal neural inhibition in all Architecture A specifications."
+    "result": "MODEL_ONLY. With fixed gamma and all other scenario assumptions, a +2.8 degree pennation change lowers cos(alpha) by 1.38% relative to nominal. Simulated +20% fiber force yields +18.34% net knee torque. The 8.3% is the share of the planned torque gain lost under this scenario.",
+    "impact": "Treat geometry and antagonist moment separately. Their empirical dose-response and necessity for meeting the target remain unverified.",
+    "interpretation_revision": {
+      "previous_version": "113dbad16f2920ede49e679596a24b53fdf4af2e",
+      "decision_id": "DEC-0022"
+    }
+  },
+  {
+    "id": "NEG-0041",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0077"
+    ],
+    "hypothesis": "The frozen myonuclear programme clears the Stage 6 loading-context direction criterion.",
+    "result": "Observed direction concordance 0.5818 below 0.60 in E-MTAB-15400, n=8 donors. Sex and exercise group strongly confounded.",
+    "impact": "No clear condition association under the frozen criterion. Biological load responsiveness remains unresolved."
+  },
+  {
+    "id": "NEG-0042",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0078"
+    ],
+    "hypothesis": "Engineered PXD072245 meets native-112 comparability admission.",
+    "result": "66/112 usable versus 68 required. Independent biological replicate identity is undocumented for critical columns. GATE_0B_FAIL.",
+    "impact": "Engineered comparison ineligible for parameter calibration. Biological fidelity remains unresolved."
+  },
+  {
+    "id": "NEG-0043",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0079"
+    ],
+    "hypothesis": "SomaBranch retrospective ridge transfer improves on simple session controls.",
+    "result": "One validation session: MSE 0.11733 versus TRAIN mean 0.10372 and mean-delta 0.09602. Validation gate failed. TEST unopened.",
+    "impact": "Retain the simple-baseline and independent-unit admission principles for prospective CPE45 work. Speech metrics carry no energy or force calibration."
+  },
+  {
+    "id": "NEG-0044",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0047",
+    "sources": [
+      "SRC-0076"
+    ],
+    "hypothesis": "EXP-0046 co-activation bridge improves held-out active torque prediction relative to sEMG.",
+    "result": "Reproduced Bird active-only LOSO on six participants and 1844 rows: bridge mean fold R2 -0.11482 versus sEMG -0.05280; pooled RMSE 0.21302 versus 0.20499 fraction MVC. Same original cohort.",
+    "impact": "Mixed-condition positive R2 cannot qualify the active endpoint. Use active-only external testing and measured antagonists to assess added predictive value. No population null or broad architectural falsification."
   }
 ]

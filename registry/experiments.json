@@ -1308,7 +1308,7 @@
       "SRC-0076"
     ],
     "design": "Multi-muscle quadriceps biomechanical force transmission modeling (PCSA weighting across Vastus Lateralis, Vastus Medialis, Vastus Intermedius, and Rectus Femoris), dynamic antagonist hamstring co-activation modeling (gamma = 0.08 + 0.14 * a_VL), strict 0-leakage Leave-One-Subject-Out (LOSO) cross-validation across N=6 human participants (3,226 dynamic observations from Bird et al. 2026 raw array DATA_Dynamic_Knee.mat), and TARGET-FORCE20 (+20% fiber force) augmentation feasibility simulation analyzing pennation angle hypertrophy penalty and patellar tendon tensile stress.",
-    "status": "completed_empirical_raw_data_and_augmentation_evaluated",
+    "status": "completed_same_cohort_loso_and_model_only_scenarios",
     "results": {
       "loso_all_observations": {
         "m0_mean_r2": -0.0721,
@@ -1348,12 +1348,54 @@
       "research/cycle13_decision_experiment/config.json"
     ],
     "reproduction_command": "python research/cycle13_decision_experiment/run_experiment.py",
-    "limits": "Multi-muscle quadriceps bridge and co-activation model evaluated on raw arrays of Bird et al. (2026) in vivo dynamometry (N=6 dynamic subjects, 3,226 rows; torque in fraction of MVC [0.0, 1.0]). Proven that isolated fiber hypertrophy (+20% force) suffers geometric pennation angle penalty (+2.8 deg), yielding only +18.3% net joint torque (transmission efficiency 0.917, NEG-0040). Patellar tendon stress rises to 42.0 MPa (SF = 2.38, safe above 1.5 threshold). Co-adapted tendon restores stress to 35.0 MPa (SF = 2.86). Full target torque gain (+23.6%) requires synergistic neural tuning (25% reduction in antagonist co-activation). Knee joint torque cannot be extrapolated to whole-body maximum strength without closed kinematic chain modeling (NEG-0038 preserved). TARGET-CPE45 remains NOT EXTERNALLY VALIDATED and biological interventions strictly NO_GO.",
-    "external_validation": "empirical_raw_data_and_cross_subject_loso_validated",
+    "limits": "Same-cohort Bird LOSO, six participants, normalized torque in fraction of MVC. In active protocols the bridge mean fold R2 is -0.1148 versus -0.0528 for sEMG. Modeled augmentation, pennation, stress and UTS-based ratios are scenario outputs. Tissue safety, measured augmentation and cross-cohort functional transfer remain unverified.",
+    "external_validation": "same_cohort_leave_one_subject_out_only",
     "data_type": "ORIGINAL_BINARY_FILE",
-    "experiment_tag": "EXP-0046_MULTI_MUSCLE_BRIDGE_VALIDATED",
+    "experiment_tag": "EXP-0046_MULTI_MUSCLE_BRIDGE_EVALUATED",
     "tags": [
-      "EXP-0046_MULTI_MUSCLE_BRIDGE_VALIDATED"
-    ]
+      "EXP-0046_MULTI_MUSCLE_BRIDGE_EVALUATED"
+    ],
+    "interpretation_revision": {
+      "previous_version": "113dbad16f2920ede49e679596a24b53fdf4af2e",
+      "decision_id": "DEC-0022",
+      "negative_result_id": "NEG-0044"
+    }
+  },
+  {
+    "id": "EXP-0047",
+    "date": "2026-11-12",
+    "name": "Portfolio evidence consolidation and read-only endpoint verification",
+    "sources": [
+      "SRC-0074",
+      "SRC-0076",
+      "SRC-0077",
+      "SRC-0078",
+      "SRC-0079",
+      "SRC-0080"
+    ],
+    "design": "Candidate screening, checksum-bound re-extraction of five derived outcomes, raw Bird active-only and mixed LOSO replay, configured scenario arithmetic, and grouped Malaga ad hoc transfer replay.",
+    "status": "completed_evidence_audit_and_computational_reproduction",
+    "model": "research/consolidation/reproduce_evidence.py",
+    "inputs": "research/consolidation/evidence_inputs.json",
+    "report": "research/consolidation/CONSOLIDATION_REPORT_RU.md",
+    "outputs": [
+      "research/consolidation/evidence_results.json"
+    ],
+    "reproduction_command": "python research/consolidation/reproduce_evidence.py --external-root D:/ --bird --malaga",
+    "results": {
+      "findings": [
+        "FND-0047",
+        "FND-0048"
+      ],
+      "negative_results": [
+        "NEG-0041",
+        "NEG-0042",
+        "NEG-0043",
+        "NEG-0044"
+      ]
+    },
+    "limits": "Local derived evidence re-extraction is separate from full upstream pipeline replication. Bird and Malaga replay use the same original cohorts. No intervention efficacy or new functional validation.",
+    "external_validation": "none_new",
+    "data_type": "MIXED_SOURCE_EVIDENCE_AUDIT"
   }
 ]

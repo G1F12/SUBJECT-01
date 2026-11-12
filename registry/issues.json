@@ -181,5 +181,19 @@
     "title": "Multi-Joint Closed Kinematic Chain Power Transmission and Tendon Safety Gap",
     "description": "The transition from single-joint knee extension torque to whole-body multi-joint functional movements (squat, sprint, vertical jump) remains unmodeled. Dynamic co-activation across bi-articular muscles (rectus femoris, hamstrings, gastrocnemius) and high rates of force development (dF/dt > 15 kN/s) create complex contact stresses and tendon safety risks that must be resolved in Cycle 14 and Cycle 15.",
     "status": "open"
+  },
+  {
+    "id": "ISS-0022",
+    "date": "2026-11-12",
+    "title": "External active-only torque benchmark and missing antagonist observations",
+    "description": "NEG-0044 reproduces weaker active bridge performance than sEMG in the original Bird cohort. E1 requires another cohort with directly recorded antagonist and agonist EMG, protocol groups, measured torque and subject-level normalization.",
+    "status": "open",
+    "priority": "high",
+    "related_experiments": [
+      "EXP-0047"
+    ],
+    "related_issues": [
+      "ISS-0021"
+    ]
   }
 ]

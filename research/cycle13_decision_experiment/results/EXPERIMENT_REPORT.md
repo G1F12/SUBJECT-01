@@ -1,5 +1,7 @@
 # SUBJECT-01 — CYCLE 13: EXPERIMENT REPORT EXP-0046
 
+> **Interpretation revised by DEC-0022.** Mixed-condition R² does not establish active torque generalization. Active-only mean fold R² is −0.1148 for the bridge versus −0.0528 for sEMG. Augmentation and safety-factor values are outputs of configured scenarios. The original report below is historical. See [the reproducibility and scope audit](../../consolidation/FUNCTIONAL_IMPACT.md).
+
 ## Functional Biomechanical Multi-Muscle Bridge and Augmentation Feasibility Under Dynamic Antagonist Co-Activation
 
 **Experiment ID:** `EXP-0046`  

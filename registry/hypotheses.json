@@ -123,10 +123,34 @@
     "id": "HYP-0009",
     "date": "2026-11-12",
     "title": "Multi-Muscle Synergistic Coordination and Co-Adapted Tendon Architecture Feasibility",
-    "statement": "In vivo skeletal muscle force enhancement of +20% achieves greater than +20% net functional joint torque only when accompanied by synergistic neural tuning of reciprocal antagonist inhibition, while preserving a patellar tendon safety factor SF >= 1.5 through proportional connective tissue co-adaptation.",
-    "status": "verified_conditionally",
+    "statement": "Measured antagonist co-activation and tendon adaptation may explain variation in how muscle force transfers to net joint torque. The specified gains and maintenance of tissue and task function require external validation.",
+    "status": "unverified",
     "related_experiments": [
-      "EXP-0046"
-    ]
+      "EXP-0046",
+      "EXP-0047"
+    ],
+    "evidence_status": "MODEL_ONLY",
+    "status_history": [
+      {
+        "status": "verified_conditionally",
+        "commit": "113dbad16f2920ede49e679596a24b53fdf4af2e",
+        "decision_id": "DEC-0021"
+      }
+    ],
+    "notes": "DEC-0022 revises interpretation of simulated gain and removes the inference of in vivo necessity or safety."
+  },
+  {
+    "id": "HYP-0010",
+    "date": "2026-11-12",
+    "title": "Regional patellar tendon geometry improves prediction of local strain",
+    "statement": "At the same inferred tendon force, using segmental CSA rather than a single nominal CSA reduces held-out local strain prediction RMSE by at least 10% under an otherwise fixed material model.",
+    "status": "unverified",
+    "related_experiments": [
+      "EXP-0047"
+    ],
+    "sources": [
+      "SRC-0080"
+    ],
+    "notes": "Proposed threshold for pre-registration before external outcomes. Region-specific CSA in humans motivates the hypothesis; it does not establish failure resistance."
   }
 ]
