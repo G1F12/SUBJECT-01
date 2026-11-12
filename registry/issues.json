@@ -174,5 +174,12 @@
       "research/treadmill_cpet_2026_11_09",
       "tools/evaluate_malaga_treadmill.py"
     ]
+  },
+  {
+    "id": "ISS-0021",
+    "date": "2026-11-12",
+    "title": "Multi-Joint Closed Kinematic Chain Power Transmission and Tendon Safety Gap",
+    "description": "The transition from single-joint knee extension torque to whole-body multi-joint functional movements (squat, sprint, vertical jump) remains unmodeled. Dynamic co-activation across bi-articular muscles (rectus femoris, hamstrings, gastrocnemius) and high rates of force development (dF/dt > 15 kN/s) create complex contact stresses and tendon safety risks that must be resolved in Cycle 14 and Cycle 15.",
+    "status": "open"
   }
 ]
