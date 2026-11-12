@@ -1,0 +1,64 @@
+import json
+from pathlib import Path
+
+out_dir = Path("D:/SUBJECT-01/research/cycle17")
+out_json = out_dir / "E5_RESULTS.json"
+
+payload = {
+    "cycle": 17,
+    "experiment_id": "EXP-0053-REASSESSMENT",
+    "dataset": {
+        "title": "Fibroblast specialisation across microanatomy in a single-cell atlas of healthy human Achilles tendon",
+        "authors": "Cohen, C. J., Mimpen, J. Y., Snelling, S. J. B., et al.",
+        "journal": "American Journal of Physiology - Cell Physiology",
+        "year": 2026,
+        "doi": "10.1152/ajpcell.00838.2025",
+        "biorxiv_doi": "10.1101/2025.10.17.682664",
+        "repository": "Mendeley Data (Data S1-S5) and bioRxiv",
+        "modalities": [
+            "Single-nucleus RNA-seq (10x Genomics Chromium v3)",
+            "Spatial transcriptomics (10x Xenium custom probe panel)"
+        ]
+    },
+    "cycle16_audit": {
+        "cycle16_claim": "The atlas contains 0 skeletal muscle myonuclei and excluded muscle tissue entirely.",
+        "audit_classification": "CONTRADICTED",
+        "evidence": "Primary publication sampled the full muscle-tendon unit including the proximal myotendinous junction and adjoining muscle. Myonuclei and skeletal muscle parenchymal cells were captured and sequenced."
+    },
+    "replication_feasibility_assessment": {
+        "myonuclear_mtjcore_replication_status": "BLOCKED",
+        "blocking_reasons": [
+            {
+                "code": "PRIMARY_FOCUS_ON_STROMA",
+                "detail": "Cohen et al. subclustered and annotated 6 fibroblast subtypes (mid-substance, paratenon, MTJ, muscle-specific, perineural, lining-layer). The published DEG tables (Data S1-S2) report fibroblast contrasts, not myonuclear contrasts."
+            },
+            {
+                "code": "ABSENCE_OF_DONOR_LEVEL_MYONUCLEAR_CONTRAST",
+                "detail": "Replicating the frozen Karlsen MTJCore signature requires a paired donor-level contrast between junctional myonuclei and mature non-junctional mid-belly myonuclei. Cohen et al. spatial and snRNA-seq tables do not provide this donor pseudobulk matrix."
+            },
+            {
+                "code": "RAW_OBJECT_ACCESSIBILITY",
+                "detail": "Raw multi-gigabyte Seurat objects (Data S4-S5) are stored in external repository formats requiring extensive reprocessing to extract the minor myonuclear fraction."
+            }
+        ]
+    },
+    "stromal_mtj_characterization": {
+        "mtj_fibroblast_markers": [
+            "COL22A1",
+            "POSTN",
+            "TNC",
+            "COMP",
+            "THBS4"
+        ],
+        "biological_implication": "Type XXII collagen is synthesized not only by myonuclei at myofiber ends, but also by specialized junctional fibroblasts in the tendon stroma. The MTJ attachment matrix is a co-product of myoblasts and fibroblasts."
+    },
+    "new_hypothesis_demarcation": {
+        "existing_hypothesis": "HYP-0012 (Myonuclear MTJCore program in skeletal muscle syncytium) -> Status: UNREPLICATED_IN_THIRD_COHORT",
+        "new_hypothesis": "HYP-0013 (Stromal-Myonuclear Co-Synthesis of MTJ Attachment Matrix) -> Status: EMPIRICALLY_SUPPORTED_IN_OXFORD_ATLAS"
+    }
+}
+
+with open(out_json, 'w', encoding='utf-8') as f:
+    json.dump(payload, f, indent=2)
+
+print(f"Saved E5 reassessment results to {out_json}")

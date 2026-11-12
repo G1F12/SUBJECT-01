@@ -1567,5 +1567,89 @@
     "limits": "Only stromal fibroblasts/tenocytes profiled; skeletal muscle myonuclei excluded.",
     "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0054",
+    "date": "2026-11-12",
+    "name": "E1-ABLATION: Factorial Feature Ablation of Anthropometrics and Multichannel sEMG in Torque Modeling",
+    "sources": [
+      "SRC-0081"
+    ],
+    "design": "Full 2x5 factorial ablation (OLS, Ridge) across 5 nested feature sets (F0-F4) in 20-fold Leave-One-Subject-Out cross-validation on 125 extension trials (DPValid) to isolate true predictive sources.",
+    "status": "completed",
+    "model": "research/cycle17/scripts/run_e1_factorial_ablation.py",
+    "inputs": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "report": "research/cycle17/E1_FEATURE_ABLATION.md",
+    "outputs": [
+      "research/cycle17/E1_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle17/scripts/run_e1_factorial_ablation.py",
+    "results": {
+      "findings": [
+        "FND-0055"
+      ],
+      "negative_results": [
+        "NEG-0051"
+      ]
+    },
+    "limits": "Isometric trials only; dynamic contractions require E1-DYN.",
+    "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "EXP-0055",
+    "date": "2026-11-12",
+    "name": "E2-CORRECTION: Subject-Level Nonparametric Statistical Re-Analysis & Pseudoreplication Correction",
+    "sources": [
+      "SRC-0082"
+    ],
+    "design": "Independent biological participant aggregation (N=10) of Bogaerts et al. (2017) ultrasound speckle tracking data, correcting pseudoreplication in the Friedman test and evaluating between-limb correlation.",
+    "status": "completed",
+    "model": "research/cycle17/scripts/run_e2_statistical_correction.py",
+    "inputs": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+    "report": "research/cycle17/E2_STATISTICAL_CORRECTION.md",
+    "outputs": [
+      "research/cycle17/E2_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle17/scripts/run_e2_statistical_correction.py",
+    "results": {
+      "findings": [
+        "FND-0056"
+      ],
+      "negative_results": [
+        "NEG-0052"
+      ]
+    },
+    "limits": "Reproduction and statistical correction only; mechanical stress blocked by absent layer CSA.",
+    "external_validation": "EMPIRICALLY_CONFIRMED_CROSS_SUBJECT",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "EXP-0056",
+    "date": "2026-11-12",
+    "name": "E5-REASSESSMENT: Oxford Achilles Single-Cell Atlas Microanatomy & Stromal Specialization Audit",
+    "sources": [
+      "SRC-0083"
+    ],
+    "design": "Forensic audit of Cohen et al. (2026) single-cell atlas and Mendeley Data repositories, resolving presence of muscle tissue and establishing exact criteria for MTJCore replication blockage.",
+    "status": "completed",
+    "model": "research/cycle17/scripts/run_e5_reassessment.py",
+    "inputs": "research/cycle17/E5_OXFORD_REASSESSMENT.md",
+    "report": "research/cycle17/E5_OXFORD_REASSESSMENT.md",
+    "outputs": [
+      "research/cycle17/E5_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle17/scripts/run_e5_reassessment.py",
+    "results": {
+      "findings": [
+        "FND-0057"
+      ],
+      "negative_results": [
+        "NEG-0053"
+      ]
+    },
+    "limits": "Myonuclear replication blocked by missing donor pseudobulk matrix in primary tables.",
+    "external_validation": "DATA_BLOCKED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

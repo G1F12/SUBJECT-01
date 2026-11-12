@@ -1,3 +1,38 @@
+# SUBJECT-01 — состояние после Cycle 17: Independent Scientific Correction, Statistical Reanalysis & MTJ Validation (EXP-0054..0056, FND-0055..0057, NEG-0051..0053), 12.11.2026
+
+Ветка: 
+esearch/cycle17-scientific-correction · База: 543524eeaddd75a6f8179942724dc7a35a39740 (Cycle 16).
+
+- [Итоговый отчёт Cycle 17](research/cycle17/CYCLE17_FINAL_REPORT_RU.md) · [Форензик-аудит Cycle 16](research/cycle17/CYCLE16_FORENSIC_AUDIT.md) · [Факторный анализ E1](research/cycle17/E1_FEATURE_ABLATION.md) · [Коррекция псевдорепликации E2](research/cycle17/E2_STATISTICAL_CORRECTION.md) · [Ревизия E5 Oxford Atlas](research/cycle17/E5_OXFORD_REASSESSMENT.md) · [Независимая верификация](research/cycle17/INDEPENDENT_VERIFICATION.md).
+- **Экспериментальные статусы:**
+  * E1-ABLATION (EXP-0054) = COMPLETED_FACTORIAL_VERIFIED (Факторный анализ 2x5 на 125 попытках DPValid доказал: антропометрия F0 сама по себе даёт R² = 0.6867, RMSE = 49.19 Nm; добавление поверхностной ЭМГ ухудшает результат; добавление антагонистов статистически достоверно увеличивает ошибку, p = 0.0089).
+  * E2-CORRECTION (EXP-0055) = COMPLETED_SUBJECT_LEVEL (Устранена псевдорепликация в критерии Фридмана: chi2 исправлен с 59.55 на 20.0, p = 4.54e-05; градиент перемещения +0.564 мм подтверждён на всех 10 субъектах, p = 0.0031; различия деформаций strain на уровне субъектов не подтвердились, p = 0.6703).
+  * E5-REASSESSMENT (EXP-0056) = COMPLETED_STROMAL_AUDIT / REPLICATION_BLOCKED (Опровергнут тезис об отсутствии миоядер; репликация MTJCore заблокирована отсутствием донорских псевдобалк-контрастов в публичных таблицах; сформулирована новая гипотеза HYP-0013 о стромальном со-производстве коллагена XXII).
+- **Новые эмпирические результаты:**
+  * FND-0055: Антропометрическое масштабирование и угол колена полностью определяют межсубъектный прогноз момента колена (F0 R² = 0.6867); добавление антагонистической ЭМГ статистически достоверно ухудшает обобщение (Delta RMSE = -3.01 Nm, p = 0.0089).
+  * FND-0056: Неоднородность перемещения слоёв ахиллова сухожилия надёжно подтверждена на уровне участников (глубокий слой смещается на 23% больше поверхностного, p = 0.0031), тогда как послойные различия деформаций strain статистически недостоверны (p = 0.6703).
+  * FND-0057: Клетки стромы MTJ (специализированные фибробласты) в атласе Cohen et al. (2026) экспрессируют COL22A1, POSTN, TNC, COMP, доказывая совместное формирование соединения мионуклеусами и фибробластами (HYP-0013).
+- **Новые отрицательные результаты:**
+  * NEG-0051: Опровержение прогностической роли ЭМГ в модели M4 (добавление ЭМГ снижает R² с 0.6867 до 0.6301 и увеличивает RMSE с 49.19 до 53.45 Nm).
+  * NEG-0052: Опровержение послойных различий деформаций сухожилия при изометрическом сокращении на уровне участников (Bogaerts subject-level strain Friedman p = 0.6703).
+  * NEG-0053: Невозможность репликации MTJCore на доступных таблицах Oxford Atlas из-за отсутствия донорских контрастов.
+- **Новые гипотезы и проблемы:**
+  * HYP-0013: Стромально-мионуклеарное ко-производство коллагена XXII в зоне MTJ.
+  * ISS-0025: Отсутствие открытых данных 3D-УЗИ или поперечной МРТ с геометрией сечений отдельных субтендонов для расчёта напряжений.
+- **Реестры SUBJECT-01:** EXP=56, HYP=11, FND=57, NEG=53, DEC=22, ISS=25, SRC=83.
+- **Инварианты проекта (строго сохранены):**
+  * TARGET-CPE45 = NOT EXTERNALLY VALIDATED
+  * BIOLOGICAL INTERVENTIONS = NO_GO
+  * STRENGTH +20% = NOT VALIDATED (THEORETICAL TARGET ONLY)
+- **Воспроизведение и верификация:**
+  python research/cycle17/scripts/verify_cycle17.py
+  python research/cycle17/scripts/run_e1_factorial_ablation.py
+  python research/cycle17/scripts/run_e2_statistical_correction.py
+  python tools/validate_repository.py
+  pytest tests/test_cycle17_validation.py
+
+---
+
 # SUBJECT-01 — состояние после Cycle 16: Independent Biomechanics, Tendon Mechanics & MTJ Replication (EXP-0051..0053, FND-0052..0054, NEG-0048..0050), 12.11.2026
 
 Ветка: 

@@ -116,7 +116,8 @@
       "EXP-0039",
       "EXP-0040",
       "EXP-0041",
-      "EXP-0051"
+      "EXP-0051",
+      "EXP-0054"
     ],
     "notes": "Formulated and confirmed in Research Cycle 9 via biophysical modeling and empirical HD-sEMG / 31P-MRS cross-validation."
   },
@@ -150,11 +151,26 @@
     "related_experiments": [
       "EXP-0047",
       "EXP-0049",
-      "EXP-0052"
+      "EXP-0052",
+      "EXP-0055"
     ],
     "sources": [
       "SRC-0080"
     ],
     "notes": "Unverified (MODEL_ONLY). Evaluated in EXP-0049 (NEG-0046, DATA_BLOCKED). Literature means cannot be substituted as individual data. Segmental CSA model pre-registered."
+  },
+  {
+    "id": "HYP-0013",
+    "date": "2026-11-12",
+    "title": "Stromal-Myonuclear Dual Synthesis of Type XXII Collagen at Human MTJ Interface",
+    "statement": "Type XXII collagen at the human muscle-tendon junction is transcriptionally co-expressed by both junctional myonuclei and specialized junctional fibroblasts, such that genetic or biomechanical activation of MTJ attachment requires dual-compartment coordination.",
+    "status": "unverified",
+    "related_experiments": [
+      "EXP-0056"
+    ],
+    "sources": [
+      "SRC-0083"
+    ],
+    "notes": "Formulated in Cycle 17 from Oxford Single-Cell Atlas audit. Supported at the cellular observation level; functional co-culture validation required."
   }
 ]

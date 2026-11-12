@@ -442,5 +442,32 @@
     "statement": "Cohen et al. (2026) single-cell atlas independently confirms that stromal fibroblasts residing at the human MTJ are transcriptionally distinct and upregulate COL22A1, POSTN, TNC, and COMP, validating stromal participation in the myotendinous attachment matrix.",
     "confidence": "high",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0055",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0054",
+    "title": "Anthropometric-Kinematic Dominance and Antagonist sEMG Noise in Cross-Subject Knee Torque Prediction",
+    "statement": "In a 2x5 factorial ablation on 125 extension trials (DPValid), anthropometry and angle alone (F0) achieve R2 = 0.6867 (RMSE = 49.19 Nm). Adding surface EMG degrades performance, and adding antagonist EMG to anthropometry + agonist EMG statistically significantly increases error (Delta RMSE = -3.01 Nm, paired t p = 0.0089).",
+    "confidence": "high",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "FND-0056",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0055",
+    "title": "Subject-Level Invariant of Deep-over-Superficial Achilles Tendon Displacement with Non-Significant Strain Gradient",
+    "statement": "Proper subject-level re-analysis (N=10) of Bogaerts et al. resolves pseudoreplication (correcting chi2 from 59.55 to 20.0, p = 4.54e-05) and confirms that deep displacement exceeds superficial displacement in 100% of participants (+0.564 mm, p = 0.0031). However, layer strain differences are statistically non-significant (p = 0.6703).",
+    "confidence": "high",
+    "data_type": "RAW_HUMAN_OBSERVATION"
+  },
+  {
+    "id": "FND-0057",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0056",
+    "title": "Stromal-Myonuclear Dual Synthesis of Type XXII Collagen at Human MTJ Interface",
+    "statement": "Cohen et al. (2026) single-cell atlas demonstrates that tendon-resident MTJ fibroblasts specialize transcriptionally and express COL22A1, POSTN, TNC, and COMP, establishing that the junctional attachment matrix is a co-product of both muscle myonuclei and specialized tendon fibroblasts.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

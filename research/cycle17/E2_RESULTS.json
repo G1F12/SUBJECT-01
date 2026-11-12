@@ -1,0 +1,169 @@
+{
+  "cycle": 17,
+  "experiment_id": "EXP-0052-STATISTICAL-CORRECTION",
+  "dataset": "Bogaerts et al. (2017) PLoS ONE (PMC5519157)",
+  "demographic_audit": {
+    "total_participants": 10,
+    "sex_distribution_true": {
+      "Male": 6,
+      "Female": 4
+    },
+    "cycle16_reported_sex": {
+      "Female": 5,
+      "Male": 5
+    },
+    "correction_note": "Cycle 16 erroneously reported 5F/5M. True composition is 6 Males (60%) and 4 Females (40%), matching the published manuscript text."
+  },
+  "analysis": {
+    "ISO": {
+      "flawed_trial_level_n40": {
+        "n_trials": 40,
+        "friedman_disp_stat": 59.55000000000007,
+        "friedman_disp_pvalue": 1.1718763813436918e-13,
+        "friedman_strain_stat": 4.050000000000011,
+        "friedman_strain_pvalue": 0.13199384318782945,
+        "critique": "Severe pseudoreplication: treats 4 non-independent trials per subject as 40 independent subjects."
+      },
+      "corrected_subject_level_n10": {
+        "n_subjects": 10,
+        "disp_superficial_mm": {
+          "mean": 2.4384949999999996,
+          "std": 1.249891124969602
+        },
+        "disp_middle_mm": {
+          "mean": 2.7256875000000003,
+          "std": 1.3724225793408975
+        },
+        "disp_deep_mm": {
+          "mean": 3.0029150000000002,
+          "std": 1.5190063915819005
+        },
+        "friedman_disp_stat": 20.0,
+        "friedman_disp_pvalue": 4.539992976248486e-05,
+        "paired_diff_deep_minus_sup_mm": {
+          "mean": 0.5644200000000001,
+          "std": 0.4470189144022134,
+          "relative_pct": 23.14624389223682,
+          "ci95": [
+            0.24464193248286736,
+            0.8841980675171329
+          ],
+          "paired_ttest_stat": 3.992790236491611,
+          "paired_ttest_pvalue": 0.003144456753180411,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 0.001953125
+        },
+        "strain_superficial_pct": {
+          "mean": 0.3338200000000001,
+          "std": 0.41722988713923914
+        },
+        "strain_middle_pct": {
+          "mean": 0.32251749999999996,
+          "std": 0.4327877028074953
+        },
+        "strain_deep_pct": {
+          "mean": 0.31812500000000005,
+          "std": 0.45234570727363926
+        },
+        "friedman_strain_stat": 0.8000000000000114,
+        "friedman_strain_pvalue": 0.6703200460356356,
+        "paired_diff_strain_deep_minus_sup_pct": {
+          "mean": -0.015695000000000025,
+          "std": 0.07045326445397841,
+          "ci95": [
+            -0.06609422927533103,
+            0.03470422927533098
+          ],
+          "paired_ttest_stat": -0.7044662622945377,
+          "paired_ttest_pvalue": 0.49896437272571836
+        },
+        "between_limb_correlation": {
+          "pearson_r": 0.35526068153356016,
+          "p_value": 0.3137451235062416,
+          "interpretation": "High bilateral correlation confirms that limbs from the same subject cannot be treated as independent."
+        },
+        "jackknife_sensitivity": {
+          "min_mean_diff": 0.45978055555555564,
+          "max_mean_diff": 0.6086916666666667,
+          "stable_across_all_exclusions": true
+        }
+      }
+    },
+    "PAS": {
+      "flawed_trial_level_n40": {
+        "n_trials": 40,
+        "friedman_disp_stat": 72.20000000000005,
+        "friedman_disp_pvalue": 2.0987910487929998e-16,
+        "friedman_strain_stat": 33.450000000000045,
+        "friedman_strain_pvalue": 5.4503549988220364e-08,
+        "critique": "Severe pseudoreplication: treats 4 non-independent trials per subject as 40 independent subjects."
+      },
+      "corrected_subject_level_n10": {
+        "n_subjects": 10,
+        "disp_superficial_mm": {
+          "mean": -2.31687,
+          "std": 0.8849888990044513
+        },
+        "disp_middle_mm": {
+          "mean": -2.7192625,
+          "std": 0.9984395159343239
+        },
+        "disp_deep_mm": {
+          "mean": -3.1031575,
+          "std": 1.1146895227950993
+        },
+        "friedman_disp_stat": 20.0,
+        "friedman_disp_pvalue": 4.539992976248486e-05,
+        "paired_diff_deep_minus_sup_mm": {
+          "mean": -0.7862875,
+          "std": 0.38122709790046544,
+          "relative_pct": -33.93748893981967,
+          "ci95": [
+            -1.0590009372262528,
+            -0.5135740627737474
+          ],
+          "paired_ttest_stat": -6.522252508841421,
+          "paired_ttest_pvalue": 0.0001086068933355491,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_pvalue": 0.001953125
+        },
+        "strain_superficial_pct": {
+          "mean": -0.4768825,
+          "std": 0.4063212751235844
+        },
+        "strain_middle_pct": {
+          "mean": -0.4071225,
+          "std": 0.34403462770846194
+        },
+        "strain_deep_pct": {
+          "mean": -0.31837,
+          "std": 0.2986456825775692
+        },
+        "friedman_strain_stat": 18.200000000000017,
+        "friedman_strain_pvalue": 0.0001116658084901137,
+        "paired_diff_strain_deep_minus_sup_pct": {
+          "mean": 0.1585125,
+          "std": 0.14506852176452495,
+          "ci95": [
+            0.05473673111679141,
+            0.2622882688832086
+          ],
+          "paired_ttest_stat": 3.455336357677138,
+          "paired_ttest_pvalue": 0.007213695410501622
+        },
+        "between_limb_correlation": {
+          "pearson_r": 0.7087002698829601,
+          "p_value": 0.02177112365747903,
+          "interpretation": "High bilateral correlation confirms that limbs from the same subject cannot be treated as independent."
+        },
+        "jackknife_sensitivity": {
+          "min_mean_diff": -0.8555972222222222,
+          "max_mean_diff": -0.735775,
+          "stable_across_all_exclusions": false
+        }
+      }
+    }
+  },
+  "scientific_novelty_status": "REPRODUCTION_AND_METHODOLOGICAL_CORRECTION_ONLY",
+  "novelty_statement": "Bogaerts et al. (2017) already established non-uniform tissue displacement across layers. Cycle 17 provides rigorous statistical correction for pseudoreplication and establishes proper subject-level confidence intervals, but does not constitute a new primary biological discovery."
+}

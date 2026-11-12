@@ -227,5 +227,13 @@
       "ISS-0022"
     ],
     "resolution": "Clarified in Cycle 16 (EXP-0053): NEG-0044 provenance explained by vastus lateralis mid-belly mismatch; Oxford atlas (Cohen 2026) audited and determined to lack myonuclei. Replicating myonuclear MTJCore requires intact co-harvested myofiber-tendon specimens."
+  },
+  {
+    "id": "ISS-0025",
+    "date": "2026-11-12",
+    "title": "Lack of open 3D-ultrasound or transverse MRI sub-tendon cross-sectional morphometry datasets for mechanical stress validation",
+    "status": "open",
+    "scope": "Biomechanical tendon modeling and HYP-0010 full validation",
+    "description": "Bogaerts (2017) confirmed displacement non-uniformity but lacked transverse CSA of individual sub-tendons. Validating mechanical stress distribution requires synchronized 3D ultrasound or axial MRI segmentation of individual sub-tendons."
   }
 ]

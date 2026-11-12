@@ -408,5 +408,29 @@
     "title": "Inability to Replicate Myonuclear MTJCore Program on Oxford Achilles Single-Cell Atlas",
     "statement": "Attempted replication of Karlsen's myonuclear MTJCore signature on Cohen et al. (2026) was blocked due to cell-type boundary: Cohen et al. dissociated and isolated tendon fibroblasts/tenocytes only, with zero myonuclei present in the dataset.",
     "reason": "Surgical dissection protocols removed skeletal muscle myofibers to enrich for tendon fibroblasts, precluding myonuclear evaluation."
+  },
+  {
+    "id": "NEG-0051",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0054",
+    "title": "Falsification of Surface EMG Predictive Value in Cross-Subject Population Models",
+    "statement": "Adding surface EMG features to anthropometric and kinematic variables increased cross-subject prediction error across all tested algorithms (OLS and Ridge), with antagonist EMG significantly degrading RMSE (p = 0.0089).",
+    "reason": "Subcutaneous adipose filtering and skin impedance differences create inter-individual noise that overwhelms the small co-activation torque signal."
+  },
+  {
+    "id": "NEG-0052",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0055",
+    "title": "Falsification of Layer-Specific Active Tendon Strain Heterogeneity at Subject Level",
+    "statement": "Subject-level aggregation (N=10) of Bogaerts ultrasound speckle tracking during isometric plantarflexion refuted the hypothesis of layer-dependent strain differences (Friedman chi2 = 0.80, p = 0.6703).",
+    "reason": "Prior claims of strain heterogeneity in Cycle 16 were an artifact of 4-fold pseudoreplication treating repeated trials as independent subjects."
+  },
+  {
+    "id": "NEG-0053",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0056",
+    "title": "Inability to Replicate MTJCore on Oxford Single-Cell Atlas Due to Missing Donor Pseudobulk Tables",
+    "statement": "Independent replication of the frozen Karlsen MTJCore signature on Cohen et al. (2026) was blocked because public DEG tables isolate fibroblast subtypes and lack donor-level myonuclear pseudobulk counts.",
+    "reason": "Primary study prioritized stromal fibroblast specialization and did not provide donor-level non-junctional control contrast matrices."
   }
 ]
