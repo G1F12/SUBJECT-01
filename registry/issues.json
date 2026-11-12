@@ -190,10 +190,39 @@
     "status": "open",
     "priority": "high",
     "related_experiments": [
-      "EXP-0047"
+      "EXP-0047",
+      "EXP-0048"
     ],
     "related_issues": [
       "ISS-0021"
+    ]
+  },
+  {
+    "id": "ISS-0023",
+    "date": "2026-11-12",
+    "title": "Absence of open synchronized multi-region tendon morphometry and local strain datasets",
+    "description": "EXP-0049 and NEG-0046 established that HYP-0010 is DATA_BLOCKED because no public repository contains participant-specific regional patellar tendon CSA paired with local segmental strain measurements (speckle tracking/MRI) under calibrated tendon load.",
+    "status": "open",
+    "priority": "high",
+    "related_experiments": [
+      "EXP-0049"
+    ],
+    "related_issues": [
+      "ISS-0021"
+    ]
+  },
+  {
+    "id": "ISS-0024",
+    "date": "2026-11-12",
+    "title": "Lack of non-Copenhagen independent human adult MTJ transcriptomic cohorts",
+    "description": "EXP-0050 and NEG-0047 demonstrated that third-cohort replication of the MTJCore myonuclear transcriptional program is DATA_BLOCKED due to lack of publicly accessible human MTJ datasets outside the original Copenhagen research group.",
+    "status": "open",
+    "priority": "medium",
+    "related_experiments": [
+      "EXP-0050"
+    ],
+    "related_issues": [
+      "ISS-0022"
     ]
   }
 ]

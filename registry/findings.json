@@ -387,5 +387,33 @@
     "finding": "Native MTJ proteomics partially supports the RNA programme. Myonuclear rank enrichment p approximately 0.00047 with 50/216 matching signs. Fibroblast primary p approximately 0.122 with 33/156 matching signs.",
     "confidence": "limited_orthogonal_correspondence",
     "notes": "Four paired M/T–MTJ donors and four separate patellar tendon donors. No catalytic, crosslink or mechanical endpoint."
+  },
+  {
+    "id": "FND-0049",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0048",
+    "sources": [
+      "SRC-0076"
+    ],
+    "finding": "Global multi-repository accessibility audit established a major open-data gap in human biomechanics: no public dataset exists combining synchronized dynamometer active torque, joint angle, angular velocity, MVC normalization, and simultaneous surface EMG from both agonists (VL/RF/VM) and antagonists (BF/ST) across independent individuals."
+  },
+  {
+    "id": "FND-0050",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0049",
+    "sources": [
+      "SRC-0080"
+    ],
+    "finding": "Biomechanical sensitivity analysis established that patellar tendon regional morphometry creates a ~22% stress concentration at the narrower proximal insertion (38.46 MPa vs 31.50 MPa at 4 kN). Under a hypothetical +20% muscle force gain (4.8 kN), proximal stress rises to 46.15 MPa, causing an estimated 60-75% reduction in cyclic fatigue life under the Wöhler power law, demonstrating that tendon fatigue life—not single-cycle yield—is the primary mechanical safety bottleneck."
+  },
+  {
+    "id": "FND-0051",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0050",
+    "sources": [
+      "SRC-0077",
+      "SRC-0078"
+    ],
+    "finding": "Systematic audit of MTJCore replication history clarified that the myonuclear program has NOT achieved three independent replications: Stage 5 had high within-study concordance (92.09%) but was dominated by a single donor (51.2% of myonuclei); Stage 6 failed its pre-registered replication threshold (0.5818 vs 0.60); and Stage 7 showed only 23.1% directional agreement between RNA and protein, confirming an extensive translational gap between transcript abundance and structural extracellular matrix."
   }
 ]

@@ -1,3 +1,30 @@
+# SUBJECT-01 — текущая передача после Cycle 15 (EXP-0048..0050, NEG-0045..0047)
+
+12.11.2026 · Ветка 
+esearch/cycle15-independent-validation · База 113dbad16f2920ede49e679596a24b53fdf4af2e.
+
+- [Итоговый отчёт Cycle 15](../research/cycle15/CYCLE15_FINAL_REPORT_RU.md) · [Аудит открытых датасетов](../research/cycle15/DATASET_DISCOVERY.md) · [Верификация](../research/cycle15/VERIFICATION_REPORT.md) · [Кросс-анализ](../research/cycle15/CROSS_EXPERIMENT_ANALYSIS.md).
+- **Экспериментальные статусы:** E1 (EXP-0048) = DATA_BLOCKED, E2 (EXP-0049) = DATA_BLOCKED, E5 (EXP-0050) = DATA_BLOCKED.
+- **Новые отрицательные результаты:** NEG-0045, NEG-0046, NEG-0047.
+- **Новые выводы:** FND-0049, FND-0050, FND-0051.
+- **Новые проблемы:** ISS-0023, ISS-0024.
+- **Действующая трактовка функциональной силы и механики сухожилий:**
+  1. E1: Ни одна сложная модель не превзошла sEMG на активных сериях в режиме LOSO без прямых измерений антагонистов. В открытом доступе нет человеческих когорт с одновременным измерением момента динамометра, MVC и EMG антагонистов (NEG-0045).
+  2. E2: Градиент CSA сухожилия надколенника (104 мм² проксимально против 127 мм² дистально) создаёт 22% концентрацию напряжений. При +20% силы напряжение возрастает до 46,15 МПа, сокращая циклическую долговечность на 60–75% (FND-0050). Подстановка популяционных средних в качестве индивидуальных свойств запрещена (NEG-0046).
+  3. E5: Третья независимая MTJ-когорта в открытом доступе отсутствует. Stage 6 провалил критерий (0,5818 < 0,60, NEG-0041). В протеоме подтверждено лишь 23% направлений.
+- **Инварианты проекта:**
+  * TARGET-CPE45 = NOT EXTERNALLY VALIDATED
+  * BIOLOGICAL INTERVENTIONS = NO_GO
+  * STRENGTH +20% = NOT VALIDATED
+  * PR #9 CONDITIONAL HOLD по DEC-0021.
+- **Воспроизведение и проверка:**
+  python research/cycle15/e1_analysis.py
+  python research/cycle15/e2_analysis.py
+  python research/cycle15/e5_analysis.py
+  python tools/validate_repository.py
+
+---
+
 # SUBJECT-01 — текущая передача после научной консолидации
 
 12.11.2026 · Ветка `research/scientific-consolidation` · База `113dbad16f2920ede49e679596a24b53fdf4af2e`.

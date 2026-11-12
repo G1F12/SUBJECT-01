@@ -1,0 +1,25 @@
+{
+  "experiment": "E2",
+  "hypothesis": "HYP-0010",
+  "status": "DATA_BLOCKED",
+  "reason": "No public dataset identified providing participant-specific regional tendon CSA (proximal, mid, distal) paired with local strain measurements and applied tendon force across >=6 independent participants. Literature population means (Kongsgaard et al.) are NOT substituted as individual participant data.",
+  "missing_variables": [
+    "participant_specific_csa_proximal_mm2",
+    "participant_specific_csa_mid_mm2",
+    "participant_specific_csa_distal_mm2",
+    "local_strain_per_region_observed",
+    "applied_tendon_force_N"
+  ],
+  "repositories_searched": [
+    "PhysioNet",
+    "Zenodo",
+    "Figshare",
+    "Dryad",
+    "OSF",
+    "SimTK/OpenSim",
+    "UMUD",
+    "AddBiomechanics"
+  ],
+  "pre_registration_locked": true,
+  "analysis_ready_when_data_available": true
+}

@@ -1,3 +1,27 @@
+# SUBJECT-01 — состояние после Cycle 15: Independent Validation (EXP-0048..0050, NEG-0045..0047), 12.11.2026
+
+Ветка: 
+esearch/cycle15-independent-validation · База: 113dbad16f2920ede49e679596a24b53fdf4af2e.
+
+- [Итоговый отчёт Cycle 15](research/cycle15/CYCLE15_FINAL_REPORT_RU.md) · [Аудит датасетов](research/cycle15/DATASET_DISCOVERY.md) · [Верификация](research/cycle15/VERIFICATION_REPORT.md) · [Кросс-анализ](research/cycle15/CROSS_EXPERIMENT_ANALYSIS.md).
+- **Экспериментальные статусы:** E1 (EXP-0048) = DATA_BLOCKED, E2 (EXP-0049) = DATA_BLOCKED, E5 (EXP-0050) = DATA_BLOCKED.
+- **Новые отрицательные результаты:** NEG-0045 (отсутствие открытых человеческих когорт «динамометр + агонисты + антагонисты + MVC»), NEG-0046 (отсутствие открытых данных синхронной региональной CSA и локальной деформации сухожилия), NEG-0047 (отсутствие третьей независимой когорты MTJ человека вне Копенгагена).
+- **Новые научные выводы:** FND-0049 (пробел открытых данных в биомеханике колена), FND-0050 (проксимальная концентрация напряжений в сухожилии надколенника +22% и падение циклической долговечности на 60–75% при +20% силы), FND-0051 (ретроспективный аудит MTJCore: Stage 6 провалил порог 0,60, в Stage 7 совпали по знаку лишь 23% белков).
+- **Новые проблемы:** ISS-0023 (отсутствие открытых мультирегиональных данных сухожилия), ISS-0024 (отсутствие независимых транскриптомных когорт MTJ вне Копенгагена).
+- **Реестры SUBJECT-01:** EXP=50, HYP=10, FND=51, NEG=47, DEC=22, ISS=24, SRC=80.
+- **Инварианты сохранены:**
+  * TARGET-CPE45 = NOT EXTERNALLY VALIDATED
+  * BIOLOGICAL INTERVENTIONS = NO_GO
+  * STRENGTH +20% = NOT VALIDATED (HYPOTHETICAL TARGET ONLY)
+  * PR #9 CONDITIONAL HOLD по DEC-0021.
+- **Воспроизведение и аудит Cycle 15:**
+  python research/cycle15/e1_analysis.py
+  python research/cycle15/e2_analysis.py
+  python research/cycle15/e5_analysis.py
+  python tools/validate_repository.py
+
+---
+
 # SUBJECT-01 — научная консолидация (EXP-0047, DEC-0022)
 
 12.11.2026 · Ветка `research/scientific-consolidation` · База `113dbad16f2920ede49e679596a24b53fdf4af2e`.

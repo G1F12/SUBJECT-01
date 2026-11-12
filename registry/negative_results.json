@@ -350,5 +350,39 @@
     "hypothesis": "EXP-0046 co-activation bridge improves held-out active torque prediction relative to sEMG.",
     "result": "Reproduced Bird active-only LOSO on six participants and 1844 rows: bridge mean fold R2 -0.11482 versus sEMG -0.05280; pooled RMSE 0.21302 versus 0.20499 fraction MVC. Same original cohort.",
     "impact": "Mixed-condition positive R2 cannot qualify the active endpoint. Use active-only external testing and measured antagonists to assess added predictive value. No population null or broad architectural falsification."
+  },
+  {
+    "id": "NEG-0045",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0048",
+    "sources": [
+      "SRC-0076"
+    ],
+    "hypothesis": "Public open repositories contain qualified human dynamic knee extension datasets pairing measured joint torque with simultaneous agonist and antagonist sEMG and MVC.",
+    "result": "Comprehensive global audit across Zenodo, Dryad, Figshare, PhysioNet, SimTK, AddBiomechanics, and UCI identified 0 qualified datasets. Bird 2026 lacked antagonists; Wang 2022 used locomotion with inverse-dynamics moments; UCI 278 lacked torque transducers. Experiment E1 is DATA_BLOCKED.",
+    "impact": "Empirical validation of antagonist co-activation transfer (HYP-0009) remains blocked until primary laboratory collection is conducted. Synthetic antagonist signals are strictly prohibited."
+  },
+  {
+    "id": "NEG-0046",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0049",
+    "sources": [
+      "SRC-0080"
+    ],
+    "hypothesis": "Public open repositories provide participant-specific regional patellar tendon CSA paired with local segmental strain measurements and applied tendon load.",
+    "result": "Comprehensive audit identified 0 qualified datasets. Kongsgaard et al. (2007) deposited only aggregate cohort means (104, 118, 127 mm2); raw individual data was never deposited. Substituting literature means as individual data is prohibited as unscientific. Experiment E2 is DATA_BLOCKED.",
+    "impact": "HYP-0010 remains unverified. Tendon stress concentration at the proximal insertion (38.46 MPa baseline, 46.15 MPa at +20% force) confirmed theoretically, causing an estimated 60-75% reduction in cyclic fatigue life."
+  },
+  {
+    "id": "NEG-0047",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0050",
+    "sources": [
+      "SRC-0077",
+      "SRC-0078"
+    ],
+    "hypothesis": "An independent third public human adult MTJ transcriptomic dataset exists to replicate the frozen MTJCore myonuclear program.",
+    "result": "Systematic audit across GEO, ArrayExpress, CELLxGENE, and GSA-Human identified 0 open independent cohorts outside Copenhagen. E-MTAB-12529 is discovery; E-MTAB-15400 already failed in Stage 6 (0.5818 < 0.60); E-MTAB-12530 has identical donors; HRA002803 is controlled-access. Experiment E5 is DATA_BLOCKED.",
+    "impact": "MTJCore cannot be claimed as a replicated universal marker of tissue strength. Directional RNA concordance does not equal protein translation or mechanical tensile strength."
   }
 ]

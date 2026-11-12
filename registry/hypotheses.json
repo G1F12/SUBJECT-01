@@ -127,7 +127,8 @@
     "status": "unverified",
     "related_experiments": [
       "EXP-0046",
-      "EXP-0047"
+      "EXP-0047",
+      "EXP-0048"
     ],
     "evidence_status": "MODEL_ONLY",
     "status_history": [
@@ -137,7 +138,7 @@
         "decision_id": "DEC-0021"
       }
     ],
-    "notes": "DEC-0022 revises interpretation of simulated gain and removes the inference of in vivo necessity or safety."
+    "notes": "Unverified (MODEL_ONLY). Evaluated in EXP-0046 (NEG-0044) and audited in EXP-0048 (NEG-0045, DATA_BLOCKED). Antagonist co-activation transfer requires external human dynamometry."
   },
   {
     "id": "HYP-0010",
@@ -146,11 +147,12 @@
     "statement": "At the same inferred tendon force, using segmental CSA rather than a single nominal CSA reduces held-out local strain prediction RMSE by at least 10% under an otherwise fixed material model.",
     "status": "unverified",
     "related_experiments": [
-      "EXP-0047"
+      "EXP-0047",
+      "EXP-0049"
     ],
     "sources": [
       "SRC-0080"
     ],
-    "notes": "Proposed threshold for pre-registration before external outcomes. Region-specific CSA in humans motivates the hypothesis; it does not establish failure resistance."
+    "notes": "Unverified (MODEL_ONLY). Evaluated in EXP-0049 (NEG-0046, DATA_BLOCKED). Literature means cannot be substituted as individual data. Segmental CSA model pre-registered."
   }
 ]

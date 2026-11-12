@@ -1397,5 +1397,90 @@
     "limits": "Local derived evidence re-extraction is separate from full upstream pipeline replication. Bird and Malaga replay use the same original cohorts. No intervention efficacy or new functional validation.",
     "external_validation": "none_new",
     "data_type": "MIXED_SOURCE_EVIDENCE_AUDIT"
+  },
+  {
+    "id": "EXP-0048",
+    "date": "2026-11-12",
+    "name": "E1: Independent Human Functional Strength Validation & Antagonist Co-Activation Transfer Audit",
+    "sources": [
+      "SRC-0076"
+    ],
+    "design": "Systematic multi-repository data audit and locked pre-registration protocol comparing 5 torque prediction models (M0-M4) under uncalibrated (Regime A) and pre-calibrated (Regime B) LOSO transfer.",
+    "status": "completed_data_accessibility_audit_and_pre_registration",
+    "model": "research/cycle15/e1_analysis.py",
+    "inputs": "research/cycle15/dataset_registry.json",
+    "report": "research/cycle15/E1_STRENGTH_VALIDATION.md",
+    "outputs": [
+      "research/cycle15/e1_results.json"
+    ],
+    "reproduction_command": "python research/cycle15/e1_analysis.py",
+    "results": {
+      "findings": [
+        "FND-0049"
+      ],
+      "negative_results": [
+        "NEG-0045"
+      ]
+    },
+    "limits": "DATA_BLOCKED: No public human dataset provides synchronized dynamometer active knee torque, MVC, and simultaneous surface EMG from both knee extensors and knee flexors across independent individuals.",
+    "external_validation": "DATA_BLOCKED",
+    "data_type": "GLOBAL_REPOSITORY_DATASET_AUDIT"
+  },
+  {
+    "id": "EXP-0049",
+    "date": "2026-11-12",
+    "name": "E2: Tendon Regional Mechanics Validation & Segmental Morphometry Audit",
+    "sources": [
+      "SRC-0080"
+    ],
+    "design": "Evaluation of regional vs uniform CSA strain prediction under invariant linear elastic material law; proof of literature mean substitution bias; separate ex vivo strength and fatigue failure analysis.",
+    "status": "completed_biomechanical_modeling_and_data_audit",
+    "model": "research/cycle15/e2_analysis.py",
+    "inputs": "research/cycle15/dataset_registry.json",
+    "report": "research/cycle15/E2_TENDON_MECHANICS.md",
+    "outputs": [
+      "research/cycle15/e2_results.json"
+    ],
+    "reproduction_command": "python research/cycle15/e2_analysis.py",
+    "results": {
+      "findings": [
+        "FND-0050"
+      ],
+      "negative_results": [
+        "NEG-0046"
+      ]
+    },
+    "limits": "DATA_BLOCKED: No open dataset provides synchronized participant-specific regional CSA (proximal, mid, distal) paired with local regional strain measurements and applied tendon load across independent individuals.",
+    "external_validation": "DATA_BLOCKED",
+    "data_type": "BIOMECHANICAL_MODELING_AND_DATASET_AUDIT"
+  },
+  {
+    "id": "EXP-0050",
+    "date": "2026-11-12",
+    "name": "E5: Third Independent Human MTJ Cohort Replication & Myonuclear Program Audit",
+    "sources": [
+      "SRC-0077",
+      "SRC-0078"
+    ],
+    "design": "Systematic audit of MTJCore replication history (Stages 5, 6, 7); correlation-preserving null model pre-registration; global transcriptomic repository audit across ArrayExpress, GEO, and GSA-Human.",
+    "status": "completed_replication_audit_and_pre_registration",
+    "model": "research/cycle15/e5_analysis.py",
+    "inputs": "research/cycle15/dataset_registry.json",
+    "report": "research/cycle15/E5_MTJ_REPLICATION.md",
+    "outputs": [
+      "research/cycle15/e5_results.json"
+    ],
+    "reproduction_command": "python research/cycle15/e5_analysis.py",
+    "results": {
+      "findings": [
+        "FND-0051"
+      ],
+      "negative_results": [
+        "NEG-0047"
+      ]
+    },
+    "limits": "DATA_BLOCKED: No third independent, publicly accessible human adult musculotendinous junction transcriptomic dataset exists outside the Copenhagen research group.",
+    "external_validation": "DATA_BLOCKED",
+    "data_type": "GENOMIC_REPOSITORY_REPLICATION_AUDIT"
   }
 ]

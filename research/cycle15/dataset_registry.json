@@ -1,0 +1,267 @@
+{
+  "cycle": 15,
+  "stage": "STAGE_0_DATASET_DISCOVERY",
+  "audit_date": "2026-11-12",
+  "audited_experiments": ["E1", "E2", "E5"],
+  "datasets": [
+    {
+      "candidate_id": "CAND-E1-01",
+      "experiment_target": "E1",
+      "official_name": "Data for: Ultra-wideband radar to measure in vivo muscle forces",
+      "doi": "10.5061/dryad.sbcc2frmh",
+      "url": "https://doi.org/10.5061/dryad.sbcc2frmh",
+      "authors": ["Christopher S. Bird", "Antonio P. L. Bo", "Wei Lu", "Taylor J. M. Dick"],
+      "publication": "Science Robotics (2026) / arXiv:2510.20866",
+      "license": "CC0-1.0",
+      "sample_size_n": 6,
+      "independence_unit": "individual_human_participant",
+      "required_outcomes_present": {
+        "agonist_emg": true,
+        "antagonist_emg": false,
+        "joint_torque": true,
+        "joint_angle": true,
+        "angular_velocity": true,
+        "mvc_normalization": true,
+        "active_metadata": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": true,
+      "cohort_overlap_risk": "100% (was core development set in EXP-0045, EXP-0046, EXP-0047)",
+      "protocol_compatibility": "Lacks antagonist EMG channel entirely; cannot serve as independent validation",
+      "verdict": "DISQUALIFIED_DEVELOPMENT_COHORT_AND_MISSING_ANTAGONIST"
+    },
+    {
+      "candidate_id": "CAND-E1-02",
+      "experiment_target": "E1",
+      "official_name": "Comprehensive Kinetic and EMG Dataset of Daily Locomotion with 6 types of Sensors",
+      "doi": "10.5281/zenodo.6457662",
+      "url": "https://doi.org/10.5281/zenodo.6457662",
+      "authors": ["Huawei Wang", "Akash Basu", "Guillaume Durandau", "Massimo Sartori"],
+      "publication": "Zenodo (2022)",
+      "license": "CC-BY-4.0",
+      "sample_size_n": 12,
+      "independence_unit": "individual_human_participant",
+      "required_outcomes_present": {
+        "agonist_emg": true,
+        "antagonist_emg": true,
+        "joint_torque": false,
+        "joint_angle": true,
+        "angular_velocity": true,
+        "mvc_normalization": false,
+        "active_metadata": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "None",
+      "protocol_compatibility": "Whole-body locomotion (walking/squats/jumps); torque is derived via inverse dynamics, not measured dynamometer load cell",
+      "verdict": "REJECTED_PROTOCOL_INCOMPATIBLE_NO_DYNAMOMETER_TORQUE"
+    },
+    {
+      "candidate_id": "CAND-E1-03",
+      "experiment_target": "E1",
+      "official_name": "EMG dataset in Lower Limb",
+      "doi": "10.24432/C5989F",
+      "url": "https://archive.ics.uci.edu/dataset/278/emg+dataset+in+lower+limb",
+      "authors": ["O. Sanchez", "J. Sotelo"],
+      "publication": "UCI Machine Learning Repository ID 278 (2014)",
+      "license": "CC-BY-4.0",
+      "sample_size_n": 22,
+      "independence_unit": "individual_human_participant",
+      "required_outcomes_present": {
+        "agonist_emg": true,
+        "antagonist_emg": true,
+        "joint_torque": false,
+        "joint_angle": true,
+        "angular_velocity": true,
+        "mvc_normalization": false,
+        "active_metadata": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "None",
+      "protocol_compatibility": "Contains leg extension task with RF, VM, BF, ST EMG and goniometer, but lacks joint torque transducer entirely",
+      "verdict": "REJECTED_MISSING_TARGET_VARIABLE_JOINT_TORQUE"
+    },
+    {
+      "candidate_id": "CAND-E2-01",
+      "experiment_target": "E2",
+      "official_name": "Regional differences in patellar tendon cross-sectional area and mechanical properties",
+      "doi": "10.1152/japplphysiol.00849.2006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17524067/",
+      "authors": ["M. Kongsgaard", "V. Reitelsperger", "P. Aagaard", "M. Kjaer", "et al."],
+      "publication": "Journal of Applied Physiology 102: 1752–1759 (2007)",
+      "license": "Closed / Traditional Copyright",
+      "sample_size_n": 10,
+      "independence_unit": "individual_human_participant",
+      "required_outcomes_present": {
+        "regional_csa_individual": false,
+        "local_strain_individual": false,
+        "applied_load": false,
+        "time_series_data": false
+      },
+      "primary_file_available": false,
+      "local_reproduction_feasible": false,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "None",
+      "protocol_compatibility": "Only aggregate cohort means and SDs published in tables (104, 118, 127 mm2); raw individual participant data was never deposited",
+      "verdict": "DATA_BLOCKED_NO_OPEN_RAW_PARTICIPANT_DATA"
+    },
+    {
+      "candidate_id": "CAND-E2-02",
+      "experiment_target": "E2",
+      "official_name": "Mechanical Testing and Specimen-Specific Models of Natural Human Knee Biomechanics",
+      "doi": null,
+      "url": "https://simtk.org/projects/specimenkneemod",
+      "authors": ["University of Denver Center for Orthopaedic Biomechanics"],
+      "publication": "SimTK Project (2018)",
+      "license": "OpenSim Academic",
+      "sample_size_n": 8,
+      "independence_unit": "cadaveric_specimen",
+      "required_outcomes_present": {
+        "regional_csa_individual": false,
+        "local_strain_individual": false,
+        "applied_load": true,
+        "time_series_data": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "None",
+      "protocol_compatibility": "Cadaveric knee testing with quadriceps loading; lacks in vivo participant regional tendon strain and CSA tracking",
+      "verdict": "REJECTED_CADAVERIC_SPECIMENS_LACK_IN_VIVO_REGIONAL_STRAIN"
+    },
+    {
+      "candidate_id": "CAND-E5-01",
+      "experiment_target": "E5",
+      "official_name": "Distinct myofibre domains of the human myotendinous junction revealed by single-nucleus RNA sequencing",
+      "doi": "10.1242/jcs.260655",
+      "url": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-12529",
+      "authors": ["Karlsen et al."],
+      "publication": "Journal of Cell Science (2023)",
+      "license": "Open Access (CC-BY)",
+      "sample_size_n": 3,
+      "independence_unit": "human_donor",
+      "required_outcomes_present": {
+        "human_adult_mtj": true,
+        "snrna_seq": true,
+        "mtj_vs_mature_contrast": true,
+        "raw_counts": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": true,
+      "cohort_overlap_risk": "100% (Discovery cohort in Stage 5, FND-0047)",
+      "protocol_compatibility": "Used as discovery dataset; cannot be reused as third independent validation",
+      "verdict": "DISQUALIFIED_CIRCULAR_REUSE_OF_DISCOVERY_COHORT"
+    },
+    {
+      "candidate_id": "CAND-E5-02",
+      "experiment_target": "E5",
+      "official_name": "Early transcriptional response of human myotendinous junction and muscle compartments to acute resistance exercise",
+      "doi": "10.1152/ajpcell.00700.2025",
+      "url": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-15400",
+      "authors": ["Møbjerg et al."],
+      "publication": "Am J Physiol Cell Physiol (2025)",
+      "license": "Open Access (CC-BY)",
+      "sample_size_n": 8,
+      "independence_unit": "human_donor",
+      "required_outcomes_present": {
+        "human_adult_mtj": true,
+        "snrna_seq": true,
+        "mtj_vs_mature_contrast": true,
+        "raw_counts": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": true,
+      "cohort_overlap_risk": "100% (Evaluated in Stage 6, NEG-0041)",
+      "protocol_compatibility": "Already evaluated in Stage 6 with result 0.5818 < 0.60 (FAILED replication); cannot be re-analyzed as new",
+      "verdict": "DISQUALIFIED_ALREADY_EVALUATED_AND_FAILED_STAGE_6"
+    },
+    {
+      "candidate_id": "CAND-E5-03",
+      "experiment_target": "E5",
+      "official_name": "Spatial transcriptomics of the human myotendinous junction (10x Visium)",
+      "doi": "10.1242/jcs.260655",
+      "url": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-12530",
+      "authors": ["Karlsen et al."],
+      "publication": "Journal of Cell Science (2023)",
+      "license": "Open Access (CC-BY)",
+      "sample_size_n": 3,
+      "independence_unit": "human_donor",
+      "required_outcomes_present": {
+        "human_adult_mtj": true,
+        "snrna_seq": false,
+        "mtj_vs_mature_contrast": true,
+        "raw_counts": true
+      },
+      "primary_file_available": true,
+      "local_reproduction_feasible": true,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "100% donor overlap with E-MTAB-12529 (same biological individuals)",
+      "protocol_compatibility": "Violates donor independence; identical participants to discovery cohort",
+      "verdict": "DISQUALIFIED_IDENTICAL_DONORS_TO_DISCOVERY"
+    },
+    {
+      "candidate_id": "CAND-E5-04",
+      "experiment_target": "E5",
+      "official_name": "Discovery of Muscle-Tendon Progenitor Subpopulation in Human Myotendinous Junction at Single-Cell Resolution",
+      "doi": "10.34133/2022/9760390",
+      "url": "https://ngdc.cncb.ac.cn/gsa-human",
+      "authors": ["Zhao et al."],
+      "publication": "Research (2022)",
+      "license": "Controlled Access (DAC Approval Required)",
+      "sample_size_n": 4,
+      "independence_unit": "human_donor",
+      "required_outcomes_present": {
+        "human_adult_mtj": true,
+        "snrna_seq": true,
+        "mtj_vs_mature_contrast": true,
+        "raw_counts": true
+      },
+      "primary_file_available": false,
+      "local_reproduction_feasible": false,
+      "previously_used_in_subject01": false,
+      "cohort_overlap_risk": "Independent clinical institution",
+      "protocol_compatibility": "Requires institutional Data Access Committee approval and ethics board transfer; cannot be autonomously downloaded via open web",
+      "verdict": "DATA_BLOCKED_CONTROLLED_ACCESS_RESTRICTION"
+    }
+  ],
+  "experiment_decisions": {
+    "E1": {
+      "status": "DATA_BLOCKED",
+      "primary_blocker": "No open dataset provides synchronized dynamometer torque, MVC, and simultaneous antagonist EMG across >=6 independent humans.",
+      "unblocking_requirements": [
+        "Dynamometer isokinetic/isometric knee torque (N*m)",
+        "Kinematic knee angle and angular velocity",
+        "Synchronous sEMG of agonists (VL, RF, VM) and antagonists (BF, ST)",
+        "Subject-specific MVIC normalization",
+        "N >= 10 independent human participants"
+      ]
+    },
+    "E2": {
+      "status": "DATA_BLOCKED",
+      "primary_blocker": "No public dataset provides participant-specific regional CSA (proximal, mid, distal) paired with local strain and applied force.",
+      "unblocking_requirements": [
+        "Participant-specific ultrasound/MRI regional CSA at >=3 anatomical locations",
+        "Local strain measurement at corresponding regions during loading",
+        "Synchronous tendon force or dynamometer torque with moment arm",
+        "N >= 10 independent human participants"
+      ]
+    },
+    "E5": {
+      "status": "DATA_BLOCKED",
+      "primary_blocker": "No third independent, publicly downloadable human adult MTJ transcriptomic dataset exists outside Copenhagen cohorts.",
+      "unblocking_requirements": [
+        "Human adult skeletal muscle MTJ biopsy",
+        "Single-nucleus RNA sequencing (>= 30,000 reads/nucleus)",
+        "Independent clinical institution (outside Copenhagen)",
+        "Paired MTJ vs muscle belly contrast from same donors",
+        "Unrestricted open-access deposit in GEO or ArrayExpress"
+      ]
+    }
+  }
+}
