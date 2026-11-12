@@ -1,3 +1,22 @@
+# SUBJECT-01 — состояние после Cycle 18: Oxford MTJ Data Recovery, Independent Replication & Scientific Integrity Audit (EXP-0057..0058, FND-0058..0059, NEG-0054..0055), 12.11.2026
+
+Ветка: research/cycle18-oxford-mtj-validation · База: 5e3176da77987c1aff2e37f43d5fd1a8a6305d43 (Cycle 17).
+
+- [Итоговый отчёт Cycle 18](research/cycle18/CYCLE18_FINAL_REPORT_RU.md) · [Научные исправления Cycle 17](research/cycle18/SCIENTIFIC_CORRECTIONS.md) · [Аудит доступности Oxford Atlas](research/cycle18/OXFORD_DATA_ACCESS_AUDIT.md) · [Клеточный состав Oxford Atlas](research/cycle18/OXFORD_CELL_POPULATIONS.md) · [Замороженный протокол MTJCore](research/cycle18/MTJCORE_FROZEN_PROTOCOL.md) · [Аудит третьей репликации MTJ](research/cycle18/MTJ_THIRD_REPLICATION.md) · [Оценка HYP-0013](research/cycle18/HYP0013_ASSESSMENT.md) · [Оценка новизны](research/cycle18/SCIENTIFIC_NOVELTY.md) · [Функциональное влияние](research/cycle18/FUNCTIONAL_IMPACT.md) · [Независимая верификация](research/cycle18/INDEPENDENT_VERIFICATION.md).
+- **Экспериментальные статусы:**
+  * EXP-0057 (Oxford Discovery Identity Audit) = COMPLETED_INVALID_CIRCULAR_EVALUATION (Доказано, что Oxford Achilles Atlas Cohen et al. 2026 является исходной Discovery-когортой MTJCore; полный H5AD на CZ CELLxGENE содержит 64 862 клетки и 22 146 мышечных ядер; повторное тестирование на нём представляет собой 100% круговую валидацию на обучающих данных; репликационные попытки закрыты вердиктом STOP_NO_ADDED_SCIENTIFIC_VALUE).
+  * EXP-0058 (HYP-0013 Re-evaluation) = COMPLETED_REJECTED_AS_NOVELTY (Количественно подтверждено, что стромальная индукция COL22A1 имеет донорскую согласованность лишь 0.60, не проходя пререгистрированный порог >= 0.75; микроанатомическое распределение фибробластов и экспрессия маркеров уже опубликованы Cohen et al. 2026; гипотеза отвергнута как самостоятельное открытие).
+- **Исправления Cycle 17:**
+  * HYP-0008: статус восстановлен на verified в исходной биофизической формулировке (ограничение одноканальной sEMG).
+  * HYP-0010: формулировка возвращена к локальной деформации связки надколенника (unverified / DATA_BLOCKED); слои ахиллова сухожилия изолированы в FND-0056.
+  * E1 Ridge F3 vs F0: опечатка t-статистики исправлена на t = -0.084, p = 0.9337.
+  * E2 тест Фридмана: дополнен точной перестановочной вероятностью P_exact = 3.31e-08 при N=10.
+  * Accession GSE130649: разоблачён как органоиды уха мыши и навсегда удалён из планов.
+- **Инварианты программы:** TARGET-CPE45 = NOT EXTERNALLY VALIDATED; BIOLOGICAL INTERVENTIONS = NO-GO; STRENGTH +20% = NOT VALIDATED; REAL DATA ONLY.
+- **Следующий шаг:** Перевод вычислительных ресурсов SUBJECT-01 с закрытого проекта MTJCore на прямые биомеханические задачи функциональной силы (индивидуальная калибровка sEMG, механика передачи усилия через сухожилие).
+
+---
+
 # SUBJECT-01 — состояние после Cycle 17: Independent Scientific Correction, Statistical Reanalysis & MTJ Validation (EXP-0054..0056, FND-0055..0057, NEG-0051..0053), 12.11.2026
 
 Ветка: 

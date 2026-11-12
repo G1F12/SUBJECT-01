@@ -1651,5 +1651,61 @@
     "limits": "Myonuclear replication blocked by missing donor pseudobulk matrix in primary tables.",
     "external_validation": "DATA_BLOCKED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0057",
+    "date": "2026-11-12",
+    "name": "Oxford Achilles Atlas Data Recovery and MTJCore Discovery Identity Audit",
+    "sources": [
+      "SRC-0082"
+    ],
+    "design": "Cross-repository audit of Oxford Achilles Atlas across Mendeley, CELLxGENE, GitHub, and HCA, verifying cell populations, counts, and proven identity with the MTJCore discovery cohort.",
+    "status": "completed",
+    "model": "research/cycle18/scripts/audit_oxford_atlas.py",
+    "inputs": "research/cycle18/data_manifest.json",
+    "report": "research/cycle18/OXFORD_DATA_ACCESS_AUDIT.md",
+    "outputs": [
+      "research/cycle18/OXFORD_AUDIT_SUMMARY.json",
+      "research/cycle18/MTJ_REPLICATION_RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle18/scripts/audit_oxford_atlas.py",
+    "results": {
+      "findings": [
+        "FND-0058",
+        "FND-0059"
+      ],
+      "negative_results": [
+        "NEG-0054"
+      ]
+    },
+    "limits": "Dataset was the original discovery cohort of MTJCore; circular re-evaluation prohibited.",
+    "external_validation": "CIRCULARITY_PROVEN_REPLICATION_PROHIBITED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0058",
+    "date": "2026-11-12",
+    "name": "Re-evaluation of Stromal-Myonuclear Dual Synthesis (HYP-0013)",
+    "sources": [
+      "SRC-0082"
+    ],
+    "design": "Quantification of differential expression for MTJ components in myonuclear and fibroblast compartments; donor-consistency stress test and novelty audit.",
+    "status": "completed",
+    "model": "research/cycle18/scripts/evaluate_hyp0013.py",
+    "inputs": "research/cycle18/data_manifest.json",
+    "report": "research/cycle18/HYP0013_ASSESSMENT.md",
+    "outputs": [
+      "research/cycle18/HYP0013_EVALUATION.json"
+    ],
+    "reproduction_command": "python research/cycle18/scripts/evaluate_hyp0013.py",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0055"
+      ]
+    },
+    "limits": "Transcriptomic abundance in snRNA-seq does not demonstrate extracellular secretion or mechanical force resistance.",
+    "external_validation": "FALSIFIED_DONOR_CONSISTENCY",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -469,5 +469,23 @@
     "statement": "Cohen et al. (2026) single-cell atlas demonstrates that tendon-resident MTJ fibroblasts specialize transcriptionally and express COL22A1, POSTN, TNC, and COMP, establishing that the junctional attachment matrix is a co-product of both muscle myonuclei and specialized tendon fibroblasts.",
     "confidence": "high",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0058",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0057",
+    "title": "Oxford Achilles Atlas Provenance Identity with MTJCore Discovery Cohort",
+    "statement": "The Oxford Achilles Tendon Atlas (Cohen et al. 2026, CZ CELLxGENE ef0fc6ac-4872-40e1-ab24-e445b19ca6e3) is the original discovery dataset of the MTJCore project, containing 64,862 cells (22,146 muscle nuclei, 24,179 fibroblasts) across 5 human donors. Evaluating MTJCore on this dataset constitutes complete training-data leakage (circular self-validation) and cannot serve as an independent replication.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0059",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0057",
+    "title": "Correction of Cycle 17 Methodological Errors and Erroneous GEO Accession",
+    "statement": "Forensic audit rectified four critical issues from Cycle 17: (1) HYP-0008 verified status preserved under its original biophysical scope, as EXP-0054 confirms uncalibrated sEMG unidentifiability; (2) HYP-0010 restored to patellar tendon segmental CSA; (3) Ridge F3 vs F0 t-statistic typo corrected to t = -0.084, p = 0.9337; (4) accession GSE130649 (mouse inner ear organoids) falsified and permanently eliminated from human muscle plans.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

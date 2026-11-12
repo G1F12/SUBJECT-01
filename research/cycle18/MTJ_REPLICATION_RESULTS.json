@@ -1,0 +1,17 @@
+{
+  "cycle": 18,
+  "experiment_id": "EXP-0057",
+  "dataset_evaluated": "Oxford Achilles Tendon Atlas (Cohen et al. 2026)",
+  "cz_cellxgene_dataset_id": "ef0fc6ac-4872-40e1-ab24-e445b19ca6e3",
+  "replication_status": "INVALID_CIRCULAR_EVALUATION",
+  "findings": [
+    "Oxford Achilles Atlas was the DISCOVERY dataset of MTJCore, not an independent replication cohort.",
+    "Testing MTJCore against Oxford Achilles Atlas represents 100% training-data leakage.",
+    "Full dataset contains 64,862 cells across 5 human donors, including 22,146 skeletal muscle nuclei and 24,179 fibroblasts.",
+    "Mendeley Data deposit (vfzd93y7dv/1) contains only the fibroblasts.rds subset; previous assertions that Oxford had 0 myonuclei were erroneous artifacts of inspecting only Mendeley Data.",
+    "True independent replication was already achieved in Stage 5 of MTJCore on E-MTAB-12529 (Semitendinosus snRNA-seq, empirical p = 1e-5).",
+    "No third independent public snRNA-seq cohort with adult human MTJ donor-level contrasts currently exists."
+  ],
+  "decision": "STOP_NO_ADDED_SCIENTIFIC_VALUE",
+  "next_action": "Freeze MTJCore at submission state; redirect SUBJECT-01 resources to biomechanical and neuromuscular limits of human strength."
+}

@@ -1,0 +1,301 @@
+{
+  "cycle": 18,
+  "dataset_identity": {
+    "study": "Cohen et al. (2026)",
+    "title": "Fibroblast specialisation across microanatomy in a single-cell atlas of healthy human Achilles tendon",
+    "journal": "American Journal of Physiology-Cell Physiology",
+    "doi": "10.1152/ajpcell.00838.2025",
+    "cellxgene_collection_id": "a7e81820-297d-4086-8123-cc7dde64e495",
+    "cellxgene_dataset_id": "ef0fc6ac-4872-40e1-ab24-e445b19ca6e3",
+    "local_h5ad_path": "D:/MTJCore/data/raw/achilles/ef0fc6ac-4872-40e1-ab24-e445b19ca6e3.h5ad",
+    "file_size_bytes": 1124490595,
+    "mtjcore_role": "DISCOVERY_COHORT",
+    "is_third_replication": false,
+    "replication_validity": "CIRCULAR_SELF_REPLICATION_PROHIBITED"
+  },
+  "resources_audit": {
+    "mendeley_data": {
+      "url": "https://data.mendeley.com/datasets/vfzd93y7dv/1",
+      "files_available": [
+        "fibroblasts.rds"
+      ],
+      "contains_myonuclei": false,
+      "status": "SUBSET_ONLY_FIBROBLASTS"
+    },
+    "cz_cellxgene": {
+      "url": "https://cellxgene.cziscience.com/collections/a7e81820-297d-4086-8123-cc7dde64e495",
+      "file_available": "ef0fc6ac-4872-40e1-ab24-e445b19ca6e3.h5ad",
+      "contains_myonuclei": true,
+      "contains_raw_counts": true,
+      "contains_donor_ids": true,
+      "status": "COMPLETE_ATLAS_AVAILABLE"
+    },
+    "github": {
+      "url": "https://github.com/Botnar-MSK-Atlas/achilles_tendon_atlas",
+      "contents": "R and Rmd annotation pipelines, Louvain/SoupX scripts",
+      "status": "CODE_REPOSITORY"
+    },
+    "human_cell_atlas": {
+      "url": "https://explore.data.humancellatlas.org/projects/893c8fb6-bf65-4527-b83b-8233de59244c",
+      "status": "HCA_PROJECT_REGISTRATION"
+    }
+  },
+  "cell_counts": {
+    "total_cells": 64862,
+    "broad_annotations": {
+      "Fibroblasts": 24179,
+      "Skeletal muscle cells": 22146,
+      "Macrophages": 4744,
+      "Vascular endothelial cells": 4624,
+      "Mural cells": 3078,
+      "Adipocytes": 2514,
+      "T cells": 1454,
+      "Lymphatic endothelial cells": 784,
+      "Satellite cells": 499,
+      "Granulocytes": 477,
+      "B cells": 188,
+      "Nervous system cells": 130,
+      "Plasma cells": 45
+    },
+    "donors": {
+      "MSK1556": 28162,
+      "MSK1691": 13458,
+      "MSK1687": 10574,
+      "MSK1250": 9086,
+      "MSK0785": 3582
+    },
+    "microanatomical_sites": {
+      "MTJ": 18718,
+      "MB": 16994,
+      "muscle": 16503,
+      "Enth": 12647
+    },
+    "skeletal_muscle_cells": {
+      "total": 22146,
+      "by_type": {
+        "Slow-twitch skeletal muscle cells": 15090,
+        "Fast-twitch skeletal muscle cells": 5447,
+        "Transitional skeletal muscle cells": 1491,
+        "Satellite cells": 118,
+        "Adipocytes": 0,
+        "Arteriolar VEC": 0,
+        "B cells": 0,
+        "CLEC9Ahi DCs": 0,
+        "CLEC10Ahi DCs": 0,
+        "COMPhi MMP3hi fibroblasts": 0,
+        "COMPhi THBS4hi fibroblasts": 0,
+        "Chondrocytes": 0,
+        "Granulocytes": 0,
+        "Lymphatic endothelial cells": 0,
+        "MERKhi LYVE1lo macrophages": 0,
+        "MERTKhi LYVE1hi macrophages": 0,
+        "MERTKlo PTPRGhi macrophages": 0,
+        "Monocytes": 0,
+        "NEGR1hi COL15A1hi fibroblasts": 0,
+        "NEGR1hi ITGA6hi fibroblasts": 0,
+        "NEGR1hi VCANhi fibroblasts": 0,
+        "NK cells": 0,
+        "Nervous system cells": 0,
+        "PRG4hi fibroblasts": 0,
+        "Pericytes": 0,
+        "Plasma cells": 0,
+        "T cells": 0,
+        "Venular VEC": 0,
+        "vSMC": 0
+      },
+      "by_site": {
+        "Enth": {
+          "Fast-twitch skeletal muscle cells": 61,
+          "Satellite cells": 0,
+          "Slow-twitch skeletal muscle cells": 4,
+          "Transitional skeletal muscle cells": 0
+        },
+        "MB": {
+          "Fast-twitch skeletal muscle cells": 313,
+          "Satellite cells": 0,
+          "Slow-twitch skeletal muscle cells": 56,
+          "Transitional skeletal muscle cells": 45
+        },
+        "MTJ": {
+          "Fast-twitch skeletal muscle cells": 2902,
+          "Satellite cells": 35,
+          "Slow-twitch skeletal muscle cells": 4338,
+          "Transitional skeletal muscle cells": 1005
+        },
+        "muscle": {
+          "Fast-twitch skeletal muscle cells": 2171,
+          "Satellite cells": 83,
+          "Slow-twitch skeletal muscle cells": 10692,
+          "Transitional skeletal muscle cells": 441
+        }
+      },
+      "by_donor": {
+        "MSK0785": {
+          "Fast-twitch skeletal muscle cells": 860,
+          "Satellite cells": 4,
+          "Slow-twitch skeletal muscle cells": 608,
+          "Transitional skeletal muscle cells": 32
+        },
+        "MSK1250": {
+          "Fast-twitch skeletal muscle cells": 660,
+          "Satellite cells": 73,
+          "Slow-twitch skeletal muscle cells": 6216,
+          "Transitional skeletal muscle cells": 334
+        },
+        "MSK1556": {
+          "Fast-twitch skeletal muscle cells": 1344,
+          "Satellite cells": 39,
+          "Slow-twitch skeletal muscle cells": 7716,
+          "Transitional skeletal muscle cells": 853
+        },
+        "MSK1687": {
+          "Fast-twitch skeletal muscle cells": 27,
+          "Satellite cells": 2,
+          "Slow-twitch skeletal muscle cells": 327,
+          "Transitional skeletal muscle cells": 128
+        },
+        "MSK1691": {
+          "Fast-twitch skeletal muscle cells": 2556,
+          "Satellite cells": 0,
+          "Slow-twitch skeletal muscle cells": 223,
+          "Transitional skeletal muscle cells": 144
+        }
+      }
+    },
+    "fibroblasts": {
+      "total": 24179,
+      "by_type": {
+        "NEGR1hi VCANhi fibroblasts": 10564,
+        "COMPhi MMP3hi fibroblasts": 9732,
+        "NEGR1hi COL15A1hi fibroblasts": 2110,
+        "Chondrocytes": 797,
+        "NEGR1hi ITGA6hi fibroblasts": 475,
+        "COMPhi THBS4hi fibroblasts": 424,
+        "PRG4hi fibroblasts": 77,
+        "Adipocytes": 0,
+        "Arteriolar VEC": 0,
+        "B cells": 0,
+        "CLEC9Ahi DCs": 0,
+        "CLEC10Ahi DCs": 0,
+        "Fast-twitch skeletal muscle cells": 0,
+        "Granulocytes": 0,
+        "Lymphatic endothelial cells": 0,
+        "MERKhi LYVE1lo macrophages": 0,
+        "MERTKhi LYVE1hi macrophages": 0,
+        "MERTKlo PTPRGhi macrophages": 0,
+        "Monocytes": 0,
+        "NK cells": 0,
+        "Nervous system cells": 0,
+        "Pericytes": 0,
+        "Plasma cells": 0,
+        "Satellite cells": 0,
+        "Slow-twitch skeletal muscle cells": 0,
+        "T cells": 0,
+        "Transitional skeletal muscle cells": 0,
+        "Venular VEC": 0,
+        "vSMC": 0
+      },
+      "by_site": {
+        "Enth": {
+          "COMPhi MMP3hi fibroblasts": 2705,
+          "COMPhi THBS4hi fibroblasts": 20,
+          "Chondrocytes": 787,
+          "NEGR1hi COL15A1hi fibroblasts": 19,
+          "NEGR1hi ITGA6hi fibroblasts": 157,
+          "NEGR1hi VCANhi fibroblasts": 3334,
+          "PRG4hi fibroblasts": 53
+        },
+        "MB": {
+          "COMPhi MMP3hi fibroblasts": 5593,
+          "COMPhi THBS4hi fibroblasts": 22,
+          "Chondrocytes": 8,
+          "NEGR1hi COL15A1hi fibroblasts": 40,
+          "NEGR1hi ITGA6hi fibroblasts": 195,
+          "NEGR1hi VCANhi fibroblasts": 4566,
+          "PRG4hi fibroblasts": 21
+        },
+        "MTJ": {
+          "COMPhi MMP3hi fibroblasts": 1431,
+          "COMPhi THBS4hi fibroblasts": 354,
+          "Chondrocytes": 2,
+          "NEGR1hi COL15A1hi fibroblasts": 766,
+          "NEGR1hi ITGA6hi fibroblasts": 107,
+          "NEGR1hi VCANhi fibroblasts": 2536,
+          "PRG4hi fibroblasts": 3
+        },
+        "muscle": {
+          "COMPhi MMP3hi fibroblasts": 3,
+          "COMPhi THBS4hi fibroblasts": 28,
+          "Chondrocytes": 0,
+          "NEGR1hi COL15A1hi fibroblasts": 1285,
+          "NEGR1hi ITGA6hi fibroblasts": 16,
+          "NEGR1hi VCANhi fibroblasts": 128,
+          "PRG4hi fibroblasts": 0
+        }
+      },
+      "by_donor": {
+        "MSK0785": {
+          "COMPhi MMP3hi fibroblasts": 104,
+          "COMPhi THBS4hi fibroblasts": 10,
+          "Chondrocytes": 0,
+          "NEGR1hi COL15A1hi fibroblasts": 438,
+          "NEGR1hi ITGA6hi fibroblasts": 13,
+          "NEGR1hi VCANhi fibroblasts": 497,
+          "PRG4hi fibroblasts": 0
+        },
+        "MSK1250": {
+          "COMPhi MMP3hi fibroblasts": 301,
+          "COMPhi THBS4hi fibroblasts": 11,
+          "Chondrocytes": 0,
+          "NEGR1hi COL15A1hi fibroblasts": 528,
+          "NEGR1hi ITGA6hi fibroblasts": 3,
+          "NEGR1hi VCANhi fibroblasts": 294,
+          "PRG4hi fibroblasts": 0
+        },
+        "MSK1556": {
+          "COMPhi MMP3hi fibroblasts": 4963,
+          "COMPhi THBS4hi fibroblasts": 264,
+          "Chondrocytes": 603,
+          "NEGR1hi COL15A1hi fibroblasts": 974,
+          "NEGR1hi ITGA6hi fibroblasts": 135,
+          "NEGR1hi VCANhi fibroblasts": 3554,
+          "PRG4hi fibroblasts": 24
+        },
+        "MSK1687": {
+          "COMPhi MMP3hi fibroblasts": 2577,
+          "COMPhi THBS4hi fibroblasts": 37,
+          "Chondrocytes": 186,
+          "NEGR1hi COL15A1hi fibroblasts": 108,
+          "NEGR1hi ITGA6hi fibroblasts": 197,
+          "NEGR1hi VCANhi fibroblasts": 2871,
+          "PRG4hi fibroblasts": 25
+        },
+        "MSK1691": {
+          "COMPhi MMP3hi fibroblasts": 1787,
+          "COMPhi THBS4hi fibroblasts": 102,
+          "Chondrocytes": 8,
+          "NEGR1hi COL15A1hi fibroblasts": 62,
+          "NEGR1hi ITGA6hi fibroblasts": 127,
+          "NEGR1hi VCANhi fibroblasts": 3348,
+          "PRG4hi fibroblasts": 28
+        }
+      }
+    }
+  },
+  "status_classification": {
+    "skeletal_muscle_cells": {
+      "PRESENT_IN_ORIGINAL_STUDY": true,
+      "AVAILABLE_IN_PUBLIC_MATRIX": true,
+      "AVAILABLE_WITH_DONOR_METADATA": true,
+      "SUITABLE_FOR_REPLICATION": false,
+      "unsuitability_reason": "Cohort was the discovery dataset of MTJCore. Cannot replicate on discovery training set."
+    },
+    "fibroblasts": {
+      "PRESENT_IN_ORIGINAL_STUDY": true,
+      "AVAILABLE_IN_PUBLIC_MATRIX": true,
+      "AVAILABLE_WITH_DONOR_METADATA": true,
+      "SUITABLE_FOR_REPLICATION": false,
+      "unsuitability_reason": "Cohort was the discovery dataset of MTJCore."
+    }
+  }
+}

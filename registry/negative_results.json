@@ -432,5 +432,21 @@
     "title": "Inability to Replicate MTJCore on Oxford Single-Cell Atlas Due to Missing Donor Pseudobulk Tables",
     "statement": "Independent replication of the frozen Karlsen MTJCore signature on Cohen et al. (2026) was blocked because public DEG tables isolate fibroblast subtypes and lack donor-level myonuclear pseudobulk counts.",
     "reason": "Primary study prioritized stromal fibroblast specialization and did not provide donor-level non-junctional control contrast matrices."
+  },
+  {
+    "id": "NEG-0054",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0057",
+    "title": "Oxford Achilles Atlas Ineligible for Third Independent Replication of MTJCore",
+    "statement": "Independent biological replication of MTJCore on the Oxford Achilles Atlas is invalid due to dataset identity with the discovery training cohort (100% data leakage). In the global public domain, no third independent snRNA-seq cohort with donor-level adult human MTJ contrasts exists. MTJCore replication attempts on Cohen et al. are closed with decision STOP_NO_ADDED_SCIENTIFIC_VALUE.",
+    "reason": "Data provenance audit proved that Cohen et al. (2026) was the original discovery cohort of MTJCore."
+  },
+  {
+    "id": "NEG-0055",
+    "date": "2026-11-12",
+    "experiment_id": "EXP-0058",
+    "title": "Stromal COL22A1 Upregulation Fails Preregistered Donor Consistency Threshold",
+    "statement": "In the Achilles MTJ-vs-midbody fibroblast contrast, COL22A1 upregulation achieved a donor direction consistency of only 0.60 (elevated in 3 of 5 donors), failing the preregistered threshold of >= 0.75 and resulting in rejection from the frozen fibroblast signature. Hypothesis HYP-0013 lacks novelty as cellular distributions were already published in Cohen et al. (2026).",
+    "reason": "Inter-donor inconsistency in stromal COL22A1 expression and lack of originality relative to published literature."
   }
 ]

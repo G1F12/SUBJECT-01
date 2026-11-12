@@ -1,0 +1,52 @@
+{
+  "cycle": 18,
+  "timestamp": "2026-11-12T22:42:00Z",
+  "files": {
+    "achilles_h5ad": {
+      "path": "D:/MTJCore/data/raw/achilles/ef0fc6ac-4872-40e1-ab24-e445b19ca6e3.h5ad",
+      "size_bytes": 1124490595,
+      "head_1mb_sha256": "514ab69e28ce0e30319d6ce603cf241cddf8c7b66fd08d21c1483e7b078fd3fb",
+      "cellxgene_dataset_id": "ef0fc6ac-4872-40e1-ab24-e445b19ca6e3"
+    },
+    "collection.json": {
+      "path": "D:/MTJCore/data/raw/achilles/collection.json",
+      "size_bytes": 6728,
+      "sha256": "50461086fbae846383b1c678d47a6e2a2d391a1257598bc2d2a9cb9ff629f823"
+    },
+    "frozen_myonuclear_signature.tsv": {
+      "path": "D:/MTJCore/results/discovery/frozen_myonuclear_signature.tsv",
+      "size_bytes": 342764,
+      "sha256": "115da9819c5a2bfa10301fe97ffc9960f5c9acc30103d29dbdd8a38a5edc3919"
+    },
+    "frozen_fibroblast_signature.tsv": {
+      "path": "D:/MTJCore/results/discovery/frozen_fibroblast_signature.tsv",
+      "size_bytes": 133883,
+      "sha256": "785d5f0d5757033f5db6b26a150927d9b9b943fedbcbc9625d5f35cff0eb34c3"
+    },
+    "myonuclear_full_de.tsv": {
+      "path": "D:/MTJCore/results/discovery/myonuclear_full_de.tsv",
+      "size_bytes": 2636041,
+      "sha256": "4ab9902cbf5d26aa58bfa389bab90d5d804186b6bfefd2b6a2b0b3e909b102a5"
+    },
+    "fibroblast_full_de.tsv": {
+      "path": "D:/MTJCore/results/discovery/fibroblast_full_de.tsv",
+      "size_bytes": 3334449,
+      "sha256": "4017a56f6bce61dffcef51ea39d4db6f3211b0f754d7dd1b582c60ad34b44b05"
+    },
+    "OXFORD_AUDIT_SUMMARY.json": {
+      "path": "D:/SUBJECT-01/research/cycle18/OXFORD_AUDIT_SUMMARY.json",
+      "size_bytes": 10487,
+      "sha256": "6c280e6f37f715b612e058e916e41121679357702f7ad86ddb188f2b7e6c96bd"
+    },
+    "HYP0013_EVALUATION.json": {
+      "path": "D:/SUBJECT-01/research/cycle18/HYP0013_EVALUATION.json",
+      "size_bytes": 7354,
+      "sha256": "a2fe0260880b59513b145cd17972c00472e7b42fde3affc7a43f29162ab2959c"
+    },
+    "MTJ_REPLICATION_RESULTS.json": {
+      "path": "D:/SUBJECT-01/research/cycle18/MTJ_REPLICATION_RESULTS.json",
+      "size_bytes": 1254,
+      "sha256": "2ec6ed9f1867930ded6b825b3248994354bc1e044aae8846ab412cecb19e7a61"
+    }
+  }
+}

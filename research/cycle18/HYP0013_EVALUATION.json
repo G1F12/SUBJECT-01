@@ -1,0 +1,221 @@
+{
+  "hypothesis_id": "HYP-0013",
+  "title": "Stromal-Myonuclear Dual Synthesis of Collagen XXII & MTJ Anchoring Complex",
+  "verdict": "NOT_SUPPORTED_AS_ORIGINAL_DISCOVERY",
+  "verdict_details": {
+    "transcript_observation": "COL22A1 is transcribed in transitional myonuclei (log2FC=5.185, FDR=2.06e-9) and present in fibroblasts (log2FC=3.523, FDR=0.0013).",
+    "donor_consistency_failure": "COL22A1 failed the preregistered donor consistency threshold in fibroblasts (0.60 vs 0.75 requirement, elevated in only 3 of 5 donors).",
+    "novelty_audit": "ALREADY_PUBLISHED. Cohen et al. (2026) already reported fibroblast microanatomical heterogeneity and transitional myocyte marker expression in the Achilles atlas.",
+    "biological_causality_gap": "Transcript abundance does not prove protein translation, secretion, matrix incorporation, or mechanical load-bearing capacity.",
+    "recommendation": "Reject as a novel independent finding; close MTJCore replication attempts on Cohen et al."
+  },
+  "genes": {
+    "COL22A1": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": 5.1847822928895,
+        "FDR": 2.05738147127526e-09,
+        "p_value": 4.31087357400653e-13,
+        "in_signature": false,
+        "guard_excluded": true
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 3.52342569487747,
+        "FDR": 0.00128925700026804,
+        "p_value": 6.1157438743156e-06,
+        "in_signature": false,
+        "donor_consistency": 0.6,
+        "rejection_reason": "Donor consistency 0.6 < 0.75 threshold"
+      },
+      "dual_transcription_observed": true,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "POSTN": {
+      "myonuclear": {
+        "tested": false,
+        "log2FC": null,
+        "FDR": null,
+        "p_value": null,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 1.80833707016872,
+        "FDR": 0.0589370953003368,
+        "p_value": 0.00185665590790325,
+        "in_signature": false,
+        "donor_consistency": 0.6,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": false,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "TNC": {
+      "myonuclear": {
+        "tested": false,
+        "log2FC": null,
+        "FDR": null,
+        "p_value": null,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 0.457307063073596,
+        "FDR": 0.695490837677473,
+        "p_value": 0.227005425239889,
+        "in_signature": false,
+        "donor_consistency": 0.8,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": false,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "COMP": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": -0.274001389466737,
+        "FDR": 0.543250338300387,
+        "p_value": 0.213969667806002,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": -0.588935002758806,
+        "FDR": 0.223635496876879,
+        "p_value": 0.0162607449545833,
+        "in_signature": false,
+        "donor_consistency": 0.8,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": false,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "ITGA7": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": 0.853457013818548,
+        "FDR": 0.00748458501524272,
+        "p_value": 0.000367150038149718,
+        "in_signature": true,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 0.761335335113934,
+        "FDR": 0.232648031258391,
+        "p_value": 0.0175139006914248,
+        "in_signature": false,
+        "donor_consistency": 1.0,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": true,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "LAMA2": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": 2.19992472994459,
+        "FDR": 3.40792005176857e-07,
+        "p_value": 7.19112703955581e-10,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 0.435394753617588,
+        "FDR": 0.158708908469666,
+        "p_value": 0.00881844583503106,
+        "in_signature": false,
+        "donor_consistency": 1.0,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": true,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "PXN": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": 0.640685332436118,
+        "FDR": 0.035079573627645,
+        "p_value": 0.00296219660784401,
+        "in_signature": true,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": 0.82945216013698,
+        "FDR": 0.00871012170516114,
+        "p_value": 9.45998661256555e-05,
+        "in_signature": true,
+        "donor_consistency": 1.0,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": true,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "SCX": {
+      "myonuclear": {
+        "tested": false,
+        "log2FC": null,
+        "FDR": null,
+        "p_value": null,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": -0.356763511256067,
+        "FDR": 0.793748312096922,
+        "p_value": 0.351780623269074,
+        "in_signature": false,
+        "donor_consistency": 0.6,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": false,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    },
+    "MKX": {
+      "myonuclear": {
+        "tested": true,
+        "log2FC": 0.253685444892174,
+        "FDR": 0.812001192809547,
+        "p_value": 0.544459793497703,
+        "in_signature": false,
+        "guard_excluded": false
+      },
+      "fibroblast": {
+        "tested": true,
+        "log2FC": -0.429540236265885,
+        "FDR": 0.324667301203713,
+        "p_value": 0.0335163133814943,
+        "in_signature": false,
+        "donor_consistency": 0.8,
+        "rejection_reason": null
+      },
+      "dual_transcription_observed": false,
+      "protein_synthesis_proven": false,
+      "cooperative_secretion_proven": false,
+      "mechanical_enhancement_proven": false
+    }
+  }
+}

@@ -235,5 +235,14 @@
     "status": "open",
     "scope": "Biomechanical tendon modeling and HYP-0010 full validation",
     "description": "Bogaerts (2017) confirmed displacement non-uniformity but lacked transverse CSA of individual sub-tendons. Validating mechanical stress distribution requires synchronized 3D ultrasound or axial MRI segmentation of individual sub-tendons."
+  },
+  {
+    "id": "ISS-0026",
+    "date": "2026-11-12",
+    "title": "Resolution of MTJCore Oxford Discovery Identity and Accession GSE130649",
+    "status": "resolved",
+    "severity": "medium",
+    "description": "Cycle 15-17 proposed using Oxford Achilles Atlas (Cohen et al. 2026) as a third independent replication of MTJCore and proposed GSE130649 for muscle atlas analysis. Audited in Cycle 18: Oxford Atlas is the MTJCore discovery dataset (circular replication prohibited), and GSE130649 is mouse inner ear organoids. Both issues fully resolved and corrected.",
+    "resolution": "Classified Oxford evaluation as INVALID_CIRCULAR_EVALUATION; closed MTJCore replication on Cohen et al. with STOP_NO_ADDED_SCIENTIFIC_VALUE; purged GSE130649 from scientific proposals."
   }
 ]

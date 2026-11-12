@@ -119,7 +119,7 @@
       "EXP-0051",
       "EXP-0054"
     ],
-    "notes": "Formulated and confirmed in Research Cycle 9 via biophysical modeling and empirical HD-sEMG / 31P-MRS cross-validation."
+    "notes": "Formulated and confirmed in Cycle 9 via biophysical modeling and empirical HD-sEMG / 31P-MRS cross-validation. EXP-0054 (Cycle 17) confirms that single-channel uncalibrated sEMG cannot identify motor drive across subjects."
   },
   {
     "id": "HYP-0009",
@@ -157,20 +157,21 @@
     "sources": [
       "SRC-0080"
     ],
-    "notes": "Unverified (MODEL_ONLY). Evaluated in EXP-0049 (NEG-0046, DATA_BLOCKED). Literature means cannot be substituted as individual data. Segmental CSA model pre-registered."
+    "notes": "Unverified (MODEL_ONLY). Evaluated in EXP-0049 (NEG-0046, DATA_BLOCKED). Literature means cannot be substituted as individual data. Distinct from Achilles tendon layer findings (Bogaerts FND-0056)."
   },
   {
     "id": "HYP-0013",
     "date": "2026-11-12",
     "title": "Stromal-Myonuclear Dual Synthesis of Type XXII Collagen at Human MTJ Interface",
     "statement": "Type XXII collagen at the human muscle-tendon junction is transcriptionally co-expressed by both junctional myonuclei and specialized junctional fibroblasts, such that genetic or biomechanical activation of MTJ attachment requires dual-compartment coordination.",
-    "status": "unverified",
+    "status": "rejected",
     "related_experiments": [
-      "EXP-0056"
+      "EXP-0056",
+      "EXP-0058"
     ],
     "sources": [
       "SRC-0083"
     ],
-    "notes": "Formulated in Cycle 17 from Oxford Single-Cell Atlas audit. Supported at the cellular observation level; functional co-culture validation required."
+    "notes": "Rejected as a novel finding in Cycle 18. Microanatomical distribution was already published by Cohen et al. (2026). Stromal COL22A1 upregulation fails the preregistered donor consistency threshold (0.60 vs 0.75, elevated in only 3 of 5 donors)."
   }
 ]
