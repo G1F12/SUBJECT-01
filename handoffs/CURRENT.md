@@ -1,3 +1,29 @@
+# SUBJECT-01 — состояние после финализации MTJCore и перехода к функциональному усилению человека (Cycle 19 / MTJ Finalization), 14.11.2026
+
+Ветка: 
+esearch/mtj-finalization-integration · База: 9d4f6daa42319070697487c9c419212296bd7058 (Cycle 18).
+
+- [Финальный интеграционный отчёт](research/integration_final/FINAL_INTEGRATION_REPORT_RU.md) · [Окончательное решение по MTJCore](research/mtj_finalization/MTJCORE_FINAL_ADJUDICATION.md) · [Происхождение датасетов](research/mtj_finalization/DATASET_PROVENANCE.md) · [Статистические коррекции](research/mtj_finalization/STATISTICAL_CORRECTIONS.md) · [Публикационный аудит](research/mtj_finalization/MTJ_PUBLICATION_ASSESSMENT.md) · [Единая доказательная карта](research/integration_final/FINAL_EVIDENCE_MAP.md) · [Причинные зависимости](research/integration_final/CAUSAL_DEPENDENCIES.md) · [Функциональные ограничения](research/integration_final/FUNCTIONAL_LIMITATIONS.md) · [Приоритеты исследований](research/integration_final/RESEARCH_PRIORITIES.md) · [Спецификация следующих экспериментов](research/integration_final/NEXT_TWO_EXPERIMENTS.md).
+- **Ключевые решения и статусы (DEC-0023):**
+  * MTJCORE_CURRENT_PROGRAM = COMPLETED: вычислительный этап MTJCore окончен, результаты сведены и зафиксированы.
+  * MTJCORE_FUTURE_RESEARCH = HOLD_PENDING_NEW_EVIDENCE: направление заморожено до появления независимых первичных данных вне Оксфорда и Копенгагена.
+  * MTJCORE_PUBLICATION_STATUS = MANUSCRIPT_PREPARED: пакет рукописи для Communications Biology свёрстан (1.0.3-commsbio-submission), автоматическая отправка запрещена, Manuscript ID отсутствует.
+  * OXFORD_REUSE_AS_INDEPENDENT_VALIDATION = INVALID: H5AD ef0fc6ac доказан как исходная обучающая Discovery-когорта (Stage 4), повторное тестирование на нём является 100% круговой оценкой.
+  * Критерий Фридмана (E2): подтверждена точная омнибус-вероятность  = 6 / 6^{10} \approx 9.9229 \times 10^{-8}$ при =10$ субъектах; значение .31 \times 10^{-8}$ документировано как двусторонняя вероятность вдоль монотонной анатомической оси ( / 6^{10}$); связанные ранги отсутствуют.
+  * HYP-0008 сохранена в статусе erified в строгой биофизической формулировке (неидентифицируемость активного объёма по одноканальной sEMG).
+  * HYP-0010 сохранена в статусе unverified / DATA_BLOCKED в исходной формулировке (связка надколенника, региональная CSA).
+- **Инварианты программы (строго соблюдены):**
+  * TARGET-CPE45 = NOT EXTERNALLY VALIDATED
+  * BIOLOGICAL INTERVENTIONS = NO_GO
+  * STRENGTH +20% = NOT VALIDATED (теоретический целевой ориентир)
+  * Сценарные значения (+18.34%, +23.56%) классифицированы как MODEL_ONLY.
+- **Пререгистрированные следующие эксперименты (Phase V):**
+  * **EXP-0059:** «Границы удельной силы скелетных мышц человека и архитектурные резервы силы при постоянной массе» (Rehman et al. 2024, Bird et al. 2026).
+  * **EXP-0060:** «Усталостная долговечность и предельный механический запас сухожилий при мышечной аугментации +20%» (Bogaerts et al. 2017, кривые Велера).
+- **Валидация репозитория:** Реестры hypotheses=11, experiments=58, findings=59, negative_results=55, decisions=23, issues=26, sources=83. Все 154 unit-теста пройдены успешно (100% PASS).
+
+---
+
 # SUBJECT-01 — состояние после Cycle 18: Oxford MTJ Data Recovery, Independent Replication & Scientific Integrity Audit (EXP-0057..0058, FND-0058..0059, NEG-0054..0055), 12.11.2026
 
 Ветка: research/cycle18-oxford-mtj-validation · База: 5e3176da77987c1aff2e37f43d5fd1a8a6305d43 (Cycle 17).

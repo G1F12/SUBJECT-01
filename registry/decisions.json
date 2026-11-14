@@ -164,5 +164,16 @@
       "DEC-0021"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0023",
+    "date": "2026-11-14",
+    "title": "Finalize MTJCore programme, audit dataset provenance, and pre-register Phase V experiments",
+    "decision": "Set MTJCORE_CURRENT_PROGRAM = COMPLETED, MTJCORE_FUTURE_RESEARCH = HOLD_PENDING_NEW_EVIDENCE, MTJCORE_PUBLICATION_STATUS = MANUSCRIPT_PREPARED. Confirm Oxford Achilles Atlas as MTJCore discovery cohort (circular evaluation invalid). Pre-register EXP-0059 (specific tension ceiling) and EXP-0060 (tendon fatigue envelope under +20% force). Invariants preserved: TARGET-CPE45 = NOT EXTERNALLY VALIDATED, BIOLOGICAL INTERVENTIONS = NO_GO, +20% STRENGTH = NOT VALIDATED.",
+    "rationale": "Computational audit proves MTJ transcriptomic space is saturated without independent third cohort. Strategic priorities pivot to functional muscle-tendon mechanics of human enhancement.",
+    "amends": [
+      "DEC-0022"
+    ],
+    "supersedes": []
   }
 ]
