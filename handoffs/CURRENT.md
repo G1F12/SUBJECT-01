@@ -1,3 +1,36 @@
+# SUBJECT-01 — состояние после комплексной независимой ревалидации биомеханики и пределов сухожилий (Functional Mechanics Independent Revalidation), 14.11.2026
+
+Ветка: `research/functional-mechanics-independent-validation` · База: `775a48b` (Cycle 19).
+
+- **Навигация по материалам независимой ревалидации:**
+  * [Итоговый научный отчёт](research/functional_mechanics_validation/FINAL_SCIENTIFIC_REPORT_RU.md)
+  * [Аудит происхождения данных (Provenance)](research/functional_mechanics_validation/DATA_PROVENANCE.md)
+  * [Научные исправления и форензик-аудит Cycle 19](research/functional_mechanics_validation/SCIENTIFIC_CORRECTIONS.md)
+  * [Ревалидация мышечной силы и удельного напряжения](research/functional_mechanics_validation/MUSCLE_STRENGTH_VALIDATION.md)
+  * [Ревалидация усталости сухожилий и закона сохранения](research/functional_mechanics_validation/TENDON_FATIGUE_VALIDATION.md)
+  * [Интегрированная функциональная модель и Парето-оптимизация](research/functional_mechanics_validation/INTEGRATED_FUNCTIONAL_MODEL.md)
+  * [Анализ неопределённости и чувствительности (Монте-Карло)](research/functional_mechanics_validation/UNCERTAINTY_AND_SENSITIVITY.md)
+  * [Отчёт о независимой верификации первого принципа](research/functional_mechanics_validation/INDEPENDENT_VERIFICATION.md)
+  * [Оценка научной новизны](research/functional_mechanics_validation/SCIENTIFIC_NOVELTY.md)
+  * [Функциональное влияние на 8 приоритетов SUBJECT-01](research/functional_mechanics_validation/FUNCTIONAL_IMPACT.md)
+  * [Сводные верифицированные результаты (JSON)](research/functional_mechanics_validation/RESULTS.json)
+  * [Воспроизводимые скрипты расчёта](research/functional_mechanics_validation/scripts/)
+- **Ключевые результаты и исправления (DEC-0025):**
+  * **Исправление удельной силы:** Устранена ошибка двойного деления на $\cos(14^\circ)$ (фактор $1.0306\times$). Скорректированная удельная сила четырёхглавой мышцы человека составляет $\sigma = 26.41 \pm 4.70\text{ Н/см}^2$ ($95\%\text{ ДИ } [24.21, 28.61]$).
+  * **Статус идентифицируемости:** Доказано, что удельная сила является модельно-зависимым параметром (интервал неопределённости Монте-Карло $[17.58, 44.98]\text{ Н/см}^2$), а не изолированным измерением конкретного индивида (NEG-0058).
+  * **Половая эквивалентность (TOST):** Доказана эквивалентность удельной силы мужчин и женщин в пределах $\pm 20\%$ ($p = 0.0169$); при строгом пороге $\pm 10\%$ эквивалентность не подтверждена ($p = 0.1449$, NEG-0059).
+  * **Открытие «Изомассного штрафа мощности» (FND-0062):** Аналитически доказано, что рост силы при постоянной массе за счёт перистости ($\theta: 14^\circ \to 18^\circ$, $+25.20\%$ силы) неизбежно укорачивает пучки волокон ($-21.71\%$) и **снижает пиковую механическую мощность на $-1.98\%$**.
+  * **Исправление усталостных моделей и напряжений:** Устранено противоречие между степенной моделью ($B=8.45$, $-78.58\%$ потерь) и полулогарифмической моделью ($-86.67\%$ потерь); исправлено значение напряжения в Case 2C ($40.13\text{ МПа}$ вместо ошибочных $34.78\text{ МПа}$).
+  * **Инвариант сохранения долговечности сухожилий (FND-0063):** Доказан закон $(1 + \Delta_{\text{CSA}})(1 + \Delta_{\text{UTS}}) \ge \lambda_F$. Компенсация $+20\%$ силы требует одновременной адаптации $\Delta\text{CSA} \ge 15\%$ и $\Delta\text{UTS} \ge 10\%$ (сохранение долговечности $1.678\times$ от нормы).
+  * **Сбалансированная стратегия аугментации (Стратегия 2):** Комплексная адаптация (перистость $+2^\circ$, быстрые волокна $+8\%$ $\sigma$ и $+12\%$ скорости, сухожилие $+15\%$ CSA и $+8\%$ UTS) даёт **момент $+21.9\%$, сохранение скорости ($-1.7\%$), рост мощности $+19.8\%$ и долговечность $1.35\times$**.
+- **Инварианты программы (строго соблюдены):**
+  * `TARGET-CPE45 = NOT EXTERNALLY VALIDATED`
+  * `BIOLOGICAL INTERVENTIONS = NO_GO`
+  * `STRENGTH +20% = THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION` (не валидирована in vivo).
+- **Валидация репозитория:** Реестры hypotheses=11, experiments=60, findings=63, negative_results=59, decisions=25, issues=26, sources=83. Все unit-тесты (162 теста) пройдены со 100% успехом (PASS).
+
+---
+
 # SUBJECT-01 — состояние после Cycle 19: Human Functional Strength Limits & Tendon Mechanical Safety (EXP-0059..0060, FND-0060..0061, NEG-0056..0057, DEC-0024), 14.11.2026
 
 Ветка: `research/cycle19-functional-strength-tendon` · База: `1ef2260` (MTJ Finalization / Integration).

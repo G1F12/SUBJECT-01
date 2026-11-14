@@ -1,0 +1,281 @@
+{
+  "status": "AUDIT_COMPLETE",
+  "n_participants": 20,
+  "n_trials": 125,
+  "provenance_chain": {
+    "measured_variables": [
+      "Dynamometer knee torque (Nm)",
+      "Knee flexion angle (deg)",
+      "Surface EMG amplitudes (uV)"
+    ],
+    "allometric_literature_models": [
+      "Quadriceps volume (Handsfield et al. 2014)",
+      "Fascicle length 8.4 cm (Ward et al. 2009)",
+      "Resting pennation 14 deg (Blazevich 2006)",
+      "Patellar moment arm (Buford et al. 1997)"
+    ],
+    "assumed_unmeasured_constants": [
+      "Voluntary activation level A_act = 0.95",
+      "Hamstring co-contraction torque ignored in net extension"
+    ],
+    "identifiability_verdict": "NOT_ISOLATED_EMPIRICAL_MEASUREMENT: Specific tension is a model-dependent parameter derived from combining measured torque with literature allometric PCSA."
+  },
+  "specific_tension_evaluations": {
+    "corrected_convA_single_cosine": {
+      "mean_n_cm2": 26.41,
+      "std_n_cm2": 4.7,
+      "median_n_cm2": 25.15,
+      "ci95_t": [
+        24.21,
+        28.61
+      ],
+      "male_mean_n_cm2": 26.27,
+      "female_mean_n_cm2": 26.55,
+      "male_minus_female_diff": -0.28
+    },
+    "cycle19_flawed_double_cosine": {
+      "mean_n_cm2": 27.22,
+      "std_n_cm2": 4.84,
+      "discrepancy_explanation": "Cycle 19 divided by cos(14 deg) twice, scaling values by 1 / cos(14 deg) = 1.0306x (27.22 vs 26.41 N/cm2)."
+    },
+    "monte_carlo_uncertainty_propagation": {
+      "median_n_cm2": 27.96,
+      "ci68_range": [
+        21.94,
+        35.8
+      ],
+      "ci95_range": [
+        17.58,
+        44.98
+      ],
+      "uncertainty_width_n_cm2": 27.41
+    }
+  },
+  "sex_equivalence_analysis": {
+    "standard_welch_t_test": {
+      "t_statistic": -0.13,
+      "p_value": 0.8981,
+      "interpretation": "High p-value fails to reject null hypothesis of equality, but does not mathematically prove equivalence."
+    },
+    "tost_equivalence_tests": {
+      "margin_10pct": {
+        "equivalence_margin_delta_n_cm2": 2.64,
+        "t1_lower": 1.094,
+        "p1_lower": 0.1449,
+        "t2_upper": -1.354,
+        "p2_upper": 0.0971,
+        "p_tost_max": 0.1449,
+        "equivalent_at_alpha_005": false
+      },
+      "margin_15pct": {
+        "equivalence_margin_delta_n_cm2": 3.96,
+        "t1_lower": 1.706,
+        "p1_lower": 0.0535,
+        "t2_upper": -1.966,
+        "p2_upper": 0.0333,
+        "p_tost_max": 0.0535,
+        "equivalent_at_alpha_005": false
+      },
+      "margin_20pct": {
+        "equivalence_margin_delta_n_cm2": 5.28,
+        "t1_lower": 2.318,
+        "p1_lower": 0.0169,
+        "t2_upper": -2.578,
+        "p2_upper": 0.01,
+        "p_tost_max": 0.0169,
+        "equivalent_at_alpha_005": true
+      }
+    }
+  },
+  "predictive_models_loso": {
+    "M0_baseline_mean": {
+      "pooled_rmse_nm": 91.3,
+      "pooled_mae_nm": 73.42,
+      "pooled_r2": -0.0793,
+      "mean_subject_rmse_nm": 82.13,
+      "std_subject_rmse_nm": 43.56,
+      "mean_subject_r2": -34.4869
+    },
+    "M1_anthropometry_angle": {
+      "pooled_rmse_nm": 49.56,
+      "pooled_mae_nm": 37.54,
+      "pooled_r2": 0.682,
+      "mean_subject_rmse_nm": 42.54,
+      "std_subject_rmse_nm": 25.94,
+      "mean_subject_r2": -11.0679
+    },
+    "M2_biomechanical_pcsa_strict": {
+      "pooled_rmse_nm": 48.58,
+      "pooled_mae_nm": 39.43,
+      "pooled_r2": 0.6945,
+      "mean_subject_rmse_nm": 44.2,
+      "std_subject_rmse_nm": 21.05,
+      "mean_subject_r2": -4.0752
+    },
+    "M3_architecture_agonist_emg": {
+      "pooled_rmse_nm": 47.06,
+      "pooled_mae_nm": 35.35,
+      "pooled_r2": 0.7133,
+      "mean_subject_rmse_nm": 40.34,
+      "std_subject_rmse_nm": 25.2,
+      "mean_subject_r2": -4.0253
+    },
+    "M4_full_multichannel_emg": {
+      "pooled_rmse_nm": 53.45,
+      "pooled_mae_nm": 41.31,
+      "pooled_r2": 0.6301,
+      "mean_subject_rmse_nm": 45.83,
+      "std_subject_rmse_nm": 28.72,
+      "mean_subject_r2": -5.2581
+    }
+  },
+  "isomass_scaling_and_tradeoffs": {
+    "pennation_sweep": [
+      {
+        "pennation_deg": 14.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 8.4,
+          "isometric_force_gain_pct": 0.0,
+          "absolute_vmax_m_s": 0.84,
+          "vmax_loss_pct": 0.0,
+          "peak_power_watts": 509.0,
+          "peak_power_change_pct": 0.0,
+          "active_rom_loss_pct": 0.0
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 25.2
+        }
+      },
+      {
+        "pennation_deg": 16.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 7.37,
+          "isometric_force_gain_pct": 12.88,
+          "absolute_vmax_m_s": 0.737,
+          "vmax_loss_pct": 12.23,
+          "peak_power_watts": 504.2,
+          "peak_power_change_pct": -0.93,
+          "active_rom_loss_pct": 12.23
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 24.03
+        }
+      },
+      {
+        "pennation_deg": 18.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 6.58,
+          "isometric_force_gain_pct": 25.2,
+          "absolute_vmax_m_s": 0.658,
+          "vmax_loss_pct": 21.71,
+          "peak_power_watts": 498.9,
+          "peak_power_change_pct": -1.98,
+          "active_rom_loss_pct": 21.71
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 22.72
+        }
+      },
+      {
+        "pennation_deg": 20.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 5.94,
+          "isometric_force_gain_pct": 36.92,
+          "absolute_vmax_m_s": 0.594,
+          "vmax_loss_pct": 29.27,
+          "peak_power_watts": 492.9,
+          "peak_power_change_pct": -3.15,
+          "active_rom_loss_pct": 29.27
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 21.25
+        }
+      },
+      {
+        "pennation_deg": 22.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 5.42,
+          "isometric_force_gain_pct": 47.97,
+          "absolute_vmax_m_s": 0.542,
+          "vmax_loss_pct": 35.42,
+          "peak_power_watts": 486.3,
+          "peak_power_change_pct": -4.44,
+          "active_rom_loss_pct": 35.42
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 19.64
+        }
+      },
+      {
+        "pennation_deg": 24.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 5.0,
+          "isometric_force_gain_pct": 58.29,
+          "absolute_vmax_m_s": 0.5,
+          "vmax_loss_pct": 40.52,
+          "peak_power_watts": 479.2,
+          "peak_power_change_pct": -5.85,
+          "active_rom_loss_pct": 40.52
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 17.88
+        }
+      },
+      {
+        "pennation_deg": 26.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 4.64,
+          "isometric_force_gain_pct": 67.85,
+          "absolute_vmax_m_s": 0.464,
+          "vmax_loss_pct": 44.81,
+          "peak_power_watts": 471.5,
+          "peak_power_change_pct": -7.37,
+          "active_rom_loss_pct": 44.81
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 15.97
+        }
+      },
+      {
+        "pennation_deg": 28.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 4.33,
+          "isometric_force_gain_pct": 76.59,
+          "absolute_vmax_m_s": 0.433,
+          "vmax_loss_pct": 48.47,
+          "peak_power_watts": 463.1,
+          "peak_power_change_pct": -9.0,
+          "active_rom_loss_pct": 48.47
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 13.93
+        }
+      },
+      {
+        "pennation_deg": 30.0,
+        "geom1_constant_thickness": {
+          "fascicle_length_cm": 4.06,
+          "isometric_force_gain_pct": 84.47,
+          "absolute_vmax_m_s": 0.406,
+          "vmax_loss_pct": 51.62,
+          "peak_power_watts": 454.3,
+          "peak_power_change_pct": -10.75,
+          "active_rom_loss_pct": 51.62
+        },
+        "geom2_simple_cosine_with_lf671": {
+          "isometric_force_gain_pct": 11.75
+        }
+      }
+    ],
+    "scenario_18deg_summary": {
+      "geom1_planar_aponeurosis_force_gain_pct": 25.2,
+      "geom2_simple_cosine_force_gain_pct": 22.7,
+      "fascicle_length_shortening_cm": "8.40 -> 6.58 cm (-21.71%)",
+      "absolute_vmax_loss_pct": -21.71,
+      "normalized_vmax_change": "0.0% (intrinsic fiber kinetic vmax_norm remains 10.0 s^-1)",
+      "peak_mechanical_power_change_pct": -1.98,
+      "active_rom_reduction_pct": -21.71,
+      "fundamental_tradeoff_verdict": "ISOMASS_POWER_PENALTY: Increasing pennation under fixed mass increases static force (+25.2%), but reduces peak power (-2.0%) and functional speed (-21.7%)."
+    }
+  }
+}

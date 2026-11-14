@@ -464,5 +464,21 @@
     "title": "Tendon Elastic Modulus Remodeling Without Hypertrophy Yields Zero Fatigue Life Gain",
     "statement": "Under a +20% augmented muscle force, increasing tendon elastic modulus E by +15% without cross-sectional area hypertrophy (Delta CSA = 0) produces exactly 0% improvement in cyclic fatigue life (N_cycles remains 0.133x baseline, -86.7% loss). While tendon stiffness increases, peak engineering tensile stress sigma = F / CSA remains unattenuated at 48.74 MPa, proving that material stiffening without geometric hypertrophy is ineffective for tendon fatigue protection.",
     "reason": "Wöhler S-N fatigue life is governed by cyclic peak tensile stress sigma relative to ultimate tensile strength UTS. Altering elastic modulus affects strain at load but leaves stress identical if CSA is unchanged."
+  },
+  {
+    "id": "NEG-0058",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0059",
+    "title": "Falsification of Isolated In Vivo Specific Tension Identifiability from Joint Dynamometry Without Subject-Specific Volumetry",
+    "statement": "Global uncertainty quantification (Monte Carlo N=10,000) across anthropometric, kinematic, and allometric parameters revealed that in vivo specific tension calculated from joint dynamometry alone has a 95% credibility interval of [17.58, 44.98] N/cm2 (uncertainty span 27.41 N/cm2). Specific tension cannot be claimed as an independently measured scalar for individual subjects without co-acquired 3D-MRI muscle volumetry, B-mode ultrasound fascicle tracking, and interpolated twitch activation measurements.",
+    "reason": "Dynamometer net joint torque reflects an indeterminate product of moment arm, muscle volume, fascicle length, pennation, antagonist co-contraction, and central voluntary drive."
+  },
+  {
+    "id": "NEG-0059",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0059",
+    "title": "Falsification of Fine-Scale Biological Equivalence Between Sexes in Muscle Specific Tension at 10% Margin",
+    "statement": "Two One-Sided Tests (TOST) on N=20 adults (10 males, 10 females, DPValid) failed to establish statistical equivalence of quadriceps specific tension at a +/- 10% equivalence margin (p_TOST = 0.1449 > 0.05). While Welch's t-test yielded p = 0.8981 (failing to reject equality of means: male 26.27 vs female 26.55 N/cm2), concluding biological equivalence requires an expanded statistical power. Equivalence is statistically supported only at a broader +/- 20% margin (p_TOST = 0.0169).",
+    "reason": "Failure to reject a null hypothesis of difference in a Student's t-test does not constitute proof of equivalence."
   }
 ]

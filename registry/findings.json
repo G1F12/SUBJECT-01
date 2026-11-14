@@ -505,5 +505,23 @@
     "statement": "Empirical calibration of human tendon S-N fatigue response yields Wöhler slope B = 8.45. Under unadapted +20% muscle force (S1), tendon cyclic fatigue life is reduced by -86.7% (retention 0.133x baseline) despite preserving static safety factor SF = 2.06. Restoring baseline fatigue life requires compensatory tendon remodeling of Delta CSA >= 15% (or Delta UTS >= 10%), demonstrating that fatigue durability, not static tensile yield, is the primary mechanical constraint on human strength enhancement.",
     "confidence": "high",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0062",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0059",
+    "title": "The Isomass Power Penalty: Analytical and Empirical Proof of Power Loss under Fixed Muscle Volume Pennation Remodeling",
+    "statement": "Under an isomass constraint (V = const), increasing muscle pennation angle from 14 deg to 18 deg increases isometric torque by +25.20% (from 306.8 to 384.1 Nm), but causes an unavoidable geometric fascicle shortening from 8.40 to 6.58 cm (-21.71%). While normalized shortening speed remains constant (10.0 s^-1), absolute contraction velocity drops by -21.71% (0.840 to 0.658 m/s). By Hill's mechanical power relation, peak dynamic power is strictly scaled by cos(theta)/cos(theta0), producing a net -1.98% drop in peak power. Pennation alone cannot enhance dynamic explosive capability.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0063",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0060",
+    "title": "The Tendon Iso-Durability Conservation Invariant: (1 + Delta_CSA) * (1 + Delta_UTS) >= lambda_F",
+    "statement": "Mathematical and empirical analysis of human tendon S-N fatigue mechanics established the exact conservation law governing fatigue life preservation under augmented muscle force: (1 + Delta_CSA) * (1 + Delta_UTS) >= lambda_F. For a +20% force augmentation (lambda_F = 1.20), unadapted loading causes an 86.67% fatigue life collapse (0.133x retention, stress 46.15 MPa). A combined biological adaptation of Delta_CSA >= 15% and Delta_UTS >= 10% (Case 2C, actual stress 40.13 MPa, stress ratio 0.3841) fully restores and exceeds baseline durability (1.678x retention), providing a proven mechanical safety envelope.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

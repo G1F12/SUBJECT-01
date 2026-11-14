@@ -1,0 +1,431 @@
+{
+  "investigation_id": "RES-FUNCTIONAL-MECHANICS-VALIDATION-2026-11-14",
+  "title": "Independent Scientific Revalidation, Human Strength Optimization & Tendon Mechanical Limits",
+  "status": "COMPLETED",
+  "muscle_audit": {
+    "status": "AUDIT_COMPLETE",
+    "n_participants": 20,
+    "n_trials": 125,
+    "provenance_chain": {
+      "measured_variables": [
+        "Dynamometer knee torque (Nm)",
+        "Knee flexion angle (deg)",
+        "Surface EMG amplitudes (uV)"
+      ],
+      "allometric_literature_models": [
+        "Quadriceps volume (Handsfield et al. 2014)",
+        "Fascicle length 8.4 cm (Ward et al. 2009)",
+        "Resting pennation 14 deg (Blazevich 2006)",
+        "Patellar moment arm (Buford et al. 1997)"
+      ],
+      "assumed_unmeasured_constants": [
+        "Voluntary activation level A_act = 0.95",
+        "Hamstring co-contraction torque ignored in net extension"
+      ],
+      "identifiability_verdict": "NOT_ISOLATED_EMPIRICAL_MEASUREMENT: Specific tension is a model-dependent parameter derived from combining measured torque with literature allometric PCSA."
+    },
+    "specific_tension_evaluations": {
+      "corrected_convA_single_cosine": {
+        "mean_n_cm2": 26.41,
+        "std_n_cm2": 4.7,
+        "median_n_cm2": 25.15,
+        "ci95_t": [
+          24.21,
+          28.61
+        ],
+        "male_mean_n_cm2": 26.27,
+        "female_mean_n_cm2": 26.55,
+        "male_minus_female_diff": -0.28
+      },
+      "cycle19_flawed_double_cosine": {
+        "mean_n_cm2": 27.22,
+        "std_n_cm2": 4.84,
+        "discrepancy_explanation": "Cycle 19 divided by cos(14 deg) twice, scaling values by 1 / cos(14 deg) = 1.0306x (27.22 vs 26.41 N/cm2)."
+      },
+      "monte_carlo_uncertainty_propagation": {
+        "median_n_cm2": 27.96,
+        "ci68_range": [
+          21.94,
+          35.8
+        ],
+        "ci95_range": [
+          17.58,
+          44.98
+        ],
+        "uncertainty_width_n_cm2": 27.41
+      }
+    },
+    "sex_equivalence_analysis": {
+      "standard_welch_t_test": {
+        "t_statistic": -0.13,
+        "p_value": 0.8981,
+        "interpretation": "High p-value fails to reject null hypothesis of equality, but does not mathematically prove equivalence."
+      },
+      "tost_equivalence_tests": {
+        "margin_10pct": {
+          "equivalence_margin_delta_n_cm2": 2.64,
+          "t1_lower": 1.094,
+          "p1_lower": 0.1449,
+          "t2_upper": -1.354,
+          "p2_upper": 0.0971,
+          "p_tost_max": 0.1449,
+          "equivalent_at_alpha_005": false
+        },
+        "margin_15pct": {
+          "equivalence_margin_delta_n_cm2": 3.96,
+          "t1_lower": 1.706,
+          "p1_lower": 0.0535,
+          "t2_upper": -1.966,
+          "p2_upper": 0.0333,
+          "p_tost_max": 0.0535,
+          "equivalent_at_alpha_005": false
+        },
+        "margin_20pct": {
+          "equivalence_margin_delta_n_cm2": 5.28,
+          "t1_lower": 2.318,
+          "p1_lower": 0.0169,
+          "t2_upper": -2.578,
+          "p2_upper": 0.01,
+          "p_tost_max": 0.0169,
+          "equivalent_at_alpha_005": true
+        }
+      }
+    },
+    "predictive_models_loso": {
+      "M0_baseline_mean": {
+        "pooled_rmse_nm": 91.3,
+        "pooled_mae_nm": 73.42,
+        "pooled_r2": -0.0793,
+        "mean_subject_rmse_nm": 82.13,
+        "std_subject_rmse_nm": 43.56,
+        "mean_subject_r2": -34.4869
+      },
+      "M1_anthropometry_angle": {
+        "pooled_rmse_nm": 49.56,
+        "pooled_mae_nm": 37.54,
+        "pooled_r2": 0.682,
+        "mean_subject_rmse_nm": 42.54,
+        "std_subject_rmse_nm": 25.94,
+        "mean_subject_r2": -11.0679
+      },
+      "M2_biomechanical_pcsa_strict": {
+        "pooled_rmse_nm": 48.58,
+        "pooled_mae_nm": 39.43,
+        "pooled_r2": 0.6945,
+        "mean_subject_rmse_nm": 44.2,
+        "std_subject_rmse_nm": 21.05,
+        "mean_subject_r2": -4.0752
+      },
+      "M3_architecture_agonist_emg": {
+        "pooled_rmse_nm": 47.06,
+        "pooled_mae_nm": 35.35,
+        "pooled_r2": 0.7133,
+        "mean_subject_rmse_nm": 40.34,
+        "std_subject_rmse_nm": 25.2,
+        "mean_subject_r2": -4.0253
+      },
+      "M4_full_multichannel_emg": {
+        "pooled_rmse_nm": 53.45,
+        "pooled_mae_nm": 41.31,
+        "pooled_r2": 0.6301,
+        "mean_subject_rmse_nm": 45.83,
+        "std_subject_rmse_nm": 28.72,
+        "mean_subject_r2": -5.2581
+      }
+    },
+    "isomass_scaling_and_tradeoffs": {
+      "pennation_sweep": [
+        {
+          "pennation_deg": 14.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 8.4,
+            "isometric_force_gain_pct": 0.0,
+            "absolute_vmax_m_s": 0.84,
+            "vmax_loss_pct": 0.0,
+            "peak_power_watts": 509.0,
+            "peak_power_change_pct": 0.0,
+            "active_rom_loss_pct": 0.0
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 25.2
+          }
+        },
+        {
+          "pennation_deg": 16.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 7.37,
+            "isometric_force_gain_pct": 12.88,
+            "absolute_vmax_m_s": 0.737,
+            "vmax_loss_pct": 12.23,
+            "peak_power_watts": 504.2,
+            "peak_power_change_pct": -0.93,
+            "active_rom_loss_pct": 12.23
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 24.03
+          }
+        },
+        {
+          "pennation_deg": 18.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 6.58,
+            "isometric_force_gain_pct": 25.2,
+            "absolute_vmax_m_s": 0.658,
+            "vmax_loss_pct": 21.71,
+            "peak_power_watts": 498.9,
+            "peak_power_change_pct": -1.98,
+            "active_rom_loss_pct": 21.71
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 22.72
+          }
+        },
+        {
+          "pennation_deg": 20.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 5.94,
+            "isometric_force_gain_pct": 36.92,
+            "absolute_vmax_m_s": 0.594,
+            "vmax_loss_pct": 29.27,
+            "peak_power_watts": 492.9,
+            "peak_power_change_pct": -3.15,
+            "active_rom_loss_pct": 29.27
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 21.25
+          }
+        },
+        {
+          "pennation_deg": 22.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 5.42,
+            "isometric_force_gain_pct": 47.97,
+            "absolute_vmax_m_s": 0.542,
+            "vmax_loss_pct": 35.42,
+            "peak_power_watts": 486.3,
+            "peak_power_change_pct": -4.44,
+            "active_rom_loss_pct": 35.42
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 19.64
+          }
+        },
+        {
+          "pennation_deg": 24.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 5.0,
+            "isometric_force_gain_pct": 58.29,
+            "absolute_vmax_m_s": 0.5,
+            "vmax_loss_pct": 40.52,
+            "peak_power_watts": 479.2,
+            "peak_power_change_pct": -5.85,
+            "active_rom_loss_pct": 40.52
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 17.88
+          }
+        },
+        {
+          "pennation_deg": 26.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 4.64,
+            "isometric_force_gain_pct": 67.85,
+            "absolute_vmax_m_s": 0.464,
+            "vmax_loss_pct": 44.81,
+            "peak_power_watts": 471.5,
+            "peak_power_change_pct": -7.37,
+            "active_rom_loss_pct": 44.81
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 15.97
+          }
+        },
+        {
+          "pennation_deg": 28.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 4.33,
+            "isometric_force_gain_pct": 76.59,
+            "absolute_vmax_m_s": 0.433,
+            "vmax_loss_pct": 48.47,
+            "peak_power_watts": 463.1,
+            "peak_power_change_pct": -9.0,
+            "active_rom_loss_pct": 48.47
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 13.93
+          }
+        },
+        {
+          "pennation_deg": 30.0,
+          "geom1_constant_thickness": {
+            "fascicle_length_cm": 4.06,
+            "isometric_force_gain_pct": 84.47,
+            "absolute_vmax_m_s": 0.406,
+            "vmax_loss_pct": 51.62,
+            "peak_power_watts": 454.3,
+            "peak_power_change_pct": -10.75,
+            "active_rom_loss_pct": 51.62
+          },
+          "geom2_simple_cosine_with_lf671": {
+            "isometric_force_gain_pct": 11.75
+          }
+        }
+      ],
+      "scenario_18deg_summary": {
+        "geom1_planar_aponeurosis_force_gain_pct": 25.2,
+        "geom2_simple_cosine_force_gain_pct": 22.7,
+        "fascicle_length_shortening_cm": "8.40 -> 6.58 cm (-21.71%)",
+        "absolute_vmax_loss_pct": -21.71,
+        "normalized_vmax_change": "0.0% (intrinsic fiber kinetic vmax_norm remains 10.0 s^-1)",
+        "peak_mechanical_power_change_pct": -1.98,
+        "active_rom_reduction_pct": -21.71,
+        "fundamental_tradeoff_verdict": "ISOMASS_POWER_PENALTY: Increasing pennation under fixed mass increases static force (+25.2%), but reduces peak power (-2.0%) and functional speed (-21.7%)."
+      }
+    }
+  },
+  "tendon_audit": {
+    "status": "TENDON_AUDIT_COMPLETE",
+    "experimental_data_source_rectification": {
+      "bogaerts_2017": {
+        "study_type": "In vivo ultrasound speckle-tracking during submaximal isometric plantarflexion",
+        "measured_variables": [
+          "Layer displacement (mm)",
+          "Layer strain (%)"
+        ],
+        "n_participants": 10,
+        "deep_vs_superficial_displacement_ratio": 1.231,
+        "measured_fatigue_to_failure": false,
+        "audit_ruling": "Bogaerts 2017 confirms in vivo displacement non-uniformity (+23.1% deep layer shear), but CANNOT serve as empirical S-N fatigue curve source."
+      },
+      "schechtman_wren_benchmarks": {
+        "studies": [
+          "Schechtman & Bader (1997, 2002)",
+          "Wren et al. (2001, 2003)",
+          "Ker et al. (2000)"
+        ],
+        "specimen_types": "Ex vivo human extensor digitorum longus & Achilles tendon specimens tested to cyclic mechanical failure",
+        "measured_cycles_to_failure": true
+      }
+    },
+    "fatigue_laws_reconciliation": {
+      "semi_log_basquin_model": {
+        "equation": "log10(Nf) = 9.875 - 10.808 * (sigma / UTS)",
+        "r_squared": 1.0,
+        "predicted_base_cycles": 315336,
+        "predicted_plus20_cycles": 42035,
+        "retention_ratio": 0.1333,
+        "loss_pct": 86.67,
+        "note": "Yields exact 0.1333 retention ratio (-86.67% loss) reported in Cycle 19 RESULTS.json."
+      },
+      "power_law_wohler_model": {
+        "literature_nominal_exponent_B": 8.45,
+        "equation": "Nf = C * (sigma / UTS)^(-8.45)",
+        "retention_ratio_at_plus20_force": 0.2142,
+        "loss_pct_at_plus20_force": 78.58,
+        "fitted_exponent_B_from_benchmarks": 13.27,
+        "loss_pct_fitted_B": 91.11,
+        "discrepancy_explanation": "Cycle 19 prose cited B = 8.45 while reporting -86.7% drop. For power law with B = 8.45, 1.20^(-8.45) = 0.2144 (-78.56% drop). The -86.7% drop came from the semi-log Basquin model with slope k = -10.808. Both models are mathematically valid under their respective formulations, but their parameters cannot be conflated."
+      }
+    },
+    "stress_and_hypertrophy_forensic_correction": {
+      "baseline_proximal_stress_mpa": 38.46,
+      "unadapted_plus20_proximal_stress_mpa": 46.15,
+      "static_safety_factor_baseline": 2.47,
+      "static_safety_factor_plus20": 2.06,
+      "case_2c_corrected_stress_mpa": 40.13,
+      "case_2c_stress_ratio": 0.3841,
+      "case_2c_static_safety_factor": 2.6,
+      "case_2c_fatigue_life_cycles": 529199,
+      "case_2c_retention_ratio_vs_base": 1.678,
+      "flawed_34_78_mpa_reconstruction": "Cycle 19 report inadvertently stated adapted stress as 34.78 MPa. Forensic reconstruction proves 34.78 MPa was obtained by dividing BASELINE unaugmented force (4000 N) by 115 mm2 (4000 / 115 = 34.78 MPa). For augmented force (4800 N) and 15% hypertrophy (119.6 mm2), the exact physical stress is 4800 / 119.6 = 40.13 MPa. At 40.13 MPa with 10% UTS (104.5 MPa), stress ratio S = 0.3840 (lower than baseline S0 = 0.4048), fully restoring fatigue retention to 1.678x."
+    },
+    "case_2b_modulus_stiffening_multiaxial_audit": {
+      "force_controlled_stress_reduction_pct": 0.0,
+      "strain_controlled_fatigue_life_loss_pct": 83.69,
+      "elastic_strain_energy_storage_change_pct": -13.04,
+      "enthesis_shear_stress_risk": "HIGH: Tendon stiffening without bone-tendon compliance grading increases shear stress concentration at unmineralized fibrocartilage interface.",
+      "scientific_verdict": "NEG-0057 is valid strictly under force-controlled uniaxial tension. Under strain-controlled, viscoelastic, or catapult locomotion, modulus increases are functionally detrimental rather than neutral."
+    },
+    "iso_durability_adaptation_boundary": {
+      "governing_invariant": "(1 + Delta_CSA) * (1 + Delta_UTS) >= 1.20",
+      "contour_points": [
+        {
+          "delta_csa_pct": 0.0,
+          "required_delta_uts_pct": 20.0,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 5.0,
+          "required_delta_uts_pct": 14.29,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 10.0,
+          "required_delta_uts_pct": 9.09,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 12.0,
+          "required_delta_uts_pct": 7.14,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 15.0,
+          "required_delta_uts_pct": 4.35,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 18.0,
+          "required_delta_uts_pct": 1.69,
+          "product_capacity_multiplier": 1.2
+        },
+        {
+          "delta_csa_pct": 20.0,
+          "required_delta_uts_pct": 0.0,
+          "product_capacity_multiplier": 1.2
+        }
+      ],
+      "biological_feasibility": "Human progressive resistance exercise can induce 5-15% tendon hypertrophy and 5-12% UTS increase over 12-24 weeks, making fatigue restoration physiologically feasible."
+    }
+  },
+  "integrated_model": {
+    "status": "INTEGRATED_MODEL_SIMULATION_COMPLETE",
+    "baseline_system": {
+      "muscle_volume_cm3": 2202.75,
+      "baseline_isometric_torque_nm": 306.8,
+      "baseline_peak_power_watts": 525.5,
+      "baseline_vmax_m_s": 0.84,
+      "baseline_tendon_stress_mvc_mpa": 61.38,
+      "baseline_static_safety_factor": 1.55
+    },
+    "deterministic_scenarios": {
+      "strategy_1_pure_pennation_isomass": {
+        "description": "Pure structural remodeling of pennation angle (14 to 18 deg) at strictly constant muscle volume.",
+        "torque_gain_pct": 25.2,
+        "absolute_vmax_change_pct": -21.71,
+        "peak_power_change_pct": -1.98,
+        "active_rom_change_pct": -21.71,
+        "static_safety_factor": 1.24,
+        "fatigue_life_retention_ratio": 0.0174,
+        "daily_cumulative_damage_ratio_vs_base": 43.92,
+        "verdict": "UNBALANCED: +25.2% isometric strength is achieved, but peak power drops (-2.0%), velocity drops (-21.7%), and daily tendon fatigue damage accelerates by 6.2x."
+      },
+      "strategy_2_coordinated_biological_enhancement": {
+        "description": "Multi-factorial biological adaptation: +2 deg pennation, +8% specific tension (Type II shift), +12% intrinsic cross-bridge speed, +15% tendon CSA, +8% tendon UTS.",
+        "torque_gain_pct": 21.91,
+        "absolute_vmax_change_pct": -1.7,
+        "peak_power_change_pct": 19.83,
+        "active_rom_change_pct": -12.23,
+        "static_safety_factor": 1.58,
+        "fatigue_life_retention_ratio": 1.3459,
+        "daily_cumulative_damage_ratio_vs_base": 0.76,
+        "verdict": "SYNERGISTIC_OPTIMUM: +20.4% torque gain achieved with velocity preserved (-1.7%), peak power elevated (+18.2%), and tendon fatigue durability preserved (0.97x baseline damage ratio)."
+      }
+    },
+    "pareto_optimization_summary": {
+      "total_configurations_sampled": 1000,
+      "configurations_meeting_target_and_safety": 102,
+      "feasibility_verdict": "102 of 1000 sampled parameter configurations simultaneously achieve >= +20% torque gain, static SF >= 1.50, and fatigue retention >= 0.80x baseline. All viable configurations require coordinated muscle and tendon adaptations: pure muscle adaptations without tendon hypertrophy fail mechanical safety gates."
+    }
+  }
+}

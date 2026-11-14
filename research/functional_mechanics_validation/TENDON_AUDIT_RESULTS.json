@@ -1,0 +1,105 @@
+{
+  "status": "TENDON_AUDIT_COMPLETE",
+  "experimental_data_source_rectification": {
+    "bogaerts_2017": {
+      "study_type": "In vivo ultrasound speckle-tracking during submaximal isometric plantarflexion",
+      "measured_variables": [
+        "Layer displacement (mm)",
+        "Layer strain (%)"
+      ],
+      "n_participants": 10,
+      "deep_vs_superficial_displacement_ratio": 1.231,
+      "measured_fatigue_to_failure": false,
+      "audit_ruling": "Bogaerts 2017 confirms in vivo displacement non-uniformity (+23.1% deep layer shear), but CANNOT serve as empirical S-N fatigue curve source."
+    },
+    "schechtman_wren_benchmarks": {
+      "studies": [
+        "Schechtman & Bader (1997, 2002)",
+        "Wren et al. (2001, 2003)",
+        "Ker et al. (2000)"
+      ],
+      "specimen_types": "Ex vivo human extensor digitorum longus & Achilles tendon specimens tested to cyclic mechanical failure",
+      "measured_cycles_to_failure": true
+    }
+  },
+  "fatigue_laws_reconciliation": {
+    "semi_log_basquin_model": {
+      "equation": "log10(Nf) = 9.875 - 10.808 * (sigma / UTS)",
+      "r_squared": 1.0,
+      "predicted_base_cycles": 315336,
+      "predicted_plus20_cycles": 42035,
+      "retention_ratio": 0.1333,
+      "loss_pct": 86.67,
+      "note": "Yields exact 0.1333 retention ratio (-86.67% loss) reported in Cycle 19 RESULTS.json."
+    },
+    "power_law_wohler_model": {
+      "literature_nominal_exponent_B": 8.45,
+      "equation": "Nf = C * (sigma / UTS)^(-8.45)",
+      "retention_ratio_at_plus20_force": 0.2142,
+      "loss_pct_at_plus20_force": 78.58,
+      "fitted_exponent_B_from_benchmarks": 13.27,
+      "loss_pct_fitted_B": 91.11,
+      "discrepancy_explanation": "Cycle 19 prose cited B = 8.45 while reporting -86.7% drop. For power law with B = 8.45, 1.20^(-8.45) = 0.2144 (-78.56% drop). The -86.7% drop came from the semi-log Basquin model with slope k = -10.808. Both models are mathematically valid under their respective formulations, but their parameters cannot be conflated."
+    }
+  },
+  "stress_and_hypertrophy_forensic_correction": {
+    "baseline_proximal_stress_mpa": 38.46,
+    "unadapted_plus20_proximal_stress_mpa": 46.15,
+    "static_safety_factor_baseline": 2.47,
+    "static_safety_factor_plus20": 2.06,
+    "case_2c_corrected_stress_mpa": 40.13,
+    "case_2c_stress_ratio": 0.3841,
+    "case_2c_static_safety_factor": 2.6,
+    "case_2c_fatigue_life_cycles": 529199,
+    "case_2c_retention_ratio_vs_base": 1.678,
+    "flawed_34_78_mpa_reconstruction": "Cycle 19 report inadvertently stated adapted stress as 34.78 MPa. Forensic reconstruction proves 34.78 MPa was obtained by dividing BASELINE unaugmented force (4000 N) by 115 mm2 (4000 / 115 = 34.78 MPa). For augmented force (4800 N) and 15% hypertrophy (119.6 mm2), the exact physical stress is 4800 / 119.6 = 40.13 MPa. At 40.13 MPa with 10% UTS (104.5 MPa), stress ratio S = 0.3840 (lower than baseline S0 = 0.4048), fully restoring fatigue retention to 1.678x."
+  },
+  "case_2b_modulus_stiffening_multiaxial_audit": {
+    "force_controlled_stress_reduction_pct": 0.0,
+    "strain_controlled_fatigue_life_loss_pct": 83.69,
+    "elastic_strain_energy_storage_change_pct": -13.04,
+    "enthesis_shear_stress_risk": "HIGH: Tendon stiffening without bone-tendon compliance grading increases shear stress concentration at unmineralized fibrocartilage interface.",
+    "scientific_verdict": "NEG-0057 is valid strictly under force-controlled uniaxial tension. Under strain-controlled, viscoelastic, or catapult locomotion, modulus increases are functionally detrimental rather than neutral."
+  },
+  "iso_durability_adaptation_boundary": {
+    "governing_invariant": "(1 + Delta_CSA) * (1 + Delta_UTS) >= 1.20",
+    "contour_points": [
+      {
+        "delta_csa_pct": 0.0,
+        "required_delta_uts_pct": 20.0,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 5.0,
+        "required_delta_uts_pct": 14.29,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 10.0,
+        "required_delta_uts_pct": 9.09,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 12.0,
+        "required_delta_uts_pct": 7.14,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 15.0,
+        "required_delta_uts_pct": 4.35,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 18.0,
+        "required_delta_uts_pct": 1.69,
+        "product_capacity_multiplier": 1.2
+      },
+      {
+        "delta_csa_pct": 20.0,
+        "required_delta_uts_pct": 0.0,
+        "product_capacity_multiplier": 1.2
+      }
+    ],
+    "biological_feasibility": "Human progressive resistance exercise can induce 5-15% tendon hypertrophy and 5-12% UTS increase over 12-24 weeks, making fatigue restoration physiologically feasible."
+  }
+}

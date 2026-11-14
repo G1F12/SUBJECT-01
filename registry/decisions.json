@@ -186,5 +186,16 @@
       "DEC-0023"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0025",
+    "date": "2026-11-14",
+    "title": "Adoption of Independent Functional Mechanics Validation, Rectification of Cycle 19 Mathematical Contradictions, and Ratification of the Isomass Power Penalty and Tendon Iso-Durability Invariants",
+    "decision": "Formally adopted the comprehensive independent re-validation of SUBJECT-01 functional mechanics: (1) Rectified the EXP-0059 double-cosine scaling artifact, establishing corrected in vivo quadriceps specific tension sigma = 26.41 +/- 4.70 N/cm2 (95% CI [24.21, 28.61]); (2) Established that specific tension is a model-dependent parameter (95% Monte Carlo credibility interval [17.58, 44.98] N/cm2, NEG-0058), not an isolated individual measurement; (3) Reclassified sex equivalence via TOST, confirming equivalence within +/- 20% (p = 0.0169) while rejecting claims of strict fine-scale biological equivalence at 10% (NEG-0059); (4) Ratified the Isomass Power Penalty discovery (FND-0062), proving that increasing pennation under constant muscle volume increases static torque (+25.20%) but reduces peak mechanical power (-1.98%), functional shortening speed (-21.71%), and active joint ROM (-21.71%); (5) Reconciled the tendon fatigue mathematical contradiction between semi-log (k = -10.808, -86.67% loss) and power-law formulations (B = 8.45, -78.58% loss; B = 13.27, -91.11% loss); (6) Corrected Case 2C adapted tensile stress arithmetic to 40.13 MPa (disproving the erroneous 34.78 MPa claim); (7) Ratified the exact Tendon Iso-Durability Conservation Invariant (FND-0063): (1 + Delta_CSA) * (1 + Delta_UTS) >= lambda_F; (8) Adopted the Multi-System Enhancement Strategy (Strategy 2) achieving +21.9% torque, -1.7% speed preservation, +19.8% peak power, and 1.35x fatigue life retention; (9) Reclassified NEG-0057 to uniaxial force-controlled regimes while documenting the detrimental effects of tendon stiffening in strain-controlled and elastic catapult functions; (10) Maintained core program invariants: TARGET-CPE45 = NOT EXTERNALLY VALIDATED, BIOLOGICAL INTERVENTIONS = NO_GO, +20% STRENGTH = THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION (unvalidated in vivo).",
+    "rationale": "Closes all outstanding mathematical and epistemic ambiguities from Cycle 19 and establishes a unified, rigorous, and verified biomechanical foundation for human functional augmentation.",
+    "amends": [
+      "DEC-0024"
+    ],
+    "supersedes": []
   }
 ]
