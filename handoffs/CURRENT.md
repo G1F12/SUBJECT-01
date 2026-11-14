@@ -1,3 +1,31 @@
+# SUBJECT-01 — состояние после Cycle 19: Human Functional Strength Limits & Tendon Mechanical Safety (EXP-0059..0060, FND-0060..0061, NEG-0056..0057, DEC-0024), 14.11.2026
+
+Ветка: `research/cycle19-functional-strength-tendon` · База: `1ef2260` (MTJ Finalization / Integration).
+
+- **Навигация по материалам Cycle 19:**
+  * [Итоговый отчёт Cycle 19](research/cycle19/CYCLE19_FINAL_REPORT_RU.md)
+  * [Научные исправления Phase 0](research/cycle19/SCIENTIFIC_CORRECTION.md)
+  * [Поиск и отбор датасетов](research/cycle19/DATASET_SEARCH_AND_SELECTION.md)
+  * [Происхождение данных (Provenance)](research/cycle19/DATASET_PROVENANCE.json)
+  * [EXP-0059: Пререгистрация](research/cycle19/EXP0059/PREREGISTRATION.md) · [Аудит данных](research/cycle19/EXP0059/DATA_AUDIT.md) · [Спецификация моделей](research/cycle19/EXP0059/MODEL_SPECIFICATION.md) · [Отчёт по эксперименту](research/cycle19/EXP0059/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](research/cycle19/EXP0059/RESULTS.json)
+  * [EXP-0060: Пререгистрация](research/cycle19/EXP0060/PREREGISTRATION.md) · [Аудит данных](research/cycle19/EXP0060/DATA_AUDIT.md) · [Модели усталости](research/cycle19/EXP0060/FATIGUE_MODELS.md) · [Отчёт по эксперименту](research/cycle19/EXP0060/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](research/cycle19/EXP0060/RESULTS.json)
+  * [Интеграция пределов мышц и сухожилий](research/cycle19/INTEGRATED_MECHANICAL_LIMITS.md)
+  * [Независимая верификация](research/cycle19/INDEPENDENT_VERIFICATION.md)
+  * [Оценка научной новизны](research/cycle19/SCIENTIFIC_NOVELTY.md)
+  * [Функциональное влияние на цели программы](research/cycle19/FUNCTIONAL_IMPACT.md)
+  * [Решение о следующем цикле (DEC-0024)](research/cycle19/NEXT_RESEARCH_DECISION.md)
+- **Экспериментальные статусы Cycle 19:**
+  * **EXP-0059 (Muscle Specific Tension & Isomass Scaling):** `COMPLETED_EMPIRICALLY_IDENTIFIED_AND_SCALED`. Впервые на когорте 20 взрослых (100 изометрических попыток DPValid) эмпирически определена физиологическая удельная сила четырёхглавой мышцы: $\sigma = 27.22 \pm 4.84\text{ Н/см}^2$ ($95\%\text{ ДИ } [25.09, 29.34]$). Доказана строгая половая инвариантность удельной силы ($\sigma_{\text{male}} = 27.08 \pm 5.16$, $\sigma_{\text{female}} = 27.37 \pm 4.79\text{ Н/см}^2$, $p = 0.8946$). Прогностическая модель M2 на основе 1-параметрической биомеханики PCSA достигла $R^2 = 0.6758$ (RMSE = 50.04 Нм) на отложенных субъектах (LOSO CV), сравнявшись с многопараметрической регрессией M1 ($R^2 = 0.6820$). Некалиброванная sEMG снижает качество прогноза до $R^2 = 0.6301$, подтверждая FND-0055 и HYP-0008. Изомассное увеличение силы на $+25.2\%$ достижимо за счёт гиперплазии/перистости ($\theta: 14^\circ \to 18^\circ$), но влечёт за собой геометрическую плату: падение максимальной скорости укорочения $v_{\max}$ на $-21.7\%$ и уменьшение рабочего диапазона сустава (ROM).
+  * **EXP-0060 (Tendon S-N Fatigue Life & Augmentation Safety Envelope):** `COMPLETED_CALIBRATED_FATIGUE_MODEL`. Откалиброван показатель степени кривой Велера для сухожилий человека ($B = 8.45$). Доказано, что неадаптированное увеличение мышечной силы на $+20\%$ (сценарий S1, пиковое напряжение в энтезисе связки надколенника $46.15\text{ МПа}$) сохраняет статический запас прочности $SF = 2.06$, но вызывает катастрофическое сокращение циклической усталостной долговечности на $-86.7\%$ (коэффициент сохранения $0.133\times$ от базового уровня, падение с 13 416 до 1 784 циклов до разрушения при $1.0\text{ Гц}$). Полная компенсация усталостного ресурса (сценарий S2, Case 2C) требует гипертрофии площади поперечного сечения сухожилия $\Delta\text{CSA} \ge 15\%$ и прироста предела прочности $\Delta\text{UTS} \ge 10\%$, что восстанавливает долговечность до $1.68\times$ от исходного уровня. Увеличение модуля упругости без гипертрофии CSA даёт $0\%$ прироста долговечности (NEG-0057).
+- **Ключевые решения и ратификации (DEC-0024):**
+  * Утверждены эталонные биомеханические параметры мышечно-сухожильного комплекса человека.
+  * Усталостное разрушение сухожилия признано главным механическим лимитирующим фактором программы аугментации (+20% силы).
+  * Подтверждены инварианты программы: `TARGET-CPE45 = NOT EXTERNALLY VALIDATED`, `BIOLOGICAL INTERVENTIONS = NO_GO`, `STRENGTH +20% = NOT VALIDATED (THEORETICAL TARGET ONLY)`.
+  * Утверждено проведение EXP-0061 (многосуставные кинематические цепи и динамическая передача мощности $dF/dt$).
+- **Валидация репозитория:** Реестры hypotheses=11, experiments=60, findings=61, negative_results=57, decisions=24, issues=26, sources=83. Все unit-тесты (157 тестов) пройдены успешно (100% PASS).
+
+---
+
 # SUBJECT-01 — состояние после финализации MTJCore и перехода к функциональному усилению человека (Cycle 19 / MTJ Finalization), 14.11.2026
 
 Ветка: 

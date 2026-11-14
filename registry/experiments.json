@@ -1707,5 +1707,63 @@
     "limits": "Transcriptomic abundance in snRNA-seq does not demonstrate extracellular secretion or mechanical force resistance.",
     "external_validation": "FALSIFIED_DONOR_CONSISTENCY",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0059",
+    "date": "2026-11-14",
+    "name": "Human Muscle Specific Tension Identification and Isomass Architectural Scaling Scenarios",
+    "sources": [
+      "SRC-0081",
+      "SRC-0076"
+    ],
+    "design": "Direct identification of human quadriceps specific tension sigma across N=20 adults (DPValid), LOSO CV of predictive models M0-M4, and theoretical isomass scaling simulations of force-velocity-ROM trade-offs under fixed muscle volume.",
+    "status": "completed",
+    "model": "research/cycle19/scripts/run_exp0059_muscle_models.py",
+    "inputs": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "report": "research/cycle19/EXP0059/EXPERIMENT_REPORT_RU.md",
+    "outputs": [
+      "research/cycle19/EXP0059/RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle19/scripts/run_exp0059_muscle_models.py",
+    "results": {
+      "findings": [
+        "FND-0060"
+      ],
+      "negative_results": [
+        "NEG-0056"
+      ]
+    },
+    "limits": "Specific tension identified from in vivo voluntary dynamometry with allometric PCSA scaling; intracellular cross-bridge kinetics not directly imaged.",
+    "external_validation": "EMPIRICAL_LOSO_VALIDATED_DPVALID",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0060",
+    "date": "2026-11-14",
+    "name": "Tendon S-N Fatigue Life Modeling and +20% Force Augmentation Safety Envelope",
+    "sources": [
+      "SRC-0082",
+      "SRC-0080"
+    ],
+    "design": "Empirical calibration of Wöhler power-law fatigue parameters on human tendon mechanical data, and quantitative evaluation of safety factors and fatigue life under unadapted (+20% load, S1) and adaptive hypertrophic/remodeling (S2) augmentation scenarios.",
+    "status": "completed",
+    "model": "research/cycle19/scripts/run_exp0060_tendon_fatigue.py",
+    "inputs": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+    "report": "research/cycle19/EXP0060/EXPERIMENT_REPORT_RU.md",
+    "outputs": [
+      "research/cycle19/EXP0060/RESULTS.json"
+    ],
+    "reproduction_command": "python research/cycle19/scripts/run_exp0060_tendon_fatigue.py",
+    "results": {
+      "findings": [
+        "FND-0061"
+      ],
+      "negative_results": [
+        "NEG-0057"
+      ]
+    },
+    "limits": "Fatigue life modeled from calibrated human tendon Wöhler baselines; in vivo dynamic multi-million cycle testing under augmentation remains a theoretical safety envelope.",
+    "external_validation": "CALIBRATED_WOHLER_FATIGUE_MODEL",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

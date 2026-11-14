@@ -175,5 +175,16 @@
       "DEC-0022"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0024",
+    "date": "2026-11-14",
+    "title": "Adoption of Cycle 19 Biomechanical Baselines: Human Specific Tension Identification, Isomass Scaling Trade-offs, Tendon S-N Fatigue Envelope, and Commissioning of EXP-0061 Multi-Joint Architecture",
+    "decision": "Formally adopted the findings of Research Cycle 19: (1) Established empirical in vivo quadriceps specific tension sigma = 27.22 +/- 4.84 N/cm2 (95% CI [25.09, 29.34]) as the sex-invariant physiological baseline for human functional strength; (2) Adopted the 1-parameter physics PCSA model (M2, LOSO R2 = 0.6758) as the parsimonious baseline over parameter-rich models; (3) Ratified negative result NEG-0056 establishing the isomass architectural trade-off (+25.2% isometric force via pennation sacrifices -21.7% v_max and ROM); (4) Calibrated the human tendon Wöhler fatigue power law (B = 8.45) and confirmed that unadapted +20% force reduces cyclic fatigue life by -86.7% (retention 0.133x) despite static SF = 2.06; (5) Established the 15% tendon hypertrophy / 10% UTS adaptation threshold required to preserve mechanical durability; (6) Ratified negative result NEG-0057 (modulus stiffening without hypertrophy fails fatigue protection); (7) Maintained core program invariants: TARGET-CPE45 = NOT EXTERNALLY VALIDATED, BIOLOGICAL INTERVENTIONS = NO_GO, STRENGTH +20% = NOT VALIDATED; (8) Commissioned Phase VI Experiment EXP-0061 (multi-joint closed kinematic chain power transmission and dynamic tendon safety under rapid dF/dt).",
+    "rationale": "Transitions SUBJECT-01 from molecular MTJ audits to rigorous, reproducible biomechanical quantification of human strength and tendon safety limits on empirical datasets.",
+    "amends": [
+      "DEC-0023"
+    ],
+    "supersedes": []
   }
 ]

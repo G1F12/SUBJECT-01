@@ -179,8 +179,16 @@
     "id": "ISS-0021",
     "date": "2026-11-12",
     "title": "Multi-Joint Closed Kinematic Chain Power Transmission and Tendon Safety Gap",
-    "description": "The transition from single-joint knee extension torque to whole-body multi-joint functional movements (squat, sprint, vertical jump) remains unmodeled. Dynamic co-activation across bi-articular muscles (rectus femoris, hamstrings, gastrocnemius) and high rates of force development (dF/dt > 15 kN/s) create complex contact stresses and tendon safety risks that must be resolved in Cycle 14 and Cycle 15.",
-    "status": "open"
+    "description": "The transition from single-joint knee extension torque to whole-body multi-joint functional movements (squat, sprint, vertical jump) remains unmodeled. Single-joint specific tension (27.22 N/cm2) and isolated tendon S-N fatigue (-86.7% cycles) quantified in Cycle 19 (EXP-0059, EXP-0060). Dynamic co-activation across bi-articular muscles and rapid rate of force development (dF/dt > 15 kN/s) are prioritized for Phase VI (EXP-0061, DEC-0024).",
+    "status": "in_progress",
+    "priority": "high",
+    "related_experiments": [
+      "EXP-0059",
+      "EXP-0060"
+    ],
+    "related_decisions": [
+      "DEC-0024"
+    ]
   },
   {
     "id": "ISS-0022",
@@ -206,12 +214,14 @@
     "status": "partially_resolved",
     "priority": "high",
     "related_experiments": [
-      "EXP-0049"
+      "EXP-0049",
+      "EXP-0052",
+      "EXP-0060"
     ],
     "related_issues": [
       "ISS-0021"
     ],
-    "resolution": "Partially resolved in Cycle 16 (EXP-0052): In vivo displacement and strain non-uniformity confirmed on Bogaerts (p = 1.17e-13). Full stress validation blocked by absent regional CSA."
+    "resolution": "Partially resolved in Cycle 16 (EXP-0052): In vivo displacement and strain non-uniformity confirmed on Bogaerts (p = 1.17e-13). Cycle 19 (EXP-0060) calibrated the S-N fatigue response (B = 8.45) and quantified the +15% CSA adaptive compensation envelope. Full regional stress validation remains open pending synchronized 3D morphometry."
   },
   {
     "id": "ISS-0024",

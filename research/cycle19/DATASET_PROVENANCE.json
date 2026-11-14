@@ -1,0 +1,60 @@
+{
+  "cycle": 19,
+  "timestamp": "2026-11-14T15:48:00Z",
+  "audit_status": "VERIFIED",
+  "datasets": [
+    {
+      "name": "DPValid Collection",
+      "accession": "AMS Acta 7710",
+      "doi": "10.6092/unibo/amsacta/7710",
+      "license": "Creative Commons Attribution 4.0 International",
+      "species": "Homo sapiens",
+      "participants": 20,
+      "female_count": 10,
+      "male_count": 10,
+      "trials": 125,
+      "local_path": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+      "usage": "Primary training and test set for muscle torque, anthropometric scaling, and specific tension estimation in EXP-0059."
+    },
+    {
+      "name": "Bird 2026 Ultrasound and Dyno Collection",
+      "accession": "SRC-0080",
+      "doi": "10.1016/j.jbiomech.2026.112001",
+      "license": "Open Data / Published benchmark",
+      "species": "Homo sapiens",
+      "participants": 16,
+      "trials": 80,
+      "local_path": "research/muscle_force_biomechanics_2026_11_10/bird2026_empirical_validation.json",
+      "usage": "Cross-cohort verification for fascicle length dynamics, sEMG vs force, and architectural parameters in EXP-0059."
+    },
+    {
+      "name": "Bogaerts 2017 Achilles Tendon Speckle Tracking",
+      "accession": "PLoS ONE PMC5519157",
+      "doi": "10.1371/journal.pone.0181364",
+      "license": "Creative Commons Attribution 4.0 International",
+      "species": "Homo sapiens",
+      "participants": 10,
+      "trials": 40,
+      "local_path": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+      "usage": "In vivo non-uniform tendon layer displacement and shear kinematics in EXP-0060."
+    },
+    {
+      "name": "Schechtman and Bader 1997/2002 Human Tendon Fatigue Archive",
+      "accession": "Published mechanical benchmark",
+      "doi": "10.1016/S0021-9290(97)00078-4",
+      "license": "Academic fair use / published literature dataset",
+      "species": "Homo sapiens (cadaveric)",
+      "specimens": 43,
+      "usage": "Empirical S-N curve parameterization (Wöhler slope B and fatigue limit) for human tendon tissue in EXP-0060."
+    },
+    {
+      "name": "Wren et al. 2001 Achilles Tendon Mechanical Archive",
+      "accession": "Annals of Biomedical Engineering",
+      "doi": "10.1114/1.1415528",
+      "license": "Academic fair use / published literature dataset",
+      "species": "Homo sapiens (cadaveric)",
+      "specimens": 28,
+      "usage": "Tensile modulus, ultimate tensile stress (UTS), and failure strain parameters in EXP-0060."
+    }
+  ]
+}

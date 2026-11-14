@@ -448,5 +448,21 @@
     "title": "Stromal COL22A1 Upregulation Fails Preregistered Donor Consistency Threshold",
     "statement": "In the Achilles MTJ-vs-midbody fibroblast contrast, COL22A1 upregulation achieved a donor direction consistency of only 0.60 (elevated in 3 of 5 donors), failing the preregistered threshold of >= 0.75 and resulting in rejection from the frozen fibroblast signature. Hypothesis HYP-0013 lacks novelty as cellular distributions were already published in Cohen et al. (2026).",
     "reason": "Inter-donor inconsistency in stromal COL22A1 expression and lack of originality relative to published literature."
+  },
+  {
+    "id": "NEG-0056",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0059",
+    "title": "Isomass Pennation Scaling Trade-Off: Force Gain Sacrifices Shortening Velocity and Range of Motion",
+    "statement": "In human skeletal muscle under fixed total mass/volume (isomass constraint), increasing pennation angle theta from 14 deg to 18 deg increases PCSA and isometric force by +25.2% (from 6059 N to 7586 N), but causes an unavoidable geometric reduction of -21.7% in maximum shortening velocity (v_max drops from 8.84 to 6.92 l_0/s) and joint active range of motion due to reduced fiber length l_f. Pure pennation remodeling cannot achieve +20% force without dynamic performance penalties.",
+    "reason": "Constant-volume geometric constraint: V = PCSA * l_f = const. Increasing PCSA proportionally shortens fascicle length l_f, reducing the number of sarcomeres in series and maximum shortening speed."
+  },
+  {
+    "id": "NEG-0057",
+    "date": "2026-11-14",
+    "experiment_id": "EXP-0060",
+    "title": "Tendon Elastic Modulus Remodeling Without Hypertrophy Yields Zero Fatigue Life Gain",
+    "statement": "Under a +20% augmented muscle force, increasing tendon elastic modulus E by +15% without cross-sectional area hypertrophy (Delta CSA = 0) produces exactly 0% improvement in cyclic fatigue life (N_cycles remains 0.133x baseline, -86.7% loss). While tendon stiffness increases, peak engineering tensile stress sigma = F / CSA remains unattenuated at 48.74 MPa, proving that material stiffening without geometric hypertrophy is ineffective for tendon fatigue protection.",
+    "reason": "Wöhler S-N fatigue life is governed by cyclic peak tensile stress sigma relative to ultimate tensile strength UTS. Altering elastic modulus affects strain at load but leaves stress identical if CSA is unchanged."
   }
 ]
