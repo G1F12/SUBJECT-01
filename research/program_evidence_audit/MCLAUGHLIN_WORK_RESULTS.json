@@ -1,0 +1,47 @@
+{
+  "experiment_id": "EXP-0073",
+  "classification": "EXPLORATORY_DATA_AUDIT",
+  "source_sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "protocol_sha256_lf": "235147e6acadd5f22352b68a0f390e485d707a57abbe287cb587c8572e0bacc5",
+  "numeric_time_labels": "inferred interval end, pending author confirmation",
+  "runner_sha256_lf": "2da385dd5ce285d07807096eea348d50c025c56d8f2285e445d354c6fdb0daa8",
+  "exp0067_eligible_n": 23,
+  "work_complete_n": 23,
+  "work_incomplete_n": 0,
+  "actual_minus_constant_work_percent": {
+    "n": 23,
+    "min": -16.239155035835534,
+    "median": -2.734564900340301,
+    "max": 0.0
+  },
+  "within_person_power_range_W": {
+    "n": 23,
+    "min": 0.0,
+    "median": 12.0,
+    "max": 53.0
+  },
+  "climate_intervals": [
+    "5-6",
+    "9-10",
+    "20-21",
+    "24-25",
+    "35-36",
+    "39-40"
+  ],
+  "climate_missing_participants": {
+    "air": 0,
+    "rh": 0
+  },
+  "within_person_air_range_C": {
+    "n": 23,
+    "min": 0.0,
+    "median": 1.0,
+    "max": 3.0
+  },
+  "within_person_rh_range_percentage_points": {
+    "n": 23,
+    "min": 3.0,
+    "median": 8.0,
+    "max": 14.0
+  }
+}

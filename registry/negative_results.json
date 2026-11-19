@@ -520,5 +520,13 @@
     "title": "Frozen Pennes model loses to persistence on held-out light cycling",
     "statement": "35 sessions from 6 participants. Participant-average MAE is 0.429 C for the unchanged model vs 0.251 C for persistence, paired base-minus-model bootstrap 95% CI [-0.286, -0.080] C. Limited transfer gate fails at all tested humidity assumptions.",
     "reason": "Scope is the locked initial state and parameterization on a protocol-shift dataset; starting tissue temperatures, actual mechanical traces and humidity were unavailable. No inference about 2700-s performance."
+  },
+  {
+    "id": "NEG-0065",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0075",
+    "title": "Cross-protocol first-two-sprint model fails against persistence",
+    "statement": "Training the late-sprint ratio model on Chmura and applying to 21 previously viewed Jutlah participants gives participant-weighted MAE 138.98 W against 95.36 W for first-sprint persistence. Paired MAE difference persistence minus linear [-80.41,-10.07] W. Within-cohort LOSO intervals cross zero.",
+    "reason": "Different rest intervals, populations and task context are confounded; no unique causal mechanism inferred."
   }
 ]

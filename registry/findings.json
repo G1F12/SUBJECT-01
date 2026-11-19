@@ -622,5 +622,23 @@
     "statement": "On 23 previously evaluated participants, uniform 37 C initial state gave MAE 0.719 C versus 0.586 C for nominal initial state, paired nominal-minus-uniform error CI [-0.206,-0.061] C; this is exploratory reuse and does not validate initial tissue temperatures.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0075",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0073",
+    "title": "Variation in actual power and climate on McLaughlin cohort",
+    "statement": "Under post hoc interpretation of numeric timestamps as interval ends, 23 complete power profiles yield integrated work 0–16.24% below first-minute constant power, median -2.73%; within-person humidity range 3–14 percentage points. Temperature prediction effect remains untested.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0076",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0074",
+    "title": "Recorded workload changes thermal prediction error",
+    "statement": "On 23 previously assessed McLaughlin participants, nominal constant-input thermal MAE 0.586 C changed to 0.475 C using recorded minute power; paired constant-minus-variable error CI [0.022,0.222] C. Numeric time-label interpretation and initial temperatures remain assumptions.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

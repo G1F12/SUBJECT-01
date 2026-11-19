@@ -8,7 +8,10 @@
 
 ## Текущее состояние и история
 
-- Рабочая ветка `codex/subject01-program-evidence` содержит пакет `606f4e1` на origin. EXP-0067–0072 готовятся к фиксации поверх этого коммита. `CLAUDE.md` — отдельный неотслеживаемый файл.
+- **EXP-0075.** Модель поздней мощности из первых двух спринтов не перенеслась с Chmura на Jutlah лучше простой базы. [Отчёт](research/program_evidence_audit/POWER_TRANSFER_REPORT.md)
+- **EXP-0074.** При условном использовании поминутной мощности MAE тепловой модели на ранее просмотренных данных снизилась с 0,586 до 0,475 °C. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md)
+- **EXP-0073.** Аудит записанной мощности выявил возможное расхождение выполненной работы с постоянным входом EXP-0067. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_WORK_REPORT.md)
+- Рабочая ветка `codex/subject01-program-evidence` содержит пакет `606f4e1` на origin. EXP-0067–0072 зафиксированы коммитом afc8411. EXP-0073–0075 подготовлены поверх него. `CLAUDE.md` — отдельный неотслеживаемый файл.
 - **EXP-0072.** На ранее рассмотренной когорте McLaughlin равномерное начальное состояние повысило MAE с 0,586 до 0,719 °C. [Отчёт](research/program_evidence_audit/THERMAL_INITIALIZATION_REPORT.md)
 - **EXP-0071.** Исследовательская проверка покоя Fujii выявила сильную чувствительность начального дрейфа к градиенту слоёв. [Отчёт](research/program_evidence_audit/FUJII_REST_REPORT.md)
 - **EXP-0070.** При одинаковых тканевых параметрах отношение модельных темпов 1,25 даёт пик условного повреждения 2,56× против 2,30× в контроле. [Отчёт](research/program_evidence_audit/ADAPT25_REPORT.md)

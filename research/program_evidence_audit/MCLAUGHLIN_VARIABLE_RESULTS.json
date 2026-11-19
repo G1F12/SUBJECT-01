@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-0074",
+  "classification": "EXPLORATORY_REUSED_DATA",
+  "source_sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "protocol_sha256_lf": "1da1496477994cfbf1e448e0f06035b75ff2e656507f451eb80f468a0f7e4246",
+  "runner_sha256_lf": "2a8cec379b270ace4ed6641922fe82603046e38ef0e9f88fefc7f39b9d7ec15a",
+  "n": 23,
+  "timestamp_assumption": "numeric labels are interval ends, pending confirmation",
+  "outcomes": {
+    "constant": {
+      "mae_C": 0.5861575162587368,
+      "bias_C": 0.39892583230632045,
+      "mean_work_J": 458097.39130434784,
+      "paired_constant_minus_mode_mae_C": 0.0,
+      "paired_ci95_C": [
+        0.0,
+        0.0
+      ]
+    },
+    "variable": {
+      "mae_C": 0.4748598152521947,
+      "bias_C": 0.24819891731242008,
+      "mean_work_J": 439833.9130434783,
+      "paired_constant_minus_mode_mae_C": 0.11129770100654213,
+      "paired_ci95_C": [
+        0.022336510132129343,
+        0.221619848098776
+      ]
+    },
+    "shift_minus": {
+      "mae_C": 0.4787861943086398,
+      "bias_C": 0.25438223190030035,
+      "mean_work_J": 440736.52173913043,
+      "paired_constant_minus_mode_mae_C": 0.10737132195009705,
+      "paired_ci95_C": [
+        0.021062912450733592,
+        0.21429131851155545
+      ]
+    },
+    "shift_plus": {
+      "mae_C": 0.4715667296551018,
+      "bias_C": 0.24193710728940201,
+      "mean_work_J": 438931.3043478261,
+      "paired_constant_minus_mode_mae_C": 0.114590786603635,
+      "paired_ci95_C": [
+        0.02300116841370226,
+        0.22721195926918691
+      ]
+    },
+    "variable_climate": {
+      "mae_C": 0.4990116121737742,
+      "bias_C": 0.30201227442637757,
+      "mean_work_J": 439833.9130434783,
+      "paired_constant_minus_mode_mae_C": 0.08714590408496262,
+      "paired_ci95_C": [
+        0.012699961440155632,
+        0.17938462651046858
+      ]
+    }
+  }
+}

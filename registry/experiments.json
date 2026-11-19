@@ -2099,5 +2099,84 @@
     "limits": "Retrospective reuse of EXP-0067 cohort; initial layer temperatures unmeasured, humidity and workload assumptions unchanged. No CPE45 validation.",
     "external_validation": "REUSED_DATA_EXPLORATORY",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0073",
+    "date": "2026-11-20",
+    "name": "Audit McLaughlin power and climate time series",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Audit power 1–45 minutes and sparse climate on EXP-0067 cohort; numerically labelled rows interpreted post hoc as interval end.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_mclaughlin_work_audit.py",
+    "inputs": "research/program_evidence_audit/MCLAUGHLIN_WORK_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MCLAUGHLIN_WORK_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MCLAUGHLIN_WORK_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_mclaughlin_work_audit.py <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0075"
+      ],
+      "negative_results": []
+    },
+    "limits": "Exploratory reuse, numeric timestamps interpreted as interval ends pending author confirmation; no temperature replay.",
+    "external_validation": "NOT_APPLICABLE_DATA_AUDIT",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0074",
+    "date": "2026-11-20",
+    "name": "Variable-input thermal replay on McLaughlin cohort",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Replay EXP-0067 with minute-resolved recorded power, timestamp shifts and sparse step-held environment; compare participant-paired errors.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_mclaughlin_variable.py",
+    "inputs": "research/program_evidence_audit/MCLAUGHLIN_VARIABLE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MCLAUGHLIN_VARIABLE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_mclaughlin_variable.py <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0076"
+      ],
+      "negative_results": []
+    },
+    "limits": "Previously viewed cohort, numeric timestamps interpreted as interval ends pending author confirmation; fixed initialization and climate assumptions, no CPE45 measurement.",
+    "external_validation": "REUSED_DATA_EXPLORATORY",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0075",
+    "date": "2026-11-20",
+    "name": "Held-subject late sprint power and cross-protocol transfer",
+    "sources": [
+      "SRC-0035",
+      "SRC-0040"
+    ],
+    "design": "Compare first-sprint persistence and first-two-sprint linear regression for tenth sprint using participant LOSO within Chmura and Jutlah, plus Chmura-to-Jutlah transfer.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_power_transfer.py",
+    "inputs": "research/program_evidence_audit/POWER_TRANSFER_PROTOCOL.md",
+    "report": "research/program_evidence_audit/POWER_TRANSFER_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/POWER_TRANSFER_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_power_transfer.py",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0065"
+      ]
+    },
+    "limits": "Previously examined cohorts, first two measured efforts required, Chmura climate pairing unknown, different rest protocols. No direct biochemical recovery or CPE45 validation.",
+    "external_validation": "EXPLORATORY_HELD_SUBJECT_AND_CROSS_PROTOCOL",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

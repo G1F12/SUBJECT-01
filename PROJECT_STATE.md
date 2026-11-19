@@ -1,3 +1,9 @@
+EXP-0075 / NEG-0065: исследовательская проверка переноса мощности повторных спринтов. См. research/program_evidence_audit/POWER_TRANSFER_REPORT.md.
+
+EXP-0074 / FND-0076: повторный тепловой расчёт McLaughlin с переменными входами. См. research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md.
+
+EXP-0073 / FND-0075: аудит временной мощности и среды McLaughlin. См. research/program_evidence_audit/MCLAUGHLIN_WORK_REPORT.md.
+
 EXP-0072 / FND-0074: исследовательская чувствительность начального состояния на ранее рассмотренной когорте McLaughlin. См. research/program_evidence_audit/THERMAL_INITIALIZATION_REPORT.md.
 
 EXP-0071 / FND-0073: исследовательская проверка начального температурного дрейфа в покое. См. research/program_evidence_audit/FUJII_REST_REPORT.md.

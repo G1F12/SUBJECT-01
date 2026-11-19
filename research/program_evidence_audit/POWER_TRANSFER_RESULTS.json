@@ -1,0 +1,53 @@
+{
+  "experiment_id": "EXP-0075",
+  "classification": "EXPLORATORY_REUSED_DATA",
+  "protocol_sha256_lf": "d10003c2b7286f49c6b140b9e59c8bcbc88150501674cb89e851abdfbd53726a",
+  "runner_sha256_lf": "12a7f2e029bc47d5ea184c20654a18c083bef7699df0310d5de55856876d41a5",
+  "chmura_csv_sha256_lf": "542b2ff096f6e245ae185c9323a91259b9172f26d64d2c2b71354237d651e8eb",
+  "jutlah_input_sha256": "b5cb03007190a63dae6a118a7a604cd906273f93febf42957a2e7799df16da20",
+  "chmura_loso": {
+    "participants": 21,
+    "conditions": 21,
+    "participant_weighted_MAE_baseline_W": 103.16148679047616,
+    "participant_weighted_MAE_linear_W": 79.20337040761149,
+    "observation_weighted_RMSE_baseline_W": 130.13841524853368,
+    "observation_weighted_RMSE_linear_W": 105.4928861699729,
+    "observation_weighted_bias_baseline_W": -46.67271074285715,
+    "observation_weighted_bias_linear_W": -0.9177912262924197,
+    "paired_MAE_baseline_minus_linear_W": 23.958116382864667,
+    "paired_ci95_W": [
+      -12.836493764294874,
+      61.253220983887395
+    ]
+  },
+  "jutlah_loso": {
+    "participants": 21,
+    "conditions": 63,
+    "participant_weighted_MAE_baseline_W": 95.35521229780794,
+    "participant_weighted_MAE_linear_W": 86.12779936942924,
+    "observation_weighted_RMSE_baseline_W": 112.80399390026871,
+    "observation_weighted_RMSE_linear_W": 105.28051287682683,
+    "observation_weighted_bias_baseline_W": -5.364124421768694,
+    "observation_weighted_bias_linear_W": 5.547136388734982,
+    "paired_MAE_baseline_minus_linear_W": 9.227412928378712,
+    "paired_ci95_W": [
+      -8.35001670667852,
+      26.492728100971984
+    ]
+  },
+  "chmura_to_jutlah": {
+    "participants": 21,
+    "conditions": 63,
+    "participant_weighted_MAE_baseline_W": 95.35521229780794,
+    "participant_weighted_MAE_linear_W": 138.97834639723268,
+    "observation_weighted_RMSE_baseline_W": 112.80399390026872,
+    "observation_weighted_RMSE_linear_W": 172.5912763940483,
+    "observation_weighted_bias_baseline_W": -5.364124421768694,
+    "observation_weighted_bias_linear_W": 127.34567234582946,
+    "paired_MAE_baseline_minus_linear_W": -43.62313409942474,
+    "paired_ci95_W": [
+      -80.40648639266247,
+      -10.068230631937373
+    ]
+  }
+}
