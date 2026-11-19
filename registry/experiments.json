@@ -2178,5 +2178,115 @@
     "limits": "Previously examined cohorts, first two measured efforts required, Chmura climate pairing unknown, different rest protocols. No direct biochemical recovery or CPE45 validation.",
     "external_validation": "EXPLORATORY_HELD_SUBJECT_AND_CROSS_PROTOCOL",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0076",
+    "date": "2026-11-20",
+    "name": "Paired cognitive reaction and accuracy after cycling",
+    "sources": [
+      "SRC-0087"
+    ],
+    "design": "Participant-paired exercise-versus-rest changes in correct response latency and accuracy on three Stroop conditions, 10000 participant bootstrap samples.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_motor_control.py",
+    "inputs": "research/program_evidence_audit/MOTOR_CONTROL_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MOTOR_CONTROL_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MOTOR_CONTROL_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_motor_control.py <task2.tab>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0066"
+      ]
+    },
+    "limits": "Post-exercise aggregated cognitive reaction outcomes, no trial-level omissions, movement trajectory, 45-minute protocol or architecture effect. No predefined equivalence bounds.",
+    "external_validation": "EXPLORATORY_EXTERNAL_COHORT_SCOPED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0077",
+    "date": "2026-11-20",
+    "name": "Conditional static-chain tendon and thermal interface",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Join archived static chain and tendon proxy to a shared prescribed 2700-second external-power profile under fixed mass and environment; report unavailable functional channels.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_integrated_scenario.py",
+    "inputs": "research/program_evidence_audit/INTEGRATED_SCENARIO_PROTOCOL.md",
+    "report": "research/program_evidence_audit/INTEGRATED_SCENARIO_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/INTEGRATED_SCENARIO_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_integrated_scenario.py",
+    "results": {
+      "findings": [
+        "FND-0077"
+      ],
+      "negative_results": []
+    },
+    "limits": "Conditional interface only: static force is not a dynamic trajectory, prescribed power is not coupled to fatigue; motor and post45 unmeasured.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0078",
+    "date": "2026-11-20",
+    "name": "Torque-to-tendon interface sensitivity",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Diagnostic grid of post-LP tendon moment arm, CSA, UTS and force rate; solve arm multiplier at model SF 1.5.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_tendon_interface.py",
+    "inputs": "research/program_evidence_audit/TENDON_INTERFACE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/TENDON_INTERFACE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/TENDON_INTERFACE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_tendon_interface.py",
+    "results": {
+      "findings": [
+        "FND-0078"
+      ],
+      "negative_results": []
+    },
+    "limits": "Moment arm varied only after LP with fixed torque, no anatomically self-consistent re-optimization or tissue safety validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0079",
+    "date": "2026-11-20",
+    "name": "Closed-chain moment arm reoptimization",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Re-solve EXP-0061 LP with quadriceps arm multipliers 0.8–1.2 and use the same arm to compute EXP-0069 tendon proxy.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_chain_reopt.py",
+    "inputs": "research/program_evidence_audit/CHAIN_REOPT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/CHAIN_REOPT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/CHAIN_REOPT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_chain_reopt.py",
+    "results": {
+      "findings": [
+        "FND-0079"
+      ],
+      "negative_results": []
+    },
+    "limits": "Static model, common arm scaling, assumed tissue properties and loading rate. No individual in vivo validation or CPE45.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

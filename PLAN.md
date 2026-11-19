@@ -8,6 +8,10 @@
 
 ## Текущее состояние и история
 
+- **EXP-0079.** Переоптимизация LP при согласованном изменении плеча уменьшила чувствительность условного SF по сравнению с EXP-0078. [Отчёт](research/program_evidence_audit/CHAIN_REOPT_REPORT.md)
+- **EXP-0078.** При фиксированном моменте условный тканевый гейт меняется с плечом преобразования. [Отчёт](research/program_evidence_audit/TENDON_INTERFACE_REPORT.md)
+- **EXP-0077.** Условный интерфейс цепи, ткани и заданной работы выявил зависимость тканевого гейта от позы, итоговые функциональные исходы не оценены. [Отчёт](research/program_evidence_audit/INTEGRATED_SCENARIO_REPORT.md)
+- **EXP-0076.** Внешняя когорта 71 человека: изменения времени ответа и точности после нагрузки относительно отдыха неопределённы. [Отчёт](research/program_evidence_audit/MOTOR_CONTROL_REPORT.md)
 - **EXP-0075.** Модель поздней мощности из первых двух спринтов не перенеслась с Chmura на Jutlah лучше простой базы. [Отчёт](research/program_evidence_audit/POWER_TRANSFER_REPORT.md)
 - **EXP-0074.** При условном использовании поминутной мощности MAE тепловой модели на ранее просмотренных данных снизилась с 0,586 до 0,475 °C. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md)
 - **EXP-0073.** Аудит записанной мощности выявил возможное расхождение выполненной работы с постоянным входом EXP-0067. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_WORK_REPORT.md)

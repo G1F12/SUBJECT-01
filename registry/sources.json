@@ -1484,5 +1484,22 @@
       "publication": "https://doi.org/10.1016/j.jtherbio.2025.104241",
       "sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531"
     }
+  },
+  {
+    "id": "SRC-0087",
+    "date": "2026-11-20",
+    "name": "Remiszewski and Ligeza, acute exercise and cognitive reaction data",
+    "type": "primary_data",
+    "verification": "externally_verified",
+    "audit_report": "research/program_evidence_audit/MOTOR_CONTROL_REPORT.md",
+    "doi": "10.57903/UJ/IHUEN2",
+    "url": "https://uj.rodbuk.pl/dataset.xhtml?persistentId=doi:10.57903/UJ/IHUEN2",
+    "external_provenance": {
+      "version": "v1",
+      "license": "CC0-1.0",
+      "metadata_url": "https://uj.rodbuk.pl/api/datasets/:persistentId/?persistentId=doi:10.57903/UJ/IHUEN2",
+      "file_url": "https://uj.rodbuk.pl/api/access/datafile/41598",
+      "sha256": "11e53a0d89651a1851c496c5061a675f0744904c1b627f6065146e553d80c9fc"
+    }
   }
 ]

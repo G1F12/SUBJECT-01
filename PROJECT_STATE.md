@@ -1,3 +1,11 @@
+EXP-0079 / FND-0079: переоптимизация статической цепи при изменении плеча. См. research/program_evidence_audit/CHAIN_REOPT_REPORT.md.
+
+EXP-0078 / FND-0078: чувствительность условного тканевого гейта к плечу момента. См. research/program_evidence_audit/TENDON_INTERFACE_REPORT.md.
+
+EXP-0077 / FND-0077: условное сопряжение статической цепи, ткани и профиля мощности. См. research/program_evidence_audit/INTEGRATED_SCENARIO_REPORT.md.
+
+EXP-0076 / NEG-0066: парные когнитивные исходы после велонагрузки. См. research/program_evidence_audit/MOTOR_CONTROL_REPORT.md.
+
 EXP-0075 / NEG-0065: исследовательская проверка переноса мощности повторных спринтов. См. research/program_evidence_audit/POWER_TRANSFER_REPORT.md.
 
 EXP-0074 / FND-0076: повторный тепловой расчёт McLaughlin с переменными входами. См. research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md.

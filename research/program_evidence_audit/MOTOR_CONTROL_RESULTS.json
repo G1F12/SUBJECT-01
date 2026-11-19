@@ -1,0 +1,32 @@
+{
+  "experiment_id": "EXP-0076",
+  "classification": "EXPLORATORY_PAIRED_AGGREGATE_DATA",
+  "source_sha256": "11e53a0d89651a1851c496c5061a675f0744904c1b627f6065146e553d80c9fc",
+  "protocol_sha256_lf": "71ed6d92b70613e138b48c0506146004b8929d9c9200f182ea3375de1047bd3a",
+  "runner_sha256_lf": "54523ca9eec1f935256f2c64570aa6f55784fe9b2937d7f7c7ebffd10d3cb7f7",
+  "rows": 71,
+  "included": 71,
+  "excluded": 0,
+  "order_counts": {
+    "ER": 35,
+    "RE": 36
+  },
+  "contrasts_exercise_change_minus_rest_change": {
+    "reaction_time_ms": {
+      "mean": 2.016845746478876,
+      "median": 2.208759866666753,
+      "ci95": [
+        -7.096311348122062,
+        11.590131343169013
+      ]
+    },
+    "accuracy_fraction": {
+      "mean": -0.004131455399061012,
+      "median": 0.00666666666666671,
+      "ci95": [
+        -0.02206572769953046,
+        0.010610328638497665
+      ]
+    }
+  }
+}

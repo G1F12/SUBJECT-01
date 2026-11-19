@@ -1,0 +1,120 @@
+{
+  "experiment_id": "EXP-0079",
+  "classification": "MODEL_ONLY_STATIC_REOPTIMIZATION",
+  "protocol_sha256_lf": "231a9c1449eb4c176aadfddb73fc190668a2c1306e298a10dd9408ae50d3a01e",
+  "runner_sha256_lf": "794a258372ee01f6baa8e9855926e7543bc90d701f1256ae2dfe5ebf08ce2eab",
+  "chain_source_sha256_lf": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+  "tendon_source_sha256_lf": "0fedad1dfe55d4cf01356febe6534573da9d10c9c661ada9c1dc4cbbe985aa06",
+  "cases": [
+    {
+      "pose": "flexed_100deg_int",
+      "arm_multiplier": 0.8,
+      "force_N": 2646.2,
+      "gain_pct": 21.59,
+      "quadriceps_moment_Nm": 291.7,
+      "tendon_proxy_force_N": 7628.138075313808,
+      "reoptimized_SF": 1.2850851386910611,
+      "fixed_torque_SF": 1.03704,
+      "joint_gate": false
+    },
+    {
+      "pose": "extended_140deg_int",
+      "arm_multiplier": 0.8,
+      "force_N": 3999.0,
+      "gain_pct": 21.26,
+      "quadriceps_moment_Nm": 211.9,
+      "tendon_proxy_force_N": 5541.3179916317995,
+      "reoptimized_SF": 1.7468691011098576,
+      "fixed_torque_SF": 1.40972,
+      "joint_gate": true
+    },
+    {
+      "pose": "flexed_100deg_int",
+      "arm_multiplier": 0.9,
+      "force_N": 2905.2,
+      "gain_pct": 21.62,
+      "quadriceps_moment_Nm": 328.1,
+      "tendon_proxy_force_N": 7626.685262668528,
+      "reoptimized_SF": 1.2853202957365661,
+      "fixed_torque_SF": 1.16143,
+      "joint_gate": false
+    },
+    {
+      "pose": "extended_140deg_int",
+      "arm_multiplier": 0.9,
+      "force_N": 4352.6,
+      "gain_pct": 21.31,
+      "quadriceps_moment_Nm": 238.4,
+      "tendon_proxy_force_N": 5541.608554160856,
+      "reoptimized_SF": 1.7467810807721134,
+      "fixed_torque_SF": 1.57856,
+      "joint_gate": true
+    },
+    {
+      "pose": "flexed_100deg_int",
+      "arm_multiplier": 1.0,
+      "force_N": 3164.1,
+      "gain_pct": 21.64,
+      "quadriceps_moment_Nm": 364.6,
+      "tendon_proxy_force_N": 7627.615062761508,
+      "reoptimized_SF": 1.2851697851323818,
+      "fixed_torque_SF": 1.28517,
+      "joint_gate": false
+    },
+    {
+      "pose": "extended_140deg_int",
+      "arm_multiplier": 1.0,
+      "force_N": 4706.2,
+      "gain_pct": 21.35,
+      "quadriceps_moment_Nm": 264.9,
+      "tendon_proxy_force_N": 5541.841004184101,
+      "reoptimized_SF": 1.746710671038401,
+      "fixed_torque_SF": 1.74671,
+      "joint_gate": true
+    },
+    {
+      "pose": "flexed_100deg_int",
+      "arm_multiplier": 1.1,
+      "force_N": 3423.1,
+      "gain_pct": 21.66,
+      "quadriceps_moment_Nm": 401.1,
+      "tendon_proxy_force_N": 7628.375808292127,
+      "reoptimized_SF": 1.2850466667894522,
+      "fixed_torque_SF": 1.40837,
+      "joint_gate": false
+    },
+    {
+      "pose": "extended_140deg_int",
+      "arm_multiplier": 1.1,
+      "force_N": 5059.8,
+      "gain_pct": 21.39,
+      "quadriceps_moment_Nm": 291.4,
+      "tendon_proxy_force_N": 5542.031190566755,
+      "reoptimized_SF": 1.7466530673955438,
+      "fixed_torque_SF": 1.91431,
+      "joint_gate": true
+    },
+    {
+      "pose": "flexed_100deg_int",
+      "arm_multiplier": 1.2,
+      "force_N": 3682.1,
+      "gain_pct": 21.68,
+      "quadriceps_moment_Nm": 437.5,
+      "tendon_proxy_force_N": 7627.26638772664,
+      "reoptimized_SF": 1.285226222402199,
+      "fixed_torque_SF": 1.53112,
+      "joint_gate": false
+    },
+    {
+      "pose": "extended_140deg_int",
+      "arm_multiplier": 1.2,
+      "force_N": 5413.4,
+      "gain_pct": 21.43,
+      "quadriceps_moment_Nm": 317.9,
+      "tendon_proxy_force_N": 5542.189679218968,
+      "reoptimized_SF": 1.7466050673302675,
+      "fixed_torque_SF": 2.08146,
+      "joint_gate": true
+    }
+  ]
+}

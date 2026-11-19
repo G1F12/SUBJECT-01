@@ -528,5 +528,13 @@
     "title": "Cross-protocol first-two-sprint model fails against persistence",
     "statement": "Training the late-sprint ratio model on Chmura and applying to 21 previously viewed Jutlah participants gives participant-weighted MAE 138.98 W against 95.36 W for first-sprint persistence. Paired MAE difference persistence minus linear [-80.41,-10.07] W. Within-cohort LOSO intervals cross zero.",
     "reason": "Different rest intervals, populations and task context are confounded; no unique causal mechanism inferred."
+  },
+  {
+    "id": "NEG-0066",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0076",
+    "title": "Exercise-rest cognitive response contrasts inconclusive",
+    "statement": "For 71 participants, mean paired exercise-minus-rest change in correct-response latency was +2.02 ms, bootstrap CI [-7.10,11.59], and accuracy change -0.0041, CI [-0.0221,0.0106]. Neither superiority nor equivalence is established.",
+    "reason": "Both intervals include zero, and prespecified functional equivalence margins are absent. This task does not evaluate locomotion or 45-minute performance."
   }
 ]

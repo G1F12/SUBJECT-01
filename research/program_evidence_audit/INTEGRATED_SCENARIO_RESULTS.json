@@ -1,0 +1,102 @@
+{
+  "experiment_id": "EXP-0077",
+  "classification": "CONDITIONAL_INTERFACE_DEMONSTRATION",
+  "protocol_sha256_lf": "9139323b136d46e396936aa64dbe18727e79a1401fb02328adc6c41a484731f0",
+  "chain_tendon_sha256_lf": "8f0b27aa0b0c053bfda9e7848c748e5cdfe8549305d40c8d13db93e208296711",
+  "thermal_solver_sha256_lf": "4feed20a8a9793b0a8817d8564f1366d91bf2d6de8ba24158b6de10699f638fb",
+  "mass_kg": 75,
+  "height_m": 1.78,
+  "duty": 0.6,
+  "effort_W": 360,
+  "recovery_W": 35,
+  "duration_s": 2700,
+  "unmet_channels": [
+    "dynamic_fatigue",
+    "motor_accuracy",
+    "response_latency",
+    "post45",
+    "recovery"
+  ],
+  "scenarios": [
+    {
+      "posture": "flexed_100deg_int",
+      "variant": "baseline",
+      "force_N": 2601.1,
+      "force_gain_pct": 0,
+      "nominal_velocity_for_360W_m_s": 0.13840298335319673,
+      "tendon_force_proxy_N": 6257.32,
+      "tendon_local_sf": 1.5544,
+      "work_J": 621000,
+      "peak_core_C": 37.975,
+      "outcomes": {
+        "force_gain_target": "FAIL_MODEL",
+        "tendon_margin_SF15": "PASS_MODEL",
+        "thermal_model_gate": "PASS_MODEL",
+        "fatigue_and_power_retention": "NOT_ASSESSED",
+        "motor_accuracy_and_reaction": "NOT_ASSESSED",
+        "post45_and_recovery": "NOT_ASSESSED"
+      },
+      "whole_architecture": "NOT_ASSESSED"
+    },
+    {
+      "posture": "flexed_100deg_int",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 3164.1,
+      "force_gain_pct": 21.64,
+      "nominal_velocity_for_360W_m_s": 0.11377642931639328,
+      "tendon_force_proxy_N": 7627.62,
+      "tendon_local_sf": 1.2852,
+      "work_J": 621000,
+      "peak_core_C": 37.975,
+      "outcomes": {
+        "force_gain_target": "PASS_MODEL",
+        "tendon_margin_SF15": "FAIL_MODEL",
+        "thermal_model_gate": "PASS_MODEL",
+        "fatigue_and_power_retention": "NOT_ASSESSED",
+        "motor_accuracy_and_reaction": "NOT_ASSESSED",
+        "post45_and_recovery": "NOT_ASSESSED"
+      },
+      "whole_architecture": "NOT_ASSESSED"
+    },
+    {
+      "posture": "extended_140deg_int",
+      "variant": "baseline",
+      "force_N": 3878.1,
+      "force_gain_pct": 0,
+      "nominal_velocity_for_360W_m_s": 0.09282896263634254,
+      "tendon_force_proxy_N": 4546.03,
+      "tendon_local_sf": 2.1133,
+      "work_J": 621000,
+      "peak_core_C": 37.975,
+      "outcomes": {
+        "force_gain_target": "FAIL_MODEL",
+        "tendon_margin_SF15": "PASS_MODEL",
+        "thermal_model_gate": "PASS_MODEL",
+        "fatigue_and_power_retention": "NOT_ASSESSED",
+        "motor_accuracy_and_reaction": "NOT_ASSESSED",
+        "post45_and_recovery": "NOT_ASSESSED"
+      },
+      "whole_architecture": "NOT_ASSESSED"
+    },
+    {
+      "posture": "extended_140deg_int",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 4706.2,
+      "force_gain_pct": 21.35,
+      "nominal_velocity_for_360W_m_s": 0.0764948365985296,
+      "tendon_force_proxy_N": 5541.84,
+      "tendon_local_sf": 1.7467,
+      "work_J": 621000,
+      "peak_core_C": 37.975,
+      "outcomes": {
+        "force_gain_target": "PASS_MODEL",
+        "tendon_margin_SF15": "PASS_MODEL",
+        "thermal_model_gate": "PASS_MODEL",
+        "fatigue_and_power_retention": "NOT_ASSESSED",
+        "motor_accuracy_and_reaction": "NOT_ASSESSED",
+        "post45_and_recovery": "NOT_ASSESSED"
+      },
+      "whole_architecture": "NOT_ASSESSED"
+    }
+  ]
+}

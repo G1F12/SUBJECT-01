@@ -640,5 +640,32 @@
     "statement": "On 23 previously assessed McLaughlin participants, nominal constant-input thermal MAE 0.586 C changed to 0.475 C using recorded minute power; paired constant-minus-variable error CI [0.022,0.222] C. Numeric time-label interpretation and initial temperatures remain assumptions.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0077",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0077",
+    "title": "Conditional chain-tendon and thermal interface exposes missing endpoints",
+    "statement": "At common prescribed 621 kJ work, 75 kg and 20 C, the static 100-degree enhanced chain has conditional tendon SF 1.285 and 140-degree case 1.747; thermal model peak core 37.975 C is identical across cases. Dynamic fatigue, motor control and post45 remain not assessed.",
+    "confidence": "model_only",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0078",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0078",
+    "title": "Conditional tendon gate sensitive to assumed moment arm",
+    "statement": "At CSA multiplier 1.15, UTS 1.08 and 20 kN/s, the arm multiplier needed for local SF 1.5 is 1.175 at 100 degrees and 0.853 at 140 degrees, holding LP torque fixed. Diagnostic interface sensitivity only.",
+    "confidence": "model_only",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0079",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0079",
+    "title": "Static reoptimization changes interpretation of arm sensitivity",
+    "statement": "When quadriceps moment arm is scaled consistently in LP and tendon conversion, arm multipliers 0.8–1.2 yield SF approximately 1.285 at 100 degrees and 1.747 at 140 degrees for the specified CSA, UTS and force-rate assumptions; model-only, no safety validation.",
+    "confidence": "model_only",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
