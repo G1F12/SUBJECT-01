@@ -1,0 +1,37 @@
+{
+  "experiment_id": "EXP-0082",
+  "classification": "EXPLORATORY_RECONSTRUCTION",
+  "opensim_version": "4.6-2026-06-22-85aaf64",
+  "protocol_sha256_lf": "3eb33d4e506a1e88be73117443e1d8660d9f826263ef1e9107d3e32c8ae3bb93",
+  "inputs_manifest_sha256_lf": "35f123a64b1ccd8396e2aabcf4a910c17e3ca4ad0c8ca313eeaed547096a0e0a",
+  "runner_sha256_lf": "25ee94c52b73b82ea31487f06ae07307133938d01cc420270e3a76e2ae5dc9d0",
+  "results": [
+    {
+      "participant": "AB01",
+      "mass_kg": 78.9,
+      "frames": 2501,
+      "markers": 35,
+      "median_abs_knee_angle_difference_deg": 0.0008643599999942353,
+      "correlation": 0.9523195603161912,
+      "signed_slope_Nm_per_source_unit": 85.9468230069347,
+      "absolute_slope_div_mass": 1.0893133460954967,
+      "quality_gate": true,
+      "h1_gate": false,
+      "h2_gate": true
+    },
+    {
+      "participant": "AB02",
+      "mass_kg": 82.2,
+      "frames": 2941,
+      "markers": 35,
+      "median_abs_knee_angle_difference_deg": 0.0005688500000076147,
+      "correlation": 0.9038833554153227,
+      "signed_slope_Nm_per_source_unit": 47.19994553077388,
+      "absolute_slope_div_mass": 0.5742085830994389,
+      "quality_gate": true,
+      "h1_gate": false,
+      "h2_gate": false
+    }
+  ],
+  "decision": "UNRESOLVED"
+}

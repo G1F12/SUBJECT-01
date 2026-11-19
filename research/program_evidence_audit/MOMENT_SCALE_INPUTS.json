@@ -1,0 +1,87 @@
+{
+  "raw_archive_url": "https://repository.gatech.edu/server/api/core/bitstreams/0c050d51-54f0-4ccf-9bcd-65521c0e20c3/content",
+  "raw_archive_size": 28559821099,
+  "raw_archive_md5_publisher_only": "451f5ddf27ae4bb0fe5264502f59a48b",
+  "files": [
+    {
+      "path": "raw/AB01/Models/AB01-Scaled1.osim",
+      "sha256": "f51a4ec3cc506a50ee64390537636c8fcd8e327c901d505bd4a7d63594389910",
+      "size": 375922
+    },
+    {
+      "path": "raw/AB01/Models/Statics.csv",
+      "sha256": "d00ddfbf20c062d6113e102c0c3d03e3c9bbcd251536beb25567d99db078e273",
+      "size": 612
+    },
+    {
+      "path": "raw/AB01/MarkerData/squats_1.trc",
+      "sha256": "e97a4e7c15e45c6db9ef397f55ccdbe5f3f150cdf68d34bb66d4f2da74ff35c9",
+      "size": 13551772
+    },
+    {
+      "path": "raw/AB01/ExtLoads/squats_1.mot",
+      "sha256": "24e68877435e5f2e53070ec0ff1abfddb1a7b9696a22b998bbc2e95f0df58407",
+      "size": 16595239
+    },
+    {
+      "path": "raw/AB01/CSV_Data/squats_1/Joint_Angle.csv",
+      "sha256": "ca47a79f103fd3617cec6f9074c67b976e620d03291ecf48effef8b61a97cf85",
+      "size": 1868709
+    },
+    {
+      "path": "raw/AB01/CSV_Data/squats_1/Joint_Moments.csv",
+      "sha256": "45df412cb2995135dc5df2954bacdc47dd8b0093f194d7c2454ce3383dbd8373",
+      "size": 2466985
+    },
+    {
+      "path": "files/AB01/squats_1_0lbs/AB01_squats_1_0lbs_angle.csv",
+      "sha256": "eeda45487384755682226d0f86440d4186f3d363e0fcba1a9cd5b515c160cff4",
+      "size": 385740
+    },
+    {
+      "path": "files/AB01/squats_1_0lbs/AB01_squats_1_0lbs_activity_flag.csv",
+      "sha256": "22179b3bd01202352a184981183e544a13a2319c0ba29969b61b600eb08b95a4",
+      "size": 28626
+    },
+    {
+      "path": "raw/AB02/Models/AB02-Scaled1.osim",
+      "sha256": "4b259a2da025cc0135a6a5bd0fab0aa40d5e5582ef065d68000ae8edd292a1ec",
+      "size": 375880
+    },
+    {
+      "path": "raw/AB02/Models/Statics.csv",
+      "sha256": "f52b0c47a3a704bd11409330077649817696a842a9e50ef83312584dc91937dc",
+      "size": 643
+    },
+    {
+      "path": "raw/AB02/MarkerData/squats_1.trc",
+      "sha256": "37f536f9555c06b747eb54ab019ccada297526f99aee7a7686568763afdad775",
+      "size": 8697105
+    },
+    {
+      "path": "raw/AB02/ExtLoads/squats_1.mot",
+      "sha256": "86baa9d8f6d98299ba67c917485733d13f4781ed7154e1b68a6af9d76c98e9da",
+      "size": 14335410
+    },
+    {
+      "path": "raw/AB02/CSV_Data/squats_1/Joint_Angle.csv",
+      "sha256": "b7df2e577800cf30eb2a68bb3a7cc7b216d777731dab8742fcdd4d5714555d73",
+      "size": 1186529
+    },
+    {
+      "path": "raw/AB02/CSV_Data/squats_1/Joint_Moments.csv",
+      "sha256": "0b20470d698ab8db4ae58cceca1413dc6442853bb79563b89e8822549f9403a5",
+      "size": 1824570
+    },
+    {
+      "path": "files/AB02/squats_1_0lbs/AB02_squats_1_0lbs_angle.csv",
+      "sha256": "5139c2955a0223e96cb4828c651100f628525d82e8b3fec93c759d7afe329765",
+      "size": 450984
+    },
+    {
+      "path": "files/AB02/squats_1_0lbs/AB02_squats_1_0lbs_activity_flag.csv",
+      "sha256": "f63c663b5e384c1ce4fa2b8796dca192d96f39b99980fcaf851bcd10f5d6a6bf",
+      "size": 33662
+    }
+  ]
+}

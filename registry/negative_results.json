@@ -544,5 +544,13 @@
     "title": "Adding knee velocity does not improve the tested linear moment model",
     "statement": "On 12 held-out participants, angle-minus-angle-and-velocity MAE differences in source units had bootstrap 95% CIs [-0.000798,0.000089] for 0 lb and [-0.001143,-0.000092] for 25 lb. Inverse-dynamics moment units remain unresolved; ISS-0028.",
     "reason": "Limited to two simple linear models, a single young cohort and task; no inference that dynamic effects do not exist."
+  },
+  {
+    "id": "NEG-0068",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0082",
+    "title": "Independent inverse dynamics does not resolve the moment scale in both participants",
+    "statement": "AB01 reconstructed moment/source slope divided by mass is 1.089; AB02 is 0.574. Both meet prespecified angle and correlation quality gates, but AB02 does not meet either Nm or Nm/kg scale gate. ISS-0028 remains open.",
+    "reason": "Only two participants and reconstructed processing; author processing, force assignment, filtering, and possible scale differences require verification."
   }
 ]

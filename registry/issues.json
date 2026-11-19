@@ -293,13 +293,15 @@
     "priority": "high",
     "description": "Source README and article table label moment Nm; published plotting code labels loaded moment Nm/kg with no visible scaling. Numeric scale cannot be promoted to physical moment or tendon gates until provenance is clarified.",
     "related_experiments": [
-      "EXP-0081"
+      "EXP-0081",
+      "EXP-0082"
     ],
     "related_issues": [
       "ISS-0021",
       "ISS-0023",
       "ISS-0025"
     ],
-    "required_inputs": "Author processing code or matching time-aligned raw OpenSim inverse dynamics and processed CSV with known participant mass; verify signs and scaling on several trials."
+    "required_inputs": "Author processing code or matching time-aligned raw OpenSim inverse dynamics and processed CSV with known participant mass; verify signs and scaling on several trials.",
+    "progress": "EXP-0082 reconstructs IK and ID; scale/mass is 1.089 for AB01 but 0.574 for AB02, so preregistered two-person gate not met."
   }
 ]

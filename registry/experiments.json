@@ -2340,5 +2340,31 @@
     "limits": "One cohort, moment derived from inverse dynamics, unresolved moment scaling ISS-0028, no augmentation or maximum force.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0082",
+    "date": "2026-11-20",
+    "name": "Independent OpenSim reconstruction for squat moment scale",
+    "sources": [
+      "SRC-0089"
+    ],
+    "design": "Reconstruct IK and ID from two subject models, markers and ground forces; compare held source moments against Nm and Nm/kg scale hypotheses with prespecified gates.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_moment_scale.py",
+    "inputs": "research/program_evidence_audit/MOMENT_SCALE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MOMENT_SCALE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MOMENT_SCALE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_moment_scale.py <source-root> <output-directory>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0068"
+      ]
+    },
+    "limits": "Two subjects, exact author ID configuration unknown, discrepancy in AB02. No resolution of source moment units or human augmentation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
