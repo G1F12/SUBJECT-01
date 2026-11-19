@@ -1,5 +1,17 @@
 # Changelog (append-only research history)
 
+EXP-0072 / FND-0074: исследовательская чувствительность начального состояния на ранее рассмотренной когорте McLaughlin. См. research/program_evidence_audit/THERMAL_INITIALIZATION_REPORT.md.
+
+EXP-0071 / FND-0073: исследовательская проверка начального температурного дрейфа в покое. См. research/program_evidence_audit/FUJII_REST_REPORT.md.
+
+EXP-0070 / FND-0072: отдельная проверка 1,25-кратного модельного темпа при одинаковой тканевой траектории. См. research/program_evidence_audit/ADAPT25_REPORT.md.
+
+EXP-0069 / FND-0071: условное сопряжение статической цепи и напряжения сухожилия. См. research/program_evidence_audit/CHAIN_TENDON_REPORT.md.
+
+EXP-0068 / FND-0070: расчёт чувствительности статического жима и черновик запроса Zöger. См. research/program_evidence_audit/CHAIN_SENSITIVITY_REPORT.md.
+
+EXP-0067 / FND-0069: внешний тест температуры McLaughlin, MAE модели 0,586 °C против 1,275 °C у постоянного прогноза. CPE45 остаётся не валидированным. См. research/program_evidence_audit/MCLAUGHLIN_REPORT.md.
+
 ## 2026-11-19 — EXP-0065/0066, DEC-0027
 
 - Побайтно воспроизведены EXP-0061–0064. При равной работе температурный контраст заметно меньше сравнения с непрерывными 360 Вт (FND-0068, NEG-0063).

@@ -1457,7 +1457,7 @@
   {
     "id": "SRC-0085",
     "date": "2026-11-19",
-    "name": "Z\u00f6ger et al., Reproducibility of peak force for isometric and isokinetic multi-joint leg extension exercise",
+    "name": "Zöger et al., Reproducibility of peak force for isometric and isokinetic multi-joint leg extension exercise",
     "type": "primary_literature",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/program_evidence_audit/REPORT.md",
@@ -1466,6 +1466,23 @@
     "calibration_review": {
       "access": "Data availability statement checked; author request required. No individual dataset obtained.",
       "scope": "Candidate for EXP-0061, not admitted."
+    }
+  },
+  {
+    "id": "SRC-0086",
+    "date": "2026-11-20",
+    "name": "McLaughlin et al. 2025, constant-load cycling in heat dataset",
+    "type": "primary_data",
+    "verification": "externally_verified",
+    "audit_report": "research/program_evidence_audit/MCLAUGHLIN_SOURCE_AUDIT.md",
+    "doi": "10.6084/m9.figshare.29120024.v1",
+    "url": "https://figshare.com/articles/dataset/Validity_of_the_CORE_Wearable_Sensor_During_Constant-load_Cycling_Exercise_in_the_Heat_xlsx/29120024",
+    "external_provenance": {
+      "version": "v1",
+      "license": "CC BY 4.0",
+      "metadata_url": "https://api.figshare.com/v2/articles/29120024",
+      "publication": "https://doi.org/10.1016/j.jtherbio.2025.104241",
+      "sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531"
     }
   }
 ]

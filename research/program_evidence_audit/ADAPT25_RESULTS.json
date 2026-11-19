@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-0070",
+  "classification": "MODEL_ONLY_CONTROLLED_SCENARIO",
+  "source_sha256_lf": "ac3a984b433120d6afbd1065b54daa79c7334907ae6347129400d381717f695b",
+  "protocol_sha256_lf": "64f6a225fb0e15bd9b0167a262cd5995aac67d2a79c4ebc891f734abdcd9240f",
+  "muscle_time_constants_days": {
+    "control": 16,
+    "controlled_1_25x": 12.8,
+    "controlled_1_333x": 12
+  },
+  "results": {
+    "historical_H0": {
+      "regime": "Uncoordinated Standard Muscle Adaptation (tau_m = 16 d)",
+      "final_day168_force_multiplier": 1.2,
+      "final_day168_tendon_capacity_multiplier": 1.2227,
+      "peak_daily_damage_acceleration_ratio": 2.3,
+      "peak_hazard_day": 24,
+      "peak_hazard_week": 3.4,
+      "min_local_20kNs_safety_factor": 1.68,
+      "days_with_damage_ratio_gt_2x": 34,
+      "days_with_local_sf_lt_1_5": 0,
+      "cumulative_168d_damage_vs_baseline_ratio": 1.45
+    },
+    "historical_H1": {
+      "regime": "Accelerated +25% Adaptation Target (TARGET-ADAPT25, tau_m = 12 d)",
+      "final_day168_force_multiplier": 1.2,
+      "final_day168_tendon_capacity_multiplier": 1.2149,
+      "peak_daily_damage_acceleration_ratio": 2.94,
+      "peak_hazard_day": 21,
+      "peak_hazard_week": 3.0,
+      "min_local_20kNs_safety_factor": 1.64,
+      "days_with_damage_ratio_gt_2x": 48,
+      "days_with_local_sf_lt_1_5": 0,
+      "cumulative_168d_damage_vs_baseline_ratio": 1.65
+    },
+    "controlled_1_25x": {
+      "regime": "controlled_1_25x",
+      "final_day168_force_multiplier": 1.2,
+      "final_day168_tendon_capacity_multiplier": 1.2227,
+      "peak_daily_damage_acceleration_ratio": 2.56,
+      "peak_hazard_day": 21,
+      "peak_hazard_week": 3.0,
+      "min_local_20kNs_safety_factor": 1.66,
+      "days_with_damage_ratio_gt_2x": 39,
+      "days_with_local_sf_lt_1_5": 0,
+      "cumulative_168d_damage_vs_baseline_ratio": 1.51
+    },
+    "controlled_1_333x": {
+      "regime": "controlled_1_333x",
+      "final_day168_force_multiplier": 1.2,
+      "final_day168_tendon_capacity_multiplier": 1.2227,
+      "peak_daily_damage_acceleration_ratio": 2.64,
+      "peak_hazard_day": 21,
+      "peak_hazard_week": 3.0,
+      "min_local_20kNs_safety_factor": 1.66,
+      "days_with_damage_ratio_gt_2x": 41,
+      "days_with_local_sf_lt_1_5": 0,
+      "cumulative_168d_damage_vs_baseline_ratio": 1.52
+    }
+  }
+}

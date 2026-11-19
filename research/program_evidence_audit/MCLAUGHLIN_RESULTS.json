@@ -1,0 +1,43 @@
+{
+  "source": "10.6084/m9.figshare.29120024.v1",
+  "source_sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "protocol_sha256_lf": "13bae7c1266e68bab6810b8c6d27a7c83e1a95d5dbe928746bb7a8a3d7f9bb7b",
+  "runner_sha256_lf": "0931fbdc33c5fbfc3f94c32717cd9c234187dec128b093c71ea13cb0a648e1a9",
+  "eligible_participants": 23,
+  "excluded_count": 1,
+  "mean_observed_change_C": 1.274782608695653,
+  "metrics": {
+    "persistence": {
+      "mae_C": 1.274782608695653,
+      "median_absolute_error_C": 1.240000000000002,
+      "bias_C": -1.274782608695653
+    },
+    "pennes": {
+      "mae_C": 0.5861575162587368,
+      "median_absolute_error_C": 0.3968406645998286,
+      "bias_C": 0.39892583230632045
+    },
+    "lumped": {
+      "mae_C": 1.0480724958895948,
+      "median_absolute_error_C": 0.9419729080910315,
+      "bias_C": 1.0480724958895948
+    }
+  },
+  "paired_baseline_minus_pennes": {
+    "persistence": {
+      "mae_difference_C": 0.6886250924369163,
+      "ci95_C": [
+        0.5009849027518087,
+        0.8651795834210442
+      ]
+    },
+    "lumped": {
+      "mae_difference_C": 0.4619149796308579,
+      "ci95_C": [
+        0.24120734236176816,
+        0.6467649746862584
+      ]
+    }
+  },
+  "status": "exploratory external transfer, not CPE45 validation"
+}

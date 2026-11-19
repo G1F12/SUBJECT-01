@@ -1893,7 +1893,7 @@
       "SRC-0082",
       "SRC-0085"
     ],
-    "design": "Replay EXP-0061\u20130064 in temporary outputs and compare published 360 W scenarios to constant equal-work controls at three integration steps and to a lumped storage model.",
+    "design": "Replay EXP-0061–0064 in temporary outputs and compare published 360 W scenarios to constant equal-work controls at three integration steps and to a lumped storage model.",
     "status": "completed",
     "model": "research/program_evidence_audit/run_audit.py",
     "inputs": "research/program_evidence_audit/PROTOCOL.md",
@@ -1938,6 +1938,166 @@
     },
     "limits": "6 eligible participants and 35 sessions; protocol-assigned power and assumed humidity; light cycling only, no post45 or functional profile.",
     "external_validation": "EXTERNAL_COMPONENT_TRANSFER_FAILED_CPE45_NOT_ASSESSED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0067",
+    "date": "2026-11-20",
+    "name": "External thermal transfer on McLaughlin cycling cohort",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Prespecified 1-to-45-minute rectal temperature change, frozen EXP-0063 model versus persistence and lumped heat model with participant bootstrap.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_mclaughlin.py",
+    "inputs": "research/program_evidence_audit/MCLAUGHLIN_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MCLAUGHLIN_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MCLAUGHLIN_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_mclaughlin.py <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0069"
+      ],
+      "negative_results": []
+    },
+    "limits": "23 participants, constant initial power and 5–6 min environment; nominal thermal layer initialization, rectal endpoint; no direct CPE45 validation.",
+    "external_validation": "LIMITED_EXTERNAL_THERMAL_TRANSFER",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0068",
+    "date": "2026-11-20",
+    "name": "One-factor closed-chain sensitivity",
+    "sources": [
+      "SRC-0081",
+      "SRC-0085"
+    ],
+    "design": "One-factor perturbation of friction, COP, plate angle, height and common specific tension in EXP-0061 at two postures.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_chain_sensitivity.py",
+    "inputs": "research/program_evidence_audit/CHAIN_SENSITIVITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/CHAIN_SENSITIVITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/CHAIN_SENSITIVITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_chain_sensitivity.py",
+    "results": {
+      "findings": [
+        "FND-0070"
+      ],
+      "negative_results": []
+    },
+    "limits": "Static model only, one-factor conditional grids, no tendon constraints and no external leg-press observations.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0069",
+    "date": "2026-11-20",
+    "name": "Static chain to conditional tendon stress coupling",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Map archived single-limb quadriceps torque to tendon force using the existing moment arm, then sweep CSA, UTS and loading rate under EXP-0062 stress assumptions.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_chain_tendon.py",
+    "inputs": "research/program_evidence_audit/CHAIN_TENDON_PROTOCOL.md",
+    "report": "research/program_evidence_audit/CHAIN_TENDON_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/CHAIN_TENDON_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_chain_tendon.py",
+    "results": {
+      "findings": [
+        "FND-0071"
+      ],
+      "negative_results": []
+    },
+    "limits": "Static moment-derived tendon force, assumed loading rate and tissue parameters, no dynamic or in-vivo validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0070",
+    "date": "2026-11-20",
+    "name": "Controlled adaptation-rate comparison",
+    "sources": [
+      "SRC-0080",
+      "SRC-0082"
+    ],
+    "design": "Replay EXP-0062 and compare muscle time constants 16, 12.8 and 12 days with identical tendon parameters and daily loading.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_adapt25.py",
+    "inputs": "research/program_evidence_audit/ADAPT25_PROTOCOL.md",
+    "report": "research/program_evidence_audit/ADAPT25_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/ADAPT25_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_adapt25.py",
+    "results": {
+      "findings": [
+        "FND-0072"
+      ],
+      "negative_results": []
+    },
+    "limits": "Conditional model with assumed tissue adaptation and fatigue curve; no human adaptation efficacy or injury risk measured.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0071",
+    "date": "2026-11-20",
+    "name": "Fujii resting drift and initial thermal sensitivity",
+    "sources": [
+      "SRC-0084"
+    ],
+    "design": "Exploratory pre-exercise 270-second esophageal changes compared with frozen solver nominal and uniform layer initialization at zero and nominal power.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_fujii_rest.py",
+    "inputs": "research/program_evidence_audit/FUJII_REST_PROTOCOL.md",
+    "report": "research/program_evidence_audit/FUJII_REST_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/FUJII_REST_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_fujii_rest.py <source-directory>",
+    "results": {
+      "findings": [
+        "FND-0073"
+      ],
+      "negative_results": []
+    },
+    "limits": "Six participants, 24 sessions, exploratory analysis after previous test, assumed initial temperatures and rest metabolism. No CPE45 endpoint.",
+    "external_validation": "EXPLORATORY_EXTERNAL_COMPONENT_DIAGNOSTIC",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0072",
+    "date": "2026-11-20",
+    "name": "Initial thermal-state sensitivity on previously viewed McLaughlin cohort",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Compare nominal and uniform initial layer temperatures using the same previously viewed participants, outcome and input assumptions as EXP-0067.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_thermal_initialization.py",
+    "inputs": "research/program_evidence_audit/THERMAL_INITIALIZATION_PROTOCOL.md",
+    "report": "research/program_evidence_audit/THERMAL_INITIALIZATION_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/THERMAL_INITIALIZATION_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_thermal_initialization.py <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0074"
+      ],
+      "negative_results": []
+    },
+    "limits": "Retrospective reuse of EXP-0067 cohort; initial layer temperatures unmeasured, humidity and workload assumptions unchanged. No CPE45 validation.",
+    "external_validation": "REUSED_DATA_EXPLORATORY",
     "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

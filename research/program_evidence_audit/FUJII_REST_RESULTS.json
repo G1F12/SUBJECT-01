@@ -1,0 +1,36 @@
+{
+  "experiment_id": "EXP-0071",
+  "classification": "EXPLORATORY_OBSERVED_REST_AND_MODEL_SENSITIVITY",
+  "protocol_sha256_lf": "9a7095e5bd7d714c175eb0713364bb1d025fd226cd5459ab35ab5234410eaf26",
+  "runner_sha256_lf": "d88ac210b32c8b7a2732bd72750ab947d9402a196385d38c8be7298e7f264b1f",
+  "source_sha256": {
+    "dataset.xlsx": "4d294670fdb033d12f2e4d6059b9a02a13d31a7c35932643be2d9dae9b6ddcfa",
+    "metadata.xlsx": "62ce3643573a5149ec2b6a2a49d583c04d973a055b48403bd8e342d5eaeaa5c8"
+  },
+  "eligible_sessions": 24,
+  "eligible_participants": 6,
+  "mean_observed_change_C": 0.01991508667419354,
+  "persistence_mae_C": 0.06937709492523957,
+  "scores": {
+    "nominal_rest": {
+      "mae_C": 0.5052115520553279,
+      "bias_C": -0.5052115520553279,
+      "mean_predicted_change_C": -0.4852964653811343
+    },
+    "nominal_exercise": {
+      "mae_C": 0.42596590102495524,
+      "bias_C": -0.42596590102495524,
+      "mean_predicted_change_C": -0.4060508143507617
+    },
+    "uniform_rest": {
+      "mae_C": 0.0799684180028319,
+      "bias_C": -0.03765056447171339,
+      "mean_predicted_change_C": -0.017735477797519845
+    },
+    "uniform_exercise": {
+      "mae_C": 0.09981116745800235,
+      "bias_C": 0.07378570355438963,
+      "mean_predicted_change_C": 0.09370079022858317
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "experiment_id": "EXP-0068",
+  "classification": "MODEL_ONLY_ONE_FACTOR_SENSITIVITY",
+  "source_sha256_lf": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+  "protocol_sha256_lf": "b53fde2b765b6a89d6872e57617d00d76d1590e9408b96658cbd1cd04a0cc3dc",
+  "archive_reference_gain_pct": {
+    "flexed_100deg_int": 21.64,
+    "extended_140deg_int": 21.35
+  },
+  "results": {
+    "friction": [
+      {
+        "value": 0.4,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 0.6,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 0.8,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 1.0,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      }
+    ],
+    "forefoot_m": [
+      {
+        "value": 0.1,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 0.13,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 0.16,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 0.19,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      }
+    ],
+    "plate_angle_deg": [
+      {
+        "value": 0,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 5,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 10,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 15,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 20,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      }
+    ],
+    "height_m": [
+      {
+        "value": 1.6,
+        "gain_pct": {
+          "flexed_100deg_int": 21.73,
+          "extended_140deg_int": 21.47
+        }
+      },
+      {
+        "value": 1.69,
+        "gain_pct": {
+          "flexed_100deg_int": 21.69,
+          "extended_140deg_int": 21.41
+        }
+      },
+      {
+        "value": 1.78,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 1.87,
+        "gain_pct": {
+          "flexed_100deg_int": 21.6,
+          "extended_140deg_int": 21.29
+        }
+      },
+      {
+        "value": 1.96,
+        "gain_pct": {
+          "flexed_100deg_int": 21.57,
+          "extended_140deg_int": 21.23
+        }
+      }
+    ],
+    "specific_tension_multiplier": [
+      {
+        "value": 0.7,
+        "gain_pct": {
+          "flexed_100deg_int": 21.31,
+          "extended_140deg_int": 20.86
+        }
+      },
+      {
+        "value": 0.85,
+        "gain_pct": {
+          "flexed_100deg_int": 21.5,
+          "extended_140deg_int": 21.14
+        }
+      },
+      {
+        "value": 1.0,
+        "gain_pct": {
+          "flexed_100deg_int": 21.64,
+          "extended_140deg_int": 21.35
+        }
+      },
+      {
+        "value": 1.15,
+        "gain_pct": {
+          "flexed_100deg_int": 21.75,
+          "extended_140deg_int": 21.51
+        }
+      },
+      {
+        "value": 1.3,
+        "gain_pct": {
+          "flexed_100deg_int": 21.83,
+          "extended_140deg_int": 21.63
+        }
+      }
+    ]
+  }
+}

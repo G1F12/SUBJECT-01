@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-0072",
+  "classification": "EXPLORATORY_REUSED_COHORT_NOT_NEW_VALIDATION",
+  "protocol_sha256_lf": "69fe580f1a895c83bdd0782b62094477dd2c570f48bcc1321e8d2909c22b098c",
+  "runner_sha256_lf": "ff139bd4ffa95e1fa8f86bbcbc606241c6afe8fbea831bc989cb084ead024cd4",
+  "source_sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "participants": 23,
+  "nominal_mae_C": 0.5861575162587368,
+  "uniform_mae_C": 0.7188590076071698,
+  "uniform_bias_C": 0.5646732450840931,
+  "nominal_minus_uniform_mae_C": -0.13270149134843293,
+  "paired_ci95_C": [
+    -0.2059020298465953,
+    -0.060633819090765116
+  ],
+  "persistence_mae_C": 1.274782608695653
+}
