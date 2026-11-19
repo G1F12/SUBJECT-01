@@ -480,5 +480,45 @@
     "title": "Falsification of Fine-Scale Biological Equivalence Between Sexes in Muscle Specific Tension at 10% Margin",
     "statement": "Two One-Sided Tests (TOST) on N=20 adults (10 males, 10 females, DPValid) failed to establish statistical equivalence of quadriceps specific tension at a +/- 10% equivalence margin (p_TOST = 0.1449 > 0.05). While Welch's t-test yielded p = 0.8981 (failing to reject equality of means: male 26.27 vs female 26.55 N/cm2), concluding biological equivalence requires an expanded statistical power. Equivalence is statistically supported only at a broader +/- 20% margin (p_TOST = 0.0169).",
     "reason": "Failure to reject a null hypothesis of difference in a Student's t-test does not constitute proof of equivalence."
+  },
+  {
+    "id": "NEG-0060",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0061",
+    "title": "External Bilateral Leg Press Cohort Absence (DATA_BLOCKED), Naive Pseudoinverse Incompatibility, and Inconclusive Single-Joint DPValid Precision",
+    "statement": "Open search and gate audit across 6 candidate repositories (OpenCap, Zoger 2025, Zushi 2024, Zenodo 6503956, Figshare 33936784/PLOS 0357488, Zenodo 23979972/Frontiers 1948872) yielded 0 admitted cohorts for external validation of bilateral isometric leg press (Outcome 4: DATA_BLOCKED). Naive 3-DOF closed-chain assignment (a=0.95) is physically incompatible (point-contact overdetermination residual 253.68 Nm at 100 deg; flat-foot COP = +0.1706 m > +0.16 m boundary). On single-joint DPValid (N=20), all pairwise paired cluster bootstrap 95% CIs relative to proposed Delta_min = 0.08 cross the threshold (M2 vs F0 [+0.0259, +0.1428], M2 vs M1 [-0.0903, +0.1173], Outcome 3: INCONCLUSIVE).",
+    "reason": "Zoger 2025 raw data are available upon request only; allometric volume regression is nearly collinear with age/mass/height/sex on N=20 participants."
+  },
+  {
+    "id": "NEG-0061",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0062",
+    "title": "Heterochrony Damage Spike Under TARGET-ADAPT25 and Ballistic 100% MVC Enthesis Margin Breach Under Rapid dF/dt",
+    "statement": "Accelerating muscular adaptation speed (+25%, tau_m = 12 d) ahead of slow tendon collagen remodeling (tau_t = 90 d) induces a transient 2.94x peak daily fatigue damage spike around week 3.0 (48 days > 2.0x baseline hazard). At maximal 100% MVC ballistic tension (7661 N, dF/dt = 20,000 N/s), localized deep-layer enthesis von Mises stress reaches 92.20 MPa (> 85 MPa collagen threshold, SF_local = 1.03) unadapted, and remains at 79.91 MPa (SF_local = 1.31 < 1.50 safety gate) even after Case 2C (+15% CSA, +10% UTS).",
+    "reason": "Tendon collagen turnover half-life limits safe adaptation velocity (BLOCKER-03), and deep-layer shear concentration + viscoelastic rate stiffening erode nominal uniaxial safety margins (BLOCKER-02)."
+  },
+  {
+    "id": "NEG-0062",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0063",
+    "title": "Continuous +20% Work Thermal Breach Across Climates and AEGIS-01 Evaporative Barrier Penalty",
+    "statement": "Continuous unpaced output at 360 W (1436.3 W total heat) breaches the 39.5 C core safety limit across all tested climates >= 20 C within 1240 to 2365 s (reaching 39.81 C at 20 C and 42.77 C at 35 C), while 300 W breaches 39.5 C in all warm/hot climates >= 28 C (1625 to 2335 s). Imposing the AEGIS-01 keratinized barrier (-35% skin evaporative/convective conductance, +2 kg) cuts safe temperate duty cycle capacity D_max by -14.0% at 300 W (1.00 -> 0.86) and -25.0% at 360 W (0.92 -> 0.69), confirming PR #9 CONDITIONAL HOLD.",
+    "reason": "Human evaporative cooling capacity (~580-750 W effective ceiling with sweat drip) cannot sustain continuous 1200-1450 W metabolic heat loads."
+  },
+  {
+    "id": "NEG-0063",
+    "date": "2026-11-19",
+    "experiment_id": "EXP-0065",
+    "title": "Equal-work control removes the large thermal contrast",
+    "statement": "At identical external work, the modeled intermittent minus constant peak core difference is -0.058 to +0.001 C across reported conditions and time steps; the sign changes in the temperate scenario. Equal-work pairs all pass the archived model gate. No model-independent or functional benefit is established.",
+    "reason": "Original full-power comparator changes scheduled work, while results at equal work are small and partly sensitive to model or time step."
+  },
+  {
+    "id": "NEG-0064",
+    "date": "2026-11-19",
+    "experiment_id": "EXP-0066",
+    "title": "Frozen Pennes model loses to persistence on held-out light cycling",
+    "statement": "35 sessions from 6 participants. Participant-average MAE is 0.429 C for the unchanged model vs 0.251 C for persistence, paired base-minus-model bootstrap 95% CI [-0.286, -0.080] C. Limited transfer gate fails at all tested humidity assumptions.",
+    "reason": "Scope is the locked initial state and parameterization on a protocol-shift dataset; starting tissue temperatures, actual mechanical traces and humidity were unavailable. No inference about 2700-s performance."
   }
 ]

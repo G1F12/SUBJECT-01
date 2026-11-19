@@ -1,0 +1,680 @@
+{
+  "experiment_id": "EXP-0062",
+  "title": "Multi-Layer Viscoelastic Enthesis Shear Stress Under Rapid dF/dt and Adaptation Heterochrony",
+  "part_a_bogaerts_calibration": {
+    "source_file": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+    "source_sha256": "b3684aa0e9c8f6e75687d478f8e6969e71e0553a83bf666dd532d014a0dff4ce",
+    "n_participants": 10,
+    "mean_disp_superficial_mm": 2.4385,
+    "mean_disp_middle_mm": 2.7257,
+    "mean_disp_deep_mm": 3.0029,
+    "deep_to_superficial_ratio": 1.2315,
+    "calibrated_layer_stress_multipliers": {
+      "superficial_k": 0.9098,
+      "middle_k": 1.017,
+      "deep_k": 1.1204
+    }
+  },
+  "part_b_viscoelastic_enthesis_rates": {
+    "model_classification": "MODEL_ONLY_VISCOELASTIC_SHEAR_LAG",
+    "collagen_yield_threshold_MPa": 85.0,
+    "safety_factor_gate": 1.5,
+    "rate_sweep_results": {
+      "baseline_4000N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 2000.0,
+          "dynamic_rate_stiffening_factor": 1.0216,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 43.6,
+          "tidemark_shear_stress_MPa": 8.57,
+          "peak_von_mises_stress_MPa": 46.06,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 2.06,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 800.0,
+          "dynamic_rate_stiffening_factor": 1.0534,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 44.36,
+          "tidemark_shear_stress_MPa": 8.81,
+          "peak_von_mises_stress_MPa": 46.91,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 2.03,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 400.0,
+          "dynamic_rate_stiffening_factor": 1.0963,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 45.37,
+          "tidemark_shear_stress_MPa": 9.14,
+          "peak_von_mises_stress_MPa": 48.06,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 1.98,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 266.7,
+          "dynamic_rate_stiffening_factor": 1.1252,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 46.06,
+          "tidemark_shear_stress_MPa": 9.36,
+          "peak_von_mises_stress_MPa": 48.83,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 1.95,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 200.0,
+          "dynamic_rate_stiffening_factor": 1.1449,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 46.53,
+          "tidemark_shear_stress_MPa": 9.51,
+          "peak_von_mises_stress_MPa": 49.36,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 1.92,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 160.0,
+          "dynamic_rate_stiffening_factor": 1.159,
+          "nominal_proximal_stress_MPa": 38.46,
+          "deep_enthesis_axial_stress_MPa": 46.86,
+          "tidemark_shear_stress_MPa": 9.62,
+          "peak_von_mises_stress_MPa": 49.74,
+          "nominal_safety_factor": 2.47,
+          "local_enthesis_safety_factor": 1.91,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        }
+      ],
+      "s1_unadapted_plus20_4800N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 2400.0,
+          "dynamic_rate_stiffening_factor": 1.018,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 52.22,
+          "tidemark_shear_stress_MPa": 10.25,
+          "peak_von_mises_stress_MPa": 55.16,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.72,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 960.0,
+          "dynamic_rate_stiffening_factor": 1.0448,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 52.98,
+          "tidemark_shear_stress_MPa": 10.49,
+          "peak_von_mises_stress_MPa": 56.01,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.7,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 480.0,
+          "dynamic_rate_stiffening_factor": 1.0837,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 54.09,
+          "tidemark_shear_stress_MPa": 10.85,
+          "peak_von_mises_stress_MPa": 57.26,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.66,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 320.0,
+          "dynamic_rate_stiffening_factor": 1.1122,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 54.9,
+          "tidemark_shear_stress_MPa": 11.11,
+          "peak_von_mises_stress_MPa": 58.18,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.63,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 240.0,
+          "dynamic_rate_stiffening_factor": 1.1326,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 55.48,
+          "tidemark_shear_stress_MPa": 11.3,
+          "peak_von_mises_stress_MPa": 58.83,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.61,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 192.0,
+          "dynamic_rate_stiffening_factor": 1.1476,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 55.91,
+          "tidemark_shear_stress_MPa": 11.44,
+          "peak_von_mises_stress_MPa": 59.32,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.6,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        }
+      ],
+      "s2_case2c_adapted_plus20_4800N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 2400.0,
+          "dynamic_rate_stiffening_factor": 1.018,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 45.41,
+          "tidemark_shear_stress_MPa": 8.64,
+          "peak_von_mises_stress_MPa": 47.81,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.19,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 960.0,
+          "dynamic_rate_stiffening_factor": 1.0448,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 46.07,
+          "tidemark_shear_stress_MPa": 8.84,
+          "peak_von_mises_stress_MPa": 48.55,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.15,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 480.0,
+          "dynamic_rate_stiffening_factor": 1.0837,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 47.04,
+          "tidemark_shear_stress_MPa": 9.14,
+          "peak_von_mises_stress_MPa": 49.63,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.11,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 320.0,
+          "dynamic_rate_stiffening_factor": 1.1122,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 47.74,
+          "tidemark_shear_stress_MPa": 9.36,
+          "peak_von_mises_stress_MPa": 50.42,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.07,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 240.0,
+          "dynamic_rate_stiffening_factor": 1.1326,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 48.24,
+          "tidemark_shear_stress_MPa": 9.52,
+          "peak_von_mises_stress_MPa": 50.99,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.05,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 192.0,
+          "dynamic_rate_stiffening_factor": 1.1476,
+          "nominal_proximal_stress_MPa": 40.13,
+          "deep_enthesis_axial_stress_MPa": 48.62,
+          "tidemark_shear_stress_MPa": 9.64,
+          "peak_von_mises_stress_MPa": 51.4,
+          "nominal_safety_factor": 2.6,
+          "local_enthesis_safety_factor": 2.03,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        }
+      ],
+      "case2b_stiffened_no_hypertrophy_4800N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 2400.0,
+          "dynamic_rate_stiffening_factor": 1.018,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 52.22,
+          "tidemark_shear_stress_MPa": 11.96,
+          "peak_von_mises_stress_MPa": 56.18,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.69,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 960.0,
+          "dynamic_rate_stiffening_factor": 1.0448,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 52.98,
+          "tidemark_shear_stress_MPa": 12.24,
+          "peak_von_mises_stress_MPa": 57.07,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.66,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 480.0,
+          "dynamic_rate_stiffening_factor": 1.0837,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 54.09,
+          "tidemark_shear_stress_MPa": 12.66,
+          "peak_von_mises_stress_MPa": 58.37,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.63,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 320.0,
+          "dynamic_rate_stiffening_factor": 1.1122,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 54.9,
+          "tidemark_shear_stress_MPa": 12.97,
+          "peak_von_mises_stress_MPa": 59.32,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.6,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 240.0,
+          "dynamic_rate_stiffening_factor": 1.1326,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 55.48,
+          "tidemark_shear_stress_MPa": 13.19,
+          "peak_von_mises_stress_MPa": 60.0,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.58,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 192.0,
+          "dynamic_rate_stiffening_factor": 1.1476,
+          "nominal_proximal_stress_MPa": 46.15,
+          "deep_enthesis_axial_stress_MPa": 55.91,
+          "tidemark_shear_stress_MPa": 13.35,
+          "peak_von_mises_stress_MPa": 60.5,
+          "nominal_safety_factor": 2.06,
+          "local_enthesis_safety_factor": 1.57,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": true
+        }
+      ],
+      "mvc_baseline_6384N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 3192.2,
+          "dynamic_rate_stiffening_factor": 1.0135,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 69.29,
+          "tidemark_shear_stress_MPa": 13.58,
+          "peak_von_mises_stress_MPa": 73.17,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.3,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 1276.9,
+          "dynamic_rate_stiffening_factor": 1.0338,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 70.06,
+          "tidemark_shear_stress_MPa": 13.82,
+          "peak_von_mises_stress_MPa": 74.04,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.28,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 638.4,
+          "dynamic_rate_stiffening_factor": 1.0657,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 71.27,
+          "tidemark_shear_stress_MPa": 14.21,
+          "peak_von_mises_stress_MPa": 75.4,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.26,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 425.6,
+          "dynamic_rate_stiffening_factor": 1.092,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 72.26,
+          "tidemark_shear_stress_MPa": 14.53,
+          "peak_von_mises_stress_MPa": 76.52,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.24,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 319.2,
+          "dynamic_rate_stiffening_factor": 1.1124,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 73.03,
+          "tidemark_shear_stress_MPa": 14.78,
+          "peak_von_mises_stress_MPa": 77.39,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.23,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 255.4,
+          "dynamic_rate_stiffening_factor": 1.1282,
+          "nominal_proximal_stress_MPa": 61.39,
+          "deep_enthesis_axial_stress_MPa": 73.63,
+          "tidemark_shear_stress_MPa": 14.98,
+          "peak_von_mises_stress_MPa": 78.07,
+          "nominal_safety_factor": 1.55,
+          "local_enthesis_safety_factor": 1.22,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        }
+      ],
+      "mvc_unadapted_plus20_7661N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 3830.6,
+          "dynamic_rate_stiffening_factor": 1.0113,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 83.05,
+          "tidemark_shear_stress_MPa": 16.26,
+          "peak_von_mises_stress_MPa": 87.69,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.08,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 1532.3,
+          "dynamic_rate_stiffening_factor": 1.0282,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 83.82,
+          "tidemark_shear_stress_MPa": 16.5,
+          "peak_von_mises_stress_MPa": 88.56,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.07,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 766.1,
+          "dynamic_rate_stiffening_factor": 1.0556,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 85.06,
+          "tidemark_shear_stress_MPa": 16.9,
+          "peak_von_mises_stress_MPa": 89.96,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.06,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 510.8,
+          "dynamic_rate_stiffening_factor": 1.0796,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 86.15,
+          "tidemark_shear_stress_MPa": 17.26,
+          "peak_von_mises_stress_MPa": 91.19,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.04,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 383.1,
+          "dynamic_rate_stiffening_factor": 1.0993,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 87.05,
+          "tidemark_shear_stress_MPa": 17.55,
+          "peak_von_mises_stress_MPa": 92.2,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.03,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 306.5,
+          "dynamic_rate_stiffening_factor": 1.1153,
+          "nominal_proximal_stress_MPa": 73.67,
+          "deep_enthesis_axial_stress_MPa": 87.77,
+          "tidemark_shear_stress_MPa": 17.78,
+          "peak_von_mises_stress_MPa": 93.02,
+          "nominal_safety_factor": 1.29,
+          "local_enthesis_safety_factor": 1.02,
+          "exceeds_85MPa_collagen_threshold": true,
+          "passes_SF_1_5_gate": false
+        }
+      ],
+      "mvc_adapted_case2c_7661N": [
+        {
+          "dF_dt_N_s": 2000,
+          "rise_time_ms": 3830.6,
+          "dynamic_rate_stiffening_factor": 1.0113,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 72.22,
+          "tidemark_shear_stress_MPa": 13.7,
+          "peak_von_mises_stress_MPa": 76.01,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.37,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 5000,
+          "rise_time_ms": 1532.3,
+          "dynamic_rate_stiffening_factor": 1.0282,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 72.88,
+          "tidemark_shear_stress_MPa": 13.91,
+          "peak_von_mises_stress_MPa": 76.76,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.36,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 10000,
+          "rise_time_ms": 766.1,
+          "dynamic_rate_stiffening_factor": 1.0556,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 73.96,
+          "tidemark_shear_stress_MPa": 14.25,
+          "peak_von_mises_stress_MPa": 77.97,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.34,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 15000,
+          "rise_time_ms": 510.8,
+          "dynamic_rate_stiffening_factor": 1.0796,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 74.91,
+          "tidemark_shear_stress_MPa": 14.54,
+          "peak_von_mises_stress_MPa": 79.03,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.32,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 20000,
+          "rise_time_ms": 383.1,
+          "dynamic_rate_stiffening_factor": 1.0993,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 75.69,
+          "tidemark_shear_stress_MPa": 14.79,
+          "peak_von_mises_stress_MPa": 79.91,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.31,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        },
+        {
+          "dF_dt_N_s": 25000,
+          "rise_time_ms": 306.5,
+          "dynamic_rate_stiffening_factor": 1.1153,
+          "nominal_proximal_stress_MPa": 64.06,
+          "deep_enthesis_axial_stress_MPa": 76.32,
+          "tidemark_shear_stress_MPa": 14.98,
+          "peak_von_mises_stress_MPa": 80.61,
+          "nominal_safety_factor": 1.63,
+          "local_enthesis_safety_factor": 1.3,
+          "exceeds_85MPa_collagen_threshold": false,
+          "passes_SF_1_5_gate": false
+        }
+      ]
+    },
+    "regional_profile_at_20000_Ns": {
+      "baseline_4000N": {
+        "proximal_apex": {
+          "csa_mm2": 104.0,
+          "nominal_stress_MPa": 38.46,
+          "local_deep_von_mises_MPa": 49.36
+        },
+        "mid_tendon": {
+          "csa_mm2": 118.0,
+          "nominal_stress_MPa": 33.9,
+          "local_deep_von_mises_MPa": 43.5
+        },
+        "distal_tibial": {
+          "csa_mm2": 127.0,
+          "nominal_stress_MPa": 31.5,
+          "local_deep_von_mises_MPa": 40.42
+        }
+      },
+      "s1_unadapted_plus20_4800N": {
+        "proximal_apex": {
+          "csa_mm2": 104.0,
+          "nominal_stress_MPa": 46.15,
+          "local_deep_von_mises_MPa": 58.83
+        },
+        "mid_tendon": {
+          "csa_mm2": 118.0,
+          "nominal_stress_MPa": 40.68,
+          "local_deep_von_mises_MPa": 51.85
+        },
+        "distal_tibial": {
+          "csa_mm2": 127.0,
+          "nominal_stress_MPa": 37.8,
+          "local_deep_von_mises_MPa": 48.18
+        }
+      },
+      "s2_case2c_adapted_plus20_4800N": {
+        "proximal_apex": {
+          "csa_mm2": 119.6,
+          "nominal_stress_MPa": 40.13,
+          "local_deep_von_mises_MPa": 50.99
+        },
+        "mid_tendon": {
+          "csa_mm2": 135.7,
+          "nominal_stress_MPa": 35.37,
+          "local_deep_von_mises_MPa": 44.94
+        },
+        "distal_tibial": {
+          "csa_mm2": 146.0,
+          "nominal_stress_MPa": 32.87,
+          "local_deep_von_mises_MPa": 41.75
+        }
+      }
+    }
+  },
+  "part_c_remodeling_heterochrony_ode": {
+    "model_classification": "MODEL_ONLY_HETEROCHRONY_ODE",
+    "simulation_horizon_days": 168,
+    "regimes": {
+      "H0_uncoordinated_standard_16d": {
+        "regime": "Uncoordinated Standard Muscle Adaptation (tau_m = 16 d)",
+        "final_day168_force_multiplier": 1.2,
+        "final_day168_tendon_capacity_multiplier": 1.2227,
+        "peak_daily_damage_acceleration_ratio": 2.3,
+        "peak_hazard_day": 24,
+        "peak_hazard_week": 3.4,
+        "min_local_20kNs_safety_factor": 1.68,
+        "days_with_damage_ratio_gt_2x": 34,
+        "days_with_local_sf_lt_1_5": 0,
+        "cumulative_168d_damage_vs_baseline_ratio": 1.45
+      },
+      "H1_uncoordinated_target_adapt25_12d": {
+        "regime": "Accelerated +25% Adaptation Target (TARGET-ADAPT25, tau_m = 12 d)",
+        "final_day168_force_multiplier": 1.2,
+        "final_day168_tendon_capacity_multiplier": 1.2149,
+        "peak_daily_damage_acceleration_ratio": 2.94,
+        "peak_hazard_day": 21,
+        "peak_hazard_week": 3.0,
+        "min_local_20kNs_safety_factor": 1.64,
+        "days_with_damage_ratio_gt_2x": 48,
+        "days_with_local_sf_lt_1_5": 0,
+        "cumulative_168d_damage_vs_baseline_ratio": 1.65
+      },
+      "H2_tendon_paced_synchronized": {
+        "regime": "Tendon-Paced Synchronized Progression (Iso-Durability Constraint)",
+        "final_day168_force_multiplier": 1.2,
+        "final_day168_tendon_capacity_multiplier": 1.2227,
+        "peak_daily_damage_acceleration_ratio": 1.0,
+        "peak_hazard_day": 16,
+        "peak_hazard_week": 2.3,
+        "min_local_20kNs_safety_factor": 1.87,
+        "days_with_damage_ratio_gt_2x": 0,
+        "days_with_local_sf_lt_1_5": 0,
+        "cumulative_168d_damage_vs_baseline_ratio": 0.99
+      }
+    }
+  }
+}

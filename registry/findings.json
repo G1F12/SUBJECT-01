@@ -523,5 +523,50 @@
     "statement": "Mathematical and empirical analysis of human tendon S-N fatigue mechanics established the exact conservation law governing fatigue life preservation under augmented muscle force: (1 + Delta_CSA) * (1 + Delta_UTS) >= lambda_F. For a +20% force augmentation (lambda_F = 1.20), unadapted loading causes an 86.67% fatigue life collapse (0.133x retention, stress 46.15 MPa). A combined biological adaptation of Delta_CSA >= 15% and Delta_UTS >= 10% (Case 2C, actual stress 40.13 MPa, stress ratio 0.3841) fully restores and exceeds baseline durability (1.678x retention), providing a proven mechanical safety envelope.",
     "confidence": "high",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0064",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0061",
+    "title": "3-DOF Closed-Chain Leg Press Equilibrium Bounds and DPValid Paired Subject-Cluster Bootstrap",
+    "statement": "Linear-programming closure of sagittal 3-DOF lower-limb static equilibrium (hip-knee Jacobian block plus flat-foot COP and friction constraints without pseudoinverse shortcuts) shows that coordinated chain-wide Strategy 2 increases modeled bilateral leg-press force by +21.64% at 100 deg internal knee angle (eta_chain = 0.988), whereas isolated +20% quadriceps enhancement transfers only +15.27% (eta_chain = 0.764). On single-joint DPValid reference (N=20, 125 trials), paired subject-cluster bootstrap (B=10,000) of pooled out-of-sample R2 yields +0.0735 (95% CI [+0.0259, +0.1428]) for M2 PCSA vs Baseline F0 and +0.0081 ([-0.0903, +0.1173]) vs age-adjusted M1.",
+    "confidence": "medium",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0065",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0062",
+    "title": "Deep-Layer Enthesis Stress Concentration Under Ballistic dF/dt and Tendon-Paced Remodeling Recovery",
+    "statement": "Integrating Bogaerts et al. (2017, N=10) in vivo layer displacement partitioning (deep/superficial ratio = 1.2315, k_deep = 1.1204) with Kongsgaard (2007) proximal patellar CSA (104.0 mm2) and Standard Linear Solid viscoelasticity shows that at dF/dt = 20,000 N/s, local deep-enthesis von Mises stress at 4800 N (+20% EXP-0060 baseline) rises from nominal 46.15 MPa to 58.83 MPa (SF_local = 1.61) unadapted, restored to 50.99 MPa (SF_local = 2.05) under Case 2C (+15% CSA, +10% UTS). Synchronization of muscle progression strictly inside the FND-0063 tendon capacity curve (regime H2) eliminates the transient remodeling damage spike (1.00x vs 2.94x under uncoordinated H1).",
+    "confidence": "medium",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0066",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0063",
+    "title": "Energy-Conserving 4-Layer Pennes Bioheat Intermittent Feasibility Envelope for 2700 s",
+    "statement": "Using a backward-Euler 4-shell cylindrical Pennes bioheat + central arterial pool solver (First-Law closure error 0.00 J) anchored to Malaga CPET (N=846) and ACTES metabolic rates, intermittent duty-cycle pacing keeps modeled core temperature below 39.5 C over 2700 s at 360 W +20% effort up to D_max = 0.92 in temperate climate (20 C, 50% RH), 0.74 in warm (28 C, 60% RH), 0.65 in hot-humid (32 C, 80% RH), and 0.59 in hot-dry (35 C, 30% RH), while maintaining strict compatibility with tools/cpe45.py (target_achievement = not_assessed).",
+    "confidence": "medium",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0067",
+    "date": "2026-11-17",
+    "experiment_id": "EXP-0064",
+    "title": "Unified Architecture A Canonical Specification and Master Roadmap Adjudication",
+    "statement": "Synthesis of EXP-0059 through EXP-0063 into the canonical Architecture A specification confirms theoretical conditional feasibility of ~20% whole-limb strength augmentation only under co-adapted hip/knee/ankle musculature, coordinated tendon CSA (+15%) and UTS (+10%) pacing, and intermittent thermal duty budgeting or 100-500 W continuous vascular heat removal, while preserving TARGET-CPE45 = NOT EXTERNALLY VALIDATED, BIOLOGICAL INTERVENTIONS = NO_GO, and EXP-0061 bilateral leg press = DATA_BLOCKED.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0068",
+    "date": "2026-11-19",
+    "experiment_id": "EXP-0065",
+    "title": "Byte-exact archive replay and work mismatch in original thermal contrast",
+    "statement": "EXP-0061\u20130064 replayed byte-for-byte. The archived intermittent 360 W-peak schedules deliver 619\u2013903 kJ over 2700 s, versus 972 kJ at constant 360 W. Fixed model calculations only.",
+    "confidence": "high",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

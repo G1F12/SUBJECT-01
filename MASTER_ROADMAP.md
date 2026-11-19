@@ -1,10 +1,10 @@
 # SUBJECT-01 — MASTER ROADMAP (12 WEEKS)
 ## STRATEGIC REORIENTATION: FROM ISOLATED PHYSIOLOGY TO AUGMENTATION ARCHITECTURES
 
-**Версия:** 2.0 (Утверждена в Cycle 13)  
-**Дата утверждения:** 12 ноября 2026 г.  
-**Доказательные условия DEC-0022:** внешний active-only benchmark и критерии [пяти проверок](research/consolidation/NEXT_EXPERIMENTS.md).
-**Статус:** Канонический стратегический план на 12 недель (Cycles 14–18)  
+**Версия:** 2.1 (Исходный план v2.0 Cycle 13 полностью завершён этапами `EXP-0059`..`EXP-0064`, `DEC-0026`)  
+**Дата утверждения v2.0:** 12 ноября 2026 г. · **Дата завершения программы:** 17 ноября 2026 г.  
+**Доказательные условия DEC-0022/0025/0026:** [ARCHITECTURE_A_CANONICAL_SPECIFICATION.md](file:///D:/SUBJECT-01/research/architecture_a_integration/ARCHITECTURE_A_CANONICAL_SPECIFICATION.md) · [PLAN.md](file:///D:/SUBJECT-01/PLAN.md) · [NEXT_EXPERIMENTS.md](file:///D:/SUBJECT-01/research/consolidation/NEXT_EXPERIMENTS.md).  
+**Статус:** `COMPLETED` (вычислительная и протокольная программа v2.0 закрыта с сохранением всех инвариантов валидации)  
 **Репозиторий:** `G1F12/SUBJECT-01` | `D:\SUBJECT-01`  
 
 ---
@@ -120,3 +120,15 @@ CYCLE:    CYCLE 14       CYCLE 15       CYCLE 16       CYCLE 17 & 18
 2. Количественная карта прочности энтезисов и безопасных зон скорости нарастания силы ($dF/dt$).
 3. Проверенная термодинамическая модель предела человеческой работоспособности на 2700 секунд.
 4. Доказательный ответ: возможен ли прирост функциональной силы на +20% в рамках биологической Архитектуры A без риска инвалидизации опорно-двигательного аппарата.
+
+---
+
+## 8. Итоги полного выполнения Дорожной карты (`EXP-0059`–`EXP-0064`, `DEC-0024`–`DEC-0026`)
+
+| Этап §4 Дорожной карты | Реализованный эксперимент и отчёт | Количественный итог и решение | Итоговый статус цели |
+|---|---|---|---|
+| **Базовая биомеханика мышц и усталости сухожилий (`DEC-0024`, `DEC-0025`)** | [`EXP-0059`](file:///D:/SUBJECT-01/registry/experiments.json#L1712-L1739), [`EXP-0060`](file:///D:/SUBJECT-01/registry/experiments.json#L1741-L1768), [FINAL_SCIENTIFIC_REPORT_RU.md](file:///D:/SUBJECT-01/research/functional_mechanics_validation/FINAL_SCIENTIFIC_REPORT_RU.md) | Удельная сила квадрицепса на DPValid ($N=20$): $\sigma = 26.41 \pm 4.70\text{ Н/см}^2$ (`NEG-0058`); изомассный штраф мощности $-1.98\%$ (`FND-0062`); закон сохранения ресурса сухожилий $(1+\Delta_{\text{CSA}})(1+\Delta_{\text{UTS}})\ge \lambda_F$ (`FND-0063`); Стратегия 2 ($+21.9\%$ момента, $+19.8\%$ мощности). | Базовая односуставная опора сформирована. |
+| **Этап 1. Многосуставная цепь (`BLOCKER-07`)** | [`EXP-0061`](file:///D:/SUBJECT-01/registry/experiments.json#L1769-L1797), [run_exp0061_protocol_and_chain.py](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/run_exp0061_protocol_and_chain.py), [EXPERIMENT_REPORT_RU.md](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/EXPERIMENT_REPORT_RU.md) | Аудит 6 когорт двустороннего изометрического жима: `0/6` допущено (**`DATA_BLOCKED`**, [`NEG-0060`](file:///D:/SUBJECT-01/registry/negative_results.json#L484-L491)). На односуставном DPValid парный бутстрэп $B=10\,000$ даёт `Outcome 3: INCONCLUSIVE` относительно $\Delta_{\min}=0.08$. Точное 3-DOF ЛП равновесия (`MODEL_ONLY`) доказывает необходимость координации цепи (`+21.64%` при $\eta_{\text{chain}}=0.988$ против `+15.27%` только от квадрицепса). | Внешняя проверка жима: `DATA_BLOCKED`; цепь замкнута в `MODEL_ONLY`. |
+| **Этап 2. Энтезис $dF/dt$ и гетерохрония (`BLOCKER-02/03`)** | [`EXP-0062`](file:///D:/SUBJECT-01/registry/experiments.json#L1798-L1826), [run_exp0062_enthesis_and_heterochrony.py](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/run_exp0062_enthesis_and_heterochrony.py), [EXPERIMENT_REPORT_RU.md](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/EXPERIMENT_REPORT_RU.md) | На Bogaerts ($N=10$, глубокий слой $+23.2\%$) при $dF/dt = 20\,000\text{ Н/с}$: $4800\text{ Н}$ Case 2C даёт $SF_{\text{local}} = 2.05$, однако баллистический 100% MVC ($7661\text{ Н}$) даёт $92.20 > 85\text{ МПа}$ без адаптации и $SF_{\text{local}}=1.31 < 1.50$ при Case 2C. Ускоренная `TARGET-ADAPT25` (H1) создаёт пик повреждаемости $2.94\times$ на 3.0-й неделе ([`NEG-0061`](file:///D:/SUBJECT-01/registry/negative_results.json#L492-L499)); режим H2 удерживает $1.00\times$. | **`TARGET-ADAPT25 = HOLD_RATE_LIMITED_BY_COLLAGEN_SYNTHESIS`**. |
+| **Этап 3. 4-слойная биотермодинамика Пеннеса (`BLOCKER-01`)** | [`EXP-0063`](file:///D:/SUBJECT-01/registry/experiments.json#L1827-L1854), [run_exp0063_pennes_envelope.py](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/run_exp0063_pennes_envelope.py), [EXPERIMENT_REPORT_RU.md](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/EXPERIMENT_REPORT_RU.md) | Непрерывный режим $360\text{ Вт}$ ($+20\%$) перегревает ядро $>39.5^\circ\text{C}$ за `1240–2365 с` во всех климатах $\ge 20^\circ\text{C}$ (`NEG-0062`). Прерывистое квантование ($D \le 0.92$ при $20^\circ\text{C}$, $D \le 0.59$ при $35^\circ\text{C}$) или теплосъём $100\text{–}500\text{ Вт}$ сохраняют гомеостаз за $2700\text{ с}$ (невязка $0.00\text{ Дж}$, проверено на `tools/cpe45.py`). `AEGIS-01` снижает $D_{\max}$ на $-25.0\%$. | **`TARGET-CPE45 = NOT EXTERNALLY VALIDATED`**; `AEGIS-01 = CONDITIONAL_HOLD`. |
+| **Этап 4. Мастер-интеграция Архитектуры A (`DEC-0026`)** | [`EXP-0064`](file:///D:/SUBJECT-01/registry/experiments.json#L1855-L1883), [`DEC-0026`](file:///D:/SUBJECT-01/registry/decisions.json#L201-L211), [ARCHITECTURE_A_CANONICAL_SPECIFICATION.md](file:///D:/SUBJECT-01/research/architecture_a_integration/ARCHITECTURE_A_CANONICAL_SPECIFICATION.md) | Сведены 4 столпа: `+20%` силы в Архитектуре A теоретически допустимо только при согласованной цепи, опережающей/синхронизированной адаптации сухожилия (H2) и прерывистом термобюджетировании. `TARGET-FORCE20` (`MODEL_ONLY`, не валидирован *in vivo*), `BIOLOGICAL INTERVENTIONS = NO_GO`. | Дорожная карта полностью выполнена (`DEC-0026`). |

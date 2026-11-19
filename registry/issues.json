@@ -180,15 +180,22 @@
     "date": "2026-11-12",
     "title": "Multi-Joint Closed Kinematic Chain Power Transmission and Tendon Safety Gap",
     "description": "The transition from single-joint knee extension torque to whole-body multi-joint functional movements (squat, sprint, vertical jump) remains unmodeled. Single-joint specific tension (27.22 N/cm2) and isolated tendon S-N fatigue (-86.7% cycles) quantified in Cycle 19 (EXP-0059, EXP-0060). Dynamic co-activation across bi-articular muscles and rapid rate of force development (dF/dt > 15 kN/s) are prioritized for Phase VI (EXP-0061, DEC-0024).",
-    "status": "in_progress",
+    "status": "partially_resolved",
     "priority": "high",
     "related_experiments": [
       "EXP-0059",
-      "EXP-0060"
+      "EXP-0060",
+      "EXP-0061",
+      "EXP-0062",
+      "EXP-0063",
+      "EXP-0064"
     ],
     "related_decisions": [
-      "DEC-0024"
-    ]
+      "DEC-0024",
+      "DEC-0025",
+      "DEC-0026"
+    ],
+    "resolution": "Closed-chain 3-DOF sagittal leg-press equilibrium LP (EXP-0061) and multi-layer viscoelastic enthesis dF/dt / heterochrony models (EXP-0062) completed as MODEL_ONLY formulations. External empirical validation of bilateral isometric leg press remains DATA_BLOCKED (0/6 open cohorts admitted, NEG-0060)."
   },
   {
     "id": "ISS-0022",
@@ -254,5 +261,28 @@
     "severity": "medium",
     "description": "Cycle 15-17 proposed using Oxford Achilles Atlas (Cohen et al. 2026) as a third independent replication of MTJCore and proposed GSE130649 for muscle atlas analysis. Audited in Cycle 18: Oxford Atlas is the MTJCore discovery dataset (circular replication prohibited), and GSE130649 is mouse inner ear organoids. Both issues fully resolved and corrected.",
     "resolution": "Classified Oxford evaluation as INVALID_CIRCULAR_EVALUATION; closed MTJCore replication on Cohen et al. with STOP_NO_ADDED_SCIENTIFIC_VALUE; purged GSE130649 from scientific proposals."
+  },
+  {
+    "id": "ISS-0027",
+    "date": "2026-11-19",
+    "title": "Frozen Pennes initial-state/parameterization failure at light cycling and missing synchronized whole-profile cohort",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0066 loses to persistence at 5 min with a fixed initial tissue state. No new source supports the joint 2700-s performance, movement control, tissue and post45 endpoints.",
+    "related_experiments": [
+      "EXP-0065",
+      "EXP-0066"
+    ],
+    "related_issues": [
+      "ISS-0011",
+      "ISS-0013",
+      "ISS-0021",
+      "ISS-0023",
+      "ISS-0025"
+    ],
+    "related_decisions": [
+      "DEC-0027"
+    ],
+    "required_inputs": "Measured pre-effort temperature/initialization, mechanical work and environment with held-out participants; separately, a synchronized multi-outcome cohort for the programme gate."
   }
 ]

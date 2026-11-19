@@ -197,5 +197,27 @@
       "DEC-0024"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0026",
+    "date": "2026-11-17",
+    "title": "Completion of PLAN.md and MASTER_ROADMAP.md Computational Programme: Architecture A Canonical Specification, Closed-Chain EXP-0061, Enthesis dF/dt & Heterochrony EXP-0062, Thermal Envelope EXP-0063, and Master Integration EXP-0064",
+    "decision": "Formally ratified EXP-0061..0064, FND-0064..0067, NEG-0060..0062, and the Canonical Specification of Architecture A: (1) Recorded Outcome 4 (DATA_BLOCKED) for external bilateral isometric leg press cohort transfer pending open individual data release, while closing 3-DOF closed-chain compatibility mechanics via linear programming without pseudoinverse shortcuts and auditing single-joint DPValid paired cluster bootstrap precision (Outcome 3: INCONCLUSIVE at N=20); (2) Quantified viscoelastic deep-layer enthesis shear stress concentration under dF/dt = 20,000 N/s and placed TARGET-ADAPT25 on HOLD_RATE_LIMITED_BY_COLLAGEN_SYNTHESIS unless muscle gain is paced to FND-0063 tendon adaptation (H2); (3) Quantified 4-layer cylindrical Pennes bioheat intermittent duty-cycle bounds over 2700 s and confirmed AEGIS-01 (-25.0% duty capacity at 360 W) remains in CONDITIONAL_HOLD; (4) Maintained all hard program invariants: TARGET-CPE45 = NOT EXTERNALLY VALIDATED, BIOLOGICAL INTERVENTIONS = NO_GO, +20% STRENGTH = THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION (unvalidated in vivo).",
+    "rationale": "Completes the four computational and protocol pillars of PLAN.md and MASTER_ROADMAP.md while preserving strict separation between empirical human benchmarks and MODEL_ONLY multi-physics simulations.",
+    "amends": [
+      "DEC-0025"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "DEC-0027",
+    "date": "2026-11-19",
+    "title": "Adopt equal-work control and adjudicate current programme evidence",
+    "decision": "Adopt EXP-0065/0066 and their scoped outcomes. Require equal-work controls before attributing a thermal gain to temporal structure. The N=21 intermittent snapshot in EXP-0063/0064 is Chmura SRC-0035, not ACTES. EXP-0062 H1 changes reciprocal muscle time scale by 33 1/3% and also changes tendon inputs, so it is not the registered ADAPT25 contrast. Archive replay does not settle functional transfer. A remains CONDITIONAL POTENTIAL; coupled prediction and whole-profile external demonstration remain HOLD pending admissible linked observations. Maintain FORCE20 unvalidated, ADAPT25 HOLD and CPE45 NOT EXTERNALLY VALIDATED; retain B/C and AEGIS decisions and BIOLOGICAL INTERVENTIONS NO_GO.",
+    "rationale": "Heat contrast depends on unmatched work, frozen thermal transfer failed against persistence in light cycling, and no newly audited source covers the joint outcomes.",
+    "amends": [
+      "DEC-0026"
+    ],
+    "supersedes": []
   }
 ]

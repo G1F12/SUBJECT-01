@@ -1,0 +1,698 @@
+{
+  "experiment_id": "EXP-0061",
+  "title": "Transfer of Force Prediction to Bilateral Isometric Leg Press & 3-DOF Closed Chain Compatibility",
+  "part_a_cohort_gate_audit": {
+    "n_candidates_audited": 6,
+    "n_admitted": 0,
+    "admitted_cohorts": [],
+    "primary_outcome_bilateral_leg_press": "Outcome 4: DATA_BLOCKED",
+    "candidates": [
+      {
+        "cohort_id": "OpenCap_Uhlrich_2023",
+        "doi_or_accession": "10.1371/journal.pcbi.1011462",
+        "repository": "https://simtk.org/projects/opencap",
+        "G1_open_individual_records": true,
+        "G2_bilateral_isometric_leg_press": false,
+        "G3_individual_anthropometry": true,
+        "G4_stand_geometry": false,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Walking, squats, sit-to-stand, drop jumps",
+        "rejection_reason": "Protocol mismatch (different dynamic tasks; no bilateral isometric leg press).",
+        "admitted": false
+      },
+      {
+        "cohort_id": "Zoger_2025_IsoMed2000",
+        "doi_or_accession": "10.1186/s13102-025-01061-1",
+        "repository": "PMC11776222 (no public data deposit; upon request)",
+        "G1_open_individual_records": false,
+        "G2_bilateral_isometric_leg_press": true,
+        "G3_individual_anthropometry": false,
+        "G4_stand_geometry": true,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Bilateral isometric (100/140 deg internal knee angle) & isokinetic leg press",
+        "rejection_reason": "Individual participant records are not openly available (available upon request only).",
+        "admitted": false
+      },
+      {
+        "cohort_id": "Zushi_2024_ISLP",
+        "doi_or_accession": "10.1371/journal.pone.0292428.s001",
+        "repository": "Figshare / PLOS ONE S1 PDF (CC BY 4.0, N=230)",
+        "G1_open_individual_records": true,
+        "G2_bilateral_isometric_leg_press": false,
+        "G3_individual_anthropometry": false,
+        "G4_stand_geometry": false,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Unilateral isometric leg press & vertical jumps",
+        "rejection_reason": "Unilateral protocol shift; missing individual mass/height/sex and absolute force [N].",
+        "admitted": false
+      },
+      {
+        "cohort_id": "Zenodo_6503956_Elderly",
+        "doi_or_accession": "10.5281/zenodo.6503956",
+        "repository": "Zenodo Database_muscle_elderly.xlsx (N=34)",
+        "G1_open_individual_records": true,
+        "G2_bilateral_isometric_leg_press": false,
+        "G3_individual_anthropometry": true,
+        "G4_stand_geometry": false,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Single-joint isometric knee extension & dynamic 1RM leg press",
+        "rejection_reason": "Protocol shift to dynamic 1RM load; missing stand geometry, segment lengths, and sex column.",
+        "admitted": false
+      },
+      {
+        "cohort_id": "Figshare_33936784_and_PLOS_0357488",
+        "doi_or_accession": "10.6084/m9.figshare.33936784.v1 / 10.1371/journal.pone.0357488.s001",
+        "repository": "Figshare / PLOS ONE (N=44 / N=30)",
+        "G1_open_individual_records": true,
+        "G2_bilateral_isometric_leg_press": false,
+        "G3_individual_anthropometry": true,
+        "G4_stand_geometry": false,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Standing IMTP, Pec-deck, single-joint leg extension, grip strength",
+        "rejection_reason": "Protocol shift (IMTP includes trunk/upper body; leg extension is open single-joint; no stand angles).",
+        "admitted": false
+      },
+      {
+        "cohort_id": "Zenodo_23979972_and_Frontiers_1948872",
+        "doi_or_accession": "10.5281/zenodo.23979972 / 10.3389/fphys.2026.1948872",
+        "repository": "Zenodo / Frontiers Supplementary (.zip)",
+        "G1_open_individual_records": false,
+        "G2_bilateral_isometric_leg_press": false,
+        "G3_individual_anthropometry": false,
+        "G4_stand_geometry": false,
+        "G5_measured_footplate_force_N": false,
+        "measured_task": "Dynamic dumbbell fatigue squats / PAPE squats (SPSS Output Viewer files only)",
+        "rejection_reason": "Dynamic fatigue protocol shift (23979972) and lack of raw participant tables (1948872).",
+        "admitted": false
+      }
+    ]
+  },
+  "part_b_dpvalid_reference_benchmark": {
+    "status": "PROTOCOL_SHIFT_SINGLE_JOINT_REFERENCE",
+    "dataset": "DPValid (10.6092/unibo/amsacta/7710)",
+    "source_file": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "source_sha256": "80dc705d5bf3c5a60d65a657ae0753054e3a797a3aa95f537c4f9f9b366772dd",
+    "n_participants": 20,
+    "n_trials": 125,
+    "n_participant_angle_conditions": 40,
+    "convention_A_vs_B_max_sigma_diff_n_cm2": 7.105427357601002e-15,
+    "trial_level_metrics": {
+      "Baseline_F0_anthropometric": {
+        "pooled_r2": 0.6215,
+        "rmse_nm": 54.06,
+        "mae_nm": 43.77,
+        "nrmse_pct": 25.06
+      },
+      "M1_anthropometry_angle_age": {
+        "pooled_r2": 0.682,
+        "rmse_nm": 49.56,
+        "mae_nm": 37.54,
+        "nrmse_pct": 22.97
+      },
+      "M2_biomechanical_pcsa_strict": {
+        "pooled_r2": 0.6945,
+        "rmse_nm": 48.58,
+        "mae_nm": 39.43,
+        "nrmse_pct": 22.52
+      },
+      "M3_architecture_agonist_emg": {
+        "pooled_r2": 0.7133,
+        "rmse_nm": 47.06,
+        "mae_nm": 35.35,
+        "nrmse_pct": 21.81
+      },
+      "M4_full_multichannel_emg": {
+        "pooled_r2": 0.6301,
+        "rmse_nm": 53.45,
+        "mae_nm": 41.31,
+        "nrmse_pct": 24.77
+      }
+    },
+    "condition_aggregated_metrics": {
+      "Baseline_F0_anthropometric": {
+        "pooled_r2": 0.6654,
+        "rmse_nm": 50.27,
+        "mae_nm": 40.99,
+        "nrmse_pct": 23.38
+      },
+      "M1_anthropometry_angle_age": {
+        "pooled_r2": 0.7308,
+        "rmse_nm": 45.09,
+        "mae_nm": 34.01,
+        "nrmse_pct": 20.97
+      },
+      "M2_biomechanical_pcsa_strict": {
+        "pooled_r2": 0.7389,
+        "rmse_nm": 44.41,
+        "mae_nm": 37.24,
+        "nrmse_pct": 20.65
+      },
+      "M3_architecture_agonist_emg": {
+        "pooled_r2": 0.7527,
+        "rmse_nm": 43.21,
+        "mae_nm": 32.19,
+        "nrmse_pct": 20.1
+      },
+      "M4_full_multichannel_emg": {
+        "pooled_r2": 0.6703,
+        "rmse_nm": 49.9,
+        "mae_nm": 39.11,
+        "nrmse_pct": 23.21
+      }
+    },
+    "paired_cluster_bootstrap_trial_level": {
+      "M2_vs_Baseline_F0": {
+        "comparison": "M2_biomechanical_pcsa_strict vs Baseline_F0_anthropometric",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0729,
+        "ci95_cluster_bootstrap": [
+          0.0239,
+          0.1489
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 556.32,
+        "subject_paired_mse_reduction_sd_nm2": 991.11,
+        "subject_paired_t_stat": 2.51,
+        "subject_paired_p_value": 0.0213
+      },
+      "M2_vs_M1_anthro_age": {
+        "comparison": "M2_biomechanical_pcsa_strict vs M1_anthropometry_angle_age",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0124,
+        "ci95_cluster_bootstrap": [
+          -0.0819,
+          0.1273
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 73.28,
+        "subject_paired_mse_reduction_sd_nm2": 1588.35,
+        "subject_paired_t_stat": 0.206,
+        "subject_paired_p_value": 0.8387
+      },
+      "M2_vs_M4_sEMG": {
+        "comparison": "M2_biomechanical_pcsa_strict vs M4_full_multichannel_emg",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0644,
+        "ci95_cluster_bootstrap": [
+          -0.0549,
+          0.203
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 508.85,
+        "subject_paired_mse_reduction_sd_nm2": 2541.87,
+        "subject_paired_t_stat": 0.895,
+        "subject_paired_p_value": 0.3819
+      }
+    },
+    "paired_cluster_bootstrap_condition_level": {
+      "M2_vs_Baseline_F0": {
+        "comparison": "M2_biomechanical_pcsa_strict vs Baseline_F0_anthropometric",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0735,
+        "ci95_cluster_bootstrap": [
+          0.0259,
+          0.1428
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 555.11,
+        "subject_paired_mse_reduction_sd_nm2": 971.55,
+        "subject_paired_t_stat": 2.555,
+        "subject_paired_p_value": 0.0193
+      },
+      "M2_vs_M1_anthro_age": {
+        "comparison": "M2_biomechanical_pcsa_strict vs M1_anthropometry_angle_age",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0081,
+        "ci95_cluster_bootstrap": [
+          -0.0903,
+          0.1173
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 61.41,
+        "subject_paired_mse_reduction_sd_nm2": 1599.5,
+        "subject_paired_t_stat": 0.172,
+        "subject_paired_p_value": 0.8655
+      },
+      "M2_vs_M4_sEMG": {
+        "comparison": "M2_biomechanical_pcsa_strict vs M4_full_multichannel_emg",
+        "n_subject_clusters": 20,
+        "n_bootstrap_replicates": 10000,
+        "delta_r2_pooled_point": 0.0686,
+        "ci95_cluster_bootstrap": [
+          -0.0594,
+          0.214
+        ],
+        "proposed_delta_min": 0.08,
+        "classification_relative_to_delta_min": "Outcome 3: INCONCLUSIVE",
+        "subject_paired_mse_reduction_mean_nm2": 518.06,
+        "subject_paired_mse_reduction_sd_nm2": 2560.6,
+        "subject_paired_t_stat": 0.905,
+        "subject_paired_p_value": 0.3769
+      }
+    }
+  },
+  "part_c_closed_chain_3dof_model": {
+    "model_classification": "MODEL_ONLY_STATIC_CLOSED_CHAIN_LP",
+    "geometry_and_boundaries": {
+      "subject_mass_kg": 75.0,
+      "subject_height_m": 1.78,
+      "thigh_length_m": 0.4361,
+      "shank_length_m": 0.4379,
+      "handsfield_total_one_leg_volume_cm3": 7559.5,
+      "footplate_tilt_deg": 10.0,
+      "cop_bounds_m": [
+        -0.05,
+        0.16
+      ],
+      "ankle_height_m": 0.075,
+      "friction_coefficient_mu": 0.8
+    },
+    "scenarios": {
+      "baseline": {
+        "scenario": "baseline_canonical",
+        "postures": {
+          "flexed_100deg_int": {
+            "theta_knee_flex_deg": 80.0,
+            "det_J_ankle_numeric": 0.188058,
+            "det_J_ankle_analytic": 0.188058,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 253.68,
+              "naive_x_cop_m": 0.1706,
+              "naive_cop_within_foot_bounds": false,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 2601.1,
+              "single_limb_normal_force_N": 1302.3,
+              "single_limb_shear_force_N": 103.9,
+              "x_cop_m": 0.0045,
+              "friction_utilization": 0.1,
+              "quadriceps_knee_torque_Nm": 299.1,
+              "net_joint_torques_eff_Nm": [
+                143.4,
+                290.0,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            }
+          },
+          "extended_140deg_int": {
+            "theta_knee_flex_deg": 40.0,
+            "det_J_ankle_numeric": 0.122746,
+            "det_J_ankle_analytic": 0.122746,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 293.61,
+              "naive_x_cop_m": 0.161,
+              "naive_cop_within_foot_bounds": false,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 3878.1,
+              "single_limb_normal_force_N": 1920.7,
+              "single_limb_shear_force_N": 273.8,
+              "x_cop_m": 0.0097,
+              "friction_utilization": 0.178,
+              "quadriceps_knee_torque_Nm": 217.3,
+              "net_joint_torques_eff_Nm": [
+                163.4,
+                206.6,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            }
+          }
+        }
+      },
+      "quad_only_plus20": {
+        "scenario": "quad_only_plus20pct_force",
+        "postures": {
+          "flexed_100deg_int": {
+            "theta_knee_flex_deg": 80.0,
+            "det_J_ankle_numeric": 0.188058,
+            "det_J_ankle_analytic": 0.188058,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 254.42,
+              "naive_x_cop_m": 0.1505,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 2998.2,
+              "single_limb_normal_force_N": 1493.5,
+              "single_limb_shear_force_N": 162.9,
+              "x_cop_m": 0.0069,
+              "friction_utilization": 0.136,
+              "quadriceps_knee_torque_Nm": 358.9,
+              "net_joint_torques_eff_Nm": [
+                136.1,
+                349.9,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 15.27,
+              "quadriceps_torque_change_pct": 19.99,
+              "closed_chain_transfer_ratio_eta": 0.764
+            }
+          },
+          "extended_140deg_int": {
+            "theta_knee_flex_deg": 40.0,
+            "det_J_ankle_numeric": 0.122746,
+            "det_J_ankle_analytic": 0.122746,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 295.24,
+              "naive_x_cop_m": 0.141,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 4421.5,
+              "single_limb_normal_force_N": 2183.8,
+              "single_limb_shear_force_N": 346.2,
+              "x_cop_m": 0.011,
+              "friction_utilization": 0.198,
+              "quadriceps_knee_torque_Nm": 260.7,
+              "net_joint_torques_eff_Nm": [
+                158.0,
+                250.0,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 14.01,
+              "quadriceps_torque_change_pct": 19.97,
+              "closed_chain_transfer_ratio_eta": 0.702
+            }
+          }
+        }
+      },
+      "strategy_1_quad_only_18deg": {
+        "scenario": "strategy_1_quad_pennation_18deg",
+        "postures": {
+          "flexed_100deg_int": {
+            "theta_knee_flex_deg": 80.0,
+            "det_J_ankle_numeric": 0.188058,
+            "det_J_ankle_analytic": 0.188058,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 254.61,
+              "naive_x_cop_m": 0.1462,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 3101.5,
+              "single_limb_normal_force_N": 1543.2,
+              "single_limb_shear_force_N": 178.3,
+              "x_cop_m": 0.0074,
+              "friction_utilization": 0.144,
+              "quadriceps_knee_torque_Nm": 374.5,
+              "net_joint_torques_eff_Nm": [
+                134.1,
+                365.4,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 19.24,
+              "quadriceps_torque_change_pct": 25.21,
+              "closed_chain_transfer_ratio_eta": 0.763
+            }
+          },
+          "extended_140deg_int": {
+            "theta_knee_flex_deg": 40.0,
+            "det_J_ankle_numeric": 0.122746,
+            "det_J_ankle_analytic": 0.122746,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 295.67,
+              "naive_x_cop_m": 0.1367,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 4562.9,
+              "single_limb_normal_force_N": 2252.3,
+              "single_limb_shear_force_N": 365.0,
+              "x_cop_m": 0.0113,
+              "friction_utilization": 0.203,
+              "quadriceps_knee_torque_Nm": 272.0,
+              "net_joint_torques_eff_Nm": [
+                156.7,
+                261.3,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 17.66,
+              "quadriceps_torque_change_pct": 25.17,
+              "closed_chain_transfer_ratio_eta": 0.701
+            }
+          }
+        }
+      },
+      "strategy_2_coordinated_chain": {
+        "scenario": "strategy_2_coordinated_chain",
+        "postures": {
+          "flexed_100deg_int": {
+            "theta_knee_flex_deg": 80.0,
+            "det_J_ankle_numeric": 0.188058,
+            "det_J_ankle_analytic": 0.188058,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 297.8,
+              "naive_x_cop_m": 0.1634,
+              "naive_cop_within_foot_bounds": false,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 3164.1,
+              "single_limb_normal_force_N": 1582.8,
+              "single_limb_shear_force_N": 134.0,
+              "x_cop_m": 0.0049,
+              "friction_utilization": 0.106,
+              "quadriceps_knee_torque_Nm": 364.6,
+              "net_joint_torques_eff_Nm": [
+                169.3,
+                355.6,
+                -2.3
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 21.64,
+              "quadriceps_torque_change_pct": 21.9,
+              "closed_chain_transfer_ratio_eta": 0.988
+            }
+          },
+          "extended_140deg_int": {
+            "theta_knee_flex_deg": 40.0,
+            "det_J_ankle_numeric": 0.122746,
+            "det_J_ankle_analytic": 0.122746,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 346.07,
+              "naive_x_cop_m": 0.156,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 4706.2,
+              "single_limb_normal_force_N": 2329.4,
+              "single_limb_shear_force_N": 340.5,
+              "x_cop_m": 0.01,
+              "friction_utilization": 0.183,
+              "quadriceps_knee_torque_Nm": 264.9,
+              "net_joint_torques_eff_Nm": [
+                191.5,
+                254.2,
+                -2.3
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.05,
+                "TA": 0.05
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 21.35,
+              "quadriceps_torque_change_pct": 21.91,
+              "closed_chain_transfer_ratio_eta": 0.975
+            }
+          }
+        }
+      },
+      "strategy_2_plus_reciprocal_inhibition": {
+        "scenario": "strategy_2_plus_reciprocal_inhibition",
+        "postures": {
+          "flexed_100deg_int": {
+            "theta_knee_flex_deg": 80.0,
+            "det_J_ankle_numeric": 0.188058,
+            "det_J_ankle_analytic": 0.188058,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 298.39,
+              "naive_x_cop_m": 0.1634,
+              "naive_cop_within_foot_bounds": false,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 3167.6,
+              "single_limb_normal_force_N": 1584.7,
+              "single_limb_shear_force_N": 133.1,
+              "x_cop_m": 0.0051,
+              "friction_utilization": 0.105,
+              "quadriceps_knee_torque_Nm": 364.6,
+              "net_joint_torques_eff_Nm": [
+                170.2,
+                355.6,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.037,
+                "TA": 0.037
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 21.78,
+              "quadriceps_torque_change_pct": 21.9,
+              "closed_chain_transfer_ratio_eta": 0.995
+            }
+          },
+          "extended_140deg_int": {
+            "theta_knee_flex_deg": 40.0,
+            "det_J_ankle_numeric": 0.122746,
+            "det_J_ankle_analytic": 0.122746,
+            "rank_J_foot_T": 2,
+            "naive_uncoordinated_diagnostics": {
+              "point_contact_overdetermination_residual_Nm": 346.65,
+              "naive_x_cop_m": 0.156,
+              "naive_cop_within_foot_bounds": true,
+              "naive_friction_feasible": true
+            },
+            "compatible_lp_solution": {
+              "bilateral_footplate_force_N": 4712.4,
+              "single_limb_normal_force_N": 2332.6,
+              "single_limb_shear_force_N": 340.2,
+              "x_cop_m": 0.0101,
+              "friction_utilization": 0.182,
+              "quadriceps_knee_torque_Nm": 264.9,
+              "net_joint_torques_eff_Nm": [
+                192.4,
+                254.2,
+                -1.9
+              ],
+              "optimal_activations": {
+                "GMAX": 0.95,
+                "HAM": 0.0,
+                "VAS": 0.95,
+                "RF": 0.95,
+                "GAS": 0.0,
+                "SOL": 0.0,
+                "ILPSO": 0.037,
+                "TA": 0.037
+              }
+            },
+            "comparison_to_baseline": {
+              "bilateral_footplate_force_gain_pct": 21.51,
+              "quadriceps_torque_change_pct": 21.91,
+              "closed_chain_transfer_ratio_eta": 0.982
+            }
+          }
+        }
+      }
+    }
+  }
+}

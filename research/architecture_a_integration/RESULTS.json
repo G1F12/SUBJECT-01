@@ -1,0 +1,116 @@
+{
+  "experiment_id": "EXP-0064",
+  "title": "Master Architecture A Integration and Canonical Specification Across Closed-Chain, Enthesis, and Thermal Constraints",
+  "invariants": {
+    "TARGET_CPE45": "NOT EXTERNALLY VALIDATED",
+    "BIOLOGICAL_INTERVENTIONS": "NO_GO",
+    "STRENGTH_PLUS20": "THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION"
+  },
+  "pillar_summaries": {
+    "pillar_1_contractile_and_closed_chain": {
+      "dpvalid_specific_tension_n_cm2": 26.41,
+      "dpvalid_specific_tension_sd_n_cm2": 4.7,
+      "dpvalid_m2_vs_f0_cond_delta_r2": 0.0735,
+      "dpvalid_m2_vs_f0_cond_ci95": [
+        0.0259,
+        0.1428
+      ],
+      "dpvalid_m2_vs_m1_cond_delta_r2": 0.0081,
+      "dpvalid_m2_vs_m1_cond_ci95": [
+        -0.0903,
+        0.1173
+      ],
+      "strategy2_torque_gain_pct": 21.91,
+      "strategy2_vmax_change_pct": -1.7,
+      "strategy2_power_gain_pct": 19.83,
+      "naive_point_contact_residual_Nm": 253.68,
+      "naive_x_cop_m": 0.1706,
+      "quad_only_20_legpress_gain_100deg_pct": 15.27,
+      "quad_only_20_eta_chain_100deg": 0.764,
+      "strategy2_chain_legpress_gain_100deg_pct": 21.64,
+      "strategy2_chain_eta_chain_100deg": 0.988,
+      "strategy2_synergy_legpress_gain_100deg_pct": 21.78
+    },
+    "pillar_2_enthesis_viscoelastic_and_heterochrony": {
+      "bogaerts_deep_sup_ratio": 1.2315,
+      "k_deep": 1.1204,
+      "s1_4800N_20kNs_vm_MPa": 58.83,
+      "s1_4800N_20kNs_sf_local": 1.61,
+      "s2_4800N_20kNs_vm_MPa": 50.99,
+      "s2_4800N_20kNs_sf_local": 2.05,
+      "mvc_7661N_20kNs_vm_MPa": 92.2,
+      "mvc_7661N_20kNs_sf_local": 1.03,
+      "mvc_case2c_7661N_20kNs_vm_MPa": 79.91,
+      "mvc_case2c_7661N_20kNs_sf_local": 1.31,
+      "h1_peak_damage_ratio": 2.94,
+      "h1_peak_week": 3.0,
+      "h2_peak_damage_ratio": 1.0
+    },
+    "pillar_3_pennes_bioheat_cpe45": {
+      "malaga_n_subjects": 846,
+      "actes_n_subjects": 21,
+      "max_energy_error_J": 0.0,
+      "cont_300W_warm_peak_C": 39.854,
+      "cont_360W_temperate_peak_C": 39.807,
+      "cont_360W_temperate_t395_s": 2365.0,
+      "cont_360W_hot_humid_peak_C": 42.163,
+      "cont_360W_hot_humid_t395_s": 1350.0,
+      "d_max_temperate_300W": 1.0,
+      "d_max_warm_300W": 0.93,
+      "d_max_temperate_360W": 0.92,
+      "d_max_warm_360W": 0.74,
+      "d_max_hot_dry_360W": 0.59,
+      "d_max_hot_humid_360W": 0.65,
+      "d_max_aegis01_360W": 0.69,
+      "aegis01_loss_360W_pct": -25.0,
+      "exo_cool_hot_humid_cont_360W_W": 420
+    }
+  },
+  "master_decision_matrix": {
+    "TARGET-FORCE20": {
+      "status": "CONDITIONAL_POTENTIAL_MODEL_FEASIBLE_NOT_VALIDATED_IN_VIVO",
+      "maturity": "CONDITIONAL POTENTIAL",
+      "rationale": "Closed-chain Strategy 2 reaches +21.64% bilateral force with Case 2C SF_local=2.05 at 4800 N; extreme ballistic 100% MVC (7661 N) drops local enthesis SF to 1.31 < 1.50 without extra CSA or dF/dt cap."
+    },
+    "EXP-0061_LegPress": {
+      "status": "DATA_BLOCKED",
+      "maturity": "EVIDENCE_GATE_BLOCKED",
+      "rationale": "0/6 audited datasets pass open bilateral isometric leg press requirements; DPValid single-joint reference yields Outcome 3 INCONCLUSIVE (N=20)."
+    },
+    "TARGET-ADAPT25": {
+      "status": "HOLD_RATE_LIMITED_BY_COLLAGEN_SYNTHESIS",
+      "maturity": "CONDITIONAL POTENTIAL",
+      "rationale": "Uncoordinated +25% adaptation accelerates transient tendon damage 2.94x around week 3.0; risk eliminated (1.00x) only under tendon-paced progression H2."
+    },
+    "TARGET-CPE45": {
+      "status": "NOT_EXTERNALLY_VALIDATED_CONDITIONAL_HOLD",
+      "maturity": "MODEL_ONLY_INTERMITTENT_ENVELOPE",
+      "rationale": "Continuous 360 W breaches 39.5 C in all tested climates (temperate 20 C in 2365 s, hot-humid 32 C in 1350 s); safe over 2700 s only via intermittent pacing (D <= 0.92 at 20 C, D <= 0.65 at 32 C/80%RH) or active external cooling."
+    },
+    "AEGIS-01": {
+      "status": "CONDITIONAL_HOLD",
+      "maturity": "HOLD",
+      "rationale": "Skin barrier (-35% evaporative conductance, +2 kg) reduces temperate safe duty cycle by 14.0% at 300 W and 25.0% at 360 W, compounding BLOCKER-01."
+    },
+    "Architecture_B": {
+      "status": "DISQUALIFIED_NO_GO",
+      "maturity": "NO_GO",
+      "rationale": "Preserved from DEC-0021 (compartment syndrome, microvascular ischemia, periosteal avulsion)."
+    },
+    "Architecture_C": {
+      "status": "HOLD_BREAKTHROUGH_DEPENDENT",
+      "maturity": "BREAKTHROUGH-DEPENDENT",
+      "rationale": "Preserved from DEC-0021 (internal heat rejection and reflex latency incompatibilities)."
+    },
+    "Biological_Interventions": {
+      "status": "NO_GO",
+      "maturity": "HARD_INVARIANT",
+      "rationale": "Hard program invariant strictly enforced."
+    },
+    "MTJCore": {
+      "status": "COMPLETED_HOLD_PENDING_NEW_EVIDENCE",
+      "maturity": "COMPLETED_STANDALONE_BIOINFORMATICS",
+      "rationale": "Preserved from DEC-0023 (manuscript v1.0.3-commsbio-submission prepared, awaiting independent non-Oxford/non-Copenhagen cohort)."
+    }
+  }
+}

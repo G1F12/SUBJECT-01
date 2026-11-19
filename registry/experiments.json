@@ -1765,5 +1765,179 @@
     "limits": "Fatigue life modeled from calibrated human tendon Wöhler baselines; in vivo dynamic multi-million cycle testing under augmentation remains a theoretical safety envelope.",
     "external_validation": "CALIBRATED_WOHLER_FATIGUE_MODEL",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0061",
+    "date": "2026-11-17",
+    "name": "Transfer of Force Prediction to Bilateral Isometric Leg Press & 3-DOF Closed Kinematic Chain Compatibility",
+    "sources": [
+      "SRC-0081",
+      "SRC-0076"
+    ],
+    "design": "Programmatic admission audit of 6 candidate cohorts for bilateral isometric leg press, paired subject-cluster bootstrap (B=10,000) reference benchmark on DPValid (N=20, 125 trials), and physically closed 3-DOF sagittal lower-limb linear programming solver without pseudoinverse shortcuts.",
+    "status": "completed_bilateral_data_blocked_model_solved",
+    "model": "research/exp0061_multijoint_legpress/run_exp0061_protocol_and_chain.py",
+    "inputs": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "report": "research/exp0061_multijoint_legpress/EXPERIMENT_REPORT_RU.md",
+    "outputs": [
+      "research/exp0061_multijoint_legpress/RESULTS.json"
+    ],
+    "reproduction_command": "python research/exp0061_multijoint_legpress/run_exp0061_protocol_and_chain.py",
+    "results": {
+      "findings": [
+        "FND-0064"
+      ],
+      "negative_results": [
+        "NEG-0060"
+      ]
+    },
+    "limits": "Bilateral isometric leg press target cohort is DATA_BLOCKED (0/6 open candidates admitted). Closed-chain LP (Strategy 2 +21.64%) is MODEL_ONLY; DPValid paired bootstrap is a single-joint protocol-shift reference.",
+    "external_validation": "DATA_BLOCKED_BILATERAL_LEG_PRESS_SINGLE_JOINT_PAIRED_BOOTSTRAP",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0062",
+    "date": "2026-11-17",
+    "name": "Tendon-Enthesis Multi-Layer Viscoelastic Shear Stress Under Rapid dF/dt and Remodeling Heterochrony Hazard",
+    "sources": [
+      "SRC-0082",
+      "SRC-0080"
+    ],
+    "design": "Calibration of superficial-to-deep displacement partitioning on Bogaerts et al. (2017, N=10), 3-layer Standard Linear Solid viscoelastic shear-lag enthesis stress solver across dF/dt in 2,000..25,000 N/s, and 168-day muscle-tendon adaptation heterochrony ODE.",
+    "status": "completed",
+    "model": "research/exp0062_enthesis_viscoelastic_hazard/run_exp0062_enthesis_and_heterochrony.py",
+    "inputs": "research/cycle16/data/bogaerts/bogaerts_2017_data.csv",
+    "report": "research/exp0062_enthesis_viscoelastic_hazard/EXPERIMENT_REPORT_RU.md",
+    "outputs": [
+      "research/exp0062_enthesis_viscoelastic_hazard/RESULTS.json"
+    ],
+    "reproduction_command": "python research/exp0062_enthesis_viscoelastic_hazard/run_exp0062_enthesis_and_heterochrony.py",
+    "results": {
+      "findings": [
+        "FND-0065"
+      ],
+      "negative_results": [
+        "NEG-0061"
+      ]
+    },
+    "limits": "Viscoelastic shear-lag and 168-day collagen turnover ODE are MODEL_ONLY projections calibrated to group-level Bogaerts kinematics and Kongsgaard regional CSA without 3D transverse sub-tendon MRI.",
+    "external_validation": "CALIBRATED_BOGAERTS_LAYER_MECHANICS_MODEL_ONLY_DYNAMICS",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0063",
+    "date": "2026-11-17",
+    "name": "Multi-Compartment Cylindrical Pennes Bioheat Transfer and Intermittent CPE45 Workload Envelope",
+    "sources": [
+      "SRC-0074"
+    ],
+    "design": "4-shell cylindrical Pennes bioheat + central arterial pool backward-Euler solver over 2700 s anchored to Malaga CPET (N=846) and ACTES metabolic rates, across intermittent duty cycles D in [0.15, 1.00], 4 ambient climates, AEGIS-01 barrier penalty, and tools/cpe45.py compatibility check.",
+    "status": "completed",
+    "model": "research/exp0063_pennes_bioheat_cpe45/run_exp0063_pennes_envelope.py",
+    "inputs": "research/treadmill_cpet_2026_11_09/subject-info.csv",
+    "report": "research/exp0063_pennes_bioheat_cpe45/EXPERIMENT_REPORT_RU.md",
+    "outputs": [
+      "research/exp0063_pennes_bioheat_cpe45/RESULTS.json"
+    ],
+    "reproduction_command": "python research/exp0063_pennes_bioheat_cpe45/run_exp0063_pennes_envelope.py",
+    "results": {
+      "findings": [
+        "FND-0066"
+      ],
+      "negative_results": [
+        "NEG-0062"
+      ]
+    },
+    "limits": "Thermoregulatory dynamics over 2700 s are MODEL_ONLY; TARGET-CPE45 remains NOT EXTERNALLY VALIDATED due to absence of empirical human post-45min functional trials.",
+    "external_validation": "MALAGA_ANCHORED_PENNES_THERMAL_MODEL_CPE45_NOT_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0064",
+    "date": "2026-11-17",
+    "name": "Master Architecture A Integration and Canonical Specification Across Closed-Chain, Enthesis, and Thermal Constraints",
+    "sources": [
+      "SRC-0081",
+      "SRC-0082",
+      "SRC-0080",
+      "SRC-0074"
+    ],
+    "design": "Unified synthesis of DEC-0025 functional validation baselines with EXP-0061 (3-DOF chain & cohort audit), EXP-0062 (enthesis shear dF/dt & heterochrony), and EXP-0063 (Pennes bioheat CPE45 envelope) into Architecture A canonical specification and GO/HOLD/NO_GO adjudication matrix.",
+    "status": "completed",
+    "model": "research/architecture_a_integration/run_exp0064_master_integration.py",
+    "inputs": "research/functional_mechanics_validation/RESULTS.json",
+    "report": "research/architecture_a_integration/ARCHITECTURE_A_CANONICAL_SPECIFICATION.md",
+    "outputs": [
+      "research/architecture_a_integration/RESULTS.json"
+    ],
+    "reproduction_command": "python research/architecture_a_integration/run_exp0064_master_integration.py",
+    "results": {
+      "findings": [
+        "FND-0067"
+      ],
+      "negative_results": []
+    },
+    "limits": "Integrates empirical human anchors with MODEL_ONLY multi-physics coupling; does not substitute for empirical external validation of bilateral leg press or 2700 s endurance.",
+    "external_validation": "INTEGRATED_MODEL_SYNTHESIS",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0065",
+    "date": "2026-11-19",
+    "name": "Archive replay and equal-external-work thermal controls",
+    "sources": [
+      "SRC-0035",
+      "SRC-0074",
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082",
+      "SRC-0085"
+    ],
+    "design": "Replay EXP-0061\u20130064 in temporary outputs and compare published 360 W scenarios to constant equal-work controls at three integration steps and to a lumped storage model.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_audit.py",
+    "inputs": "research/program_evidence_audit/PROTOCOL.md",
+    "report": "research/program_evidence_audit/REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_audit.py",
+    "results": {
+      "findings": [
+        "FND-0068"
+      ],
+      "negative_results": [
+        "NEG-0063"
+      ]
+    },
+    "limits": "Model-only comparison of fixed archived inputs; no causal functional effect or human thermal threshold is validated.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0066",
+    "date": "2026-11-19",
+    "name": "Frozen Pennes out-of-domain transfer to observed esophageal temperature",
+    "sources": [
+      "SRC-0084"
+    ],
+    "design": "Compare the frozen solver with persistence for measured 5-min within-session esophageal temperature changes before fan exposure. Participant-cluster paired bootstrap and prespecified humidity sensitivity.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_thermal_transfer.py",
+    "inputs": "research/program_evidence_audit/THERMAL_TRANSFER_PROTOCOL.md",
+    "report": "research/program_evidence_audit/REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/THERMAL_TRANSFER.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_thermal_transfer.py --data-dir <Zenodo-19835255-local-directory>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0064"
+      ]
+    },
+    "limits": "6 eligible participants and 35 sessions; protocol-assigned power and assumed humidity; light cycling only, no post45 or functional profile.",
+    "external_validation": "EXTERNAL_COMPONENT_TRANSFER_FAILED_CPE45_NOT_ASSESSED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

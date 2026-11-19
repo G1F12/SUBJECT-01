@@ -1,0 +1,458 @@
+{
+  "experiment_id": "EXP-0065",
+  "classification": "MODEL_ONLY_AND_ARCHIVE_REPLAY",
+  "target_cpe45": "not_assessed",
+  "historical_head": "c3113f1c49dee47d177006dedb9e4efee9050fad",
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.1.1"
+  },
+  "protocol_sha256": "07cbcd042053cbdcee06c90823cb0195e66384e2f772ead39f620bb0eb7f42c5",
+  "audit_script_sha256": "5b56a10ed0669d1d69f326253d21372dfba3d7e21c280bfd4f6234afdd8286b3",
+  "archive_replay": {
+    "EXP-0061": {
+      "archived_path": "research/exp0061_multijoint_legpress/RESULTS.json",
+      "runner_sha256": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+      "archived_sha256": "7ead404d565772856b7efacaf4cb7e017790fa4f9ad803865a2f71b95b08f3c9",
+      "replayed_sha256": "7ead404d565772856b7efacaf4cb7e017790fa4f9ad803865a2f71b95b08f3c9",
+      "text_hash_newlines": "LF",
+      "differences_outside_tolerance": []
+    },
+    "EXP-0062": {
+      "archived_path": "research/exp0062_enthesis_viscoelastic_hazard/RESULTS.json",
+      "runner_sha256": "ac3a984b433120d6afbd1065b54daa79c7334907ae6347129400d381717f695b",
+      "archived_sha256": "491f38bb4e7d44c68be04cfdcda5568376ba3ff5bcb72647efbd8079a6f9b300",
+      "replayed_sha256": "491f38bb4e7d44c68be04cfdcda5568376ba3ff5bcb72647efbd8079a6f9b300",
+      "text_hash_newlines": "LF",
+      "differences_outside_tolerance": []
+    },
+    "EXP-0063": {
+      "archived_path": "research/exp0063_pennes_bioheat_cpe45/RESULTS.json",
+      "runner_sha256": "4feed20a8a9793b0a8817d8564f1366d91bf2d6de8ba24158b6de10699f638fb",
+      "archived_sha256": "553625c39dc028e2318b8fe57ed6426932f6bd3b09eb2a67f17621873966890a",
+      "replayed_sha256": "553625c39dc028e2318b8fe57ed6426932f6bd3b09eb2a67f17621873966890a",
+      "text_hash_newlines": "LF",
+      "differences_outside_tolerance": []
+    },
+    "EXP-0064": {
+      "archived_path": "research/architecture_a_integration/RESULTS.json",
+      "runner_sha256": "9dd6f127b817c45c814e955ad73bb096a72ad8fad15bab829e5ac3f95d1a362d",
+      "archived_sha256": "a0cf7900843a9b4049d4466b90d5cf7bdc50f7f42907467623ec201b54a37b56",
+      "replayed_sha256": "a0cf7900843a9b4049d4466b90d5cf7bdc50f7f42907467623ec201b54a37b56",
+      "text_hash_newlines": "LF",
+      "differences_outside_tolerance": []
+    }
+  },
+  "thermal": [
+    {
+      "climate": "temperate_20C_50RH",
+      "step_s": 5.0,
+      "input_duty": 0.92,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.219,
+          "peak_T_muscle_C": 40.446,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1344.9,
+          "work_J": 902125.0,
+          "lumped_peak_storage_C": 38.4699
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.218,
+          "peak_T_muscle_C": 40.438,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1344.9,
+          "work_J": 902125.0,
+          "lumped_peak_storage_C": 38.4696
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 39.807,
+          "peak_T_muscle_C": 41.131,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 39.0689
+        }
+      }
+    },
+    {
+      "climate": "temperate_20C_50RH",
+      "step_s": 2.5,
+      "input_duty": 0.92,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.213,
+          "peak_T_muscle_C": 40.438,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1344.9,
+          "work_J": 902125.0,
+          "lumped_peak_storage_C": 38.466
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.216,
+          "peak_T_muscle_C": 40.436,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1344.9,
+          "work_J": 902125.0,
+          "lumped_peak_storage_C": 38.4686
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 39.805,
+          "peak_T_muscle_C": 41.129,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 39.0676
+        }
+      }
+    },
+    {
+      "climate": "temperate_20C_50RH",
+      "step_s": 1.0,
+      "input_duty": 0.92,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.213,
+          "peak_T_muscle_C": 40.437,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1345.4,
+          "work_J": 902450.0,
+          "lumped_peak_storage_C": 38.4667
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.218,
+          "peak_T_muscle_C": 40.439,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1345.4,
+          "work_J": 902450.0,
+          "lumped_peak_storage_C": 38.4706
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 39.803,
+          "peak_T_muscle_C": 41.127,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 39.0668
+        }
+      }
+    },
+    {
+      "climate": "warm_28C_60RH",
+      "step_s": 5.0,
+      "input_duty": 0.74,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.286,
+          "peak_T_muscle_C": 40.405,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1125.3,
+          "work_J": 744500.0,
+          "lumped_peak_storage_C": 38.6792
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.288,
+          "peak_T_muscle_C": 40.347,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1125.3,
+          "work_J": 744500.0,
+          "lumped_peak_storage_C": 38.6661
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 41.337,
+          "peak_T_muscle_C": 42.728,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 40.8075
+        }
+      }
+    },
+    {
+      "climate": "warm_28C_60RH",
+      "step_s": 2.5,
+      "input_duty": 0.74,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.284,
+          "peak_T_muscle_C": 40.397,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1126.4,
+          "work_J": 745312.5,
+          "lumped_peak_storage_C": 38.6754
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.294,
+          "peak_T_muscle_C": 40.353,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1126.4,
+          "work_J": 745312.5,
+          "lumped_peak_storage_C": 38.672
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 41.336,
+          "peak_T_muscle_C": 42.726,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 40.8056
+        }
+      }
+    },
+    {
+      "climate": "warm_28C_60RH",
+      "step_s": 1.0,
+      "input_duty": 0.74,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.283,
+          "peak_T_muscle_C": 40.393,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1127.1,
+          "work_J": 745800.0,
+          "lumped_peak_storage_C": 38.6726
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.297,
+          "peak_T_muscle_C": 40.357,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1127.1,
+          "work_J": 745800.0,
+          "lumped_peak_storage_C": 38.6755
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 41.335,
+          "peak_T_muscle_C": 42.725,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 40.8045
+        }
+      }
+    },
+    {
+      "climate": "hot_dry_35C_30RH",
+      "step_s": 5.0,
+      "input_duty": 0.59,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.392,
+          "peak_T_muscle_C": 40.451,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9562
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.448,
+          "peak_T_muscle_C": 40.384,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9646
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.774,
+          "peak_T_muscle_C": 44.225,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 42.4589
+        }
+      }
+    },
+    {
+      "climate": "hot_dry_35C_30RH",
+      "step_s": 2.5,
+      "input_duty": 0.59,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.391,
+          "peak_T_muscle_C": 40.444,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9517
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.447,
+          "peak_T_muscle_C": 40.383,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9634
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.773,
+          "peak_T_muscle_C": 44.223,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 42.4568
+        }
+      }
+    },
+    {
+      "climate": "hot_dry_35C_30RH",
+      "step_s": 1.0,
+      "input_duty": 0.59,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.388,
+          "peak_T_muscle_C": 40.441,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9491
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.446,
+          "peak_T_muscle_C": 40.383,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 2e-06,
+          "mean_heat_generated_W": 951.0,
+          "work_J": 619375.0,
+          "lumped_peak_storage_C": 38.9626
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.772,
+          "peak_T_muscle_C": 44.222,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 42.4555
+        }
+      }
+    },
+    {
+      "climate": "hot_humid_32C_80RH",
+      "step_s": 5.0,
+      "input_duty": 0.65,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.394,
+          "peak_T_muscle_C": 40.458,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1016.6,
+          "work_J": 666500.0,
+          "lumped_peak_storage_C": 38.787
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.399,
+          "peak_T_muscle_C": 40.378,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1016.6,
+          "work_J": 666500.0,
+          "lumped_peak_storage_C": 38.7766
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.163,
+          "peak_T_muscle_C": 43.587,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 41.7395
+        }
+      }
+    },
+    {
+      "climate": "hot_humid_32C_80RH",
+      "step_s": 2.5,
+      "input_duty": 0.65,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.393,
+          "peak_T_muscle_C": 40.451,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1017.8,
+          "work_J": 667312.5,
+          "lumped_peak_storage_C": 38.7832
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.405,
+          "peak_T_muscle_C": 40.384,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1017.8,
+          "work_J": 667312.5,
+          "lumped_peak_storage_C": 38.7825
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.161,
+          "peak_T_muscle_C": 43.585,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 41.7375
+        }
+      }
+    },
+    {
+      "climate": "hot_humid_32C_80RH",
+      "step_s": 1.0,
+      "input_duty": 0.65,
+      "runs": {
+        "intermittent": {
+          "peak_T_core_C": 39.392,
+          "peak_T_muscle_C": 40.448,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1018.0,
+          "work_J": 667475.0,
+          "lumped_peak_storage_C": 38.7805
+        },
+        "equal_work_constant": {
+          "peak_T_core_C": 39.405,
+          "peak_T_muscle_C": 40.385,
+          "passes_core_39_5C_gate": true,
+          "energy_balance_error_J": 1e-06,
+          "mean_heat_generated_W": 1018.0,
+          "work_J": 667475.0,
+          "lumped_peak_storage_C": 38.7833
+        },
+        "full_power_constant": {
+          "peak_T_core_C": 42.16,
+          "peak_T_muscle_C": 43.584,
+          "passes_core_39_5C_gate": false,
+          "energy_balance_error_J": 0.0,
+          "mean_heat_generated_W": 1442.3,
+          "work_J": 972000.0,
+          "lumped_peak_storage_C": 41.7363
+        }
+      }
+    }
+  ]
+}

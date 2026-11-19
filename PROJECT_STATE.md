@@ -1,3 +1,34 @@
+# SUBJECT-01 — статус после EXP-0065/0066 и DEC-0027 (19.11.2026)
+
+[Отчёт, матрица исполнения и решение](research/program_evidence_audit/REPORT.md). Архивы EXP-0061–0064 воспроизведены побайтно. При равной механической работе тепловой эффект структуры нагрузки мал и частично чувствителен к шагу. Замороженная тепловая модель уступила простому контролю на отдельной внешней выборке лёгкого велоэргометра (NEG-0064).
+
+Архитектура A сохраняет условный потенциал. Совместная валидация `HOLD` из-за отсутствия связанных индивидуальных наблюдений и провала ограниченного переноса тепловой конфигурации. Жим `DATA_BLOCKED`, FORCE20 модельный, ADAPT25 `HOLD`, CPE45 `NOT EXTERNALLY VALIDATED`, вмешательства `NO_GO`. База работ — `c3113f1`, ветка `codex/subject01-program-evidence`. Решения ниже сохранены как история.
+
+---
+
+# SUBJECT-01 — состояние после полного завершения MASTER_ROADMAP и протокола EXP-0061 (EXP-0061..0064, FND-0064..0067, NEG-0060..0062, DEC-0026), 17.11.2026
+
+Ветка: `research/functional-mechanics-independent-validation` · Базовый коммит: `c3113f1` (`EXP-0061..0064` выполнены поверх `c3113f1`).
+
+- **Навигация по материалам завершения плана и мастер-дорожной карты:**
+  * [Каноническая спецификация Архитектуры А (EXP-0064)](file:///D:/SUBJECT-01/research/architecture_a_integration/ARCHITECTURE_A_CANONICAL_SPECIFICATION.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/architecture_a_integration/RESULTS.json)
+  * [EXP-0061: Многосуставной жим, аудит допуска когорт и парный бутстрэп DPValid](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/RESULTS.json)
+  * [EXP-0062: Вязкоупругий энтезис ($dF/dt$) и гетерохрония адаптации](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/RESULTS.json)
+  * [EXP-0063: 4-слойная биотермодинамика Пеннеса и огибающая CPE45 (2700 с)](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/RESULTS.json)
+  * [PLAN.md](file:///D:/SUBJECT-01/PLAN.md) · [MASTER_ROADMAP.md](file:///D:/SUBJECT-01/MASTER_ROADMAP.md)
+- **Ключевые результаты и решения (DEC-0026):**
+  * **EXP-0061 (Двусторонний жим и 3-DOF цепь):** Внешняя проверка двустороннего изометрического жима получила статус `Outcome 4: DATA_BLOCKED` (`0/6` когорт допущено, `NEG-0060`). На односуставном референсе `DPValid` ($N=20$) парный кластерный бутстрэп ($B=10\,000$) дал $\Delta R^2_{\text{pooled}} = +0.0735$ (`[+0.0259, +0.1428]`) к `Baseline F0` и `+0.0081` (`[-0.0903, +0.1173]`) к `M1` (`Outcome 3: INCONCLUSIVE` к $\Delta_{\min}=0.08$). 3-DOF ЛП равновесия (`MODEL_ONLY`) показало передачу $+21.64\%$ для согласованной Стратегии 2 ($\eta_{\text{chain}} = 0.988$) против $+15.27\%$ только при усилении квадрицепса (`FND-0064`).
+  * **EXP-0062 (Энтезис $dF/dt$ и гетерохрония):** Послойная калибровка Bogaerts ($N=10$, глубокий/поверхностный сдвиг `1.2315`) и вязкоупругая модель при $20\,000\text{ Н/с}$ показали $SF_{\text{local}} = 2.05$ для Case 2C при $4800\text{ Н}$, но $92.20 > 85\text{ МПа}$ без адаптации и $SF_{\text{local}} = 1.31 < 1.50$ при баллистическом 100% MVC $7661\text{ Н}$ (`FND-0065`). Ускорение адаптации `TARGET-ADAPT25` (H1) создаёт пик риска $2.94\times$ на 3.0-й неделе, купируемый только режимом по сухожилию H2 (`NEG-0061`).
+  * **EXP-0063 (Биотермодинамика Пеннеса 2700 с):** С замыканием энергии $0.00\text{ Дж}$ доказан перегрев при непрерывной мощности $360\text{ Вт}$ во всех климатах $\ge 20^\circ\text{C}$ за `1240–2365 с`; определена прерывистая огибающая $D_{\max} = 0.92\dots 0.59$ (`FND-0066`) и подтверждён тепловой штраф `AEGIS-01` ($-25.0\%$ к $D_{\max}$, `NEG-0062`).
+  * **EXP-0064 (Мастер-интеграция и DEC-0026):** Все 4 столпа `MASTER_ROADMAP.md` сведены в каноническую спецификацию (`FND-0067`).
+- **Инварианты программы (строго соблюдены):**
+  * `TARGET-CPE45 = NOT EXTERNALLY VALIDATED`
+  * `BIOLOGICAL INTERVENTIONS = NO_GO`
+  * `STRENGTH +20% = THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION` (не валидирована *in vivo*).
+- **Валидация репозитория:** Реестры `hypotheses=11`, `experiments=64`, `findings=67`, `negative_results=62`, `decisions=26`, `issues=26`, `sources=83`.
+
+---
+
 # SUBJECT-01 — состояние после комплексной независимой ревалидации биомеханики и пределов сухожилий (Functional Mechanics Independent Revalidation), 14.11.2026
 
 Ветка: `research/functional-mechanics-independent-validation` · База: `775a48b` (Cycle 19).

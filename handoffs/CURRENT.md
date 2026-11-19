@@ -1,3 +1,30 @@
+# SUBJECT-01 — передача работы после DEC-0027 (19.11.2026)
+
+[Прогоны, условия допуска и вердикт](../research/program_evidence_audit/REPORT.md). Зафиксированы EXP-0065/0066, FND-0068, NEG-0063/0064 и ISS-0027. Исходный HEAD `c3113f1`, ветка `codex/subject01-program-evidence`. Точные хеши и воспроизведение в отчёте.
+
+Для следующего независимого шага нужны индивидуальный жим с геометрией и калиброванным усилием, температурное наблюдение исходного состояния с фактической механической работой и средой, затем общий ряд утомления и post45. Полная батарея на одной когорте остаётся блокирующей зависимостью. История ниже.
+
+---
+
+# SUBJECT-01 — состояние после полного завершения MASTER_ROADMAP и протокола EXP-0061 (EXP-0061..0064, FND-0064..0067, NEG-0060..0062, DEC-0026), 17.11.2026
+
+Ветка: `research/functional-mechanics-independent-validation` · Базовый коммит: `c3113f1` (`EXP-0061..0064` выполнены поверх `c3113f1`).
+
+- **Навигация по завершённым артефактам:**
+  * [Каноническая спецификация Архитектуры А (EXP-0064)](file:///D:/SUBJECT-01/research/architecture_a_integration/ARCHITECTURE_A_CANONICAL_SPECIFICATION.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/architecture_a_integration/RESULTS.json)
+  * [EXP-0061: Перенос на двусторонний жим и 3-DOF цепь](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0061_multijoint_legpress/RESULTS.json)
+  * [EXP-0062: Вязкоупругий энтезис ($dF/dt$) и гетерохрония](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0062_enthesis_viscoelastic_hazard/RESULTS.json)
+  * [EXP-0063: 4-слойная биотермодинамика Пеннеса 2700 с](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/EXPERIMENT_REPORT_RU.md) · [Результаты JSON](file:///D:/SUBJECT-01/research/exp0063_pennes_bioheat_cpe45/RESULTS.json)
+  * [PLAN.md](file:///D:/SUBJECT-01/PLAN.md) · [MASTER_ROADMAP.md](file:///D:/SUBJECT-01/MASTER_ROADMAP.md)
+- **Сводный статус (`DEC-0026`):**
+  * **EXP-0061 (двусторонний жим):** `DATA_BLOCKED` (0/6 открытых когорт); односуставный бутстрэп на DPValid `INCONCLUSIVE` к $\Delta_{\min}=0.08$; замкнутое 3-DOF ЛП показало `+21.64%` силы на платформе для Стратегии 2 цепи ($\eta_{\text{chain}} = 0.988$).
+  * **EXP-0062 (`BLOCKER-02/03`):** `TARGET-ADAPT25 = HOLD_RATE_LIMITED_BY_COLLAGEN_SYNTHESIS` (`2.94x` пик риска при H1, `1.00x` при H2); на пике $100\%$ MVC ($7661\text{ Н}, 20\text{ кН/с}$) локальный сдвиг энтезиса снижает $SF_{\text{local}}$ с $1.63$ (номин.) до $1.31$ в Case 2C ($79.91\text{ МПа} < 85\text{ МПа}$).
+  * **EXP-0063 (`BLOCKER-01`):** Непрерывные `360 Вт` невыносимы во всех климатах $\ge 20^\circ\text{C}$; безопасно прерывистое квантование ($D_{\max}=0.92\dots 0.59$); `AEGIS-01 = CONDITIONAL_HOLD` ($-25.0\%$ к $D_{\max}$).
+  * **Инварианты:** `TARGET-CPE45 = NOT EXTERNALLY VALIDATED`, `BIOLOGICAL INTERVENTIONS = NO_GO`, `STRENGTH +20% = THEORETICALLY_FEASIBLE_WITH_COORDINATED_TENDON_ADAPTATION`.
+- **Реестры:** `hypotheses=11`, `experiments=64`, `findings=67`, `negative_results=62`, `decisions=26`, `issues=26`, `sources=83`.
+
+---
+
 # SUBJECT-01 — состояние после комплексной независимой ревалидации биомеханики и пределов сухожилий (Functional Mechanics Independent Revalidation), 14.11.2026
 
 Ветка: `research/functional-mechanics-independent-validation` · База: `775a48b` (Cycle 19).
