@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0083 / FND-0081: аудит реакции опоры и чувствительности к моментам платформы. См. research/program_evidence_audit/MOMENT_DIAGNOSTIC_REPORT.md.
+
 EXP-0082 / NEG-0068: независимая реконструкция для аудита шкалы момента; ISS-0028 остаётся открытым. См. research/program_evidence_audit/MOMENT_SCALE_REPORT.md.
 
 EXP-0081 / NEG-0067 / ISS-0028: проверка динамической модели приседания и аудит единиц момента. См. research/program_evidence_audit/SQUAT_TRANSFER_REPORT.md.

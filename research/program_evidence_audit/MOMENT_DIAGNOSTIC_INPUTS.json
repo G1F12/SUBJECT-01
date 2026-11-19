@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "path": "raw/AB01/CSV_Data/squats_1/GroundFrame_GRFs.csv",
+      "sha256": "1be742c837350c955636d9b6b424022203a67b658f97a1c62e1baa1f0d00996c",
+      "size": 1185625,
+      "archive_url": "https://repository.gatech.edu/server/api/core/bitstreams/0c050d51-54f0-4ccf-9bcd-65521c0e20c3/content",
+      "archive_size": 28559821099
+    },
+    {
+      "path": "raw/AB02/CSV_Data/squats_1/GroundFrame_GRFs.csv",
+      "sha256": "d3339d5a555abb164c4961db97b26382454b5ff62f6fa055264e5750d9da65a4",
+      "size": 968205,
+      "archive_url": "https://repository.gatech.edu/server/api/core/bitstreams/0c050d51-54f0-4ccf-9bcd-65521c0e20c3/content",
+      "archive_size": 28559821099
+    },
+    {
+      "path": "files/AB01/squats_1_0lbs/AB01_squats_1_0lbs_grf.csv",
+      "sha256": "12d639eff0eb3c4a77d7ede644fbe3024f3028b140d84f54d85ebf93bca06d17",
+      "size": 281397,
+      "archive_url": "https://repository.gatech.edu/server/api/core/bitstreams/03f9679f-28ce-4d8b-b195-4b3b1aa4adc9/content",
+      "archive_size": 13378286332
+    },
+    {
+      "path": "files/AB02/squats_1_0lbs/AB02_squats_1_0lbs_grf.csv",
+      "sha256": "95523d833a2615d5e7988ce2446332980efe235508bb07bf2015b8fa94e60b31",
+      "size": 366555,
+      "archive_url": "https://repository.gatech.edu/server/api/core/bitstreams/03f9679f-28ce-4d8b-b195-4b3b1aa4adc9/content",
+      "archive_size": 13378286332
+    }
+  ]
+}

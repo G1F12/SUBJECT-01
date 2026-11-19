@@ -2366,5 +2366,31 @@
     "limits": "Two subjects, exact author ID configuration unknown, discrepancy in AB02. No resolution of source moment units or human augmentation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0083",
+    "date": "2026-11-20",
+    "name": "Squat force provenance and platform moment sensitivity",
+    "sources": [
+      "SRC-0089"
+    ],
+    "design": "Compare exported and force-plate vertical forces on aligned frames, then recompute inverse dynamics with all platform moments or vertical-only moments and report four frame masks.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_moment_diagnostic.py",
+    "inputs": "research/program_evidence_audit/MOMENT_DIAGNOSTIC_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MOMENT_DIAGNOSTIC_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MOMENT_DIAGNOSTIC_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_moment_diagnostic.py <source-root> <EXP-0082-outputs> <new-output-directory>",
+    "results": {
+      "findings": [
+        "FND-0081"
+      ],
+      "negative_results": []
+    },
+    "limits": "Two previously inspected participants, scenario B assumes an unverified convention for plate moments; no physical validation or biological effects.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -676,5 +676,14 @@
     "statement": "For 23 postmenopausal women, participant-held-out linear description of velocity loss by retrospectively known completed-set percentage had participant-weighted MAE 9.16 versus 11.86 percentage points for a constant; paired gain CI [1.60, 3.80]. Final velocity loss ranged 11.9–59.8%. Not an online predictor or architecture validation.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0081",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0083",
+    "title": "Squat moment scale is sensitive to platform moment interpretation",
+    "statement": "For AB01 and AB02 the ratio of reconstructed/source knee moment slope to mass changes from 1.089 and 0.574 using all plate-moment components to 0.990 and 0.952 when horizontal components are zeroed, with correlations 0.99987 and 0.99994. This conditional finding does not establish which platform moment convention is correct; ISS-0028 remains open.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

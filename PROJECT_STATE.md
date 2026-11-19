@@ -1,3 +1,5 @@
+EXP-0083 / FND-0081: чувствительность реконструированного момента к трактовке компонентов платформы; ISS-0028 открыт. См. research/program_evidence_audit/MOMENT_DIAGNOSTIC_REPORT.md.
+
 EXP-0082 / NEG-0068: реконструкция кинематики и момента двух участников; вопрос единиц ISS-0028 не закрыт. См. research/program_evidence_audit/MOMENT_SCALE_REPORT.md.
 
 EXP-0081 / NEG-0067 / ISS-0028: проверка динамической регрессии и переноса нагрузки, выявлено расхождение единиц момента источника. См. research/program_evidence_audit/SQUAT_TRANSFER_REPORT.md.
