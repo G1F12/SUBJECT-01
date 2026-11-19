@@ -284,5 +284,22 @@
       "DEC-0027"
     ],
     "required_inputs": "Measured pre-effort temperature/initialization, mechanical work and environment with held-out participants; separately, a synchronized multi-outcome cohort for the programme gate."
+  },
+  {
+    "id": "ISS-0028",
+    "date": "2026-11-20",
+    "title": "Scherpereel processed moment scale is inconsistent across source documentation",
+    "status": "open",
+    "priority": "high",
+    "description": "Source README and article table label moment Nm; published plotting code labels loaded moment Nm/kg with no visible scaling. Numeric scale cannot be promoted to physical moment or tendon gates until provenance is clarified.",
+    "related_experiments": [
+      "EXP-0081"
+    ],
+    "related_issues": [
+      "ISS-0021",
+      "ISS-0023",
+      "ISS-0025"
+    ],
+    "required_inputs": "Author processing code or matching time-aligned raw OpenSim inverse dynamics and processed CSV with known participant mass; verify signs and scaling on several trials."
   }
 ]

@@ -536,5 +536,13 @@
     "title": "Exercise-rest cognitive response contrasts inconclusive",
     "statement": "For 71 participants, mean paired exercise-minus-rest change in correct-response latency was +2.02 ms, bootstrap CI [-7.10,11.59], and accuracy change -0.0041, CI [-0.0221,0.0106]. Neither superiority nor equivalence is established.",
     "reason": "Both intervals include zero, and prespecified functional equivalence margins are absent. This task does not evaluate locomotion or 45-minute performance."
+  },
+  {
+    "id": "NEG-0067",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0081",
+    "title": "Adding knee velocity does not improve the tested linear moment model",
+    "statement": "On 12 held-out participants, angle-minus-angle-and-velocity MAE differences in source units had bootstrap 95% CIs [-0.000798,0.000089] for 0 lb and [-0.001143,-0.000092] for 25 lb. Inverse-dynamics moment units remain unresolved; ISS-0028.",
+    "reason": "Limited to two simple linear models, a single young cohort and task; no inference that dynamic effects do not exist."
   }
 ]

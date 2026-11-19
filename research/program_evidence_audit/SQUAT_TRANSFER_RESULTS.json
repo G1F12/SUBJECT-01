@@ -1,0 +1,50 @@
+{
+  "experiment_id": "EXP-0081",
+  "classification": "EXPLORATORY_INVERSE_DYNAMICS",
+  "source_archive_md5_publisher_only": "3d8e5dbd208da9c0030c6d117e2e33a1",
+  "manifest_sha256_lf": "7ee55ff2fef9e166afb2e547811253aa6d951badadf4c783671654a3a81b04f2",
+  "protocol_sha256_lf": "43f1c6bd1ea9f9aa133ba80d5528fa4723277c5a15082751d30c53f0734a7ee8",
+  "runner_sha256_lf": "b058e327326959bdd26524472ecd3c34d3a554b9e84dafe8f2e8b3474d473635",
+  "retrieval_sha256_lf": "59d82012643f361780f3ef9125f46346d81225cb74f2a48f48c9150fe893ab1a",
+  "moment_units_status": "UNRESOLVED_source_table_Nm_plot_code_Nm_per_kg",
+  "participants_eligible": 12,
+  "exclusions": [],
+  "held_out_0lbs": {
+    "participants": 12,
+    "eligible_downsampled_frames": 2335,
+    "mae_constant_angle_dynamic_source_units": [
+      0.4104712822397931,
+      0.27045989039002244,
+      0.27076562660920506
+    ],
+    "bias_constant_angle_dynamic_source_units": [
+      -1.2657698963044102e-15,
+      -0.0009088558321522696,
+      -0.0009216964648538281
+    ],
+    "paired_gain_angle_minus_dynamic_source_units": -0.00030573621918262434,
+    "paired_bootstrap_ci95_source_units": [
+      -0.0007979266243654482,
+      8.947732568820293e-05
+    ]
+  },
+  "held_out_25lbs": {
+    "participants": 12,
+    "eligible_downsampled_frames": 2557,
+    "mae_constant_angle_dynamic_source_units": [
+      0.43569949626688703,
+      0.28769534177023626,
+      0.2882743552484356
+    ],
+    "bias_constant_angle_dynamic_source_units": [
+      -0.025586015091282378,
+      -0.009354459739672574,
+      -0.00932331971429026
+    ],
+    "paired_gain_angle_minus_dynamic_source_units": -0.0005790134781993214,
+    "paired_bootstrap_ci95_source_units": [
+      -0.0011430532859261306,
+      -9.151902631567229e-05
+    ]
+  }
+}

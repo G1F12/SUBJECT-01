@@ -1523,5 +1523,25 @@
       "access": "Open CSV and metadata checked, publisher MD5 matched; full article and measurement audit pending.",
       "scope": "Retrospective percent velocity loss in postmenopausal women; no kinetics or architecture effect."
     }
+  },
+  {
+    "id": "SRC-0089",
+    "date": "2026-11-20",
+    "name": "Scherpereel et al. multiactivity lower-limb biomechanics",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/SQUAT_TRANSFER_REPORT.md",
+    "doi": "10.35090/gatech/70296",
+    "url": "https://repository.gatech.edu/handle/1853/70296",
+    "calibration_review": {
+      "access": "CC BY 4.0. Sampled 96 CSV records via range with CRC and SHA256; complete ZIP MD5 not checked.",
+      "scope": "12 participants; inverse dynamics outputs, units conflicting between article/README and plotting code; ISS-0028."
+    },
+    "external_provenance": {
+      "article_doi": "10.1038/s41597-023-02840-6",
+      "archive_size": 13378286332,
+      "archive_md5_publisher_only": "3d8e5dbd208da9c0030c6d117e2e33a1",
+      "license": "CC BY 4.0"
+    }
   }
 ]

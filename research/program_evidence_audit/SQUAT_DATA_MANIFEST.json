@@ -1,0 +1,583 @@
+{
+  "source": "https://repository.gatech.edu/server/api/core/bitstreams/03f9679f-28ce-4d8b-b195-4b3b1aa4adc9/content",
+  "archive_size": 13378286332,
+  "archive_md5_publisher_only": "3d8e5dbd208da9c0030c6d117e2e33a1",
+  "files": [
+    {
+      "path": "AB01/squats_1_0lbs/AB01_squats_1_0lbs_activity_flag.csv",
+      "size": 28626,
+      "crc32": "84d53bb1",
+      "sha256": "22179b3bd01202352a184981183e544a13a2319c0ba29969b61b600eb08b95a4"
+    },
+    {
+      "path": "AB01/squats_1_0lbs/AB01_squats_1_0lbs_angle.csv",
+      "size": 385740,
+      "crc32": "67f09c14",
+      "sha256": "eeda45487384755682226d0f86440d4186f3d363e0fcba1a9cd5b515c160cff4"
+    },
+    {
+      "path": "AB01/squats_1_0lbs/AB01_squats_1_0lbs_moment_filt.csv",
+      "size": 590116,
+      "crc32": "b8479741",
+      "sha256": "9e8c8cea8a92e3c4b2eb9e3ddea69acebe7b1dbbcba6f218d3913aba4659eb2a"
+    },
+    {
+      "path": "AB01/squats_1_0lbs/AB01_squats_1_0lbs_velocity.csv",
+      "size": 543499,
+      "crc32": "da4aa0f8",
+      "sha256": "638ad76047ae0222ff54343e98a9d6abb9701d0e0a81b4f26f83b0ba85931dcd"
+    },
+    {
+      "path": "AB01/squats_1_25lbs/AB01_squats_1_25lbs_activity_flag.csv",
+      "size": 32345,
+      "crc32": "f4f80413",
+      "sha256": "80ca404b937a203f2c78557ff8a03eb21a133babae03d271b83346e300b1f0c7"
+    },
+    {
+      "path": "AB01/squats_1_25lbs/AB01_squats_1_25lbs_angle.csv",
+      "size": 462589,
+      "crc32": "090eb023",
+      "sha256": "a0813ac6baa5fbfe7bed6f695e228ea5729985b0e89dd4ff43ac3c80b4eccb49"
+    },
+    {
+      "path": "AB01/squats_1_25lbs/AB01_squats_1_25lbs_moment_filt.csv",
+      "size": 705547,
+      "crc32": "1f99e470",
+      "sha256": "c5fa9ea5e1df3be2224670f45136ff26740c9296c2299f06663a1c779b910f3c"
+    },
+    {
+      "path": "AB01/squats_1_25lbs/AB01_squats_1_25lbs_velocity.csv",
+      "size": 650489,
+      "crc32": "d010e198",
+      "sha256": "6c5224e8e30439a4508dd3143e1b199e9530b1150d8cd3e99e5a746e18be5192"
+    },
+    {
+      "path": "AB02/squats_1_0lbs/AB02_squats_1_0lbs_activity_flag.csv",
+      "size": 33662,
+      "crc32": "827bdbc4",
+      "sha256": "f63c663b5e384c1ce4fa2b8796dca192d96f39b99980fcaf851bcd10f5d6a6bf"
+    },
+    {
+      "path": "AB02/squats_1_0lbs/AB02_squats_1_0lbs_angle.csv",
+      "size": 450984,
+      "crc32": "1ba09d56",
+      "sha256": "5139c2955a0223e96cb4828c651100f628525d82e8b3fec93c759d7afe329765"
+    },
+    {
+      "path": "AB02/squats_1_0lbs/AB02_squats_1_0lbs_moment_filt.csv",
+      "size": 692285,
+      "crc32": "7943bcb4",
+      "sha256": "a4ae2180944c59cff5f74268bf22a2d3289383ddecbf7c0eeb2e6255fc9d9fb6"
+    },
+    {
+      "path": "AB02/squats_1_0lbs/AB02_squats_1_0lbs_velocity.csv",
+      "size": 636934,
+      "crc32": "28e9e35d",
+      "sha256": "2ee5fe0a95e658a990e19ab224f49d8fb2029af61da126f689fbea324e465fa6"
+    },
+    {
+      "path": "AB02/squats_1_25lbs/AB02_squats_1_25lbs_activity_flag.csv",
+      "size": 32507,
+      "crc32": "39409ba7",
+      "sha256": "b6d22fb1b3ee8d498258409c7f500e3fa441920736b43ecbdb232081177344da"
+    },
+    {
+      "path": "AB02/squats_1_25lbs/AB02_squats_1_25lbs_angle.csv",
+      "size": 459191,
+      "crc32": "b48e786a",
+      "sha256": "d75bbe3c24811a9cfa8d96e53f37e0f7928cf6255a31d6c06802c2ae40f3fdea"
+    },
+    {
+      "path": "AB02/squats_1_25lbs/AB02_squats_1_25lbs_moment_filt.csv",
+      "size": 701612,
+      "crc32": "a01ce6d5",
+      "sha256": "a224267d63e6a292e4d77be349d8efce96cf42407bf2d4a0c853916233f1cf0d"
+    },
+    {
+      "path": "AB02/squats_1_25lbs/AB02_squats_1_25lbs_velocity.csv",
+      "size": 647691,
+      "crc32": "8c31efe4",
+      "sha256": "4d72ec74b26f8c9b68c3ea3fdcfbaaaed3610ea3d038de4c6f18f5bf1221047d"
+    },
+    {
+      "path": "AB03/squats_1_0lbs/AB03_squats_1_0lbs_activity_flag.csv",
+      "size": 29769,
+      "crc32": "064d96f9",
+      "sha256": "2370091e80794a8ae43626374c8095736c7bf359d35965f261c71be6770f1846"
+    },
+    {
+      "path": "AB03/squats_1_0lbs/AB03_squats_1_0lbs_angle.csv",
+      "size": 390458,
+      "crc32": "cdea9c9f",
+      "sha256": "4c73d35c052522d60e866b7d0c1e3264792068acbec840ace188bbe321bb0f42"
+    },
+    {
+      "path": "AB03/squats_1_0lbs/AB03_squats_1_0lbs_moment_filt.csv",
+      "size": 609700,
+      "crc32": "a83f14d9",
+      "sha256": "f48efe8cfb099e8d8dbbdf960ec2dab8548b6da122d71a089c270d5c61369cac"
+    },
+    {
+      "path": "AB03/squats_1_0lbs/AB03_squats_1_0lbs_velocity.csv",
+      "size": 564320,
+      "crc32": "d465ac5e",
+      "sha256": "eb8b92b45bbe5510b12522b40ae89cb0593df2ed7e7cb94c3988cd03fb2d552b"
+    },
+    {
+      "path": "AB03/squats_1_25lbs/AB03_squats_1_25lbs_activity_flag.csv",
+      "size": 30257,
+      "crc32": "fa774d1a",
+      "sha256": "fb426b4d53562f1a08f8df986129e6fce3ad36b54bca86228e5070b66427a69f"
+    },
+    {
+      "path": "AB03/squats_1_25lbs/AB03_squats_1_25lbs_angle.csv",
+      "size": 417748,
+      "crc32": "0c82a974",
+      "sha256": "9dc4e6c542c4468f8a587d451fa0d4351ac22eab8757c33095a7587b4e320589"
+    },
+    {
+      "path": "AB03/squats_1_25lbs/AB03_squats_1_25lbs_moment_filt.csv",
+      "size": 652500,
+      "crc32": "bb25756f",
+      "sha256": "a2678821fcb85aa4ace686154386493ce1ec54b78521aebfcb52572bb359ccb6"
+    },
+    {
+      "path": "AB03/squats_1_25lbs/AB03_squats_1_25lbs_velocity.csv",
+      "size": 605343,
+      "crc32": "c977f2ec",
+      "sha256": "ce35e4f4310dd967b6a3c6c6f4fe25d36789f81df8f5373cfe94e37e061f2b5d"
+    },
+    {
+      "path": "AB05/squats_1_25lbs/AB05_squats_1_25lbs_activity_flag.csv",
+      "size": 52937,
+      "crc32": "b974da12",
+      "sha256": "426356e9a7721f2031ab0510bd0e2d636515f38f426efeca31037056ef2c1c8c"
+    },
+    {
+      "path": "AB05/squats_1_25lbs/AB05_squats_1_25lbs_angle.csv",
+      "size": 719193,
+      "crc32": "cc5d337f",
+      "sha256": "86df56e0040cdb573019b642ad8a189f1d4e97d4fec64efe9d2032d002f51843"
+    },
+    {
+      "path": "AB05/squats_1_25lbs/AB05_squats_1_25lbs_moment_filt.csv",
+      "size": 1139922,
+      "crc32": "f781afca",
+      "sha256": "1997048856d9e9da7520ced4438d2418d9e1986efd801a0f3f25adf963fc728d"
+    },
+    {
+      "path": "AB05/squats_1_25lbs/AB05_squats_1_25lbs_velocity.csv",
+      "size": 1051349,
+      "crc32": "b58556d9",
+      "sha256": "2ba053801d9eebfe43e025c11db53b356cae00a1d142f61abcecb911471a6317"
+    },
+    {
+      "path": "AB05/squats_2_0lbs/AB05_squats_2_0lbs_activity_flag.csv",
+      "size": 34633,
+      "crc32": "14826a30",
+      "sha256": "173404bc8a7f859f7f84798bb91352932113b836b81721d10b96cbdba3971617"
+    },
+    {
+      "path": "AB05/squats_2_0lbs/AB05_squats_2_0lbs_angle.csv",
+      "size": 477738,
+      "crc32": "e241bb4c",
+      "sha256": "3579ed2494ae831361b9718df1f6cc3dc9df1b51878a436c5bdebca061d75bf3"
+    },
+    {
+      "path": "AB05/squats_2_0lbs/AB05_squats_2_0lbs_moment_filt.csv",
+      "size": 761920,
+      "crc32": "4a261162",
+      "sha256": "58affbc6fdd138c5d6ad644ffb189666292397b37e4a25258f67c434e0e90038"
+    },
+    {
+      "path": "AB05/squats_2_0lbs/AB05_squats_2_0lbs_velocity.csv",
+      "size": 695021,
+      "crc32": "3802a53a",
+      "sha256": "edeb0f7e2dcabfb500b50f5ba6df86d6cec91a71ea70cb9c8ca7c8d41d81ea0e"
+    },
+    {
+      "path": "AB06/squats_1_0lbs/AB06_squats_1_0lbs_activity_flag.csv",
+      "size": 59513,
+      "crc32": "a2d1221c",
+      "sha256": "bd01fa354ee6bf6b5943354d429ea684981a6821ebe5c33051e93ca96ace194a"
+    },
+    {
+      "path": "AB06/squats_1_0lbs/AB06_squats_1_0lbs_angle.csv",
+      "size": 791331,
+      "crc32": "5c562bfd",
+      "sha256": "6a9f4bb42a01b5260b4db3bb483976774f4dfa7955704ddb3a0b44e79f5e04b3"
+    },
+    {
+      "path": "AB06/squats_1_0lbs/AB06_squats_1_0lbs_moment_filt.csv",
+      "size": 1222204,
+      "crc32": "0ae8131f",
+      "sha256": "f0db02336e47f4473346a967731e1a0db50fdccb882c160b8aba461af85d4f90"
+    },
+    {
+      "path": "AB06/squats_1_0lbs/AB06_squats_1_0lbs_velocity.csv",
+      "size": 1126680,
+      "crc32": "b0c6adc9",
+      "sha256": "898a88890e31c923b9f79ea443f393f38ef0f15fdc7060382ab2ab4a51addd30"
+    },
+    {
+      "path": "AB06/squats_1_25lbs/AB06_squats_1_25lbs_activity_flag.csv",
+      "size": 59801,
+      "crc32": "4dca680f",
+      "sha256": "c86439e3c4808ba6f63c448b1cabae36ef94f1920753b6a8fa2d5c1948ec2775"
+    },
+    {
+      "path": "AB06/squats_1_25lbs/AB06_squats_1_25lbs_angle.csv",
+      "size": 819340,
+      "crc32": "bc1443f9",
+      "sha256": "6b64be1d58a77b1285579730a1e4dcadf89031d3356dcd279e92b296a3a5fed3"
+    },
+    {
+      "path": "AB06/squats_1_25lbs/AB06_squats_1_25lbs_moment_filt.csv",
+      "size": 1263544,
+      "crc32": "d0164085",
+      "sha256": "1e758319fc121a6244f80cae29229544eabd3fc52a92c2d4e6838e67339fb0b7"
+    },
+    {
+      "path": "AB06/squats_1_25lbs/AB06_squats_1_25lbs_velocity.csv",
+      "size": 1168011,
+      "crc32": "33e99f1a",
+      "sha256": "d1bcb23e7a3fa9cfadcddf6fd2a3cd972adf4c6702419e818a3a7162c5eccccc"
+    },
+    {
+      "path": "AB07/squats_1_0lbs/AB07_squats_1_0lbs_activity_flag.csv",
+      "size": 35490,
+      "crc32": "35978609",
+      "sha256": "e0ba2ae12250465560d0fdcebc36090dfbcc2203cf5e399f869580ce75e97c92"
+    },
+    {
+      "path": "AB07/squats_1_0lbs/AB07_squats_1_0lbs_angle.csv",
+      "size": 478055,
+      "crc32": "da145894",
+      "sha256": "1e79dfa25b163e6bdfdbdf1ded72ca9d61c271d2182d3d79b3bc9f87a9608df2"
+    },
+    {
+      "path": "AB07/squats_1_0lbs/AB07_squats_1_0lbs_moment_filt.csv",
+      "size": 729756,
+      "crc32": "0158a286",
+      "sha256": "d2b6447d3391ca5853018e6130811430fff1930938045ae1b5093094fafea008"
+    },
+    {
+      "path": "AB07/squats_1_0lbs/AB07_squats_1_0lbs_velocity.csv",
+      "size": 673964,
+      "crc32": "efa21e9b",
+      "sha256": "825c95627da1ed56998c3d26c8864bf98b18c7370fea709d18113867818702e6"
+    },
+    {
+      "path": "AB07/squats_1_25lbs/AB07_squats_1_25lbs_activity_flag.csv",
+      "size": 32345,
+      "crc32": "04f9d54c",
+      "sha256": "2c12ceae1241f618005a7ec072377b637fb5f6428872f3a0204769ed8d927796"
+    },
+    {
+      "path": "AB07/squats_1_25lbs/AB07_squats_1_25lbs_angle.csv",
+      "size": 460432,
+      "crc32": "f603bf3f",
+      "sha256": "282d6d12bfa2b8fc82330994ae905787501c49840a1cd2ee7d32ae8c73e8e21d"
+    },
+    {
+      "path": "AB07/squats_1_25lbs/AB07_squats_1_25lbs_moment_filt.csv",
+      "size": 697308,
+      "crc32": "8d743cd1",
+      "sha256": "b745bbe323c17ed0cca928be9ce0ba553146af2349694fa0164ca4c6535f27f4"
+    },
+    {
+      "path": "AB07/squats_1_25lbs/AB07_squats_1_25lbs_velocity.csv",
+      "size": 648584,
+      "crc32": "47a0b812",
+      "sha256": "34031b0281154762c7b12edc990662722c58f6a88d90d930ea35ff289c739661"
+    },
+    {
+      "path": "AB08/squats_1_0lbs/AB08_squats_1_0lbs_activity_flag.csv",
+      "size": 45785,
+      "crc32": "411a81a8",
+      "sha256": "5ce6bd02fef000a8d0b00d9ffa26c54f735651764592ece2e767a4658e1b3d10"
+    },
+    {
+      "path": "AB08/squats_1_0lbs/AB08_squats_1_0lbs_angle.csv",
+      "size": 605065,
+      "crc32": "2c01b008",
+      "sha256": "e60e3eaf83ab87953b62284fd72a9a29c70ec4ec6424c0f58ca8253e89957ab1"
+    },
+    {
+      "path": "AB08/squats_1_0lbs/AB08_squats_1_0lbs_moment_filt.csv",
+      "size": 941268,
+      "crc32": "6ece624e",
+      "sha256": "0bdbb1bc2feac0879bc0ed003dccb8a3572b2924ea4da1dda4edab774e2b176e"
+    },
+    {
+      "path": "AB08/squats_1_0lbs/AB08_squats_1_0lbs_velocity.csv",
+      "size": 870425,
+      "crc32": "d2a50f70",
+      "sha256": "8c3a9c051bdf74bdabb5295aab45c270afd03df58645abd0abaa27d90beab26c"
+    },
+    {
+      "path": "AB08/squats_1_25lbs/AB08_squats_1_25lbs_activity_flag.csv",
+      "size": 30257,
+      "crc32": "9bde43ff",
+      "sha256": "ffb0e6b4561a43a2074e160f74ef98ddd057d1b8bd4563a37c421261fb43e33d"
+    },
+    {
+      "path": "AB08/squats_1_25lbs/AB08_squats_1_25lbs_angle.csv",
+      "size": 425497,
+      "crc32": "987416d7",
+      "sha256": "6dfbb17dc6226ef95bf23d081d10e638d9f92c6f52694f30d9916f524da58adf"
+    },
+    {
+      "path": "AB08/squats_1_25lbs/AB08_squats_1_25lbs_moment_filt.csv",
+      "size": 649732,
+      "crc32": "e7defb5b",
+      "sha256": "b8f1170ad66fe209734edb7b638973881666ac0f3908be032b279d08e334fdd4"
+    },
+    {
+      "path": "AB08/squats_1_25lbs/AB08_squats_1_25lbs_velocity.csv",
+      "size": 605446,
+      "crc32": "48ffe7f7",
+      "sha256": "b3e329461ccfc1f9d194eaf92df06686fd797fd760a87b0e1c0235dd893020e9"
+    },
+    {
+      "path": "AB09/squats_1_0lbs/AB09_squats_1_0lbs_activity_flag.csv",
+      "size": 38921,
+      "crc32": "4f8a145b",
+      "sha256": "564eb813e4c84dc12a8e8da069b51c5f5c915a4285e69d57aace1359a1a57f55"
+    },
+    {
+      "path": "AB09/squats_1_0lbs/AB09_squats_1_0lbs_angle.csv",
+      "size": 516392,
+      "crc32": "f4075c5f",
+      "sha256": "3b59e1238b9f5468183fe2b6818ca2ccb94586d584cc879b08003d36b39d129d"
+    },
+    {
+      "path": "AB09/squats_1_0lbs/AB09_squats_1_0lbs_moment_filt.csv",
+      "size": 803491,
+      "crc32": "d4243084",
+      "sha256": "fea41e6f35e112ed822aa84ab301cf29570aaed2bbef3e5868c9637382077c77"
+    },
+    {
+      "path": "AB09/squats_1_0lbs/AB09_squats_1_0lbs_velocity.csv",
+      "size": 738604,
+      "crc32": "df39aa79",
+      "sha256": "50e42d0af6ee3b486810d6c6be0f562ec3167109cdfb30ae43e326d699b3c2df"
+    },
+    {
+      "path": "AB09/squats_1_25lbs/AB09_squats_1_25lbs_activity_flag.csv",
+      "size": 32345,
+      "crc32": "98b0955e",
+      "sha256": "ff8dbb39e0ca7949df3a2374c6dadd4e0de654311ff60a53e0de11b910b52c3c"
+    },
+    {
+      "path": "AB09/squats_1_25lbs/AB09_squats_1_25lbs_angle.csv",
+      "size": 453346,
+      "crc32": "48fa07b1",
+      "sha256": "9c66295d21f5d111055894afaeb0b8fe0c15aac0360c61d64db76f56af50f763"
+    },
+    {
+      "path": "AB09/squats_1_25lbs/AB09_squats_1_25lbs_moment_filt.csv",
+      "size": 703145,
+      "crc32": "eee29385",
+      "sha256": "f14210aba61f017422dd8550fe0a454fc8ee1dadc232e1a51d55887cf8ce50c8"
+    },
+    {
+      "path": "AB09/squats_1_25lbs/AB09_squats_1_25lbs_velocity.csv",
+      "size": 649335,
+      "crc32": "3881abfa",
+      "sha256": "00f144428f704be9c6b5ddd7c2da3a305fdcf925c287ffa9e49d6b94b6fccf08"
+    },
+    {
+      "path": "AB10/squats_1_0lbs/AB10_squats_1_0lbs_activity_flag.csv",
+      "size": 29769,
+      "crc32": "3f769e93",
+      "sha256": "714463b3fd2457c9633966507d7ff0216155d8fe7fe4bdd819f0af97557c0985"
+    },
+    {
+      "path": "AB10/squats_1_0lbs/AB10_squats_1_0lbs_angle.csv",
+      "size": 395409,
+      "crc32": "c4e92d36",
+      "sha256": "2b3e8f8b2449c7d41345cd285755aa0fae54eb8cf67b60aa0c8c735022f17d3b"
+    },
+    {
+      "path": "AB10/squats_1_0lbs/AB10_squats_1_0lbs_moment_filt.csv",
+      "size": 618231,
+      "crc32": "60207049",
+      "sha256": "f6b7986caef630022730cde1f75c596ccfe9a9cb423ef4db937ea56e69eae035"
+    },
+    {
+      "path": "AB10/squats_1_0lbs/AB10_squats_1_0lbs_velocity.csv",
+      "size": 564254,
+      "crc32": "4779f2f0",
+      "sha256": "3aeb1e3ac13e013ca9f0dba0bbd1a316ba645c61e57a49680371c0bb597f2a24"
+    },
+    {
+      "path": "AB10/squats_1_25lbs/AB10_squats_1_25lbs_activity_flag.csv",
+      "size": 32545,
+      "crc32": "be868f4c",
+      "sha256": "0f659fe535f46aac40526ee93907e02f5f620f61d9fa58f7eddaf241e351e77a"
+    },
+    {
+      "path": "AB10/squats_1_25lbs/AB10_squats_1_25lbs_angle.csv",
+      "size": 452528,
+      "crc32": "df9405a9",
+      "sha256": "5c5532383c420937c244d45035860e73503e8c243ceea7031304ebac89e7c9a0"
+    },
+    {
+      "path": "AB10/squats_1_25lbs/AB10_squats_1_25lbs_moment_filt.csv",
+      "size": 707232,
+      "crc32": "b8bbe537",
+      "sha256": "bc5155056b8e6c70e01144c3079630800459d0e1333a1456cf917f6769e5951b"
+    },
+    {
+      "path": "AB10/squats_1_25lbs/AB10_squats_1_25lbs_velocity.csv",
+      "size": 648662,
+      "crc32": "8bf8d317",
+      "sha256": "956e9faff1036c4c567f4a3dd9187699a18f739677e4e02314b4f0ca45e72b17"
+    },
+    {
+      "path": "AB11/squats_1_0lbs/AB11_squats_1_0lbs_activity_flag.csv",
+      "size": 41209,
+      "crc32": "5c502067",
+      "sha256": "de78512a2a741101fc58c2dd6c2027cf9a31cd28548e16da5a8685de3aafbe97"
+    },
+    {
+      "path": "AB11/squats_1_0lbs/AB11_squats_1_0lbs_angle.csv",
+      "size": 539951,
+      "crc32": "d5e9cbd7",
+      "sha256": "51eee53a3f4cab18396b948fa40e053c6f6f6a17bd408f9639059e4be3916129"
+    },
+    {
+      "path": "AB11/squats_1_0lbs/AB11_squats_1_0lbs_moment_filt.csv",
+      "size": 846330,
+      "crc32": "6f66a750",
+      "sha256": "7d3fe51370275e4155ba616989e9f7fb57be84e784ba082702d2a2cffd1eddce"
+    },
+    {
+      "path": "AB11/squats_1_0lbs/AB11_squats_1_0lbs_velocity.csv",
+      "size": 782750,
+      "crc32": "ff5ec37f",
+      "sha256": "cbc66f8ce104a7c79e4e8b8c65221e061e5356256231a3bd638123f071ddc1a2"
+    },
+    {
+      "path": "AB11/squats_1_25lbs/AB11_squats_1_25lbs_activity_flag.csv",
+      "size": 34833,
+      "crc32": "566c4be1",
+      "sha256": "8566dadb8eefc3b9aa8d400ae72f4bbf18034cb53aedf4e663e0b709bad656f7"
+    },
+    {
+      "path": "AB11/squats_1_25lbs/AB11_squats_1_25lbs_angle.csv",
+      "size": 479500,
+      "crc32": "90773420",
+      "sha256": "de06cc10cfd5b1ba4dd0adfb03e639cf9161dfb60ffa185c0d7c6480d39f0023"
+    },
+    {
+      "path": "AB11/squats_1_25lbs/AB11_squats_1_25lbs_moment_filt.csv",
+      "size": 749385,
+      "crc32": "550dbf78",
+      "sha256": "55926a8bce035e7b61bb92d881baf96eb91ff37b377d3de900f3fd10f6d47952"
+    },
+    {
+      "path": "AB11/squats_1_25lbs/AB11_squats_1_25lbs_velocity.csv",
+      "size": 693336,
+      "crc32": "7159d388",
+      "sha256": "81162d81547fa67d9d68767f9e6efca2ba0fdd38e87d4d042c5bd2e1bdc7b6a2"
+    },
+    {
+      "path": "AB12/squats_1_0lbs/AB12_squats_1_0lbs_activity_flag.csv",
+      "size": 27481,
+      "crc32": "a13bed5e",
+      "sha256": "e132f7605273fd42c632b1ba30a3be5e31e3035e7e8beedf53c19a7449871f08"
+    },
+    {
+      "path": "AB12/squats_1_0lbs/AB12_squats_1_0lbs_angle.csv",
+      "size": 360629,
+      "crc32": "deca8393",
+      "sha256": "37e443ba42191af262b060835c68b008fbfcd3aa687b2af7c98b8905bddd52eb"
+    },
+    {
+      "path": "AB12/squats_1_0lbs/AB12_squats_1_0lbs_moment_filt.csv",
+      "size": 566169,
+      "crc32": "acea8a34",
+      "sha256": "7d7a52ff26208dec9a816d8d8de209c9f7828ba88e7054195b9d66570b1807f4"
+    },
+    {
+      "path": "AB12/squats_1_0lbs/AB12_squats_1_0lbs_velocity.csv",
+      "size": 520896,
+      "crc32": "e8663886",
+      "sha256": "3e79ce199ad0b637c0a76692dfb1284a450dcbd0390b8dbd60abd58a84489ee9"
+    },
+    {
+      "path": "AB12/squats_1_25lbs/AB12_squats_1_25lbs_activity_flag.csv",
+      "size": 30057,
+      "crc32": "60c063b5",
+      "sha256": "f84f210be4a357a4b25c74da9070e74b903534f1460711785ce2b74975195e46"
+    },
+    {
+      "path": "AB12/squats_1_25lbs/AB12_squats_1_25lbs_angle.csv",
+      "size": 418350,
+      "crc32": "9e55f318",
+      "sha256": "05ac462c6d25aa93188487e4fd697844feaf88392fddffc81f853313c4b5c891"
+    },
+    {
+      "path": "AB12/squats_1_25lbs/AB12_squats_1_25lbs_moment_filt.csv",
+      "size": 655890,
+      "crc32": "33916b55",
+      "sha256": "6ca32ecb906d8b1df858ee4a6c2a8ff2a1e5076ddb9a7944a9122a7bd5a7e844"
+    },
+    {
+      "path": "AB12/squats_1_25lbs/AB12_squats_1_25lbs_velocity.csv",
+      "size": 606842,
+      "crc32": "a67842e9",
+      "sha256": "d262096735964cf1146e81c3c068f373ee5d3705028d54a924206533c29558fc"
+    },
+    {
+      "path": "AB13/squats_1_0lbs/AB13_squats_1_0lbs_activity_flag.csv",
+      "size": 43497,
+      "crc32": "eb18dc4d",
+      "sha256": "04ce54ed4d3d6aa4a01769f8f0f0586713e6889d1e053e2b1d125bf32062801e"
+    },
+    {
+      "path": "AB13/squats_1_0lbs/AB13_squats_1_0lbs_angle.csv",
+      "size": 580973,
+      "crc32": "9bbbb1a5",
+      "sha256": "0023d58578f9f122d20cfbc199ce4801a12d34aaa449c86c7eee59d8638271c0"
+    },
+    {
+      "path": "AB13/squats_1_0lbs/AB13_squats_1_0lbs_moment_filt.csv",
+      "size": 899066,
+      "crc32": "3356eea1",
+      "sha256": "f323dc5ac4abff0399290df44b25f014d714997e1d65ff9b7df6d8aff0783119"
+    },
+    {
+      "path": "AB13/squats_1_0lbs/AB13_squats_1_0lbs_velocity.csv",
+      "size": 827428,
+      "crc32": "7696e54a",
+      "sha256": "7ecdcea6acf9a894f9dc8a114f2072efd1071378554917e60762057e75c28f62"
+    },
+    {
+      "path": "AB13/squats_1_25lbs/AB13_squats_1_25lbs_activity_flag.csv",
+      "size": 64377,
+      "crc32": "142a2bc7",
+      "sha256": "016c8a35f21b439eab82c804af418ea2455ec324e44adc5684a4f2ca6aae563b"
+    },
+    {
+      "path": "AB13/squats_1_25lbs/AB13_squats_1_25lbs_angle.csv",
+      "size": 885084,
+      "crc32": "ffcb6f2a",
+      "sha256": "112586c24d86402d913d59c7f69bc131028e355c1ffcbb6d8155229cec702415"
+    },
+    {
+      "path": "AB13/squats_1_25lbs/AB13_squats_1_25lbs_moment_filt.csv",
+      "size": 1364523,
+      "crc32": "74bbdff1",
+      "sha256": "4d925e98a70b5286bdc5b5eb3e07feb1252dbafcd085dad619a7183e4c97a902"
+    },
+    {
+      "path": "AB13/squats_1_25lbs/AB13_squats_1_25lbs_velocity.csv",
+      "size": 1257000,
+      "crc32": "e8b9768a",
+      "sha256": "6e84efaf9f51fdff5e48d83ee3a1d96280630b0566ac5871c74463bae535f51a"
+    }
+  ]
+}

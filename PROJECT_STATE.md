@@ -1,3 +1,5 @@
+EXP-0081 / NEG-0067 / ISS-0028: проверка динамической регрессии и переноса нагрузки, выявлено расхождение единиц момента источника. См. research/program_evidence_audit/SQUAT_TRANSFER_REPORT.md.
+
 EXP-0080 / FND-0080: ретроспективная связь доли подхода и потери скорости в открытой когорте. См. research/program_evidence_audit/VELOCITY_LOSS_REPORT.md.
 
 EXP-0079 / FND-0079: переоптимизация статической цепи при изменении плеча. См. research/program_evidence_audit/CHAIN_REOPT_REPORT.md.

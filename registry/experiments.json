@@ -2314,5 +2314,31 @@
     "limits": "Completed-set percentage requires future information; missing early rows, one group and protocol, no force or tissue measurements, no prospective external validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0081",
+    "date": "2026-11-20",
+    "name": "Held-participant squat moment model and load transfer",
+    "sources": [
+      "SRC-0089"
+    ],
+    "design": "Train constant, angle and angle-plus-velocity linear models on 0 lb with held participants, test on both 0 lb and 25 lb; bootstrap participant MAE difference.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_squat_transfer.py",
+    "inputs": "research/program_evidence_audit/SQUAT_TRANSFER_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SQUAT_TRANSFER_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SQUAT_TRANSFER_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_squat_transfer.py <retrieved-data-directory>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0067"
+      ]
+    },
+    "limits": "One cohort, moment derived from inverse dynamics, unresolved moment scaling ISS-0028, no augmentation or maximum force.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
