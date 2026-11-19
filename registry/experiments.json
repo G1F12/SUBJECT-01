@@ -2288,5 +2288,31 @@
     "limits": "Static model, common arm scaling, assumed tissue properties and loading rate. No individual in vivo validation or CPE45.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0080",
+    "date": "2026-11-20",
+    "name": "Held-participant retrospective leg-press velocity loss",
+    "sources": [
+      "SRC-0088"
+    ],
+    "design": "Participant-weighted leave-one-person-out linear velocity loss versus completed-set percentage compared with constant, bootstrap by participant.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_velocity_loss.py",
+    "inputs": "research/program_evidence_audit/VELOCITY_LOSS_PROTOCOL.md",
+    "report": "research/program_evidence_audit/VELOCITY_LOSS_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/VELOCITY_LOSS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_velocity_loss.py <downloaded-leg-press-csv>",
+    "results": {
+      "findings": [
+        "FND-0080"
+      ],
+      "negative_results": []
+    },
+    "limits": "Completed-set percentage requires future information; missing early rows, one group and protocol, no force or tissue measurements, no prospective external validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

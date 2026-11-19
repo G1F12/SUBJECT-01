@@ -1501,5 +1501,27 @@
       "file_url": "https://uj.rodbuk.pl/api/access/datafile/41598",
       "sha256": "11e53a0d89651a1851c496c5061a675f0744904c1b627f6065146e553d80c9fc"
     }
+  },
+  {
+    "id": "SRC-0088",
+    "date": "2026-11-20",
+    "name": "Iglesias-Soler and Rial-Vázquez, leg press repetition velocity-loss data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/VELOCITY_LOSS_REPORT.md",
+    "doi": "10.5281/zenodo.15556672",
+    "url": "https://zenodo.org/records/15556672",
+    "external_provenance": {
+      "version": "1",
+      "license": "CC BY 4.0",
+      "metadata_url": "https://zenodo.org/api/records/15556672",
+      "file": "%VL_%NRM_LEG PRESS.csv",
+      "md5": "d9508e0027755f1ed30cc9d4cbed5b34",
+      "sha256": "9283595449be5d7a3ed1641d2ba1f6919288907805df9888098680df022bd3ad"
+    },
+    "calibration_review": {
+      "access": "Open CSV and metadata checked, publisher MD5 matched; full article and measurement audit pending.",
+      "scope": "Retrospective percent velocity loss in postmenopausal women; no kinetics or architecture effect."
+    }
   }
 ]

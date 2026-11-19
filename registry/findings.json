@@ -667,5 +667,14 @@
     "statement": "When quadriceps moment arm is scaled consistently in LP and tendon conversion, arm multipliers 0.8–1.2 yield SF approximately 1.285 at 100 degrees and 1.747 at 140 degrees for the specified CSA, UTS and force-rate assumptions; model-only, no safety validation.",
     "confidence": "model_only",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0080",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0080",
+    "title": "Retrospective velocity-loss relationship with held participants",
+    "statement": "For 23 postmenopausal women, participant-held-out linear description of velocity loss by retrospectively known completed-set percentage had participant-weighted MAE 9.16 versus 11.86 percentage points for a constant; paired gain CI [1.60, 3.80]. Final velocity loss ranged 11.9–59.8%. Not an online predictor or architecture validation.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

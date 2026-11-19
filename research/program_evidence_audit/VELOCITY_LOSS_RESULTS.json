@@ -1,0 +1,25 @@
+{
+  "experiment_id": "EXP-0080",
+  "classification": "EXPLORATORY_RETROSPECTIVE",
+  "input_sha256_bytes": "9283595449be5d7a3ed1641d2ba1f6919288907805df9888098680df022bd3ad",
+  "protocol_sha256_lf": "b2e8d3a3f112539120fc3c8e861a3e9ce8d9cb1d0ad23b6141acf1df55e93d2e",
+  "runner_sha256_lf": "2cd0a6032fc6b2d80248165a0ce7d6bac0ac2704210f751aaf4536041c12bf18",
+  "participants": 23,
+  "included_rows": 227,
+  "excluded_rows": 0,
+  "participant_weighted_mae_baseline_pp": 11.85559985356843,
+  "participant_weighted_mae_linear_pp": 9.157116388087342,
+  "participant_weighted_rmse_baseline_pp": 14.09509958694151,
+  "participant_weighted_rmse_linear_pp": 11.490731085097186,
+  "participant_weighted_bias_baseline_pp": -1.8922061984915713e-15,
+  "participant_weighted_bias_linear_pp": -0.006441079493430163,
+  "paired_gain_mae_pp": 2.698483465481087,
+  "paired_bootstrap_ci95_pp": [
+    1.6041060254019759,
+    3.8044131956151883
+  ],
+  "endpoint_count": 23,
+  "endpoint_min_pp": 11.9,
+  "endpoint_max_pp": 59.80392157,
+  "endpoint_sd_pp": 11.32187678118801
+}
