@@ -3,7 +3,7 @@
   "classification": "EXPLORATORY_RETROSPECTIVE",
   "input_sha256_bytes": "9283595449be5d7a3ed1641d2ba1f6919288907805df9888098680df022bd3ad",
   "protocol_sha256_lf": "b2e8d3a3f112539120fc3c8e861a3e9ce8d9cb1d0ad23b6141acf1df55e93d2e",
-  "runner_sha256_lf": "2cd0a6032fc6b2d80248165a0ce7d6bac0ac2704210f751aaf4536041c12bf18",
+  "runner_sha256_lf": "4e98377445437208d0bd128657daf31216709c31f6ddd40f38003e31a4fd7678",
   "participants": 23,
   "included_rows": 227,
   "excluded_rows": 0,

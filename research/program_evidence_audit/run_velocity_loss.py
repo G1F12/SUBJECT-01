@@ -56,4 +56,3 @@ result = {'experiment_id':'EXP-0080', 'classification':'EXPLORATORY_RETROSPECTIV
  'endpoint_sd_pp':np.std(ends,ddof=1)}
 (HERE/'VELOCITY_LOSS_RESULTS.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
 print(json.dumps(result, indent=2))
-
