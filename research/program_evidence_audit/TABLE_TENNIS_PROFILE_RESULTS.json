@@ -1,0 +1,101 @@
+{
+  "experiment_id": "EXP-0096",
+  "classification": "OBSERVATIONAL_SECONDARY_MULTIFUNCTIONAL_PROFILE",
+  "data_sha256_bytes": "4031c155a906e669c6ebb96f214eabd197eafe51e4069e0465d6207e2aa7ff33",
+  "dictionary_sha256_bytes": "9d567399f6e997ed6990148fd3c56de823985e78e74239a8c7a57d10231b6246",
+  "mass_comparability_status": "DATA_BLOCKED_BASELINE_ONLY_FIELD",
+  "joint_fraction_interpretation": "four directional components only; recorded repeated mass is baseline, not an observed post measurement",
+  "protocol_sha256_lf": "d31e46d39c41d71e0b36eca9eb7aefd7fc63bed8d4ae03c4c810053927f6fa9c",
+  "runner_sha256_lf": "e02e2ee0113e1d087fda198678301caac2bda81b451dbbfe1843680ef3d5b08a",
+  "source_rows": 96,
+  "source_people": 48,
+  "excluded_by_reason": {},
+  "groups": {
+    "EG": {
+      "n": 24,
+      "four_direction_count": 12,
+      "four_direction_fraction": 0.5,
+      "component_counts": {
+        "Lateral_CMJ_Height_cm": 18,
+        "RFD_Lateral_N_s": 18,
+        "Reaction_Time_ms": 22,
+        "Stroke_Accuracy_pct": 22
+      },
+      "initial_mean": {
+        "Lateral_CMJ_Height_cm": 23.897499999999997,
+        "RFD_Lateral_N_s": 3262.6054166666668,
+        "Reaction_Time_ms": 220.99291666666667,
+        "Stroke_Accuracy_pct": 71.41583333333334,
+        "Body_Mass_kg": 67.81666666666666
+      },
+      "change_mean": {
+        "Lateral_CMJ_Height_cm": 1.398333333333334,
+        "RFD_Lateral_N_s": 267.47791666666666,
+        "Reaction_Time_ms": -13.205416666666665,
+        "Stroke_Accuracy_pct": 5.346666666666668,
+        "Body_Mass_kg": 0.0
+      },
+      "change_median": {
+        "Lateral_CMJ_Height_cm": 1.455,
+        "RFD_Lateral_N_s": 326.8699999999999,
+        "Reaction_Time_ms": -13.995000000000005,
+        "Stroke_Accuracy_pct": 5.835000000000008,
+        "Body_Mass_kg": 0.0
+      },
+      "duplicated_baseline_mass_relative_change_pct_range": [
+        0.0,
+        0.0
+      ],
+      "duplicated_baseline_mass_outside_5pct": 0
+    },
+    "CG": {
+      "n": 24,
+      "four_direction_count": 3,
+      "four_direction_fraction": 0.125,
+      "component_counts": {
+        "Lateral_CMJ_Height_cm": 13,
+        "RFD_Lateral_N_s": 12,
+        "Reaction_Time_ms": 12,
+        "Stroke_Accuracy_pct": 17
+      },
+      "initial_mean": {
+        "Lateral_CMJ_Height_cm": 24.824166666666667,
+        "RFD_Lateral_N_s": 3268.742083333333,
+        "Reaction_Time_ms": 220.7904166666667,
+        "Stroke_Accuracy_pct": 71.98375,
+        "Body_Mass_kg": 67.73333333333333
+      },
+      "change_mean": {
+        "Lateral_CMJ_Height_cm": 0.43833333333333346,
+        "RFD_Lateral_N_s": 69.4620833333333,
+        "Reaction_Time_ms": 0.3220833333333353,
+        "Stroke_Accuracy_pct": 1.7704166666666676,
+        "Body_Mass_kg": 0.0
+      },
+      "change_median": {
+        "Lateral_CMJ_Height_cm": 0.5399999999999991,
+        "RFD_Lateral_N_s": -0.9449999999999363,
+        "Reaction_Time_ms": 0.18000000000000682,
+        "Stroke_Accuracy_pct": 0.5500000000000043,
+        "Body_Mass_kg": 0.0
+      },
+      "duplicated_baseline_mass_relative_change_pct_range": [
+        0.0,
+        0.0
+      ],
+      "duplicated_baseline_mass_outside_5pct": 0
+    }
+  },
+  "four_direction_fraction_difference_eg_minus_cg": 0.375,
+  "four_direction_fraction_difference_95_percentile_bootstrap": [
+    0.125,
+    0.625
+  ],
+  "limitations": [
+    "exploratory published trial; underlying randomization and device reliability unverified",
+    "zero-change boundaries are not measurement-error thresholds",
+    "mass field is documented baseline only and copied into post rows; prespecified mass-comparability gate is unassessable",
+    "RFD is not maximal functional force; no CPE45, tissue, or post-load outcome",
+    "not architecture A or causal evidence of human enhancement"
+  ]
+}

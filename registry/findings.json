@@ -775,5 +775,14 @@
     "statement": "With shared D2 trace at fatigue rate 0.003/s and alpha=1.05, minimum modeled force gain is 19.57% at 100 degrees and 19.40% at 140 degrees; alpha=1 retains static gain algebraically. Alpha and the force mapping are unmeasured counterfactuals, not physiological predictions.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0092",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0096",
+    "title": "Four directional outcomes can be jointly traced but post mass is unavailable",
+    "statement": "The four prespecified directional changes occur in 12/24 experimental and 3/24 control records; mean direction alone does not establish meaningful effects. All paired mass values are identical because the source dictionary labels mass baseline-only; matched post mass cannot be inferred.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1615,5 +1615,28 @@
       "md5": "bafd0fbb504317975ab009fb5425f2eb",
       "sha256": "250bcb84c25ea9cea86711cc088598c30295a9f59f7ce295be2b935cff787383"
     }
+  },
+  {
+    "id": "SRC-0094",
+    "date": "2026-11-20",
+    "name": "Table tennis conditioning trial multivariate outcome dataset v1",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/TABLE_TENNIS_PROFILE_REPORT.md",
+    "doi": "10.5281/zenodo.21343993",
+    "url": "https://zenodo.org/records/21343993",
+    "calibration_review": {
+      "access": "v1 CC BY 4.0, main CSV and data dictionary downloaded; publisher MD5 and byte SHA256 checked.",
+      "scope": "48 participants, author-reported controlled training trial, repeated movement and sensorimotor outcomes. Body_Mass_kg is baseline-only and duplicated in post rows; no measured post mass, maximal force, CPE45, tendon or post45 in selected table."
+    },
+    "external_provenance": {
+      "version": "v1 record 21343993",
+      "license": "CC BY 4.0",
+      "file_url": "https://zenodo.org/records/21343993/files/Dataset_Main.csv?download=1",
+      "md5": "29511855be2d4c4a1b610e3fe628905c",
+      "sha256": "4031c155a906e669c6ebb96f214eabd197eafe51e4069e0465d6207e2aa7ff33",
+      "dictionary_url": "https://zenodo.org/records/21343993/files/Data_Dictionary.xlsx?download=1",
+      "dictionary_sha256": "9d567399f6e997ed6990148fd3c56de823985e78e74239a8c7a57d10231b6246"
+    }
   }
 ]

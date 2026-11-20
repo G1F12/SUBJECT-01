@@ -616,5 +616,13 @@
     "title": "Endurance-time regression advantage not established across order groups",
     "statement": "A to B, linear predictor MAE 7.28 s versus training-mean baseline 9.69 s; paired held-group bootstrap difference 2.42 s [−0.97, 5.71]. Reverse B to A difference 0.08 s [−2.96, 3.45].",
     "reason": "Intervals include zero on small observational samples, with task order and participant differences confounded; training uncertainty is not included."
+  },
+  {
+    "id": "NEG-0077",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0096",
+    "title": "Reported repeated mass column cannot verify same-mass profile",
+    "statement": "All 48 Post mass entries equal their Pre values, while the official data dictionary identifies Body_Mass_kg as baseline descriptive data; the prespecified mass comparability criterion cannot be assessed.",
+    "reason": "A time-invariant covariate was copied across long-format rows, not documented as an independent post measurement."
   }
 ]

@@ -392,5 +392,21 @@
     ],
     "required_inputs": "Synchronized individual baseline and candidate forces before/during/after equal actual work, power time series, task geometry, temperature and control condition; preregistered independent participant transfer and uncertainty; tissue deformation for fatigue damage.",
     "progress": "EXP-0094 brackets conditional alpha thresholds for maintaining 20% gain but alpha and D2-to-force mapping are not measured; no force-to-energy or thermal feedback validation. EXP-0095 tests transfer of upper-limb task duration on SRC-0093 but has no post-load force, so does not identify differential force-fatigue response."
+  },
+  {
+    "id": "ISS-0033",
+    "date": "2026-11-20",
+    "title": "SRC-0094 lacks a documented follow-up body mass",
+    "status": "open",
+    "priority": "medium",
+    "description": "In long-format outcome data baseline mass is duplicated into follow-up rows for all participants; equality of entries cannot establish equal body mass. EXP-0096 therefore reports directional profile only.",
+    "related_experiments": [
+      "EXP-0096"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Individually linked actual post mass and measurement date, units, instrument precision and protocol; independent verification of assignments and outcome reliability before any matched-mass claim.",
+    "progress": "Source dictionary labels Body_Mass_kg Baseline; no separate post variable was located in the main table."
   }
 ]
