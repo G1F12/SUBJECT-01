@@ -468,5 +468,21 @@
     ],
     "required_inputs": "Independent test-retest force and body mass measurements in the actual multicondition protocol, control change-score variance, target contrast and confidence coverage, independent joint-outcome thresholds and preregistered prospective analysis.",
     "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation."
+  },
+  {
+    "id": "ISS-0037",
+    "date": "2026-11-20",
+    "title": "STS archive raw recordings duplicated and processed-row identity unresolved",
+    "status": "open",
+    "priority": "medium",
+    "description": "EXP-0110 finds two byte-identical pairs among 60 participant-labelled raw files; the processed 660x34 CSV cannot yet be linked to verified independent recordings. Exact source of duplication is unknown.",
+    "related_experiments": [
+      "EXP-0110"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Author explanation and corrected recordings or alias mapping, processed-row-to-recording mapping, data dictionary, processing code and reuse conditions.",
+    "progress": "Figshare v2 archive byte hashes and publisher MD5 verified; local request drafted, not sent. No independent-person model evaluation admitted."
   }
 ]

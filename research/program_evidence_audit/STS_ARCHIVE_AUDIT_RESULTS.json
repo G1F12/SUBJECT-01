@@ -1,0 +1,32 @@
+{
+  "experiment_id": "EXP-0110",
+  "classification": "EXPLORATORY_SOURCE_QUALITY_AUDIT",
+  "archive_sha256_bytes": "4b0b7dc8e13439bb96d0afa1bbd2a55a57fbeda7d46ea879ecf953785b9d2351",
+  "archive_md5_bytes": "2f8a8fcb1b8e4fd1361ce938ead90d33",
+  "processed_csv_sha256_bytes": "0c6d2ad1cd1b6f01dc2b9195da4172b7057df17e21aba81855a7b96f9febde48",
+  "protocol_sha256_lf": "7c8d8d0b44ae38b95d7ba54351b2c7183aabac85031cd88fa937b3d2d77224ae",
+  "runner_sha256_lf": "98974d95f2a4acf7f7b33e1a1025b90da34a3cd67003ec5b6c93d85b69d65160",
+  "raw_txt_files": 60,
+  "unique_raw_txt_sha256": 58,
+  "duplicate_raw_groups": 2,
+  "duplicate_raw_group_sizes": [
+    2,
+    2
+  ],
+  "files_in_duplicate_groups": 4,
+  "duplicate_groups_by_category": {
+    "Men": 2
+  },
+  "csv_rows": 660,
+  "csv_columns": 34,
+  "identical_column_pairs_1based": [],
+  "duplicate_csv_row_groups": 0,
+  "duplicate_csv_rows_in_groups": 0,
+  "limits": [
+    "article file list first TXT record and first CSV rows previewed",
+    "identical files do not establish participant identity or reason",
+    "no validated mapping from processed rows to participants",
+    "column equality is not proof of an error",
+    "no direct force work post-exercise strength or CPE45 measurement"
+  ]
+}

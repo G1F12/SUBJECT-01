@@ -1,3 +1,5 @@
+- EXP-0110: audited accessible Figshare STS v2 archive and found two byte-identical pairs among 60 participant-labelled recordings; raised ISS-0037.
+
 - EXP-0109: identified and audited a same-cohort cycling-work and knee-force study; participant data require author request and absolute work was not matched.
 
 - EXP-0108: evaluated separated-demand D2-cap against previously reviewed cycling cohort; conditional event counts depend on hypothetical capacity and endpoints remain non-equivalent.

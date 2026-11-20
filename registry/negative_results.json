@@ -720,5 +720,13 @@
     "title": "Published grouped data do not identify equal-work force changes",
     "statement": "The table permits only ratios of rounded group means, not participant-level force-work comparisons or valid paired uncertainty.",
     "reason": "Individual records and reuse conditions are not obtained, and the post-training load is redefined by relative physiological intensity rather than fixed absolute work."
+  },
+  {
+    "id": "NEG-0090",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0110",
+    "title": "STS archive fails independent-record provenance gate",
+    "statement": "Two pairs of differently labelled text files in the 60-file archive are byte-identical; processed rows are not linked to verified recordings.",
+    "reason": "File duplication and unresolved row-to-recording mapping prevent treating all paths as independent participants for external model testing."
   }
 ]

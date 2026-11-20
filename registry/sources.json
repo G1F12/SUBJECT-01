@@ -1794,5 +1794,27 @@
       "access": "Full article and rounded group table viewed; individual data reported available on reasonable request, actual availability and reuse terms unverified.",
       "scope": "21 active males, two groups and pre/post five-week sessions; constant relative CWR intensity, exercise time, total work and knee-extension iMVC before and post. Absolute work not matched, measurements incomplete for CPE45."
     }
+  },
+  {
+    "id": "SRC-0103",
+    "date": "2026-11-20",
+    "name": "Aguirre sit-to-stand kinematic fatigue data Figshare v2",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/STS_ARCHIVE_AUDIT_REPORT.md",
+    "doi": "10.6084/m9.figshare.15001362.v2",
+    "url": "https://figshare.com/articles/dataset/STS_fatigue_data_zip/15001362/2",
+    "calibration_review": {
+      "access": "v2 CC BY 4.0 ZIP downloaded; publisher MD5 and byte SHA-256 verified. Current v3 is metadata-only.",
+      "scope": "60 raw TXT paths, only 58 distinct SHA-256; processed CSV 660x34 with no exact duplicate rows or columns. Participant and processed-row mapping unresolved; no direct force or mechanical work."
+    },
+    "external_provenance": {
+      "version": "v2",
+      "license": "CC BY 4.0",
+      "article_doi": "10.3390/s21155006",
+      "file_url": "https://ndownloader.figshare.com/files/28874184",
+      "md5": "2f8a8fcb1b8e4fd1361ce938ead90d33",
+      "sha256": "4b0b7dc8e13439bb96d0afa1bbd2a55a57fbeda7d46ea879ecf953785b9d2351"
+    }
   }
 ]
