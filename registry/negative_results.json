@@ -632,5 +632,13 @@
     "title": "Judo recovery data not admitted for quantitative model validation",
     "statement": "The advertised two-condition participant linkage, repetition-count interpretation and barbell-velocity scale cannot be verified from the audited tables and dictionary; model validation remains DATA_BLOCKED.",
     "reason": "Observed identifier and value semantics require documented crosswalk, raw trial values and calibration; ambiguity does not establish that the source data are erroneous."
+  },
+  {
+    "id": "NEG-0079",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0098",
+    "title": "Recovery predictor advantage over persistence not established",
+    "statement": "In participant-held-out prediction of 10-minute torque, normalized linear model MAE 13.14 Nm versus persistence 18.32 Nm; paired bootstrap advantage 5.18 Nm [−1.55, 12.06].",
+    "reason": "The interval includes zero in a small selected previously published cohort; bootstrap holds predictions fixed and overlapping LOSO fits are not independently validated."
   }
 ]

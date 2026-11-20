@@ -1,0 +1,49 @@
+{
+  "experiment_id": "EXP-0098",
+  "classification": "EXPLORATORY_WITHIN_COHORT_LOSO",
+  "source_sha256_bytes": "a976a4a2797fce55fdaa1600ef7137d2e31867d7279c86d5baf8b4343ae9588b",
+  "source_git_commit": "16aec21efc7643c4b6b5619c5f4bb5dda6e6d6fb",
+  "protocol_sha256_lf": "ca91e7a862ebf6b3030729e85a7929edbaf791618e4a6e89f4bd20fd76a6780e",
+  "runner_sha256_lf": "ddc3872fd9974f5f8ce79238613a85e4247b860e206bb1a42031d5ca8d7b32a9",
+  "n": 12,
+  "excluded": [],
+  "moment_ratio_means": {
+    "post": 0.7444982645861109,
+    "post_5": 0.9089192977153453,
+    "post_10": 0.9359000370884042
+  },
+  "moment_ratio_ranges": {
+    "post": [
+      0.4255953076981217,
+      1.1454377954547548
+    ],
+    "post_5": [
+      0.7879996034090927,
+      1.168451623325869
+    ],
+    "post_10": [
+      0.8075536142715836,
+      1.022791763547746
+    ]
+  },
+  "linear_model_mae_Nm": 13.143581308866514,
+  "persistence_mae_Nm": 18.323520633333334,
+  "linear_model_mean_absolute_error_relative_to_pre_pct": 5.52735562196465,
+  "persistence_mean_absolute_error_relative_to_pre_pct": 8.016509520634736,
+  "linear_bias_Nm": 0.10864538788764595,
+  "persistence_bias_Nm": -7.318772616666666,
+  "paired_mae_advantage_Nm": 5.17993932446682,
+  "paired_bootstrap_95_Nm": [
+    -1.5516309850619547,
+    12.05924464194994
+  ],
+  "negative_prediction_count": 0,
+  "decision": "uncertain",
+  "limitations": [
+    "published cohort; first rows and article viewed before protocol",
+    "LOSO training sets overlap; bootstrap holds fitted predictions fixed",
+    "selected 12 men and local isometric plantar flexion",
+    "stimulation and vibration preceding each MVC; no unstimulated control",
+    "no actual external mechanical work or equivalent task exposure, tissue or CPE45"
+  ]
+}

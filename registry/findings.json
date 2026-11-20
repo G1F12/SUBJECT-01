@@ -793,5 +793,14 @@
     "statement": "Four workbooks contain 48 supplied Subject_ID strings, none linked to both conditions within its workbook; 362/384 pre repetition entries are noninteger and 960/960 TW values exceed diagnostic 3 m/s with reported units m/s. Different IDs, averages or scale transformations may explain these findings; no data integrity conclusion is drawn.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0094",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0098",
+    "title": "Individual plantar torque trajectory after fatiguing protocol",
+    "statement": "In 12 selected men mean post, 5-minute and 10-minute MVC torque ratios to baseline are 0.744, 0.909 and 0.936, respectively. Measurements follow the published protocol including electrical stimulation and vibration; no causal or whole-system inference.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

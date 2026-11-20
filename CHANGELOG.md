@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0098 / FND-0094 / NEG-0079 / SRC-0096: исследована измеренная траектория восстановления изометрического момента и перенос прогноза. См. research/program_evidence_audit/PLANTAR_RECOVERY_REPORT.md.
+
 EXP-0097 / FND-0093 / NEG-0078 / ISS-0034: проверен допуск данных восстановления SRC-0095, зафиксированы вопросы о связи сессий и единицах. См. research/program_evidence_audit/JUDO_SOURCE_REPORT.md.
 
 EXP-0096 / FND-0092 / NEG-0077 / ISS-0033: проверен многомерный профиль и установлена baseline-семантика продублированной массы. См. research/program_evidence_audit/TABLE_TENNIS_PROFILE_REPORT.md.

@@ -1,3 +1,5 @@
+EXP-0098 / FND-0094 / NEG-0079 / SRC-0096: проверен прогноз восстановления момента голеностопа у 12 участников; преимущество над persistence не установлено. См. research/program_evidence_audit/PLANTAR_RECOVERY_REPORT.md.
+
 EXP-0097 / FND-0093 / NEG-0078 / ISS-0034: аудит открытых данных восстановления SRC-0095 выявил нерешённые связь ID и шкалу механики; DATA_BLOCKED. См. research/program_evidence_audit/JUDO_SOURCE_REPORT.md.
 
 EXP-0096 / FND-0092 / NEG-0077 / ISS-0033: многомерный профиль на открытых данных, обнаружена копия baseline-массы в Post; сравнение при сопоставимой массе не подтверждено. См. research/program_evidence_audit/TABLE_TENNIS_PROFILE_REPORT.md.

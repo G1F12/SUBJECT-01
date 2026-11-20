@@ -1657,5 +1657,26 @@
       "license": "CC BY 4.0",
       "hashes": "research/program_evidence_audit/JUDO_SOURCE_RESULTS.json"
     }
+  },
+  {
+    "id": "SRC-0096",
+    "date": "2026-11-20",
+    "name": "Blazevich et al. plantar flexor torque recovery individual data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/PLANTAR_RECOVERY_REPORT.md",
+    "doi": "10.1007/s00421-023-05403-0",
+    "url": "https://github.com/ricardoNOmesqui/FatigueVibStim",
+    "calibration_review": {
+      "access": "Author GitHub public commit pinned; XLSX byte hash checked; article CC BY 4.0, separate data repository license not found, data not redistributed.",
+      "scope": "12 selected men, MVC plantar-flexor torque before and at three recovery times after fatigue; VibStim preceding MVC, no unexposed control or measured external work."
+    },
+    "external_provenance": {
+      "version": "Git commit 16aec21efc7643c4b6b5619c5f4bb5dda6e6d6fb",
+      "file_url": "https://raw.githubusercontent.com/ricardoNOmesqui/FatigueVibStim/16aec21efc7643c4b6b5619c5f4bb5dda6e6d6fb/Data%20-%20Fatigue%20VibStim.xlsx",
+      "sha256": "a976a4a2797fce55fdaa1600ef7137d2e31867d7279c86d5baf8b4343ae9588b",
+      "article_license": "CC BY 4.0",
+      "data_license": "unspecified in repository"
+    }
   }
 ]
