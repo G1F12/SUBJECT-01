@@ -1,0 +1,35 @@
+{
+  "experiment_id": "EXP-0118",
+  "classification": "POST_HOC_CONDITIONAL_FLIGHT_PHYSICS",
+  "manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "protocol_sha256_lf": "a27de93e750344a95980c95ee54318ebcf3d4fdd98a61d9876127eac873ecdfd",
+  "runner_sha256_lf": "f33f26e3c840fb5125b39d8161d03eed852a8ac3b47a25f20b130ca4d2bd4d7e",
+  "files": 11,
+  "files_failing_power_or_event_gate": 0,
+  "persons_with_eligible_flights": 11,
+  "flight_candidates": 220,
+  "flight_excluded": 0,
+  "eligible_flights": 220,
+  "duration_range_s": [
+    0.3119999999999976,
+    0.43599999999999994
+  ],
+  "max_power_reconstruction_mae_W": 1.1617332340691149e-07,
+  "max_power_reconstruction_abs_error_W": 6.216287147253752e-07,
+  "mean_person_abs_deviation_freefall_m_s": 2.07473588870075,
+  "bootstrap_95_person_mean_m_s": [
+    1.874309555711895,
+    2.2860628172531983
+  ],
+  "persons_mean_abs_error_above_0_1_m_s": 11,
+  "max_single_flight_abs_deviation_m_s": 2.8600570701264427,
+  "mean_person_abs_deviation_newton_proxy_m_s": 2.074207080823884,
+  "max_single_newton_proxy_deviation_m_s": 2.8516627553551235,
+  "limits": [
+    "conditional freefall and Newton proxy, Smith machine rail forces unmeasured",
+    "Weight field may differ from total moving mass",
+    "velocities reconstructed from author algorithm, not independent kinematics",
+    "previously viewed files and source code",
+    "no physical power/work validation or CPE45 inference"
+  ]
+}

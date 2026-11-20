@@ -1,3 +1,5 @@
+- EXP-0118: compared reconstructed jump flight velocity changes against conditional gravity and force/mass references; unmeasured guide forces and mass prevent causal attribution.
+
 - EXP-0117: matched all ten available raw jump recordings to ten processed records and reproduced their 0.25 Hz power pipeline; one processed record unmatched.
 
 - EXP-0116: matched one raw/processed jump recording and reproduced saved power using 0.25 Hz; exported 500 Hz versus article 1000 Hz remains unresolved.

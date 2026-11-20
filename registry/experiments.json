@@ -3351,5 +3351,33 @@
     "limits": "One pair previously matched; timestamps identify recorded trajectories rather than personal or session identity. One processed file has no source CSV in this archive. Acquisition frequency, mass and physical power validity remain unverified.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0118",
+    "date": "2026-11-20",
+    "name": "Conditional flight-phase physical consistency of reconstructed jump velocity",
+    "sources": [
+      "SRC-0108"
+    ],
+    "design": "On 11 previously viewed processed files, reconstruct author velocity, enforce source power and 20-flight gates, compare within-flight velocity change against conditional free-fall and force/mass Newton proxies; cluster bootstrap by person.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_flight.py",
+    "inputs": "research/program_evidence_audit/LCMJ_FLIGHT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_FLIGHT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_FLIGHT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_flight.py <downloaded-xlsx-directory>",
+    "results": {
+      "findings": [
+        "FND-0114"
+      ],
+      "negative_results": [
+        "NEG-0098"
+      ]
+    },
+    "limits": "Post-hoc conditional checks, no independently measured kinematics or Smith machine guide forces, unverified total moving mass; cannot assign mechanism or establish actual work and CPE45.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

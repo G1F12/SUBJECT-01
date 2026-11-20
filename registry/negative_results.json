@@ -784,5 +784,13 @@
     "title": "Two jump archives cannot serve as independent cohorts",
     "statement": "All ten available raw recordings match ten processed recordings exactly; one processed file has no match in the raw archive.",
     "reason": "Identical force-time trajectories establish shared observations, and sampling frequency, mass and physical validity are not resolved by computational reproduction."
+  },
+  {
+    "id": "NEG-0098",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0118",
+    "title": "Saved power cannot be admitted as validated work from computational reproduction alone",
+    "statement": "The derived velocity-change signal differs materially from conditional free-fall and force/mass proxies across flight intervals, despite reproducing the archived power to within 1e-6 W.",
+    "reason": "Unmeasured Smith-machine forces, moving mass, kinematics and filtering prevent separating physical effects from computational assumptions or converting the power into validated work."
   }
 ]

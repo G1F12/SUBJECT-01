@@ -973,5 +973,14 @@
     "statement": "Ten raw files match ten of eleven processed force trajectories exactly, with no ambiguous pairs. A 0.25 Hz reconstruction passes the predefined power gate for all ten; 2.5 Hz passes none. This is provenance, not physiological validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0114",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0118",
+    "title": "Reconstructed flight velocity changes differ from conditional free-fall reference",
+    "statement": "Across 220 accepted flight intervals from 11 previously viewed participants, participant-mean absolute deviation of reconstructed velocity change from −gΔt averages 2.075 m/s [1.874,2.286] by participant bootstrap. Smith guide forces and complete moving mass are not observed.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
