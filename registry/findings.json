@@ -865,5 +865,14 @@
     "statement": "In 12 previously unused participants, normalized D2 predicts fifth-sprint mean power with assumed-unit MAE 84.75 versus persistence 88.09; paired difference 3.35 [−30.31,36.27]. Unit W is inferred and the source was partly previewed; no efficacy or whole-system inference.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0102",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0106",
+    "title": "Observed paired endurance times differ where D2 condition input is absent",
+    "statement": "In 18 previously unused participants, observed Stroop minus control time averages −111.06 s with paired bootstrap [−190.73,−48.94]; the D2 model produces exactly zero contrast because its inputs are identical across conditions. The endpoint definition differs and no physiological mechanism is identified.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

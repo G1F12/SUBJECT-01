@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0106 / FND-0102 / NEG-0086 / SRC-0101: проверена ограниченная связь заданной веломощности, порога D2 и наблюдаемых парных времён прекращения. См. research/program_evidence_audit/SOURON_ENDURANCE_REPORT.md.
+
 EXP-0105 / FND-0101 / NEG-0085 / SRC-0100: выполнена ограниченная проверка D2 на новой контрольной когорте спринтов. См. research/program_evidence_audit/CHANG_SPRINT_REPORT.md.
 
 EXP-0104 / FND-0100 / NEG-0084: разделена ошибка абсолютного масштаба и относительной формы D2 на двух просмотренных спринтовых когортах. См. research/program_evidence_audit/D2_SCALE_SHAPE_REPORT.md.

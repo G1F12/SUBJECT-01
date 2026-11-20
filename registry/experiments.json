@@ -3012,5 +3012,33 @@
     "limits": "New cohort but first 3 control columns previewed before protocol; power unit W inferred not documented on sheet; full initial stores assumed after prior fatigue, small selected cohort and no physiological or architecture validation.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0106",
+    "date": "2026-11-20",
+    "name": "D2 conditional power threshold and external cycling time-to-failure",
+    "sources": [
+      "SRC-0101"
+    ],
+    "design": "Compare three fixed D2 power-threshold scenarios and person-held-out control-mean baseline to 18 paired observed times at 80% PPO; bootstrap participants, check time step and identify absent cognitive input.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_souron_endurance.py",
+    "inputs": "research/program_evidence_audit/SOURON_ENDURANCE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SOURON_ENDURANCE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SOURON_ENDURANCE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_souron_endurance.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0102"
+      ],
+      "negative_results": [
+        "NEG-0086"
+      ]
+    },
+    "limits": "Partial preview and published effect; D2 diagnostic 95% power threshold differs from voluntary/cadence failure, 2700 s censoring, warmup and cognitive history not represented; no physiological or CPE45 validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

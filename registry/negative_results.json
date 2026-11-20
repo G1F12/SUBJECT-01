@@ -688,5 +688,13 @@
     "title": "Normalized D2 advantage on new sprint control cohort not established",
     "statement": "The 95% participant bootstrap interval of persistence minus scaled-D2 MAE crosses zero; smaller time steps change the normalized MAE and the predeclared convergence tolerance is absent.",
     "reason": "The sample is small and partly previewed, physical units and post-fatigue initial condition are not independently established, and normalization is not an energy-balanced physiological model."
+  },
+  {
+    "id": "NEG-0086",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0106",
+    "title": "Conditional D2 power threshold does not match external failure times better than simple baseline",
+    "statement": "At fatigue rates 0.001 and 0.003/s, mean absolute discrepancy of the diagnostic threshold is 737 and 879 s against 284 s for a held-person-out control-mean baseline; the observed voluntary/cadence endpoint is not the model threshold.",
+    "reason": "Different outcome definitions, omitted warmup/cognitive state, generic energy parameters and partial preview prevent attributing discrepancy to physiological model failure or validating it for CPE45."
   }
 ]
