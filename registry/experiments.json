@@ -3293,5 +3293,34 @@
     "limits": "10 subjects; article and same-sample feature selection previewed before LOPO; bootstrap holds dependent LOPO predictions fixed; outcome derived, squat strength determines jump load, cohort overlap with SRC-0108 unknown.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0116",
+    "date": "2026-11-20",
+    "name": "Raw-to-derived jump force and filter provenance single-pair audit",
+    "sources": [
+      "SRC-0108",
+      "SRC-0110"
+    ],
+    "design": "Match force timestamps and bilateral sum in one raw/processed pair, then reproduce saved power with author algorithm at 0.25 and 2.5 Hz under fixed gate.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_raw_match.py",
+    "inputs": "research/program_evidence_audit/LCMJ_RAW_MATCH_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_RAW_MATCH_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_RAW_MATCH_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_raw_match.py <raw-csv> <processed-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0112"
+      ],
+      "negative_results": [
+        "NEG-0096"
+      ]
+    },
+    "limits": "Single previously partially viewed pair; does not establish all cohort overlap, sampling acquisition, loaded mass semantics, physical accuracy of power, work or model validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

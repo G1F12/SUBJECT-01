@@ -1,0 +1,39 @@
+{
+  "experiment_id": "EXP-0116",
+  "classification": "POST_VIEW_SINGLE_PAIR_PROVENANCE_AUDIT",
+  "raw_sha256_bytes": "9852f34119d58a2512e0801b1bb1461409292457c79d853fec3541303cc610d1",
+  "raw_md5_bytes": "4f9ebe473da423d7cb19f897b00da01a",
+  "processed_sha256_bytes": "d906cbcc12ece4268ccc131c0fd3f2a6da3bc3355da7b978ca9fd85683c2bc15",
+  "source_manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "protocol_sha256_lf": "7d72f2f39319f5651f89029c7d89e5bf8bb0adfa029b958c313e887ea8c1f68d",
+  "runner_sha256_lf": "bde6de9fceb25640ce38d2c1a22cda04cdde0a37883877b6532d5194e08fa946",
+  "xlsx_sampling_frequency_Hz": 500.0,
+  "raw_median_sampling_frequency_Hz": 500.0000000002771,
+  "processed_median_sampling_frequency_Hz": 500.0000000011653,
+  "matched_samples": 31499,
+  "max_time_difference_s": 0.0,
+  "force_mae_N": 0.0,
+  "force_max_error_N": 0.0,
+  "force_gate_passed": true,
+  "filter_scenarios": {
+    "0.25": {
+      "mae_W": 7.941459591542449e-08,
+      "rmse_W": 1.1175118465700202e-07,
+      "max_abs_error_W": 4.958601493854076e-07,
+      "predefined_match": true
+    },
+    "2.5": {
+      "mae_W": 1338.095677788089,
+      "rmse_W": 2439.533816512967,
+      "max_abs_error_W": 15657.718948240672,
+      "predefined_match": false
+    }
+  },
+  "limits": [
+    "one pair; no inference about other participants or studies",
+    "author algorithm and first rows previewed; not blinded",
+    "match is internal provenance, not independent force or power validation",
+    "mass and bar load definition remain unverified",
+    "no mechanical work, CPE45 or architecture assessment"
+  ]
+}

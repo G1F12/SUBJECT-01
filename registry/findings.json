@@ -955,5 +955,14 @@
     "statement": "For 10 participants, LOPO MAE is 2.96 percentage points for mean baseline, 2.49 for relative squat strength and 2.45 for repeated sprint decrement; paired bootstrap advantages include zero and selection was already informed by this cohort.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0112",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0116",
+    "title": "One processed jump power series is reproducible from matching raw forces with 0.25 Hz",
+    "statement": "31,499 force samples match exactly across one raw/processed pair. The 0.25 Hz author-algorithm reconstruction has power MAE ~8e-8 W; recorded timestamps and XLSX header indicate 500 Hz. This shows shared source and reproducible processing for one pair, not physical validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

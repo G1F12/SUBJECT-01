@@ -768,5 +768,13 @@
     "title": "Strength or repeat-sprint advantage over mean baseline is not established",
     "statement": "Paired fixed-prediction bootstrap 95% intervals for baseline minus strength MAE are [−1.15,2.00] pp and for baseline minus sprint MAE [−0.82,1.76] pp.",
     "reason": "Small selected cohort and overlapping LOPO training sets limit precision; predictors were selected with prior knowledge and neither result establishes equivalence or independent validation."
+  },
+  {
+    "id": "NEG-0096",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0116",
+    "title": "Article 2.5 Hz interpretation does not reproduce one archived power series",
+    "statement": "Under otherwise identical stated author algorithm, 2.5 Hz gives 1338.10 W MAE while 0.25 Hz matches within the prespecified tolerance.",
+    "reason": "The computation establishes an algorithmic match for one file, not why the publication states 2.5 Hz or whether its reported 1000 Hz acquisition was downsampled."
   }
 ]

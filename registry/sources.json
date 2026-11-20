@@ -1928,5 +1928,26 @@
       "md5": "2c10a95978c5be4acbe20a95d0b036dd",
       "sha256": "e09cd2da52060ad0caf72a8aaf58f03afc415ef6b13696192058bfd34187f184"
     }
+  },
+  {
+    "id": "SRC-0110",
+    "date": "2026-11-20",
+    "name": "Natera et al. original bilateral force recordings for loaded jumps",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LCMJ_RAW_MATCH_REPORT.md",
+    "doi": "10.6084/m9.figshare.24069861.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.24069861.v1",
+    "calibration_review": {
+      "access": "CC BY 4.0; first CSV downloaded; publisher MD5 and byte SHA-256 verified; first timestamps and headers previewed.",
+      "scope": "One bilateral force CSV exactly matched one processed force interval in SRC-0108. Stored power reproduced with author 0.25 Hz algorithm on this pair; sample timestamps indicate 500 Hz while article reports 1000 Hz acquisition."
+    },
+    "external_provenance": {
+      "article_doi": "10.7717/peerj.16788",
+      "file_url": "https://ndownloader.figshare.com/files/42228204",
+      "md5": "4f9ebe473da423d7cb19f897b00da01a",
+      "sha256": "9852f34119d58a2512e0801b1bb1461409292457c79d853fec3541303cc610d1",
+      "license": "CC BY 4.0"
+    }
   }
 ]

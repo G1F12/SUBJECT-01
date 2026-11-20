@@ -1,3 +1,5 @@
+- EXP-0116: matched one raw/processed jump recording and reproduced saved power using 0.25 Hz; exported 500 Hz versus article 1000 Hz remains unresolved.
+
 - EXP-0115: evaluated published strength and repeat-sprint predictors of jump power decrement against leave-one-person-out mean; advantage uncertain after prior feature selection.
 
 - EXP-0114: admitted 11 repeated-jump workbooks for exploratory peak-power comparison; source processing filter mismatch raised as ISS-0039.
