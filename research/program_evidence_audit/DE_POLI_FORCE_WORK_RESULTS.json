@@ -1,0 +1,30 @@
+{
+  "experiment_id": "EXP-0109",
+  "classification": "POST_VIEW_GROUP_SUMMARY_ONLY_INDIVIDUAL_DATA_BLOCKED",
+  "input_sha256_lf": "6939001ad6417c1ab6ee1cf0e97febc21eae65089f1b165bc74c6cf7f96ac28a",
+  "protocol_sha256_lf": "75c8cf96bd69f804ee2cfd999853ac385ca4855a73f50e45a75906b21d2383bb",
+  "runner_sha256_lf": "8ebaeb79a886f5fac466e34fa6f2405d005ce0a029a2eb686fe2457c7b927b57",
+  "results": {
+    "SIT": {
+      "retention_ratio_of_group_means": {
+        "pre_training": 0.7135842880523732,
+        "post_training": 0.750814332247557
+      },
+      "change_in_ratio_percentage_points": 3.723004419518383
+    },
+    "control": {
+      "retention_ratio_of_group_means": {
+        "pre_training": 0.8183333333333334,
+        "post_training": 0.8080985915492958
+      },
+      "change_in_ratio_percentage_points": -1.0234741784037604
+    },
+    "difference_in_group_changes_percentage_points": 4.7464785979221435
+  },
+  "limitations": [
+    "ratio of rounded group means, not mean individual retention",
+    "no paired uncertainty, no individual mechanical work",
+    "relative intensity matched rather than same absolute work",
+    "no individual data, CPE45 or architecture outcome"
+  ]
+}

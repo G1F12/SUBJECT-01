@@ -712,5 +712,13 @@
     "title": "D2-cap threshold lacks an identified physiological capacity",
     "statement": "Changing only assumed initial capacity from 1 to 1.5 times PPO changes the number of conditional events from 15 to zero in the selected fatigue scenario.",
     "reason": "Capacity and its fatigue evolution are not observed; model threshold differs from voluntary or cadence cessation, and candidate outputs are evaluated on an already viewed cohort."
+  },
+  {
+    "id": "NEG-0089",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0109",
+    "title": "Published grouped data do not identify equal-work force changes",
+    "statement": "The table permits only ratios of rounded group means, not participant-level force-work comparisons or valid paired uncertainty.",
+    "reason": "Individual records and reuse conditions are not obtained, and the post-training load is redefined by relative physiological intensity rather than fixed absolute work."
   }
 ]

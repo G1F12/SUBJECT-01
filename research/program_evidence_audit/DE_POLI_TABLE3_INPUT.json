@@ -1,0 +1,8 @@
+{
+  "source": "https://doi.org/10.1002/ejsc.70089",
+  "table": "3; iMVC Force (N), published rounded group means",
+  "groups": {
+    "SIT": {"pre_training": {"baseline_N": 611, "post_exercise_N": 436}, "post_training": {"baseline_N": 614, "post_exercise_N": 461}},
+    "control": {"pre_training": {"baseline_N": 600, "post_exercise_N": 491}, "post_training": {"baseline_N": 568, "post_exercise_N": 459}}
+  }
+}

@@ -3096,5 +3096,33 @@
     "limits": "Post-hoc on reviewed cohort; initial capacity factors hypothetical, threshold differs from voluntary/cadence stop, modelled 2700-second work extends beyond observed cessation and is not observed human work.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0109",
+    "date": "2026-11-20",
+    "name": "Force-work source suitability and group-summary audit",
+    "sources": [
+      "SRC-0102"
+    ],
+    "design": "Post-view descriptive calculation of ratios of published rounded group means and individual-data readiness audit; distinguish relative intensity from equal mechanical work.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_de_poli_force_work.py",
+    "inputs": "research/program_evidence_audit/DE_POLI_FORCE_WORK_PROTOCOL.md",
+    "report": "research/program_evidence_audit/DE_POLI_FORCE_WORK_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/DE_POLI_FORCE_WORK_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_de_poli_force_work.py",
+    "results": {
+      "findings": [
+        "FND-0105"
+      ],
+      "negative_results": [
+        "NEG-0089"
+      ]
+    },
+    "limits": "Individual data, pairing, joint uncertainty and measured equal-work comparison unavailable; values are ratios of rounded group means, not participant means or whole architecture results.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,3 +1,5 @@
+- EXP-0109: identified and audited a same-cohort cycling-work and knee-force study; participant data require author request and absolute work was not matched.
+
 - EXP-0108: evaluated separated-demand D2-cap against previously reviewed cycling cohort; conditional event counts depend on hypothetical capacity and endpoints remain non-equivalent.
 
 - EXP-0107: post-hoc audit attributes D2 first threshold crossing to reduced internal demand in both nonzero-rate scenarios; no instantaneous modeled capacity shortfall at that point.

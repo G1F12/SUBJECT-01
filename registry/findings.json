@@ -892,5 +892,14 @@
     "statement": "At fatigue rate 0.003/s, 15 of 18 D2-cap scenarios cross the conditional threshold with initial capacity=PPO, versus zero before 2700 s with capacity=1.5 PPO; these are unmeasured assumptions, with no physiological or target validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0105",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0109",
+    "title": "Cycling study reports work and knee force in the same cohort",
+    "statement": "The paper reports measured CWR power and total work plus pre/post-exercise knee extension iMVC in 21 active men; relative rather than absolute loading was held by design, and individual joined data are available only upon request.",
+    "confidence": "source_metadata_and_scope_checked",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
