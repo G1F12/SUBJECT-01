@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0092 / FND-0089: проверена чувствительность исправленной цепи к направлению хорды; оценена доступность SRC-0091 и SRC-0092. См. research/program_evidence_audit/CHORD_SENSITIVITY_REPORT.md.
+
 EXP-0091 / NEG-0073: пересчитано сравнение исправленных номиналов с ранее просмотренной когортой. См. research/program_evidence_audit/GRAVITY_SANTOS_REPORT.md.
 
 EXP-0090 / FND-0088 / DEC-0031: изолированно пересобраны зависимые модельные ветки после исправления гравитации. См. research/program_evidence_audit/GRAVITY_REBUILD_REPORT.md.

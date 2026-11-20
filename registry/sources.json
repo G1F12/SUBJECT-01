@@ -1566,5 +1566,33 @@
       "md5": "f908a746cbd3ac9fecb775d85f516b56",
       "sha256": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe"
     }
+  },
+  {
+    "id": "SRC-0091",
+    "date": "2026-11-20",
+    "name": "Bath leg press study dataset BATH-00179",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LEG_PRESS_SOURCE_AUDIT.md",
+    "doi": "10.15125/BATH-00179",
+    "url": "https://researchdata.bath.ac.uk/179/",
+    "calibration_review": {
+      "access": "Archive states retention period expired and dataset no longer available; article and metadata available.",
+      "scope": "Dynamic submaximal leg press; individual records, relevant geometry and isometric force not verified."
+    }
+  },
+  {
+    "id": "SRC-0092",
+    "date": "2026-11-20",
+    "name": "Penasso and Thaller individual knee extensor properties and leg press measurements",
+    "type": "primary_paper",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LEG_PRESS_SOURCE_AUDIT.md",
+    "doi": "10.1080/13873954.2017.1336633",
+    "url": "https://doi.org/10.1080/13873954.2017.1336633",
+    "calibration_review": {
+      "access": "Article methods checked; no open individual raw data located, availability not established.",
+      "scope": "Synchronous leg press force, sled motion and markers potentially useful for ISS-0029; trunk orientation and underlying data availability unconfirmed."
+    }
   }
 ]

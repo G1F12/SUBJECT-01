@@ -2620,5 +2620,31 @@
     "limits": "Reused data, model geometry mismatched and not individualized; no independent external validation or architecture effect.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0092",
+    "date": "2026-11-20",
+    "name": "Gravity-corrected leg-press chord-direction sensitivity",
+    "sources": [
+      "SRC-0090"
+    ],
+    "design": "Rerun corrected chain on prespecified five chord directions and three knee angles; inspect tendon proxy and reused Santos W0 force versus LOSO.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_chord_sensitivity.py",
+    "inputs": "research/program_evidence_audit/CHORD_SENSITIVITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/CHORD_SENSITIVITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/CHORD_SENSITIVITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_chord_sensitivity.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0089"
+      ],
+      "negative_results": []
+    },
+    "limits": "Diagnostic chord grid, not individual hip posture; reused Santos data, tendon proxy, no whole architecture or real functional assessment.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

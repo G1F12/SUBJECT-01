@@ -321,13 +321,15 @@
       "EXP-0069",
       "EXP-0077",
       "EXP-0085",
-      "EXP-0088"
+      "EXP-0088",
+      "EXP-0092"
     ],
     "related_issues": [
       "ISS-0021",
       "ISS-0023"
     ],
-    "required_inputs": "Explicit trunk orientation, measured hip, knee, ankle and foot positions and task geometry; biomechanically valid force-length and moment-arm effects; held-participant forces and prespecified comparisons against simple baseline."
+    "required_inputs": "Explicit trunk orientation, measured hip, knee, ankle and foot positions and task geometry; biomechanically valid force-length and moment-arm effects; held-participant forces and prespecified comparisons against simple baseline.",
+    "progress": "EXP-0092 tests five fixed chord directions; model tendon gate remains pose dependent. This is not measured trunk-relative hip geometry. Candidate SRC-0092 raw data not located; SRC-0091 archive retention expired."
   },
   {
     "id": "ISS-0030",

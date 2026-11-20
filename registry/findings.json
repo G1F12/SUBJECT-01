@@ -748,5 +748,14 @@
     "statement": "The isolated one-line gravity correction recomputes all 48 tendon cases, 23 one-factor cases, 24 interface cases, 10 arm reoptimizations, integrated fixed-work and D2 thermal scenarios, and the legacy numerical aggregator. Strategy 2 gains are 21.93% at 100 degrees and 21.77% at 140 degrees; no tendon proxy gate changed in the tested grid. Model-only and not whole-system validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0089",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0092",
+    "title": "Chord direction sensitivity in corrected static chain",
+    "statement": "Across five fixed diagnostic chord angles, modeled strategy 2 gains range 21.86–22.04%, 21.83–21.98%, and 21.73–21.84% for knee angles 100, 110 and 140 degrees. Conditional tendon proxy passes the joint model gate only at 140 degrees. This is not a measurement of human function, tissue safety or hip posture.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
