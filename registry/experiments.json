@@ -3519,5 +3519,33 @@
     "limits": "Source and prior results already inspected; 21 records versus 20 published; Nivo and leg mapping are provisional, no causal or equal-work inference.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0124",
+    "date": "2026-11-20",
+    "name": "Precision grip force-control data integrity gate",
+    "sources": [
+      "SRC-0113"
+    ],
+    "design": "Gate 16-person 384-trial filename grid, header conventions and full numerical-payload SHA-256; parse repeated signal representatives before paired force-control analysis.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_precision_grip_gate.py",
+    "inputs": "research/program_evidence_audit/PRECISION_GRIP_PROTOCOL.md",
+    "report": "research/program_evidence_audit/PRECISION_GRIP_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/PRECISION_GRIP_GATE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_precision_grip_gate.py <Dataset.zip>",
+    "results": {
+      "findings": [
+        "FND-0120"
+      ],
+      "negative_results": [
+        "NEG-0104"
+      ]
+    },
+    "limits": "Data dictionary and article previewed; full numeric parsing limited to one representative per repeated group. Post-fatigue MVC and object orientation not available as stated; cross-person exact repeats require clarification.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1989,5 +1989,25 @@
       "archive_sha256": "c38628fa2a682ca784f9254d51c2b373b831f0e39929e3ea8640bdd368db3dcd",
       "table_sha256": "d58b3e596fb7a5d9d8aa91e511112e7fa4a6e6b98cbe7a3fad2c7d20d518a541"
     }
+  },
+  {
+    "id": "SRC-0113",
+    "date": "2026-11-20",
+    "name": "Precision grip force coordination after unilateral fatigue",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/PRECISION_GRIP_REPORT.md",
+    "doi": "10.6084/m9.figshare.7188377.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.7188377.v1",
+    "calibration_review": {
+      "access": "Figshare ZIP and DOCX downloaded; ZIP publisher MD5 and local SHA-256 verified.",
+      "scope": "16 women; repeated 3D fingertip force traces in two fatigue-side sessions. 62 post-condition files have identical numerical payloads across participants and hands; source validity unresolved."
+    },
+    "external_provenance": {
+      "article_doi": "10.1371/journal.pone.0208740",
+      "zip_md5": "e1c2aa2694e5660eda1568cd004ba7be",
+      "zip_sha256": "65098f741450024775bcb5bda73436d1f2144391f4be46f5a1e3149723f58f6b",
+      "license": "CC0"
+    }
   }
 ]

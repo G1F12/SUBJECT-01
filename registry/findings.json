@@ -1027,5 +1027,14 @@
     "statement": "All 21 archived participants have opposing zero-lag signs minimizing summed work integral error across the two condition groups. On an exploratory assumption of group and leg mapping 11 participants could be classified, 10 with one sign orientation and one opposite.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0120",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0124",
+    "title": "A common numerical force series appears in 62 post-load files",
+    "statement": "Exact numeric SHA-256 matches for 62 trials spanning 16 subject folders and both hands; two other pairs also repeat. Semantic 16 by 24 filename grid is complete.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

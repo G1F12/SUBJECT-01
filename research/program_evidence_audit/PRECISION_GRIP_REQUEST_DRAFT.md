@@ -1,0 +1,5 @@
+# Draft request — not sent
+
+Subject: Clarification of repeated numerical records in Figshare 7188377
+
+Dear authors, we are reviewing the data associated with DOI 10.1371/journal.pone.0208740. In Figshare dataset version 1 (ZIP MD5 e1c2aa2694e5660eda1568cd004ba7be), 62 post-condition CSV files across 16 subject folders and both hand labels contain exactly the same numerical data after the two header lines (numeric payload SHA-256 15ab339fa86fd63df74512d2b6c4f2c88d3bec63ff37a21d129ae72c6bc6dc65). Two additional pairs within subjects also repeat exactly. Most of the first group are second repetitions. Does this indicate unavailable or placeholder data, an export error, or another documented procedure? Could you provide a corrected archive and checksums or a trial-level validity and missingness map, along with the force-channel convention, per-trial timing, fatigue/test order and information about whether object orientation or post-fatigue MVC was recorded? Two files have atypical header text. We can supply exact archive paths on request. Thank you.

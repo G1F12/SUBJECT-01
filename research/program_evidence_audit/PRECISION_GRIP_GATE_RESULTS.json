@@ -1,0 +1,89 @@
+{
+  "archive_sha256": "65098f741450024775bcb5bda73436d1f2144391f4be46f5a1e3149723f58f6b",
+  "files": 384,
+  "expected_grid_complete": true,
+  "header_mismatches": 2,
+  "unique_complete_file_hashes": 322,
+  "header_mismatch_patterns": [
+    {
+      "hand": "left",
+      "header1": "y,Index,,,Thumb,,",
+      "header2": "Time,X,Y,Z,X,Y,Z",
+      "count": 1
+    },
+    {
+      "hand": "right",
+      "header1": ",Thumb,,,Index,,",
+      "header2": "y,X,Y,Z,X,Y,Z",
+      "count": 1
+    }
+  ],
+  "unique_numeric_payload_hashes": 321,
+  "repeated_numeric_payload_groups": [
+    {
+      "numeric_payload_sha256": "15ab339fa86fd63df74512d2b6c4f2c88d3bec63ff37a21d129ae72c6bc6dc65",
+      "trials": 62,
+      "participants": 16,
+      "phases": {
+        "post": 62
+      },
+      "hands": {
+        "left": 32,
+        "right": 30
+      },
+      "repetition_numbers": {
+        "2": 61,
+        "3": 1
+      },
+      "rows": 80002,
+      "time_start_s": 0.001,
+      "time_end_s": 80.002,
+      "all_steps_1ms": true,
+      "max_abs_force_component_N": 2.205,
+      "force_rms_components_N": 0.8888350617636592
+    },
+    {
+      "numeric_payload_sha256": "a5710941a3a942cf0d12e9ab7265526c0a0e9211a13ee84cba694f0278cb6ff8",
+      "trials": 2,
+      "participants": 1,
+      "phases": {
+        "post": 2
+      },
+      "hands": {
+        "right": 2
+      },
+      "repetition_numbers": {
+        "2": 1,
+        "3": 1
+      },
+      "rows": 80002,
+      "time_start_s": 0.001,
+      "time_end_s": 80.002,
+      "all_steps_1ms": true,
+      "max_abs_force_component_N": 5.712,
+      "force_rms_components_N": 2.419997784753489
+    },
+    {
+      "numeric_payload_sha256": "c4193823ac9514a2c6c0c047f3047643ff5690692cbecfa8be7267ad77fe9a35",
+      "trials": 2,
+      "participants": 1,
+      "phases": {
+        "post": 2
+      },
+      "hands": {
+        "right": 2
+      },
+      "repetition_numbers": {
+        "2": 1,
+        "3": 1
+      },
+      "rows": 80002,
+      "time_start_s": 0.001,
+      "time_end_s": 80.002,
+      "all_steps_1ms": true,
+      "max_abs_force_component_N": 7.055,
+      "force_rms_components_N": 2.6269634643441324
+    }
+  ],
+  "limits": "Only repeated-payload representatives fully parsed. Non-duplicate signal quality, physical calibration, and true missingness are unverified."
+}
