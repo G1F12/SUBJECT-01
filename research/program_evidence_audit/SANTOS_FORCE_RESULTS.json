@@ -1,0 +1,58 @@
+{
+  "experiment_id": "EXP-0087",
+  "classification": "EXPLORATORY_CROSS_PROTOCOL_FORCE_CHECK",
+  "source_sha256_bytes": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
+  "protocol_sha256_lf": "11659de491993569ec3fd4f47b3534dced0f8b086e50b7ef3510fc56047e854d",
+  "runner_sha256_lf": "8a28f1376ef1ea421e2aec185184da2f4c6b39d7f645c418b9cbdf23459f405f",
+  "exp0061_result_sha256_lf": "7ead404d565772856b7efacaf4cb7e017790fa4f9ad803865a2f71b95b08f3c9",
+  "participants": 11,
+  "excluded_count": 0,
+  "session_counts": {
+    "W0": 11,
+    "W3": 1,
+    "W4": 11,
+    "POS": 11,
+    "W2": 10
+  },
+  "nominal_model_force_N": 2601.1,
+  "cohort_initial_mean_N": 2513.601676405315,
+  "cohort_initial_sd_N": 577.7471221344211,
+  "primary": {
+    "model_mae_N": 486.3950174529628,
+    "loso_mean_mae_N": 508.7850221198536,
+    "model_rmse_N": 557.7660713871118,
+    "loso_mean_rmse_N": 605.9462936994222,
+    "model_bias_N": 87.49832359468449,
+    "loso_mean_bias_N": -2.0670334131202914e-13,
+    "paired_loso_minus_model_mae_N": 22.390004666890864,
+    "paired_ci95_N": [
+      -36.08603026409859,
+      85.19659951853171
+    ]
+  },
+  "within_person_post_vs_baseline": {
+    "mean_change_N": 450.2308970613801,
+    "mean_change_N_ci95": [
+      209.09201152390702,
+      742.4142889630084
+    ],
+    "mean_relative_change_pct": 19.374265558895765,
+    "mean_relative_change_ci95_pct": [
+      9.261454854400014,
+      31.693469194244464
+    ],
+    "median_relative_change_pct": 18.18895616958398,
+    "count_at_least_20pct": 5,
+    "peak_rfd_w0_mean_source_units": 9.981416494167254,
+    "peak_rfd_pos_mean_source_units": 11.208319844562663,
+    "mean_peak_rfd_change_source_units": 1.2269033503954108,
+    "rfd_units_status": "N/ms inferred from article table and matching session means, XLSX has no unit dictionary",
+    "control_group": "none_parallel"
+  },
+  "limits": [
+    "knee angle, instrument and unmeasured individual geometry differ from model",
+    "no parallel control",
+    "no individual body mass",
+    "no augmentation, tissue, CPE45 or whole-system outcome"
+  ]
+}

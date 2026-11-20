@@ -219,5 +219,16 @@
       "DEC-0026"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0028",
+    "date": "2026-11-20",
+    "title": "Admit scoped bilateral isometric force cohort with geometric limitations",
+    "decision": "Admit SRC-0090 and EXP-0087 for narrow cross-protocol baseline force and within-cohort trajectory assessment. Retain DATA_BLOCKED for exact EXP-0061 protocol and individualized geometry, FORCE20 and ADAPT25 unvalidated, CPE45 NOT EXTERNALLY VALIDATED, whole-system HOLD and interventions NO_GO.",
+    "rationale": "Published individual force values support a relevant partial comparison but 110-degree task, 11 men, absent individual mass/geometry and parallel control do not establish individual model validity or architecture effects.",
+    "amends": [
+      "DEC-0027"
+    ],
+    "supersedes": []
   }
 ]

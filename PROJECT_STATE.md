@@ -1,3 +1,5 @@
+EXP-0087 / FND-0085 / NEG-0070 / DEC-0028: ограниченная внешняя проверка индивидуальных сил жима; точная геометрия и причинный эффект остаются открыты. См. research/program_evidence_audit/SANTOS_FORCE_REPORT.md.
+
 EXP-0086 / FND-0084 / NEG-0069: температурный прогноз до 60-й минуты; преимущество на последнем 15-минутном участке не установлено. См. research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md.
 
 EXP-0085 / FND-0083: одностороннее сопряжение энергетического ledger, теплообмена и условной силы; совместный эффект не оценён. См. research/program_evidence_audit/COUPLED_ENERGY_THERMAL_REPORT.md.

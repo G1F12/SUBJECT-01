@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0087 / FND-0085 / NEG-0070 / DEC-0028: добавлена ограниченная открытая проверка силы жима и её траектории. См. research/program_evidence_audit/SANTOS_FORCE_REPORT.md.
+
 EXP-0086 / FND-0084 / NEG-0069: повторный анализ температуры до 60-й минуты. См. research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md.
 
 EXP-0085 / FND-0083: сопряжены модельные работа, тепло и условный силовой интерфейс; сохранены ограничения. См. research/program_evidence_audit/COUPLED_ENERGY_THERMAL_REPORT.md.

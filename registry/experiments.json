@@ -2476,5 +2476,33 @@
     "limits": "Previously reviewed same cohort; assumed power timestamps and early climate; lumped predicts mean body, outcome rectal; no post45 function, new cohort or CPE45 validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0087",
+    "date": "2026-11-20",
+    "name": "Scoped external bilateral isometric force cohort and adaptation trajectory",
+    "sources": [
+      "SRC-0090"
+    ],
+    "design": "Compare fixed EXP-0061 100-degree nominal force against participant-held-out W0 cohort mean for Santos ~110-degree leg press; bootstrap participant MAE, describe W0-POS paired changes.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_santos_force.py",
+    "inputs": "research/program_evidence_audit/SANTOS_FORCE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SANTOS_FORCE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SANTOS_FORCE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_santos_force.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0085"
+      ],
+      "negative_results": [
+        "NEG-0070"
+      ]
+    },
+    "limits": "Eleven men, angle/device differ, no subject mass or geometry, no parallel control and one W3 label unexplained. Does not validate exact EXP-0061 or functional enhancement.",
+    "external_validation": "PARTIAL_CROSS_PROTOCOL_ONLY",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

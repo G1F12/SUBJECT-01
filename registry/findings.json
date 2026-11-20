@@ -712,5 +712,14 @@
     "statement": "On 23 previously viewed McLaughlin participants, 60–1 minute temperature-change MAE is 0.733 C for variable-power Pennes vs 1.376 C for persistence and 1.078 C for participant-mass lumped balance; Pennes superiority CI relative to persistence [0.227, 0.972] C. Rectal versus mean-body endpoints and timestamp assumptions limit interpretation.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0085",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0087",
+    "title": "Open bilateral leg press cohort provides scoped force trajectory",
+    "statement": "Eleven participants had W0 mean peak force 2513.6 N and mean paired W0-to-POS change 19.37% [9.26,31.69] bootstrap CI; five participants increased at least 20%. No parallel control, individual mass or geometry, and no inference of target or architecture efficacy.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

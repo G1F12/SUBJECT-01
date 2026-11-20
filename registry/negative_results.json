@@ -560,5 +560,13 @@
     "title": "Late 15-minute thermal forecast has no demonstrated advantage over persistence",
     "statement": "For the 60–45 min increment, MAE is 0.329 C for continued variable-power Pennes vs 0.250 C persistence; paired persistence-minus-model MAE CI [-0.198, 0.026] C includes zero.",
     "reason": "Same previously reviewed cohort, assumed power timestamps, sparse ambient inputs, and different model initialization and measurement-site definitions."
+  },
+  {
+    "id": "NEG-0070",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0087",
+    "title": "Cross-protocol nominal force has no established advantage over cohort mean",
+    "statement": "Unfitted EXP-0061 100-degree baseline predicts 11 Santos W0 peak forces at MAE 486.4 N versus 508.8 N for leave-one-person-out mean; paired mean difference [−36.1,85.2] N includes zero.",
+    "reason": "Approximate 110-degree task and apparatus differ from model; individual geometry and mass unavailable. Does not reject model in its original domain."
   }
 ]

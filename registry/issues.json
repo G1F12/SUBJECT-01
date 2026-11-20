@@ -188,14 +188,16 @@
       "EXP-0061",
       "EXP-0062",
       "EXP-0063",
-      "EXP-0064"
+      "EXP-0064",
+      "EXP-0087"
     ],
     "related_decisions": [
       "DEC-0024",
       "DEC-0025",
-      "DEC-0026"
+      "DEC-0026",
+      "DEC-0028"
     ],
-    "resolution": "Closed-chain 3-DOF sagittal leg-press equilibrium LP (EXP-0061) and multi-layer viscoelastic enthesis dF/dt / heterochrony models (EXP-0062) completed as MODEL_ONLY formulations. External empirical validation of bilateral isometric leg press remains DATA_BLOCKED (0/6 open cohorts admitted, NEG-0060)."
+    "resolution": "Closed-chain 3-DOF sagittal leg-press equilibrium LP (EXP-0061) and multi-layer viscoelastic enthesis dF/dt / heterochrony models (EXP-0062) completed as MODEL_ONLY formulations. External empirical validation of bilateral isometric leg press remains DATA_BLOCKED (0/6 open cohorts admitted, NEG-0060). EXP-0087 admits a narrower open 110-degree force cohort; exact task and individualized geometry remain blocked. Model-vs-LOSO comparison inconclusive."
   },
   {
     "id": "ISS-0022",

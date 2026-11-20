@@ -1543,5 +1543,28 @@
       "archive_md5_publisher_only": "3d8e5dbd208da9c0030c6d117e2e33a1",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "id": "SRC-0090",
+    "date": "2026-11-20",
+    "name": "Santos et al. longitudinal bilateral isometric leg press and EMG data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/SANTOS_FORCE_REPORT.md",
+    "doi": "10.5281/zenodo.18630339",
+    "url": "https://zenodo.org/records/18630339",
+    "calibration_review": {
+      "access": "Open CC BY 4.0 XLSX, publisher MD5 and byte SHA256 checked; W0 force mean and SD match article table.",
+      "scope": "11 untrained young men, approx 110 degree bilateral isometric leg press, one unexplained W3 label, no individual mass or geometry; no parallel control."
+    },
+    "external_provenance": {
+      "version": "single archived record 18630339; version field unspecified",
+      "license": "CC BY 4.0",
+      "article_doi": "10.1371/journal.pone.0346417",
+      "metadata_url": "https://zenodo.org/api/records/18630339",
+      "file_url": "https://zenodo.org/api/records/18630339/files/Data%20repository.xlsx/content",
+      "md5": "f908a746cbd3ac9fecb775d85f516b56",
+      "sha256": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe"
+    }
   }
 ]
