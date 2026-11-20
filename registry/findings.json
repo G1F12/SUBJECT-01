@@ -874,5 +874,14 @@
     "statement": "In 18 previously unused participants, observed Stroop minus control time averages −111.06 s with paired bootstrap [−190.73,−48.94]; the D2 model produces exactly zero contrast because its inputs are identical across conditions. The endpoint definition differs and no physiological mechanism is identified.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0103",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0107",
+    "title": "D2 95% threshold is crossed after internal demand reduction",
+    "statement": "In both nonzero-rate scenarios, all 18 first threshold windows begin with internal demand already below 95% of nominal and output equal to internal demand within 1e-6 W. This is a post-hoc model-code observation, not a human mechanism or physical capacity validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

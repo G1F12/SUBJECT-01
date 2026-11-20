@@ -3040,5 +3040,33 @@
     "limits": "Partial preview and published effect; D2 diagnostic 95% power threshold differs from voluntary/cadence failure, 2700 s censoring, warmup and cognitive history not represented; no physiological or CPE45 validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0107",
+    "date": "2026-11-20",
+    "name": "Post-hoc attribution of D2 threshold crossing",
+    "sources": [
+      "SRC-0101"
+    ],
+    "design": "Reproduce EXP-0106 and distinguish reduced internal demand from output deficit at first 95% threshold window, with two time steps.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_souron_threshold_audit.py",
+    "inputs": "research/program_evidence_audit/SOURON_THRESHOLD_AUDIT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SOURON_THRESHOLD_AUDIT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SOURON_THRESHOLD_AUDIT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_souron_threshold_audit.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0103"
+      ],
+      "negative_results": [
+        "NEG-0087"
+      ]
+    },
+    "limits": "Post-hoc audit of previously viewed 18-person cohort and threshold, first time point only; no observed internal demand or direct endurance, CPE45 or whole architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

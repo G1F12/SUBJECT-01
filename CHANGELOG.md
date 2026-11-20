@@ -1,3 +1,5 @@
+- EXP-0107: post-hoc audit attributes D2 first threshold crossing to reduced internal demand in both nonzero-rate scenarios; no instantaneous modeled capacity shortfall at that point.
+
 # Changelog (append-only research history)
 
 EXP-0106 / FND-0102 / NEG-0086 / SRC-0101: проверена ограниченная связь заданной веломощности, порога D2 и наблюдаемых парных времён прекращения. См. research/program_evidence_audit/SOURON_ENDURANCE_REPORT.md.
