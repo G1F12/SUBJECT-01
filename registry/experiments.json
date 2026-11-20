@@ -2419,5 +2419,34 @@
     "limits": "Same cohort, model-derived outcome, two held participants, broad threshold, AB03 differs 26.6%, convention and tissue effects unverified; weight condition may omit external hand load.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0085",
+    "date": "2026-11-20",
+    "name": "Couple recovery energy ledger, thermal solver and conditional force interface",
+    "sources": [
+      "SRC-0074",
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Run corrected D2 on 27 60s/40s cycles at assumed fatigue rates; transfer its output and ledger heat to Pennes at 1 and 0.5 s, compare same-power heat formula, attach explicit static force/tendon proxies.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_coupled_energy_thermal.py",
+    "inputs": "research/program_evidence_audit/COUPLED_ENERGY_THERMAL_PROTOCOL.md",
+    "report": "research/program_evidence_audit/COUPLED_ENERGY_THERMAL_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/COUPLED_ENERGY_THERMAL_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_coupled_energy_thermal.py",
+    "results": {
+      "findings": [
+        "FND-0083"
+      ],
+      "negative_results": []
+    },
+    "limits": "D2 failed prior transfer; fatigue-to-force and heat allocation are hypothetical, no thermal feedback, tissue damage, motor function or post45, no in-vivo efficacy inference.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

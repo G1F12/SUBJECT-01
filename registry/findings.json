@@ -694,5 +694,14 @@
     "statement": "In two held participants, vertical-only platform moment reconstruction yields slope/mass 0.734 and 0.893 on unloaded squats (both within preregistered broad 0.7–1.3); correlations are 0.99971 and 0.99993. AB03 still differs by 26.6% from unity. Convention and physical accuracy remain unresolved.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0083",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0085",
+    "title": "Conditional energy ledger can drive the thermal interface at common work",
+    "statement": "For the conditional 2700 s 60/40 protocol, D2 yields 403–432 kJ against 583.2 kJ demanded across three assumed fatigue rates; coupling transfers D2 heat to the thermal solver with energy closure. This is model-only, D2 transfer previously failed, and no whole-architecture effect is established.",
+    "confidence": "model_only",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

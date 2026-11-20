@@ -1,3 +1,5 @@
+EXP-0085 / FND-0083: одностороннее сопряжение энергетического ledger, теплообмена и условной силы; совместный эффект не оценён. См. research/program_evidence_audit/COUPLED_ENERGY_THERMAL_REPORT.md.
+
 EXP-0084 / FND-0082: перенос условной трактовки на удержанных участников, физическая шкала ISS-0028 не разрешена. См. research/program_evidence_audit/MOMENT_HOLDOUT_REPORT.md.
 
 EXP-0083 / FND-0081: чувствительность реконструированного момента к трактовке компонентов платформы; ISS-0028 открыт. См. research/program_evidence_audit/MOMENT_DIAGNOSTIC_REPORT.md.
