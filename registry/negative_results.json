@@ -592,5 +592,13 @@
     "title": "Gravity correction does not establish force-prediction superiority on reused cohort",
     "statement": "For 11 previously viewed participants, corrected 100-degree MAE is 477.1 N and corrected 110-degree MAE 613.6 N against participant-held-out mean 508.8 N; paired intervals against baseline include zero.",
     "reason": "Same small cohort, no individual geometry or body mass, approximate task angle and unknown hip configuration; bootstrap retains correlated LOSO predictions. No conclusion on exact model validity."
+  },
+  {
+    "id": "NEG-0074",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0093",
+    "title": "Historical friction-utilization diagnostic divides by zero at mu zero",
+    "statement": "With mu=0 the archived chain raises ZeroDivisionError when reporting friction utilization after solving an LP. The diagnostic-only in-memory guard returns null and allows the originally specified LP to complete.",
+    "reason": "The denominator mu times normal force is zero; the normalized utilization is undefined even when the zero-friction constraint is feasible."
   }
 ]

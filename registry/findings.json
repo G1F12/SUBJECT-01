@@ -757,5 +757,14 @@
     "statement": "Across five fixed diagnostic chord angles, modeled strategy 2 gains range 21.86–22.04%, 21.83–21.98%, and 21.73–21.84% for knee angles 100, 110 and 140 degrees. Conditional tendon proxy passes the joint model gate only at 140 degrees. This is not a measurement of human function, tissue safety or hip posture.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0090",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0093",
+    "title": "Force sensitivity to friction with conditional gate retained",
+    "statement": "At knee 140 degrees model strategy force spans 4041.9 to 4632.6 N across mu 0 to 0.8 while modeled relative gain spans 21.58–21.96%; conditional force and tissue gate holds on the tested grid only at 140 degrees, not 100 or 110. No human safety or functional conclusion follows.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0093 / FND-0090 / NEG-0074 / ISS-0031: проверено влияние модельного трения, найден сбой нулевого знаменателя диагностики. См. research/program_evidence_audit/FRICTION_SENSITIVITY_REPORT.md.
+
 EXP-0092 / FND-0089: проверена чувствительность исправленной цепи к направлению хорды; оценена доступность SRC-0091 и SRC-0092. См. research/program_evidence_audit/CHORD_SENSITIVITY_REPORT.md.
 
 EXP-0091 / NEG-0073: пересчитано сравнение исправленных номиналов с ранее просмотренной когортой. См. research/program_evidence_audit/GRAVITY_SANTOS_REPORT.md.

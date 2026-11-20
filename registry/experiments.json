@@ -2646,5 +2646,35 @@
     "limits": "Diagnostic chord grid, not individual hip posture; reused Santos data, tendon proxy, no whole architecture or real functional assessment.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0093",
+    "date": "2026-11-20",
+    "name": "Gravity-corrected leg press friction sensitivity",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Rerun corrected static chain with six prespecified friction coefficients and three knee angles, assess conditional force gain and tendon proxy; audit LP residuals.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_friction_sensitivity.py",
+    "inputs": "research/program_evidence_audit/FRICTION_SENSITIVITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/FRICTION_SENSITIVITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/FRICTION_SENSITIVITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_friction_sensitivity.py",
+    "results": {
+      "findings": [
+        "FND-0090"
+      ],
+      "negative_results": [
+        "NEG-0074"
+      ]
+    },
+    "limits": "Diagnostic friction grid not individually measured, fixed geometry and static tissue proxy; in-memory diagnostic guard for mu=0, no change to LP; no physiological or architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

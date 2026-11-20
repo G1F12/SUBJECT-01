@@ -354,5 +354,23 @@
     ],
     "required_inputs": "Versioned corrected model with independent derivative/force checks, full rerun of dependent scenarios, explicit planar geometry and held-out individual validation.",
     "resolution": "EXP-0090 rebuilds named computational force, tissue, sensitivity and thermal dependencies with the corrected hip gravity term, preserving historical inputs; post-hoc external comparisons, explicit posture geometry and independent validation remain open. EXP-0091 updates nominal force comparison on the already viewed Santos sample; paired intervals do not establish superiority, and exact geometry and independent validation remain open."
+  },
+  {
+    "id": "ISS-0031",
+    "date": "2026-11-20",
+    "title": "Archived chain friction-utilization diagnostic fails at zero friction",
+    "status": "open",
+    "priority": "medium",
+    "description": "EXP-0061 divides by mu when reporting friction utilization, so zero friction crashes after LP solution. EXP-0093 uses an in-memory diagnostic-only guard and keeps the original LP constraints.",
+    "related_experiments": [
+      "EXP-0061",
+      "EXP-0093"
+    ],
+    "related_issues": [
+      "ISS-0029",
+      "ISS-0030"
+    ],
+    "required_inputs": "For a maintained model implementation, guard zero denominator, preserve undefined utilization as null and add regression checks for zero and positive friction; verify solver constraints independently.",
+    "progress": "EXP-0093 records feasible mu=0 scenarios with unchanged LP constraints and independently checked residuals; archived original remains unchanged."
   }
 ]
