@@ -672,5 +672,13 @@
     "title": "Demand-capacity candidate does not improve repeated-sprint prediction",
     "statement": "On 21 previously viewed Jutlah participants across 63 conditions, candidate and original D2 have identical tenth-sprint MAE 339.56 W against persistence 95.36 W.",
     "reason": "Generic energy parameters and a hypothetical demand and capacity derived from first-sprint average do not identify individual sprint capability; active unloaded recovery approximated by zero external power. No general impossibility inference."
+  },
+  {
+    "id": "NEG-0084",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0104",
+    "title": "Scale correction alone fails against persistence on both sprint cohorts",
+    "statement": "Baseline first-sprint prediction MAE is 103.16 W versus normalized D2 345.61 W for Chmura, and 95.36 W versus 302.32 W for Jutlah. Paired participant-bootstrap differences favor persistence on the previously viewed samples.",
+    "reason": "Relative trajectory errors remain after empirical first-bout normalization; physical cause is unidentified, and rest and energy assumptions differ across tasks."
   }
 ]

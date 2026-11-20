@@ -847,5 +847,14 @@
     "statement": "For 23 previously viewed participants, D2-cap power MAE is 8.07 W versus original 33.45 W under first-minute demand and P1/0.6 capacity assumptions; persistence MAE is 6.92 W. This does not establish independent validation or a physiologically measured capacity.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0100",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0104",
+    "title": "First-sprint scaling reduces absolute D2 error but leaves substantial relative-shape error",
+    "statement": "At rate 0.003/s, first-sprint normalization reduces tenth-sprint MAE from 742.52 to 345.61 W in Chmura and 339.56 to 302.32 W in Jutlah; relative ratio errors are 30.76 and 55.28 percentage points. This is an empirical bridge, not an energy-balanced power trajectory or physiological validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

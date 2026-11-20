@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0104 / FND-0100 / NEG-0084: разделена ошибка абсолютного масштаба и относительной формы D2 на двух просмотренных спринтовых когортах. См. research/program_evidence_audit/D2_SCALE_SHAPE_REPORT.md.
+
 EXP-0103 / FND-0099 / NEG-0083: исследовано разделение спроса и условного предела мощности на двух ранее просмотренных когортах. См. research/program_evidence_audit/D2_CAPACITY_REPORT.md.
 
 EXP-0102 / FND-0098 / NEG-0082: проверены три сценария D2 против постоянной базы на ранее рассмотренной индивидуальной веломощности. См. research/program_evidence_audit/D2_MCLAUGHLIN_REPORT.md.

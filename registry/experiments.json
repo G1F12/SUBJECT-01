@@ -2955,5 +2955,34 @@
     "limits": "Retrospective reviewed cohorts; unmeasured initial power capacity, assumed demand, Jutlah active recovery approximated as zero power; no actual human enhancement, thermal feedback or CPE45 validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0104",
+    "date": "2026-11-20",
+    "name": "D2 sprint prediction scale versus relative shape",
+    "sources": [
+      "SRC-0035",
+      "SRC-0040"
+    ],
+    "design": "For two previously viewed cohorts compare raw D2, empirical first-sprint-normalized D2 and persistence at sprint 10 with person-cluster bootstrap and integration-step comparison.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_d2_scale_shape.py",
+    "inputs": "research/program_evidence_audit/D2_SCALE_SHAPE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/D2_SCALE_SHAPE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/D2_SCALE_SHAPE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_d2_scale_shape.py",
+    "results": {
+      "findings": [
+        "FND-0100"
+      ],
+      "negative_results": [
+        "NEG-0084"
+      ]
+    },
+    "limits": "Both cohorts viewed; normalized model is a conditional empirical bridge not an energy-balanced physiological simulation; unmeasured active-rest metabolic cost and no whole-architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
