@@ -964,5 +964,14 @@
     "statement": "31,499 force samples match exactly across one raw/processed pair. The 0.25 Hz author-algorithm reconstruction has power MAE ~8e-8 W; recorded timestamps and XLSX header indicate 500 Hz. This shows shared source and reproducible processing for one pair, not physical validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0113",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0117",
+    "title": "Ten jump recordings are shared across raw and processed archives",
+    "statement": "Ten raw files match ten of eleven processed force trajectories exactly, with no ambiguous pairs. A 0.25 Hz reconstruction passes the predefined power gate for all ten; 2.5 Hz passes none. This is provenance, not physiological validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

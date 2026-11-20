@@ -1,0 +1,72 @@
+[
+  {
+    "local_name": "01.csv",
+    "source_name": "1-CMJ-2021.10.28-16.06.47.csv",
+    "url": "https://ndownloader.figshare.com/files/42228204",
+    "md5_publisher": "4f9ebe473da423d7cb19f897b00da01a",
+    "sha256_bytes": "9852f34119d58a2512e0801b1bb1461409292457c79d853fec3541303cc610d1"
+  },
+  {
+    "local_name": "02.csv",
+    "source_name": "2-Countermovement Jump - Loaded-2021.10.28-17.10.11.csv",
+    "url": "https://ndownloader.figshare.com/files/42228201",
+    "md5_publisher": "850db34db9b56856454424b4b7702d1a",
+    "sha256_bytes": "f9576ade9ed0cc26480670a85c288d295cc200156dd2c467e65ee061aa031786"
+  },
+  {
+    "local_name": "03.csv",
+    "source_name": "3-Countermovement Jump - Loaded-2021.10.28-17.31.34.csv",
+    "url": "https://ndownloader.figshare.com/files/42228198",
+    "md5_publisher": "cc67f4a4c496bb0d1bddd5689ff5acfa",
+    "sha256_bytes": "ed30eda2305e5807cf9acad1b798d4d0ad463cc4277faf8cbff405ebc29a9373"
+  },
+  {
+    "local_name": "04.csv",
+    "source_name": "4-Countermovement Jump - Loaded-2021.10.28-17.36.11.csv",
+    "url": "https://ndownloader.figshare.com/files/42228207",
+    "md5_publisher": "3828a38e24fe9c63225135299cc95077",
+    "sha256_bytes": "a1b48bfb49f89b558341c8778e8961b1bd0ccfb10bcb89f7a2322790e5349665"
+  },
+  {
+    "local_name": "05.csv",
+    "source_name": "5-Countermovement Jump - Loaded-2021.10.28-17.15.49.csv",
+    "url": "https://ndownloader.figshare.com/files/42228195",
+    "md5_publisher": "29a9923645ee712f072f7843e4c784de",
+    "sha256_bytes": "e81239c633818773b6ce83cd510497a0506fd7d26830596569a144d9b224b944"
+  },
+  {
+    "local_name": "06.csv",
+    "source_name": "6-Countermovement Jump - Loaded-2021.10.25-10.24.56.csv",
+    "url": "https://ndownloader.figshare.com/files/42228189",
+    "md5_publisher": "e1513793e86f23ae8152bffae4e33286",
+    "sha256_bytes": "d85f8fb2c7359afbe4c705314e4fa79d5e1125d39fee055ed498c453b89ec20b"
+  },
+  {
+    "local_name": "07.csv",
+    "source_name": "7-Countermovement Jump - Loaded-2021.10.25-17.11.03.csv",
+    "url": "https://ndownloader.figshare.com/files/42228186",
+    "md5_publisher": "ca25dcf74ce0390c4e82b79e3704a2f5",
+    "sha256_bytes": "619b3d2fa135b4eb1b545fa5d68c2bdc6fde4bb00edcbd80147da778eb60b6cc"
+  },
+  {
+    "local_name": "08.csv",
+    "source_name": "8-Countermovement Jump - Loaded-2021.10.25-16.30.58.csv",
+    "url": "https://ndownloader.figshare.com/files/42228183",
+    "md5_publisher": "76e3b454cc5a1913b64f88a458e60452",
+    "sha256_bytes": "1bb894e0e952ea5d65762006fdd954f67e2888bfde507c3685040c7e4cdb6b5f"
+  },
+  {
+    "local_name": "09.csv",
+    "source_name": "9-Countermovement Jump - Loaded-2021.10.25-17.29.47.csv",
+    "url": "https://ndownloader.figshare.com/files/42228192",
+    "md5_publisher": "240ff24d0c7aec55897337a104c65da1",
+    "sha256_bytes": "0737d053af13c2360636c90562287d36357183ff5ddf797718e20a086e75c9a6"
+  },
+  {
+    "local_name": "10.csv",
+    "source_name": "10-Countermovement Jump - Loaded-2021.10.25-17.53.25.csv",
+    "url": "https://ndownloader.figshare.com/files/42228180",
+    "md5_publisher": "38a4a1decdd258a656a2260c9fc3025b",
+    "sha256_bytes": "d3227100e6ed3447166f14dd2c91387ef64f01d175c1f50b01aee71cb105d0b3"
+  }
+]

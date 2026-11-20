@@ -1,0 +1,47 @@
+{
+  "experiment_id": "EXP-0117",
+  "classification": "POST_VIEW_ARCHIVE_OVERLAP_AUDIT",
+  "raw_manifest_sha256_lf": "9fcc9cd1d6134a55ea794e080ae3386f547eaab7a67b248363e0d5d8bd8aaa19",
+  "processed_manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "protocol_sha256_lf": "e55e3dd7cbdda08e406f80eed12a9ee816e68334d19356a97d5f61beb7cfbc14",
+  "runner_sha256_lf": "6c56677aa4d201ac2f2edb006a7ba0b79790e01674afd6a7fa018875e8279d89",
+  "raw_files": 10,
+  "processed_files": 11,
+  "unique_matched_pairs": 10,
+  "ambiguous_candidate_pairs": 0,
+  "raw_without_match": 0,
+  "processed_without_match": 1,
+  "matched_export_500Hz": 10,
+  "max_force_difference_N": 0.0,
+  "filter_reconstruction": {
+    ".25": {
+      "passes": 10,
+      "mae_range_W": [
+        2.6942230308159604e-08,
+        1.1617332340691149e-07
+      ],
+      "max_abs_error_range_W": [
+        1.629086909815669e-07,
+        5.694364517694339e-07
+      ]
+    },
+    "2.5": {
+      "passes": 0,
+      "mae_range_W": [
+        916.5410598367035,
+        1689.7815618007583
+      ],
+      "max_abs_error_range_W": [
+        11266.74054618407,
+        22954.451160507662
+      ]
+    }
+  },
+  "limits": [
+    "one pair known before protocol; no independent validation",
+    "signal matches do not establish identity, all session mappings or physical accuracy",
+    "acquisition versus export frequency unresolved",
+    "load mass and velocity processing not independently verified",
+    "no work, CPE45 or whole-architecture assessment"
+  ]
+}

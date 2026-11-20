@@ -3322,5 +3322,34 @@
     "limits": "Single previously partially viewed pair; does not establish all cohort overlap, sampling acquisition, loaded mass semantics, physical accuracy of power, work or model validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0117",
+    "date": "2026-11-20",
+    "name": "Complete available raw and processed jump archive overlap audit",
+    "sources": [
+      "SRC-0108",
+      "SRC-0110"
+    ],
+    "design": "Match all ten raw bilateral force CSV files against eleven processed XLSX by complete timestamps and force, then compare 0.25 and 2.5 Hz power reconstructions for unique pairs.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_archive_overlap.py",
+    "inputs": "research/program_evidence_audit/LCMJ_ARCHIVE_OVERLAP_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_ARCHIVE_OVERLAP_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_ARCHIVE_OVERLAP_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_archive_overlap.py <raw-csv-directory> <processed-xlsx-directory>",
+    "results": {
+      "findings": [
+        "FND-0113"
+      ],
+      "negative_results": [
+        "NEG-0097"
+      ]
+    },
+    "limits": "One pair previously matched; timestamps identify recorded trajectories rather than personal or session identity. One processed file has no source CSV in this archive. Acquisition frequency, mass and physical power validity remain unverified.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

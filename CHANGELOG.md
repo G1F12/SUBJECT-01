@@ -1,3 +1,5 @@
+- EXP-0117: matched all ten available raw jump recordings to ten processed records and reproduced their 0.25 Hz power pipeline; one processed record unmatched.
+
 - EXP-0116: matched one raw/processed jump recording and reproduced saved power using 0.25 Hz; exported 500 Hz versus article 1000 Hz remains unresolved.
 
 - EXP-0115: evaluated published strength and repeat-sprint predictors of jump power decrement against leave-one-person-out mean; advantage uncertain after prior feature selection.

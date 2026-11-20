@@ -776,5 +776,13 @@
     "title": "Article 2.5 Hz interpretation does not reproduce one archived power series",
     "statement": "Under otherwise identical stated author algorithm, 2.5 Hz gives 1338.10 W MAE while 0.25 Hz matches within the prespecified tolerance.",
     "reason": "The computation establishes an algorithmic match for one file, not why the publication states 2.5 Hz or whether its reported 1000 Hz acquisition was downsampled."
+  },
+  {
+    "id": "NEG-0097",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0117",
+    "title": "Two jump archives cannot serve as independent cohorts",
+    "statement": "All ten available raw recordings match ten processed recordings exactly; one processed file has no match in the raw archive.",
+    "reason": "Identical force-time trajectories establish shared observations, and sampling frequency, mass and physical validity are not resolved by computational reproduction."
   }
 ]
