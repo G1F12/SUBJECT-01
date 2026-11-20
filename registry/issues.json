@@ -333,7 +333,7 @@
     "id": "ISS-0030",
     "date": "2026-11-20",
     "title": "EXP-0061 double-counts a gravity derivative in hip moment",
-    "status": "open",
+    "status": "partially_resolved",
     "priority": "high",
     "description": "EXP-0089 verifies against central differences that the archived hip gravity term double-counts the shank-foot contribution to its own documented potential. Dependent force, tendon and coupled scenarios require controlled recomputation and versioned interpretation.",
     "related_experiments": [
@@ -342,12 +342,14 @@
       "EXP-0069",
       "EXP-0077",
       "EXP-0085",
-      "EXP-0089"
+      "EXP-0089",
+      "EXP-0090"
     ],
     "related_issues": [
       "ISS-0021",
       "ISS-0029"
     ],
-    "required_inputs": "Versioned corrected model with independent derivative/force checks, full rerun of dependent scenarios, explicit planar geometry and held-out individual validation."
+    "required_inputs": "Versioned corrected model with independent derivative/force checks, full rerun of dependent scenarios, explicit planar geometry and held-out individual validation.",
+    "resolution": "EXP-0090 rebuilds named computational force, tissue, sensitivity and thermal dependencies with the corrected hip gravity term, preserving historical inputs; post-hoc external comparisons, explicit posture geometry and independent validation remain open."
   }
 ]

@@ -1,3 +1,5 @@
+EXP-0090 / FND-0088 / DEC-0031: исправленная гравитация и перечисленные зависимые сценарии пересобраны; модельная и внешняя валидация открыты. См. research/program_evidence_audit/GRAVITY_REBUILD_REPORT.md.
+
 EXP-0089 / FND-0087 / NEG-0072 / DEC-0030 / ISS-0030: выявлен двойной учёт гравитационного слагаемого; зависимые сценарии условны до полной пересборки. См. research/program_evidence_audit/GRAVITY_AUDIT_REPORT.md.
 
 EXP-0088 / FND-0086 / NEG-0071 / DEC-0029 / ISS-0029: угол таза в LP не используется; пересчёт колена 110° не показал преимущества на повторно рассмотренной когорте. См. research/program_evidence_audit/HIP_POSTURE_REPORT.md.

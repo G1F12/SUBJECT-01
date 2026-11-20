@@ -1,0 +1,2527 @@
+{
+  "input_hashes_sha256_lf": {
+    "research/exp0061_multijoint_legpress/run_exp0061_protocol_and_chain.py": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+    "research/exp0061_multijoint_legpress/RESULTS.json": "7ead404d565772856b7efacaf4cb7e017790fa4f9ad803865a2f71b95b08f3c9",
+    "research/exp0062_enthesis_viscoelastic_hazard/RESULTS.json": "491f38bb4e7d44c68be04cfdcda5568376ba3ff5bcb72647efbd8079a6f9b300",
+    "research/exp0063_pennes_bioheat_cpe45/RESULTS.json": "553625c39dc028e2318b8fe57ed6426932f6bd3b09eb2a67f17621873966890a",
+    "research/functional_mechanics_validation/RESULTS.json": "92f4304a652fdaef75031fc2a81ac029260b9d81a0e8afd40a39f24515ccb88f",
+    "research/targets/CPE45.json": "f1c51bb6289514193bf1bd535ae97e1538cfab858c8aac41cdc8e98e5db0bd58",
+    "research/program_evidence_audit/GRAVITY_AUDIT_RESULTS.json": "381fd57fce68c98e7e00dc6acd6227191356b082bab671fa74e914746697326f",
+    "research/program_evidence_audit/CHAIN_TENDON_RESULTS.json": "8f0b27aa0b0c053bfda9e7848c748e5cdfe8549305d40c8d13db93e208296711",
+    "research/program_evidence_audit/INTEGRATED_SCENARIO_RESULTS.json": "145f563a2c15154f0ef4db6b124f411cbd8c3bc522bb5e143271c19b93b37555",
+    "research/program_evidence_audit/COUPLED_ENERGY_THERMAL_RESULTS.json": "5c4072c646f16de6fd98a3793e6066c787410d42d95994436bf76ec6b290fcb9",
+    "research/recovery_2026_11_04/engine.py": "1711bde73191d16544b585adc3f357a9022c58494bb708209aa61f305068688b",
+    "research/cpe45_2026_11_04/model.py": "788edc67e2f145abd4d4bb38f21f8be54240d6ff9de1480816f26a2530f83df2",
+    "research/cpe45_2026_11_04/config.json": "53208f66432e59cd9c5c98718064805c1479be9729da43047d9c319ec5be8a6c",
+    "research/integrated_2026_11_01/model.py": "cf4739e9e671d4ebac00af9532d1fff0b8544768e30e7dbed5a333fb09aad67c",
+    "research/integrated_2026_11_01/parameters.json": "68172ec0ed7d531335b137d06030f123e6c00b05d524a57b49b7056c41807e3e",
+    "research/exp0063_pennes_bioheat_cpe45/run_exp0063_pennes_envelope.py": "4feed20a8a9793b0a8817d8564f1366d91bf2d6de8ba24158b6de10699f638fb"
+  },
+  "experiment_id": "EXP-0090",
+  "classification": "GRAVITY_ONLY_REBUILD_MODEL_NOT_VALIDATED",
+  "protocol_sha256_lf": "894918c68ee39997ed9cb9dddd2af76d953e6e27668523b4ea5a6bcda40de52c",
+  "runner_sha256_lf": "98916af37d9b584bd21f976d64cbbc4f7ed5edddd39629f8345c3cb604727092",
+  "source_chain_sha256_lf": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+  "corrected_source_sha256_lf": "ed0e86015dc078ff8c7a4e1c2ad8b18f162feb04214883429661243ba0530630",
+  "dependency_hashes": {
+    "run_chain_tendon.py": "0fedad1dfe55d4cf01356febe6534573da9d10c9c661ada9c1dc4cbbe985aa06",
+    "run_integrated_scenario.py": "9938bafaf26453c5aed2a035bad1b72395be012653e73f34530fd3b9938f520a",
+    "run_tendon_interface.py": "94f8ab52344c137052509546d9ce64a46fc317c512c7edb41b17ff6cb761358a",
+    "run_chain_reopt.py": "794a258372ee01f6baa8e9855926e7543bc90d701f1256ae2dfe5ebf08ce2eab",
+    "run_chain_sensitivity.py": "684f015dd1f22a25b109c384d390c76e150454a17e58530e4a8a98aa90285e33",
+    "run_coupled_energy_thermal.py": "bd1eccd830cac34c7bd62504f17f71c8c2eac692753ebf226c8bba56edcd5aae",
+    "run_exp0064_master_integration.py": "9dd6f127b817c45c814e955ad73bb096a72ad8fad15bab829e5ac3f95d1a362d"
+  },
+  "checks": {
+    "archive_chain_reproduced": true,
+    "gravity89_matched": true,
+    "tendon_cases": 48,
+    "tendon_gate_changes": 0,
+    "sensitivity_cases": 23,
+    "interface_cases": 24,
+    "reoptimization_cases": 10,
+    "coupled_energy_heat_invariant_to_chain": true,
+    "fixed_work_thermal_invariant_to_chain": true,
+    "legacy_master_rules_not_adopted": true
+  },
+  "outputs": {
+    "chain": {
+      "model_classification": "MODEL_ONLY_STATIC_CLOSED_CHAIN_LP",
+      "geometry_and_boundaries": {
+        "subject_mass_kg": 75.0,
+        "subject_height_m": 1.78,
+        "thigh_length_m": 0.4361,
+        "shank_length_m": 0.4379,
+        "handsfield_total_one_leg_volume_cm3": 7559.5,
+        "footplate_tilt_deg": 10.0,
+        "cop_bounds_m": [
+          -0.05,
+          0.16
+        ],
+        "ankle_height_m": 0.075,
+        "friction_coefficient_mu": 0.8
+      },
+      "scenarios": {
+        "baseline": {
+          "scenario": "baseline_canonical",
+          "postures": {
+            "flexed_100deg_int": {
+              "theta_knee_flex_deg": 80.0,
+              "det_J_ankle_numeric": 0.188058,
+              "det_J_ankle_analytic": 0.188058,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 252.56,
+                "naive_x_cop_m": 0.1739,
+                "naive_cop_within_foot_bounds": false,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 2567.0,
+                "single_limb_normal_force_N": 1283.4,
+                "single_limb_shear_force_N": 113.1,
+                "x_cop_m": 0.0051,
+                "friction_utilization": 0.11,
+                "quadriceps_knee_torque_Nm": 299.1,
+                "net_joint_torques_eff_Nm": [
+                  134.4,
+                  290.0,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              }
+            },
+            "extended_140deg_int": {
+              "theta_knee_flex_deg": 40.0,
+              "det_J_ankle_numeric": 0.122746,
+              "det_J_ankle_analytic": 0.122746,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 292.36,
+                "naive_x_cop_m": 0.1652,
+                "naive_cop_within_foot_bounds": false,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 3804.5,
+                "single_limb_normal_force_N": 1882.6,
+                "single_limb_shear_force_N": 277.8,
+                "x_cop_m": 0.0101,
+                "friction_utilization": 0.184,
+                "quadriceps_knee_torque_Nm": 217.3,
+                "net_joint_torques_eff_Nm": [
+                  152.7,
+                  206.6,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              }
+            }
+          }
+        },
+        "quad_only_plus20": {
+          "scenario": "quad_only_plus20pct_force",
+          "postures": {
+            "flexed_100deg_int": {
+              "theta_knee_flex_deg": 80.0,
+              "det_J_ankle_numeric": 0.188058,
+              "det_J_ankle_analytic": 0.188058,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 253.3,
+                "naive_x_cop_m": 0.1531,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 2964.1,
+                "single_limb_normal_force_N": 1474.6,
+                "single_limb_shear_force_N": 172.1,
+                "x_cop_m": 0.0075,
+                "friction_utilization": 0.146,
+                "quadriceps_knee_torque_Nm": 358.9,
+                "net_joint_torques_eff_Nm": [
+                  127.0,
+                  349.9,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 15.47,
+                "quadriceps_torque_change_pct": 19.99,
+                "closed_chain_transfer_ratio_eta": 0.774
+              }
+            },
+            "extended_140deg_int": {
+              "theta_knee_flex_deg": 40.0,
+              "det_J_ankle_numeric": 0.122746,
+              "det_J_ankle_analytic": 0.122746,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 294.0,
+                "naive_x_cop_m": 0.1441,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 4348.0,
+                "single_limb_normal_force_N": 2145.8,
+                "single_limb_shear_force_N": 350.1,
+                "x_cop_m": 0.0113,
+                "friction_utilization": 0.204,
+                "quadriceps_knee_torque_Nm": 260.7,
+                "net_joint_torques_eff_Nm": [
+                  147.3,
+                  250.0,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 14.29,
+                "quadriceps_torque_change_pct": 19.97,
+                "closed_chain_transfer_ratio_eta": 0.715
+              }
+            }
+          }
+        },
+        "strategy_1_quad_only_18deg": {
+          "scenario": "strategy_1_quad_pennation_18deg",
+          "postures": {
+            "flexed_100deg_int": {
+              "theta_knee_flex_deg": 80.0,
+              "det_J_ankle_numeric": 0.188058,
+              "det_J_ankle_analytic": 0.188058,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 253.49,
+                "naive_x_cop_m": 0.1486,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 3067.4,
+                "single_limb_normal_force_N": 1524.3,
+                "single_limb_shear_force_N": 187.5,
+                "x_cop_m": 0.008,
+                "friction_utilization": 0.154,
+                "quadriceps_knee_torque_Nm": 374.5,
+                "net_joint_torques_eff_Nm": [
+                  125.1,
+                  365.4,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 19.49,
+                "quadriceps_torque_change_pct": 25.21,
+                "closed_chain_transfer_ratio_eta": 0.773
+              }
+            },
+            "extended_140deg_int": {
+              "theta_knee_flex_deg": 40.0,
+              "det_J_ankle_numeric": 0.122746,
+              "det_J_ankle_analytic": 0.122746,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 294.42,
+                "naive_x_cop_m": 0.1396,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 4489.3,
+                "single_limb_normal_force_N": 2214.2,
+                "single_limb_shear_force_N": 368.9,
+                "x_cop_m": 0.0116,
+                "friction_utilization": 0.208,
+                "quadriceps_knee_torque_Nm": 272.0,
+                "net_joint_torques_eff_Nm": [
+                  145.9,
+                  261.3,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 18.0,
+                "quadriceps_torque_change_pct": 25.17,
+                "closed_chain_transfer_ratio_eta": 0.715
+              }
+            }
+          }
+        },
+        "strategy_2_coordinated_chain": {
+          "scenario": "strategy_2_coordinated_chain",
+          "postures": {
+            "flexed_100deg_int": {
+              "theta_knee_flex_deg": 80.0,
+              "det_J_ankle_numeric": 0.188058,
+              "det_J_ankle_analytic": 0.188058,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 296.68,
+                "naive_x_cop_m": 0.166,
+                "naive_cop_within_foot_bounds": false,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 3130.0,
+                "single_limb_normal_force_N": 1563.9,
+                "single_limb_shear_force_N": 143.2,
+                "x_cop_m": 0.0054,
+                "friction_utilization": 0.114,
+                "quadriceps_knee_torque_Nm": 364.6,
+                "net_joint_torques_eff_Nm": [
+                  160.3,
+                  355.6,
+                  -2.3
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 21.93,
+                "quadriceps_torque_change_pct": 21.9,
+                "closed_chain_transfer_ratio_eta": 1.002
+              }
+            },
+            "extended_140deg_int": {
+              "theta_knee_flex_deg": 40.0,
+              "det_J_ankle_numeric": 0.122746,
+              "det_J_ankle_analytic": 0.122746,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 344.82,
+                "naive_x_cop_m": 0.1594,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 4632.6,
+                "single_limb_normal_force_N": 2291.3,
+                "single_limb_shear_force_N": 344.5,
+                "x_cop_m": 0.0103,
+                "friction_utilization": 0.188,
+                "quadriceps_knee_torque_Nm": 264.9,
+                "net_joint_torques_eff_Nm": [
+                  180.8,
+                  254.2,
+                  -2.3
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.05,
+                  "TA": 0.05
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 21.77,
+                "quadriceps_torque_change_pct": 21.91,
+                "closed_chain_transfer_ratio_eta": 0.994
+              }
+            }
+          }
+        },
+        "strategy_2_plus_reciprocal_inhibition": {
+          "scenario": "strategy_2_plus_reciprocal_inhibition",
+          "postures": {
+            "flexed_100deg_int": {
+              "theta_knee_flex_deg": 80.0,
+              "det_J_ankle_numeric": 0.188058,
+              "det_J_ankle_analytic": 0.188058,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 297.26,
+                "naive_x_cop_m": 0.166,
+                "naive_cop_within_foot_bounds": false,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 3133.5,
+                "single_limb_normal_force_N": 1565.8,
+                "single_limb_shear_force_N": 142.3,
+                "x_cop_m": 0.0056,
+                "friction_utilization": 0.114,
+                "quadriceps_knee_torque_Nm": 364.6,
+                "net_joint_torques_eff_Nm": [
+                  161.2,
+                  355.6,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.037,
+                  "TA": 0.037
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 22.07,
+                "quadriceps_torque_change_pct": 21.9,
+                "closed_chain_transfer_ratio_eta": 1.008
+              }
+            },
+            "extended_140deg_int": {
+              "theta_knee_flex_deg": 40.0,
+              "det_J_ankle_numeric": 0.122746,
+              "det_J_ankle_analytic": 0.122746,
+              "rank_J_foot_T": 2,
+              "naive_uncoordinated_diagnostics": {
+                "point_contact_overdetermination_residual_Nm": 345.4,
+                "naive_x_cop_m": 0.1593,
+                "naive_cop_within_foot_bounds": true,
+                "naive_friction_feasible": true
+              },
+              "compatible_lp_solution": {
+                "bilateral_footplate_force_N": 4638.8,
+                "single_limb_normal_force_N": 2294.5,
+                "single_limb_shear_force_N": 344.1,
+                "x_cop_m": 0.0104,
+                "friction_utilization": 0.187,
+                "quadriceps_knee_torque_Nm": 264.9,
+                "net_joint_torques_eff_Nm": [
+                  181.7,
+                  254.2,
+                  -1.9
+                ],
+                "optimal_activations": {
+                  "GMAX": 0.95,
+                  "HAM": 0.0,
+                  "VAS": 0.95,
+                  "RF": 0.95,
+                  "GAS": 0.0,
+                  "SOL": 0.0,
+                  "ILPSO": 0.037,
+                  "TA": 0.037
+                }
+              },
+              "comparison_to_baseline": {
+                "bilateral_footplate_force_gain_pct": 21.93,
+                "quadriceps_torque_change_pct": 21.91,
+                "closed_chain_transfer_ratio_eta": 1.001
+              }
+            }
+          }
+        }
+      }
+    },
+    "tendon_cases": [
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 71.727,
+        "local_sf": 1.3245,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 75.908,
+        "local_sf": 1.2515,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 71.727,
+        "local_sf": 1.4304,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 75.908,
+        "local_sf": 1.3516,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 71.727,
+        "local_sf": 1.4569,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 60.167,
+        "local_stress_MPa": 75.908,
+        "local_sf": 1.3767,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 62.372,
+        "local_sf": 1.5231,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 66.007,
+        "local_sf": 1.4392,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 62.372,
+        "local_sf": 1.645,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 66.007,
+        "local_sf": 1.5544,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 62.372,
+        "local_sf": 1.6754,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 2567.0,
+        "quadriceps_moment_Nm_single_limb": 299.1,
+        "equivalent_tendon_force_N": 6257.32,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 52.319,
+        "local_stress_MPa": 66.007,
+        "local_sf": 1.5832,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 87.309,
+        "local_sf": 1.0881,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 91.809,
+        "local_sf": 1.0348,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 87.309,
+        "local_sf": 1.1751,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 91.809,
+        "local_sf": 1.1175,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 87.309,
+        "local_sf": 1.1969,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 73.342,
+        "local_stress_MPa": 91.809,
+        "local_sf": 1.1382,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 75.921,
+        "local_sf": 1.2513,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 79.834,
+        "local_sf": 1.19,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 75.921,
+        "local_sf": 1.3514,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 79.834,
+        "local_sf": 1.2852,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 75.921,
+        "local_sf": 1.3764,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 3130.0,
+        "quadriceps_moment_Nm_single_limb": 364.6,
+        "equivalent_tendon_force_N": 7627.62,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 63.776,
+        "local_stress_MPa": 79.834,
+        "local_sf": 1.309,
+        "plate_gain_pct": 21.93,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 52.268,
+        "local_sf": 1.8175,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 55.833,
+        "local_sf": 1.7015,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 52.268,
+        "local_sf": 1.9629,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 55.833,
+        "local_sf": 1.8376,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 52.268,
+        "local_sf": 1.9993,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 43.712,
+        "local_stress_MPa": 55.833,
+        "local_sf": 1.8716,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 45.451,
+        "local_sf": 2.0902,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 48.551,
+        "local_sf": 1.9567,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 45.451,
+        "local_sf": 2.2574,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 48.551,
+        "local_sf": 2.1133,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 45.451,
+        "local_sf": 2.2992,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "baseline",
+        "plate_force_bilateral_N": 3804.5,
+        "quadriceps_moment_Nm_single_limb": 217.3,
+        "equivalent_tendon_force_N": 4546.03,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 38.01,
+        "local_stress_MPa": 48.551,
+        "local_sf": 2.1524,
+        "plate_gain_pct": 0,
+        "force_goal_pass": false,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.4939,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.4064,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.6134,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.5189,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.6433,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.547,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.718,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.6173,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.8554,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.7467,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.8898,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.7791,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      }
+    ],
+    "sensitivity_68": {
+      "friction": [
+        {
+          "value": 0.4,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 0.6,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 0.8,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 1.0,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        }
+      ],
+      "forefoot_m": [
+        {
+          "value": 0.1,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 0.13,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 0.16,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 0.19,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        }
+      ],
+      "plate_angle_deg": [
+        {
+          "value": 0,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 5,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 10,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 15,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 20,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        }
+      ],
+      "height_m": [
+        {
+          "value": 1.6,
+          "gain_pct": {
+            "flexed_100deg_int": 21.99,
+            "extended_140deg_int": 21.85
+          }
+        },
+        {
+          "value": 1.69,
+          "gain_pct": {
+            "flexed_100deg_int": 21.96,
+            "extended_140deg_int": 21.81
+          }
+        },
+        {
+          "value": 1.78,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 1.87,
+          "gain_pct": {
+            "flexed_100deg_int": 21.91,
+            "extended_140deg_int": 21.72
+          }
+        },
+        {
+          "value": 1.96,
+          "gain_pct": {
+            "flexed_100deg_int": 21.88,
+            "extended_140deg_int": 21.68
+          }
+        }
+      ],
+      "specific_tension_multiplier": [
+        {
+          "value": 0.7,
+          "gain_pct": {
+            "flexed_100deg_int": 21.71,
+            "extended_140deg_int": 21.43
+          }
+        },
+        {
+          "value": 0.85,
+          "gain_pct": {
+            "flexed_100deg_int": 21.84,
+            "extended_140deg_int": 21.62
+          }
+        },
+        {
+          "value": 1.0,
+          "gain_pct": {
+            "flexed_100deg_int": 21.93,
+            "extended_140deg_int": 21.77
+          }
+        },
+        {
+          "value": 1.15,
+          "gain_pct": {
+            "flexed_100deg_int": 22.0,
+            "extended_140deg_int": 21.87
+          }
+        },
+        {
+          "value": 1.3,
+          "gain_pct": {
+            "flexed_100deg_int": 22.05,
+            "extended_140deg_int": 21.95
+          }
+        }
+      ]
+    },
+    "interface_77": [
+      {
+        "posture": "flexed_100deg_int",
+        "variant": "baseline",
+        "force_N": 2567.0,
+        "force_gain_pct": 0,
+        "nominal_velocity_for_360W_m_s": 0.14024152707440593,
+        "tendon_force_proxy_N": 6257.32,
+        "tendon_local_sf": 1.5544,
+        "work_J": 621000,
+        "peak_core_C": 37.975,
+        "outcomes": {
+          "force_gain_target": "FAIL_MODEL",
+          "tendon_margin_SF15": "PASS_MODEL",
+          "thermal_model_gate": "PASS_MODEL",
+          "fatigue_and_power_retention": "NOT_ASSESSED",
+          "motor_accuracy_and_reaction": "NOT_ASSESSED",
+          "post45_and_recovery": "NOT_ASSESSED"
+        },
+        "whole_architecture": "NOT_ASSESSED"
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "variant": "strategy_2_coordinated_chain",
+        "force_N": 3130.0,
+        "force_gain_pct": 21.93,
+        "nominal_velocity_for_360W_m_s": 0.11501597444089456,
+        "tendon_force_proxy_N": 7627.62,
+        "tendon_local_sf": 1.2852,
+        "work_J": 621000,
+        "peak_core_C": 37.975,
+        "outcomes": {
+          "force_gain_target": "PASS_MODEL",
+          "tendon_margin_SF15": "FAIL_MODEL",
+          "thermal_model_gate": "PASS_MODEL",
+          "fatigue_and_power_retention": "NOT_ASSESSED",
+          "motor_accuracy_and_reaction": "NOT_ASSESSED",
+          "post45_and_recovery": "NOT_ASSESSED"
+        },
+        "whole_architecture": "NOT_ASSESSED"
+      },
+      {
+        "posture": "extended_140deg_int",
+        "variant": "baseline",
+        "force_N": 3804.5,
+        "force_gain_pct": 0,
+        "nominal_velocity_for_360W_m_s": 0.09462478643711394,
+        "tendon_force_proxy_N": 4546.03,
+        "tendon_local_sf": 2.1133,
+        "work_J": 621000,
+        "peak_core_C": 37.975,
+        "outcomes": {
+          "force_gain_target": "FAIL_MODEL",
+          "tendon_margin_SF15": "PASS_MODEL",
+          "thermal_model_gate": "PASS_MODEL",
+          "fatigue_and_power_retention": "NOT_ASSESSED",
+          "motor_accuracy_and_reaction": "NOT_ASSESSED",
+          "post45_and_recovery": "NOT_ASSESSED"
+        },
+        "whole_architecture": "NOT_ASSESSED"
+      },
+      {
+        "posture": "extended_140deg_int",
+        "variant": "strategy_2_coordinated_chain",
+        "force_N": 4632.6,
+        "force_gain_pct": 21.77,
+        "nominal_velocity_for_360W_m_s": 0.07771014117342312,
+        "tendon_force_proxy_N": 5541.84,
+        "tendon_local_sf": 1.7467,
+        "work_J": 621000,
+        "peak_core_C": 37.975,
+        "outcomes": {
+          "force_gain_target": "PASS_MODEL",
+          "tendon_margin_SF15": "PASS_MODEL",
+          "thermal_model_gate": "PASS_MODEL",
+          "fatigue_and_power_retention": "NOT_ASSESSED",
+          "motor_accuracy_and_reaction": "NOT_ASSESSED",
+          "post45_and_recovery": "NOT_ASSESSED"
+        },
+        "whole_architecture": "NOT_ASSESSED"
+      }
+    ],
+    "interface_78": [
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.87162,
+          "0.9": 0.97993,
+          "1.0": 1.08809,
+          "1.1": 1.19611,
+          "1.2": 1.30399
+        },
+        "arm_multiplier_for_sf15": 1.3820378320720417
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.83498,
+          "0.9": 0.93513,
+          "1.0": 1.03476,
+          "1.1": 1.13395,
+          "1.2": 1.23279
+        },
+        "arm_multiplier_for_sf15": 1.4718262654337888
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.94135,
+          "0.9": 1.05832,
+          "1.0": 1.17514,
+          "1.1": 1.2918,
+          "1.2": 1.40831
+        },
+        "arm_multiplier_for_sf15": 1.2787953080262275
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.90178,
+          "0.9": 1.00994,
+          "1.0": 1.11754,
+          "1.1": 1.22467,
+          "1.2": 1.33141
+        },
+        "arm_multiplier_for_sf15": 1.3585711361126314
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.95878,
+          "0.9": 1.07792,
+          "1.0": 1.1969,
+          "1.1": 1.31572,
+          "1.2": 1.43439
+        },
+        "arm_multiplier_for_sf15": 1.2553506647813941
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.91848,
+          "0.9": 1.02864,
+          "1.0": 1.13823,
+          "1.1": 1.24735,
+          "1.2": 1.35607
+        },
+        "arm_multiplier_for_sf15": 1.3328732825633973
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.00236,
+          "0.9": 1.12692,
+          "1.0": 1.2513,
+          "1.1": 1.37553,
+          "1.2": 1.49958
+        },
+        "arm_multiplier_for_sf15": 1.2003351654639314
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 0.96022,
+          "0.9": 1.0754,
+          "1.0": 1.18997,
+          "1.1": 1.30405,
+          "1.2": 1.4177
+        },
+        "arm_multiplier_for_sf15": 1.272606384433832
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.08255,
+          "0.9": 1.21707,
+          "1.0": 1.35141,
+          "1.1": 1.48557,
+          "1.2": 1.61955
+        },
+        "arm_multiplier_for_sf15": 1.1107656671273112
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.03704,
+          "0.9": 1.16143,
+          "1.0": 1.28517,
+          "1.1": 1.40837,
+          "1.2": 1.53112
+        },
+        "arm_multiplier_for_sf15": 1.1746150811365337
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.1026,
+          "0.9": 1.23961,
+          "1.0": 1.37643,
+          "1.1": 1.51308,
+          "1.2": 1.64954
+        },
+        "arm_multiplier_for_sf15": 1.090423706324653
+      },
+      {
+        "posture": "flexed_100deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.05625,
+          "0.9": 1.18294,
+          "1.0": 1.30897,
+          "1.1": 1.43445,
+          "1.2": 1.55947
+        },
+        "arm_multiplier_for_sf15": 1.1523862328496228
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.19729,
+          "0.9": 1.34573,
+          "1.0": 1.4939,
+          "1.1": 1.64181,
+          "1.2": 1.78944
+        },
+        "arm_multiplier_for_sf15": 1.0041182622220461
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.13504,
+          "0.9": 1.27098,
+          "1.0": 1.40637,
+          "1.1": 1.54131,
+          "1.2": 1.67589
+        },
+        "arm_multiplier_for_sf15": 1.0693539624196786
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.29307,
+          "0.9": 1.45339,
+          "1.0": 1.61342,
+          "1.1": 1.77315,
+          "1.2": 1.9326
+        },
+        "arm_multiplier_for_sf15": 0.9291075053335206
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.22584,
+          "0.9": 1.37266,
+          "1.0": 1.51888,
+          "1.1": 1.66462,
+          "1.2": 1.80996
+        },
+        "arm_multiplier_for_sf15": 0.9870685567653377
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.31702,
+          "0.9": 1.48031,
+          "1.0": 1.64329,
+          "1.1": 1.80599,
+          "1.2": 1.96839
+        },
+        "arm_multiplier_for_sf15": 0.9120738222554508
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.24854,
+          "0.9": 1.39808,
+          "1.0": 1.54701,
+          "1.1": 1.69544,
+          "1.2": 1.84348
+        },
+        "arm_multiplier_for_sf15": 0.9683978059002859
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.37689,
+          "0.9": 1.54759,
+          "1.0": 1.71799,
+          "1.1": 1.88808,
+          "1.2": 2.05786
+        },
+        "arm_multiplier_for_sf15": 0.8721023639581723
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.3053,
+          "0.9": 1.46163,
+          "1.0": 1.61732,
+          "1.1": 1.77251,
+          "1.2": 1.92728
+        },
+        "arm_multiplier_for_sf15": 0.9246109488294891
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.48704,
+          "0.9": 1.6714,
+          "1.0": 1.85543,
+          "1.1": 2.03912,
+          "1.2": 2.22249
+        },
+        "arm_multiplier_for_sf15": 0.8070257307931986
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.40972,
+          "0.9": 1.57856,
+          "1.0": 1.74671,
+          "1.1": 1.91431,
+          "1.2": 2.08146
+        },
+        "arm_multiplier_for_sf15": 0.8534154613425534
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.51457,
+          "0.9": 1.70235,
+          "1.0": 1.88979,
+          "1.1": 2.07689,
+          "1.2": 2.26364
+        },
+        "arm_multiplier_for_sf15": 0.7922462986696
+      },
+      {
+        "posture": "extended_140deg_int",
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "sf_by_arm_multiplier": {
+          "0.8": 1.43582,
+          "0.9": 1.60779,
+          "1.0": 1.77906,
+          "1.1": 1.94976,
+          "1.2": 2.12
+        },
+        "arm_multiplier_for_sf15": 0.8372651129258345
+      }
+    ],
+    "reoptimization_79": [
+      {
+        "pose": "flexed_100deg_int",
+        "arm_multiplier": 0.8,
+        "force_N": 2612.1,
+        "gain_pct": 21.94,
+        "quadriceps_moment_Nm": 291.7,
+        "tendon_proxy_force_N": 7628.138075313808,
+        "reoptimized_SF": 1.2850851386910611,
+        "fixed_torque_SF": 1.03704,
+        "joint_gate": false
+      },
+      {
+        "pose": "extended_140deg_int",
+        "arm_multiplier": 0.8,
+        "force_N": 3925.4,
+        "gain_pct": 21.74,
+        "quadriceps_moment_Nm": 211.9,
+        "tendon_proxy_force_N": 5541.3179916317995,
+        "reoptimized_SF": 1.7468691011098576,
+        "fixed_torque_SF": 1.40972,
+        "joint_gate": true
+      },
+      {
+        "pose": "flexed_100deg_int",
+        "arm_multiplier": 0.9,
+        "force_N": 2871.1,
+        "gain_pct": 21.94,
+        "quadriceps_moment_Nm": 328.1,
+        "tendon_proxy_force_N": 7626.685262668528,
+        "reoptimized_SF": 1.2853202957365661,
+        "fixed_torque_SF": 1.16143,
+        "joint_gate": false
+      },
+      {
+        "pose": "extended_140deg_int",
+        "arm_multiplier": 0.9,
+        "force_N": 4279.0,
+        "gain_pct": 21.75,
+        "quadriceps_moment_Nm": 238.4,
+        "tendon_proxy_force_N": 5541.608554160856,
+        "reoptimized_SF": 1.7467810807721134,
+        "fixed_torque_SF": 1.57856,
+        "joint_gate": true
+      },
+      {
+        "pose": "flexed_100deg_int",
+        "arm_multiplier": 1.0,
+        "force_N": 3130.0,
+        "gain_pct": 21.93,
+        "quadriceps_moment_Nm": 364.6,
+        "tendon_proxy_force_N": 7627.615062761508,
+        "reoptimized_SF": 1.2851697851323818,
+        "fixed_torque_SF": 1.28517,
+        "joint_gate": false
+      },
+      {
+        "pose": "extended_140deg_int",
+        "arm_multiplier": 1.0,
+        "force_N": 4632.6,
+        "gain_pct": 21.77,
+        "quadriceps_moment_Nm": 264.9,
+        "tendon_proxy_force_N": 5541.841004184101,
+        "reoptimized_SF": 1.746710671038401,
+        "fixed_torque_SF": 1.74671,
+        "joint_gate": true
+      },
+      {
+        "pose": "flexed_100deg_int",
+        "arm_multiplier": 1.1,
+        "force_N": 3389.0,
+        "gain_pct": 21.93,
+        "quadriceps_moment_Nm": 401.1,
+        "tendon_proxy_force_N": 7628.375808292127,
+        "reoptimized_SF": 1.2850466667894522,
+        "fixed_torque_SF": 1.40837,
+        "joint_gate": false
+      },
+      {
+        "pose": "extended_140deg_int",
+        "arm_multiplier": 1.1,
+        "force_N": 4986.2,
+        "gain_pct": 21.78,
+        "quadriceps_moment_Nm": 291.4,
+        "tendon_proxy_force_N": 5542.031190566755,
+        "reoptimized_SF": 1.7466530673955438,
+        "fixed_torque_SF": 1.91431,
+        "joint_gate": true
+      },
+      {
+        "pose": "flexed_100deg_int",
+        "arm_multiplier": 1.2,
+        "force_N": 3648.0,
+        "gain_pct": 21.93,
+        "quadriceps_moment_Nm": 437.5,
+        "tendon_proxy_force_N": 7627.26638772664,
+        "reoptimized_SF": 1.285226222402199,
+        "fixed_torque_SF": 1.53112,
+        "joint_gate": false
+      },
+      {
+        "pose": "extended_140deg_int",
+        "arm_multiplier": 1.2,
+        "force_N": 5339.8,
+        "gain_pct": 21.79,
+        "quadriceps_moment_Nm": 317.9,
+        "tendon_proxy_force_N": 5542.189679218968,
+        "reoptimized_SF": 1.7466050673302675,
+        "fixed_torque_SF": 2.08146,
+        "joint_gate": true
+      }
+    ],
+    "coupled_85": [
+      {
+        "dt_s": 1.0,
+        "assumed_fatigue_rate_s_inv": 0.0,
+        "required_work_J": 583200.0,
+        "actual_work_J": 432115.8625649187,
+        "work_fraction": 0.7409394076901898,
+        "diagnostic_work_gate": false,
+        "heat_J": 2050931.4943779688,
+        "oxidative_J": 2457564.4760339074,
+        "energy_residual_J": -3.4924596548080444e-08,
+        "first_bout_mean_W": 340.1644998954886,
+        "last_bout_mean_W": 263.9617041669474,
+        "last_fatigue": 0.0,
+        "max_fatigue": 0.0,
+        "conditional_thermal_peak_C": 37.672,
+        "conditional_thermal_final_C": 37.659,
+        "reference_thermal_peak_C": 37.562,
+        "reference_heat_J": 1863178.7210775563,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 2567.0,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 2567.0,
+            "max_nominal_speed_m_s": 0.14024152707440593,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 3130.0,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 3130.0,
+            "max_nominal_speed_m_s": 0.11501597444089456,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 3804.5,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 3804.5,
+            "max_nominal_speed_m_s": 0.09462478643711394,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 4632.6,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 4632.6,
+            "max_nominal_speed_m_s": 0.07771014117342312,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      },
+      {
+        "dt_s": 1.0,
+        "assumed_fatigue_rate_s_inv": 0.001,
+        "required_work_J": 583200.0,
+        "actual_work_J": 432115.86256491917,
+        "work_fraction": 0.7409394076901906,
+        "diagnostic_work_gate": false,
+        "heat_J": 2050931.4943779644,
+        "oxidative_J": 2457564.4760339074,
+        "energy_residual_J": -3.096647560596466e-08,
+        "first_bout_mean_W": 340.1644998954884,
+        "last_bout_mean_W": 263.9617041669474,
+        "last_fatigue": 0.0890849831697101,
+        "max_fatigue": 0.10179124663801437,
+        "conditional_thermal_peak_C": 37.672,
+        "conditional_thermal_final_C": 37.659,
+        "reference_thermal_peak_C": 37.562,
+        "reference_heat_J": 1863178.7210775597,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 2305.701869880217,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 2338.3188482033543,
+            "max_nominal_speed_m_s": 0.14034240538236215,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 2811.393398023015,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 2851.1640026788073,
+            "max_nominal_speed_m_s": 0.11509870754521521,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 3417.2352021656743,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 3465.576181530838,
+            "max_nominal_speed_m_s": 0.0946928517851291,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 4161.041870824734,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 4219.904906968001,
+            "max_nominal_speed_m_s": 0.0777660395062219,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      },
+      {
+        "dt_s": 1.0,
+        "assumed_fatigue_rate_s_inv": 0.003,
+        "required_work_J": 583200.0,
+        "actual_work_J": 403090.7129610723,
+        "work_fraction": 0.6911706326493009,
+        "diagnostic_work_gate": false,
+        "heat_J": 1937325.2575344655,
+        "oxidative_J": 2315396.9656010726,
+        "energy_residual_J": 1.862645149230957e-09,
+        "first_bout_mean_W": 335.03048616488036,
+        "last_bout_mean_W": 242.16608708287265,
+        "last_fatigue": 0.2446124984644445,
+        "max_fatigue": 0.2795017776958087,
+        "conditional_thermal_peak_C": 37.598,
+        "conditional_thermal_final_C": 37.586,
+        "reference_thermal_peak_C": 37.497,
+        "reference_heat_J": 1753988.872567841,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 1849.5189366548593,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 1939.079716441771,
+            "max_nominal_speed_m_s": 0.140544598007259,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 2255.1594358121188,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 2364.362879806289,
+            "max_nominal_speed_m_s": 0.11526453133694373,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 2741.135486756296,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 2873.871749592021,
+            "max_nominal_speed_m_s": 0.09482927666832275,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 3337.780064646397,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 3499.408139613615,
+            "max_nominal_speed_m_s": 0.07787807777158265,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      },
+      {
+        "dt_s": 0.5,
+        "assumed_fatigue_rate_s_inv": 0.0,
+        "required_work_J": 583200.0,
+        "actual_work_J": 432073.39755954855,
+        "work_fraction": 0.7408665938949736,
+        "diagnostic_work_gate": false,
+        "heat_J": 2050639.4902778133,
+        "oxidative_J": 2457230.0069284327,
+        "energy_residual_J": 1.6065314412117004e-08,
+        "first_bout_mean_W": 340.16449989548863,
+        "last_bout_mean_W": 263.93445268818147,
+        "last_fatigue": 0.0,
+        "max_fatigue": 0.0,
+        "conditional_thermal_peak_C": 37.672,
+        "conditional_thermal_final_C": 37.659,
+        "reference_thermal_peak_C": 37.562,
+        "reference_heat_J": 1863018.9717716577,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 2567.0,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 2567.0,
+            "max_nominal_speed_m_s": 0.14024152707440593,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 3130.0,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 3130.0,
+            "max_nominal_speed_m_s": 0.11501597444089456,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 3804.5,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 3804.5,
+            "max_nominal_speed_m_s": 0.09462478643711394,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 4632.6,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 4632.6,
+            "max_nominal_speed_m_s": 0.07771014117342312,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      },
+      {
+        "dt_s": 0.5,
+        "assumed_fatigue_rate_s_inv": 0.001,
+        "required_work_J": 583200.0,
+        "actual_work_J": 432073.3975595488,
+        "work_fraction": 0.7408665938949739,
+        "diagnostic_work_gate": false,
+        "heat_J": 2050639.4902778245,
+        "oxidative_J": 2457230.0069284327,
+        "energy_residual_J": 4.6566128730773926e-09,
+        "first_bout_mean_W": 340.16449989548863,
+        "last_bout_mean_W": 263.93445268818147,
+        "last_fatigue": 0.08907603308753692,
+        "max_fatigue": 0.10178101999835465,
+        "conditional_thermal_peak_C": 37.672,
+        "conditional_thermal_final_C": 37.659,
+        "reference_thermal_peak_C": 37.562,
+        "reference_heat_J": 1863018.9717716502,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 2305.7281216642236,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 2338.341823064293,
+            "max_nominal_speed_m_s": 0.14029199012662671,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 2811.42540740515,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 2851.1920164360095,
+            "max_nominal_speed_m_s": 0.11505736059266798,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 3417.2741094162598,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 3465.610232118466,
+            "max_nominal_speed_m_s": 0.09465883523591821,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 4161.089246755622,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 4219.9463691186775,
+            "max_nominal_speed_m_s": 0.07773810358223261,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      },
+      {
+        "dt_s": 0.5,
+        "assumed_fatigue_rate_s_inv": 0.003,
+        "required_work_J": 583200.0,
+        "actual_work_J": 403073.0871000374,
+        "work_fraction": 0.691140409979488,
+        "diagnostic_work_gate": false,
+        "heat_J": 1937022.4866973085,
+        "oxidative_J": 2315077.6102259336,
+        "energy_residual_J": 7.683411240577698e-09,
+        "first_bout_mean_W": 334.90811127450064,
+        "last_bout_mean_W": 242.15903906916785,
+        "last_fatigue": 0.24460348925490147,
+        "max_fatigue": 0.27949148349539343,
+        "conditional_thermal_peak_C": 37.598,
+        "conditional_thermal_final_C": 37.586,
+        "reference_thermal_peak_C": 37.497,
+        "reference_heat_J": 1753922.5657572818,
+        "coupled_thermal_residual_J": 1e-06,
+        "source_heat_integral_delta_J": 0.0,
+        "mechanical_interfaces": [
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "baseline",
+            "static_force_N": 2567.0,
+            "minimum_assumed_force_N": 1849.545361867325,
+            "first_assumed_force_N": 2567.0,
+            "last_assumed_force_N": 1939.102843082668,
+            "max_nominal_speed_m_s": 0.14039302525812924,
+            "minimum_static_tendon_sf_proxy": 1.5544,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "flexed_100deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 3130.0,
+            "minimum_assumed_force_N": 2255.1916566594186,
+            "first_assumed_force_N": 3130.0,
+            "last_assumed_force_N": 2364.3910786321585,
+            "max_nominal_speed_m_s": 0.11514022231233795,
+            "minimum_static_tendon_sf_proxy": 1.2852,
+            "force_gain_static_pct": 21.93
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "baseline",
+            "static_force_N": 3804.5,
+            "minimum_assumed_force_N": 2741.1746510417756,
+            "first_assumed_force_N": 3804.5,
+            "last_assumed_force_N": 2873.9060251297274,
+            "max_nominal_speed_m_s": 0.09472700639706079,
+            "minimum_static_tendon_sf_proxy": 2.1133,
+            "force_gain_static_pct": 0
+          },
+          {
+            "posture": "extended_140deg_int",
+            "variant": "strategy_2_coordinated_chain",
+            "static_force_N": 4632.6,
+            "minimum_assumed_force_N": 3337.8277535592406,
+            "first_assumed_force_N": 4632.6,
+            "last_assumed_force_N": 3499.4498756777434,
+            "max_nominal_speed_m_s": 0.07779408881354266,
+            "minimum_static_tendon_sf_proxy": 1.7467,
+            "force_gain_static_pct": 21.77
+          }
+        ]
+      }
+    ],
+    "aggregator_64_pillars": {
+      "pillar_1_contractile_and_closed_chain": {
+        "dpvalid_specific_tension_n_cm2": 26.41,
+        "dpvalid_specific_tension_sd_n_cm2": 4.7,
+        "dpvalid_m2_vs_f0_cond_delta_r2": 0.0735,
+        "dpvalid_m2_vs_f0_cond_ci95": [
+          0.0259,
+          0.1428
+        ],
+        "dpvalid_m2_vs_m1_cond_delta_r2": 0.0081,
+        "dpvalid_m2_vs_m1_cond_ci95": [
+          -0.0903,
+          0.1173
+        ],
+        "strategy2_torque_gain_pct": 21.91,
+        "strategy2_vmax_change_pct": -1.7,
+        "strategy2_power_gain_pct": 19.83,
+        "naive_point_contact_residual_Nm": 252.56,
+        "naive_x_cop_m": 0.1739,
+        "quad_only_20_legpress_gain_100deg_pct": 15.47,
+        "quad_only_20_eta_chain_100deg": 0.774,
+        "strategy2_chain_legpress_gain_100deg_pct": 21.93,
+        "strategy2_chain_eta_chain_100deg": 1.002,
+        "strategy2_synergy_legpress_gain_100deg_pct": 22.07
+      },
+      "pillar_2_enthesis_viscoelastic_and_heterochrony": {
+        "bogaerts_deep_sup_ratio": 1.2315,
+        "k_deep": 1.1204,
+        "s1_4800N_20kNs_vm_MPa": 58.83,
+        "s1_4800N_20kNs_sf_local": 1.61,
+        "s2_4800N_20kNs_vm_MPa": 50.99,
+        "s2_4800N_20kNs_sf_local": 2.05,
+        "mvc_7661N_20kNs_vm_MPa": 92.2,
+        "mvc_7661N_20kNs_sf_local": 1.03,
+        "mvc_case2c_7661N_20kNs_vm_MPa": 79.91,
+        "mvc_case2c_7661N_20kNs_sf_local": 1.31,
+        "h1_peak_damage_ratio": 2.94,
+        "h1_peak_week": 3.0,
+        "h2_peak_damage_ratio": 1.0
+      },
+      "pillar_3_pennes_bioheat_cpe45": {
+        "malaga_n_subjects": 846,
+        "actes_n_subjects": 21,
+        "max_energy_error_J": 0.0,
+        "cont_300W_warm_peak_C": 39.854,
+        "cont_360W_temperate_peak_C": 39.807,
+        "cont_360W_temperate_t395_s": 2365.0,
+        "cont_360W_hot_humid_peak_C": 42.163,
+        "cont_360W_hot_humid_t395_s": 1350.0,
+        "d_max_temperate_300W": 1.0,
+        "d_max_warm_300W": 0.93,
+        "d_max_temperate_360W": 0.92,
+        "d_max_warm_360W": 0.74,
+        "d_max_hot_dry_360W": 0.59,
+        "d_max_hot_humid_360W": 0.65,
+        "d_max_aegis01_360W": 0.69,
+        "aegis01_loss_360W_pct": -25.0,
+        "exo_cool_hot_humid_cont_360W_W": 420
+      }
+    }
+  },
+  "unassessed": [
+    "hip_trunk_geometry",
+    "individual_tendon_strain",
+    "dynamic_force_power",
+    "motor_accuracy",
+    "post45",
+    "independent_joint_outcomes",
+    "whole_architecture"
+  ]
+}

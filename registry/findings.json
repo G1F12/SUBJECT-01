@@ -739,5 +739,14 @@
     "statement": "For the potential energy specified in EXP-0061, the original hip gravity term adds the shank-foot derivative twice. At internal knee 100 degrees finite difference is -33.072 Nm, original -42.110 Nm, corrected -33.072 Nm. Correction is an arithmetic result within the existing model, not physiological validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0088",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0090",
+    "title": "Gravity-corrected chain and dependent scenarios rebuilt",
+    "statement": "The isolated one-line gravity correction recomputes all 48 tendon cases, 23 one-factor cases, 24 interface cases, 10 arm reoptimizations, integrated fixed-work and D2 thermal scenarios, and the legacy numerical aggregator. Strategy 2 gains are 21.93% at 100 degrees and 21.77% at 140 degrees; no tendon proxy gate changed in the tested grid. Model-only and not whole-system validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

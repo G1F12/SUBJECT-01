@@ -252,5 +252,16 @@
       "DEC-0029"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0031",
+    "date": "2026-11-20",
+    "title": "Adopt gravity-corrected computational rebuild with remaining evidence gaps",
+    "decision": "Use EXP-0090 as the versioned gravity-corrected computational reference for its rebuilt model scenarios, preserving original historical artifacts. The 100-degree 21.93% remains model-only; historical 21.64% remains labelled with its gravity error. Keep ISS-0030 partially resolved pending late external comparisons and model validation, ISS-0029 open, A conditional and whole-system HOLD, FORCE20/ADAPT25/CPE45 unvalidated and biological interventions NO_GO.",
+    "rationale": "The controlled rebuild covers previously named force/tendon/thermal dependencies and energy accounting without changing data or empirical evidence; exact hip geometry and whole-system proof remain absent.",
+    "amends": [
+      "DEC-0030"
+    ],
+    "supersedes": []
   }
 ]

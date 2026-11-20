@@ -2565,5 +2565,34 @@
     "limits": "Arithmetic within stated potential; one-line in-memory change; unmeasured hip/trunk geometry, muscle function, tissue and whole-system efficacy remain unvalidated.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0090",
+    "date": "2026-11-20",
+    "name": "Controlled rebuild of gravity-dependent model scenarios",
+    "sources": [
+      "SRC-0074",
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Replay archived model, apply one verified hip gravity correction in memory, rebuild 0064/0068/0069/0077–0079/0085 outputs and compare provenance, cases, energy and model-only gates.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_gravity_rebuild.py",
+    "inputs": "research/program_evidence_audit/GRAVITY_REBUILD_PROTOCOL.md",
+    "report": "research/program_evidence_audit/GRAVITY_REBUILD_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/GRAVITY_REBUILD_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_gravity_rebuild.py",
+    "results": {
+      "findings": [
+        "FND-0088"
+      ],
+      "negative_results": []
+    },
+    "limits": "Gravity-only correction; same unvalidated hip geometry, tendon assumptions and recovery model. Later empirical comparisons not rebuilt; no new physiological or architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
