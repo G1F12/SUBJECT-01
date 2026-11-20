@@ -838,5 +838,14 @@
     "statement": "On 23 previously viewed participants, D2 with zero fatigue and observed first-minute demand proxy exactly matches the persistence prediction over the later 44 min, both MAE 6.92 W. This equality is model- and task-specific, not evidence of physiological validity.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0099",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0103",
+    "title": "Separating demand and hypothetical capacity reduces constant-load scenario error",
+    "statement": "For 23 previously viewed participants, D2-cap power MAE is 8.07 W versus original 33.45 W under first-minute demand and P1/0.6 capacity assumptions; persistence MAE is 6.92 W. This does not establish independent validation or a physiologically measured capacity.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

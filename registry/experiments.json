@@ -2926,5 +2926,34 @@
     "limits": "Reused cohort and inferred time labels; observed first minute proxies unknown exact prescribed demand, generic D2 physiology, submaximal power is not maximum capacity, no temperature feedback, force or CPE45 validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0103",
+    "date": "2026-11-20",
+    "name": "Retrospective separation of demand and conditional capacity in D2",
+    "sources": [
+      "SRC-0040",
+      "SRC-0086"
+    ],
+    "design": "Compare fixed in-memory D2-cap against original D2 and persistence on reused constant-load and sprint cohorts, cluster bootstrap by person and compare integration steps.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_d2_capacity.py",
+    "inputs": "research/program_evidence_audit/D2_CAPACITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/D2_CAPACITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/D2_CAPACITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_d2_capacity.py <McLaughlin.xlsx>",
+    "results": {
+      "findings": [
+        "FND-0099"
+      ],
+      "negative_results": [
+        "NEG-0083"
+      ]
+    },
+    "limits": "Retrospective reviewed cohorts; unmeasured initial power capacity, assumed demand, Jutlah active recovery approximated as zero power; no actual human enhancement, thermal feedback or CPE45 validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,0 +1,210 @@
+{
+  "experiment_id": "EXP-0103",
+  "classification": "RETROSPECTIVE_CANDIDATE_NOT_VALIDATED",
+  "protocol_sha256_lf": "2f508acc63ab3be9501fd1782ced3a242a2581117775ae3c3d20badc6fcadc42",
+  "runner_sha256_lf": "9475d9c227c66df826c4e9ad85d9883c3c069426bb3456544e839f41e02d5572",
+  "d2_engine_sha256_lf": "1711bde73191d16544b585adc3f357a9022c58494bb708209aa61f305068688b",
+  "d2_candidate_text_sha256_lf": "d65c9902671a38d579cef63c799bd7219836c16def2ae149bfadaf98dabbcf9c",
+  "mclaughlin_loader_sha256_lf": "2dd88fac5835ec449e09ccd2880687e82c95c792f069acc766bee962ed4cf9f3",
+  "mclaughlin_source_sha256_bytes": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "jutlah_source_sha256_bytes": "b5cb03007190a63dae6a118a7a604cd906273f93febf42957a2e7799df16da20",
+  "dataset_loader_sha256_lf": "3768397848490acd4ce33d0cdaa26fe33d89c8b9a6a867a05058cd6e233d0bf7",
+  "legacy_model_sha256_lf": "788edc67e2f145abd4d4bb38f21f8be54240d6ff9de1480816f26a2530f83df2",
+  "legacy_config_sha256_lf": "53208f66432e59cd9c5c98718064805c1479be9729da43047d9c319ec5be8a6c",
+  "integrated_model_sha256_lf": "cf4739e9e671d4ebac00af9532d1fff0b8544768e30e7dbed5a333fb09aad67c",
+  "integrated_parameters_sha256_lf": "68172ec0ed7d531335b137d06030f123e6c00b05d524a57b49b7056c41807e3e",
+  "max_energy_balance_abs_error_J": 1.3271346688270569e-08,
+  "scenarios": {
+    "mclaughlin_dt1.0_rate0.0": {
+      "power_W": {
+        "participants": 23,
+        "old_mae": 6.91798418972332,
+        "candidate_mae": 6.91798418972332,
+        "persistence_mae": 6.91798418972332,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": 0.0,
+        "persistence_minus_candidate_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "work_J": {
+        "participants": 23,
+        "old_mae": 18263.478260869564,
+        "candidate_mae": 18263.478260869564,
+        "persistence_mae": 18263.478260869564,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": 0.0,
+        "persistence_minus_candidate_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mclaughlin_dt1.0_rate0.003": {
+      "power_W": {
+        "participants": 23,
+        "old_mae": 33.45265688198784,
+        "candidate_mae": 8.074115870261936,
+        "persistence_mae": 6.91798418972332,
+        "old_minus_candidate_mae": 25.378541011725908,
+        "paired_bootstrap_95": [
+          18.09979248803008,
+          32.93874833983923
+        ],
+        "persistence_minus_candidate_mae": -1.1561316805386157,
+        "persistence_minus_candidate_bootstrap_95": [
+          -3.3526334098451565,
+          0.4609970066444594
+        ]
+      },
+      "work_J": {
+        "participants": 23,
+        "old_mae": 88153.26166692967,
+        "candidate_mae": 21315.665897491508,
+        "persistence_mae": 18263.478260869564,
+        "old_minus_candidate_mae": 66837.59576943817,
+        "paired_bootstrap_95": [
+          47510.49811183035,
+          86859.58222773245
+        ],
+        "persistence_minus_candidate_mae": -3052.187636621945,
+        "persistence_minus_candidate_bootstrap_95": [
+          -8850.952201991213,
+          1217.0320975413736
+        ]
+      }
+    },
+    "jutlah_dt1.0_rate0.003": {
+      "power10_W": {
+        "participants": 21,
+        "old_mae": 339.5593294215211,
+        "candidate_mae": 339.5593294215211,
+        "persistence_mae": 95.35521229780794,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": -244.20411712371325,
+        "persistence_minus_candidate_bootstrap_95": [
+          -289.36946822507485,
+          -195.25993374947254
+        ]
+      },
+      "bias_old_candidate_persistence_W": [
+        -339.5593294215211,
+        -339.5593294215211,
+        -5.364124421768694
+      ],
+      "conditions": 63
+    },
+    "mclaughlin_dt0.5_rate0.0": {
+      "power_W": {
+        "participants": 23,
+        "old_mae": 6.91798418972332,
+        "candidate_mae": 6.91798418972332,
+        "persistence_mae": 6.91798418972332,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": 0.0,
+        "persistence_minus_candidate_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "work_J": {
+        "participants": 23,
+        "old_mae": 18263.478260869564,
+        "candidate_mae": 18263.478260869564,
+        "persistence_mae": 18263.478260869564,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": 0.0,
+        "persistence_minus_candidate_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mclaughlin_dt0.5_rate0.003": {
+      "power_W": {
+        "participants": 23,
+        "old_mae": 33.454749811917935,
+        "candidate_mae": 8.074191519816125,
+        "persistence_mae": 6.91798418972332,
+        "old_minus_candidate_mae": 25.38055829210181,
+        "paired_bootstrap_95": [
+          18.101732408138457,
+          32.94095837899871
+        ],
+        "persistence_minus_candidate_mae": -1.156207330092804,
+        "persistence_minus_candidate_bootstrap_95": [
+          -3.352856395292502,
+          0.4610353965436763
+        ]
+      },
+      "work_J": {
+        "participants": 23,
+        "old_mae": 88158.78682066844,
+        "candidate_mae": 21315.86561231457,
+        "persistence_mae": 18263.478260869564,
+        "old_minus_candidate_mae": 66842.92120835386,
+        "paired_bootstrap_95": [
+          47515.44917967341,
+          86865.04128672126
+        ],
+        "persistence_minus_candidate_mae": -3052.387351445003,
+        "persistence_minus_candidate_bootstrap_95": [
+          -8851.540883572208,
+          1217.1334468753055
+        ]
+      }
+    },
+    "jutlah_dt0.5_rate0.003": {
+      "power10_W": {
+        "participants": 21,
+        "old_mae": 339.65283238251686,
+        "candidate_mae": 339.65283238251686,
+        "persistence_mae": 95.35521229780794,
+        "old_minus_candidate_mae": 0.0,
+        "paired_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "persistence_minus_candidate_mae": -244.29762008470894,
+        "persistence_minus_candidate_bootstrap_95": [
+          -289.45914034579687,
+          -195.35614922875658
+        ]
+      },
+      "bias_old_candidate_persistence_W": [
+        -339.652832382517,
+        -339.652832382517,
+        -5.364124421768694
+      ],
+      "conditions": 63
+    }
+  },
+  "limits": [
+    "both cohorts previously viewed; no independent validation",
+    "McLaughlin first minute proxies demand and first-minute/0.6 is only hypothetical capacity",
+    "Jutlah active unloaded recovery approximated by zero external power",
+    "aerobic maximum is not measured maximal instantaneous capability",
+    "thermal feedback force tissue post45 and CPE45 remain unassessed"
+  ]
+}
