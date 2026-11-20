@@ -503,5 +503,21 @@
     ],
     "required_inputs": "Corrected data archive or authorized de-identified participant-by-condition force and control records, target settings, timestamps, processing code, exclusions and reuse conditions.",
     "progress": "Publisher MD5 and ZIP SHA-256 verified; author request drafted but not sent. Published group outcomes remain scoped to constrained task."
+  },
+  {
+    "id": "ISS-0039",
+    "date": "2026-11-20",
+    "title": "Repeated jump article and linked code have different filter cutoff",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0114 finds 2.5 Hz in the paper versus 0.25 Hz high-pass in linked MATLAB, while workbooks already contain derived net power. Processing provenance is unresolved.",
+    "related_experiments": [
+      "EXP-0114"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Author clarification of code version, filter type and cutoff actually used, raw left/right force and quiet-stand windows, subject mass and load, and data dictionary.",
+    "progress": "11 source files passed exact hash and prespecified event/summary gates. Local clarification request drafted, not sent; no work or model calibration admitted."
   }
 ]

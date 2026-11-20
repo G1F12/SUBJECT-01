@@ -1,3 +1,5 @@
+- EXP-0114: admitted 11 repeated-jump workbooks for exploratory peak-power comparison; source processing filter mismatch raised as ISS-0039.
+
 - EXP-0113: identified leg-press and jump outcomes after cycling intervals and a separate reliability study; individual work linkage and cohort independence remain unverified.
 
 - EXP-0112: analyzed open participant-level hip force retests and device comparison, highlighting task-specific uncertainty near 20% without extrapolating to leg press.

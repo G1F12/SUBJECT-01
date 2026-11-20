@@ -1886,5 +1886,26 @@
       "access": "Open publication; group statistics and figure 3 limits viewed, individual tabular data location not established.",
       "scope": "13 elite female ice hockey players, 24-hour test-retest of best-of-three isometric leg press and jump; overlap with SRC-0106 unknown."
     }
+  },
+  {
+    "id": "SRC-0108",
+    "date": "2026-11-20",
+    "name": "Natera et al. loaded repeated countermovement jump force and power",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LCMJ_SOURCE_GATE_REPORT.md",
+    "doi": "10.6084/m9.figshare.25133009.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.25133009.v1",
+    "calibration_review": {
+      "access": "CC BY 4.0 11 XLSX downloaded; publisher MD5 and file SHA-256 stored in manifest. Article, author code and first record of one series previewed.",
+      "scope": "11 trained men performing 20 loaded countermovement jumps. Workbook net power is derived. Article states 2.5 Hz acceleration filtering while linked MATLAB uses a 0.25 Hz high-pass; actual pipeline unresolved."
+    },
+    "external_provenance": {
+      "article_doi": "10.7717/peerj.17971",
+      "license": "CC BY 4.0",
+      "manifest": "research/program_evidence_audit/LCMJ_SOURCE_MANIFEST.json",
+      "code_doi": "10.6084/m9.figshare.25133126.v1",
+      "code_sha256_bytes": "676820ebb61aedcac7369b72a8e7cfa5fbce2ad2bf03cd58a9814f732b64dbad"
+    }
   }
 ]

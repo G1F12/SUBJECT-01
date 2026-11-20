@@ -752,5 +752,13 @@
     "title": "Group data cannot identify force response at individually equal work",
     "statement": "HIIT work was reported as measured but participant-level power, work and linked force are not obtained; no significant group work contrast does not establish individual equal work.",
     "reason": "Published aggregates lack individual coupling; protocol is shorter than CPE45 and uses varying cadence. The nominal 145.3 kJ calculation is not actual work or a bound."
+  },
+  {
+    "id": "NEG-0094",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0114",
+    "title": "Repeat jump derived power is not yet independently calibrated",
+    "statement": "The paper describes 2.5 Hz acceleration filtering; the linked MATLAB code sets a high-pass cutoff of 0.25 Hz. The workbook already contains derived power.",
+    "reason": "The code/version used for workbook generation, raw bilateral forces, mass and initial conditions have not been independently verified; integration as measured work is not supported."
   }
 ]

@@ -3237,5 +3237,33 @@
     "limits": "Published rounded group means, no participant-linked work; estimates are not paired individual results; agreement cohort may overlap and uses different trial aggregation. Nominal work is neither observed nor a bound.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0114",
+    "date": "2026-11-20",
+    "name": "Repeated jump derived-power source gate and exploratory persistence baseline",
+    "sources": [
+      "SRC-0108"
+    ],
+    "design": "Verify 11 publisher file hashes, 20 flight events and source summary within 2%; compare mean early versus late peak derived power with participant bootstrap and first-window persistence baseline.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_source_gate.py",
+    "inputs": "research/program_evidence_audit/LCMJ_SOURCE_GATE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_SOURCE_GATE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_SOURCE_GATE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_source_gate.py <downloaded-xlsx-directory>",
+    "results": {
+      "findings": [
+        "FND-0110"
+      ],
+      "negative_results": [
+        "NEG-0094"
+      ]
+    },
+    "limits": "Article code and first data record previewed; power is derived not independently measured; article and linked code specify different filter cutoffs; no CPE45 or human enhancement validation.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

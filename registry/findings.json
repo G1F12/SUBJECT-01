@@ -937,5 +937,14 @@
     "statement": "For 15 elite female ice hockey players, ratios of published group means show 10-minute changes of −6.96% in leg-press peak force, −17.03% in peak rate of force development and −2.45% in jump peak power. These are not mean individual changes or an enhancement result.",
     "confidence": "source_metadata_and_scope_checked",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0110",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0114",
+    "title": "Loaded jump derived peak power declines over repeated jumps",
+    "statement": "In 11 trained men, first-versus-last four-window paired mean change is −16.57% with participant-bootstrap [−19.11,−14.27]%; persistence MAE 1049 W. Workbook power processing and article-versus-code filter cutoff require clarification.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

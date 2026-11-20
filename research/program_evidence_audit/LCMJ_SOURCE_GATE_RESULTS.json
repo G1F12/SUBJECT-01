@@ -1,0 +1,31 @@
+{
+  "experiment_id": "EXP-0114",
+  "classification": "SOURCE_GATE_PASSED_EXPLORATORY",
+  "protocol_sha256_lf": "2321be13100489080c0a1be404e3657d25072ba1b55971304568f263d648ddf1",
+  "manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "runner_sha256_lf": "7b4e2585cd8f6aa41f6d0cdd862d0a318eb0f59e346bb089810443e3d271d8b1",
+  "source_files": 11,
+  "pass_count": 11,
+  "flight_count_distribution": {
+    "20": 11
+  },
+  "summary_discrepancy_percent_range": [
+    0.3674004676807896,
+    1.3033634632032554
+  ],
+  "limits": [
+    "source article, code and first row of one workbook previewed",
+    "published workbook power is derived; processing and filter mismatch unresolved",
+    "no independent force power or whole architecture validation"
+  ],
+  "descriptive": {
+    "mean_early_power_W": 6414.036349515756,
+    "mean_late_power_W": 5364.666243803902,
+    "mean_paired_change_percent": -16.57184576790662,
+    "paired_bootstrap_95_percent": [
+      -19.107038963210552,
+      -14.271614089437229
+    ],
+    "persistence_mean_absolute_error_W": 1049.3701057118553
+  }
+}
