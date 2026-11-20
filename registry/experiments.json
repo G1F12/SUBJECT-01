@@ -3463,5 +3463,33 @@
     "limits": "Low-load individual rows and article viewed before protocol; 12 men, two different short load conditions. Volume kg-repetitions is not mechanical work; 45 minutes refers to recovery, not performance.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0122",
+    "date": "2026-11-20",
+    "name": "Plantar torque-position-velocity and force data provenance gate",
+    "sources": [
+      "SRC-0112"
+    ],
+    "design": "Audit article cohort size, paired raw/summary records, time grids, segment boundaries and torque-position versus torque-velocity integrals before estimating work and MVC change.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_plantar_work_gate.py",
+    "inputs": "research/program_evidence_audit/PLANTAR_WORK_PROTOCOL.md",
+    "report": "research/program_evidence_audit/PLANTAR_WORK_GATE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/PLANTAR_WORK_GATE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_plantar_work_gate.py <zip> <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0118"
+      ],
+      "negative_results": [
+        "NEG-0102"
+      ]
+    },
+    "limits": "21 coded records versus 20 reported; signal conventions unresolved, different legs and no matched actual work; no architecture effect. Article and some individual rows previewed.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

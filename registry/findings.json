@@ -1009,5 +1009,14 @@
     "statement": "In 12 men, paired high-minus-low load knee force changes are +0.04 pp [−4.62,4.85] at 5 min and +0.66 pp [−2.63,3.90] at 45 min; load-times-repetition volumes differ and are not joules.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0118",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0122",
+    "title": "Open paired plantar moment-position and MVIC source passes partial structural checks",
+    "statement": "126 archived segments align with summary duration and start angle in 125 cases each, and end angle in 126; 562940 intervals are 0.01 s. Archive has 21 identifiers while article reports 20.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

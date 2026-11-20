@@ -816,5 +816,13 @@
     "title": "Force recovery regression advantage and equal-work inference not established",
     "statement": "LOPO prediction at 45 min has MAE 3.69 pp versus 5-minute persistence 4.18; paired bootstrap advantage 0.48 [−0.40,1.24] pp.",
     "reason": "The small partially previewed cohort gives uncertain model advantage and leg press volume expressed as kg-repetitions does not measure equal mechanical work."
+  },
+  {
+    "id": "NEG-0102",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0122",
+    "title": "Mechanical work and force-response identification remain blocked",
+    "statement": "Full-segment torque-angle and torque-velocity integrals have median absolute disagreement 39.90 J; opposite-sign comparison median 28.30 J.",
+    "reason": "Cohort selection, source channel signs and processing, and one segment boundary need clarification; two loads concern different legs and are not matched in work."
   }
 ]
