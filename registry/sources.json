@@ -2009,5 +2009,25 @@
       "zip_sha256": "65098f741450024775bcb5bda73436d1f2144391f4be46f5a1e3149723f58f6b",
       "license": "CC0"
     }
+  },
+  {
+    "id": "SRC-0114",
+    "date": "2026-11-20",
+    "name": "Arslan et al. lumbar isokinetic and Wingate peak power",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LUMBAR_ISOKINETIC_REPORT.md",
+    "doi": "10.5281/zenodo.19953132",
+    "url": "https://doi.org/10.5281/zenodo.19953132",
+    "calibration_review": {
+      "access": "CC BY 4.0 XLSX downloaded; MD5 and SHA-256 verified.",
+      "scope": "30 active young men; table averages match article; same-cohort exploratory LOPO only. Dynamic signals and post-exercise strength absent."
+    },
+    "external_provenance": {
+      "article_doi": "10.7717/peerj.21526",
+      "md5": "d74220757d34ecc87d897129bf978cb7",
+      "sha256": "21d242d7ba0e1021fbbdf923851de15079f3ec5d84abce207aba02356b1999e0",
+      "license": "CC BY 4.0"
+    }
   }
 ]

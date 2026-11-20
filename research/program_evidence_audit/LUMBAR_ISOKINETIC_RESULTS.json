@@ -1,0 +1,174 @@
+{
+  "source_sha256": "21d242d7ba0e1021fbbdf923851de15079f3ec5d84abce207aba02356b1999e0",
+  "nonempty_data_rows": 30,
+  "incomplete_or_nonfinite_rows": 0,
+  "exact_duplicate_rows": 0,
+  "nonempty_header_columns": 22,
+  "table1_comparisons": {
+    "age": {
+      "mean": 21.433333333333334,
+      "published": 21.43,
+      "absolute_error": 0.0033333333333338544
+    },
+    "height": {
+      "mean": 178.06666666666666,
+      "published": 178.06,
+      "absolute_error": 0.006666666666660603
+    },
+    "weight": {
+      "mean": 71.29666666666667,
+      "published": 71.29,
+      "absolute_error": 0.006666666666660603
+    },
+    "bmi": {
+      "mean": 22.45333333333333,
+      "published": 22.45,
+      "absolute_error": 0.0033333333333303017
+    },
+    "fat_pct": {
+      "mean": 10.640000000000002,
+      "published": 10.64,
+      "absolute_error": 1.7763568394002505e-15
+    },
+    "fat_mass": {
+      "mean": 7.879999999999999,
+      "published": 7.88,
+      "absolute_error": 8.881784197001252e-16
+    },
+    "ffm": {
+      "mean": 63.416666666666664,
+      "published": 63.41,
+      "absolute_error": 0.006666666666667709
+    },
+    "pt_ext_60": {
+      "mean": 414.9133333333332,
+      "published": 414.91,
+      "absolute_error": 0.0033333333331597714
+    },
+    "pt_flex_60": {
+      "mean": 223.64999999999998,
+      "published": 223.65,
+      "absolute_error": 2.842170943040401e-14
+    },
+    "tw_ext_60": {
+      "mean": 2033.7733333333338,
+      "published": 2033.77,
+      "absolute_error": 0.003333333333785049
+    },
+    "tw_flex_60": {
+      "mean": 1191.2099999999998,
+      "published": 1191.21,
+      "absolute_error": 2.2737367544323206e-13
+    },
+    "ap_ext_60": {
+      "mean": 232.64666666666665,
+      "published": 232.64,
+      "absolute_error": 0.006666666666660603
+    },
+    "ap_flex_60": {
+      "mean": 143.8066666666667,
+      "published": 143.8,
+      "absolute_error": 0.006666666666689025
+    },
+    "pt_ext_240": {
+      "mean": 425.88999999999993,
+      "published": 425.89,
+      "absolute_error": 5.684341886080802e-14
+    },
+    "pt_flex_240": {
+      "mean": 311.81666666666666,
+      "published": 311.81,
+      "absolute_error": 0.006666666666660603
+    },
+    "tw_ext_240": {
+      "mean": 3784.83,
+      "published": 3784.83,
+      "absolute_error": 0.0
+    },
+    "tw_flex_240": {
+      "mean": 2030.556666666667,
+      "published": 2030.55,
+      "absolute_error": 0.006666666667115351
+    },
+    "ap_ext_240": {
+      "mean": 357.0266666666666,
+      "published": 357.02,
+      "absolute_error": 0.00666666666660376
+    },
+    "ap_flex_240": {
+      "mean": 167.14,
+      "published": 167.14,
+      "absolute_error": 0.0
+    },
+    "pap": {
+      "mean": 984.1766666666665,
+      "published": 984.17,
+      "absolute_error": 0.0066666666665469165
+    }
+  },
+  "source_gate_passed": true,
+  "mae_W": {
+    "mean": 78.94344827586205,
+    "ffm": 40.38175716402705,
+    "ffm_pt60": 37.9754253658163,
+    "ffm_pt240": 42.14734047746901
+  },
+  "contrasts": {
+    "ffm_pt60": {
+      "ffm_minus_model_mae_W": 2.406331798210757,
+      "bootstrap_95_ci_W": [
+        -0.804712368509238,
+        5.585874783398401
+      ]
+    },
+    "ffm_pt240": {
+      "ffm_minus_model_mae_W": -1.7655833134419556,
+      "bootstrap_95_ci_W": [
+        -5.459895631729092,
+        1.6381887437953744
+      ]
+    }
+  },
+  "both_models_supported": false,
+  "conditional_minimum_angular_excursion_deg": {
+    "ext_60": {
+      "median_conditional_deg": 55.90285093814096,
+      "max_conditional_deg": 71.22466013410745,
+      "count_above_180": 0
+    },
+    "flex_60": {
+      "median_conditional_deg": 61.11567458542382,
+      "max_conditional_deg": 76.33685699165495,
+      "count_above_180": 0
+    },
+    "ext_240": {
+      "median_conditional_deg": 91.78127244758434,
+      "max_conditional_deg": 192.4165067893889,
+      "count_above_180": 1
+    },
+    "flex_240": {
+      "median_conditional_deg": 70.99573058214281,
+      "max_conditional_deg": 140.45608144387614,
+      "count_above_180": 0
+    }
+  },
+  "descriptive_paired_differences": {
+    "pt_ext": {
+      "mean_240_minus_60": 10.976666666666661,
+      "positive_differences": 15
+    },
+    "pt_flex": {
+      "mean_240_minus_60": 88.16666666666667,
+      "positive_differences": 26
+    },
+    "ap_ext": {
+      "mean_240_minus_60": 124.38000000000001,
+      "positive_differences": 24
+    },
+    "ap_flex": {
+      "mean_240_minus_60": 23.333333333333336,
+      "positive_differences": 22
+    }
+  },
+  "limits": "Previously previewed cohort; no post-exercise MVC, time-resolved work, equal-work comparison, independent cohort or CPE45."
+}

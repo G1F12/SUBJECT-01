@@ -1036,5 +1036,14 @@
     "statement": "Exact numeric SHA-256 matches for 62 trials spanning 16 subject folders and both hands; two other pairs also repeat. Semantic 16 by 24 filename grid is complete.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0121",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0125",
+    "title": "Body-size baseline predicts short-cycle peak power in lumbar dataset",
+    "statement": "LOPO mean model MAE 78.94 W and FFM-only 40.38 W; 20 prespecified table means match article within 0.007 units. One 240-degree/s extension work/peak torque ratio conditionally implies over 180 degrees per repetition.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

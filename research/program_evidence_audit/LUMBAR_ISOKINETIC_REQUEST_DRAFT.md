@@ -1,0 +1,5 @@
+# Draft request — not sent
+
+Subject: Isokinetic work, peak torque and repetitions in dataset 10.5281/zenodo.19953132
+
+Dear authors, thank you for sharing the dataset associated with DOI 10.7717/peerj.21526. The individual table matches the published means. To interpret work and torque physically, could you clarify the actual number of repetitions at each speed and the device definitions of total work and peak torque, including whether peak is across all repetitions, treatment of direction, active range, warm-ups and inertial artefacts? Under a simple five-unidirectional-repetition interpretation, total work divided by five times peak torque implies an average angular excursion above 180 degrees for one 240-degree/s extension record. This is a conditional calculation, not a claim of error. Could you share the original per-repetition torque–angle–time traces, actual ROM, test order, calibration and the anonymized ID mapping to the analytical dataset? Please also clarify whether any post-Wingate force measurements exist. Thank you.

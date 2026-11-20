@@ -840,5 +840,13 @@
     "title": "Force-control effect blocked by repeated numerical records",
     "statement": "A post-condition time series is repeated across nominally distinct participants and hands; treating files as independent trials is unsupported.",
     "reason": "True missingness, source export and replacement status are unknown; source lacks measured post-fatigue MVC and object orientation."
+  },
+  {
+    "id": "NEG-0105",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0125",
+    "title": "Lumbar torque did not establish added transfer value over FFM baseline",
+    "statement": "FFM plus extension torque: LOPO improvement 2.41 W [−0.80, 5.59] at 60 degrees/s and −1.77 W [−5.46, 1.64] at 240 degrees/s, bootstrap over paired held-out errors.",
+    "reason": "Both confidence intervals include zero; cohort already previewed and bootstrap does not refit the learning procedure."
   }
 ]

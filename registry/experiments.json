@@ -3547,5 +3547,33 @@
     "limits": "Data dictionary and article previewed; full numeric parsing limited to one representative per repeated group. Post-fatigue MVC and object orientation not available as stated; cross-person exact repeats require clarification.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0125",
+    "date": "2026-11-20",
+    "name": "Lumbar strength-to-short-cycle-power participant-held-out comparison",
+    "sources": [
+      "SRC-0114"
+    ],
+    "design": "Check all 20 prespecified Table 1 means, then compare LOPO FFM-only versus FFM plus lumbar peak torque prediction of Wingate peak power with paired error bootstrap; audit conditional work/torque excursion.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lumbar_isokinetic.py",
+    "inputs": "research/program_evidence_audit/LUMBAR_ISOKINETIC_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LUMBAR_ISOKINETIC_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LUMBAR_ISOKINETIC_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lumbar_isokinetic.py <xlsx>",
+    "results": {
+      "findings": [
+        "FND-0121"
+      ],
+      "negative_results": [
+        "NEG-0105"
+      ]
+    },
+    "limits": "Same small and partially previewed cohort; bootstrap on LOPO residuals rather than refitted model; no post-fatigue force or time-resolved work; anomalous conditional work/peak torque ratio needs source clarification.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
