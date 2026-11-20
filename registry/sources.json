@@ -1737,5 +1737,26 @@
       "aggregate_extraction": "research/program_evidence_audit/CYCLING_TORQUE_INPUTS.json",
       "availability": "individual data available from corresponding author on reasonable request"
     }
+  },
+  {
+    "id": "SRC-0100",
+    "date": "2026-11-20",
+    "name": "Chang et al. repeated sprint recovery dataset passive control",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/CHANG_SPRINT_REPORT.md",
+    "doi": "10.17632/jcthkyfsvd.1",
+    "url": "https://data.mendeley.com/datasets/jcthkyfsvd/1",
+    "calibration_review": {
+      "access": "Mendeley v1 CC BY 4.0, XLSX downloaded; publisher SHA256 verified.",
+      "scope": "12 recreationally trained men, passive control after fatigue and 20-minute rest, five 10-s cycling sprints. Mean power unit W inferred from protocol and magnitude, not labeled in sheet; first 3 control columns previewed before analysis protocol."
+    },
+    "external_provenance": {
+      "version": "v1",
+      "license": "CC BY 4.0",
+      "metadata_url": "https://data.mendeley.com/public-api/datasets/jcthkyfsvd",
+      "file_url": "https://data.mendeley.com/public-files/datasets/jcthkyfsvd/files/3c48606f-a512-43dc-bc5f-354a57cc45aa/file_downloaded",
+      "sha256": "f5d1033ac70b1692fb8294bfba3c000c33f4c4056f4da33e3265cffcfc8e175d"
+    }
   }
 ]

@@ -680,5 +680,13 @@
     "title": "Scale correction alone fails against persistence on both sprint cohorts",
     "statement": "Baseline first-sprint prediction MAE is 103.16 W versus normalized D2 345.61 W for Chmura, and 95.36 W versus 302.32 W for Jutlah. Paired participant-bootstrap differences favor persistence on the previously viewed samples.",
     "reason": "Relative trajectory errors remain after empirical first-bout normalization; physical cause is unidentified, and rest and energy assumptions differ across tasks."
+  },
+  {
+    "id": "NEG-0085",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0105",
+    "title": "Normalized D2 advantage on new sprint control cohort not established",
+    "statement": "The 95% participant bootstrap interval of persistence minus scaled-D2 MAE crosses zero; smaller time steps change the normalized MAE and the predeclared convergence tolerance is absent.",
+    "reason": "The sample is small and partly previewed, physical units and post-fatigue initial condition are not independently established, and normalization is not an energy-balanced physiological model."
   }
 ]

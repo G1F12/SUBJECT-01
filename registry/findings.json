@@ -856,5 +856,14 @@
     "statement": "At rate 0.003/s, first-sprint normalization reduces tenth-sprint MAE from 742.52 to 345.61 W in Chmura and 339.56 to 302.32 W in Jutlah; relative ratio errors are 30.76 and 55.28 percentage points. This is an empirical bridge, not an energy-balanced power trajectory or physiological validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0101",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0105",
+    "title": "New passive-control sprint cohort has uncertain model versus persistence advantage",
+    "statement": "In 12 previously unused participants, normalized D2 predicts fifth-sprint mean power with assumed-unit MAE 84.75 versus persistence 88.09; paired difference 3.35 [−30.31,36.27]. Unit W is inferred and the source was partly previewed; no efficacy or whole-system inference.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
