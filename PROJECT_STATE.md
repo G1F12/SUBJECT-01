@@ -1,3 +1,5 @@
+EXP-0101 / FND-0097 / SRC-0099: исследовательски сопоставлены простые прогнозы группового момента при двух велонагрузках; индивидуальные данные требуют запроса. См. research/program_evidence_audit/CYCLING_TORQUE_REPORT.md.
+
 EXP-0100 / FND-0096 / NEG-0081 / ISS-0036: показана условная зависимость обнаружимости FORCE20 от точности и превышения порога; достоверный размер выборки не определён. См. research/program_evidence_audit/FORCE_DETECTABILITY_REPORT.md.
 
 EXP-0099 / FND-0095 / NEG-0080 / ISS-0035: входной гейт повторных MVC провален из-за расхождения максимума и опубликованных средних; прогноз DATA_BLOCKED. См. research/program_evidence_audit/MANUAL_WORK_RECOVERY_REPORT.md.

@@ -1718,5 +1718,24 @@
       "publication_year": 2026,
       "aggregate_provenance": "article between-day reliability results; no raw data extraction"
     }
+  },
+  {
+    "id": "SRC-0099",
+    "date": "2026-11-20",
+    "name": "do Nascimento Salvador et al. cycling torque at two intensities",
+    "type": "primary_paper",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/CYCLING_TORQUE_REPORT.md",
+    "doi": "10.1113/EP090444",
+    "url": "https://doi.org/10.1113/EP090444",
+    "calibration_review": {
+      "access": "Article and Table 3 accessible; author data availability statement: individual data on reasonable request.",
+      "scope": "16-person repeated torque means at HVY and VHI with 3-s maximal isokinetic probes, 12-min bouts; no individual measurements or actual work in this extraction."
+    },
+    "external_provenance": {
+      "publication_year": 2023,
+      "aggregate_extraction": "research/program_evidence_audit/CYCLING_TORQUE_INPUTS.json",
+      "availability": "individual data available from corresponding author on reasonable request"
+    }
   }
 ]

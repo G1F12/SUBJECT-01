@@ -1,0 +1,84 @@
+{
+  "experiment_id": "EXP-0101",
+  "classification": "EXPLORATORY_PREVIEWED_GROUP_TIMEPOINTS_ONLY",
+  "protocol_sha256_lf": "f08dba704e07ea8ed6dc0781575700d3eed852bda6afbc9537fb5649f3be5b29",
+  "runner_sha256_lf": "a3d9c3f7beaa1ab00fe3c4830fc6d97c1ec136835e448cf4e23f4569f987c936",
+  "input_sha256_lf": "642c6ff4d4cb61aed7bf9479bc4f383f990c469e0de480b60a8a9c34e8b904b7",
+  "rows": [
+    {
+      "condition": "HVY",
+      "training_means_Nm": [
+        126.4,
+        128.3
+      ],
+      "held_times_min": [
+        6.0,
+        8.0,
+        10.0,
+        12.0
+      ],
+      "held_means_Nm": [
+        127.2,
+        127.6,
+        128.7,
+        131.2
+      ],
+      "persistence_predictions_Nm": [
+        128.3,
+        128.3,
+        128.3,
+        128.3
+      ],
+      "linear_predictions_Nm": [
+        130.20000000000002,
+        132.10000000000002,
+        134.00000000000003,
+        135.90000000000003
+      ],
+      "persistence_mae_Nm": 1.274999999999995,
+      "linear_mae_Nm": 4.375000000000032
+    },
+    {
+      "condition": "VHI",
+      "training_means_Nm": [
+        114.2,
+        114.2
+      ],
+      "held_times_min": [
+        6.0,
+        8.0,
+        10.0,
+        12.0
+      ],
+      "held_means_Nm": [
+        111.7,
+        110.2,
+        106.9,
+        110.1
+      ],
+      "persistence_predictions_Nm": [
+        114.2,
+        114.2,
+        114.2,
+        114.2
+      ],
+      "linear_predictions_Nm": [
+        114.2,
+        114.2,
+        114.2,
+        114.2
+      ],
+      "persistence_mae_Nm": 4.475000000000001,
+      "linear_mae_Nm": 4.475000000000001
+    }
+  ],
+  "equal_condition_persistence_mae_Nm": 2.8749999999999982,
+  "equal_condition_linear_mae_Nm": 4.425000000000017,
+  "limits": [
+    "entire table observed before protocol",
+    "aggregate group means not participant-level",
+    "same individuals contribute repeated timepoints and intensities",
+    "no confidence interval or physiological plateau claim",
+    "no measured actual per-person work, post-exercise recovery or whole architecture"
+  ]
+}

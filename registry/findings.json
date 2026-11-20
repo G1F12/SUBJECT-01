@@ -820,5 +820,14 @@
     "statement": "Under an illustrative two-group noncentral t model with SD of individual change 29.7/1.96 percentage points, the minimal n per group for 80% power to show a contrast >20 percentage points is 711 at true 22 and 115 at true 25. This is not an actual trial sample size or efficacy estimate.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0097",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0101",
+    "title": "Persistence is a necessary baseline for this group torque trajectory",
+    "statement": "On previously viewed published group means, persistence from 4 minutes gives 2.88 Nm equal-condition MAE at 6–12 minutes versus 4.43 Nm for a 2-to-4-minute line extrapolation. At VHI predictions coincide due to rounding. No statistical or individual validation follows.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
