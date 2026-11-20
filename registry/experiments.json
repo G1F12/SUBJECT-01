@@ -2706,5 +2706,31 @@
     "limits": "Alpha and mapping of D2 fatigue to force are unmeasured; one shared energy trace regardless of alpha, no tissue damage or functional post45, no physiological or architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0095",
+    "date": "2026-11-20",
+    "name": "Upper-limb endurance transfer across observed task orders",
+    "sources": [
+      "SRC-0093"
+    ],
+    "design": "Predict shoulder static nominal 45% MVC duration from first nominal 25% duration; train order group A, evaluate B against training mean; paired test-participant bootstrap, reverse secondary.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_swifties_transfer.py",
+    "inputs": "research/program_evidence_audit/SWIFTIES_TRANSFER_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SWIFTIES_TRANSFER_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_swifties_transfer.py <Subject_Data.zip>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0076"
+      ]
+    },
+    "limits": "Published data, metadata and first rows viewed; observational order groups confounded, task endpoint may include pain, no post-exercise force, biochemical recovery or 45-minute architecture validation.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

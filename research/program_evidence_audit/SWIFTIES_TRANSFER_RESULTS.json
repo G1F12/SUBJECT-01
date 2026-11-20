@@ -1,0 +1,83 @@
+{
+  "experiment_id": "EXP-0095",
+  "classification": "OBSERVATIONAL_TRANSFER_BETWEEN_ORDER_GROUPS",
+  "zip_sha256_bytes": "250bcb84c25ea9cea86711cc088598c30295a9f59f7ce295be2b935cff787383",
+  "protocol_sha256_lf": "da76f4f024143f841a2085b80c2f132f3d7b9a239933b7c95c6107d3204ae3ce",
+  "runner_sha256_lf": "9cd59d803b92e1b81eeed435020d002fd80dfc1126303d7b7e4240d667e78efb",
+  "source_count": 32,
+  "blank_structural_rows": 1,
+  "excluded": [],
+  "actual_relative_intensities_pct": {
+    "25": {
+      "n": 32,
+      "min": 17.8,
+      "mean": 24.6,
+      "max": 32.8
+    },
+    "45": {
+      "n": 32,
+      "min": 35.5,
+      "mean": 44.596875,
+      "max": 54.2
+    }
+  },
+  "comparisons": [
+    {
+      "train_group": "A",
+      "test_group": "B",
+      "train_n": 15,
+      "test_n": 17,
+      "train_intercept_s": 18.90473578213299,
+      "train_slope": 0.2670809787182877,
+      "baseline_prediction_s": 48.8,
+      "model_mae_s": 7.275119528393296,
+      "baseline_mae_s": 9.694117647058825,
+      "paired_advantage_s": 2.418998118665527,
+      "paired_bootstrap_95_s": [
+        -0.9686701582159819,
+        5.708607719659943
+      ],
+      "model_bias_s": 0.8393607352764296,
+      "baseline_bias_s": 2.0941176470588205,
+      "target_range_s": [
+        28.0,
+        62.0
+      ],
+      "model_r2": 0.39911451389498676,
+      "negative_prediction_count": 0,
+      "decision": "uncertain"
+    },
+    {
+      "train_group": "B",
+      "test_group": "A",
+      "train_n": 17,
+      "test_n": 15,
+      "train_intercept_s": 23.670060258842046,
+      "train_slope": 0.21481567504096832,
+      "baseline_prediction_s": 46.705882352941174,
+      "model_mae_s": 8.370607792788725,
+      "baseline_mae_s": 8.447058823529412,
+      "paired_advantage_s": 0.07645103074068753,
+      "paired_bootstrap_95_s": [
+        -2.9569129139933223,
+        3.4508912524867466
+      ],
+      "model_bias_s": -1.0849051815722328,
+      "baseline_bias_s": -2.094117647058826,
+      "target_range_s": [
+        35.0,
+        100.0
+      ],
+      "model_r2": 0.35151809780776067,
+      "negative_prediction_count": 0,
+      "decision": "uncertain"
+    }
+  ],
+  "limitations": [
+    "published data and first rows seen before protocol",
+    "nonrandomized order and participant differences confounded",
+    "task termination may include pain",
+    "not post-exercise strength or biochemical recovery",
+    "upper limb 1-minute tasks not CPE45 or lower limb architecture"
+  ]
+}

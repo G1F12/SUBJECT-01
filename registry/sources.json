@@ -1594,5 +1594,26 @@
       "access": "Article methods checked; no open individual raw data located, availability not established.",
       "scope": "Synchronous leg press force, sled motion and markers potentially useful for ISS-0029; trunk orientation and underlying data availability unconfirmed."
     }
+  },
+  {
+    "id": "SRC-0093",
+    "date": "2026-11-20",
+    "name": "SWIFTIES v3 individual upper-limb tasks and subject data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md",
+    "doi": "10.5281/zenodo.13771675",
+    "url": "https://zenodo.org/records/13771675",
+    "calibration_review": {
+      "access": "v3 open CC BY 4.0; subject ZIP downloaded, publisher MD5 and byte SHA256 checked; separate 19.5 GB sensor archive not retrieved.",
+      "scope": "32 adults, shoulder/elbow static/dynamic endurance at nominal 25/45% MVC; published group order and individual relative intensities, no validated post-load strength or CPE45 assessment in extracted data."
+    },
+    "external_provenance": {
+      "version": "v3 record 13771675",
+      "license": "CC BY 4.0",
+      "file_url": "https://zenodo.org/records/13771675/files/Subject_Data.zip?download=1",
+      "md5": "bafd0fbb504317975ab009fb5425f2eb",
+      "sha256": "250bcb84c25ea9cea86711cc088598c30295a9f59f7ce295be2b935cff787383"
+    }
   }
 ]

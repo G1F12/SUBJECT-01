@@ -1,3 +1,5 @@
+EXP-0095 / NEG-0076 / SRC-0093: проверен перенос прогноза времени удержания плеча между порядками задач; преимущество над средним не установлено. См. research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md.
+
 EXP-0094 / FND-0091 / NEG-0075 / ISS-0032: условный силовой гейт чувствителен к различию утомления стратегии и базы; при общем D2 работа остаётся ниже требования. См. research/program_evidence_audit/DIFFERENTIAL_FATIGUE_REPORT.md.
 
 EXP-0093 / FND-0090 / NEG-0074 / ISS-0031: проверена модельная чувствительность к трению; исходная диагностика при μ=0 делит на ноль, обойдена в памяти без изменения LP. См. research/program_evidence_audit/FRICTION_SENSITIVITY_REPORT.md.

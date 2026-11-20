@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0095 / NEG-0076 / SRC-0093: проверен перенос индивидуальной длительности статической нагрузки на открытых данных SWIFTIES. См. research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md.
+
 EXP-0094 / FND-0091 / NEG-0075 / ISS-0032: исследована чувствительность общего силового интерфейса к различию потерь при утомлении. См. research/program_evidence_audit/DIFFERENTIAL_FATIGUE_REPORT.md.
 
 EXP-0093 / FND-0090 / NEG-0074 / ISS-0031: проверено влияние модельного трения, найден сбой нулевого знаменателя диагностики. См. research/program_evidence_audit/FRICTION_SENSITIVITY_REPORT.md.

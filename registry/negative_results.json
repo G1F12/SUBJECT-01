@@ -608,5 +608,13 @@
     "title": "Common-load coupled force gate is not robust to assumed differential fatigue",
     "statement": "The conditional 20% force gate fails under alpha=1.05 and the tested higher D2 fatigue scenario; actual modeled work is below the separate 99% diagnostic work requirement in all traces.",
     "reason": "Equal fatigue-to-force scaling guaranteed the old relative gain by construction, while differential scaling is unmeasured; D2 itself is externally unvalidated for this task."
+  },
+  {
+    "id": "NEG-0076",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0095",
+    "title": "Endurance-time regression advantage not established across order groups",
+    "statement": "A to B, linear predictor MAE 7.28 s versus training-mean baseline 9.69 s; paired held-group bootstrap difference 2.42 s [−0.97, 5.71]. Reverse B to A difference 0.08 s [−2.96, 3.45].",
+    "reason": "Intervals include zero on small observational samples, with task order and participant differences confounded; training uncertainty is not included."
   }
 ]
