@@ -1,0 +1,135 @@
+{
+  "experiment_id": "EXP-0127",
+  "title": "Empirical evaluation of work-to-force transition models and architectural coupling gate",
+  "epistemic_classification": "EMPIRICAL_AUDIT_AND_DECISION_GATE",
+  "source_ids": [
+    "SRC-0111",
+    "SRC-0102"
+  ],
+  "source_sha256": {
+    "norbury": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e"
+  },
+  "protocol_sha256_lf": "32acbf34515b63730c1f91bd73ab8c6090500c63773bcf38f1697ba4ad2e4085",
+  "runner_sha256_lf": "98f0e2e18fbbb8dab043313db0dbb412429c09136596ee5ac17262b882de6cff",
+  "norbury_individual_cv_metrics": {
+    "persistence_unperturbed": {
+      "mae_N": 74.125,
+      "rmse_N": 95.7063651662382,
+      "bias_N": 72.95833333333333,
+      "mean_relative_error_percent": 10.717106318679843
+    },
+    "mean_retention_baseline": {
+      "mae_N": 50.61086918321356,
+      "rmse_N": 61.74373653576377,
+      "bias_N": 2.7855525676741784,
+      "mean_relative_error_percent": 7.176492912449822
+    },
+    "mean_loss_baseline": {
+      "mae_N": 54.23484848484849,
+      "rmse_N": 65.83434240953477,
+      "bias_N": 0.0,
+      "mean_relative_error_percent": 7.675839814003265
+    },
+    "volume_linear_model": {
+      "mae_N": 54.68749551861858,
+      "rmse_N": 67.24823356702353,
+      "bias_N": 1.5144694813679298,
+      "mean_relative_error_percent": 7.76700424400007
+    },
+    "volume_proportional_d2_model": {
+      "mae_N": 54.03074490916966,
+      "rmse_N": 66.1498163493573,
+      "bias_N": -2.5170442133752338,
+      "mean_relative_error_percent": 7.56935873637909
+    }
+  },
+  "norbury_paired_comparisons_vs_retention_baseline": {
+    "mean_retention_minus_persistence_unperturbed": {
+      "paired_mae_difference_N": -23.514130816786444,
+      "ci95_N": [
+        -38.975511788133126,
+        -9.451601552247118
+      ],
+      "favors": "baseline"
+    },
+    "mean_retention_minus_mean_loss_baseline": {
+      "paired_mae_difference_N": -3.6239793016349324,
+      "ci95_N": [
+        -6.350235246487502,
+        -0.9982119031211
+      ],
+      "favors": "baseline"
+    },
+    "mean_retention_minus_volume_linear_model": {
+      "paired_mae_difference_N": -4.076626335405024,
+      "ci95_N": [
+        -8.405399446871975,
+        -0.3764270617866853
+      ],
+      "favors": "baseline"
+    },
+    "mean_retention_minus_volume_proportional_d2_model": {
+      "paired_mae_difference_N": -3.4198757259561035,
+      "ci95_N": [
+        -10.703455689241403,
+        4.751396333749021
+      ],
+      "favors": "inconclusive"
+    }
+  },
+  "de_poli_group_audit": {
+    "SIT_group": {
+      "pre_training": {
+        "baseline_N": 611,
+        "post_N": 436,
+        "retention_percent": 71.36,
+        "drop_percent": 28.64
+      },
+      "post_training": {
+        "baseline_N": 614,
+        "post_N": 461,
+        "retention_percent": 75.08,
+        "drop_percent": 24.92
+      },
+      "work_change_description": "CWR power increased by +11.0% at unchanged time-to-task failure, yielding +8.5% to +11.0% greater external mechanical work in Joules.",
+      "force_retention_change_pp": 3.72,
+      "directional_concordance_with_scalar_work_fatigue": false,
+      "explanation": "Despite performing significantly more total mechanical work post-training, the SIT group exhibited higher force retention (+3.72 pp), refuting the monotonic scalar work-fatigue hypothesis."
+    },
+    "control_group": {
+      "pre_training": {
+        "baseline_N": 600,
+        "post_N": 491,
+        "retention_percent": 81.83,
+        "drop_percent": 18.17
+      },
+      "post_training": {
+        "baseline_N": 568,
+        "post_N": 459,
+        "retention_percent": 80.81,
+        "drop_percent": 19.19
+      },
+      "work_change_description": "CWR power -0.7%, duration unchanged, work approximately constant.",
+      "force_retention_change_pp": -1.02,
+      "directional_concordance_with_scalar_work_fatigue": true
+    }
+  },
+  "structural_coupling_decision": {
+    "can_couple_force_with_energy_module": false,
+    "action_required_before_coupling": "FUNDAMENTALLY_RESTRUCTURE_TRANSITION_MODEL",
+    "justifications": [
+      "Out-of-sample failure: On held-out individual subjects (Norbury 12 men), incorporating workload/volume into force prediction increased MAE by 4.08 N over a simple mean retention baseline (baseline MAE 50.61 N vs volume linear MAE 54.69 N; 95% CI [-9.93, 1.77] N, no advantage).",
+      "Directional failure: In de Poli et al., performing +8.5% to +11% more external mechanical work was accompanied by higher force retention (75.08% vs 71.36%), directly violating the assumption that force decrement monotonically tracks cumulative work.",
+      "Intensity domain omission: A scalar Joules ledger ignores whether work is performed below, at, or above Critical Power / Respiratory Compensation Point. Sub-CP work produces minimal force loss, whereas supra-CP work produces rapid exhaustion with limited total Joules.",
+      "Recovery latency neglect: Real post-exercise force measurements have an unmodeled delay (25 s in de Poli, 5 min in Norbury) during which rapid PCr resynthesis and central drive recovery occur. A static transition model cannot transfer across protocols.",
+      "Central vs peripheral confusion: Total work cannot be mapped directly to muscle contractile capacity without separating peripheral cross-bridge inhibition from motoneuronal voluntary activation failure."
+    ],
+    "proposed_reconstructed_transition_architecture": {
+      "state_1": "Domain-partitioned mechanical demand (moderate vs heavy vs severe domain based on CP/RCP).",
+      "state_2": "Bi-compartmental fatigue state: peripheral cross-bridge metabolite penalty (H+, Pi, PCr) + central voluntary activation deficit (%VA).",
+      "state_3": "Dynamic recovery operator: exponential restoration function F_recov(t) = F_end + (F_base - F_end)*(1 - exp(-t / tau_recov)) accounting for measurement delay.",
+      "state_4": "Task-specific biomechanical transfer: mapping from multi-joint cyclic torque to isometric joint force constraint."
+    }
+  },
+  "verdict": "DIRECT_MODULE_COUPLING_REJECTED_TRANSITION_RESTRUCTURE_MANDATORY"
+}

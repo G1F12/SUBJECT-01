@@ -3575,5 +3575,90 @@
     "limits": "Same small and partially previewed cohort; bootstrap on LOPO residuals rather than refitted model; no post-fatigue force or time-resolved work; anomalous conditional work/peak torque ratio needs source clarification.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0126",
+    "date": "2026-11-21",
+    "name": "Diagnostic evaluation of force model transfer, bias, repeatability and angle transfer on Santos cohort",
+    "sources": [
+      "SRC-0090"
+    ],
+    "design": "Evaluate rebuilt EXP-0090 models against empirical baselines (LOSO mean, grand mean, constant 2500 N) across W0-W4-POS visits of 11 men from Santos et al.; quantify MAE, RMSE, systematic bias, ICC(3,1) repeatability, and knee angle transfer penalty.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_force_transfer_reliability.py",
+    "inputs": "research/program_evidence_audit/FORCE_TRANSFER_RELIABILITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/FORCE_TRANSFER_RELIABILITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/FORCE_TRANSFER_RELIABILITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_force_transfer_reliability.py tmp/data_repository_santos.xlsx",
+    "results": {
+      "findings": [
+        "FND-0122"
+      ],
+      "negative_results": [
+        "NEG-0106"
+      ]
+    },
+    "limits": "Diagnostic reused cohort; external peak force only without individual pelvic posture, segment lengths, moment arms or COP; test-retest confounded with multi-week training progression.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0127",
+    "date": "2026-11-21",
+    "name": "Empirical evaluation of work-to-force transition models and architectural coupling gate",
+    "sources": [
+      "SRC-0111",
+      "SRC-0102"
+    ],
+    "design": "Perform LOSO cross-validation on Norbury et al. 12-subject paired leg-press dataset comparing work/load-dependent models against simple retention baselines; evaluate directional concordance in de Poli et al. SIT vs control CWR exercise.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_work_force_transition.py",
+    "inputs": "research/program_evidence_audit/WORK_FORCE_TRANSITION_PROTOCOL.md",
+    "report": "research/program_evidence_audit/WORK_FORCE_TRANSITION_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/WORK_FORCE_TRANSITION_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_work_force_transition.py tmp/norbury_24156741.xlsx",
+    "results": {
+      "findings": [
+        "FND-0123"
+      ],
+      "negative_results": [
+        "NEG-0107"
+      ]
+    },
+    "limits": "Norbury volume in kg-repetitions lacks sled displacement; de Poli individual time-series available only on author request; measurement latencies (25 s, 5 min) confound acute cessation state.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0128",
+    "date": "2026-11-21",
+    "name": "Tendon safety factor and heterochrony on empirical human longitudinal force trajectory",
+    "sources": [
+      "SRC-0090"
+    ],
+    "design": "Simulate daily tendon safety factor and S-N fatigue hazard along observed 6-week leg press force trajectory of Santos cohort under standard rate versus +25% accelerated ADAPT25 rate with 14-day tendon remodeling latency.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_adapt25_tissue_trajectory.py",
+    "inputs": "research/program_evidence_audit/ADAPT25_TISSUE_TRAJECTORY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/ADAPT25_TISSUE_TRAJECTORY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/ADAPT25_TISSUE_TRAJECTORY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_adapt25_tissue_trajectory.py tmp/data_repository_santos.xlsx",
+    "results": {
+      "findings": [
+        "FND-0124"
+      ],
+      "negative_results": [
+        "NEG-0108"
+      ]
+    },
+    "limits": "Tendon mechanical properties simulated using EXP-0060/0062 parameters; ultrasound tendon strain and collagen turnover were not measured directly in Santos cohort.",
+    "external_validation": "MODEL_ONLY",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,0 +1,198 @@
+{
+  "experiment_id": "EXP-0126",
+  "title": "Diagnostic evaluation of force model transfer, bias, repeatability and angle transfer on Santos cohort",
+  "epistemic_classification": "DIAGNOSTIC_REUSED_COHORT_AUDIT",
+  "source_id": "SRC-0090",
+  "source_sha256": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
+  "protocol_sha256_lf": "8547c350e08cbadbe8d77b6edcb36bb5f7ef63339774d189a0cca5e251de159c",
+  "runner_sha256_lf": "062ee0b10bccd4e9153d5146d73085ac26e10c7db0aabc1b84a03812a59c2c45",
+  "cohort_baseline_summary": {
+    "n_subjects": 11,
+    "mean_force_N": 2513.601676405315,
+    "sd_force_N": 577.7471221344211,
+    "min_force_N": 1677.95238874674,
+    "max_force_N": 3647.09279078481
+  },
+  "model_performance_at_w0": {
+    "loso_mean": {
+      "predicted_force_N": 2513.601676405315,
+      "mae_N": 508.7850221198536,
+      "rmse_N": 605.9462936994222,
+      "bias_N": -2.0670334131202914e-13,
+      "relative_mae_percent": 20.868142680382228
+    },
+    "grand_mean": {
+      "predicted_force_N": 2513.6016764053156,
+      "mae_N": 462.531838290776,
+      "rmse_N": 550.8602669994747,
+      "bias_N": -2.4804400957443496e-13,
+      "relative_mae_percent": 18.971038800347483
+    },
+    "fixed_const_2500N": {
+      "predicted_force_N": 2500.0,
+      "mae_N": 458.8222901802355,
+      "rmse_N": 551.0281656682963,
+      "bias_N": -13.601676405315423,
+      "relative_mae_percent": 18.720803153310285
+    },
+    "corrected_model_100deg": {
+      "predicted_force_N": 2567.0,
+      "mae_N": 477.0950174529628,
+      "rmse_N": 553.442331884231,
+      "bias_N": 53.39832359468458,
+      "relative_mae_percent": 19.953429768728096
+    },
+    "corrected_model_110deg": {
+      "predicted_force_N": 2976.7999999999997,
+      "mae_N": 613.6340164434446,
+      "rmse_N": 719.7219746121824,
+      "bias_N": 463.1983235946847,
+      "relative_mae_percent": 28.36489673769449
+    },
+    "corrected_model_140deg": {
+      "predicted_force_N": 3804.5,
+      "mae_N": 1290.8983235946848,
+      "rmse_N": 1403.5189758668387,
+      "bias_N": 1290.8983235946848,
+      "relative_mae_percent": 58.59210961484863
+    },
+    "strategy2_chain_100deg": {
+      "predicted_force_N": 3130.0,
+      "mae_N": 710.4151946464682,
+      "rmse_N": 826.6764343375647,
+      "bias_N": 616.3983235946845,
+      "relative_mae_percent": 33.05316431162932
+    },
+    "strategy2_chain_110deg": {
+      "predicted_force_N": 3629.6,
+      "mae_N": 1119.1788310101044,
+      "rmse_N": 1244.547826330864,
+      "bias_N": 1115.9983235946843,
+      "relative_mae_percent": 51.38853955969758
+    },
+    "strategy2_chain_140deg": {
+      "predicted_force_N": 4632.599999999999,
+      "mae_N": 2118.9983235946847,
+      "rmse_N": 2189.429361535973,
+      "bias_N": 2118.9983235946847,
+      "relative_mae_percent": 93.11179051169609
+    }
+  },
+  "paired_comparisons_vs_loso_mean": {
+    "loso_mean_minus_grand_mean": {
+      "paired_mae_difference_N": 46.25318382907761,
+      "ci95_N": [
+        30.049963216991305,
+        64.66449459915341
+      ],
+      "favors": "model"
+    },
+    "loso_mean_minus_fixed_const_2500N": {
+      "paired_mae_difference_N": 49.96273193961811,
+      "ci95_N": [
+        35.18390200544602,
+        66.60973992181484
+      ],
+      "favors": "model"
+    },
+    "loso_mean_minus_corrected_model_100deg": {
+      "paired_mae_difference_N": 31.69000466689084,
+      "ci95_N": [
+        -7.292799492090937,
+        74.18254553097702
+      ],
+      "favors": "inconclusive"
+    },
+    "loso_mean_minus_corrected_model_110deg": {
+      "paired_mae_difference_N": -104.84899432359106,
+      "ci95_N": [
+        -344.6513906190954,
+        158.76054307772264
+      ],
+      "favors": "inconclusive"
+    },
+    "loso_mean_minus_corrected_model_140deg": {
+      "paired_mae_difference_N": -782.1133014748309,
+      "ci95_N": [
+        -1157.9887851508302,
+        -313.0297491020621
+      ],
+      "favors": "baseline"
+    }
+  },
+  "angle_transfer_evaluation": {
+    "100deg_to_110deg_test": {
+      "target_experimental_angle": "~110 deg",
+      "model_configured_angle": "100 deg",
+      "model_force_N": 2567.0,
+      "bias_N": 53.39832359468458,
+      "mae_N": 477.0950174529628
+    },
+    "110deg_to_110deg_test": {
+      "target_experimental_angle": "~110 deg",
+      "model_configured_angle": "110 deg",
+      "model_force_N": 2976.8,
+      "bias_N": 463.1983235946847,
+      "mae_N": 613.6340164434446
+    },
+    "140deg_to_110deg_test": {
+      "target_experimental_angle": "~110 deg",
+      "model_configured_angle": "140 deg",
+      "model_force_N": 3804.5,
+      "bias_N": 1290.8983235946848,
+      "mae_N": 1290.8983235946848
+    },
+    "angle_sensitivity_summary": "Model force increases by +409.8 N from 100\u00b0 to 110\u00b0, and +827.7 N from 110\u00b0 to 140\u00b0. Because experimental mean at ~110\u00b0 is 2513.6 N, the 100\u00b0 model fortuitously matches cohort mean (bias +53.4 N), while the matched 110\u00b0 model has substantial positive bias (+463.2 N, MAE 613.6 N), demonstrating that posture transfer without individual subject geometry calibration introduces severe systematic bias."
+  },
+  "longitudinal_repeatability": {
+    "four_sessions_10_subjects": {
+      "n_subjects": 10,
+      "k_sessions": 4,
+      "icc_3_1_consistency": 0.7870700810787691,
+      "icc_3_1_agreement": 0.7250809563872483,
+      "within_subject_sd_N": 385.70129474234227,
+      "cv_percent": 13.474976974487337,
+      "grand_mean_N": 2862.352161882017
+    },
+    "three_sessions_11_subjects": {
+      "n_subjects": 11,
+      "k_sessions": 3,
+      "icc_3_1_consistency": 0.7222989964299253,
+      "icc_3_1_agreement": 0.6511198695383097,
+      "within_subject_sd_N": 405.02061743713324,
+      "cv_percent": 14.544198300924263,
+      "grand_mean_N": 2784.7572554851286
+    },
+    "pairwise_adjacent_transitions": {
+      "W2_minus_W0": {
+        "mean_diff_N": 463.45962896810795,
+        "mean_abs_diff_N": 463.45962896810795,
+        "relative_mean_change_percent": 18.16064046213532
+      },
+      "W4_minus_W2": {
+        "mean_diff_N": -83.33252876059707,
+        "mean_abs_diff_N": 292.499472495845,
+        "relative_mean_change_percent": -1.7391397746223245
+      },
+      "POS_minus_W4": {
+        "mean_diff_N": 125.03680728544614,
+        "mean_abs_diff_N": 400.567926029402,
+        "relative_mean_change_percent": 5.8943636292143236
+      }
+    }
+  },
+  "verdict": {
+    "model_advantage_over_baseline": "NOT_ESTABLISHED",
+    "angle_transfer_validity": "UNRELIABLE_WITHOUT_SUBJECT_GEOMETRY",
+    "task_repeatability": "MODERATE_TO_HIGH_WITHIN_PERSON_STABILITY_BUT_TRAINING_DRIFT_PRESENT",
+    "tissue_safety_assessment": "NOT_ASSESSED_FROM_EXTERNAL_FORCE",
+    "gate_status": "DATA_BLOCKED_FOR_CONFIRMATORY_FORCE20"
+  },
+  "limitations": [
+    "Cohort previously viewed in EXP-0087, EXP-0088, EXP-0091; diagnostic status only.",
+    "Single nominal experimental angle (~110\u00b0); no direct 100\u00b0 or 140\u00b0 trials in Santos.",
+    "Individual body mass, height, segment lengths and COP unrecorded in published table.",
+    "Within-day repeated trials unrecorded; longitudinal repeatability confounded by training effect.",
+    "Peak force alone does not identify internal patellar tendon force or tissue safety factor."
+  ]
+}

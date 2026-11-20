@@ -263,5 +263,17 @@
       "DEC-0030"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0032",
+    "date": "2026-11-21",
+    "title": "Reject direct force-energy module coupling pending transition model restructure",
+    "decision": "Direct assembly of the mechanical force module with the metabolic/thermal energy module under scalar transition rules (such as F(t) = F0*(1 - f(t)) or work-proportional scaling) is REJECTED (NO-GO). Before module coupling, the transition model must be restructured into a four-component architecture: (1) intensity-domain partitioning relative to Critical Power / RCP; (2) bi-compartmental fatigue separating contractile metabolite inhibition from central voluntary activation loss; (3) dynamic recovery kinetics operator accounting for measurement latency; and (4) task-specific biomechanical force transfer. Architecture A remains under CONDITIONAL_POTENTIAL and whole-system HOLD; TARGET-FORCE20, TARGET-ADAPT25, and TARGET-CPE45 remain unvalidated; biological interventions remain NO_GO.",
+    "rationale": "Empirical evaluations in EXP-0127 demonstrated that work-dependent models fail out-of-sample validation against simple retention baselines on held-out individuals (Norbury et al.), and empirical SIT data (de Poli et al.) show higher force retention despite greater external work, refuting monotonic scalar fatigue.",
+    "amends": [
+      "DEC-0026",
+      "DEC-0031"
+    ],
+    "supersedes": []
   }
 ]

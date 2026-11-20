@@ -1045,5 +1045,32 @@
     "statement": "LOPO mean model MAE 78.94 W and FFM-only 40.38 W; 20 prespecified table means match article within 0.007 units. One 240-degree/s extension work/peak torque ratio conditionally implies over 180 degrees per repetition.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0122",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0126",
+    "title": "Angle transfer bias and multi-week repeatability in diagnostic leg press cohort",
+    "statement": "On 11 men from Santos et al., nominal 100-degree model matches cohort mean (bias +53.4 N, MAE 477.1 N) while matched 110-degree model exhibits large positive bias (+463.2 N, MAE 613.6 N); within-subject SD is 385.7 N (CV 13.5%, ICC 0.787), confirming substantial unmodeled postural and measurement variance.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0123",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0127",
+    "title": "Work-to-force transition model fails out-of-sample against simple retention baseline",
+    "statement": "On 12 men from Norbury et al., incorporating workload into post-load force prediction increases MAE by 4.08 N [0.38, 8.41] N over a simple mean retention baseline (54.69 N vs 50.61 N); in de Poli et al., performing +8.5% to +11.0% more mechanical work post-SIT was accompanied by higher force retention (75.08% vs 71.36%), disproving scalar work-proportional fatigue accumulation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0124",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0128",
+    "title": "Empirical human force trajectory causes prolonged tendon safety factor deficit",
+    "statement": "Along the observed 6-week force trajectory of Santos cohort (+14.9% gain in first 14 days), tendon SF drops to 1.267 on cohort average and below 1.0 in rapid responders, spending 42/42 days below the 1.50 safety threshold with a 4.15x damage multiplier, confirming rate-limiting collagen heterochrony under native conditions.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

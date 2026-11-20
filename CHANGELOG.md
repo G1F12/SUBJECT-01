@@ -1,3 +1,17 @@
+- EXP-0128: simulated tendon safety factor along observed Santos 6-week force trajectory; rapid early neural strength gain (+14.9% at day 14) causes persistent SF deficit (min SF 1.267, 42/42 days below 1.50 threshold), confirming that TARGET-ADAPT25 is rate-limited by collagen heterochrony under native conditions.
+
+- EXP-0127: evaluated work-to-force transition models on Norbury et al. held-out subjects; linear workload model has higher error than mean retention baseline (MAE 54.69 N vs 50.61 N; paired difference -4.08 N [-8.41, -0.38] N); de Poli et al. demonstrates increased force retention (+3.72 pp) despite greater work. DEC-0032 rejects direct module coupling pending transition model restructure.
+
+- EXP-0126: conducted diagnostic audit of force model transfer, bias, repeatability, and angle transfer on Santos cohort; 110-degree model has +463.2 N bias and fails to outperform constant baseline; within-subject SD of 385.7 N (CV 13.5%, ICC 0.787) confirms substantial task-specific variance (ISS-0036). Zöger data request prepared.
+
+- EXP-0125: evaluated lumbar torque transfer to short-cycle peak power across 30 men; addition of isokinetic torque did not improve FFM baseline prediction.
+
+- EXP-0124: audited precision grip force-control records and identified duplicate data across participants.
+
+- EXP-0123: audited side-dependent plantar velocity signs across 21 records.
+
+- EXP-0122: audited open plantar force and work signals; integral divergence blocks work assessment.
+
 - EXP-0121: analyzed paired knee-force recovery following existing low/high free-flow leg press sessions; measured kg-repetition volume does not establish equal work in joules.
 
 - EXP-0120: compared retained jump power under a conditional alternative velocity reconstruction; absolute peaks and relative decline depend on unverified assumptions.
