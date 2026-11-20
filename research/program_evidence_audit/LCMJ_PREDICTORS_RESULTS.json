@@ -1,0 +1,44 @@
+{
+  "experiment_id": "EXP-0115",
+  "classification": "PARTIALLY_PREVIEWED_POST_SELECTION_LOPO",
+  "source_sha256_bytes": "e09cd2da52060ad0caf72a8aaf58f03afc415ef6b13696192058bfd34187f184",
+  "source_md5_bytes": "2c10a95978c5be4acbe20a95d0b036dd",
+  "protocol_sha256_lf": "b6a0a172403c66b0caaf378a1d31ed643948acc1a1efec3a40246a02c0b6f232",
+  "runner_sha256_lf": "44a6b0f1c4a0fd80d8eb12a9edd701e86583dfcee307d55c171a588d4df912f9",
+  "n": 10,
+  "source_gate": {
+    "relative_strength_corr": -0.7283784706853198,
+    "repeat_sprint_corr": 0.7355418131022822,
+    "lc_mean_percent": 26.807,
+    "lc_sd_percent": 3.8450662470813746,
+    "maximum_relative_strength_rounding_difference": 0.00497064579256401
+  },
+  "baseline_loocv_mae_pp": 2.960444444444445,
+  "models": {
+    "relative_strength": {
+      "loocv_mae_pp": 2.490023035296544,
+      "loocv_bias_pp": -0.16578187347431808,
+      "mean_base_minus_model_mae_pp": 0.4704214091479013,
+      "paired_bootstrap_95_pp": [
+        -1.1500512987214906,
+        2.000809403255243
+      ]
+    },
+    "repeat_sprint_decrement": {
+      "loocv_mae_pp": 2.4474210653310347,
+      "loocv_bias_pp": -0.318420509441955,
+      "mean_base_minus_model_mae_pp": 0.5130233791134102,
+      "paired_bootstrap_95_pp": [
+        -0.8209909139872044,
+        1.7568701842889982
+      ]
+    }
+  },
+  "limits": [
+    "paper outcome associations and feature selection viewed before protocol",
+    "n=10 overlapping LOPO training folds; bootstrap treats predictions as fixed",
+    "power decrement is derived and filter provenance differs across related work",
+    "squat strength sets jumping load so association is not causal",
+    "overlap with SRC-0108 unknown; no CPE45 or whole-profile inference"
+  ]
+}

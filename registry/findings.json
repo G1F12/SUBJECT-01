@@ -946,5 +946,14 @@
     "statement": "In 11 trained men, first-versus-last four-window paired mean change is −16.57% with participant-bootstrap [−19.11,−14.27]%; persistence MAE 1049 W. Workbook power processing and article-versus-code filter cutoff require clarification.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0111",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0115",
+    "title": "Within-cohort LOPO comparisons give uncertain predictive advantage",
+    "statement": "For 10 participants, LOPO MAE is 2.96 percentage points for mean baseline, 2.49 for relative squat strength and 2.45 for repeated sprint decrement; paired bootstrap advantages include zero and selection was already informed by this cohort.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

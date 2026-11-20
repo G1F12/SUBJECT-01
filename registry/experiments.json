@@ -3265,5 +3265,33 @@
     "limits": "Article code and first data record previewed; power is derived not independently measured; article and linked code specify different filter cutoffs; no CPE45 or human enhancement validation.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0115",
+    "date": "2026-11-20",
+    "name": "LOPO repeated power prediction from published strength and sprint features",
+    "sources": [
+      "SRC-0109"
+    ],
+    "design": "Gate 10 participants against reported correlations and means, then compare leave-one-person-out linear single-feature predictions with training-person mean; participant bootstrap with fixed predictions.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_predictors.py",
+    "inputs": "research/program_evidence_audit/LCMJ_PREDICTORS_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_PREDICTORS_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_PREDICTORS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_predictors.py <downloaded-csv>",
+    "results": {
+      "findings": [
+        "FND-0111"
+      ],
+      "negative_results": [
+        "NEG-0095"
+      ]
+    },
+    "limits": "10 subjects; article and same-sample feature selection previewed before LOPO; bootstrap holds dependent LOPO predictions fixed; outcome derived, squat strength determines jump load, cohort overlap with SRC-0108 unknown.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

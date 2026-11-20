@@ -760,5 +760,13 @@
     "title": "Repeat jump derived power is not yet independently calibrated",
     "statement": "The paper describes 2.5 Hz acceleration filtering; the linked MATLAB code sets a high-pass cutoff of 0.25 Hz. The workbook already contains derived power.",
     "reason": "The code/version used for workbook generation, raw bilateral forces, mass and initial conditions have not been independently verified; integration as measured work is not supported."
+  },
+  {
+    "id": "NEG-0095",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0115",
+    "title": "Strength or repeat-sprint advantage over mean baseline is not established",
+    "statement": "Paired fixed-prediction bootstrap 95% intervals for baseline minus strength MAE are [−1.15,2.00] pp and for baseline minus sprint MAE [−0.82,1.76] pp.",
+    "reason": "Small selected cohort and overlapping LOPO training sets limit precision; predictors were selected with prior knowledge and neither result establishes equivalence or independent validation."
   }
 ]

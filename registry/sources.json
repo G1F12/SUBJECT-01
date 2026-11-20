@@ -1907,5 +1907,26 @@
       "code_doi": "10.6084/m9.figshare.25133126.v1",
       "code_sha256_bytes": "676820ebb61aedcac7369b72a8e7cfa5fbce2ad2bf03cd58a9814f732b64dbad"
     }
+  },
+  {
+    "id": "SRC-0109",
+    "date": "2026-11-20",
+    "name": "Natera et al. repeated jump and physical fitness participant summaries",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LCMJ_PREDICTORS_REPORT.md",
+    "doi": "10.6084/m9.figshare.24069837.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.24069837.v1",
+    "calibration_review": {
+      "access": "CC BY 4.0 de-identified CSV downloaded; publisher MD5 and byte SHA-256 checked. Article and CSV header viewed before analysis protocol.",
+      "scope": "Ten trained male field hockey players with half squat, sprint and derived repeat-jump decrement; feature selection was reported on the same data and overlap with SRC-0108 unknown."
+    },
+    "external_provenance": {
+      "article_doi": "10.7717/peerj.16788",
+      "file_url": "https://ndownloader.figshare.com/files/42228102",
+      "license": "CC BY 4.0",
+      "md5": "2c10a95978c5be4acbe20a95d0b036dd",
+      "sha256": "e09cd2da52060ad0caf72a8aaf58f03afc415ef6b13696192058bfd34187f184"
+    }
   }
 ]
