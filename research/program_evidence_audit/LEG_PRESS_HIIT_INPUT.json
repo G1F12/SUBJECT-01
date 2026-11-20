@@ -1,0 +1,20 @@
+{
+ "source_hiIt": "10.1519/JSC.0000000000004782, Table 1 and Table 2",
+ "n":15,
+ "group_wvo2max_W":263.2,
+ "load_fraction":1.15,
+ "sets":3,
+ "reps_per_set":8,
+ "effort_seconds":20,
+ "group_means":{
+  "force_N":{"rest":1925,"min10":1791,"h6":1933,"h24":1949},
+  "peak_rate_force_N_s":{"rest":8403,"min10":6972,"h6":7899,"h24":7885},
+  "jump_height_cm":{"rest":31.7,"min10":30.5,"h6":31.1,"h24":31.2},
+  "jump_peak_power_W":{"rest":3100,"min10":3024,"h6":3056,"h24":3051},
+  "velocity_at_peak_power_m_s":{"rest":2.39,"min10":2.34,"h6":2.37,"h24":2.37}
+ },
+ "source_reliability":"10.3390/sports11050096; figure 3 and text",
+ "reliability_cohort_n":13,
+ "peak_force_range_N":[1531,2746],
+ "upper_limit_of_agreement_N":215.8
+}

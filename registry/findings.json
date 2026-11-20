@@ -928,5 +928,14 @@
     "statement": "Across eight dependent hip-force strata, 3 to 7 of 25 participants increased by at least 20% between sessions; decreases of at least 20% occurred in 0 to 4. Differences may reflect biology, learning and error, and do not quantify leg-press false positives.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0109",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0113",
+    "title": "Published cohort combines leg press and jump outcomes after cycling intervals",
+    "statement": "For 15 elite female ice hockey players, ratios of published group means show 10-minute changes of −6.96% in leg-press peak force, −17.03% in peak rate of force development and −2.45% in jump peak power. These are not mean individual changes or an enhancement result.",
+    "confidence": "source_metadata_and_scope_checked",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

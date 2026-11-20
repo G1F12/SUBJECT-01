@@ -1,3 +1,5 @@
+- EXP-0113: identified leg-press and jump outcomes after cycling intervals and a separate reliability study; individual work linkage and cohort independence remain unverified.
+
 - EXP-0112: analyzed open participant-level hip force retests and device comparison, highlighting task-specific uncertainty near 20% without extrapolating to leg press.
 
 - EXP-0111: audited published same-cohort leg-force and control findings and found the linked data archive contains only README and license; raised ISS-0038.

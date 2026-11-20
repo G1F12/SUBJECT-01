@@ -1858,5 +1858,33 @@
       "sha256": "d699188590e249a992d8290eee02edf5864c7b47a017f0857b66d88c1cde77b2",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "id": "SRC-0106",
+    "date": "2026-11-20",
+    "name": "Petré et al. HIIT and leg press and jump recovery",
+    "type": "published_study",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LEG_PRESS_HIIT_REPORT.md",
+    "doi": "10.1519/JSC.0000000000004782",
+    "url": "https://www.diva-portal.org/smash/get/diva2%3A1844854/FULLTEXT01.pdf",
+    "calibration_review": {
+      "access": "Open author manuscript, group table and methods reviewed; individual data location and reuse conditions not established.",
+      "scope": "15 elite female ice hockey players; cycling HIIT work measured, isometric leg press and countermovement jumps at rest, 10 min, 6 h and 24 h; individual actual work linkage not obtained."
+    }
+  },
+  {
+    "id": "SRC-0107",
+    "date": "2026-11-20",
+    "name": "Petré et al. isometric leg press and jump test-retest",
+    "type": "published_study",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/LEG_PRESS_HIIT_REPORT.md",
+    "doi": "10.3390/sports11050096",
+    "url": "https://doi.org/10.3390/sports11050096",
+    "calibration_review": {
+      "access": "Open publication; group statistics and figure 3 limits viewed, individual tabular data location not established.",
+      "scope": "13 elite female ice hockey players, 24-hour test-retest of best-of-three isometric leg press and jump; overlap with SRC-0106 unknown."
+    }
   }
 ]

@@ -1,0 +1,51 @@
+{
+  "experiment_id": "EXP-0113",
+  "classification": "POST_VIEW_GROUP_ONLY_NOMINAL_NOT_MEASURED",
+  "input_sha256_lf": "cb29e303819c5f32b4320cde0b8a0e557ead46e5abb18f966627e0c6f58b0010",
+  "protocol_sha256_lf": "65d59dd14f72b232c194fc1db0cc75ccd9c0f0563d5b751d823c7a782f6e0e4b",
+  "runner_sha256_lf": "39ca7cb292c768feb754500db6b9bdff410fdf341e50e182815ec0c3ae264caf",
+  "ratio_of_group_means_percent_change": {
+    "force_N": {
+      "min10": -6.961038961038957,
+      "h6": 0.4155844155844246,
+      "h24": 1.2467532467532516
+    },
+    "peak_rate_force_N_s": {
+      "min10": -17.02963227418779,
+      "h6": -5.997857907890037,
+      "h24": -6.164465071998093
+    },
+    "jump_height_cm": {
+      "min10": -3.785488958990535,
+      "h6": -1.8927444794952564,
+      "h24": -1.577287066246058
+    },
+    "jump_peak_power_W": {
+      "min10": -2.4516129032258083,
+      "h6": -1.4193548387096744,
+      "h24": -1.5806451612903172
+    },
+    "velocity_at_peak_power_m_s": {
+      "min10": -2.092050209205032,
+      "h6": -0.8368200836820106,
+      "h24": -0.8368200836820106
+    }
+  },
+  "nominal_active_s": 480,
+  "nominal_constant_work_J_not_observed": 145286.4,
+  "other_cohort_upper_loa_relative_to_range_percent": [
+    7.858703568827385,
+    14.095362508164598
+  ],
+  "other_cohort_20percent_force_range_N": [
+    306.2,
+    549.2
+  ],
+  "limits": [
+    "previously viewed published group data not participant-level",
+    "nominal effort work is not observed work or a bound",
+    "separate cohorts and different trial aggregation; overlap unknown",
+    "not an individual confidence interval or established FORCE20 test",
+    "no 45-minute protocol or whole architecture validation"
+  ]
+}

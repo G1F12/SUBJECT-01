@@ -744,5 +744,13 @@
     "title": "Hip test-retest variability cannot establish FORCE20 in a different task",
     "statement": "Some changes across ~72 hours exceed ±20% in each of several hip task/device strata; this does not estimate measurement precision of the project leg-press protocol.",
     "reason": "Single-joint isometric testing, different devices and poses, small partly previewed predominantly male cohort and possible real changes or learning prevent transfer."
+  },
+  {
+    "id": "NEG-0093",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0113",
+    "title": "Group data cannot identify force response at individually equal work",
+    "statement": "HIIT work was reported as measured but participant-level power, work and linked force are not obtained; no significant group work contrast does not establish individual equal work.",
+    "reason": "Published aggregates lack individual coupling; protocol is shorter than CPE45 and uses varying cadence. The nominal 145.3 kJ calculation is not actual work or a bound."
   }
 ]

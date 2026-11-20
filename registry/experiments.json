@@ -3208,5 +3208,34 @@
     "limits": "First 3 records and article previewed; 25 cyclists predominantly men; single-joint test, participant learning and biological variability; no direct leg-press false-positive estimate, work or whole-system outcome.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0113",
+    "date": "2026-11-20",
+    "name": "Leg press and jump after cycling: group outcome and reliability audit",
+    "sources": [
+      "SRC-0106",
+      "SRC-0107"
+    ],
+    "design": "Post-view arithmetic on published group means after HIIT and on a separate study’s leg-press agreement; distinguish hypothetical nominal work from measured work.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_leg_press_hiit.py",
+    "inputs": "research/program_evidence_audit/LEG_PRESS_HIIT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LEG_PRESS_HIIT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LEG_PRESS_HIIT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_leg_press_hiit.py",
+    "results": {
+      "findings": [
+        "FND-0109"
+      ],
+      "negative_results": [
+        "NEG-0093"
+      ]
+    },
+    "limits": "Published rounded group means, no participant-linked work; estimates are not paired individual results; agreement cohort may overlap and uses different trial aggregation. Nominal work is neither observed nor a bound.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
