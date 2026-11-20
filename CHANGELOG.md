@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0102 / FND-0098 / NEG-0082: проверены три сценария D2 против постоянной базы на ранее рассмотренной индивидуальной веломощности. См. research/program_evidence_audit/D2_MCLAUGHLIN_REPORT.md.
+
 EXP-0101 / FND-0097 / SRC-0099: сравнены простые временные прогнозы опубликованных групповых моментов во время велонагрузки. См. research/program_evidence_audit/CYCLING_TORQUE_REPORT.md.
 
 EXP-0100 / FND-0096 / NEG-0081 / ISS-0036: оценена условная статистическая различимость силового порога на основе литературной повторяемости. См. research/program_evidence_audit/FORCE_DETECTABILITY_REPORT.md.

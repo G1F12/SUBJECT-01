@@ -829,5 +829,14 @@
     "statement": "On previously viewed published group means, persistence from 4 minutes gives 2.88 Nm equal-condition MAE at 6–12 minutes versus 4.43 Nm for a 2-to-4-minute line extrapolation. At VHI predictions coincide due to rounding. No statistical or individual validation follows.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0098",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0102",
+    "title": "Zero-fatigue D2 matches persistence for conditional constant-demand scenario",
+    "statement": "On 23 previously viewed participants, D2 with zero fatigue and observed first-minute demand proxy exactly matches the persistence prediction over the later 44 min, both MAE 6.92 W. This equality is model- and task-specific, not evidence of physiological validity.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

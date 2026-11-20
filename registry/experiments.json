@@ -2898,5 +2898,33 @@
     "limits": "Whole table seen before protocol, aggregated timepoints correlated across same cohort; no individual inference, confidence interval, observed work or full architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0102",
+    "date": "2026-11-20",
+    "name": "D2 power prediction on reused McLaughlin constant-load cohort",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Hold previously set D2 fatigue rates and initial demand proxy, evaluate 44 minute power and work against persistence on 23 previously viewed participants, participant bootstrap and energy balance audit.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_d2_mclaughlin.py",
+    "inputs": "research/program_evidence_audit/D2_MCLAUGHLIN_PROTOCOL.md",
+    "report": "research/program_evidence_audit/D2_MCLAUGHLIN_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/D2_MCLAUGHLIN_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_d2_mclaughlin.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0098"
+      ],
+      "negative_results": [
+        "NEG-0082"
+      ]
+    },
+    "limits": "Reused cohort and inferred time labels; observed first minute proxies unknown exact prescribed demand, generic D2 physiology, submaximal power is not maximum capacity, no temperature feedback, force or CPE45 validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

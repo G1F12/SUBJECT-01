@@ -1,0 +1,76 @@
+{
+  "experiment_id": "EXP-0102",
+  "classification": "EXPLORATORY_REUSED_COHORT_SUBMAXIMAL_DEMAND_PROXY",
+  "source_sha256_bytes": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "protocol_sha256_lf": "df4444c0b4f5a21c9466717d037e1bdae48532196d40ce78feb7c23a3576c3fd",
+  "runner_sha256_lf": "2dd88fac5835ec449e09ccd2880687e82c95c792f069acc766bee962ed4cf9f3",
+  "engine_sha256_lf": "1711bde73191d16544b585adc3f357a9022c58494bb708209aa61f305068688b",
+  "legacy_model_sha256_lf": "788edc67e2f145abd4d4bb38f21f8be54240d6ff9de1480816f26a2530f83df2",
+  "legacy_config_sha256_lf": "53208f66432e59cd9c5c98718064805c1479be9729da43047d9c319ec5be8a6c",
+  "integrated_model_sha256_lf": "cf4739e9e671d4ebac00af9532d1fff0b8544768e30e7dbed5a333fb09aad67c",
+  "integrated_parameters_sha256_lf": "68172ec0ed7d531335b137d06030f123e6c00b05d524a57b49b7056c41807e3e",
+  "participants": 23,
+  "excluded_count": 1,
+  "intervals_compared": 44,
+  "time_label_assumption": "numeric labels treated as interval ends",
+  "scenarios": [
+    {
+      "fatigue_rate_s_inv": 0.0,
+      "d2_power_mae_W": 6.91798418972332,
+      "persistence_power_mae_W": 6.91798418972332,
+      "d2_power_bias_W": 6.91798418972332,
+      "paired_advantage_W": 0.0,
+      "paired_bootstrap_95_W": [
+        0.0,
+        0.0
+      ],
+      "d2_work_mae_J": 18263.478260869564,
+      "persistence_work_mae_J": 18263.478260869564,
+      "mean_d2_work_J": 458097.39130434784,
+      "mean_recorded_work_J": 439833.9130434783,
+      "max_energy_balance_abs_error_J": 7.916241884231567e-09,
+      "decision": "uncertain"
+    },
+    {
+      "fatigue_rate_s_inv": 0.001,
+      "d2_power_mae_W": 12.511740053950065,
+      "persistence_power_mae_W": 6.91798418972332,
+      "d2_power_bias_W": -9.04459846984622,
+      "paired_advantage_W": -5.593755864226747,
+      "paired_bootstrap_95_W": [
+        -10.796005185303402,
+        -0.4359265505132132
+      ],
+      "d2_work_mae_J": 28533.401062902474,
+      "persistence_work_mae_J": 18263.478260869564,
+      "mean_d2_work_J": 415956.1730830843,
+      "mean_recorded_work_J": 439833.9130434783,
+      "max_energy_balance_abs_error_J": 9.080395102500916e-09,
+      "decision": "persistence_advantage"
+    },
+    {
+      "fatigue_rate_s_inv": 0.003,
+      "d2_power_mae_W": 33.45265688198784,
+      "persistence_power_mae_W": 6.91798418972332,
+      "d2_power_bias_W": -33.39138699504912,
+      "paired_advantage_W": -26.53467269226453,
+      "paired_bootstrap_95_W": [
+        -36.02104058413648,
+        -18.042562259342144
+      ],
+      "d2_work_mae_J": 88153.26166692967,
+      "persistence_work_mae_J": 18263.478260869564,
+      "mean_d2_work_J": 351680.6513765486,
+      "mean_recorded_work_J": 439833.9130434783,
+      "max_energy_balance_abs_error_J": 7.2177499532699585e-09,
+      "decision": "persistence_advantage"
+    }
+  ],
+  "limits": [
+    "previously viewed cohort",
+    "first-minute recorded power used as proxy for unobserved exact prescribed demand",
+    "submaximal constant-load task; D2 estimates conditional capacity",
+    "no thermal feedback or individualized aerobic parameters",
+    "not CPE45 or physiological validation of whole architecture"
+  ]
+}
