@@ -576,5 +576,13 @@
     "title": "Knee-angle matching alone fails to establish improved force prediction",
     "statement": "On the previously viewed Santos cohort, nominal 110-degree model MAE 631.9 N vs 486.4 N at 100 degrees and 508.8 N for participant-held-out mean. Both paired intervals include zero; prespecified superiority for 110 degrees is not established.",
     "reason": "Other geometry, individual anthropometry, and independent hip posture response are absent; this is a reused sample, not a formal test of the whole architecture."
+  },
+  {
+    "id": "NEG-0072",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0089",
+    "title": "Archived force chain gravity does not match its stated potential energy",
+    "statement": "At knee angles 100/110/140 degrees the archived hip gravity term differs from the central finite difference of its documented potential by 9.04/9.57/10.73 Nm. Correcting only this line changes strategy 2 gain at 100 degrees from 21.64% to 21.93%.",
+    "reason": "The variable dV_dphi1 already includes the shank and foot terms; dV_dphi2 is added again to the hip generalized moment."
   }
 ]

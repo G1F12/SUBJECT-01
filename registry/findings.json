@@ -730,5 +730,14 @@
     "statement": "EXP-0061 posture_kinematics has zero reads of theta_hip_flex_deg; changing both posture inputs to 40, 78 or 110 degrees leaves all saved LP scenario outputs unchanged. This is a model implementation limitation, not a physiological invariance.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0087",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0089",
+    "title": "Finite differences expose double-counted gravity term",
+    "statement": "For the potential energy specified in EXP-0061, the original hip gravity term adds the shank-foot derivative twice. At internal knee 100 degrees finite difference is -33.072 Nm, original -42.110 Nm, corrected -33.072 Nm. Correction is an arithmetic result within the existing model, not physiological validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

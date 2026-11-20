@@ -1,0 +1,202 @@
+{
+  "experiment_id": "EXP-0089",
+  "classification": "ARITHMETIC_AUDIT_AND_MODEL_ONLY_RECOMPUTATION",
+  "protocol_sha256_lf": "9bb55536209c929827a710a41ff7db0ffe6902a4a3544e983cee3509db783851",
+  "runner_sha256_lf": "5f8edd94be79c92d8b483bca815c4b0340f58e50d600f5994c1a8138a0168956",
+  "chain_source_sha256_lf": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+  "tendon_source_sha256_lf": "0fedad1dfe55d4cf01356febe6534573da9d10c9c661ada9c1dc4cbbe985aa06",
+  "derivative_checks": [
+    {
+      "internal_knee_deg": 100.0,
+      "step_rad": 0.001,
+      "hip_finite_difference_Nm": -33.0718543975248,
+      "hip_original_Nm": -42.110231921811746,
+      "hip_corrected_Nm": -33.07185990950202,
+      "knee_finite_difference_Nm": 9.038370505916049,
+      "knee_original_Nm": 9.038372012309727
+    },
+    {
+      "internal_knee_deg": 100.0,
+      "step_rad": 1e-05,
+      "hip_finite_difference_Nm": -33.07185990877315,
+      "hip_original_Nm": -42.110231921811746,
+      "hip_corrected_Nm": -33.07185990950202,
+      "knee_finite_difference_Nm": 9.03837201207125,
+      "knee_original_Nm": 9.038372012309727
+    },
+    {
+      "internal_knee_deg": 100.0,
+      "step_rad": 1e-06,
+      "hip_finite_difference_Nm": -33.07185991197059,
+      "hip_original_Nm": -42.110231921811746,
+      "hip_corrected_Nm": -33.07185990950202,
+      "knee_finite_difference_Nm": 9.038372013492335,
+      "knee_original_Nm": 9.038372012309727
+    },
+    {
+      "internal_knee_deg": 110.0,
+      "step_rad": 0.001,
+      "hip_finite_difference_Nm": -35.55034555116876,
+      "hip_original_Nm": -45.12298502963198,
+      "hip_corrected_Nm": -35.550351476226616,
+      "knee_finite_difference_Nm": 9.572631957968092,
+      "knee_original_Nm": 9.572633553405359
+    },
+    {
+      "internal_knee_deg": 110.0,
+      "step_rad": 1e-05,
+      "hip_finite_difference_Nm": -35.55035147542185,
+      "hip_original_Nm": -45.12298502963198,
+      "hip_corrected_Nm": -35.550351476226616,
+      "knee_finite_difference_Nm": 9.572633553123211,
+      "knee_original_Nm": 9.572633553405359
+    },
+    {
+      "internal_knee_deg": 110.0,
+      "step_rad": 1e-06,
+      "hip_finite_difference_Nm": -35.55035147506658,
+      "hip_original_Nm": -45.12298502963198,
+      "hip_corrected_Nm": -35.550351476226616,
+      "knee_finite_difference_Nm": 9.572633554277843,
+      "knee_original_Nm": 9.572633553405359
+    },
+    {
+      "internal_knee_deg": 140.0,
+      "step_rad": 0.001,
+      "hip_finite_difference_Nm": -41.290616927804,
+      "hip_original_Nm": -52.018855000555604,
+      "hip_corrected_Nm": -41.29062380957453,
+      "knee_finite_difference_Nm": 10.728229402944045,
+      "knee_original_Nm": 10.728231190981077
+    },
+    {
+      "internal_knee_deg": 140.0,
+      "step_rad": 1e-05,
+      "hip_finite_difference_Nm": -41.29062380897608,
+      "hip_original_Nm": -52.018855000555604,
+      "hip_corrected_Nm": -41.29062380957453,
+      "knee_finite_difference_Nm": 10.728231190704207,
+      "knee_original_Nm": 10.728231190981077
+    },
+    {
+      "internal_knee_deg": 140.0,
+      "step_rad": 1e-06,
+      "hip_finite_difference_Nm": -41.2906238080879,
+      "hip_original_Nm": -52.018855000555604,
+      "hip_corrected_Nm": -41.29062380957453,
+      "knee_finite_difference_Nm": 10.72823119141475,
+      "knee_original_Nm": 10.728231190981077
+    }
+  ],
+  "scenarios": [
+    {
+      "pose_deg": 100,
+      "gravity": "original",
+      "variant": "baseline",
+      "force_N": 2601.1,
+      "quad_torque_Nm": 299.1,
+      "tendon_sf_proxy": 1.5543868515224122
+    },
+    {
+      "pose_deg": 100,
+      "gravity": "original",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 3164.1,
+      "quad_torque_Nm": 364.6,
+      "tendon_sf_proxy": 1.2851697851323818,
+      "force_gain_pct": 21.64,
+      "joint_gate": false
+    },
+    {
+      "pose_deg": 100,
+      "gravity": "corrected",
+      "variant": "baseline",
+      "force_N": 2567.0,
+      "quad_torque_Nm": 299.1,
+      "tendon_sf_proxy": 1.5543868515224122
+    },
+    {
+      "pose_deg": 100,
+      "gravity": "corrected",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 3130.0,
+      "quad_torque_Nm": 364.6,
+      "tendon_sf_proxy": 1.2851697851323818,
+      "force_gain_pct": 21.93,
+      "joint_gate": false
+    },
+    {
+      "pose_deg": 140,
+      "gravity": "original",
+      "variant": "baseline",
+      "force_N": 3878.1,
+      "quad_torque_Nm": 217.3,
+      "tendon_sf_proxy": 2.1132580887879606
+    },
+    {
+      "pose_deg": 140,
+      "gravity": "original",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 4706.2,
+      "quad_torque_Nm": 264.9,
+      "tendon_sf_proxy": 1.746710671038401,
+      "force_gain_pct": 21.35,
+      "joint_gate": true
+    },
+    {
+      "pose_deg": 140,
+      "gravity": "corrected",
+      "variant": "baseline",
+      "force_N": 3804.5,
+      "quad_torque_Nm": 217.3,
+      "tendon_sf_proxy": 2.1132580887879606
+    },
+    {
+      "pose_deg": 140,
+      "gravity": "corrected",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 4632.6,
+      "quad_torque_Nm": 264.9,
+      "tendon_sf_proxy": 1.746710671038401,
+      "force_gain_pct": 21.77,
+      "joint_gate": true
+    },
+    {
+      "pose_deg": 110,
+      "gravity": "original",
+      "variant": "baseline",
+      "force_N": 3016.9,
+      "quad_torque_Nm": 312.2,
+      "tendon_sf_proxy": 1.5051766793076027
+    },
+    {
+      "pose_deg": 110,
+      "gravity": "original",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 3668.5,
+      "quad_torque_Nm": 380.6,
+      "tendon_sf_proxy": 1.2443740190248427,
+      "force_gain_pct": 21.6,
+      "joint_gate": false
+    },
+    {
+      "pose_deg": 110,
+      "gravity": "corrected",
+      "variant": "baseline",
+      "force_N": 2976.8,
+      "quad_torque_Nm": 312.2,
+      "tendon_sf_proxy": 1.5051766793076027
+    },
+    {
+      "pose_deg": 110,
+      "gravity": "corrected",
+      "variant": "strategy_2_coordinated_chain",
+      "force_N": 3628.4,
+      "quad_torque_Nm": 380.6,
+      "tendon_sf_proxy": 1.2443740190248427,
+      "force_gain_pct": 21.89,
+      "joint_gate": false
+    }
+  ],
+  "whole_architecture": "NOT_ASSESSED"
+}

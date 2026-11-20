@@ -241,5 +241,16 @@
       "DEC-0028"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0030",
+    "date": "2026-11-20",
+    "title": "Qualify archived force-chain outputs after gravity derivative audit",
+    "decision": "Admit EXP-0089 and FND-0087/NEG-0072. Preserve historical EXP-0061 and its +21.64% as archived outputs with identified gravity double count; label dependent calculations provisional pending controlled full rebuild. A one-line corrected sensitivity gives +21.93% at 100 degrees under the same other model assumptions, not validated strength. Maintain ISS-0029, whole-system HOLD, CPE45 unvalidated and biological interventions NO_GO.",
+    "rationale": "Finite differences of the model's documented potential show the original hip moment includes a repeated shank-foot term; corrected reoptimization changes force and scenario percentage without resolving posture or tissue uncertainty.",
+    "amends": [
+      "DEC-0029"
+    ],
+    "supersedes": []
   }
 ]

@@ -1,3 +1,5 @@
+EXP-0089 / FND-0087 / NEG-0072 / DEC-0030 / ISS-0030: выявлен двойной учёт гравитационного слагаемого; зависимые сценарии условны до полной пересборки. См. research/program_evidence_audit/GRAVITY_AUDIT_REPORT.md.
+
 EXP-0088 / FND-0086 / NEG-0071 / DEC-0029 / ISS-0029: угол таза в LP не используется; пересчёт колена 110° не показал преимущества на повторно рассмотренной когорте. См. research/program_evidence_audit/HIP_POSTURE_REPORT.md.
 
 EXP-0087 / FND-0085 / NEG-0070 / DEC-0028: ограниченная внешняя проверка индивидуальных сил жима; точная геометрия и причинный эффект остаются открыты. См. research/program_evidence_audit/SANTOS_FORCE_REPORT.md.

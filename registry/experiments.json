@@ -2535,5 +2535,35 @@
     "limits": "Hip parameter invariant because unused, not physiology; knee-only post hoc comparison uses same 11 participants and ignores individual geometry; no whole-system validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0089",
+    "date": "2026-11-20",
+    "name": "Gravity derivative finite-difference audit and corrected chain sensitivity",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Compare central finite differences of documented segment potential against original and corrected hip gravity terms at three knee poses; re-solve archived LP with one correction and recompute conditional tendon proxy.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_gravity_audit.py",
+    "inputs": "research/program_evidence_audit/GRAVITY_AUDIT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/GRAVITY_AUDIT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/GRAVITY_AUDIT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_gravity_audit.py",
+    "results": {
+      "findings": [
+        "FND-0087"
+      ],
+      "negative_results": [
+        "NEG-0072"
+      ]
+    },
+    "limits": "Arithmetic within stated potential; one-line in-memory change; unmeasured hip/trunk geometry, muscle function, tissue and whole-system efficacy remain unvalidated.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
