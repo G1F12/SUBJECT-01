@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0094 / FND-0091 / NEG-0075 / ISS-0032: исследована чувствительность общего силового интерфейса к различию потерь при утомлении. См. research/program_evidence_audit/DIFFERENTIAL_FATIGUE_REPORT.md.
+
 EXP-0093 / FND-0090 / NEG-0074 / ISS-0031: проверено влияние модельного трения, найден сбой нулевого знаменателя диагностики. См. research/program_evidence_audit/FRICTION_SENSITIVITY_REPORT.md.
 
 EXP-0092 / FND-0089: проверена чувствительность исправленной цепи к направлению хорды; оценена доступность SRC-0091 и SRC-0092. См. research/program_evidence_audit/CHORD_SENSITIVITY_REPORT.md.

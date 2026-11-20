@@ -2676,5 +2676,35 @@
     "limits": "Diagnostic friction grid not individually measured, fixed geometry and static tissue proxy; in-memory diagnostic guard for mu=0, no change to LP; no physiological or architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0094",
+    "date": "2026-11-20",
+    "name": "Differential fatigue-to-force sensitivity on shared energy scenario",
+    "sources": [
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "Preregister six counterfactual fatigue-to-force multipliers on each shared D2 trace; compare force gain throughout 2700 seconds, analytical 20 percent boundary, diagnostic work and tissue gates, and time-step convergence.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_differential_fatigue.py",
+    "inputs": "research/program_evidence_audit/DIFFERENTIAL_FATIGUE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/DIFFERENTIAL_FATIGUE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/DIFFERENTIAL_FATIGUE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_differential_fatigue.py",
+    "results": {
+      "findings": [
+        "FND-0091"
+      ],
+      "negative_results": [
+        "NEG-0075"
+      ]
+    },
+    "limits": "Alpha and mapping of D2 fatigue to force are unmeasured; one shared energy trace regardless of alpha, no tissue damage or functional post45, no physiological or architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

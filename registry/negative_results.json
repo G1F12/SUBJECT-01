@@ -600,5 +600,13 @@
     "title": "Historical friction-utilization diagnostic divides by zero at mu zero",
     "statement": "With mu=0 the archived chain raises ZeroDivisionError when reporting friction utilization after solving an LP. The diagnostic-only in-memory guard returns null and allows the originally specified LP to complete.",
     "reason": "The denominator mu times normal force is zero; the normalized utilization is undefined even when the zero-friction constraint is feasible."
+  },
+  {
+    "id": "NEG-0075",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0094",
+    "title": "Common-load coupled force gate is not robust to assumed differential fatigue",
+    "statement": "The conditional 20% force gate fails under alpha=1.05 and the tested higher D2 fatigue scenario; actual modeled work is below the separate 99% diagnostic work requirement in all traces.",
+    "reason": "Equal fatigue-to-force scaling guaranteed the old relative gain by construction, while differential scaling is unmeasured; D2 itself is externally unvalidated for this task."
   }
 ]

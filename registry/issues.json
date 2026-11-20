@@ -372,5 +372,24 @@
     ],
     "required_inputs": "For a maintained model implementation, guard zero denominator, preserve undefined utilization as null and add regression checks for zero and positive friction; verify solver constraints independently.",
     "progress": "EXP-0093 records feasible mu=0 scenarios with unchanged LP constraints and independently checked residuals; archived original remains unchanged."
+  },
+  {
+    "id": "ISS-0032",
+    "date": "2026-11-20",
+    "title": "Differential fatigue-to-force response and feedback are not identified",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0085 assumes identical fractional force reduction for baseline and strategy. EXP-0094 demonstrates that conditional gain under load depends on differential mapping and actual work remains below diagnostic requirement.",
+    "related_experiments": [
+      "EXP-0085",
+      "EXP-0090",
+      "EXP-0094"
+    ],
+    "related_issues": [
+      "ISS-0021",
+      "ISS-0029"
+    ],
+    "required_inputs": "Synchronized individual baseline and candidate forces before/during/after equal actual work, power time series, task geometry, temperature and control condition; preregistered independent participant transfer and uncertainty; tissue deformation for fatigue damage.",
+    "progress": "EXP-0094 brackets conditional alpha thresholds for maintaining 20% gain but alpha and D2-to-force mapping are not measured; no force-to-energy or thermal feedback validation."
   }
 ]

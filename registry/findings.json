@@ -766,5 +766,14 @@
     "statement": "At knee 140 degrees model strategy force spans 4041.9 to 4632.6 N across mu 0 to 0.8 while modeled relative gain spans 21.58–21.96%; conditional force and tissue gate holds on the tested grid only at 140 degrees, not 100 or 110. No human safety or functional conclusion follows.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0091",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0094",
+    "title": "Differential fatigue assumption can change modeled force gate",
+    "statement": "With shared D2 trace at fatigue rate 0.003/s and alpha=1.05, minimum modeled force gain is 19.57% at 100 degrees and 19.40% at 140 degrees; alpha=1 retains static gain algebraically. Alpha and the force mapping are unmeasured counterfactuals, not physiological predictions.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
