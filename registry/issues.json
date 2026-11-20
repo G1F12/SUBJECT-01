@@ -295,7 +295,8 @@
     "related_experiments": [
       "EXP-0081",
       "EXP-0082",
-      "EXP-0083"
+      "EXP-0083",
+      "EXP-0084"
     ],
     "related_issues": [
       "ISS-0021",
@@ -303,6 +304,6 @@
       "ISS-0025"
     ],
     "required_inputs": "Author processing or verified configuration specifying platform moment reference, COP transformation, axes and filters plus unnormalized versus normalized matched ID outputs; prospectively verify on independent participants.",
-    "progress": "EXP-0082 reconstructs IK and ID; scale/mass is 1.089 for AB01 but 0.574 for AB02, so preregistered two-person gate not met. EXP-0083 shows scale/mass 0.990 and 0.952 if horizontal force-platform moments are zeroed; validity of this convention is unconfirmed."
+    "progress": "EXP-0082 reconstructs IK and ID; scale/mass is 1.089 for AB01 but 0.574 for AB02, so preregistered two-person gate not met. EXP-0083 shows scale/mass 0.990 and 0.952 if horizontal force-platform moments are zeroed; validity of this convention is unconfirmed. EXP-0084 gives held-participant scale/mass 0.734 and 0.893 under vertical-only assumption; both pass broad range but AB03 remains 26.6% from unity, convention unconfirmed."
   }
 ]

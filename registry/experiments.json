@@ -2392,5 +2392,32 @@
     "limits": "Two previously inspected participants, scenario B assumes an unverified convention for plate moments; no physical validation or biological effects.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0084",
+    "date": "2026-11-20",
+    "name": "Held-participant transfer of conditional squat moment reconstruction",
+    "sources": [
+      "SRC-0089"
+    ],
+    "design": "Prespecified vertical-only versus all platform moments on AB03 and AB06; primary unloaded squat, secondary 25 lb; reconstruct IK/ID and compare same-time source moment.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_moment_holdout.py",
+    "inputs": "research/program_evidence_audit/MOMENT_HOLDOUT_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MOMENT_HOLDOUT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MOMENT_HOLDOUT_RESULTS.json",
+      "research/program_evidence_audit/MOMENT_HOLDOUT_MASS_AUDIT.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_moment_holdout.py <source-root> <output-directory>",
+    "results": {
+      "findings": [
+        "FND-0082"
+      ],
+      "negative_results": []
+    },
+    "limits": "Same cohort, model-derived outcome, two held participants, broad threshold, AB03 differs 26.6%, convention and tissue effects unverified; weight condition may omit external hand load.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

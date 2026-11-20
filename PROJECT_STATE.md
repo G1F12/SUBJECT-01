@@ -1,3 +1,5 @@
+EXP-0084 / FND-0082: перенос условной трактовки на удержанных участников, физическая шкала ISS-0028 не разрешена. См. research/program_evidence_audit/MOMENT_HOLDOUT_REPORT.md.
+
 EXP-0083 / FND-0081: чувствительность реконструированного момента к трактовке компонентов платформы; ISS-0028 открыт. См. research/program_evidence_audit/MOMENT_DIAGNOSTIC_REPORT.md.
 
 EXP-0082 / NEG-0068: реконструкция кинематики и момента двух участников; вопрос единиц ISS-0028 не закрыт. См. research/program_evidence_audit/MOMENT_SCALE_REPORT.md.

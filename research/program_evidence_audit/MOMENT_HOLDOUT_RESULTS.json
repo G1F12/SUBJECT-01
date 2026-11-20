@@ -1,0 +1,156 @@
+{
+  "experiment_id": "EXP-0084",
+  "classification": "EXPLORATORY_HELD_PARTICIPANTS_SAME_COHORT",
+  "opensim_version": "4.6-2026-06-22-85aaf64",
+  "protocol_sha256_lf": "bd36a03046cdf331e70268681c0a6690e43ec301b9ec542839bbd601d493b0f7",
+  "input_manifest_sha256_lf": "bb9ff0dfd80d1f694a5ebf5e13379458d1a11f401fd2ea6a3ed53f63140e00a7",
+  "runner_sha256_lf": "06fc38b7cc492745b179153a42ba138feb55cfb673ac63e35fbf168339c721f2",
+  "results": [
+    {
+      "participant": "AB03",
+      "condition_lb": 0,
+      "mass_kg": 113.5,
+      "model_static": 4,
+      "markers": 34,
+      "median_abs_knee_angle_difference_deg": 0.0007514399999983823,
+      "comparisons": {
+        "all": {
+          "all": {
+            "frames": 2601,
+            "correlation": 0.9640356293478481,
+            "slope_div_mass": 0.9991974702276142
+          },
+          "central": {
+            "frames": 2201,
+            "correlation": 0.9662660836267913,
+            "slope_div_mass": 0.9705758576281063
+          }
+        },
+        "vertical": {
+          "all": {
+            "frames": 2601,
+            "correlation": 0.9997073508048114,
+            "slope_div_mass": 0.733668357376174
+          },
+          "central": {
+            "frames": 2201,
+            "correlation": 0.999709300223645,
+            "slope_div_mass": 0.7342906974255607
+          }
+        }
+      },
+      "quality_gate": true,
+      "conditional_scale_gate": true
+    },
+    {
+      "participant": "AB03",
+      "condition_lb": 25,
+      "mass_kg": 113.5,
+      "model_static": 4,
+      "markers": 34,
+      "median_abs_knee_angle_difference_deg": 0.0006996599999986586,
+      "comparisons": {
+        "all": {
+          "all": {
+            "frames": 2801,
+            "correlation": 0.9570123093891051,
+            "slope_div_mass": 1.0972105315194445
+          },
+          "central": {
+            "frames": 2401,
+            "correlation": 0.9570600185566835,
+            "slope_div_mass": 1.0618126182932046
+          }
+        },
+        "vertical": {
+          "all": {
+            "frames": 2801,
+            "correlation": 0.9997309290770867,
+            "slope_div_mass": 0.7319260490890647
+          },
+          "central": {
+            "frames": 2401,
+            "correlation": 0.9997354802563805,
+            "slope_div_mass": 0.7326865430111869
+          }
+        }
+      },
+      "quality_gate": true,
+      "conditional_scale_gate": true
+    },
+    {
+      "participant": "AB06",
+      "condition_lb": 0,
+      "mass_kg": 79.1,
+      "model_static": 1,
+      "markers": 35,
+      "median_abs_knee_angle_difference_deg": 0.000805120000002546,
+      "comparisons": {
+        "all": {
+          "all": {
+            "frames": 5201,
+            "correlation": 0.6790403037249809,
+            "slope_div_mass": 0.2683631158083052
+          },
+          "central": {
+            "frames": 4801,
+            "correlation": 0.6686657553321631,
+            "slope_div_mass": 0.278129611088228
+          }
+        },
+        "vertical": {
+          "all": {
+            "frames": 5201,
+            "correlation": 0.9999338709871644,
+            "slope_div_mass": 0.8934681463966068
+          },
+          "central": {
+            "frames": 4801,
+            "correlation": 0.9999306872186348,
+            "slope_div_mass": 0.8933433294196851
+          }
+        }
+      },
+      "quality_gate": true,
+      "conditional_scale_gate": true
+    },
+    {
+      "participant": "AB06",
+      "condition_lb": 25,
+      "mass_kg": 79.1,
+      "model_static": 1,
+      "markers": 35,
+      "median_abs_knee_angle_difference_deg": 0.0007933600000029628,
+      "comparisons": {
+        "all": {
+          "all": {
+            "frames": 5401,
+            "correlation": 0.5422811783746484,
+            "slope_div_mass": 0.3018761711189722
+          },
+          "central": {
+            "frames": 5001,
+            "correlation": 0.5706629295346555,
+            "slope_div_mass": 0.3248268177516073
+          }
+        },
+        "vertical": {
+          "all": {
+            "frames": 5401,
+            "correlation": 0.9999203091670689,
+            "slope_div_mass": 0.8958901128669716
+          },
+          "central": {
+            "frames": 5001,
+            "correlation": 0.999923388327562,
+            "slope_div_mass": 0.896192116129347
+          }
+        }
+      },
+      "quality_gate": true,
+      "conditional_scale_gate": true
+    }
+  ],
+  "conditional_primary_gate": "PASS",
+  "moment_convention": "UNRESOLVED"
+}

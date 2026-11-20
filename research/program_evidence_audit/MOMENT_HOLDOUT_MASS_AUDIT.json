@@ -1,0 +1,31 @@
+{
+  "classification": "POSTHOC_DESCRIPTIVE",
+  "experiment_id": "EXP-0084",
+  "runner_sha256_lf": "dacc51bcd819495fff898f06465a1c2b469142d87a01c12c1aec8df8cf283230",
+  "results": [
+    {
+      "participant": "AB01",
+      "model_mass_kg": 78.84999999999994,
+      "readme_mass_kg": 78.9,
+      "model_sha256": "f51a4ec3cc506a50ee64390537636c8fcd8e327c901d505bd4a7d63594389910"
+    },
+    {
+      "participant": "AB02",
+      "model_mass_kg": 82.17899999999997,
+      "readme_mass_kg": 82.2,
+      "model_sha256": "4b259a2da025cc0135a6a5bd0fab0aa40d5e5582ef065d68000ae8edd292a1ec"
+    },
+    {
+      "participant": "AB03",
+      "model_mass_kg": 113.51699999999983,
+      "readme_mass_kg": 113.5,
+      "model_sha256": "1128fa6caae5b75df6beb257af05289d05f62827511b22db96aef311508c7263"
+    },
+    {
+      "participant": "AB06",
+      "model_mass_kg": 79.1109999999999,
+      "readme_mass_kg": 79.1,
+      "model_sha256": "e43aaf7a3f7dd1e584c8a6a34a5a1439084fc518e332a54faee214ac1e63cc16"
+    }
+  ]
+}
