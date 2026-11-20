@@ -1,3 +1,5 @@
+EXP-0091 / NEG-0073: исправленные силы сопоставлены с ранее просмотренной когортой Santos; преимущество над LOSO не установлено. См. research/program_evidence_audit/GRAVITY_SANTOS_REPORT.md.
+
 EXP-0090 / FND-0088 / DEC-0031: исправленная гравитация и перечисленные зависимые сценарии пересобраны; модельная и внешняя валидация открыты. См. research/program_evidence_audit/GRAVITY_REBUILD_REPORT.md.
 
 EXP-0089 / FND-0087 / NEG-0072 / DEC-0030 / ISS-0030: выявлен двойной учёт гравитационного слагаемого; зависимые сценарии условны до полной пересборки. См. research/program_evidence_audit/GRAVITY_AUDIT_REPORT.md.

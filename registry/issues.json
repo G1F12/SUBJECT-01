@@ -343,13 +343,14 @@
       "EXP-0077",
       "EXP-0085",
       "EXP-0089",
-      "EXP-0090"
+      "EXP-0090",
+      "EXP-0091"
     ],
     "related_issues": [
       "ISS-0021",
       "ISS-0029"
     ],
     "required_inputs": "Versioned corrected model with independent derivative/force checks, full rerun of dependent scenarios, explicit planar geometry and held-out individual validation.",
-    "resolution": "EXP-0090 rebuilds named computational force, tissue, sensitivity and thermal dependencies with the corrected hip gravity term, preserving historical inputs; post-hoc external comparisons, explicit posture geometry and independent validation remain open."
+    "resolution": "EXP-0090 rebuilds named computational force, tissue, sensitivity and thermal dependencies with the corrected hip gravity term, preserving historical inputs; post-hoc external comparisons, explicit posture geometry and independent validation remain open. EXP-0091 updates nominal force comparison on the already viewed Santos sample; paired intervals do not establish superiority, and exact geometry and independent validation remain open."
   }
 ]

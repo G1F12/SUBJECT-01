@@ -2594,5 +2594,31 @@
     "limits": "Gravity-only correction; same unvalidated hip geometry, tendon assumptions and recovery model. Later empirical comparisons not rebuilt; no new physiological or architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0091",
+    "date": "2026-11-20",
+    "name": "Gravity-corrected chain comparison on reused Santos force cohort",
+    "sources": [
+      "SRC-0090"
+    ],
+    "design": "Recalculate paired W0 MAE and bias using archived and gravity-corrected 100- and 110-degree nominal forces versus LOSO mean, with participant bootstrap.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_gravity_santos.py",
+    "inputs": "research/program_evidence_audit/GRAVITY_SANTOS_PROTOCOL.md",
+    "report": "research/program_evidence_audit/GRAVITY_SANTOS_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/GRAVITY_SANTOS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_gravity_santos.py <downloaded-xlsx>",
+    "results": {
+      "findings": [],
+      "negative_results": [
+        "NEG-0073"
+      ]
+    },
+    "limits": "Reused data, model geometry mismatched and not individualized; no independent external validation or architecture effect.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

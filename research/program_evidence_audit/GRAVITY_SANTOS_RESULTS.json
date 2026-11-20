@@ -1,0 +1,85 @@
+{
+  "experiment_id": "EXP-0091",
+  "classification": "EXPLORATORY_REUSED_COHORT_GRAVITY_REBUILD",
+  "source_sha256_bytes": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
+  "protocol_sha256_lf": "085fd2b38be274db653ce0b6b5388e3ddfd66f217926946164030e5a4a1f8cb1",
+  "runner_sha256_lf": "cf1cb10d4351321ea7d01320b61e473428fd3a90d4d8ff8385f612e0e3575e5d",
+  "prior_hip_result_sha256_lf": "57ab92d8ab2f9103e7df65e480c1c0aaf3a9908b4b7072c754ab1802d789ccdc",
+  "gravity_audit_sha256_lf": "381fd57fce68c98e7e00dc6acd6227191356b082bab671fa74e914746697326f",
+  "gravity_rebuild_sha256_lf": "97e1851e0c41802be02c79834311dca2d0e4e8b2f9c892395e1220dc1d1e5a49",
+  "participants": 11,
+  "excluded_count": 0,
+  "session_counts": {
+    "W0": 11,
+    "W3": 1,
+    "W4": 11,
+    "POS": 11,
+    "W2": 10
+  },
+  "cohort_mean_N": 2513.601676405315,
+  "fixed_model_forces_N": {
+    "archive100": 2601.1,
+    "corrected100": 2567.0,
+    "archive110": 3016.9,
+    "corrected110": 2976.8
+  },
+  "metrics": {
+    "archive100": {
+      "mae_N": 486.3950174529628,
+      "rmse_N": 557.7660713871118,
+      "bias_N": 87.49832359468449
+    },
+    "corrected100": {
+      "mae_N": 477.0950174529628,
+      "rmse_N": 553.442331884231,
+      "bias_N": 53.39832359468458
+    },
+    "archive110": {
+      "mae_N": 631.8612891707173,
+      "rmse_N": 746.1609989083806,
+      "bias_N": 503.29832359468475
+    },
+    "corrected110": {
+      "mae_N": 613.6340164434446,
+      "rmse_N": 719.7219746121824,
+      "bias_N": 463.1983235946847
+    },
+    "loso_mean": {
+      "mae_N": 508.7850221198536,
+      "rmse_N": 605.9462936994222,
+      "bias_N": -2.0670334131202914e-13
+    }
+  },
+  "paired_comparisons": {
+    "archive100_minus_corrected100": {
+      "paired_mae_N": 9.299999999999976,
+      "ci95_N": [
+        -9.299999999999976,
+        27.899999999999924
+      ]
+    },
+    "archive110_minus_corrected110": {
+      "paired_mae_N": 18.227272727272688,
+      "ci95_N": [
+        -3.645454545454537,
+        40.09999999999991
+      ]
+    },
+    "loso_mean_minus_corrected100": {
+      "paired_mae_N": 31.69000466689084,
+      "ci95_N": [
+        -8.41830879866882,
+        75.1368466693817
+      ]
+    },
+    "loso_mean_minus_corrected110": {
+      "paired_mae_N": -104.84899432359106,
+      "ci95_N": [
+        -347.8666790628303,
+        163.4271566141608
+      ]
+    }
+  },
+  "whole_architecture": "NOT_ASSESSED",
+  "exact_geometry_validation": "DATA_BLOCKED"
+}

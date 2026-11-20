@@ -584,5 +584,13 @@
     "title": "Archived force chain gravity does not match its stated potential energy",
     "statement": "At knee angles 100/110/140 degrees the archived hip gravity term differs from the central finite difference of its documented potential by 9.04/9.57/10.73 Nm. Correcting only this line changes strategy 2 gain at 100 degrees from 21.64% to 21.93%.",
     "reason": "The variable dV_dphi1 already includes the shank and foot terms; dV_dphi2 is added again to the hip generalized moment."
+  },
+  {
+    "id": "NEG-0073",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0091",
+    "title": "Gravity correction does not establish force-prediction superiority on reused cohort",
+    "statement": "For 11 previously viewed participants, corrected 100-degree MAE is 477.1 N and corrected 110-degree MAE 613.6 N against participant-held-out mean 508.8 N; paired intervals against baseline include zero.",
+    "reason": "Same small cohort, no individual geometry or body mass, approximate task angle and unknown hip configuration; bootstrap retains correlated LOSO predictions. No conclusion on exact model validity."
   }
 ]
