@@ -991,5 +991,14 @@
     "statement": "For 220 phases, mean signed detrend-minus-conditional-Newton change is −2.552 m/s, high-pass-minus-detrend +0.478 m/s, total −2.074 m/s; initial force divided by metadata Weight*g ranges 1.59–1.85. These are algorithmic contrasts, not causal physiological effects.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0116",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0120",
+    "title": "Repeated-jump power-decline magnitude depends on velocity reconstruction",
+    "statement": "On 11 previously viewed records mean early-to-late change is −16.57% for stored power and −14.11% for a conditional quiet-force and symmetric-flight proxy; paired difference +2.46 percentage points [0.96,4.03] bootstrap. Neither series is independently validated.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

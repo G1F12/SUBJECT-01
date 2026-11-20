@@ -1,3 +1,5 @@
+EXP-0120 / FND-0116 / NEG-0100: условное восстановление скорости меняет абсолютные пики и величину ранне-позднего спада мощности; физически ни один метод не подтверждён (ISS-0039). См. research/program_evidence_audit/LCMJ_POWER_SENSITIVITY_REPORT.md.
+
 EXP-0119 / FND-0115 / NEG-0099: условная разность скорости разложена на вклад detrend и фильтра; начальная сила 1,59–1,85 от Weight*g, полная масса неизвестна (ISS-0039). См. research/program_evidence_audit/LCMJ_FILTER_DECOMPOSITION_REPORT.md.
 
 EXP-0118 / FND-0114 / NEG-0098: проверка 220 фаз полёта показала условное расхождение изменения восстановленной скорости с −gΔt; усилия направляющих и полная масса неизвестны (ISS-0039). См. research/program_evidence_audit/LCMJ_FLIGHT_REPORT.md.

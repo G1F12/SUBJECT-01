@@ -1,0 +1,36 @@
+{
+  "experiment_id": "EXP-0120",
+  "classification": "POST_HOC_CONDITIONAL_ALTERNATIVE_NOT_VALIDATION",
+  "manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "prior_result_sha256_lf": "6712652eb2c05d1c6bd38b648cb2a655e4cc283aca9b3c53e49433b97549022c",
+  "protocol_sha256_lf": "0ed4f11307b57ba2acda40c251459862364a42d73a65dff09d3e0a1b91a400b2",
+  "runner_sha256_lf": "a77ef3a4b1e790ced06c895578958ce7de175d4ef55882ad9fed477dbf8315d0",
+  "participants": 11,
+  "excluded_files": 0,
+  "published_power_early_mean_W": 6414.036349515756,
+  "published_power_late_mean_W": 5364.666243803902,
+  "published_mean_change_percent": -16.57184576790662,
+  "conditional_proxy_early_mean_W": 4222.117882199684,
+  "conditional_proxy_late_mean_W": 3622.3427337456424,
+  "conditional_mean_change_percent": -14.108561253263169,
+  "conditional_mean_change_bootstrap_95": [
+    -16.27406136760499,
+    -12.215848082772972
+  ],
+  "paired_alternative_minus_published_pp": 2.463284514643448,
+  "paired_bootstrap_95_pp": [
+    0.9562740464735489,
+    4.034970758218711
+  ],
+  "individual_difference_range_pp": [
+    -0.7871829387469234,
+    6.582010429514316
+  ],
+  "limits": [
+    "same previously viewed data and post-hoc method",
+    "estimated system mass and equal height ballistic constraint are assumptions",
+    "unknown Smith guide forces and independent kinematics",
+    "force times reconstructed velocity is not validated human mechanical power or work",
+    "no FORCE20 or CPE45 assessment"
+  ]
+}

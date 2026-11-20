@@ -800,5 +800,13 @@
     "title": "Stored Weight is not established as total moving mass",
     "statement": "First-half-second platform force averaged 1.59–1.85 times metadata Weight*g despite within-window force CV below 1%.",
     "reason": "External bar load, guide forces and sensor calibration were not independently measured; steady platform force alone cannot identify the true moving mass or absolute velocity."
+  },
+  {
+    "id": "NEG-0100",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0120",
+    "title": "Absolute jump power cannot be selected from two unvalidated reconstructions",
+    "statement": "Conditional early and late mean peak power proxies are 4222 and 3622 W versus archived 6414 and 5365 W, despite using the same force and jump windows.",
+    "reason": "Quiet-force mass, symmetric flight, guide forces, recorded weight and author high-pass processing are uncertain; no independent kinematics establish which trajectory reflects true system power."
   }
 ]

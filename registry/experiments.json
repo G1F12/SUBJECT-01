@@ -3407,5 +3407,33 @@
     "limits": "Post-hoc algebraic contrasts relative to a conditional mechanical reference; total mass, machine guide forces and independent motion unknown. Initial steady force does not establish load mass or actual power/work.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0120",
+    "date": "2026-11-20",
+    "name": "Conditional sensitivity of repeat jump peak-power trajectory to velocity reconstruction",
+    "sources": [
+      "SRC-0108"
+    ],
+    "design": "On the same 11 previously viewed records, compare fixed early/late peak windows of stored derived power versus quiet-force mass and symmetric-flight anchored conditional velocity proxy; participant bootstrap.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_power_sensitivity.py",
+    "inputs": "research/program_evidence_audit/LCMJ_POWER_SENSITIVITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_POWER_SENSITIVITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_POWER_SENSITIVITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_power_sensitivity.py <downloaded-xlsx-directory>",
+    "results": {
+      "findings": [
+        "FND-0116"
+      ],
+      "negative_results": [
+        "NEG-0100"
+      ]
+    },
+    "limits": "Post-hoc conditional comparison on previously viewed data; moving mass, equal height, guide forces and independent kinematics unverified; neither power series is validated human work or CPE45.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

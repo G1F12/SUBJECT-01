@@ -1,3 +1,5 @@
+- EXP-0120: compared retained jump power under a conditional alternative velocity reconstruction; absolute peaks and relative decline depend on unverified assumptions.
+
 - EXP-0119: decomposed conditional jump-velocity discrepancy into detrending and filter components; metadata weight is not established as total moving mass.
 
 - EXP-0118: compared reconstructed jump flight velocity changes against conditional gravity and force/mass references; unmeasured guide forces and mass prevent causal attribution.

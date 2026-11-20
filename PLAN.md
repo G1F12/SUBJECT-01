@@ -8,6 +8,8 @@
 
 ## Текущее состояние и история
 
+- **EXP-0120 / FND-0116 / NEG-0100 / ISS-0039.** Условная альтернативная скорость меняет оценку позднего снижения мощности с −16,57% до −14,11%; физическая правильность обоих методов не установлена. [Отчёт](research/program_evidence_audit/LCMJ_POWER_SENSITIVITY_REPORT.md).
+
 - **EXP-0119 / FND-0115 / NEG-0099 / ISS-0039.** Условное расхождение скорости разложено на вклад detrend и фильтра; начальная сила составляет 1,59–1,85 от `Weight × g`, полная масса не установлена. [Отчёт](research/program_evidence_audit/LCMJ_FILTER_DECOMPOSITION_REPORT.md).
 
 - **EXP-0118 / FND-0114 / NEG-0098 / ISS-0039.** Восстановленная скорость в 220 фазах полёта условно расходится с −gΔt; силы направляющих и полная масса неизвестны, происхождение расхождения не установлено. [Отчёт](research/program_evidence_audit/LCMJ_FLIGHT_REPORT.md).
@@ -95,7 +97,7 @@
 - **EXP-0075.** Модель поздней мощности из первых двух спринтов не перенеслась с Chmura на Jutlah лучше простой базы. [Отчёт](research/program_evidence_audit/POWER_TRANSFER_REPORT.md)
 - **EXP-0074.** При условном использовании поминутной мощности MAE тепловой модели на ранее просмотренных данных снизилась с 0,586 до 0,475 °C. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_VARIABLE_REPORT.md)
 - **EXP-0073.** Аудит записанной мощности выявил возможное расхождение выполненной работы с постоянным входом EXP-0067. [Отчёт](research/program_evidence_audit/MCLAUGHLIN_WORK_REPORT.md)
-- Рабочая ветка `codex/subject01-program-evidence` до EXP-0119 синхронизирована с origin по `a82a82d`; EXP-0119 готовится поверх него. `CLAUDE.md` — отдельный неотслеживаемый файл.
+- Рабочая ветка `codex/subject01-program-evidence` до EXP-0120 синхронизирована с origin по `4b73983`; EXP-0120 готовится поверх него. `CLAUDE.md` — отдельный неотслеживаемый файл.
 - **EXP-0072.** На ранее рассмотренной когорте McLaughlin равномерное начальное состояние повысило MAE с 0,586 до 0,719 °C. [Отчёт](research/program_evidence_audit/THERMAL_INITIALIZATION_REPORT.md)
 - **EXP-0071.** Исследовательская проверка покоя Fujii выявила сильную чувствительность начального дрейфа к градиенту слоёв. [Отчёт](research/program_evidence_audit/FUJII_REST_REPORT.md)
 - **EXP-0070.** При одинаковых тканевых параметрах отношение модельных темпов 1,25 даёт пик условного повреждения 2,56× против 2,30× в контроле. [Отчёт](research/program_evidence_audit/ADAPT25_REPORT.md)
