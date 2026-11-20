@@ -3379,5 +3379,33 @@
     "limits": "Post-hoc conditional checks, no independently measured kinematics or Smith machine guide forces, unverified total moving mass; cannot assign mechanism or establish actual work and CPE45.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0119",
+    "date": "2026-11-20",
+    "name": "Algebraic attribution of conditional jump flight velocity differences",
+    "sources": [
+      "SRC-0108"
+    ],
+    "design": "On 11 previously reviewed files decompose within-flight filtered-minus-conditional-Newton velocity change into detrend and high-pass stages; check closure and first-half-second force relative to metadata weight.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_lcmj_filter_decomposition.py",
+    "inputs": "research/program_evidence_audit/LCMJ_FILTER_DECOMPOSITION_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LCMJ_FILTER_DECOMPOSITION_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LCMJ_FILTER_DECOMPOSITION_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_lcmj_filter_decomposition.py <downloaded-xlsx-directory>",
+    "results": {
+      "findings": [
+        "FND-0115"
+      ],
+      "negative_results": [
+        "NEG-0099"
+      ]
+    },
+    "limits": "Post-hoc algebraic contrasts relative to a conditional mechanical reference; total mass, machine guide forces and independent motion unknown. Initial steady force does not establish load mass or actual power/work.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

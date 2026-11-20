@@ -1,0 +1,53 @@
+{
+  "experiment_id": "EXP-0119",
+  "classification": "POST_HOC_ALGEBRAIC_DECOMPOSITION",
+  "manifest_sha256_lf": "49e463871d4c9e236ea865b00cf3e2276be78f6ea18e99033019c45aeae98505",
+  "prior_result_sha256_lf": "ef817b0bab6dcdf2f3e6bbe5db298485a565ffa85ea824be527de48c827131ec",
+  "protocol_sha256_lf": "323dfdc8f9e1177c04616a74ef64813a9aada3f9f4b86480ec67fb8d912261c3",
+  "runner_sha256_lf": "982d1ca8fe97783a41aba067c68fc4167cb6110c765f5fab2d68119ef8aaf630",
+  "people": 11,
+  "accepted_flights": 220,
+  "failed_files": 0,
+  "excluded_flights": 0,
+  "signed_components": {
+    "detrend_minus_newton": {
+      "mean_signed_m_s": -2.552232323319645,
+      "person_bootstrap_95_m_s": [
+        -2.7831645797516433,
+        -2.3398230192700393
+      ]
+    },
+    "filter_minus_detrend": {
+      "mean_signed_m_s": 0.4780252424957608,
+      "person_bootstrap_95_m_s": [
+        0.4148454222702841,
+        0.5435861418103093
+      ]
+    },
+    "filter_minus_newton": {
+      "mean_signed_m_s": -2.074207080823884,
+      "person_bootstrap_95_m_s": [
+        -2.2846536080777082,
+        -1.8744228971216494
+      ]
+    }
+  },
+  "max_closure_error_m_s": 0.0,
+  "mean_absolute_difference_vs_newton_proxy_m_s": 2.074207080823884,
+  "initial_half_second_force_weight_ratio_range": [
+    1.588140256505012,
+    1.8467552187483074
+  ],
+  "initial_half_second_cv_percent_range": [
+    0.17188973373505176,
+    0.9742363873037955
+  ],
+  "files_initial_cv_at_most_5_percent": 11,
+  "limits": [
+    "Newton reference is conditional on unknown total mass and guide forces",
+    "algorithmic components not causal physiological effects",
+    "first 0.5s stability does not prove mass or no guide support",
+    "previously viewed records; no independent motion data",
+    "no calibrated power work or CPE45 conclusion"
+  ]
+}

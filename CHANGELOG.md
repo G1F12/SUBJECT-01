@@ -1,3 +1,5 @@
+- EXP-0119: decomposed conditional jump-velocity discrepancy into detrending and filter components; metadata weight is not established as total moving mass.
+
 - EXP-0118: compared reconstructed jump flight velocity changes against conditional gravity and force/mass references; unmeasured guide forces and mass prevent causal attribution.
 
 - EXP-0117: matched all ten available raw jump recordings to ten processed records and reproduced their 0.25 Hz power pipeline; one processed record unmatched.

@@ -792,5 +792,13 @@
     "title": "Saved power cannot be admitted as validated work from computational reproduction alone",
     "statement": "The derived velocity-change signal differs materially from conditional free-fall and force/mass proxies across flight intervals, despite reproducing the archived power to within 1e-6 W.",
     "reason": "Unmeasured Smith-machine forces, moving mass, kinematics and filtering prevent separating physical effects from computational assumptions or converting the power into validated work."
+  },
+  {
+    "id": "NEG-0099",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0119",
+    "title": "Stored Weight is not established as total moving mass",
+    "statement": "First-half-second platform force averaged 1.59–1.85 times metadata Weight*g despite within-window force CV below 1%.",
+    "reason": "External bar load, guide forces and sensor calibration were not independently measured; steady platform force alone cannot identify the true moving mass or absolute velocity."
   }
 ]

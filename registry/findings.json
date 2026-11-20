@@ -982,5 +982,14 @@
     "statement": "Across 220 accepted flight intervals from 11 previously viewed participants, participant-mean absolute deviation of reconstructed velocity change from −gΔt averages 2.075 m/s [1.874,2.286] by participant bootstrap. Smith guide forces and complete moving mass are not observed.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0115",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0119",
+    "title": "Detrending accounts for most conditional flight velocity contrast",
+    "statement": "For 220 phases, mean signed detrend-minus-conditional-Newton change is −2.552 m/s, high-pass-minus-detrend +0.478 m/s, total −2.074 m/s; initial force divided by metadata Weight*g ranges 1.59–1.85. These are algorithmic contrasts, not causal physiological effects.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
