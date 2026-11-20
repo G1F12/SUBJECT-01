@@ -808,5 +808,13 @@
     "title": "Absolute jump power cannot be selected from two unvalidated reconstructions",
     "statement": "Conditional early and late mean peak power proxies are 4222 and 3622 W versus archived 6414 and 5365 W, despite using the same force and jump windows.",
     "reason": "Quiet-force mass, symmetric flight, guide forces, recorded weight and author high-pass processing are uncertain; no independent kinematics establish which trajectory reflects true system power."
+  },
+  {
+    "id": "NEG-0101",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0121",
+    "title": "Force recovery regression advantage and equal-work inference not established",
+    "statement": "LOPO prediction at 45 min has MAE 3.69 pp versus 5-minute persistence 4.18; paired bootstrap advantage 0.48 [−0.40,1.24] pp.",
+    "reason": "The small partially previewed cohort gives uncertain model advantage and leg press volume expressed as kg-repetitions does not measure equal mechanical work."
   }
 ]

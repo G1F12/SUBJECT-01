@@ -1949,5 +1949,26 @@
       "sha256": "9852f34119d58a2512e0801b1bb1461409292457c79d853fec3541303cc610d1",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "id": "SRC-0111",
+    "date": "2026-11-20",
+    "name": "Norbury et al. leg press load and post-exercise knee force",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/NORBURY_FORCE_RECOVERY_REPORT.md",
+    "doi": "10.6084/m9.figshare.24156741.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.24156741.v1",
+    "calibration_review": {
+      "access": "CC BY 4.0 XLSX downloaded; publisher MD5 and SHA-256 verified. Article and low-load individual rows previewed before protocol.",
+      "scope": "12 healthy men, randomized crossover. Only free-flow low/high-load leg press conditions analyzed; knee extension force at baseline and 5/45 min, 24 h after short exercise. Volume is load times repetitions, not mechanical work."
+    },
+    "external_provenance": {
+      "article_doi": "10.1113/EP091705",
+      "file_url": "https://ndownloader.figshare.com/files/42385671",
+      "md5": "cbc93d9a8e3de139c2794be81e88f2a9",
+      "sha256": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e",
+      "license": "CC BY 4.0"
+    }
   }
 ]

@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-0121",
+  "classification": "PARTIALLY_PREVIEWED_EXISTING_CROSSOVER_NON_BFR_ONLY",
+  "source_sha256_bytes": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e",
+  "source_md5_bytes": "cbc93d9a8e3de139c2794be81e88f2a9",
+  "protocol_sha256_lf": "f82cc07d5172f297d7c142c86cee93ba5e971f03e88883880e1659ef9a522254",
+  "runner_sha256_lf": "c6ddd168a8481eb6ef9d56c88dde9a6f539c2c86d9a0af51dc8b0a80dd8a5908",
+  "participants": 12,
+  "source_gate": {
+    "mean_LL_volume_kg_repetitions": 4134.375,
+    "mean_HL_volume_kg_repetitions": 5064.5,
+    "LL_fourth_set_unique_counts": [
+      15
+    ]
+  },
+  "paired_force_percent": {
+    "5min": {
+      "mean_LL_percent": -8.993747164573621,
+      "mean_HL_percent": -8.957961106540294,
+      "mean_HL_minus_LL_pp": 0.03578605803332913,
+      "paired_bootstrap_95_pp": [
+        -4.622556510283823,
+        4.845876101521566
+      ]
+    },
+    "45min": {
+      "mean_LL_percent": -6.985922670172509,
+      "mean_HL_percent": -6.329554702035523,
+      "mean_HL_minus_LL_pp": 0.6563679681369856,
+      "paired_bootstrap_95_pp": [
+        -2.6326626354424443,
+        3.9046854971164904
+      ]
+    },
+    "24h": {
+      "mean_LL_percent": -0.6479592133798797,
+      "mean_HL_percent": -1.1530071914205335,
+      "mean_HL_minus_LL_pp": -0.5050479780406535,
+      "paired_bootstrap_95_pp": [
+        -5.876586737735925,
+        4.431250976314641
+      ]
+    }
+  },
+  "prediction_45min": {
+    "persistence_mae_pp": 4.177420581712332,
+    "linear_lopo_mae_pp": 3.6931363511812303,
+    "base_minus_model_mae_pp": 0.48428423053110103,
+    "bootstrap_95_pp": [
+      -0.3972965263395312,
+      1.2380365598632839
+    ]
+  },
+  "limits": [
+    "low-load 12 participant values and article previewed before protocol",
+    "volume kg repetitions is not external mechanical work in joules",
+    "short task then 45-minute recovery not 45-minute performance",
+    "12 men; unequal loads and durations; knee extension not bilateral leg press",
+    "no temperature movement control tissue or whole architecture outcome"
+  ]
+}

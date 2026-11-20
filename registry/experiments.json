@@ -3435,5 +3435,33 @@
     "limits": "Post-hoc conditional comparison on previously viewed data; moving mass, equal height, guide forces and independent kinematics unverified; neither power series is validated human work or CPE45.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0121",
+    "date": "2026-11-20",
+    "name": "Knee force recovery after two free-flow leg press conditions",
+    "sources": [
+      "SRC-0111"
+    ],
+    "design": "Gate 12 participant-labelled free-flow sessions and load-times-repetition consistency; compare paired normalized knee force changes and leave-one-person-out linear versus 5-minute persistence prediction of 45-minute recovery.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_norbury_force_recovery.py",
+    "inputs": "research/program_evidence_audit/NORBURY_FORCE_RECOVERY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/NORBURY_FORCE_RECOVERY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/NORBURY_FORCE_RECOVERY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_norbury_force_recovery.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0117"
+      ],
+      "negative_results": [
+        "NEG-0101"
+      ]
+    },
+    "limits": "Low-load individual rows and article viewed before protocol; 12 men, two different short load conditions. Volume kg-repetitions is not mechanical work; 45 minutes refers to recovery, not performance.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

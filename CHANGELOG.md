@@ -1,3 +1,5 @@
+- EXP-0121: analyzed paired knee-force recovery following existing low/high free-flow leg press sessions; measured kg-repetition volume does not establish equal work in joules.
+
 - EXP-0120: compared retained jump power under a conditional alternative velocity reconstruction; absolute peaks and relative decline depend on unverified assumptions.
 
 - EXP-0119: decomposed conditional jump-velocity discrepancy into detrending and filter components; metadata weight is not established as total moving mass.
