@@ -1018,5 +1018,14 @@
     "statement": "126 archived segments align with summary duration and start angle in 125 cases each, and end angle in 126; 562940 intervals are 0.01 s. Archive has 21 identifiers while article reports 20.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0119",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0123",
+    "title": "Opposite preferred angle-velocity signs across two conditions",
+    "statement": "All 21 archived participants have opposing zero-lag signs minimizing summed work integral error across the two condition groups. On an exploratory assumption of group and leg mapping 11 participants could be classified, 10 with one sign orientation and one opposite.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

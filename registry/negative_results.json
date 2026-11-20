@@ -824,5 +824,13 @@
     "title": "Mechanical work and force-response identification remain blocked",
     "statement": "Full-segment torque-angle and torque-velocity integrals have median absolute disagreement 39.90 J; opposite-sign comparison median 28.30 J.",
     "reason": "Cohort selection, source channel signs and processing, and one segment boundary need clarification; two loads concern different legs and are not matched in work."
+  },
+  {
+    "id": "NEG-0103",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0123",
+    "title": "Single global sign and lag fail exploratory held-out channel agreement gate",
+    "statement": "LOPO sign and lag selection yields median absolute discrepancy 26.60 J and 26 of 126 segments within both 5 J and 5% tolerance.",
+    "reason": "A shared transformation fails on held-out participants; sign appears condition-dependent, allocation to legs and published cohort are unresolved, and selected tolerance is diagnostic, not a physiological effect."
   }
 ]
