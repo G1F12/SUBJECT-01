@@ -408,5 +408,21 @@
     ],
     "required_inputs": "Individually linked actual post mass and measurement date, units, instrument precision and protocol; independent verification of assignments and outcome reliability before any matched-mass claim.",
     "progress": "Source dictionary labels Body_Mass_kg Baseline; no separate post variable was located in the main table."
+  },
+  {
+    "id": "ISS-0034",
+    "date": "2026-11-20",
+    "title": "SRC-0095 recovery data identity and mechanical units unresolved",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0097 found 48 workbook Subject_ID strings against 32 metadata participants, no within-file ID across both conditions, frequently fractional repetition fields and TW values 7.6–30.6 with dictionary unit m/s. These observations require source explanation, not an assumption of error.",
+    "related_experiments": [
+      "EXP-0097"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Pseudonymous subject and session crosswalk, condition order, raw repetition counts and processing definitions, calibrated force, velocity and peak-power records with units and time stamps.",
+    "progress": "Source and hashes checked; local request draft prepared but not sent. Quantitative admission is DATA_BLOCKED pending clarification."
   }
 ]

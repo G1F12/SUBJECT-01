@@ -784,5 +784,14 @@
     "statement": "The four prespecified directional changes occur in 12/24 experimental and 3/24 control records; mean direction alone does not establish meaningful effects. All paired mass values are identical because the source dictionary labels mass baseline-only; matched post mass cannot be inferred.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0093",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0097",
+    "title": "Recovery dataset requires identity and mechanical-scale clarification",
+    "statement": "Four workbooks contain 48 supplied Subject_ID strings, none linked to both conditions within its workbook; 362/384 pre repetition entries are noninteger and 960/960 TW values exceed diagnostic 3 m/s with reported units m/s. Different IDs, averages or scale transformations may explain these findings; no data integrity conclusion is drawn.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -624,5 +624,13 @@
     "title": "Reported repeated mass column cannot verify same-mass profile",
     "statement": "All 48 Post mass entries equal their Pre values, while the official data dictionary identifies Body_Mass_kg as baseline descriptive data; the prespecified mass comparability criterion cannot be assessed.",
     "reason": "A time-invariant covariate was copied across long-format rows, not documented as an independent post measurement."
+  },
+  {
+    "id": "NEG-0078",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0097",
+    "title": "Judo recovery data not admitted for quantitative model validation",
+    "statement": "The advertised two-condition participant linkage, repetition-count interpretation and barbell-velocity scale cannot be verified from the audited tables and dictionary; model validation remains DATA_BLOCKED.",
+    "reason": "Observed identifier and value semantics require documented crosswalk, raw trial values and calibration; ambiguity does not establish that the source data are erroneous."
   }
 ]

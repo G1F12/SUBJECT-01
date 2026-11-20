@@ -2760,5 +2760,33 @@
     "limits": "Exploratory secondary analysis; post mass field is a duplicated baseline covariate, mass gate DATA_BLOCKED; no measurement-error thresholds, maximal force, CPE45, tendon or architecture validation.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0097",
+    "date": "2026-11-20",
+    "name": "Admission audit of Judo recovery v2 mechanical data",
+    "sources": [
+      "SRC-0095"
+    ],
+    "design": "Count supplied identifiers and condition overlap, inspect repetitions-to-failure integrality and documented velocity scale, preserving file hashes before considering external validation.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_judo_source_audit.py",
+    "inputs": "research/program_evidence_audit/JUDO_SOURCE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/JUDO_SOURCE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/JUDO_SOURCE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_judo_source_audit.py <download-directory>",
+    "results": {
+      "findings": [
+        "FND-0093"
+      ],
+      "negative_results": [
+        "NEG-0078"
+      ]
+    },
+    "limits": "Source audit only; discrepancies may reflect undocumented transformation or crosswalk; no inference of fabrication, physiology, tissue or whole-architecture outcome.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

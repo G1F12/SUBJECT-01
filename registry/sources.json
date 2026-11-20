@@ -1638,5 +1638,24 @@
       "dictionary_url": "https://zenodo.org/records/21343993/files/Data_Dictionary.xlsx?download=1",
       "dictionary_sha256": "9d567399f6e997ed6990148fd3c56de823985e78e74239a8c7a57d10231b6246"
     }
+  },
+  {
+    "id": "SRC-0095",
+    "date": "2026-11-20",
+    "name": "Judo recovery study v2 multivariate mechanical data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/JUDO_SOURCE_REPORT.md",
+    "doi": "10.5281/zenodo.19947401",
+    "url": "https://zenodo.org/records/19947401",
+    "calibration_review": {
+      "access": "v2 open CC BY 4.0; four workbook files, codebook, README and participant table downloaded with source MD5 and SHA256 verified.",
+      "scope": "Describes 32-person crossover and recovery up to 72 h; workbook IDs lack demonstrated cross-condition linkage, repetition counts are often noninteger and TW unit/scale unclear. Pending clarification; not admitted as validation data."
+    },
+    "external_provenance": {
+      "version": "v2 record 19947401",
+      "license": "CC BY 4.0",
+      "hashes": "research/program_evidence_audit/JUDO_SOURCE_RESULTS.json"
+    }
   }
 ]

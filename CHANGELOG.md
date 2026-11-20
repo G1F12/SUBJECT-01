@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0097 / FND-0093 / NEG-0078 / ISS-0034: проверен допуск данных восстановления SRC-0095, зафиксированы вопросы о связи сессий и единицах. См. research/program_evidence_audit/JUDO_SOURCE_REPORT.md.
+
 EXP-0096 / FND-0092 / NEG-0077 / ISS-0033: проверен многомерный профиль и установлена baseline-семантика продублированной массы. См. research/program_evidence_audit/TABLE_TENNIS_PROFILE_REPORT.md.
 
 EXP-0095 / NEG-0076 / SRC-0093: проверен перенос индивидуальной длительности статической нагрузки на открытых данных SWIFTIES. См. research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md.

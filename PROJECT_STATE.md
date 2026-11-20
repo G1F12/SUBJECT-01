@@ -1,3 +1,5 @@
+EXP-0097 / FND-0093 / NEG-0078 / ISS-0034: аудит открытых данных восстановления SRC-0095 выявил нерешённые связь ID и шкалу механики; DATA_BLOCKED. См. research/program_evidence_audit/JUDO_SOURCE_REPORT.md.
+
 EXP-0096 / FND-0092 / NEG-0077 / ISS-0033: многомерный профиль на открытых данных, обнаружена копия baseline-массы в Post; сравнение при сопоставимой массе не подтверждено. См. research/program_evidence_audit/TABLE_TENNIS_PROFILE_REPORT.md.
 
 EXP-0095 / NEG-0076 / SRC-0093: проверен перенос прогноза времени удержания плеча между порядками задач; преимущество над средним не установлено. См. research/program_evidence_audit/SWIFTIES_TRANSFER_REPORT.md.
