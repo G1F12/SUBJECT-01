@@ -1,0 +1,126 @@
+{
+  "experiment_id": "EXP-0100",
+  "classification": "CONDITIONAL_DESIGN_SENSITIVITY_NOT_EFFICACY",
+  "protocol_sha256_lf": "22c8cd816a443fa5a34ce093020d66adc090f49577c42679caa1a18cff4d6fd4",
+  "runner_sha256_lf": "d570d5ebebcd02ac3468ae81c528a71d8622972bf609e1cc13dd9fbc9b5c8124",
+  "source": "SRC-0098",
+  "assumptions": {
+    "test": "independent equal-variance two-group noncentral t",
+    "one_sided_alpha": 0.05,
+    "desired_power": 0.8,
+    "target_pp": 20.0,
+    "source_md95_percent_grand_mean": [
+      25.9,
+      29.7,
+      33.7
+    ],
+    "standard_deviation_mapping": "MD95 / z(0.975), hypothetical percentage points",
+    "missing_data": "none",
+    "sample_sizes": "per group"
+  },
+  "scenarios": [
+    {
+      "md95_pct_of_grand_mean": 25.9,
+      "assumed_sd_change_pp": 13.214528534348537,
+      "true_contrast_pp": 20.0,
+      "n_per_group": null,
+      "power_any_n_under_boundary_null": 0.05,
+      "reason": "true effect equals 20 percentage point superiority boundary; rejection probability equals alpha"
+    },
+    {
+      "md95_pct_of_grand_mean": 25.9,
+      "assumed_sd_change_pp": 13.214528534348537,
+      "true_contrast_pp": 22.0,
+      "n_per_group": 541,
+      "power_at_n": 0.8003296498533129,
+      "power_at_n_minus_1": 0.7996848899221083
+    },
+    {
+      "md95_pct_of_grand_mean": 25.9,
+      "assumed_sd_change_pp": 13.214528534348537,
+      "true_contrast_pp": 25.0,
+      "n_per_group": 88,
+      "power_at_n": 0.8037801366703132,
+      "power_at_n_minus_1": 0.7997819915381654
+    },
+    {
+      "md95_pct_of_grand_mean": 25.9,
+      "assumed_sd_change_pp": 13.214528534348537,
+      "true_contrast_pp": 30.0,
+      "n_per_group": 23,
+      "power_at_n": 0.8110036907316831,
+      "power_at_n_minus_1": 0.7950909852578293
+    },
+    {
+      "md95_pct_of_grand_mean": 29.7,
+      "assumed_sd_change_pp": 15.153339670662222,
+      "true_contrast_pp": 20.0,
+      "n_per_group": null,
+      "power_any_n_under_boundary_null": 0.05,
+      "reason": "true effect equals 20 percentage point superiority boundary; rejection probability equals alpha"
+    },
+    {
+      "md95_pct_of_grand_mean": 29.7,
+      "assumed_sd_change_pp": 15.153339670662222,
+      "true_contrast_pp": 22.0,
+      "n_per_group": 711,
+      "power_at_n": 0.8002410224743288,
+      "power_at_n_minus_1": 0.799750672124952
+    },
+    {
+      "md95_pct_of_grand_mean": 29.7,
+      "assumed_sd_change_pp": 15.153339670662222,
+      "true_contrast_pp": 25.0,
+      "n_per_group": 115,
+      "power_at_n": 0.8022705570738966,
+      "power_at_n_minus_1": 0.7992159668089103
+    },
+    {
+      "md95_pct_of_grand_mean": 29.7,
+      "assumed_sd_change_pp": 15.153339670662222,
+      "true_contrast_pp": 30.0,
+      "n_per_group": 30,
+      "power_at_n": 0.8108434116639167,
+      "power_at_n_minus_1": 0.798844280972337
+    },
+    {
+      "md95_pct_of_grand_mean": 33.7,
+      "assumed_sd_change_pp": 17.19419349836084,
+      "true_contrast_pp": 20.0,
+      "n_per_group": null,
+      "power_any_n_under_boundary_null": 0.05,
+      "reason": "true effect equals 20 percentage point superiority boundary; rejection probability equals alpha"
+    },
+    {
+      "md95_pct_of_grand_mean": 33.7,
+      "assumed_sd_change_pp": 17.19419349836084,
+      "true_contrast_pp": 22.0,
+      "n_per_group": 915,
+      "power_at_n": 0.8001585125131774,
+      "power_at_n_minus_1": 0.7997776106717558
+    },
+    {
+      "md95_pct_of_grand_mean": 33.7,
+      "assumed_sd_change_pp": 17.19419349836084,
+      "true_contrast_pp": 25.0,
+      "n_per_group": 147,
+      "power_at_n": 0.8002233365490125,
+      "power_at_n_minus_1": 0.7978327253635623
+    },
+    {
+      "md95_pct_of_grand_mean": 33.7,
+      "assumed_sd_change_pp": 17.19419349836084,
+      "true_contrast_pp": 30.0,
+      "n_per_group": 38,
+      "power_at_n": 0.8070173365574707,
+      "power_at_n_minus_1": 0.7975912863683888
+    }
+  ],
+  "limitations": [
+    "secondary published aggregates, no raw source data",
+    "source single-joint isometric protocol not leg press",
+    "individual variability and trial conditions may differ",
+    "one-sided t does not establish joint multidomain success",
+    "no actual intervention effect or probability of success inferred"
+  ]
+}

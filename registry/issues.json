@@ -441,5 +441,23 @@
     ],
     "required_inputs": "Author mapping of Bp fields to trials, peak selection or averaging, unit conversion, inclusion and missingness rules and analysis-ready original script.",
     "progress": "Prespecified quality gate failed; predictive analysis held. A local author request is drafted and unsent; alternative mean is diagnostic only."
+  },
+  {
+    "id": "ISS-0036",
+    "date": "2026-11-20",
+    "title": "FORCE20 confirmation design lacks task-specific repeatability and justified effect margin",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0100 shows power to establish a lower confidence bound above the 20% force contrast depends strongly on unmeasured task-specific variability and assumed true margin; the boundary itself cannot yield high power for a strict superiority test.",
+    "related_experiments": [
+      "EXP-0100"
+    ],
+    "related_issues": [
+      "ISS-0021",
+      "ISS-0029",
+      "ISS-0032"
+    ],
+    "required_inputs": "Independent test-retest force and body mass measurements in the actual multicondition protocol, control change-score variance, target contrast and confidence coverage, independent joint-outcome thresholds and preregistered prospective analysis.",
+    "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation."
   }
 ]

@@ -648,5 +648,13 @@
     "title": "Prespecified MVC source-quality gate fails",
     "statement": "Best-of-three processing does not reproduce any of the nine published condition-by-time means within the prespecified 2 N; primary recovery predictor was not executed.",
     "reason": "Source methods and apparent supplementary field aggregation have an unresolved interpretation; a post-hoc mean-of-three matches closely but cannot be promoted to prespecified primary analysis."
+  },
+  {
+    "id": "NEG-0081",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0100",
+    "title": "No finite sample size gives high power strictly beyond threshold when truth equals it",
+    "statement": "For a valid one-sided 5% test of contrast >20 percentage points under the stipulated model, true contrast exactly 20 yields rejection probability 5%, regardless of sample size; 80% power cannot be achieved at the boundary.",
+    "reason": "The true parameter is on the null boundary; sample-size planning requires an effect margin above the target and a variance estimate, not an assumption that 20% is itself sufficient for high probability of a lower bound above 20%."
   }
 ]

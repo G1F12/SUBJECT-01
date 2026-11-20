@@ -1699,5 +1699,24 @@
       "article_doi": "10.1371/journal.pone.0112090",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "id": "SRC-0098",
+    "date": "2026-11-20",
+    "name": "Slade et al. between-day MVIC reliability study",
+    "type": "primary_paper",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/FORCE_DETECTABILITY_REPORT.md",
+    "doi": "10.7717/peerj.20848",
+    "url": "https://doi.org/10.7717/peerj.20848",
+    "calibration_review": {
+      "access": "Open CC BY 4.0 article, published aggregate summaries reviewed; individual supplementary data not used.",
+      "scope": "18 adults across 4 visits, isometric knee, elbow and grip methods; knee between-day MD95 25.9–33.7% of grand mean; not a direct leg press or individual baseline error estimate."
+    },
+    "external_provenance": {
+      "license": "CC BY 4.0",
+      "publication_year": 2026,
+      "aggregate_provenance": "article between-day reliability results; no raw data extraction"
+    }
   }
 ]

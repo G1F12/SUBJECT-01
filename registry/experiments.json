@@ -2844,5 +2844,33 @@
     "limits": "Predeclared quality gate fails; main prediction not executed. Mean-of-three is a post-hoc diagnostic, processing and column semantics require author clarification; no CPE45 or architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0100",
+    "date": "2026-11-20",
+    "name": "Conditional detectability of FORCE20 threshold",
+    "sources": [
+      "SRC-0098"
+    ],
+    "design": "Apply noncentral-t power calculations to explicitly hypothetical two-arm equal-variance change scores using three literature-derived MD95 inputs, targets 20/22/25/30 percentage points, and exact minimal n verification.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_force_detectability.py",
+    "inputs": "research/program_evidence_audit/FORCE_DETECTABILITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/FORCE_DETECTABILITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/FORCE_DETECTABILITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_force_detectability.py",
+    "results": {
+      "findings": [
+        "FND-0096"
+      ],
+      "negative_results": [
+        "NEG-0081"
+      ]
+    },
+    "limits": "Scenario design analysis based on published knee MVIC aggregates; fixed assumed SD, one-sided alpha, independent equal groups, not leg-press validation, actual power, efficacy or joint-profile outcome.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

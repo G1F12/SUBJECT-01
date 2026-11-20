@@ -811,5 +811,14 @@
     "statement": "Article-specified best-of-three yields 714.10/666.51/682.54 N for condition MT1 versus published 662/596/625 N; post-hoc mean-of-three yields 662.39/595.80/625.11 N. Trial mapping and processing are unconfirmed; this does not prove an error in the source.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0096",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0100",
+    "title": "Force threshold detectability depends strongly on uncertainty and effect margin",
+    "statement": "Under an illustrative two-group noncentral t model with SD of individual change 29.7/1.96 percentage points, the minimal n per group for 80% power to show a contrast >20 percentage points is 711 at true 22 and 115 at true 25. This is not an actual trial sample size or efficacy estimate.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

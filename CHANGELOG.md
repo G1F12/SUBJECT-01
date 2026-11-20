@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0100 / FND-0096 / NEG-0081 / ISS-0036: оценена условная статистическая различимость силового порога на основе литературной повторяемости. См. research/program_evidence_audit/FORCE_DETECTABILITY_REPORT.md.
+
 EXP-0099 / FND-0095 / NEG-0080 / ISS-0035: обнаружено расхождение агрегирования MVC и таблицы статьи, основной анализ остановлен по заранее заданному гейту. См. research/program_evidence_audit/MANUAL_WORK_RECOVERY_REPORT.md.
 
 EXP-0098 / FND-0094 / NEG-0079 / SRC-0096: исследована измеренная траектория восстановления изометрического момента и перенос прогноза. См. research/program_evidence_audit/PLANTAR_RECOVERY_REPORT.md.
