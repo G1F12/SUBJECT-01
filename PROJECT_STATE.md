@@ -1,3 +1,5 @@
+EXP-0099 / FND-0095 / NEG-0080 / ISS-0035: входной гейт повторных MVC провален из-за расхождения максимума и опубликованных средних; прогноз DATA_BLOCKED. См. research/program_evidence_audit/MANUAL_WORK_RECOVERY_REPORT.md.
+
 EXP-0098 / FND-0094 / NEG-0079 / SRC-0096: проверен прогноз восстановления момента голеностопа у 12 участников; преимущество над persistence не установлено. См. research/program_evidence_audit/PLANTAR_RECOVERY_REPORT.md.
 
 EXP-0097 / FND-0093 / NEG-0078 / ISS-0034: аудит открытых данных восстановления SRC-0095 выявил нерешённые связь ID и шкалу механики; DATA_BLOCKED. См. research/program_evidence_audit/JUDO_SOURCE_REPORT.md.

@@ -425,5 +425,21 @@
     ],
     "required_inputs": "Pseudonymous subject and session crosswalk, condition order, raw repetition counts and processing definitions, calibrated force, velocity and peak-power records with units and time stamps.",
     "progress": "Source and hashes checked; local request draft prepared but not sent. Quantitative admission is DATA_BLOCKED pending clarification."
+  },
+  {
+    "id": "ISS-0035",
+    "date": "2026-11-20",
+    "title": "SRC-0097 MVC trial aggregation does not reproduce published table under stated method",
+    "status": "open",
+    "priority": "high",
+    "description": "EXP-0099 finds the article-described best of three differs materially from published Table 1 while mean of the three supplementary values matches closely. Field mapping and processing must be clarified before interpreting the primary force endpoint.",
+    "related_experiments": [
+      "EXP-0099"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Author mapping of Bp fields to trials, peak selection or averaging, unit conversion, inclusion and missingness rules and analysis-ready original script.",
+    "progress": "Prespecified quality gate failed; predictive analysis held. A local author request is drafted and unsent; alternative mean is diagnostic only."
   }
 ]

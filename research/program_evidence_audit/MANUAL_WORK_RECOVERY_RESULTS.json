@@ -1,0 +1,108 @@
+{
+  "experiment_id": "EXP-0099",
+  "classification": "PRESPECIFIED_QUALITY_GATE_FAILED_DIAGNOSTIC_ONLY",
+  "source_sha256_bytes": "a7bd93d472be62049f782598a28d34536199e6515b58b136da099507b3c63b1f",
+  "protocol_sha256_lf": "c616e99bc3218ff4a3ea16d0099d64aca246802dc8691d4d579cd0a16ea93269",
+  "runner_sha256_lf": "61cf0c4f64008988bd12a702c8f55cfde1ea951768108f3712933bf7ea27e9ec",
+  "unique_numeric_ids": 18,
+  "admitted_people": 17,
+  "invalid_sessions": 2,
+  "excluded_people_lt_two_sessions": 1,
+  "unit_conversion_N_per_kilogram_force": 9.80665,
+  "condition_summaries": {
+    "1": {
+      "n": 17,
+      "published_rounded_N": [
+        662,
+        596,
+        625
+      ],
+      "prespecified_best_of_three_mean_N": [
+        714.0971785294118,
+        666.5060829411765,
+        682.5428399999997
+      ],
+      "best_minus_published_N": [
+        52.09717852941185,
+        70.50608294117649,
+        57.54283999999973
+      ],
+      "posthoc_mean_of_three_mean_N": [
+        662.3911356862744,
+        595.8020593137253,
+        625.1066369607843
+      ],
+      "posthoc_mean_minus_published_N": [
+        0.3911356862744242,
+        -0.1979406862747055,
+        0.10663696078427165
+      ]
+    },
+    "2": {
+      "n": 17,
+      "published_rounded_N": [
+        642,
+        608,
+        622
+      ],
+      "prespecified_best_of_three_mean_N": [
+        684.4464838235294,
+        656.5263744117647,
+        694.7146232352941
+      ],
+      "best_minus_published_N": [
+        42.446483823529434,
+        48.526374411764664,
+        72.71462323529408
+      ],
+      "posthoc_mean_of_three_mean_N": [
+        641.2972238235295,
+        607.5892680392158,
+        622.1069557843136
+      ],
+      "posthoc_mean_minus_published_N": [
+        -0.7027761764704792,
+        -0.4107319607842328,
+        0.10695578431364083
+      ]
+    },
+    "3": {
+      "n": 17,
+      "published_rounded_N": [
+        645,
+        634,
+        582
+      ],
+      "prespecified_best_of_three_mean_N": [
+        695.0030541176469,
+        681.8506058823529,
+        639.3358938235294
+      ],
+      "best_minus_published_N": [
+        50.00305411764691,
+        47.85060588235285,
+        57.33589382352943
+      ],
+      "posthoc_mean_of_three_mean_N": [
+        643.816186862745,
+        633.8364783333334,
+        581.7074035294117
+      ],
+      "posthoc_mean_minus_published_N": [
+        -1.1838131372550151,
+        -0.16352166666661105,
+        -0.29259647058825067
+      ]
+    }
+  },
+  "preregistered_table_agreement_gate": "FAIL",
+  "primary_predictive_analysis": "DATA_BLOCKED",
+  "alternative_mean_aggregation": "POST_HOC_DIAGNOSTIC_NOT_PRIMARY",
+  "limitations": [
+    "published article, table and initial rows seen",
+    "best vs mean discrepancy not a proof of incorrect source",
+    "trial field mapping or processing may differ from the assumed interpretation",
+    "no actual force-displacement work or CPE45",
+    "no architecture or human enhancement outcome"
+  ]
+}

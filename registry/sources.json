@@ -1678,5 +1678,26 @@
       "article_license": "CC BY 4.0",
       "data_license": "unspecified in repository"
     }
+  },
+  {
+    "id": "SRC-0097",
+    "date": "2026-11-20",
+    "name": "Mathiassen et al. repetitive manual work individual recovery data",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/MANUAL_WORK_RECOVERY_REPORT.md",
+    "doi": "10.1371/journal.pone.0112090.s001",
+    "url": "https://doi.org/10.1371/journal.pone.0112090.s001",
+    "calibration_review": {
+      "access": "PLOS Dataset S1 openly downloadable, byte SHA256 recorded; CC BY 4.0 article.",
+      "scope": "MVC shoulder trials before, after and one hour after repetitive work in three conditions. Article best-of-three versus table matching mean-of-three requires clarification; no measured force-displacement work."
+    },
+    "external_provenance": {
+      "version": "Dataset S1 2014",
+      "file_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0112090.s001&type=supplementary",
+      "sha256": "a7bd93d472be62049f782598a28d34536199e6515b58b136da099507b3c63b1f",
+      "article_doi": "10.1371/journal.pone.0112090",
+      "license": "CC BY 4.0"
+    }
   }
 ]

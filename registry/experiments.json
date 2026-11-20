@@ -2816,5 +2816,33 @@
     "limits": "Published small selected cohort, initial rows seen, LOSO training overlap and bootstrap conditional on fitted predictions, stimulation before MVC, no unexposed control or work, no whole-architecture outcome.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0099",
+    "date": "2026-11-20",
+    "name": "Shoulder MVC recovery source quality gate",
+    "sources": [
+      "SRC-0097"
+    ],
+    "design": "Prespecify best-of-three conversion and article table reproduction before grouped LOSO prediction; perform post-hoc alternative aggregation only as diagnostic when source agreement gate fails.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_manual_work_recovery.py",
+    "inputs": "research/program_evidence_audit/MANUAL_WORK_RECOVERY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MANUAL_WORK_RECOVERY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MANUAL_WORK_RECOVERY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_manual_work_recovery.py <Dataset-S1.xlsx>",
+    "results": {
+      "findings": [
+        "FND-0095"
+      ],
+      "negative_results": [
+        "NEG-0080"
+      ]
+    },
+    "limits": "Predeclared quality gate fails; main prediction not executed. Mean-of-three is a post-hoc diagnostic, processing and column semantics require author clarification; no CPE45 or architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

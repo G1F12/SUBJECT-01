@@ -640,5 +640,13 @@
     "title": "Recovery predictor advantage over persistence not established",
     "statement": "In participant-held-out prediction of 10-minute torque, normalized linear model MAE 13.14 Nm versus persistence 18.32 Nm; paired bootstrap advantage 5.18 Nm [−1.55, 12.06].",
     "reason": "The interval includes zero in a small selected previously published cohort; bootstrap holds predictions fixed and overlapping LOSO fits are not independently validated."
+  },
+  {
+    "id": "NEG-0080",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0099",
+    "title": "Prespecified MVC source-quality gate fails",
+    "statement": "Best-of-three processing does not reproduce any of the nine published condition-by-time means within the prespecified 2 N; primary recovery predictor was not executed.",
+    "reason": "Source methods and apparent supplementary field aggregation have an unresolved interpretation; a post-hoc mean-of-three matches closely but cannot be promoted to prespecified primary analysis."
   }
 ]
