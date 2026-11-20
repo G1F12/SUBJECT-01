@@ -1816,5 +1816,26 @@
       "md5": "2f8a8fcb1b8e4fd1361ce938ead90d33",
       "sha256": "4b0b7dc8e13439bb96d0afa1bbd2a55a57fbeda7d46ea879ecf953785b9d2351"
     }
+  },
+  {
+    "id": "SRC-0104",
+    "date": "2026-11-20",
+    "name": "Kudzia et al. leg force and force control with fatigue",
+    "type": "published_study",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/FORCE_CONTROL_SOURCE_REPORT.md",
+    "doi": "10.14814/phy2.70498",
+    "url": "https://doi.org/10.14814/phy2.70498",
+    "calibration_review": {
+      "access": "Open article; linked Zenodo v1 ZIP downloaded and publisher MD5 verified, containing only README and license. GitHub main inspected at commit 330dbca093e462771545e230deba0f11f16d1486; individual records not obtained.",
+      "scope": "18 healthy participants, leg maximum force, force-control responsiveness and variability in constrained pre/fatigue tasks. No direct mechanical work or CPE45."
+    },
+    "external_provenance": {
+      "version": "Zenodo v1",
+      "archive_url": "https://zenodo.org/api/records/8200773/files/pkudzia/ForceControl_Fatigue-v1.zip/content",
+      "sha256": "83df07ab13b0a4fa9c5b9f6f8722ad21c91250528c48ae7c7406cb04036baeb7",
+      "md5": "b65f9ac1c44566a3bd22e36dee497a99",
+      "github_commit": "330dbca093e462771545e230deba0f11f16d1486"
+    }
   }
 ]

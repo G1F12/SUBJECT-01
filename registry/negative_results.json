@@ -728,5 +728,13 @@
     "title": "STS archive fails independent-record provenance gate",
     "statement": "Two pairs of differently labelled text files in the 60-file archive are byte-identical; processed rows are not linked to verified recordings.",
     "reason": "File duplication and unresolved row-to-recording mapping prevent treating all paths as independent participants for external model testing."
+  },
+  {
+    "id": "NEG-0091",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0111",
+    "title": "Linked force-control archive has no individual data",
+    "statement": "The article-linked 1251-byte Zenodo v1 ZIP contains only LICENSE and README.md; public GitHub tree at the inspected commit likewise.",
+    "reason": "No participant records or analysis scripts were obtained from the linked release, preventing independent paired reanalysis; another data location may exist."
   }
 ]

@@ -484,5 +484,21 @@
     ],
     "required_inputs": "Author explanation and corrected recordings or alias mapping, processed-row-to-recording mapping, data dictionary, processing code and reuse conditions.",
     "progress": "Figshare v2 archive byte hashes and publisher MD5 verified; local request drafted, not sent. No independent-person model evaluation admitted."
+  },
+  {
+    "id": "ISS-0038",
+    "date": "2026-11-20",
+    "title": "Published joint force-control study links an archive without individual records",
+    "status": "open",
+    "priority": "medium",
+    "description": "EXP-0111 verified that article-linked Zenodo v1 and inspected GitHub tree contain only license and README. Group means do not identify individual joint performance or uncertainty.",
+    "related_experiments": [
+      "EXP-0111"
+    ],
+    "related_issues": [
+      "ISS-0032"
+    ],
+    "required_inputs": "Corrected data archive or authorized de-identified participant-by-condition force and control records, target settings, timestamps, processing code, exclusions and reuse conditions.",
+    "progress": "Publisher MD5 and ZIP SHA-256 verified; author request drafted but not sent. Published group outcomes remain scoped to constrained task."
   }
 ]

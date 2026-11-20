@@ -910,5 +910,14 @@
     "statement": "Figshare v2 has 60 raw TXT paths and 58 unique SHA-256, with two duplicated pairs in the Men folder; processed 660x34 CSV has no exactly duplicated rows or columns. Reasons and participant mapping remain unknown.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0107",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0111",
+    "title": "Published cohort combines leg force and force-control outcomes under fatigue",
+    "statement": "In 18 healthy participants the article reports lower maximum leg force and altered responsiveness and hold variability after fatiguing tasks. Group-level findings support jointly measuring these channels, not enhancement or individual joint target success.",
+    "confidence": "source_metadata_and_scope_checked",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,0 +1,11 @@
+{
+  "source": "10.14814/phy2.70498",
+  "note": "Published rounded group mean outcomes for pre-fatigue and final-fatigue; not paired individual records.",
+  "participants": 18,
+  "outcomes": {
+    "MVC_bodyweights": {"pre": 2.95, "final": 2.20},
+    "rise_time_ms": {"pre": 303, "final": 373},
+    "bandwidth_Hz": {"pre": 1.33, "final": 1.00},
+    "hold_variability_percent": {"pre": 0.61, "final": 2.83}
+  }
+}

@@ -3152,5 +3152,33 @@
     "limits": "Article first TXT record and first three CSV rows viewed before audit protocol; identical files do not establish identities or reason; no direct force work or joint target outcome.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0111",
+    "date": "2026-11-20",
+    "name": "Force and control joint outcomes and linked archive audit",
+    "sources": [
+      "SRC-0104"
+    ],
+    "design": "Post-view descriptive arithmetic on published force and force-control group means; byte-check and inventory the article-linked Zenodo archive.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_force_control_source.py",
+    "inputs": "research/program_evidence_audit/FORCE_CONTROL_SOURCE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/FORCE_CONTROL_SOURCE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/FORCE_CONTROL_SOURCE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_force_control_source.py <linked-zenodo-zip>",
+    "results": {
+      "findings": [
+        "FND-0107"
+      ],
+      "negative_results": [
+        "NEG-0091"
+      ]
+    },
+    "limits": "Post-view grouped outcomes; linked ZIP contains no participant data; ratios of rounded means are not paired mean changes; no equal-work, CPE45, or architecture validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

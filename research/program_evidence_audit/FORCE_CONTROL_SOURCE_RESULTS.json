@@ -1,0 +1,49 @@
+{
+  "experiment_id": "EXP-0111",
+  "classification": "POST_VIEW_GROUP_OUTCOMES_ARCHIVE_AUDIT",
+  "archive_sha256_bytes": "83df07ab13b0a4fa9c5b9f6f8722ad21c91250528c48ae7c7406cb04036baeb7",
+  "archive_md5_bytes": "b65f9ac1c44566a3bd22e36dee497a99",
+  "archive_file_inventory": [
+    {
+      "name": "LICENSE",
+      "size": 1070
+    },
+    {
+      "name": "README.md",
+      "size": 22
+    }
+  ],
+  "github_inspected_commit": "330dbca093e462771545e230deba0f11f16d1486",
+  "input_sha256_lf": "37ffe0ea4017d6a3d989ec61545e42cf9ca9ed88e6e982c01faa7459f18c3431",
+  "protocol_sha256_lf": "bc3364602a8ada4f72efa648831bcab971db5b5e5470d700a521540933749468",
+  "runner_sha256_lf": "7157221fe0586c7b7bf32807a9d00df84fd7e34c2ca5fdd200c5d16808681054",
+  "participants": 18,
+  "group_means_arithmetic": {
+    "MVC_bodyweights": {
+      "change_absolute": -0.75,
+      "final_pre_ratio": 0.7457627118644068,
+      "percent_change_ratio_of_group_means": -25.423728813559322
+    },
+    "rise_time_ms": {
+      "change_absolute": 70.0,
+      "final_pre_ratio": 1.231023102310231,
+      "percent_change_ratio_of_group_means": 23.102310231023093
+    },
+    "bandwidth_Hz": {
+      "change_absolute": -0.33000000000000007,
+      "final_pre_ratio": 0.7518796992481203,
+      "percent_change_ratio_of_group_means": -24.812030075187973
+    },
+    "hold_variability_percent": {
+      "change_absolute": 2.22,
+      "final_pre_ratio": 4.639344262295082,
+      "percent_change_ratio_of_group_means": 363.9344262295082
+    }
+  },
+  "limits": [
+    "published results and archive were previewed before protocol",
+    "ratio of rounded means is not the mean individual percentage",
+    "archive lacks individual records; results cannot be reproduced from it",
+    "no measured external work or CPE45; no healthy-person enhancement claim"
+  ]
+}
