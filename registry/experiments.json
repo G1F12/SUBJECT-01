@@ -3180,5 +3180,33 @@
     "limits": "Post-view grouped outcomes; linked ZIP contains no participant data; ratios of rounded means are not paired mean changes; no equal-work, CPE45, or architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0112",
+    "date": "2026-11-20",
+    "name": "Individual hip force test-retest and device comparison",
+    "sources": [
+      "SRC-0105"
+    ],
+    "design": "Partly previewed 25-person cohort; verify 1200-record structure and article device-bias gate, then describe paired day changes in eight dependent strata with participant bootstrap and day-one device limits.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_hip_reliability.py",
+    "inputs": "research/program_evidence_audit/HIP_RELIABILITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/HIP_RELIABILITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/HIP_RELIABILITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_hip_reliability.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0108"
+      ],
+      "negative_results": [
+        "NEG-0092"
+      ]
+    },
+    "limits": "First 3 records and article previewed; 25 cyclists predominantly men; single-joint test, participant learning and biological variability; no direct leg-press false-positive estimate, work or whole-system outcome.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

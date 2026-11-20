@@ -459,7 +459,8 @@
     "priority": "high",
     "description": "EXP-0100 shows power to establish a lower confidence bound above the 20% force contrast depends strongly on unmeasured task-specific variability and assumed true margin; the boundary itself cannot yield high power for a strict superiority test.",
     "related_experiments": [
-      "EXP-0100"
+      "EXP-0100",
+      "EXP-0112"
     ],
     "related_issues": [
       "ISS-0021",
@@ -467,7 +468,7 @@
       "ISS-0032"
     ],
     "required_inputs": "Independent test-retest force and body mass measurements in the actual multicondition protocol, control change-score variance, target contrast and confidence coverage, independent joint-outcome thresholds and preregistered prospective analysis.",
-    "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation."
+    "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation. EXP-0112 adds independent individual hip test-retest contrasts; some exceed 20%, but task-specific leg-press reliability and body mass still required."
   },
   {
     "id": "ISS-0037",

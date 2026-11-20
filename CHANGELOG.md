@@ -1,3 +1,5 @@
+- EXP-0112: analyzed open participant-level hip force retests and device comparison, highlighting task-specific uncertainty near 20% without extrapolating to leg press.
+
 - EXP-0111: audited published same-cohort leg-force and control findings and found the linked data archive contains only README and license; raised ISS-0038.
 
 - EXP-0110: audited accessible Figshare STS v2 archive and found two byte-identical pairs among 60 participant-labelled recordings; raised ISS-0037.

@@ -1837,5 +1837,26 @@
       "md5": "b65f9ac1c44566a3bd22e36dee497a99",
       "github_commit": "330dbca093e462771545e230deba0f11f16d1486"
     }
+  },
+  {
+    "id": "SRC-0105",
+    "date": "2026-11-20",
+    "name": "Hip strength test-retest in recreational cyclists",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/HIP_RELIABILITY_REPORT.md",
+    "doi": "10.23634/MMU.00643463",
+    "url": "https://doi.org/10.23634/MMU.00643463",
+    "calibration_review": {
+      "access": "CC BY 4.0 public XLSX downloaded, publisher MD5 and byte SHA-256 verified; article and first three participant records previewed.",
+      "scope": "25 recreational cyclists, repeated unilateral isometric hip flexion/extension at two sessions with two devices. Not leg press or CPE45; device flexion positions differ."
+    },
+    "external_provenance": {
+      "article_doi": "10.1371/journal.pone.0328143",
+      "file_url": "https://ndownloader.figshare.com/files/65401212",
+      "md5": "ae0e9cbcb5a6de5ea2a176bb54a25f67",
+      "sha256": "d699188590e249a992d8290eee02edf5864c7b47a017f0857b66d88c1cde77b2",
+      "license": "CC BY 4.0"
+    }
   }
 ]

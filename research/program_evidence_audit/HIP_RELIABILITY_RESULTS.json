@@ -1,0 +1,192 @@
+{
+  "experiment_id": "EXP-0112",
+  "classification": "PARTIALLY_PREVIEWED_INDEPENDENT_RETEST_COHORT",
+  "source_sha256_bytes": "d699188590e249a992d8290eee02edf5864c7b47a017f0857b66d88c1cde77b2",
+  "source_md5_bytes": "ae0e9cbcb5a6de5ea2a176bb54a25f67",
+  "protocol_sha256_lf": "3f90a26026f09a0ad4886faeb732acd40f4566ada0c2c77471ce3546906ed597",
+  "runner_sha256_lf": "1c1209ae161425f448be626bd367a25eb814b0ebfed2cb5a2ea65d169dcc38e9",
+  "participants": 25,
+  "records": 1200,
+  "source_gate_extension_bias_day_leg_N": [
+    45.38400000000001,
+    29.010666666666662,
+    28.039999999999996,
+    30.275999999999996
+  ],
+  "strata": {
+    "hf_ff_l": {
+      "n": 25,
+      "day1_mean_N": 206.33333333333331,
+      "day2_mean_N": 218.46666666666664,
+      "mean_change_percent": 7.35342906739066,
+      "median_change_percent": 2.071823204419898,
+      "central_95_percentiles": [
+        -9.290655472473656,
+        31.678562389268528
+      ],
+      "mean_change_bootstrap_95": [
+        2.2551152685988898,
+        12.76503950730768
+      ],
+      "increase_ge_20_percent": 6,
+      "decrease_le_minus_20_percent": 0
+    },
+    "hf_ff_r": {
+      "n": 25,
+      "day1_mean_N": 219.66666666666669,
+      "day2_mean_N": 225.07999999999996,
+      "mean_change_percent": 4.66282247612224,
+      "median_change_percent": 0.6369426751592355,
+      "central_95_percentiles": [
+        -18.318359853694403,
+        39.87903870761355
+      ],
+      "mean_change_bootstrap_95": [
+        -1.6811827821361534,
+        11.396917326306156
+      ],
+      "increase_ge_20_percent": 5,
+      "decrease_le_minus_20_percent": 1
+    },
+    "hf_hhd_l": {
+      "n": 25,
+      "day1_mean_N": 198.116,
+      "day2_mean_N": 213.80933333333334,
+      "mean_change_percent": 11.485536658523706,
+      "median_change_percent": 6.517311608961296,
+      "central_95_percentiles": [
+        -11.121685060806263,
+        52.950744171968466
+      ],
+      "mean_change_bootstrap_95": [
+        4.294549705008482,
+        19.992720567281616
+      ],
+      "increase_ge_20_percent": 7,
+      "decrease_le_minus_20_percent": 0
+    },
+    "hf_hhd_r": {
+      "n": 25,
+      "day1_mean_N": 218.75066666666666,
+      "day2_mean_N": 225.95733333333334,
+      "mean_change_percent": 6.3119693553451075,
+      "median_change_percent": 7.700557700557686,
+      "central_95_percentiles": [
+        -19.34880095379169,
+        36.730728574004615
+      ],
+      "mean_change_bootstrap_95": [
+        0.4296532299291363,
+        12.437246087334
+      ],
+      "increase_ge_20_percent": 3,
+      "decrease_le_minus_20_percent": 1
+    },
+    "he_ff_l": {
+      "n": 25,
+      "day1_mean_N": 251.57333333333332,
+      "day2_mean_N": 241.70666666666665,
+      "mean_change_percent": 1.6499324877614878,
+      "median_change_percent": -7.684918347742564,
+      "central_95_percentiles": [
+        -32.75068261530201,
+        83.69352505743204
+      ],
+      "mean_change_bootstrap_95": [
+        -9.639539157719545,
+        16.04299656417502
+      ],
+      "increase_ge_20_percent": 4,
+      "decrease_le_minus_20_percent": 3
+    },
+    "he_ff_r": {
+      "n": 25,
+      "day1_mean_N": 243.86666666666665,
+      "day2_mean_N": 247.56,
+      "mean_change_percent": 2.4925912529050884,
+      "median_change_percent": 2.3679417122040025,
+      "central_95_percentiles": [
+        -27.619322545329766,
+        35.636004524805585
+      ],
+      "mean_change_bootstrap_95": [
+        -4.031827264679367,
+        9.58359289998404
+      ],
+      "increase_ge_20_percent": 3,
+      "decrease_le_minus_20_percent": 2
+    },
+    "he_hhd_l": {
+      "n": 25,
+      "day1_mean_N": 206.18933333333334,
+      "day2_mean_N": 213.66666666666669,
+      "mean_change_percent": 6.6605217281239035,
+      "median_change_percent": 1.0946845728473154,
+      "central_95_percentiles": [
+        -28.320743309773334,
+        59.142848950183314
+      ],
+      "mean_change_bootstrap_95": [
+        -2.2340905502954147,
+        16.418023074772243
+      ],
+      "increase_ge_20_percent": 6,
+      "decrease_le_minus_20_percent": 2
+    },
+    "he_hhd_r": {
+      "n": 25,
+      "day1_mean_N": 214.856,
+      "day2_mean_N": 217.28400000000002,
+      "mean_change_percent": 3.0268490101285783,
+      "median_change_percent": 1.3873922413792927,
+      "central_95_percentiles": [
+        -26.662296927543892,
+        45.81793328535679
+      ],
+      "mean_change_bootstrap_95": [
+        -5.394010533217214,
+        12.481274835634268
+      ],
+      "increase_ge_20_percent": 6,
+      "decrease_le_minus_20_percent": 4
+    }
+  },
+  "day1_device_agreement": {
+    "hf_l": {
+      "bias_ff_minus_hhd_N": 8.217333333333334,
+      "limits_mean_plus_minus_1_96_sd_N": [
+        -64.73631530907522,
+        81.17098197574188
+      ]
+    },
+    "hf_r": {
+      "bias_ff_minus_hhd_N": 0.9160000000000036,
+      "limits_mean_plus_minus_1_96_sd_N": [
+        -76.41991030487998,
+        78.25191030487997
+      ]
+    },
+    "he_l": {
+      "bias_ff_minus_hhd_N": 45.38400000000001,
+      "limits_mean_plus_minus_1_96_sd_N": [
+        -80.95711552291019,
+        171.7251155229102
+      ]
+    },
+    "he_r": {
+      "bias_ff_minus_hhd_N": 29.010666666666662,
+      "limits_mean_plus_minus_1_96_sd_N": [
+        -65.14873525386697,
+        123.1700685872003
+      ]
+    }
+  },
+  "limits": [
+    "article and first 3 data rows viewed before protocol",
+    "25 recreational cyclists 22 men; single-joint isometric hip task",
+    "day-to-day changes include learning and real variation",
+    "not a false positive rate or direct calibration for leg press FORCE20",
+    "device flexion positions differ",
+    "no work heat motor control recovery or CPE45"
+  ]
+}

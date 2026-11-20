@@ -736,5 +736,13 @@
     "title": "Linked force-control archive has no individual data",
     "statement": "The article-linked 1251-byte Zenodo v1 ZIP contains only LICENSE and README.md; public GitHub tree at the inspected commit likewise.",
     "reason": "No participant records or analysis scripts were obtained from the linked release, preventing independent paired reanalysis; another data location may exist."
+  },
+  {
+    "id": "NEG-0092",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0112",
+    "title": "Hip test-retest variability cannot establish FORCE20 in a different task",
+    "statement": "Some changes across ~72 hours exceed ±20% in each of several hip task/device strata; this does not estimate measurement precision of the project leg-press protocol.",
+    "reason": "Single-joint isometric testing, different devices and poses, small partly previewed predominantly male cohort and possible real changes or learning prevent transfer."
   }
 ]

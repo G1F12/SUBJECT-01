@@ -1,3 +1,5 @@
+EXP-0112 / FND-0108 / NEG-0092 / SRC-0105: индивидуальные повторы силы бедра у 25 велосипедистов показывают изменения ≥20% в части случаев; перенос на жим не установлен (ISS-0036). См. research/program_evidence_audit/HIP_RELIABILITY_REPORT.md.
+
 EXP-0111 / FND-0107 / NEG-0091 / SRC-0104 / ISS-0038: опубликованы совместные групповые сила и управление усилием после нагрузки; архив по ссылке статьи не содержит индивидуальных данных. См. research/program_evidence_audit/FORCE_CONTROL_SOURCE_REPORT.md.
 
 EXP-0110 / FND-0106 / NEG-0090 / SRC-0103 / ISS-0037: открытый архив STS v2 содержит две пары идентичных файлов; соответствие обработанных строк и людей не установлено. См. research/program_evidence_audit/STS_ARCHIVE_AUDIT_REPORT.md.

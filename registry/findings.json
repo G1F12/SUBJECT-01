@@ -919,5 +919,14 @@
     "statement": "In 18 healthy participants the article reports lower maximum leg force and altered responsiveness and hold variability after fatiguing tasks. Group-level findings support jointly measuring these channels, not enhancement or individual joint target success.",
     "confidence": "source_metadata_and_scope_checked",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0108",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0112",
+    "title": "Individual repeat force changes can exceed 20 percent in a separate hip task",
+    "statement": "Across eight dependent hip-force strata, 3 to 7 of 25 participants increased by at least 20% between sessions; decreases of at least 20% occurred in 0 to 4. Differences may reflect biology, learning and error, and do not quantify leg-press false positives.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
