@@ -552,5 +552,13 @@
     "title": "Independent inverse dynamics does not resolve the moment scale in both participants",
     "statement": "AB01 reconstructed moment/source slope divided by mass is 1.089; AB02 is 0.574. Both meet prespecified angle and correlation quality gates, but AB02 does not meet either Nm or Nm/kg scale gate. ISS-0028 remains open.",
     "reason": "Only two participants and reconstructed processing; author processing, force assignment, filtering, and possible scale differences require verification."
+  },
+  {
+    "id": "NEG-0069",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0086",
+    "title": "Late 15-minute thermal forecast has no demonstrated advantage over persistence",
+    "statement": "For the 60–45 min increment, MAE is 0.329 C for continued variable-power Pennes vs 0.250 C persistence; paired persistence-minus-model MAE CI [-0.198, 0.026] C includes zero.",
+    "reason": "Same previously reviewed cohort, assumed power timestamps, sparse ambient inputs, and different model initialization and measurement-site definitions."
   }
 ]

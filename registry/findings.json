@@ -703,5 +703,14 @@
     "statement": "For the conditional 2700 s 60/40 protocol, D2 yields 403–432 kJ against 583.2 kJ demanded across three assumed fatigue rates; coupling transfers D2 heat to the thermal solver with energy closure. This is model-only, D2 transfer previously failed, and no whole-architecture effect is established.",
     "confidence": "model_only",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0084",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0086",
+    "title": "Exploratory 60-minute thermal transfer with recorded workload",
+    "statement": "On 23 previously viewed McLaughlin participants, 60–1 minute temperature-change MAE is 0.733 C for variable-power Pennes vs 1.376 C for persistence and 1.078 C for participant-mass lumped balance; Pennes superiority CI relative to persistence [0.227, 0.972] C. Rectal versus mean-body endpoints and timestamp assumptions limit interpretation.",
+    "confidence": "exploratory",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

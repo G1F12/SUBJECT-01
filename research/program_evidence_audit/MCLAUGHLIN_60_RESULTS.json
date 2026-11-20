@@ -1,0 +1,98 @@
+{
+  "experiment_id": "EXP-0086",
+  "classification": "EXPLORATORY_REUSED_COHORT_LONGER_HORIZON",
+  "source_sha256_bytes": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531",
+  "protocol_sha256_lf": "7c4547d0e4108a22d2b95dd8dc1d506e3b8311f255f65ba28c4edbe85f6038b1",
+  "runner_sha256_lf": "6705ffce55d29964e1310efc0228392e10646b3bd0f56b489f3b1bad9b23c6d7",
+  "thermal_sha256_lf": "4feed20a8a9793b0a8817d8564f1366d91bf2d6de8ba24158b6de10699f638fb",
+  "lumped_reference_sha256_lf": "5b56a10ed0669d1d69f326253d21372dfba3d7e21c280bfd4f6234afdd8286b3",
+  "included_participants": 23,
+  "excluded_count": 1,
+  "mean_actual_work_J": 582033.9130434783,
+  "mean_constant_work_J": 614266.9565217391,
+  "time_label_assumption": "numeric labels are interval ends",
+  "metrics": {
+    "full": {
+      "mean_observed_change_C": 1.3669565217391304,
+      "models": {
+        "persistence": {
+          "mae_C": 1.3756521739130434,
+          "bias_C": -1.3669565217391304,
+          "paired_mae_minus_pennes_C": 0.6425983193152259,
+          "paired_ci95_C": [
+            0.2272990418560572,
+            0.9719983312311986
+          ]
+        },
+        "pennes_variable": {
+          "mae_C": 0.7330538545978176,
+          "bias_C": 0.3766475394664681,
+          "paired_mae_minus_pennes_C": 0.0,
+          "paired_ci95_C": [
+            0.0,
+            0.0
+          ]
+        },
+        "pennes_constant": {
+          "mae_C": 0.8998898484042128,
+          "bias_C": 0.6423250543573625,
+          "paired_mae_minus_pennes_C": 0.16683599380639527,
+          "paired_ci95_C": [
+            0.017693107418339078,
+            0.3453694748076717
+          ]
+        },
+        "lumped_variable": {
+          "mae_C": 1.0779355569321523,
+          "bias_C": 1.0408282273785063,
+          "paired_mae_minus_pennes_C": 0.34488170233433474,
+          "paired_ci95_C": [
+            0.14495636526688851,
+            0.5197360524043221
+          ]
+        }
+      }
+    },
+    "late": {
+      "mean_observed_change_C": 0.09217391304347722,
+      "models": {
+        "persistence": {
+          "mae_C": 0.2504347826086946,
+          "bias_C": -0.09217391304347722,
+          "paired_mae_minus_pennes_C": -0.07821793996363408,
+          "paired_ci95_C": [
+            -0.19789293093326027,
+            0.026001825630281087
+          ]
+        },
+        "pennes_variable": {
+          "mae_C": 0.3286527225723287,
+          "bias_C": 0.12844862215404804,
+          "paired_mae_minus_pennes_C": 0.0,
+          "paired_ci95_C": [
+            0.0,
+            0.0
+          ]
+        },
+        "pennes_constant": {
+          "mae_C": 0.36180603278219114,
+          "bias_C": 0.2433992220510421,
+          "paired_mae_minus_pennes_C": 0.033153310209862404,
+          "paired_ci95_C": [
+            -0.026543534277773895,
+            0.10054580676084013
+          ]
+        },
+        "lumped_variable": {
+          "mae_C": 0.3184841419619191,
+          "bias_C": 0.05496952494759486,
+          "paired_mae_minus_pennes_C": -0.010168580610409627,
+          "paired_ci95_C": [
+            -0.052896890926814724,
+            0.031577052890811946
+          ]
+        }
+      }
+    }
+  }
+}

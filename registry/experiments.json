@@ -2448,5 +2448,33 @@
     "limits": "D2 failed prior transfer; fatigue-to-force and heat allocation are hypothetical, no thermal feedback, tissue damage, motor function or post45, no in-vivo efficacy inference.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0086",
+    "date": "2026-11-20",
+    "name": "McLaughlin 60-minute thermal trajectory with power input",
+    "sources": [
+      "SRC-0086"
+    ],
+    "design": "Retrospective full 60–1 minute and late 60–45 minute rectal-temperature changes; compare variable and constant power Pennes, persistence, and individual-mass lumped comparator.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_mclaughlin_60.py",
+    "inputs": "research/program_evidence_audit/MCLAUGHLIN_60_PROTOCOL.md",
+    "report": "research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/MCLAUGHLIN_60_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_mclaughlin_60.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0084"
+      ],
+      "negative_results": [
+        "NEG-0069"
+      ]
+    },
+    "limits": "Previously reviewed same cohort; assumed power timestamps and early climate; lumped predicts mean body, outcome rectal; no post45 function, new cohort or CPE45 validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0086 / FND-0084 / NEG-0069: повторный анализ температуры до 60-й минуты. См. research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md.
+
 EXP-0085 / FND-0083: сопряжены модельные работа, тепло и условный силовой интерфейс; сохранены ограничения. См. research/program_evidence_audit/COUPLED_ENERGY_THERMAL_REPORT.md.
 
 EXP-0084 / FND-0082: проверка условного масштаба на удержанных участниках и аудит массы. См. research/program_evidence_audit/MOMENT_HOLDOUT_REPORT.md.
