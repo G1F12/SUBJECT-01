@@ -1,0 +1,206 @@
+{
+  "experiment_id": "EXP-0108",
+  "classification": "POST_HOC_SENSITIVITY_NOT_VALIDATION",
+  "source_sha256_bytes": "978540bca4ad10a8c4dcda2389a57d4c41b800df78338dcd73085299418b75cc",
+  "protocol_sha256_lf": "ad79e8671b37b3572abb142efe7f5653e9faa456cc6c077df6de88a383f0bb81",
+  "runner_sha256_lf": "26647ef6313dfeab12f9d99ba40e6ffd73a1c1af8aa4074bc88e59cf18383251",
+  "engine_sha256_lf": "1711bde73191d16544b585adc3f357a9022c58494bb708209aa61f305068688b",
+  "candidate_text_sha256_lf": "d65c9902671a38d579cef63c799bd7219836c16def2ae149bfadaf98dabbcf9c",
+  "previous_candidate_result_sha256_lf": "e078af981e1678d64fb8750b4e436b0fc17f4f59aebc67d40b87d267c9d24079",
+  "prior_cohort_result_sha256_lf": "41f663100173300460475da72b262c43909c6764c00a405ba597b945e80968a9",
+  "legacy_model_sha256_lf": "788edc67e2f145abd4d4bb38f21f8be54240d6ff9de1480816f26a2530f83df2",
+  "legacy_config_sha256_lf": "53208f66432e59cd9c5c98718064805c1479be9729da43047d9c319ec5be8a6c",
+  "integrated_model_sha256_lf": "cf4739e9e671d4ebac00af9532d1fff0b8544768e30e7dbed5a333fb09aad67c",
+  "integrated_parameters_sha256_lf": "68172ec0ed7d531335b137d06030f123e6c00b05d524a57b49b7056c41807e3e",
+  "participants": 18,
+  "max_energy_balance_abs_error_J": 1.7695128917694092e-08,
+  "scenarios": {
+    "dt1.0_rate0.0_cap1.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.0_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.0_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.001_cap1.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.001_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.001_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.003_cap1.0": {
+      "events": 15,
+      "censored": 3,
+      "mean_event_or_censor_s": 728.5,
+      "mean_work_J": 471080.293942842,
+      "truncated_model_mae_s": 649.3055555555555,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 15,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.003_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 538024.1060353201,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt1.0_rate0.003_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.0_cap1.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.0_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.0_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.001_cap1.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.001_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.001_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.003_cap1.0": {
+      "events": 15,
+      "censored": 3,
+      "mean_event_or_censor_s": 728.6666666666666,
+      "mean_work_J": 471075.33539585053,
+      "truncated_model_mae_s": 649.1388888888889,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 15,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.003_cap1.5": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 538023.9621718414,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    },
+    "dt0.5_rate0.003_cap2.0": {
+      "events": 0,
+      "censored": 18,
+      "mean_event_or_censor_s": 2700.0,
+      "mean_work_J": 540000.0,
+      "truncated_model_mae_s": 1757.0277777777778,
+      "control_lopo_mae_s": 283.8545751633988,
+      "cap_binding_at_event": 0,
+      "strictly_below_cap_at_event": 0
+    }
+  },
+  "limits": [
+    "previously viewed source and outcomes",
+    "capacity scenarios are not measured capability or validated range",
+    "model threshold differs from voluntary/cadence endpoint",
+    "censoring and unmodelled warmup/cognitive conditions",
+    "no CPE45 or whole-architecture inference"
+  ]
+}

@@ -883,5 +883,14 @@
     "statement": "In both nonzero-rate scenarios, all 18 first threshold windows begin with internal demand already below 95% of nominal and output equal to internal demand within 1e-6 W. This is a post-hoc model-code observation, not a human mechanism or physical capacity validation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0104",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0108",
+    "title": "Separated-demand event depends strongly on assumed capacity",
+    "statement": "At fatigue rate 0.003/s, 15 of 18 D2-cap scenarios cross the conditional threshold with initial capacity=PPO, versus zero before 2700 s with capacity=1.5 PPO; these are unmeasured assumptions, with no physiological or target validation.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

@@ -3068,5 +3068,33 @@
     "limits": "Post-hoc audit of previously viewed 18-person cohort and threshold, first time point only; no observed internal demand or direct endurance, CPE45 or whole architecture validation.",
     "external_validation": "NOT_EXTERNALLY_VALIDATED",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0108",
+    "date": "2026-11-20",
+    "name": "D2-cap event sensitivity to unobserved initial capacity",
+    "sources": [
+      "SRC-0101"
+    ],
+    "design": "Retrospective sensitivity on 18 previously reviewed participants with fixed 80% PPO demand, three capacity factors and three fatigue scenarios; compare time steps, censoring, total work and mismatched observed outcomes.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_souron_capacity.py",
+    "inputs": "research/program_evidence_audit/SOURON_CAPACITY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/SOURON_CAPACITY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/SOURON_CAPACITY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_souron_capacity.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0104"
+      ],
+      "negative_results": [
+        "NEG-0088"
+      ]
+    },
+    "limits": "Post-hoc on reviewed cohort; initial capacity factors hypothetical, threshold differs from voluntary/cadence stop, modelled 2700-second work extends beyond observed cessation and is not observed human work.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

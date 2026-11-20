@@ -704,5 +704,13 @@
     "title": "EXP-0106 threshold cannot be interpreted as energy-capacity limitation",
     "statement": "At first threshold crossing for both nonzero fatigue rates, none of 18 simulated participants has output below D2 internal demand by more than 1e-6 W.",
     "reason": "The model reduces internal demand as fatigue accumulates; at these initial threshold times it delivers that reduced demand. This does not rule out energy deficits elsewhere."
+  },
+  {
+    "id": "NEG-0088",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0108",
+    "title": "D2-cap threshold lacks an identified physiological capacity",
+    "statement": "Changing only assumed initial capacity from 1 to 1.5 times PPO changes the number of conditional events from 15 to zero in the selected fatigue scenario.",
+    "reason": "Capacity and its fatigue evolution are not observed; model threshold differs from voluntary or cadence cessation, and candidate outputs are evaluated on an already viewed cohort."
   }
 ]
