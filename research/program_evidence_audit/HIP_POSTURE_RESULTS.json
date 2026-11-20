@@ -1,0 +1,57 @@
+{
+  "experiment_id": "EXP-0088",
+  "classification": "EXPLORATORY_REUSED_DATA_AND_MODEL_AUDIT",
+  "source_sha256_bytes": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
+  "protocol_sha256_lf": "f4c060a54083ce7aa1e876c4804a97940e7374e4acac6ed5ff4fedfd072df0ff",
+  "runner_sha256_lf": "0eaea4601bcb3dfb181bcfdbb609e51771fcccce4fccdd7af2433d27cf4d236b",
+  "chain_source_sha256_lf": "f01ec4c94f013e738d284428100659e0fe68281283310d796a222b42c55d5bfe",
+  "hip_parameter_ast_read_count": 0,
+  "hip_variation": {
+    "40.0": {
+      "all_scenario_outputs_equal": true
+    },
+    "78.0": {
+      "all_scenario_outputs_equal": true
+    },
+    "110.0": {
+      "all_scenario_outputs_equal": true
+    }
+  },
+  "participants": 11,
+  "baseline100_force_N": 2601.1,
+  "baseline110_force_N": 3016.9,
+  "strategy2_110_force_N": 3668.5,
+  "strategy2_110_gain_pct": 21.6,
+  "metrics": {
+    "knee100": {
+      "mae_N": 486.3950174529628,
+      "bias_N": 87.49832359468449
+    },
+    "knee110": {
+      "mae_N": 631.8612891707173,
+      "bias_N": 503.29832359468475
+    },
+    "loso_mean": {
+      "mae_N": 508.7850221198536,
+      "bias_N": -2.0670334131202914e-13
+    }
+  },
+  "paired_comparator_minus_110": {
+    "knee100": {
+      "mean_mae_delta_N": -145.4662717177546,
+      "ci95_N": [
+        -340.20000000000016,
+        81.3337282822455
+      ]
+    },
+    "loso_mean": {
+      "mean_mae_delta_N": -123.07626705086373,
+      "ci95_N": [
+        -380.80281642185037,
+        166.53576872429102
+      ]
+    }
+  },
+  "conditional_superiority_both": false,
+  "whole_architecture": "NOT_ASSESSED"
+}

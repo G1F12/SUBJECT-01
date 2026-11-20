@@ -230,5 +230,16 @@
       "DEC-0027"
     ],
     "supersedes": []
+  },
+  {
+    "id": "DEC-0029",
+    "date": "2026-11-20",
+    "title": "Limit force-chain posture claims pending explicit hip geometry",
+    "decision": "Record FND-0086 and NEG-0071. Retain EXP-0061 and dependent outputs as fixed-chord static model scenarios; do not treat passed hip angle as an evaluated independent input or 110-degree re-run as full posture validation. Add ISS-0029 and require measured, mechanically coherent hip/trunk geometry before robustness claims. Maintain A conditional, FORCE20/ADAPT25 and CPE45 unvalidated, whole-system HOLD and interventions NO_GO.",
+    "rationale": "The hip argument is never read and altering it changes none of the outputs; the 110-degree rerun on the previously viewed Santos cohort does not establish better prediction.",
+    "amends": [
+      "DEC-0028"
+    ],
+    "supersedes": []
   }
 ]

@@ -1,3 +1,5 @@
+EXP-0088 / FND-0086 / NEG-0071 / DEC-0029 / ISS-0029: угол таза в LP не используется; пересчёт колена 110° не показал преимущества на повторно рассмотренной когорте. См. research/program_evidence_audit/HIP_POSTURE_REPORT.md.
+
 EXP-0087 / FND-0085 / NEG-0070 / DEC-0028: ограниченная внешняя проверка индивидуальных сил жима; точная геометрия и причинный эффект остаются открыты. См. research/program_evidence_audit/SANTOS_FORCE_REPORT.md.
 
 EXP-0086 / FND-0084 / NEG-0069: температурный прогноз до 60-й минуты; преимущество на последнем 15-минутном участке не установлено. См. research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md.

@@ -307,5 +307,26 @@
     ],
     "required_inputs": "Author processing or verified configuration specifying platform moment reference, COP transformation, axes and filters plus unnormalized versus normalized matched ID outputs; prospectively verify on independent participants.",
     "progress": "EXP-0082 reconstructs IK and ID; scale/mass is 1.089 for AB01 but 0.574 for AB02, so preregistered two-person gate not met. EXP-0083 shows scale/mass 0.990 and 0.952 if horizontal force-platform moments are zeroed; validity of this convention is unconfirmed. EXP-0084 gives held-participant scale/mass 0.734 and 0.893 under vertical-only assumption; both pass broad range but AB03 remains 26.6% from unity, convention unconfirmed."
+  },
+  {
+    "id": "ISS-0029",
+    "date": "2026-11-20",
+    "title": "EXP-0061 ignores its hip flexion input in posture kinematics",
+    "status": "open",
+    "priority": "high",
+    "description": "The model passes theta_hip_flex_deg but never reads it inside posture_kinematics; fixed hip-ankle chord direction and knee flexion define the chain. All 100/140 degree LP scenarios are numerically invariant to hip input 40–110 degrees. This cannot support an independent hip posture robustness or actual subject geometry claim.",
+    "related_experiments": [
+      "EXP-0061",
+      "EXP-0064",
+      "EXP-0069",
+      "EXP-0077",
+      "EXP-0085",
+      "EXP-0088"
+    ],
+    "related_issues": [
+      "ISS-0021",
+      "ISS-0023"
+    ],
+    "required_inputs": "Explicit trunk orientation, measured hip, knee, ankle and foot positions and task geometry; biomechanically valid force-length and moment-arm effects; held-participant forces and prespecified comparisons against simple baseline."
   }
 ]

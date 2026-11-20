@@ -721,5 +721,14 @@
     "statement": "Eleven participants had W0 mean peak force 2513.6 N and mean paired W0-to-POS change 19.37% [9.26,31.69] bootstrap CI; five participants increased at least 20%. No parallel control, individual mass or geometry, and no inference of target or architecture efficacy.",
     "confidence": "exploratory",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0086",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0088",
+    "title": "Closed-chain hip posture input is unused",
+    "statement": "EXP-0061 posture_kinematics has zero reads of theta_hip_flex_deg; changing both posture inputs to 40, 78 or 110 degrees leaves all saved LP scenario outputs unchanged. This is a model implementation limitation, not a physiological invariance.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]

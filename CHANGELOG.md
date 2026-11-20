@@ -1,5 +1,7 @@
 # Changelog (append-only research history)
 
+EXP-0088 / FND-0086 / NEG-0071 / DEC-0029 / ISS-0029: выявлен неиспользуемый угол таза, выполнен ограниченный пересчёт колена. См. research/program_evidence_audit/HIP_POSTURE_REPORT.md.
+
 EXP-0087 / FND-0085 / NEG-0070 / DEC-0028: добавлена ограниченная открытая проверка силы жима и её траектории. См. research/program_evidence_audit/SANTOS_FORCE_REPORT.md.
 
 EXP-0086 / FND-0084 / NEG-0069: повторный анализ температуры до 60-й минуты. См. research/program_evidence_audit/MCLAUGHLIN_60_REPORT.md.

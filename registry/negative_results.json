@@ -568,5 +568,13 @@
     "title": "Cross-protocol nominal force has no established advantage over cohort mean",
     "statement": "Unfitted EXP-0061 100-degree baseline predicts 11 Santos W0 peak forces at MAE 486.4 N versus 508.8 N for leave-one-person-out mean; paired mean difference [−36.1,85.2] N includes zero.",
     "reason": "Approximate 110-degree task and apparatus differ from model; individual geometry and mass unavailable. Does not reject model in its original domain."
+  },
+  {
+    "id": "NEG-0071",
+    "date": "2026-11-20",
+    "experiment_id": "EXP-0088",
+    "title": "Knee-angle matching alone fails to establish improved force prediction",
+    "statement": "On the previously viewed Santos cohort, nominal 110-degree model MAE 631.9 N vs 486.4 N at 100 degrees and 508.8 N for participant-held-out mean. Both paired intervals include zero; prespecified superiority for 110 degrees is not established.",
+    "reason": "Other geometry, individual anthropometry, and independent hip posture response are absent; this is a reused sample, not a formal test of the whole architecture."
   }
 ]

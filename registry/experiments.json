@@ -2504,5 +2504,36 @@
     "limits": "Eleven men, angle/device differ, no subject mass or geometry, no parallel control and one W3 label unexplained. Does not validate exact EXP-0061 or functional enhancement.",
     "external_validation": "PARTIAL_CROSS_PROTOCOL_ONLY",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0088",
+    "date": "2026-11-20",
+    "name": "Hip parameter audit and exploratory 110-degree force transfer",
+    "sources": [
+      "SRC-0090",
+      "SRC-0080",
+      "SRC-0081",
+      "SRC-0082"
+    ],
+    "design": "AST and numerical hip-parameter invariance over all scenarios, then fixed-geometry knee 110-degree LP versus prior 100-degree and LOSO force reference on reused Santos W0.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_hip_posture.py",
+    "inputs": "research/program_evidence_audit/HIP_POSTURE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/HIP_POSTURE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/HIP_POSTURE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_hip_posture.py <downloaded-xlsx>",
+    "results": {
+      "findings": [
+        "FND-0086"
+      ],
+      "negative_results": [
+        "NEG-0071"
+      ]
+    },
+    "limits": "Hip parameter invariant because unused, not physiology; knee-only post hoc comparison uses same 11 participants and ignores individual geometry; no whole-system validation.",
+    "external_validation": "NOT_EXTERNALLY_VALIDATED",
+    "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
