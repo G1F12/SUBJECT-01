@@ -912,5 +912,13 @@
     "title": "Work-based fatigue models fail out-of-sample: Cumulative Joules and resistance volume do not outperform empirical mean retention baselines",
     "statement": "Hypothesis that accumulated mechanical work determines residual muscular force capacity is rejected on open human datasets: work-based linear and proportional depletion models fail to statistically outperform a trivial empirical mean retention baseline (Jutlah: dMAE = +0.53 W [-2.96, +4.29] W; Norbury 5m: dMAE = -4.08 N [-8.49, -0.29] N; Norbury 45m: dMAE = -4.38 N [-7.61, -1.91] N). Direct coupling of work and force modules in Architecture A remains rejected (NO-GO).",
     "reason": "Scalar accumulation of mechanical work ignores intensity domain boundaries (sub-CP vs supra-CP), differential central vs peripheral fatigue mechanisms, and non-linear recovery kinetics, overfitting cohort-specific fatigue rates without generalizing to held-out individuals."
+  },
+  {
+    "id": "NEG-0114",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0134",
+    "title": "Scalar work-to-force module coupling remains permanently rejected across all candidate open datasets; missing decisive measurement specified",
+    "statement": "No open human dataset supports direct scalar coupling between performed mechanical work and residual muscular capacity. On every verified candidate, work or volume fails out-of-sample against context-indexed retention baselines. Direct module coupling in Architecture A remains rejected (NO-GO) pending dedicated laboratory measurement of continuous work in Joules, core temperature, and post-load MVC over a 2700 s timeline.",
+    "reason": "Empirical evidence from both resistance and cycling protocols conclusively proves that individual fatigue susceptibility is non-scalar and cannot be predicted from cumulative work alone."
   }
 ]

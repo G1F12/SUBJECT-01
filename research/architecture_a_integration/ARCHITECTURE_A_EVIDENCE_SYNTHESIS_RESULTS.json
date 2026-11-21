@@ -156,11 +156,11 @@
         "depoli_work_post_kJ": 73.0,
         "depoli_retention_pre_pct": 71.36,
         "depoli_retention_post_pct": 75.08,
-        "recovery_kinetics_retention_5min_pct": 91.0,
+        "recovery_kinetics_retention_5min_pct": 91.01,
         "recovery_kinetics_retention_45min_LL_pct": 93.01,
         "recovery_kinetics_retention_45min_HL_pct": 93.67,
         "recovery_kinetics_retention_45min_pct": 93.34,
-        "recovery_kinetics_retention_24h_pct": 100.1,
+        "recovery_kinetics_retention_24h_pct": 99.1,
         "transfer_context_limitation": "Recovery was measured in Norbury after 3 sets of resistance leg press (4134-5065 kg\u00b7reps, not measured in Joules). Force retention at 45 min was 93.01% (LL) and 93.67% (HL), averaging 93.34%. The previously cited '98.3%' and '~4 kJ' were unverified conjectures and have been removed from active conclusions. This cannot be transferred to 2700 s of heavy cycling (619-902 kJ), where sprint training (de Poli SIT, ~70 kJ) causes a 25-29% force drop and fatiguing knee extensions (Kudzia) cause a 25.4% force drop and 4.6x motor control worsening. EXP-0133 decisively proved that neither workload volume nor intensity predicts residual force or power better than simple baselines."
       },
       "baseline_comparison": {
@@ -335,8 +335,8 @@
       "from_module": "Module 4",
       "to_module": "Module 3",
       "input_contract": "Workload W (kJ or kg\u00b7reps), intensity domain, recovery time t_rec",
-      "measured_output": "Norbury LL vs HL force retention identical (91.04% vs 91.01%); recovery restores 98.3% at 45 min after 3 sets of leg press; de Poli SIT work +11.1% with +3.72 pp retention",
-      "baseline_comparison": "Volume linear model MAE 54.69 N vs Mean retention baseline 50.61 N (paired diff -4.08 N [-8.49, -0.29] N strictly favoring baseline)",
+      "measured_output": "Norbury LL vs HL force retention: 91.01% at 5m, 93.01% (LL) / 93.67% (HL) at 45m (mean 93.34%), 99.10% at 24h (refuting contested 98.3%); de Poli SIT work +11.1% with +3.72 pp retention",
+      "baseline_comparison": "Volume linear model MAE 50.86 N vs Mean retention baseline 46.49 N (paired diff -4.38 N [-7.61, -1.91] N strictly favoring baseline)",
       "uncertainty_bounds": "Paired dMAE 95% CI [-8.49, -0.29] N; non-transferable to 2700 s endurance",
       "operational_boundary": "Exercise must be managed across intensity domains; sub-CP work does not deplete force capacity; post-endurance force requires multi-hour recovery"
     },
@@ -404,7 +404,7 @@
       "calculation_method": "Empirical individual MVC ratio at 45 min post-exercise across 12 participants in LL and HL conditions",
       "experimental_conditions": "3 sets of unilateral leg press to failure (4134-5065 kg\u00b7reps, not Joules), 12 trained males",
       "evidence_level": "RAW_HUMAN_OBSERVATION",
-      "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.0%, 45-min retention 93.01% (LL) / 93.67% (HL) (mean 93.34%), 24-h retention 100.1%",
+      "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.01%, 45-min retention 93.01% (LL) / 93.67% (HL) (mean 93.34%), 24-h retention 99.10% (ratio of means 99.04%)",
       "epistemic_limitation": "Applies strictly to a brief 3-set resistance workout in kg\u00b7reps; contested numbers 98.3% and ~4 kJ refuted and removed; completely non-transferable to 2700 s of heavy cycling (619-902 kJ)"
     },
     "CPE45_DUTY_CYCLE_0_59_TO_0_92": {
@@ -505,7 +505,7 @@
     },
     "joint_system_compatibility_summary": {
       "force_and_tissue_compatibility": "CONFLICTING_IN_DEEP_FLEXION (SF=1.285 at 100\u00b0; requires 140\u00b0 or quasi-static rate cap)",
-      "force_and_endurance_compatibility": "CONFLICTING_WITHOUT_RECOVERY (Intermittent CPE45 reduces work and induces central/peripheral fatigue; Norbury 98.3% does not apply)",
+      "force_and_endurance_compatibility": "CONFLICTING_WITHOUT_RECOVERY (Intermittent CPE45 reduces work and induces central/peripheral fatigue; Norbury resistance recovery does not apply to endurance)",
       "rate_and_tissue_compatibility": "UNCONFIRMED_IN_VIVO (Santos has no control cohort and no tendon measurements; SF0>=1.776 is model-only)",
       "overall_status": "CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD"
     }

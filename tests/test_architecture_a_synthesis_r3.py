@@ -137,11 +137,11 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertAlmostEqual(outs["depoli_retention_post_pct"], 75.08, places=1)
 
         # Recovery timeline (audited Norbury empirical numbers)
-        self.assertAlmostEqual(outs["recovery_kinetics_retention_5min_pct"], 91.0, places=1)
+        self.assertAlmostEqual(outs["recovery_kinetics_retention_5min_pct"], 91.01, places=1)
         self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_LL_pct"], 93.01, places=1)
         self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_HL_pct"], 93.67, places=1)
         self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_pct"], 93.34, places=1)
-        self.assertAlmostEqual(outs["recovery_kinetics_retention_24h_pct"], 100.1, places=1)
+        self.assertAlmostEqual(outs["recovery_kinetics_retention_24h_pct"], 99.10, places=1)
 
     # =========================================================================
     # Module 4: 4-Layer Pennes Bioheat Solver for 2700 s CPE45

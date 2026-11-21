@@ -28,6 +28,7 @@
 - **Total Post-Fresh Observations:** 567 trials.
 - **Workload Metric:** Actual external mechanical work per sprint in Joules ($TW$, mean = 3661.6 J; mean cumulative work = 18702.8 J).
 - **Capacity Metric:** Sprint Peak Power output in Watts.
+- **Data Integrity Check:** Verified that accumulated mechanical work strictly includes only bouts prior to the predicted sprint.
 
 #### Cross-Validation Model Comparison:
 
@@ -35,11 +36,13 @@
 |---|---|---:|---:|---:|:---:|
 | **Unperturbed Persistence** | None ($P_k = P_1$) | 114.64 | -25.41 | [-34.20, -17.50] | Fails (fatigue exists) |
 | **Mean Retention Baseline** | Sprint index $k$ only | **89.23** | **0.00** | **[0.00, 0.00]** | **Best Simple Reference** |
+| **Sprint & Rest Baseline** | Sprint $k$ + Rest (s) | 89.83 | -0.60 | [-1.84, +0.65] | Context-Indexed Base |
 | **Cumulative Work Linear Model** | Cumulative work $W_{\text{cum}}$ (J) | 88.70 | +0.53 | [-2.96, +4.29] | Inconclusive (crosses zero) |
 | **Work + Recovery Duration Model** | $W_{\text{cum}}$ (J) + Rest (s) | 89.48 | -0.25 | [-3.87, +3.70] | Inconclusive (crosses zero) |
+| **Sprint, Rest & Work Model** | Sprint $k$ + Rest (s) + $W_{\text{cum}}$ | 91.98 | -2.75 | [-6.20, +0.45] | Overfitting / Degraded |
 | **Proportional D2 Depletion** | Proportional $1 - k \cdot W_{\text{cum}}$ | 105.96 | -16.73 | [-26.40, -8.10] | Strictly Refuted |
 
-**Key Finding:** Even when mechanical work is directly and accurately measured in Joules, adding cumulative work improves out-of-sample prediction by only **+0.53 W**, and the 95% CI **[-2.96, +4.29] W** includes zero. Adding recovery duration does not improve prediction (\Delta \text{MAE} = -0.25 W).
+**Key Finding:** Even when mechanical work is directly and accurately measured in Joules, adding cumulative work improves out-of-sample prediction by only **+0.53 W** over a sprint-index baseline (95% CI **[-2.96, +4.29] W** includes zero). Comparing Work + Rest against the Sprint & Rest baseline yields \Delta \text{MAE} = +0.36 W [-3.19, +4.24] W. Adding work to sprint index and rest regime actually worsens MAE to 91.98 W (\Delta \text{MAE} = -2.15 W [-5.54, +0.90] W).
 
 ---
 
@@ -48,6 +51,10 @@
 - **Cohort:** 12 active males performing unilateral leg press to failure under Low Load (30% 1RM) and High Load (70% 1RM).
 - **Total Workload Contrast:** Volume = 4134.4 kg·reps (LL) vs 5064.5 kg·reps (HL) (+22.5% volume difference).
 - **Capacity Metric:** Knee extensor MVIC force in Newtons measured at 5 min, 45 min, and 24 h post-load.
+- **Empirical Recovery Kinetics (24 pairs in primary XLSX):**
+  - **5 minutes:** 91.02%
+  - **45 minutes:** 93.34% (LL: 93.01%, HL: 93.67%)
+  - **24 hours:** **99.10%** (LL: 99.35%, HL: 98.85%)
 
 #### Multi-Delay Cross-Validation Comparison:
 
@@ -57,7 +64,7 @@
 | **45 minutes (2700 s)** | 61.42 | **46.49** | 50.86 | **-4.38** | **[-7.61, -1.91]** | **Base Superior (Vol Fails)** |
 | **24 hours (86400 s)** | **39.96** | 40.96 | 42.35 | -1.39 | [-3.45, +0.24] | Inconclusive |
 
-**Key Finding:** Across the entire acute and intermediate recovery timeline (5 min and 45 min), adding workload volume statistically significantly **worsens** out-of-sample prediction by -4.08 N and -4.38 N relative to a simple empirical retention baseline. Similarly, relative load intensity (% 1RM) offers no advantage.
+**Key Finding:** Across the entire acute and intermediate recovery timeline (5 min and 45 min), adding workload volume statistically significantly **worsens** out-of-sample prediction by -4.08 N and -4.38 N relative to a simple empirical retention baseline. At 45 minutes, MAE is **46.49 N (baseline) vs 50.86 N (volume model)**. At 24 hours, recovery reaches **99.10%** and persistence baseline achieves lowest error (40.96 N). Similarly, relative load intensity (% 1RM) offers no predictive advantage.
 
 ---
 

@@ -41,12 +41,15 @@ class TestWorkForceDecisiveTest(unittest.TestCase):
         self.assertEqual(j["participants"], 21)
         self.assertEqual(j["observations"], 567)
         self.assertTrue(j["work_measured_in_joules"])
+        self.assertIn("Strictly includes only sprints prior", j["work_accumulation_verified"])
         
         models = j["models_mae_W"]
         self.assertAlmostEqual(models["unperturbed_persistence"], 114.64, places=1)
         self.assertAlmostEqual(models["mean_retention_baseline"], 89.23, places=1)
+        self.assertAlmostEqual(models["sprint_and_rest_baseline"], 89.83, places=1)
         self.assertAlmostEqual(models["cumulative_work_linear_model"], 88.70, places=1)
         self.assertAlmostEqual(models["work_plus_rest_duration_model"], 89.48, places=1)
+        self.assertAlmostEqual(models["sprint_rest_and_work_model"], 91.98, places=1)
         self.assertAlmostEqual(models["proportional_d2_depletion_model"], 105.96, places=1)
 
         comp = j["paired_comparisons_vs_retention_baseline"]["cumulative_work_linear_model"]
@@ -60,6 +63,12 @@ class TestWorkForceDecisiveTest(unittest.TestCase):
         n = self.res["norbury_evaluation"]
         self.assertEqual(n["participants"], 12)
         self.assertEqual(n["observations"], 24)
+
+        # Empirical recovery kinetics checkpoint
+        rec = n["overall_empirical_recovery_pct"]
+        self.assertAlmostEqual(rec["5m"], 91.01, places=1)
+        self.assertAlmostEqual(rec["45m"], 93.34, places=1)
+        self.assertAlmostEqual(rec["24h"], 99.10, places=1)
 
         delays = n["delays_evaluated"]
         self.assertIn("5m", delays)

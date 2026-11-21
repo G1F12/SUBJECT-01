@@ -237,11 +237,11 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "depoli_work_post_kJ": depoli_sit["post_training"]["work_kJ_approx"],
             "depoli_retention_pre_pct": depoli_sit["pre_training"]["retention_percent"],
             "depoli_retention_post_pct": depoli_sit["post_training"]["retention_percent"],
-            "recovery_kinetics_retention_5min_pct": 91.0,
+            "recovery_kinetics_retention_5min_pct": 91.01,
             "recovery_kinetics_retention_45min_LL_pct": 93.01,
             "recovery_kinetics_retention_45min_HL_pct": 93.67,
             "recovery_kinetics_retention_45min_pct": 93.34,
-            "recovery_kinetics_retention_24h_pct": 100.1,
+            "recovery_kinetics_retention_24h_pct": 99.10,
             "transfer_context_limitation": (
                 "Recovery was measured in Norbury after 3 sets of resistance leg press (4134-5065 kg·reps, not measured in Joules). "
                 "Force retention at 45 min was 93.01% (LL) and 93.67% (HL), averaging 93.34%. The previously cited '98.3%' and '~4 kJ' "
@@ -420,8 +420,8 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "from_module": "Module 4",
             "to_module": "Module 3",
             "input_contract": "Workload W (kJ or kg·reps), intensity domain, recovery time t_rec",
-            "measured_output": "Norbury LL vs HL force retention identical (91.04% vs 91.01%); recovery restores 98.3% at 45 min after 3 sets of leg press; de Poli SIT work +11.1% with +3.72 pp retention",
-            "baseline_comparison": "Volume linear model MAE 54.69 N vs Mean retention baseline 50.61 N (paired diff -4.08 N [-8.49, -0.29] N strictly favoring baseline)",
+            "measured_output": "Norbury LL vs HL force retention: 91.01% at 5m, 93.01% (LL) / 93.67% (HL) at 45m (mean 93.34%), 99.10% at 24h (refuting contested 98.3%); de Poli SIT work +11.1% with +3.72 pp retention",
+            "baseline_comparison": "Volume linear model MAE 50.86 N vs Mean retention baseline 46.49 N (paired diff -4.38 N [-7.61, -1.91] N strictly favoring baseline)",
             "uncertainty_bounds": "Paired dMAE 95% CI [-8.49, -0.29] N; non-transferable to 2700 s endurance",
             "operational_boundary": "Exercise must be managed across intensity domains; sub-CP work does not deplete force capacity; post-endurance force requires multi-hour recovery",
         },
@@ -493,7 +493,7 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "calculation_method": "Empirical individual MVC ratio at 45 min post-exercise across 12 participants in LL and HL conditions",
             "experimental_conditions": "3 sets of unilateral leg press to failure (4134-5065 kg·reps, not Joules), 12 trained males",
             "evidence_level": "RAW_HUMAN_OBSERVATION",
-            "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.0%, 45-min retention 93.01% (LL) / 93.67% (HL) (mean 93.34%), 24-h retention 100.1%",
+            "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.01%, 45-min retention 93.01% (LL) / 93.67% (HL) (mean 93.34%), 24-h retention 99.10% (ratio of means 99.04%)",
             "epistemic_limitation": "Applies strictly to a brief 3-set resistance workout in kg·reps; contested numbers 98.3% and ~4 kJ refuted and removed; completely non-transferable to 2700 s of heavy cycling (619-902 kJ)",
         },
         "CPE45_DUTY_CYCLE_0_59_TO_0_92": {
@@ -575,7 +575,7 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
         },
         "joint_system_compatibility_summary": {
             "force_and_tissue_compatibility": "CONFLICTING_IN_DEEP_FLEXION (SF=1.285 at 100°; requires 140° or quasi-static rate cap)",
-            "force_and_endurance_compatibility": "CONFLICTING_WITHOUT_RECOVERY (Intermittent CPE45 reduces work and induces central/peripheral fatigue; Norbury 98.3% does not apply)",
+            "force_and_endurance_compatibility": "CONFLICTING_WITHOUT_RECOVERY (Intermittent CPE45 reduces work and induces central/peripheral fatigue; Norbury resistance recovery does not apply to endurance)",
             "rate_and_tissue_compatibility": "UNCONFIRMED_IN_VIVO (Santos has no control cohort and no tendon measurements; SF0>=1.776 is model-only)",
             "overall_status": "CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD",
         },
@@ -807,7 +807,7 @@ Master cross-module integration across all five computational and empirical modu
 | **ADAPT25 GAIN** | +18.35% at 14 d, +20.01% at 42 d | Santos et al. (SRC-0090), EXP-0128 | Within-subject mean bilateral leg press peak force across 10 participants | `RAW_HUMAN_OBSERVATION` | Observed within single training cohort; NO comparative control cohort exists; rate acceleration relative to control is UNASSESSED. |
 | **RESERVE SF0** | SF0 >= 1.776 | EXP-0128 (ADAPT25_TISSUE_TRAJECTORY) | Analytical ODE sensitivity: SF0 >= 1.50 * 1.1835 = 1.7753 | `COMPUTATIONAL_SIMULATION` | Model sensitivity limit; human in vivo tendon remodeling and strain were not measured in Santos. |
 | **MOTOR CONTROL** | CV = 2.1%, COP <= 0.045 m | Model proxy in synthesis; EXP-0111, EXP-0124 | Synthetic model threshold assumption | `SYNTHETIC_MODEL_PROXY` | Uncalibrated model proxy. Kudzia (EXP-0111) showed post-fatigue CV worsened to 2.83% (> 2.5%, ISS-0038). Post-CPE45 control unassessed. |
-| **RECOVERY** | 93.01% LL / 93.67% HL (mean 93.34%) at 45 min, 91.0% at 5 min | Norbury et al. (SRC-0111), EXP-0121, EXP-0130, EXP-0133 | Measured in 12 males after 3 sets of leg press (4134-5065 kg·reps) | `RAW_HUMAN_OBSERVATION` | Applies strictly to resistance exercise in kg·reps; contested 98.3% and ~4 kJ refuted; non-transferable to 2700 s heavy cycling (619-902 kJ). |
+| **RECOVERY** | 93.01% LL / 93.67% HL (mean 93.34%) at 45 min, 91.01% at 5 min, 99.10% at 24h | Norbury et al. (SRC-0111), EXP-0121, EXP-0130, EXP-0133 | Measured in 12 males after 3 sets of leg press (4134-5065 kg·reps) | `RAW_HUMAN_OBSERVATION` | Applies strictly to resistance exercise in kg·reps; contested 98.3% and ~4 kJ refuted; non-transferable to 2700 s heavy cycling (619-902 kJ). |
 | **CPE45 ENVELOPE** | D = 0.59 to 0.92, Work = 619 to 902 kJ | EXP-0063, EXP-0065, EXP-0131 | 4-layer Pennes bioheat solver on 4 climates over 2700 s | `COMPUTATIONAL_SIMULATION` | Continuous 360 W breaches 39.5 °C; intermittent D preserves T_core solely by cutting total mechanical work by 7% to 36% (EXP-0065). |
 
 ---
@@ -836,8 +836,8 @@ Master cross-module integration across all five computational and empirical modu
 +----------------------------------------------------+  +-------------------------------------------+
 |  MODULE 2: VISCOELASTIC TISSUE HAZARD & ODE        |  |  MODULE 3: 4-COMPONENT TRANSITION INTERFACE|
 |  - 100° dynamic 20 kN/s: SF = 1.285 < 1.50 (FAIL)  |  |  - Refutes scalar F = F0*(1 - f(W))       |
-|  - 140° dynamic 20 kN/s: SF = 1.747 >= 1.50 (PASS) |  |  - Norbury: 98.3% recovery at 45 min      |
-|  - Isolated quasi-static 4800 N proxy: SF = 2.05   |  |    applies to 3 sets leg press (~4 kJ)    |
+|  - 140° dynamic 20 kN/s: SF = 1.747 >= 1.50 (PASS) |  |  - Norbury: 93.34% at 45m, 99.10% at 24h   |
+|  - Isolated quasi-static 4800 N proxy: SF = 2.05   |  |    (refuted: contested 98.3% and ~4 kJ)   |
 |  - Santos gain +18.35% at 14d: zero deficit if     |  |  - de Poli: +11.1% work with +3.72 pp     |
 |    SF0 >= 1.776, but tendon unmeasured in vivo     |  |    retention in supra-critical sprints    |
 +----------------------------------------------------+  +-------------------------------------------+

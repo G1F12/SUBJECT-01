@@ -3811,5 +3811,38 @@
     "limits": "Evaluated on open healthy male cohorts (cycling sprints and leg press resistance exercise). Non-linear fatigue domains and local muscle fiber recruitment require multi-channel physiological monitoring.",
     "external_validation": "CROSS_DATASET_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "EXP-0134",
+    "date": "2026-11-21",
+    "name": "Open Data Candidate Audit & Multi-Factorial Transfer Boundary Verification",
+    "sources": [
+      "SRC-0102",
+      "SRC-0111",
+      "SRC-0040",
+      "SRC-0112",
+      "SRC-0101",
+      "SRC-0104"
+    ],
+    "design": "Systematic sifting and cross-validation audit of open candidate datasets offering joint mechanical work and residual muscular capacity (force/power) in the same session. Re-evaluated Norbury et al. from primary XLSX establishing exact recovery kinetics (91.01% at 5m, 93.34% at 45m, 99.10% at 24h, MAE 46.49 vs 50.86 N); verified that Jutlah work accumulation strictly precedes the predicted sprint and compared against multi-factorial sprint+rest baselines (89.83 W vs 89.48 W and 91.98 W); established data blockers for de Poli (REQUEST_ONLY_BLOCKED), Plantarflexion (DATA_BLOCKED by integral divergence and sign mismatch), Souron, and Kudzia.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_open_data_candidate_audit.py",
+    "inputs": "research/program_evidence_audit/OPEN_DATA_CANDIDATE_AUDIT_REPORT.md",
+    "report": "research/program_evidence_audit/OPEN_DATA_CANDIDATE_AUDIT_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/OPEN_DATA_CANDIDATE_AUDIT_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_open_data_candidate_audit.py",
+    "results": {
+      "findings": [
+        "FND-0130"
+      ],
+      "negative_results": [
+        "NEG-0114"
+      ]
+    },
+    "limits": "No open dataset currently available provides continuous cycling work in Joules together with synchronized pre/post isometric knee MVC at matched 2700 s duration.",
+    "external_validation": "CROSS_DATASET_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

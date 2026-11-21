@@ -1,0 +1,128 @@
+{
+  "experiment_id": "EXP-0134",
+  "findings": [
+    "FND-0130"
+  ],
+  "negative_results": [
+    "NEG-0114"
+  ],
+  "decisions": [
+    "DEC-0033"
+  ],
+  "candidates_evaluated": {
+    "SRC-0102_de_Poli_2026": {
+      "title": "Five Weeks of Sprint Interval Training Increase Absolute Power Output Within Severe-Intensity Domain",
+      "doi": "10.1002/ejsc.70089",
+      "access_status": "REQUEST_ONLY_BLOCKED",
+      "access_policy": "Data available on reasonable request from authors; per GOVERNANCE.md no requests are sent",
+      "cohort_size": 21,
+      "exercise_modality": "Continuous cycling at 150% RCP to exhaustion",
+      "work_measured_in_joules": true,
+      "work_measurement_details": "Continuous 5 Hz power recording multiplied by time to exhaustion",
+      "post_load_force_measured": true,
+      "post_load_timing": "25 ± 7 s post-exhaustion",
+      "available_open_variables": [
+        "Table 3 group mean ratios: SIT pre 71.36%, post 75.08% (+3.72 pp); Control pre 81.83%, post 80.81% (-1.02 pp)",
+        "Individual timeseries not publicly archived in OSF, Zenodo, or Figshare"
+      ],
+      "conclusion_tested": "Proves at group level that +11.1% increase in work was accompanied by higher force retention (+3.72 pp), refuting monotonic scalar work exhaustion, but participant-level prediction is blocked"
+    },
+    "SRC-0111_Norbury_2020": {
+      "title": "Unilateral Leg Press Training to Failure at 30% vs 70% 1RM",
+      "pmcid": "PMC4037563",
+      "access_status": "FULLY_OPEN_VERIFIED",
+      "cohort_size": 12,
+      "observations": 24,
+      "exercise_modality": "Unilateral leg press resistance exercise to failure (3 sets)",
+      "work_measured_in_joules": false,
+      "workload_metric": "Volume load in kg·repetitions (LL: 4134.4, HL: 5064.5)",
+      "post_load_force_measured": true,
+      "post_load_timing": "5 min (300 s), 45 min (2700 s), and 24 h (86400 s)",
+      "exact_empirical_recovery_pct": {
+        "5m": 91.02,
+        "45m_overall": 93.34,
+        "45m_LL": 93.01,
+        "45m_HL": 93.67,
+        "24h_overall": 99.1,
+        "24h_LL": 99.35,
+        "24h_HL": 98.85,
+        "24h_ratio_of_means": 99.04
+      },
+      "loso_mae_45m_N": {
+        "mean_retention_baseline": 46.49,
+        "volume_linear_model": 50.86,
+        "dmae_N": -4.38
+      },
+      "conclusion_tested": "Volume load statistically significantly worsens out-of-sample prediction vs baseline (46.49 N vs 50.86 N, dMAE = -4.38 N [-7.61, -1.91] N); recovery reaches 99.10% at 24h",
+      "limitation": "Workload is in kg·reps, not direct Joules (sled displacement not recorded)"
+    },
+    "SRC-0040_Jutlah_2026": {
+      "title": "Repeated Sprint Cycling Work and Peak Power Recovery across Inter-Sprint Rest Intervals",
+      "osf_id": "db3sk",
+      "access_status": "FULLY_OPEN_VERIFIED",
+      "cohort_size": 21,
+      "observations": 567,
+      "exercise_modality": "Repeated sprint cycling (10 x 6s, rests 12s, 18s, 24s)",
+      "work_measured_in_joules": true,
+      "work_accumulation_audit": "Verified: accumulated work strictly includes only sprints prior to predicted sprint (k-1 sprints)",
+      "post_load_capacity_measured": true,
+      "capacity_metric": "Peak power output in Watts (PPO)",
+      "loso_mae_W": {
+        "sprint_index_baseline": 89.23,
+        "sprint_plus_rest_baseline": 89.83,
+        "cumulative_work_linear_model": 88.7,
+        "work_plus_rest_duration_model": 89.48,
+        "sprint_rest_and_work_model": 91.98
+      },
+      "statistical_contrasts": {
+        "work_vs_sprint_baseline": {
+          "dmae_W": 0.53,
+          "ci95_W": [
+            -2.96,
+            4.29
+          ],
+          "outcome": "Inconclusive (crosses zero)"
+        },
+        "work_plus_rest_vs_sprint_rest_baseline": {
+          "dmae_W": 0.36,
+          "ci95_W": [
+            -3.19,
+            4.24
+          ],
+          "outcome": "Inconclusive (crosses zero)"
+        },
+        "sprint_rest_work_vs_sprint_rest_baseline": {
+          "dmae_W": -2.15,
+          "ci95_W": [
+            -5.54,
+            0.9
+          ],
+          "outcome": "Adding work degrades generalization (-2.15 W error increase)"
+        }
+      },
+      "conclusion_tested": "Direct mechanical work in Joules does not resolve residual peak power better than sprint+rest baseline",
+      "limitation": "Functional capacity endpoint is cycling peak power (Watts), not isometric joint contraction force (MVC Newtons)"
+    },
+    "SRC-0112_Plantarflexion_Zenodo_15679911": {
+      "title": "Open Plantar Flexion Torque, Angle, Velocity and MVIC Archive",
+      "doi": "10.5281/zenodo.15679911",
+      "access_status": "DATA_BLOCKED_BY_QUALITY_GATE",
+      "block_reason": "Numerical integral of torque*dtheta vs power*dt diverges by median 39.9 J (max 181.8 J); velocity signs contradictory across conditions; 21 records for 20 described participants",
+      "issue_id": "ISS-0032"
+    },
+    "SRC-0101_Souron_2024": {
+      "title": "Mental Fatigue and Cycling Time-to-Exhaustion at 80% PPO",
+      "doi": "10.5281/zenodo.19328889",
+      "access_status": "PARTIALLY_OPEN_VARIABLE_BLOCKED",
+      "block_reason": "Public table contains only PPO and time-to-exhaustion; continuous power, work in Joules, and post-load MVC not included"
+    },
+    "SRC-0104_Kudzia_2024": {
+      "title": "Force Control and Knee Extensor Neuromuscular Fatigue",
+      "access_status": "ARCHIVE_EMPTY_BLOCKED",
+      "block_reason": "Zenodo repository linked in paper contains only README and CC license; raw microdata timeseries missing",
+      "issue_id": "ISS-038"
+    }
+  },
+  "coupling_verdict": "DIRECT_SCALAR_WORK_TO_FORCE_COUPLING_PERMANENTLY_REJECTED",
+  "definitive_answer": "NO, DIRECT COUPLING NOT SUPPORTED BY CURRENT OPEN EVIDENCE"
+}

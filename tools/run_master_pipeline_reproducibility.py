@@ -59,10 +59,13 @@ def main():
         ("6. Decisive Work-to-Force Test (EXP-0133)", [
             sys.executable, "research/program_evidence_audit/run_work_force_decisive_test.py"
         ]),
-        ("7. Architecture A Master Synthesis (EXP-0132)", [
+        ("7. Candidate Open Data Audit (EXP-0134)", [
+            sys.executable, "research/program_evidence_audit/run_open_data_candidate_audit.py"
+        ]),
+        ("8. Architecture A Master Synthesis (EXP-0132)", [
             sys.executable, "research/architecture_a_integration/run_architecture_a_evidence_synthesis.py"
         ]),
-        ("8. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
+        ("9. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
     ]
 
     summary = []

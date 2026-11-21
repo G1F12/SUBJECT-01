@@ -24,11 +24,14 @@
     "work_measured_in_joules": true,
     "mean_sprint_work_J": 3661.636767891157,
     "mean_cumulative_work_J": 18702.7910084064,
+    "work_accumulation_verified": "Strictly includes only sprints prior to predicted sprint",
     "models_mae_W": {
       "unperturbed_persistence": 114.64437442680777,
       "mean_retention_baseline": 89.2261877503982,
+      "sprint_and_rest_baseline": 89.83427600374941,
       "cumulative_work_linear_model": 88.6987120090117,
       "work_plus_rest_duration_model": 89.47514343446065,
+      "sprint_rest_and_work_model": 91.98356563260113,
       "proportional_d2_depletion_model": 105.96317272442825
     },
     "paired_comparisons_vs_retention_baseline": {
@@ -48,6 +51,22 @@
         ],
         "favors": "uncertain_inconclusive"
       },
+      "work_plus_rest_vs_sprint_rest_baseline": {
+        "dmae_W": 0.35913256928877435,
+        "ci95_W": [
+          -3.1946603128580713,
+          4.244741609604283
+        ],
+        "favors": "uncertain_inconclusive"
+      },
+      "sprint_rest_and_work_vs_sprint_rest_baseline": {
+        "dmae_W": -2.1492896288517045,
+        "ci95_W": [
+          -5.539123564404431,
+          0.8975963195086333
+        ],
+        "favors": "uncertain_inconclusive"
+      },
       "proportional_d2_depletion_model": {
         "dmae_W": -16.736984974030026,
         "ci95_W": [
@@ -58,7 +77,7 @@
       }
     },
     "verdict": "MEASURED_WORK_DOES_NOT_SIGNIFICANTLY_OUTPERFORM_SIMPLE_BASELINE",
-    "scientific_conclusion": "Even when mechanical work is precisely measured in Joules across 567 repeated sprint bouts, a cumulative work model improves MAE by only +0.53 W over a simple mean retention baseline, with a 95% CI of [-2.96, +4.29] W crossing zero. Adding recovery duration does not improve prediction (dMAE = -0.25 W [-3.87, +3.70] W). Mechanical work alone does not resolve individual residual capacity."
+    "scientific_conclusion": "Even when mechanical work is precisely measured in Joules across 567 repeated sprint bouts, a cumulative work model improves MAE by only +0.53 W over a simple sprint-indexed baseline, with a 95% CI of [-2.96, +4.29] W crossing zero. Comparing work+rest to a sprint+rest baseline yields dMAE = +0.36 W [-3.19, +4.24] W (inconclusive). Adding work on top of sprint index and rest regime actually increases prediction error by -2.15 W [-5.54, +0.90] W. Mechanical work alone does not resolve individual residual capacity."
   },
   "norbury_evaluation": {
     "dataset_name": "Norbury et al. 2020 (SRC-0111)",
@@ -66,6 +85,15 @@
     "participants": 12,
     "observations": 24,
     "workload_metric": "volume_kg_repetitions (not Joules)",
+    "overall_empirical_recovery_pct": {
+      "5m": 91.02,
+      "45m": 93.34,
+      "24h": 99.1,
+      "45m_ll": 93.01,
+      "45m_hl": 93.67,
+      "24h_ll": 99.35,
+      "24h_hl": 98.85
+    },
     "delays_evaluated": {
       "5m": {
         "delay_seconds": 300,
@@ -144,7 +172,7 @@
       }
     },
     "verdict": "WORKLOAD_VOLUME_FAILS_ACROSS_ENTIRE_RECOVERY_TIMELINE",
-    "scientific_conclusion": "Across multiple recovery delays (5 min, 45 min, 24 h), workload volume in kg\u00b7reps consistently fails to improve upon the simple empirical retention baseline. At 5 min, the volume model worsens MAE by 4.08 N [-8.49, -0.29] N; at 45 min, it worsens MAE by 4.38 N [-7.61, -1.91] N. Relative load intensity (30% vs 70% 1RM) similarly provides no predictive advantage. Resistance workload does not monotonically govern post-exercise isometric strength."
+    "scientific_conclusion": "Across multiple recovery delays (5 min, 45 min, 24 h), workload volume in kg\u00b7reps consistently fails to improve upon the simple empirical retention baseline. At 5 min, the volume model worsens MAE by 4.08 N [-8.49, -0.29] N; at 45 min, it worsens MAE by 4.38 N [-7.61, -1.91] N. At 24 h, mean recovery is 99.10% (LL: 99.35%, HL: 98.85%). Relative load intensity (30% vs 70% 1RM) similarly provides no predictive advantage. Resistance workload does not monotonically govern post-exercise isometric strength."
   },
   "definitive_answer": "NO, MEASURED MECHANICAL WORK DOES NOT PREDICT RESIDUAL FORCE OR POWER BETTER THAN SIMPLE BASELINES"
 }

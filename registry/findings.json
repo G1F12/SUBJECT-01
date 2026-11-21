@@ -1117,5 +1117,14 @@
     "statement": "Out-of-sample participant-paired evaluation decisively demonstrates that mechanical work does not resolve individual residual capacity: (1) On Jutlah et al. (567 observations, 21 males, work measured in Joules), adding cumulative work reduces peak power MAE by only +0.53 W with 95% CI [-2.96, +4.29] W covering zero, and adding rest duration yields -0.25 W [-3.87, +3.70] W; (2) On Norbury et al. (12 males, 24 observations), workload volume (kg·reps) statistically significantly worsens force prediction vs baseline at both 5 min (-4.08 N [-8.49, -0.29] N) and 45 min (-4.38 N [-7.61, -1.91] N), while load intensity (30% vs 70% 1RM) provides no predictive benefit; (3) Scalar depletion equations fail to generalize out-of-sample across both dynamic and static exercise modalities.",
     "confidence": "arithmetic_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "FND-0130",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0134",
+    "title": "Sifting of open candidates establishes lack of synchronized work-in-Joules and post-MVC datasets; multi-factorial sprint+rest baseline confirms work non-predictability",
+    "statement": "Systematic review of candidate repositories reveals: (1) de Poli et al. (SRC-0102) microdata are REQUEST_ONLY_BLOCKED; Table 3 group means confirm non-monotonicity (+3.72 pp SIT vs -1.02 pp Control) but prevent individual out-of-sample testing; (2) In Norbury et al. (SRC-0111), exact recalculation from primary XLSX gives recovery of 91.01% (5m), 93.34% (45m), and 99.10% (24h) with 45m MAE of 46.49 N (retention baseline) vs 50.86 N (volume model, dMAE = -4.38 N [-7.61, -1.91] N); (3) In Jutlah et al. (SRC-0040), work accumulation strictly precedes predicted sprint, and comparing against a sprint+rest baseline (89.83 W) confirms that adding work (89.48 W, dMAE = +0.36 W [-3.19, +4.24] W) or fitting sprint+rest+work (91.98 W, dMAE = -2.15 W [-5.54, +0.90] W) offers no predictive value; (4) Plantarflexion (SRC-0112) is DATA_BLOCKED by numerical integral divergence (~40 J) and contradictory velocity signs.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]
