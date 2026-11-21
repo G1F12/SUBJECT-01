@@ -287,6 +287,19 @@
       "DEC-0031",
       "DEC-0032"
     ],
-    "supersedes": []
+    "supersedes": [],
+    "experiments": [
+      "EXP-0132",
+      "EXP-0133"
+    ],
+    "findings": [
+      "FND-0128",
+      "FND-0129"
+    ],
+    "negative_results": [
+      "NEG-0112",
+      "NEG-0113"
+    ],
+    "statement": "Definitive Scientific Decision on Architecture A: Whole-System HOLD (status = CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD, verdict = NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS; Definitive Answer = NO, NOT CONFIRMED AT CURRENT EVIDENCE LEVEL). Master cross-module integration across all five computational and empirical modules establishes that uncompromised simultaneous achievement of TARGET-FORCE20, TARGET-ADAPT25, and TARGET-CPE45 in a single consistent physical state is NOT empirically confirmed: (1) TARGET-FORCE20: in deep flexion (100°), corrected Strategy 2 force gain (+21.93%) is accompanied by enthesis shear safety factor SF = 1.285 < 1.50 under dynamic rate (20 kN/s), failing safety; at 140°, force gain is +21.77% and SF = 1.747 >= 1.50, but model requires rigid angle control (28-41 N/deg gradient, ~410 N artifact at 10° error) and loses to constant baseline by 148 N MAE on Santos data; (2) TARGET-ADAPT25: within-cohort gain (+18.35% at 14 d) is confirmed on Santos et al., but comparative rate acceleration (+25% over control) is unassessed due to absence of a control cohort, and SF0 >= 1.776 is an ODE model sensitivity property without in vivo tendon measurements; (3) TARGET-CPE45: 4-layer Pennes solver is empirically validated on McLaughlin, but continuous 360 W breaches 39.5 °C in all climates (1240-2365 s); intermittent pacing (D <= 0.59-0.92) avoids hyperthermia solely by cutting mechanical work by 7% to 36% (619-902 kJ vs 972 kJ); status is NOT EXTERNALLY VALIDATED as power maintenance, motor control, and post-exercise MVC over 2700 s are unmeasured; (4) EXP-0133 decisively proves that measured mechanical work does not predict residual force or power better than simple retention baselines (Jutlah: dMAE = +0.53 W [-2.96, +4.29] W; Norbury: dMAE = -4.08 N at 5m and -4.38 N at 45m strictly favoring baseline); contested numbers 98.3% and ~4 kJ are refuted and removed. Ratified 4 operational boundaries and 3 pre-registered decisive human measurements."
   }
 ]

@@ -3782,5 +3782,34 @@
     "limits": "Bilateral isometric leg press transfer remains conditioned on rigid postural angle control (±2°) and calibrated subject-specific geometry; in vivo tendon strain and dynamic motor unit activation require prospective in vivo elastography and 3D dynamometry validation.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0133",
+    "date": "2026-11-21",
+    "name": "Decisive Empirical Test of Work-to-Force and Work-to-Power Prediction vs Simple Baselines",
+    "sources": [
+      "SRC-0040",
+      "SRC-0111"
+    ],
+    "design": "Leave-one-subject-out cross-validation and participant-clustered bootstrap (10,000 resamples) evaluating whether measured mechanical work (Joules in Jutlah et al. 2026 repeated sprints; kg·repetitions across 5m, 45m, 24h recovery in Norbury et al. 2020) predicts residual force or power on held-out participants better than trivial mean retention baselines.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_work_force_decisive_test.py",
+    "inputs": "research/program_evidence_audit/WORK_FORCE_DECISIVE_TEST_REPORT.md",
+    "report": "research/program_evidence_audit/WORK_FORCE_DECISIVE_TEST_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/WORK_FORCE_DECISIVE_TEST_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_work_force_decisive_test.py",
+    "results": {
+      "findings": [
+        "FND-0129"
+      ],
+      "negative_results": [
+        "NEG-0113"
+      ]
+    },
+    "limits": "Evaluated on open healthy male cohorts (cycling sprints and leg press resistance exercise). Non-linear fatigue domains and local muscle fiber recruitment require multi-channel physiological monitoring.",
+    "external_validation": "CROSS_DATASET_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

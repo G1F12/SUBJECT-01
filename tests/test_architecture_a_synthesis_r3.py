@@ -136,9 +136,11 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertAlmostEqual(outs["depoli_retention_pre_pct"], 71.36, places=1)
         self.assertAlmostEqual(outs["depoli_retention_post_pct"], 75.08, places=1)
 
-        # Recovery timeline
+        # Recovery timeline (audited Norbury empirical numbers)
         self.assertAlmostEqual(outs["recovery_kinetics_retention_5min_pct"], 91.0, places=1)
-        self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_pct"], 98.3, places=1)
+        self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_LL_pct"], 93.01, places=1)
+        self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_HL_pct"], 93.67, places=1)
+        self.assertAlmostEqual(outs["recovery_kinetics_retention_45min_pct"], 93.34, places=1)
         self.assertAlmostEqual(outs["recovery_kinetics_retention_24h_pct"], 100.1, places=1)
 
     # =========================================================================
@@ -214,20 +216,23 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
 
         # TARGET-FORCE20
         f20 = v["TARGET-FORCE20"]
-        self.assertEqual(f20["status"], "CONDITIONALLY_VALIDATED_IN_MODEL_AND_TRANSFER_BOUNDED")
-        self.assertEqual(f20["verdict"], "FEASIBLE_UNDER_RIGID_POSTURAL_ALIGNMENT")
+        self.assertEqual(f20["status"], "NOT_CONFIRMED_PENDING_POSTURAL_AND_DYNAMIC_SAFETY_DATA")
+        self.assertEqual(f20["verdict"], "FEASIBLE_IN_MODEL_140DEG_BUT_DYNAMIC_SAFETY_FAILS_AT_100DEG")
         self.assertIn("±2°", f20["operational_boundary"])
 
         # TARGET-ADAPT25
         a25 = v["TARGET-ADAPT25"]
-        self.assertEqual(a25["status"], "EMPIRICALLY_SUPPORTED_WITH_TISSUE_RESERVE_GATE")
-        self.assertEqual(a25["verdict"], "EMPIRICALLY_DEMONSTRATED_IN_COHORT_AND_TISSUE_FEASIBLE")
+        self.assertEqual(a25["status"], "RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT")
+        self.assertEqual(a25["verdict"], "WITHIN_COHORT_GAIN_OBSERVED_COMPARATIVE_RATE_UNASSESSED")
         self.assertIn("1.78", a25["operational_boundary"])
 
         # TARGET-CPE45
         c45 = v["TARGET-CPE45"]
-        self.assertEqual(c45["status"], "VALIDATED_INTERMITTENT_ENVELOPE_CONTINUOUS_360W_UNFEASIBLE")
-        self.assertEqual(c45["verdict"], "VALIDATED_UNDER_INTERMITTENT_DUTY_CYCLE_PACING")
+        self.assertEqual(c45["status"], "NOT_EXTERNALLY_VALIDATED")
+        self.assertEqual(c45["verdict"], "THERMAL_SOLVER_VALIDATED_WORK_REDUCED_CHANNELS_NOT_EXTERNALLY_VALIDATED")
+        self.assertIn("channels", c45)
+        self.assertEqual(c45["channels"]["thermal_channel_status"], "MODEL_VALIDATED_ON_MCLAUGHLIN_CONTINUOUS_INTERMITTENT_WORK_REDUCED")
+        self.assertEqual(c45["channels"]["power_maintenance_channel_status"], "NOT_EXTERNALLY_VALIDATED_OVER_2700S")
 
         # Joint System Compatibility
         jc = v["JOINT_SYSTEM_COMPATIBILITY"]
@@ -264,7 +269,9 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertIn("DISQUALIFIED_NO_GO", inv["ARCHITECTURE_B_BIOENGINEERED_MUSCLE"])
         self.assertIn("HOLD_BREAKTHROUGH_DEPENDENT", inv["ARCHITECTURE_C_INTERNAL_BIOHYBRID"])
         self.assertIn("CONDITIONAL_HOLD", inv["AEGIS_01_SUIT_INTEGRATION"])
-        self.assertIn("INDEPENDENT_MANDATORY_REQUIREMENT", inv["TARGET_CPE45_STATUS"])
+        self.assertIn("NOT_EXTERNALLY_VALIDATED", inv["TARGET_CPE45_STATUS"])
+        self.assertIn("NOT_CONFIRMED_PENDING_POSTURAL_AND_DYNAMIC_SAFETY_DATA", inv["TARGET_FORCE20_STATUS"])
+        self.assertIn("RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT", inv["TARGET_ADAPT25_STATUS"])
 
 
 if __name__ == "__main__":

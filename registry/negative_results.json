@@ -902,7 +902,15 @@
     "date": "2026-11-21",
     "experiment_id": "EXP-0132",
     "title": "Uncoupled operational assumptions fail: Deep flexion dynamic tissue breach (SF=1.285), continuous 360 W hyperthermia, and post-endurance functional transfer gap",
-    "statement": "Holistic audit demonstrates that uncoupled operational assumptions produce false affirmative conclusions: (1) In deep flexion (100°), dynamic rate (20 kN/s) drops local enthesis SF to 1.285 < 1.50, failing tissue safety; (2) Continuous 360 W CPE45 breaches the 39.5 °C hyperthermia limit in all climates (1240-2365 s); (3) Intermittent CPE45 avoids hyperthermia solely by reducing mechanical work (619-902 kJ vs 972 kJ); (4) Transferring 98.3% recovery from 3 sets of leg press (Norbury, ~4 kJ) to 2700 s of heavy cycling is physiologically invalid; and (5) Santos cohort lacks a control group to evaluate +25% acquisition rate. Joint system compatibility is unconfirmed in vivo.",
+    "statement": "Holistic audit demonstrates that uncoupled operational assumptions produce false affirmative conclusions: (1) In deep flexion (100°), dynamic rate (20 kN/s) drops local enthesis SF to 1.285 < 1.50, failing tissue safety; (2) Continuous 360 W CPE45 breaches the 39.5 °C hyperthermia limit in all climates (1240-2365 s); (3) Intermittent CPE45 avoids hyperthermia solely by reducing mechanical work (619-902 kJ vs 972 kJ); (4) Transferring recovery from 3 sets of leg press (Norbury 93.01% LL, 93.67% HL in kg·reps) to 2700 s of heavy cycling is physiologically invalid; contested numbers 98.3% and ~4 kJ are refuted and removed; and (5) Santos cohort lacks a control group to evaluate +25% acquisition rate. Joint system compatibility is unconfirmed in vivo.",
     "reason": "Viscoelastic deep-layer shear stress concentrations exceed safety margins in deep flexion under dynamic strain rates; continuous endurance heat accumulation exceeds cutaneous dissipation; resistance exercise recovery does not transfer to heavy metabolic endurance; comparative longitudinal training controls are absent."
+  },
+  {
+    "id": "NEG-0113",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0133",
+    "title": "Work-based fatigue models fail out-of-sample: Cumulative Joules and resistance volume do not outperform empirical mean retention baselines",
+    "statement": "Hypothesis that accumulated mechanical work determines residual muscular force capacity is rejected on open human datasets: work-based linear and proportional depletion models fail to statistically outperform a trivial empirical mean retention baseline (Jutlah: dMAE = +0.53 W [-2.96, +4.29] W; Norbury 5m: dMAE = -4.08 N [-8.49, -0.29] N; Norbury 45m: dMAE = -4.38 N [-7.61, -1.91] N). Direct coupling of work and force modules in Architecture A remains rejected (NO-GO).",
+    "reason": "Scalar accumulation of mechanical work ignores intensity domain boundaries (sub-CP vs supra-CP), differential central vs peripheral fatigue mechanisms, and non-linear recovery kinetics, overfitting cohort-specific fatigue rates without generalizing to held-out individuals."
   }
 ]

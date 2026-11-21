@@ -1,0 +1,150 @@
+{
+  "experiment_id": "EXP-0133",
+  "title": "Decisive Empirical Test of Work-to-Force and Work-to-Power Prediction vs Simple Baselines",
+  "date": "2026-11-21",
+  "findings": [
+    "FND-0129"
+  ],
+  "negative_results": [
+    "NEG-0113"
+  ],
+  "decisions": [
+    "DEC-0033"
+  ],
+  "jutlah_evaluation": {
+    "dataset_name": "Jutlah et al. 2026 (SRC-0040)",
+    "modality": "Repeated sprint cycling (10 x 6s)",
+    "participants": 21,
+    "observations": 567,
+    "recovery_conditions_s": [
+      24,
+      18,
+      12
+    ],
+    "work_measured_in_joules": true,
+    "mean_sprint_work_J": 3661.636767891157,
+    "mean_cumulative_work_J": 18702.7910084064,
+    "models_mae_W": {
+      "unperturbed_persistence": 114.64437442680777,
+      "mean_retention_baseline": 89.2261877503982,
+      "cumulative_work_linear_model": 88.6987120090117,
+      "work_plus_rest_duration_model": 89.47514343446065,
+      "proportional_d2_depletion_model": 105.96317272442825
+    },
+    "paired_comparisons_vs_retention_baseline": {
+      "cumulative_work_linear_model": {
+        "dmae_W": 0.5274757413865048,
+        "ci95_W": [
+          -2.959400309251923,
+          4.292494973155679
+        ],
+        "favors": "uncertain_inconclusive"
+      },
+      "work_plus_rest_duration_model": {
+        "dmae_W": -0.2489556840624489,
+        "ci95_W": [
+          -3.870260538923421,
+          3.6958145540841314
+        ],
+        "favors": "uncertain_inconclusive"
+      },
+      "proportional_d2_depletion_model": {
+        "dmae_W": -16.736984974030026,
+        "ci95_W": [
+          -31.078594683715295,
+          -2.3018058912662864
+        ],
+        "favors": "baseline"
+      }
+    },
+    "verdict": "MEASURED_WORK_DOES_NOT_SIGNIFICANTLY_OUTPERFORM_SIMPLE_BASELINE",
+    "scientific_conclusion": "Even when mechanical work is precisely measured in Joules across 567 repeated sprint bouts, a cumulative work model improves MAE by only +0.53 W over a simple mean retention baseline, with a 95% CI of [-2.96, +4.29] W crossing zero. Adding recovery duration does not improve prediction (dMAE = -0.25 W [-3.87, +3.70] W). Mechanical work alone does not resolve individual residual capacity."
+  },
+  "norbury_evaluation": {
+    "dataset_name": "Norbury et al. 2020 (SRC-0111)",
+    "modality": "Unilateral leg press resistance exercise to failure",
+    "participants": 12,
+    "observations": 24,
+    "workload_metric": "volume_kg_repetitions (not Joules)",
+    "delays_evaluated": {
+      "5m": {
+        "delay_seconds": 300,
+        "models_mae_N": {
+          "unperturbed_persistence": 74.125,
+          "mean_retention_baseline": 50.61086918321356,
+          "volume_linear_model": 54.68749551861858,
+          "intensity_linear_model": 51.63557437581348
+        },
+        "volume_model_vs_retention_baseline": {
+          "dmae_N": -4.076626335405024,
+          "ci95_N": [
+            -8.490515274948136,
+            -0.2910379788836365
+          ],
+          "favors": "baseline"
+        },
+        "intensity_model_vs_retention_baseline": {
+          "dmae_N": -1.0247051925999198,
+          "ci95_N": [
+            -2.272116450805674,
+            -0.07750020626109937
+          ],
+          "favors": "baseline"
+        }
+      },
+      "45m": {
+        "delay_seconds": 2700,
+        "models_mae_N": {
+          "unperturbed_persistence": 61.416666666666664,
+          "mean_retention_baseline": 46.48836221859182,
+          "volume_linear_model": 50.86344966743591,
+          "intensity_linear_model": 46.63600540598025
+        },
+        "volume_model_vs_retention_baseline": {
+          "dmae_N": -4.375087448844094,
+          "ci95_N": [
+            -7.611436843749909,
+            -1.9130260263488457
+          ],
+          "favors": "baseline"
+        },
+        "intensity_model_vs_retention_baseline": {
+          "dmae_N": -0.14764318738842994,
+          "ci95_N": [
+            -0.42658193247132786,
+            0.030248987974830145
+          ],
+          "favors": "uncertain"
+        }
+      },
+      "24h": {
+        "delay_seconds": 86400,
+        "models_mae_N": {
+          "unperturbed_persistence": 39.958333333333336,
+          "mean_retention_baseline": 40.961908846295614,
+          "volume_linear_model": 42.35350252374956,
+          "intensity_linear_model": 42.73911625833642
+        },
+        "volume_model_vs_retention_baseline": {
+          "dmae_N": -1.39159367745395,
+          "ci95_N": [
+            -3.4531534638213275,
+            0.24296559283660332
+          ],
+          "favors": "uncertain"
+        },
+        "intensity_model_vs_retention_baseline": {
+          "dmae_N": -1.777207412040814,
+          "ci95_N": [
+            -3.1930825272237797,
+            -0.518880185596957
+          ],
+          "favors": "baseline"
+        }
+      }
+    },
+    "verdict": "WORKLOAD_VOLUME_FAILS_ACROSS_ENTIRE_RECOVERY_TIMELINE",
+    "scientific_conclusion": "Across multiple recovery delays (5 min, 45 min, 24 h), workload volume in kg\u00b7reps consistently fails to improve upon the simple empirical retention baseline. At 5 min, the volume model worsens MAE by 4.08 N [-8.49, -0.29] N; at 45 min, it worsens MAE by 4.38 N [-7.61, -1.91] N. Relative load intensity (30% vs 70% 1RM) similarly provides no predictive advantage. Resistance workload does not monotonically govern post-exercise isometric strength."
+  },
+  "definitive_answer": "NO, MEASURED MECHANICAL WORK DOES NOT PREDICT RESIDUAL FORCE OR POWER BETTER THAN SIMPLE BASELINES"
+}

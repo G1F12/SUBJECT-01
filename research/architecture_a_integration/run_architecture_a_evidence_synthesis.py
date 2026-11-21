@@ -238,13 +238,19 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "depoli_retention_pre_pct": depoli_sit["pre_training"]["retention_percent"],
             "depoli_retention_post_pct": depoli_sit["post_training"]["retention_percent"],
             "recovery_kinetics_retention_5min_pct": 91.0,
-            "recovery_kinetics_retention_45min_pct": 98.3,
+            "recovery_kinetics_retention_45min_LL_pct": 93.01,
+            "recovery_kinetics_retention_45min_HL_pct": 93.67,
+            "recovery_kinetics_retention_45min_pct": 93.34,
             "recovery_kinetics_retention_24h_pct": 100.1,
             "transfer_context_limitation": (
-                "Recovery was measured in Norbury after 3 sets of leg press (~4 kJ of work). "
-                "It cannot be transferred to 2700 s of heavy cycling (619-902 kJ), where sprint training "
-                "(de Poli SIT, 70 kJ) causes a 25-29% force drop and fatiguing knee extensions (Kudzia) "
-                "cause a 25.4% force drop and 4.6x motor control worsening."
+                "Recovery was measured in Norbury after 3 sets of resistance leg press (4134-5065 kg·reps, not measured in Joules). "
+                "Force retention at 45 min was 93.01% (LL) and 93.67% (HL), averaging 93.34%. The previously cited '98.3%' and '~4 kJ' "
+                "were unverified conjectures and have been removed from active conclusions. "
+                "This cannot be transferred to 2700 s of heavy cycling (619-902 kJ), where sprint training "
+                "(de Poli SIT, ~70 kJ) causes a 25-29% force drop and fatiguing knee extensions (Kudzia) "
+                "cause a 25.4% force drop and 4.6x motor control worsening. "
+                "EXP-0133 decisively proved that neither workload volume nor intensity predicts residual force or power "
+                "better than simple baselines."
             ),
         },
         "baseline_comparison": {
@@ -481,23 +487,23 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "reproduction_result": "Traced; CV=2.1% not present in functional_mechanics_validation; Kudzia post-fatigue CV worsened to 2.83% (> 2.5%)",
             "epistemic_limitation": "Motor control after heavy fatiguing exercise (or 2700 s CPE45) remains UNASSESSED in open datasets",
         },
-        "RECOVERY_RETENTION_98_3": {
-            "headline_value": "98.3% force retention at 45 minutes of spontaneous recovery",
-            "source": "Norbury et al. (2024, SRC-0111, norbury_24156741.xlsx), EXP-0130",
-            "calculation_method": "Empirical mean MVC ratio at 45 min post-exercise across 12 participants in LL and HL conditions",
-            "experimental_conditions": "3 sets of unilateral leg press to failure (~4 kJ of mechanical work), 12 trained males",
+        "RECOVERY_RETENTION_NORBURY_AUDIT": {
+            "headline_value": "93.01% (LL) and 93.67% (HL) (mean 93.34%) force retention at 45 minutes (contested 98.3% refuted)",
+            "source": "Norbury et al. (2020, SRC-0111, norbury_24156741.xlsx), EXP-0121, EXP-0130, EXP-0133",
+            "calculation_method": "Empirical individual MVC ratio at 45 min post-exercise across 12 participants in LL and HL conditions",
+            "experimental_conditions": "3 sets of unilateral leg press to failure (4134-5065 kg·reps, not Joules), 12 trained males",
             "evidence_level": "RAW_HUMAN_OBSERVATION",
-            "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.0%, 45-min retention 98.3%, 24-h retention 100.1%",
-            "epistemic_limitation": "Applies strictly to a brief 3-set resistance workout (~4 kJ); completely non-transferable to 2700 s of 360 W cycling (619-902 kJ)",
+            "reproduction_result": "Reproduced exactly from XLSX: 5-min retention 91.0%, 45-min retention 93.01% (LL) / 93.67% (HL) (mean 93.34%), 24-h retention 100.1%",
+            "epistemic_limitation": "Applies strictly to a brief 3-set resistance workout in kg·reps; contested numbers 98.3% and ~4 kJ refuted and removed; completely non-transferable to 2700 s of heavy cycling (619-902 kJ)",
         },
         "CPE45_DUTY_CYCLE_0_59_TO_0_92": {
-            "headline_value": "Intermittent duty cycle D = 0.59 to 0.92 maintains T_core < 39.5 °C for 2700 s",
-            "source": "EXP-0063 (RESULTS.json) and EXP-0065 (REPORT.md / RESULTS.json), EXP-0131",
-            "calculation_method": "4-layer Pennes bioheat solver validated against McLaughlin et al. heat cycling (MAE 0.586 °C)",
+            "headline_value": "Intermittent duty cycle D = 0.59 to 0.92 maintains T_core < 39.5 °C for 2700 s (work cut by 7-36%)",
+            "source": "EXP-0063 (RESULTS.json) and EXP-0065 (REPORT.md / RESULTS.json), EXP-0131, research/targets/CPE45.json",
+            "calculation_method": "4-layer Pennes bioheat simulation of 360 W x 2700 s scenario (nominal 972 kJ work); validated against McLaughlin (MAE 0.586 °C)",
             "experimental_conditions": "360 W impulse power, 2700 s duration, 4 ambient climates (20°C/50%RH to 35°C/30%RH)",
-            "evidence_level": "COMPUTATIONAL_SIMULATION (empirically validated thermal solver)",
-            "reproduction_result": "Reproduced; continuous 360 W breaches 39.5 °C in 1240-2365 s; intermittent D preserves T_core < 39.5 °C",
-            "epistemic_limitation": "EXP-0065 proved that intermittent pacing avoids overheating solely by reducing total mechanical work from 972 kJ down to 619-902 kJ (a 7% to 36% cut); tests thermal channel only",
+            "evidence_level": "COMPUTATIONAL_SIMULATION (empirically validated thermal solver; joint target NOT EXTERNALLY VALIDATED)",
+            "reproduction_result": "Reproduced; continuous 360 W breaches 39.5 °C in 1240-2365 s; intermittent D preserves T_core < 39.5 °C solely by cutting work to 619-902 kJ",
+            "epistemic_limitation": "In EXP-0065 at comparable work, advantage of intermittency was NOT established. Intermittent pacing avoids overheating solely by cutting total work from 972 kJ down to 619-902 kJ (a 7% to 36% cut). Separate channels: thermal (model validated, work cut), power maintenance (not externally validated), motor control (not externally validated), post-load MVC (not externally validated).",
         },
     }
 
@@ -581,8 +587,8 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
     verdicts = {
         "TARGET-FORCE20": {
             "target": "TARGET-FORCE20 (+20% Functional Strength at Comparable Mass)",
-            "status": "CONDITIONALLY_VALIDATED_IN_MODEL_AND_TRANSFER_BOUNDED",
-            "verdict": "FEASIBLE_UNDER_RIGID_POSTURAL_ALIGNMENT",
+            "status": "NOT_CONFIRMED_PENDING_POSTURAL_AND_DYNAMIC_SAFETY_DATA",
+            "verdict": "FEASIBLE_IN_MODEL_140DEG_BUT_DYNAMIC_SAFETY_FAILS_AT_100DEG",
             "confidence": "HIGH_MECHANICAL_CONFIDENCE_PENDING_IN_VIVO_GEOMETRY",
             "evidence_basis": (
                 "Strategy 2 musculoskeletal adaptation achieves +21.93% bilateral footplate force at 100° (3130 N vs 2567 N) "
@@ -601,8 +607,8 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
         },
         "TARGET-ADAPT25": {
             "target": "TARGET-ADAPT25 (+25% Strength Acquisition Rate)",
-            "status": "EMPIRICALLY_SUPPORTED_WITH_TISSUE_RESERVE_GATE",
-            "verdict": "EMPIRICALLY_DEMONSTRATED_IN_COHORT_AND_TISSUE_FEASIBLE",
+            "status": "RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT",
+            "verdict": "WITHIN_COHORT_GAIN_OBSERVED_COMPARATIVE_RATE_UNASSESSED",
             "confidence": "HIGH_EMPIRICAL_AND_PARAMETRIC_CONFIDENCE",
             "evidence_basis": (
                 "Within-cohort force gain is empirically demonstrated in Santos et al. (SRC-0090), with mean bilateral force "
@@ -619,18 +625,25 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
         },
         "TARGET-CPE45": {
             "target": "TARGET-CPE45 (2700 s Combat-Like Performance Endurance)",
-            "status": "VALIDATED_INTERMITTENT_ENVELOPE_CONTINUOUS_360W_UNFEASIBLE",
-            "verdict": "VALIDATED_UNDER_INTERMITTENT_DUTY_CYCLE_PACING",
+            "status": "NOT_EXTERNALLY_VALIDATED",
+            "verdict": "THERMAL_SOLVER_VALIDATED_WORK_REDUCED_CHANNELS_NOT_EXTERNALLY_VALIDATED",
             "confidence": "HIGH_EMPIRICAL_AND_THERMODYNAMIC_CONFIDENCE",
+            "channels": {
+                "thermal_channel_status": "MODEL_VALIDATED_ON_MCLAUGHLIN_CONTINUOUS_INTERMITTENT_WORK_REDUCED",
+                "power_maintenance_channel_status": "NOT_EXTERNALLY_VALIDATED_OVER_2700S",
+                "motor_control_channel_status": "NOT_EXTERNALLY_VALIDATED_OVER_2700S",
+                "post45_recovery_channel_status": "NOT_EXTERNALLY_VALIDATED_OVER_2700S",
+            },
             "evidence_basis": (
+                "TARGET-CPE45 is defined per research/targets/CPE45.json as a 2700 s multi-dimensional requirement. "
                 "The 4-layer Pennes bioheat solver was empirically validated against in vivo 45-min constant cycling heat data "
-                "from McLaughlin et al. (SRC-0086, N=23, MAE = 0.586 °C vs persistence 1.275 °C). Simulations confirm that "
-                "continuous 360 W breaches the 39.5 °C hyperthermia threshold in all climates >= 20 °C (1240–2365 s). "
-                "Intermittent duty-cycle pacing strictly maintains core temperature < 39.5 °C for 2700 s: D <= 0.92 (temperate), "
-                "D <= 0.74 (warm), D <= 0.59 (hot-dry), and D <= 0.65 (hot-humid). However, EXP-0065 proved that this thermal "
-                "feasibility is achieved solely by reducing total mechanical work by 7% to 36% (619-902 kJ vs 972 kJ). "
-                "Post-exercise muscular force retention (98.3% from 3 sets of leg press in Norbury) and motor control steadiness "
-                "after 2700 s of heavy cycling remain unmeasured in joint trials."
+                "from McLaughlin et al. (SRC-0086, N=23, MAE = 0.586 °C vs persistence 1.275 °C). Simulations of the 360 W x 2700 s "
+                "scenario (nominal 972 kJ work) confirm that continuous 360 W breaches the 39.5 °C hyperthermia threshold in all climates >= 20 °C (1240–2365 s). "
+                "Intermittent duty-cycle pacing maintains core temperature < 39.5 °C for 2700 s (D <= 0.59-0.92), but EXP-0065 proved "
+                "that this thermal feasibility is achieved solely by reducing total mechanical work by 7% to 36% (619-902 kJ vs 972 kJ); "
+                "at matched work, intermittency showed no thermal advantage. "
+                "In Norbury et al., post-exercise force retention was 93.01% (LL) and 93.67% (HL) at 45 min after 3 sets of resistance exercise in kg·reps, "
+                "which cannot be transferred to 2700 s of heavy cycling. Power maintenance, motor control, and post-exercise MVC over 2700 s remain NOT EXTERNALLY VALIDATED."
             ),
             "operational_boundary": (
                 "Duty-cycle pacing (D <= 0.59-0.92) across operational climates or active external cooling (>= 420 W); "
@@ -655,7 +668,7 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
                 "1. Posture Bound: Joint angles must be maintained within ±2° during peak force exertion to prevent 28-41 N/deg angular artifacts from degrading the +20% margin; deep flexion (100°) requires dynamic rate limiting (dF/dt <= 12,000 N/s) or posture extension to >= 140° to avoid enthesis shear SF = 1.285 < 1.50.",
                 "2. Rate of Force Rise Bound: Explosive ballistic loading must be rate-limited (dF/dt <= 12,000 N/s) or buffered with additional enthesis CSA > 20% to prevent local viscoelastic shear SF dropping below 1.50.",
                 "3. CPE45 Thermal Endurance Bound: Sustained 360 W equivalent power must follow intermittent duty cycling (D <= 0.59-0.92) or external cooling (>= 420 W) to avoid core temperature exceeding 39.5 °C, accepting a 7% to 36% reduction in total mechanical work.",
-                "4. Bioenergetic Domain Management: High-power work induces neuromuscular and central fatigue; 98.3% recovery from brief resistance exercise cannot be transferred to heavy metabolic endurance without multi-hour recovery windows.",
+                "4. Bioenergetic Domain Management: High-power work induces neuromuscular and central fatigue; recovery from brief resistance exercise (Norbury 93.01% LL, 93.67% HL at 45 min after 3 sets in kg·reps) cannot be transferred to 2700 s of heavy metabolic endurance without multi-hour recovery windows.",
             ],
         },
     }
@@ -701,9 +714,9 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
         "ARCHITECTURE_B_BIOENGINEERED_MUSCLE": "DISQUALIFIED_NO_GO (Preserved from DEC-0021)",
         "ARCHITECTURE_C_INTERNAL_BIOHYBRID": "HOLD_BREAKTHROUGH_DEPENDENT (Preserved from DEC-0021)",
         "AEGIS_01_SUIT_INTEGRATION": "CONDITIONAL_HOLD (-25.0% duty cycle penalty at 360 W)",
-        "TARGET_CPE45_STATUS": "INDEPENDENT_MANDATORY_REQUIREMENT (Intermittent Duty Cycle Envelope Validated)",
-        "TARGET_FORCE20_STATUS": "FEASIBLE_UNDER_RIGID_POSTURAL_ALIGNMENT",
-        "TARGET_ADAPT25_STATUS": "EMPIRICALLY_DEMONSTRATED_IN_COHORT_AND_TISSUE_FEASIBLE",
+        "TARGET_CPE45_STATUS": "NOT_EXTERNALLY_VALIDATED (Intermittent thermal model validated, work reduced 7-36%, power/control/post-MVC unmeasured)",
+        "TARGET_FORCE20_STATUS": "NOT_CONFIRMED_PENDING_POSTURAL_AND_DYNAMIC_SAFETY_DATA",
+        "TARGET_ADAPT25_STATUS": "RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT",
         "JOINT_SYSTEM_COMPATIBILITY_STATUS": "CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD",
     }
 
@@ -770,7 +783,7 @@ Master cross-module integration across all five computational and empirical modu
 1. **Force vs. Tissue Hazard:** At 100° deep knee flexion, the gravity-corrected Strategy 2 model achieves +21.93% bilateral force (3130 N), but under dynamic physiological loading (20 kN/s), local enthesis shear strain drops the safety factor to **SF = 1.285 < 1.50**, failing the mandatory tissue safety threshold. Passing tissue safety (**SF = 1.747 >= 1.50**) is achieved only in extended posture (140°), which alters force magnitude (4632.6 N) and requires strict angular constraint (28–41 N/deg gradient produces a 410 N artifact at 10° error).
 2. **Strength Acquisition Rate (`ADAPT25`):** Within-cohort force gain of +18.35% at 14 days is confirmed on Santos et al., but because the dataset contains **no comparative control cohort**, a +25% rate acceleration over standard training remains unproven. The modeled tissue safety threshold (SF0 >= 1.776) is an analytical ODE sensitivity property, not an in vivo human observation.
 3. **Endurance vs. Neuromuscular Capacity (`CPE45`):** Continuous 360 W power breaches the 39.5 °C hyperthermia limit in 1240–2365 s across all climates. Intermittent duty-cycle pacing (D <= 0.59 to 0.92) preserves homeothermy solely by **reducing total mechanical work from 972 kJ down to 619–902 kJ** (a 7% to 36% cut, as documented in EXP-0065). This verifies only the thermal channel; post-45-min force retention and motor control after 2700 s of heavy metabolic work remain unmeasured in open human datasets.
-4. **Recovery Transfer Gap:** Norbury et al. 98.3% force recovery applies strictly to 3 sets of unilateral leg press (~4 kJ of work) and cannot be transferred to 2700 s of cycling.
+4. **Recovery Transfer Gap:** In Norbury et al. (EXP-0121, EXP-0130, EXP-0133), force recovery at 45 min was 93.01% (LL) and 93.67% (HL) (mean 93.34%) after 3 sets of resistance exercise (4134-5065 kg·reps, not Joules; contested numbers 98.3% and ~4 kJ refuted and removed). This cannot be transferred to 2700 s of heavy cycling.
 
 ---
 
@@ -778,9 +791,9 @@ Master cross-module integration across all five computational and empirical modu
 
 | Target | Status Code | Definitive Scientific Verdict | Empirical & Computational Basis | Operational Boundary Condition |
 |---|---|---|---|---|
-| **TARGET-FORCE20** | `CONDITIONALLY_VALIDATED_IN_MODEL_AND_TRANSFER_BOUNDED` | **FEASIBLE UNDER RIGID POSTURAL ALIGNMENT** | Strategy 2 yields **+21.93%** at 100° (3130 N) and **+21.77%** at 140° (4632.6 N) in corrected EXP-0090 (+21.64% in legacy EXP-0061). In deep flexion (100°), dynamic loading drops enthesis SF to **1.285 < 1.50** (FAIL); extended posture (140°) preserves **SF = 1.747 >= 1.50** (PASS). Nominal 110° model has +463.2 N bias; constant baseline beats model by 148 N MAE. | Knee angle maintained within ±2°; explosive rate capped (dF/dt <= 12,000 N/s) or posture extended to >= 140°. |
-| **TARGET-ADAPT25** | `EMPIRICALLY_SUPPORTED_WITH_TISSUE_RESERVE_GATE` | **EMPIRICALLY DEMONSTRATED IN COHORT & TISSUE FEASIBLE** | Mean force increased **+18.35% at 14 days** and +20.01% at 42 days in Santos et al. (N=10 complete). In simulation, zero deficit is achieved under physiological reserve SF0 >= 1.776 or H2 pacing. However, comparative rate acceleration is unproven due to absence of a control cohort, and human tendon adaptation was unmeasured. | Native reserve SF0 >= 1.78 or Strategy H2 tendon-paced progression; comparative control cohort required. |
-| **TARGET-CPE45** | `VALIDATED_INTERMITTENT_ENVELOPE_CONTINUOUS_360W_UNFEASIBLE` | **VALIDATED UNDER INTERMITTENT DUTY-CYCLE PACING** | 4-layer Pennes solver validated on McLaughlin N=23 (MAE 0.586 °C vs persistence 1.275 °C). Continuous 360 W breaches 39.5 °C in 1240–2365 s. Intermittent pacing maintains T_core < 39.5 °C: D <= 0.92 (temperate), D <= 0.74 (warm), D <= 0.59 (hot-dry), D <= 0.65 (hot-humid), cutting work to 619–902 kJ. Post-exercise force and motor steadiness after 2700 s unmeasured. | Intermittent duty-cycle operation (D <= 0.59-0.92) across operational climates or >= 420 W external cooling. |
+| **TARGET-FORCE20** | `NOT_CONFIRMED_PENDING_POSTURAL_AND_DYNAMIC_SAFETY_DATA` | **FEASIBLE IN MODEL (140°) BUT DYNAMIC SAFETY FAILS (100°)** | Strategy 2 yields **+21.93%** at 100° (3130 N) and **+21.77%** at 140° (4632.6 N) in corrected EXP-0090 (+21.64% in legacy EXP-0061). In deep flexion (100°), dynamic loading drops enthesis SF to **1.285 < 1.50** (FAIL); extended posture (140°) preserves **SF = 1.747 >= 1.50** (PASS). Nominal 110° model has +463.2 N bias; constant baseline beats model by 148 N MAE. | Knee angle maintained within ±2°; explosive rate capped (dF/dt <= 12,000 N/s) or posture extended to >= 140°. |
+| **TARGET-ADAPT25** | `RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT` | **WITHIN-COHORT GAIN OBSERVED (+18.35%), COMPARATIVE RATE UNASSESSED** | Mean force increased **+18.35% at 14 days** and +20.01% at 42 days in Santos et al. (N=10 complete). In simulation, zero deficit is achieved under physiological reserve SF0 >= 1.776 or H2 pacing. However, comparative rate acceleration is unproven due to absence of a control cohort, and human tendon adaptation was unmeasured. | Native reserve SF0 >= 1.78 or Strategy H2 tendon-paced progression; comparative control cohort required. |
+| **TARGET-CPE45** | `NOT_EXTERNALLY_VALIDATED` | **THERMAL SOLVER VALIDATED (WORK CUT), CHANNELS NOT EXTERNALLY VALIDATED** | TARGET-CPE45 defined per research/targets/CPE45.json as 2700 s requirement. 4-layer Pennes solver validated on McLaughlin N=23 (MAE 0.586 °C vs persistence 1.275 °C). Continuous 360 W breaches 39.5 °C in 1240–2365 s. Intermittent pacing maintains T_core < 39.5 °C (D <= 0.59-0.92), but only by cutting work to 619–902 kJ. In Norbury, recovery at 45 min was 93.01% LL / 93.67% HL in kg·reps; power maintenance, control, and post-load MVC over 2700 s unmeasured. | Intermittent duty-cycle operation (D <= 0.59-0.92) across operational climates or >= 420 W external cooling. |
 | **JOINT COMPATIBILITY** | `CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD` | **NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS** | Evaluated under unified physical conditions, simultaneous uncompromised achievement fails: deep flexion breaches tissue safety (SF=1.285), continuous 360 W breaches thermal limits, intermittent endurance cuts work and induces fatigue, and adaptation rate lacks control. | Architecture A placed on whole-system HOLD pending execution of the three pre-registered in vivo human measurements. |
 
 ---
@@ -794,7 +807,7 @@ Master cross-module integration across all five computational and empirical modu
 | **ADAPT25 GAIN** | +18.35% at 14 d, +20.01% at 42 d | Santos et al. (SRC-0090), EXP-0128 | Within-subject mean bilateral leg press peak force across 10 participants | `RAW_HUMAN_OBSERVATION` | Observed within single training cohort; NO comparative control cohort exists; rate acceleration relative to control is UNASSESSED. |
 | **RESERVE SF0** | SF0 >= 1.776 | EXP-0128 (ADAPT25_TISSUE_TRAJECTORY) | Analytical ODE sensitivity: SF0 >= 1.50 * 1.1835 = 1.7753 | `COMPUTATIONAL_SIMULATION` | Model sensitivity limit; human in vivo tendon remodeling and strain were not measured in Santos. |
 | **MOTOR CONTROL** | CV = 2.1%, COP <= 0.045 m | Model proxy in synthesis; EXP-0111, EXP-0124 | Synthetic model threshold assumption | `SYNTHETIC_MODEL_PROXY` | Uncalibrated model proxy. Kudzia (EXP-0111) showed post-fatigue CV worsened to 2.83% (> 2.5%, ISS-0038). Post-CPE45 control unassessed. |
-| **RECOVERY** | 98.3% at 45 min, 91.0% at 5 min | Norbury et al. (SRC-0111), EXP-0130 | Mean post/pre MVC ratio in 12 males after 3 sets of leg press | `RAW_HUMAN_OBSERVATION` | Applies strictly to 3 sets of resistance exercise (~4 kJ); non-transferable to 2700 s heavy cycling (619-902 kJ). |
+| **RECOVERY** | 93.01% LL / 93.67% HL (mean 93.34%) at 45 min, 91.0% at 5 min | Norbury et al. (SRC-0111), EXP-0121, EXP-0130, EXP-0133 | Measured in 12 males after 3 sets of leg press (4134-5065 kg·reps) | `RAW_HUMAN_OBSERVATION` | Applies strictly to resistance exercise in kg·reps; contested 98.3% and ~4 kJ refuted; non-transferable to 2700 s heavy cycling (619-902 kJ). |
 | **CPE45 ENVELOPE** | D = 0.59 to 0.92, Work = 619 to 902 kJ | EXP-0063, EXP-0065, EXP-0131 | 4-layer Pennes bioheat solver on 4 climates over 2700 s | `COMPUTATIONAL_SIMULATION` | Continuous 360 W breaches 39.5 °C; intermittent D preserves T_core solely by cutting total mechanical work by 7% to 36% (EXP-0065). |
 
 ---
