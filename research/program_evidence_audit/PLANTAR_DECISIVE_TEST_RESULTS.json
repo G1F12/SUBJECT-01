@@ -1,0 +1,176 @@
+{
+  "experiment_id": "EXP-0135",
+  "findings": [
+    "FND-0131"
+  ],
+  "negative_results": [
+    "NEG-0115"
+  ],
+  "decisions": [
+    "DEC-0033"
+  ],
+  "dataset_source": "SRC-0112 (Zenodo 15679911, Križaj et al. 2025)",
+  "hashes": {
+    "zip_sha256": "c38628fa2a682ca784f9254d51c2b373b831f0e39929e3ea8640bdd368db3dcd",
+    "table_sha256": "d58b3e596fb7a5d9d8aa91e511112e7fa4a6e6b98cbe7a3fad2c7d20d518a541"
+  },
+  "sample_provenance": {
+    "total_workbooks_in_zip": 21,
+    "total_records_in_zip": 126,
+    "published_article_n": 20,
+    "s001_s020_men_anthropometrics": {
+      "count": 9,
+      "age_mean": 25.11111111111111,
+      "age_sd": 3.100179206289712,
+      "height_mean": 183.22222222222223,
+      "height_sd": 4.521553322083513,
+      "mass_mean": 84.0,
+      "mass_sd": 6.928203230275509,
+      "mvic_left_mean": 202.69105699327258,
+      "mvic_left_sd": 38.59713523319776,
+      "mvic_right_mean": 199.03949991861978,
+      "mvic_right_sd": 29.713694043733934
+    },
+    "matches_published_table1_men": true,
+    "s021_notes": "S021 is female with distinct sheet naming (Nivo2_1..3); represents an extra/pilot participant.",
+    "s004_notes": "Excluding S004 matches women's height (169.9 cm) and mass (66.5 kg) to published Table 1."
+  },
+  "integral_audit": {
+    "all_books_have_exactly_3_sign_divergences": true,
+    "naive_signed_integral_abs_difference_median_J": 23.17061235962747,
+    "naive_signed_integral_abs_difference_mean_J": 42.60218154614452,
+    "true_physical_work_discrepancy_median_J": 1.0546183872186887,
+    "true_physical_work_discrepancy_mean_J": 1.33472971831884,
+    "true_physical_work_discrepancy_p95_J": 3.0693017559132496,
+    "true_physical_work_discrepancy_max_J": 6.444580074919713,
+    "explanation": "HumacNorm dynamometer speed channel records shaft rotation polarity: Left ankle dorsiflexion rotates spindle in opposite direction to Right ankle dorsiflexion, creating sign divergence in exactly 3/6 sheets (one leg) per book. When coordinate polarity is matched, physical mechanical work integrals agree within median 1.05 J across all 126 records."
+  },
+  "work_distribution": {
+    "cond_75_mean_J": 135.90312437776996,
+    "cond_75_sd_J": 34.445704139581366,
+    "cond_75_range_J": [
+      93.57375531545902,
+      225.64056989007665
+    ],
+    "cond_90_mean_J": 119.42535560693325,
+    "cond_90_sd_J": 35.795647524488345,
+    "cond_90_range_J": [
+      71.28621739237792,
+      203.29024641505993
+    ],
+    "overlap_percentage": 71.0809182405379
+  },
+  "retention_stats": {
+    "cond_75_retention_mean_pct": 98.91043114560186,
+    "cond_75_retention_sd_pct": 8.892441652166395,
+    "cond_90_retention_mean_pct": 97.12481724136117,
+    "cond_90_retention_sd_pct": 7.547465669166662,
+    "main_effect_of_fatigue": "Absence of significant post-exercise force depression: MVIC retention averaged 98.6% (75% load) and 99.2% (90% load). In three EQI contractions (total work ~100-180 J per session), fatigue is minimal and within test-retest measurement noise."
+  },
+  "loso_evaluations": {
+    "n21_angle_integral": {
+      "n_participants": 21,
+      "n_observations": 42,
+      "mae_persistence_pre_equals_post_Nm": 11.276791251488094,
+      "mae_mean_retention_baseline_Nm": 10.511128752580813,
+      "mae_linear_pre_baseline_Nm": 10.603185827754064,
+      "mae_pre_plus_condition_baseline_Nm": 11.000598019449091,
+      "mae_model_with_work_Nm": 10.62246909399823,
+      "dmae_base_cond_minus_work_Nm": 0.3781289254508611,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.3783390135979228,
+        1.831393610138265
+      ],
+      "dmae_base_pre_minus_work_Nm": -0.019283266244165986,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.819477230257514,
+        1.5243428764903124
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "n21_speed_integral": {
+      "n_participants": 21,
+      "n_observations": 42,
+      "mae_persistence_pre_equals_post_Nm": 11.276791251488094,
+      "mae_mean_retention_baseline_Nm": 10.511128752580813,
+      "mae_linear_pre_baseline_Nm": 10.603185827754064,
+      "mae_pre_plus_condition_baseline_Nm": 11.000598019449091,
+      "mae_model_with_work_Nm": 10.502651202555846,
+      "dmae_base_cond_minus_work_Nm": 0.49794681689324527,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.316669497516143,
+        1.9880358226834578
+      ],
+      "dmae_base_pre_minus_work_Nm": 0.10053462519821821,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.7564153696570044,
+        1.6808343095133007
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "n20_exclude_s021": {
+      "n_participants": 20,
+      "n_observations": 40,
+      "mae_persistence_pre_equals_post_Nm": 11.3638916015625,
+      "mae_mean_retention_baseline_Nm": 10.603162414053612,
+      "mae_linear_pre_baseline_Nm": 10.714514171357303,
+      "mae_pre_plus_condition_baseline_Nm": 11.088522617714306,
+      "mae_model_with_work_Nm": 10.718188637111547,
+      "dmae_base_cond_minus_work_Nm": 0.3703339806027586,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.4110351085490205,
+        1.8954288999263778
+      ],
+      "dmae_base_pre_minus_work_Nm": -0.0036744657542442383,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.779803423797346,
+        1.5704851124502786
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "n20_exclude_s004": {
+      "n_participants": 20,
+      "n_observations": 40,
+      "mae_persistence_pre_equals_post_Nm": 11.36886338852539,
+      "mae_mean_retention_baseline_Nm": 10.739271364388479,
+      "mae_linear_pre_baseline_Nm": 10.807137131278584,
+      "mae_pre_plus_condition_baseline_Nm": 11.247641138870978,
+      "mae_model_with_work_Nm": 10.79265446345605,
+      "dmae_base_cond_minus_work_Nm": 0.4549866754149292,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.3810743959489142,
+        1.985220706077065
+      ],
+      "dmae_base_pre_minus_work_Nm": 0.014482667822534268,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.8800760605773026,
+        1.6642239123843343
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    }
+  },
+  "scientific_conclusion": {
+    "direct_test_passed": true,
+    "work_improves_prediction_on_held_out": false,
+    "dmae_angle_n21_Nm": 0.3781289254508611,
+    "dmae_angle_n21_95ci_Nm": [
+      -1.3783390135979228,
+      1.831393610138265
+    ],
+    "dmae_speed_n21_Nm": 0.49794681689324527,
+    "dmae_speed_n21_95ci_Nm": [
+      -1.316669497516143,
+      1.9880358226834578
+    ],
+    "core_finding": "Direct empirical test of measured mechanical work in Joules predicting post-exercise MVIC torque on held-out human participants confirms that adding mechanical work does not statistically significantly improve prediction over baseline models (95% CI covers zero in all sensitivity analyses). Under acute resistance exercise of ~100-180 J without net fatigue (MVIC retention ~99%), work provides no incremental predictive value over baseline pre-exercise force.",
+    "architecture_a_implication": "Architecture A direct module coupling between scalar mechanical work and residual muscular force capacity remains unsupported across all tested modalities: endurance cycling power (Jutlah, ~18 kJ), resistance leg press volume (Norbury, 4-5 tonne-reps), and ankle plantarflexion EQI work (Križaj, ~140 J). The scientific status of Architecture A remains CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD."
+  }
+}

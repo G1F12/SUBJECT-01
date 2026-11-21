@@ -3844,5 +3844,33 @@
     "limits": "No open dataset currently available provides continuous cycling work in Joules together with synchronized pre/post isometric knee MVC at matched 2700 s duration.",
     "external_validation": "CROSS_DATASET_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "EXP-0135",
+    "date": "2026-11-21",
+    "name": "Decisive Out-of-Sample Test of Measured Work in Joules Predicting Post-Exercise MVIC Torque (Zenodo 15679911)",
+    "sources": [
+      "SRC-0112"
+    ],
+    "design": "Audited 21 workbooks (126 records) of Zenodo 15679911 (Križaj et al. 2025); resolved spindle coordinate polarity and matched torque-angle vs torque-velocity integrals (median discrepancy 1.05 J); extracted synchronized pre/post MVIC torque across 75% and 90% EQI conditions; executed Leave-One-Subject-Out (LOSO) cross-validation and participant-clustered bootstrap (10,000 resamples) comparing baseline models against model with measured work.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_plantar_decisive_test.py",
+    "inputs": "research/program_evidence_audit/PLANTAR_DECISIVE_TEST_REPORT.md",
+    "report": "research/program_evidence_audit/PLANTAR_DECISIVE_TEST_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/PLANTAR_DECISIVE_TEST_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_plantar_decisive_test.py",
+    "results": {
+      "findings": [
+        "FND-0131"
+      ],
+      "negative_results": [
+        "NEG-0115"
+      ]
+    },
+    "limits": "Evaluated on ankle plantarflexion EQI resistance exercise (100-180 J per session, delay < 1 min, no net group fatigue). Does not cover multi-kJ whole-body cycling or 2700 s timeline.",
+    "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

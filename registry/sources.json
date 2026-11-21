@@ -1957,11 +1957,11 @@
     "type": "primary_data",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/program_evidence_audit/NORBURY_FORCE_RECOVERY_REPORT.md",
-    "doi": "10.6084/m9.figshare.24156741.v1",
-    "url": "https://doi.org/10.6084/m9.figshare.24156741.v1",
+    "doi": "10.1113/EP091705",
+    "url": "https://doi.org/10.1113/EP091705",
     "calibration_review": {
       "access": "CC BY 4.0 XLSX downloaded; publisher MD5 and SHA-256 verified. Article and low-load individual rows previewed before protocol.",
-      "scope": "12 healthy men, randomized crossover. Only free-flow low/high-load leg press conditions analyzed; knee extension force at baseline and 5/45 min, 24 h after short exercise. Volume is load times repetitions, not mechanical work."
+      "scope": "12 healthy men, randomized crossover. Only free-flow low/high-load leg press conditions analyzed; knee extension force at baseline and 5/45 min, 24 h after short exercise. Volume is load times repetitions (kg·reps), not mechanical work in Joules."
     },
     "external_provenance": {
       "article_doi": "10.1113/EP091705",
@@ -1977,12 +1977,12 @@
     "name": "Kozinc et al. plantarflexion moment, position, speed and MVIC",
     "type": "primary_data",
     "verification": "metadata_and_scope_checked_only",
-    "audit_report": "research/program_evidence_audit/PLANTAR_WORK_GATE_REPORT.md",
+    "audit_report": "research/program_evidence_audit/PLANTAR_DECISIVE_TEST_REPORT.md",
     "doi": "10.5281/zenodo.15679911",
     "url": "https://doi.org/10.5281/zenodo.15679911",
     "calibration_review": {
       "access": "Zenodo ZIP and XLSX downloaded; publisher MD5 and local SHA-256 verified.",
-      "scope": "Article describes 20 adults; archive and summary contain 21 participant identifiers. Channel signs, selection and analysis windows need clarification."
+      "scope": "21 participants in raw archive (S001..S021, 126 records) vs 20 in article (S021 extra/pilot); coordinate polarity between left and right leg resolved (spindle coordinate flips velocity sign on opposite leg in 3/6 sheets); physical discrepancy between angle and velocity integrals is median 1.05 J. Decisive LOSO test conducted in EXP-0135."
     },
     "external_provenance": {
       "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12238097/",
