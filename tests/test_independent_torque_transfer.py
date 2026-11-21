@@ -35,49 +35,72 @@ class TestIndependentTorqueTransfer(unittest.TestCase):
         self.assertEqual(self.res["provenance"]["krizaj_source"], "SRC-0112")
         self.assertEqual(self.res["provenance"]["evangelidis_source"], "SRC-0115")
         self.assertEqual(self.res["provenance"]["norbury_source"], "SRC-0111")
+        self.assertEqual(self.res["provenance"]["norbury_doi"], "10.1113/EP091705")
 
     def test_fixed_model_transfer_catastrophic_error(self):
-        ft = self.res["krizaj_evaluation"]["fixed_model_transfer"]
-        self.assertGreater(ft["fixed_tau_end_mae_Nm"], 45.0)
-        self.assertGreater(ft["fixed_retention_mae_Nm"], 40.0)
-        self.assertEqual(ft["transfer_status"], "CATASTROPHIC_ERROR_INCREASE")
+        dt = self.res["direct_transfer_evaluation"]
+        tau_m = dt["fixed_source_tau_end_model"]
+        ret_m = dt["fixed_source_retention_baseline"]
 
-    def test_krizaj_retrained_loso_utility_failure(self):
+        # Fixed model exhibits catastrophic error on Križaj
+        self.assertGreater(tau_m["mae_Nm"], 70.0)
+        self.assertGreater(ret_m["mae_Nm"], 40.0)
+        self.assertEqual(tau_m["status"], "CATASTROPHIC_OVERESTIMATION")
+        # Fixed tau_end model is substantially worse than fixed retention baseline
+        self.assertGreater(tau_m["mae_Nm"], ret_m["mae_Nm"])
+
+    def test_krizaj_same_leg_pre_alone_invariant_and_tau_end_failure(self):
         ke = self.res["krizaj_evaluation"]
-        maes = ke["retrained_loso_metrics"]
-        comps = ke["comparisons"]
+        maes = ke["primary_metrics"]
+        comps = ke["primary_comparisons"]
+        sens = ke["sensitivity_across_rules"]
 
-        # MeanRetention and PreAlone baselines
-        self.assertAlmostEqual(maes["mean_retention_mae_Nm"], 10.48, places=1)
-        self.assertAlmostEqual(maes["pre_alone_mae_Nm"], 9.63, places=1)
-        self.assertAlmostEqual(maes["pre_plus_tau_end_mae_Nm"], 9.70, places=1)
+        # Baseline PreAlone is identically 10.60 Nm across all bipartite matching rules
+        self.assertAlmostEqual(maes["pre_alone_mae_Nm"], 10.60, places=1)
+        for rule_name, rule_res in sens.items():
+            self.assertAlmostEqual(
+                rule_res["pre_alone_mae_Nm"],
+                10.60,
+                places=1,
+                msg=f"PreAlone failed 10.60 Nm invariance under {rule_name}",
+            )
 
-        # DeltaMAE vs MeanRetention is < 1.0 and CI spans zero
-        comp_ret = comps["tau_end_vs_mean_retention"]
-        self.assertLess(comp_ret["dmae_Nm"], 1.0)
-        self.assertLess(comp_ret["ci95_Nm"][0], 0.0)
-        self.assertGreater(comp_ret["ci95_Nm"][1], 0.0)
-        self.assertFalse(comp_ret["passes_utility_threshold"])
+        # Pre + tau_end spans 10.59 to 11.03 Nm across rules
+        for rule_name, rule_res in sens.items():
+            self.assertGreaterEqual(rule_res["pre_plus_tau_end_mae_Nm"], 10.59)
+            self.assertLessEqual(rule_res["pre_plus_tau_end_mae_Nm"], 11.10)
+            # In each rule, 95% CI vs PreAlone spans zero or shows worsening
+            ci = rule_res["ci95_vs_pre_alone_Nm"]
+            self.assertLessEqual(ci[0], 0.0)
 
-        # DeltaMAE vs PreAlone worsens error
+        # Primary rule (Rule 2): adding tau_end worsens error from 10.60 to 10.71 Nm
+        self.assertAlmostEqual(maes["pre_plus_tau_end_mae_Nm"], 10.71, places=1)
         comp_pre = comps["tau_end_vs_pre_alone"]
         self.assertTrue(comp_pre["worsening"])
-        self.assertLessEqual(comp_pre["dmae_Nm"], 0.0)
+        self.assertFalse(comp_pre["passes_utility_threshold"])
 
-    def test_norbury_recovery_volume_worsens_prediction(self):
+    def test_norbury_recovery_volume_aligned_recalculation(self):
         ne = self.res["norbury_evaluation"]
 
-        # 5-min
+        # 5-min post-exercise
         n5 = ne["post_5m"]
-        self.assertTrue(n5["worsening_vol4"])
-        self.assertLess(n5["dmae_vol4_vs_pre_alone_N"], 0.0)
-        self.assertAlmostEqual(n5["dmae_vol4_vs_pre_alone_N"], -7.25, places=1)
+        self.assertAlmostEqual(n5["pre_alone_mae_N"], 49.50, places=1)
+        self.assertAlmostEqual(n5["pre_plus_vol4_mae_N"], 47.58, places=1)
+        self.assertAlmostEqual(n5["dmae_vol4_vs_pre_alone_N"], 1.93, places=1)
+        # CI spans zero (e.g. [-6.13, 10.31])
+        self.assertLess(n5["ci95_vol4_N"][0], 0.0)
+        self.assertGreater(n5["ci95_vol4_N"][1], 0.0)
+        self.assertFalse(n5["passes_utility_vol4"])
 
-        # 45-min
+        # 45-min post-exercise
         n45 = ne["post_45m"]
-        self.assertTrue(n45["worsening_vol4"])
-        self.assertLess(n45["dmae_vol4_vs_pre_alone_N"], 0.0)
-        self.assertAlmostEqual(n45["dmae_vol4_vs_pre_alone_N"], -3.31, places=1)
+        self.assertAlmostEqual(n45["pre_alone_mae_N"], 34.38, places=1)
+        self.assertAlmostEqual(n45["pre_plus_vol4_mae_N"], 32.94, places=1)
+        self.assertAlmostEqual(n45["dmae_vol4_vs_pre_alone_N"], 1.44, places=1)
+        # CI spans zero (e.g. [-4.22, 6.87])
+        self.assertLess(n45["ci95_vol4_N"][0], 0.0)
+        self.assertGreater(n45["ci95_vol4_N"][1], 0.0)
+        self.assertFalse(n45["passes_utility_vol4"])
 
 
 if __name__ == "__main__":

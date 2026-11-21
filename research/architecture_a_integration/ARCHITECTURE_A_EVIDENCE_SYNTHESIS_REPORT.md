@@ -43,12 +43,12 @@ Per canonical `research/targets/CPE45.json`, the target demands a 2700 s alterna
 
 | Scenario / Configuration | Force / Adapt Target | Velocity & Power | Tissue Safety (SF >= 1.50) | Motor Control (CV <= 2.5%) | CPE45 Thermal (T_core < 39.5°C) | Post-Load MVC & Recovery | Overall Scenario Status |
 |---|---|---|---|---|---|---|---|
-| **1. Strategy 2 at 100° (20 kN/s dynamic)** | +21.93% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.285 (FAILS for this scenario)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **SCENARIO REJECTED (Local enthesis shear breach)** |
-| **2. Strategy 2 at 140° (20 kN/s dynamic)** | +21.77% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.747 (PASSES model threshold)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **CONDITIONALLY FEASIBLE (Requires rigid ±2° alignment)** |
+| **1. Strategy 2 at 100° (20 kN/s dynamic)** | +21.93% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.285 (FAILS for this scenario)** | Uncalibrated proxy 2.1% (НЕ ПОДТВЕРЖДЕНО) | *Не оценено* | *Не оценено* | **SCENARIO REJECTED (Local enthesis shear breach)** |
+| **2. Strategy 2 at 140° (20 kN/s dynamic)** | +21.77% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.747 (PASSES model threshold)** | Uncalibrated proxy 2.1% (НЕ ПОДТВЕРЖДЕНО) | *Не оценено* | *Не оценено* | **CONDITIONALLY FEASIBLE (Requires rigid ±2° alignment)** |
 | **3. Santos 6-week Longitudinal (110°)** | +18.35% at 14d / +20.01% at 42d (PASS within cohort) | *Не оценено* | SF0 >= 1.776 in ODE (PASS in model, unmeasured in vivo) | *Не оценено* | *Не оценено* | *Не оценено* | **UNASSESSED FOR ADAPT25 (No comparative control cohort)** |
 | **4. Continuous 360 W for 2700 s (Isolated Thermal Stress)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Breaches 39.5°C in 1240–2365 s (FAILS)** | *Не оценено* | **SCENARIO REJECTED (Continuous max power not required by CPE45)** |
 | **5. Intermittent 360 W (D = 0.59–0.92, 2700 s)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Peak T_core < 39.5°C (PASSES solely by cutting work 7–36%)** | *Не оценено* | **PARTIALLY VALIDATED (Thermal solver validated; functional channels unassessed)** |
-| **6. Norbury Resistance Recovery (3 sets, kg·reps)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | 93.34% at 45m, 99.10% at 24h (PASS in kg·reps) | **NON-TRANSFERABLE (Resistance exercise in kg·reps; non-transferable to 2700 s endurance)** |
+| **6. Norbury Resistance Recovery (4 sets, kg·reps)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | 93.34% at 45m, 99.10% at 24h (PASS in kg·reps) | **NON-TRANSFERABLE (Resistance exercise in kg·reps; non-transferable to 2700 s endurance)** |
 | **7. Whole-System Combined Architecture A** | Not confirmed in vivo | Feasible in model | Passes only at 140° | Unassessed after 2700 s | Validated with work cut | Unassessed after 2700 s | **CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD** |
 
 ---
