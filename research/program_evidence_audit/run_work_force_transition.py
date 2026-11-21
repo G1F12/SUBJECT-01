@@ -127,13 +127,13 @@ def main():
     rng = np.random.default_rng(20261121)
     base_err = np.abs(np.array(preds["mean_retention_baseline"]) - y_true)
 
-    # Reshape by subject (12 subjects x 2 conditions)
-    base_err_by_sub = base_err.reshape(2, 12).T  # shape (12, 2)
+    # Reshape by subject (12 subjects x 2 conditions: LL, HL)
+    base_err_by_sub = base_err.reshape(12, 2)
     boot_idx = rng.integers(0, 12, size=(10000, 12))
 
     comparisons = {}
     for name in ["persistence_unperturbed", "mean_loss_baseline", "volume_linear_model", "volume_proportional_d2_model"]:
-        model_err = np.abs(np.array(preds[name]) - y_true).reshape(2, 12).T
+        model_err = np.abs(np.array(preds[name]) - y_true).reshape(12, 2)
         # Difference = baseline_error - model_error (positive means model is better)
         diff_by_sub = np.mean(base_err_by_sub - model_err, axis=1)  # shape (12,)
         boot_diffs = np.mean(diff_by_sub[boot_idx], axis=1)
@@ -152,6 +152,7 @@ def main():
     #          Post: baseline 568 N, post 459 N (ret 80.81%, drop 19.19%)
     #          Power -0.7%, Work ~constant
     de_poli_audit = {
+        "scope_limitation": "Restricted strictly to published group-level averages (Table 3). Individual continuous time-series data are available only upon author request (prohibited under project governance).",
         "SIT_group": {
             "pre_training": {"baseline_N": 611, "post_N": 436, "retention_percent": 71.36, "drop_percent": 28.64},
             "post_training": {"baseline_N": 614, "post_N": 461, "retention_percent": 75.08, "drop_percent": 24.92},
@@ -174,13 +175,14 @@ def main():
         "can_couple_force_with_energy_module": False,
         "action_required_before_coupling": "FUNDAMENTALLY_RESTRUCTURE_TRANSITION_MODEL",
         "justifications": [
-            "Out-of-sample failure: On held-out individual subjects (Norbury 12 men), incorporating workload/volume into force prediction increased MAE by 4.08 N over a simple mean retention baseline (baseline MAE 50.61 N vs volume linear MAE 54.69 N; 95% CI [-9.93, 1.77] N, no advantage).",
+            "Out-of-sample failure: On held-out individual subjects (Norbury 12 men, paired LL and HL conditions), incorporating workload/volume into force prediction increased MAE by 4.08 N over a simple mean retention baseline (baseline MAE 50.61 N vs volume linear MAE 54.69 N; paired difference -4.08 N, 95% CI [-8.49, -0.29] N, strictly favoring baseline).",
             "Directional failure: In de Poli et al., performing +8.5% to +11% more external mechanical work was accompanied by higher force retention (75.08% vs 71.36%), directly violating the assumption that force decrement monotonically tracks cumulative work.",
             "Intensity domain omission: A scalar Joules ledger ignores whether work is performed below, at, or above Critical Power / Respiratory Compensation Point. Sub-CP work produces minimal force loss, whereas supra-CP work produces rapid exhaustion with limited total Joules.",
             "Recovery latency neglect: Real post-exercise force measurements have an unmodeled delay (25 s in de Poli, 5 min in Norbury) during which rapid PCr resynthesis and central drive recovery occur. A static transition model cannot transfer across protocols.",
             "Central vs peripheral confusion: Total work cannot be mapped directly to muscle contractile capacity without separating peripheral cross-bridge inhibition from motoneuronal voluntary activation failure.",
         ],
         "proposed_reconstructed_transition_architecture": {
+            "status": "UNVALIDATED_CANDIDATE_ARCHITECTURE_REQUIRING_INDEPENDENT_EMPIRICAL_VERIFICATION",
             "state_1": "Domain-partitioned mechanical demand (moderate vs heavy vs severe domain based on CP/RCP).",
             "state_2": "Bi-compartmental fatigue state: peripheral cross-bridge metabolite penalty (H+, Pi, PCr) + central voluntary activation deficit (%VA).",
             "state_3": "Dynamic recovery operator: exponential restoration function F_recov(t) = F_end + (F_base - F_end)*(1 - exp(-t / tau_recov)) accounting for measurement delay.",

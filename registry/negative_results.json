@@ -854,23 +854,55 @@
     "date": "2026-11-21",
     "experiment_id": "EXP-0126",
     "title": "Corrected mechanical model at matched 110 degrees fails to outperform constant baseline",
-    "statement": "Paired difference between LOSO mean baseline and corrected 110-degree model is −104.8 N [−344.7, 158.8] N, and 140-degree model is −782.1 N [−1158.0, −313.0] N, demonstrating that closed-chain posture transfer without individual subject geometry introduces systematic bias exceeding the +20% target effect.",
-    "reason": "Closed-chain model lacks individual pelvis posture, segment lengths, moment arms, and COP calibration."
+    "statement": "In diagnostic evaluation at ~110°, paired difference between LOSO mean baseline and corrected 110-degree model is −104.8 N [−344.7, 158.8] N; angle mismatch sensitivity check (100° and 140° models on 110° data) shows steep gradient (28–41 N/deg) where a 10° mismatch produces ~410 N artifact comparable to TARGET-FORCE20 margin; longitudinal variance (naive Sw=385.7 N) is confounded by systematic training progression (detrended Sw=309.1 N).",
+    "reason": "Diagnostic evaluation at ~110° lacks individual pelvis posture, segment lengths, moment arms, and COP calibration; angle mismatch creates systematic shifts exceeding +20% target; multi-week training progression is distinct from pure test-retest repeatability."
   },
   {
     "id": "NEG-0107",
     "date": "2026-11-21",
     "experiment_id": "EXP-0127",
     "title": "Mechanical work fails to improve prediction of post-load residual force",
-    "statement": "Linear workload model has higher error than simple constant retention baseline (MAE 54.69 N vs 50.61 N; paired difference −4.08 N [−8.41, −0.38] N favoring baseline); de Poli +8.5% work increases force retention by +3.72 pp.",
-    "reason": "Scalar work ignores intensity domains relative to Critical Power, motoneuronal activation loss, and measurement delay recovery kinetics."
+    "statement": "Linear workload model has higher error than simple constant retention baseline (MAE 54.69 N vs 50.61 N; paired difference −4.08 N [−8.49, −0.29] N favoring baseline under participant-paired bootstrap); de Poli published group data show +8.5% to +11.0% work increases force retention by +3.72 pp.",
+    "reason": "Scalar work ignores intensity domains relative to Critical Power, motoneuronal activation loss, and measurement delay recovery kinetics; 4-component model remains an unvalidated candidate architecture."
   },
   {
     "id": "NEG-0108",
     "date": "2026-11-21",
     "experiment_id": "EXP-0128",
-    "title": "Accelerated force acquisition violates tendon safety threshold across entire adaptation trajectory",
-    "statement": "Under empirical force gain, tendon safety factor drops to min SF 1.267 (cohort) and 0.938–1.036 (high responders), failing the SF >= 1.50 gate across 42/42 days with up to 53x peak daily damage hazard.",
-    "reason": "Tendon remodeling has a biological latency of 14 days and time constant of 84 days, lagging rapid neural strength adaptation."
+    "title": "Parametric simulation shows tendon safety factor deficit under assumed low baseline reserve",
+    "statement": "Under empirical force gain (+18.35% by Day 14), parametric simulation with assumed SF0=1.50 and tau_delay=14 d drops tendon safety factor to min SF 1.267 (cohort) and 0.938–1.036 (high responders), spending 42/42 days below 1.50 with a 4.15x peak daily damage multiplier; sensitivity analysis shows this deficit is fully resolved if physiological baseline reserve SF0 >= 1.776.",
+    "reason": "Model-dependent simulation assuming low initial reserve SF0=1.50 lags rapid neural strength gain; does not constitute empirical measurement of collagen turnover rate limits."
+  },
+  {
+    "id": "NEG-0109",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0129",
+    "title": "Biomechanical closed-chain model fails to outperform trivial constant baseline at matched task posture without individual joint geometry",
+    "statement": "On Santos cohort holdouts at matched ~110° angle, biomechanical model has higher error than a trivial constant 2500 N baseline (MAE 613.6 N vs 458.8 N; bias +463.2 N; paired difference -148.3 N [-344.7, 31.3] N); angle mismatch sensitivity gradient (28–41 N/deg, ~410 N artifact at 10°) indicates postural discrepancy confounds target effect sizes; DPValid PCSA model is inconclusive (delta R2 = +0.0735 < 0.08); Scherpereel squat moments are blocked by ISS-0028 unit ambiguity; explosive ballistic recruitment drops local enthesis SF to 1.31 < 1.50.",
+    "reason": "Model lacks subject-specific pelvic posture, segment lengths, moment arms, and COP calibration; single-joint and squat data do not transfer to closed-chain bilateral leg press; ballistic rate of force rise induces enthesis viscoelastic shear concentration."
+  },
+  {
+    "id": "NEG-0110",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0130",
+    "title": "External mechanical work fails to improve prediction of post-load residual force over simple retention baseline",
+    "statement": "On Norbury held-out participants, linear volume model worsens MAE by 4.08 N (MAE 54.69 N vs 50.61 N; paired difference -4.08 N [-8.49, -0.29] N strictly favoring naive retention baseline under participant-paired bootstrap); de Poli group data show performing +11.1% more mechanical work increases post-exercise force retention by +3.72 pp; McLaughlin continuous cycling demonstrates hundreds of kilojoules of sub-CP work without task failure, contrasting with supra-critical exhaustion at ~70 kJ.",
+    "reason": "Scalar work ignores intensity domains relative to Critical Power / RCP, motoneuronal activation loss, and measurement delay recovery kinetics; monotonic scalar exhaustion equations are physically and physiologically invalid."
+  },
+  {
+    "id": "NEG-0111",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0131",
+    "title": "Continuous 360 W breaches 2700-s thermal tolerance in all climates; tissue safety deficit is eliminated under native reserve SF0 >= 1.78",
+    "statement": "In 4-layer Pennes bioheat simulations, continuous 360 W power breaches the 39.5 °C core temperature threshold in all tested climates >= 20 °C (1240–2365 s breach times), rendering continuous CPE45 unviable without intermittent duty-cycle pacing (D <= 0.65-0.92) or active cooling; tendon safety factor deficit under empirical +18.35% force gain occurs only when assuming artificial initial SF0=1.50 and disappears entirely (min SF >= 1.50, 0 days below 1.50) when native baseline reserve SF0 >= 1.776.",
+    "reason": "Thermodynamic heat accumulation exceeds unassisted cutaneous dissipation under continuous 360 W; simulated tissue deficit is model-dependent on assumed initial reserve and does not represent an empirical collagen turnover rate limit."
+  },
+  {
+    "id": "NEG-0112",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0132",
+    "title": "Unbounded operational claims fail: Continuous 360 W CPE45, unconstrained ballistic recruitment, and uncalibrated posture breach system safety envelopes",
+    "statement": "Holistic synthesis proves that continuous 360 W CPE45 breaches the 39.5 °C hyperthermia limit across all tested climates >= 20 °C (breach times 1240-2365 s), explosive unconstrained ballistic loading (dF/dt = 20,000 N/s) drops local enthesis safety factor to 1.31 < 1.50, and uncalibrated posture produces 28-41 N/deg artifacts (~410 N at 10° mismatch) that confound target effect sizes; joint system compatibility fails if operational boundaries are ignored.",
+    "reason": "Thermodynamic heat accumulation exceeds cutaneous dissipation under continuous 360 W; viscoelastic deep-layer shear stress concentrations exceed safety margins under rapid strain rates; multijoint moment transfer is steeply angle-dependent."
   }
 ]

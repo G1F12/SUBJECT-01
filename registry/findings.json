@@ -1050,8 +1050,8 @@
     "id": "FND-0122",
     "date": "2026-11-21",
     "experiment_id": "EXP-0126",
-    "title": "Angle transfer bias and multi-week repeatability in diagnostic leg press cohort",
-    "statement": "On 11 men from Santos et al., nominal 100-degree model matches cohort mean (bias +53.4 N, MAE 477.1 N) while matched 110-degree model exhibits large positive bias (+463.2 N, MAE 613.6 N); within-subject SD is 385.7 N (CV 13.5%, ICC 0.787), confirming substantial unmodeled postural and measurement variance.",
+    "title": "Angle mismatch sensitivity and ANOVA variance separation in diagnostic leg press cohort",
+    "statement": "On 11 men from Santos et al. evaluated as diagnostic audit at ~110°, matched 110° model exhibits +463.2 N bias (MAE 613.6 N); evaluating 100° and 140° models on 110° data establishes angle mismatch sensitivity (28–41 N/deg gradient, ~410 N artifact at 10° mismatch); ANOVA partitions longitudinal variance into systematic training progression (SS=1.60e6, +18.35% by W2) and residual error (detrended Sw=309.1 N vs naive Sw=385.7 N), separating training drift from pure test-retest repeatability.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
   },
@@ -1060,7 +1060,7 @@
     "date": "2026-11-21",
     "experiment_id": "EXP-0127",
     "title": "Work-to-force transition model fails out-of-sample against simple retention baseline",
-    "statement": "On 12 men from Norbury et al., incorporating workload into post-load force prediction increases MAE by 4.08 N [0.38, 8.41] N over a simple mean retention baseline (54.69 N vs 50.61 N); in de Poli et al., performing +8.5% to +11.0% more mechanical work post-SIT was accompanied by higher force retention (75.08% vs 71.36%), disproving scalar work-proportional fatigue accumulation.",
+    "statement": "On 12 men from Norbury et al. with participant-paired bootstrap, incorporating workload into post-load force prediction yields paired MAE difference -4.08 N [-8.49, -0.29] N (baseline minus model) over a simple mean retention baseline (54.69 N vs 50.61 N, strictly favoring baseline); in published group-level data from de Poli et al. (Table 3), performing +8.5% to +11.0% more mechanical work post-SIT was accompanied by higher force retention (75.08% vs 71.36%), disproving scalar work-proportional fatigue accumulation.",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
   },
@@ -1068,8 +1068,44 @@
     "id": "FND-0124",
     "date": "2026-11-21",
     "experiment_id": "EXP-0128",
-    "title": "Empirical human force trajectory causes prolonged tendon safety factor deficit",
-    "statement": "Along the observed 6-week force trajectory of Santos cohort (+14.9% gain in first 14 days), tendon SF drops to 1.267 on cohort average and below 1.0 in rapid responders, spending 42/42 days below the 1.50 safety threshold with a 4.15x damage multiplier, confirming rate-limiting collagen heterochrony under native conditions.",
+    "title": "Model-dependent tendon safety factor deficit under empirical human force trajectory",
+    "statement": "Along the observed 6-week force trajectory of 10 complete subjects from Santos cohort (+18.35% mean force increase by Day 14, 2525.2 N to 2988.6 N), model simulation under assumed SF0=1.50 and tau_delay=14 d yields min SF of 1.267 (and below 1.0 in rapid responders) with a 4.15x peak daily damage multiplier; however, parametric sensitivity demonstrates this deficit is contingent on assumed baseline reserve, and setting SF0 >= 1.776 eliminates the safety deficit across all 42 days without establishing empirical collagen turnover rate limits.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0125",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0129",
+    "title": "Biomechanical model out-of-sample bias, angular sensitivity, and tissue hazard bounds on open cohorts",
+    "statement": "On Santos holdout data at ~110°, multijoint model predicts 2976.8 N with +463.2 N bias (MAE 613.6 N), underperforming a constant baseline F0=2500 N (MAE 458.8 N); angular sensitivity gradient is 28–41 N/deg (~410 N shift at 10° mismatch); ANOVA partitions longitudinal variance into systematic progression (SS=1.60e6, +18.35% at day 14) and residual error (detrended Sw=309.1 N); DPValid single-joint benchmark is inconclusive (delta R2 = +0.0735 [0.0259, 0.1428]); Scherpereel squat dynamic transfer is blocked by ISS-0028 unit ambiguity; Strategy 2 preserves quasi-static tissue safety factor SF=2.05 >= 1.50 at 4800 N, but explosive ballistic recruitment (dF/dt = 20,000 N/s) drops local enthesis SF to 1.31 < 1.50.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0126",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0130",
+    "title": "Work-to-force transition failure of scalar volume models and directional refutation on open cohorts",
+    "statement": "On Norbury held-out participants (N=12, 24 paired trials), incorporating workload into post-exercise force prediction yields paired MAE difference -4.08 N [-8.49, -0.29] N favoring simple retention baseline (54.69 N vs 50.61 N under participant-paired bootstrap); force recovers to 98.3% at 45 min and 100.1% at 24 h; in de Poli published group data (Table 3), SIT training increased work by +11.1% while increasing force retention by +3.72 pp (71.36% to 75.08%), directionally refuting monotonic scalar work-depletion equations; in McLaughlin continuous cycling, participants sustained 270 to 810 kJ of work over 45 min without force failure, proving mechanical work is incommensurable across intensity domains.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0127",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0131",
+    "title": "Pennes bioheat thermal validation, CPE45 intermittent pacing envelope, and longitudinal tissue safety dynamics",
+    "statement": "On 23 participants from McLaughlin et al. performing 45-min constant-load cycling in heat, 4-layer Pennes bioheat solver achieves MAE 0.586 °C (bias +0.399 °C), strictly outperforming persistence (MAE 1.275 °C; paired difference +0.689 [0.501, 0.865] °C) and lumped-capacitance baselines (+0.462 [0.241, 0.647] °C); continuous 360 W breaches core temperature limit (>39.5 °C) across all climates >= 20 °C, while intermittent pacing (D <= 0.65-0.92) preserves homeothermy across 2700 s; along empirical longitudinal human force gain (+18.35% at day 14 in Santos cohort), tissue safety deficit is an artifact of low assumed SF0=1.50 and is completely eliminated (min SF >= 1.50, 0 days deficit) under native physiological reserve SF0 >= 1.776.",
+    "confidence": "arithmetic_reproduced",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "FND-0128",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0132",
+    "title": "Definitive evidence synthesis for Architecture A: Joint system compatibility, bounded operational trade-offs, and decisive measurement criteria",
+    "statement": "Master system integration across 5 modules demonstrates that Architecture A can achieve +20% maximal functional strength at matched mass (Strategy 2 bilateral gain +21.64%, power +19.8%, v_max within -1.7%, CV < 2.5%) or +25% acquisition rate (+18.35% in 14 days in Santos cohort) while simultaneously satisfying CPE45 endurance (intermittent duty cycles D <= 0.65-0.92 maintaining T_core < 39.5 °C for 2700 s) and tissue safety (SF >= 1.50 under quasi-static load with SF0 >= 1.776 or H2 pacing; 98.3% force recovery by 45 min), conditioned on strict operational bounds (postural alignment within ±2°, ballistic rate limiting dF/dt <= 12,000 N/s, and intermittent thermal pacing).",
     "confidence": "arithmetic_reproduced",
     "data_type": "DERIVED_EXTRACTION_JSON"
   }

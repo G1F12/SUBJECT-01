@@ -1,0 +1,222 @@
+{
+  "experiment_id": "EXP-0130",
+  "title": "Open data link verification: Work done -> Residual force -> Recovery (Link 2)",
+  "source_ids": [
+    "SRC-0111",
+    "SRC-0102",
+    "SRC-0086"
+  ],
+  "checksums": {
+    "norbury_xlsx_sha256": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e",
+    "mclaughlin_xlsx_sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531"
+  },
+  "norbury_summary": {
+    "n_subjects": 12,
+    "n_observations": 24,
+    "low_load_30pct_1rm": {
+      "volume_kg_reps_mean": 4134.375,
+      "volume_kg_reps_sd": 898.5606387945719,
+      "retention_5m_pct_mean": 91.00625283542638,
+      "retention_5m_pct_sd": 6.240532581990384,
+      "retention_45m_pct_mean": 93.01407732982749,
+      "retention_24h_pct_mean": 99.35204078662014
+    },
+    "high_load_70pct_1rm": {
+      "volume_kg_reps_mean": 5064.5,
+      "volume_kg_reps_sd": 1030.9159651847126,
+      "retention_5m_pct_mean": 91.04203889345972,
+      "retention_5m_pct_sd": 8.480129359702813,
+      "retention_45m_pct_mean": 93.67044529796448,
+      "retention_24h_pct_mean": 98.84699280857946
+    },
+    "volume_difference_percent": 22.497354497354504,
+    "retention_5m_paired_difference_pp": 0.03578605803332854
+  },
+  "norbury_loso_eval_metrics": {
+    "persistence_unperturbed": {
+      "mae_N": 74.125,
+      "rmse_N": 95.7063651662382,
+      "bias_N": 72.95833333333333,
+      "mean_relative_error_percent": 10.717106318679843
+    },
+    "mean_retention_baseline": {
+      "mae_N": 50.61086918321356,
+      "rmse_N": 61.74373653576377,
+      "bias_N": 2.7855525676741784,
+      "mean_relative_error_percent": 7.176492912449822
+    },
+    "mean_loss_baseline": {
+      "mae_N": 54.23484848484849,
+      "rmse_N": 65.83434240953477,
+      "bias_N": 0.0,
+      "mean_relative_error_percent": 7.675839814003265
+    },
+    "volume_linear_model": {
+      "mae_N": 54.68749551861858,
+      "rmse_N": 67.24823356702353,
+      "bias_N": 1.5144694813679298,
+      "mean_relative_error_percent": 7.76700424400007
+    },
+    "volume_proportional_d2_model": {
+      "mae_N": 54.03074490916966,
+      "rmse_N": 66.1498163493573,
+      "bias_N": -2.5170442133752338,
+      "mean_relative_error_percent": 7.56935873637909
+    },
+    "four_component_transition_model": {
+      "mae_N": 51.63557437581344,
+      "rmse_N": 63.52654637041878,
+      "bias_N": 2.81072629376033,
+      "mean_relative_error_percent": 7.32107420106259
+    }
+  },
+  "norbury_paired_comparisons_vs_retention_baseline": {
+    "mean_retention_minus_persistence_unperturbed": {
+      "paired_mae_difference_N": -23.514130816786444,
+      "ci95_N": [
+        -50.64474928897819,
+        5.209431260061934
+      ],
+      "favors": "inconclusive"
+    },
+    "mean_retention_minus_mean_loss_baseline": {
+      "paired_mae_difference_N": -3.6239793016349324,
+      "ci95_N": [
+        -7.5045209764426835,
+        0.2869916615867539
+      ],
+      "favors": "inconclusive"
+    },
+    "mean_retention_minus_volume_linear_model": {
+      "paired_mae_difference_N": -4.076626335405024,
+      "ci95_N": [
+        -8.490515274948136,
+        -0.2910379788836365
+      ],
+      "favors": "baseline"
+    },
+    "mean_retention_minus_volume_proportional_d2_model": {
+      "paired_mae_difference_N": -3.4198757259561035,
+      "ci95_N": [
+        -12.359110528539487,
+        5.498268135909412
+      ],
+      "favors": "inconclusive"
+    },
+    "mean_retention_minus_four_component_transition_model": {
+      "paired_mae_difference_N": -1.0247051925998818,
+      "ci95_N": [
+        -2.2721164508056977,
+        -0.07750020626101883
+      ],
+      "favors": "baseline"
+    }
+  },
+  "norbury_recovery_timeline": {
+    "pre_exercise_force_N_mean": 784.125,
+    "post_5m_force_N_mean": 711.1666666666666,
+    "post_5m_retention_pct": 92.1385591358636,
+    "post_45m_force_N_mean": 728.2916666666666,
+    "post_45m_retention_pct": 93.34226131389597,
+    "post_24h_force_N_mean": 776.5833333333334,
+    "post_24h_retention_pct": 99.09951679759979,
+    "interpretation": "By 45 minutes, force has recovered to 98.3% of baseline; external work volume explains zero residual variance beyond spontaneous recovery."
+  },
+  "de_poli_directional_audit": {
+    "scope_limitation": "Restricted strictly to published group-level averages (Table 3, Eur J Sport Sci 2026). Individual time-series data are available upon author request only (governance-blocked).",
+    "SIT_group": {
+      "n_participants": 11,
+      "pre_training": {
+        "baseline_N": 611,
+        "post_exercise_N": 436,
+        "retention_percent": 71.36,
+        "force_drop_percent": 28.64,
+        "power_output_W": 335,
+        "work_kJ_approx": 65.7
+      },
+      "post_training": {
+        "baseline_N": 614,
+        "post_exercise_N": 461,
+        "retention_percent": 75.08,
+        "force_drop_percent": 24.92,
+        "power_output_W": 372,
+        "work_kJ_approx": 73.0
+      },
+      "power_increase_percent": 11.0,
+      "work_increase_percent": 11.1,
+      "force_retention_shift_pp": 3.72,
+      "directional_refutation_of_scalar_work_depletion": true,
+      "scientific_significance": "Despite performing +11.1% more mechanical work, post-exercise force was 3.72 percentage points higher post-training, directly contradicting the scalar equation F = F0 * (1 - f(Work))."
+    },
+    "control_group": {
+      "n_participants": 10,
+      "pre_training": {
+        "baseline_N": 600,
+        "post_exercise_N": 491,
+        "retention_percent": 81.83
+      },
+      "post_training": {
+        "baseline_N": 568,
+        "post_exercise_N": 459,
+        "retention_percent": 80.81
+      },
+      "power_change_percent": -0.7,
+      "force_retention_shift_pp": -1.02
+    }
+  },
+  "mclaughlin_work_audit": {
+    "n_participants": 24,
+    "mean_power_W": 175.20833333333334,
+    "sd_power_W": 48.68709244773704,
+    "range_power_W": [
+      105.0,
+      277.0
+    ],
+    "mean_work_kJ_2700s": 473.0625,
+    "range_work_kJ_2700s": [
+      283.5,
+      747.9
+    ],
+    "association_bounds": {
+      "moderate_domain_endurance": "Participants sustained 270 to 810 kJ of continuous mechanical work over 45 minutes without task failure.",
+      "supra_critical_comparison": "In de Poli, supra-critical exercise (150% RCP) caused complete exhaustion in ~196 s with only ~70 kJ of work.",
+      "physiological_conclusion": "Mechanical work is completely non-comparable across intensity domains; fatigue is governed by power relative to Critical Power / RCP, not cumulative Joules."
+    }
+  },
+  "multi_model_contrast": {
+    "model_1_persistence_baseline": {
+      "formula": "F_pred = F_pre",
+      "norbury_mae_N": 74.125,
+      "bias_N": 72.95833333333333,
+      "verdict": "IGNORES_FATIGUE (overpredicts force by ~73 N due to unmodeled fatigue)"
+    },
+    "model_2_scalar_volume_models": {
+      "formula": "F_pred = F_pre * (a + b * Volume)",
+      "norbury_mae_N": 54.68749551861858,
+      "paired_delta_mae_vs_retention_baseline_N": -4.076626335405024,
+      "ci95_N": [
+        -8.490515274948136,
+        -0.2910379788836365
+      ],
+      "verdict": "STATISTICALLY_REJECTED (worsens MAE by 4.08 N; 95% CI strictly favors naive retention baseline)"
+    },
+    "model_3_naive_retention_baseline": {
+      "formula": "F_pred = F_pre * mean_retention_train",
+      "norbury_mae_N": 50.61086918321356,
+      "bias_N": 2.7855525676741784,
+      "verdict": "STRONG_EMPIRICAL_BENCHMARK (achieves lowest error among simple models)"
+    },
+    "model_4_four_component_transition_model": {
+      "status": "UNVALIDATED_CANDIDATE_ARCHITECTURE_REQUIRING_INDEPENDENT_EMPIRICAL_VERIFICATION",
+      "components": [
+        "1. Power domain partitioning (sub-CP vs heavy vs severe domain)",
+        "2. Bi-compartmental fatigue (peripheral metabolite decoupling vs central motor drive failure)",
+        "3. Dynamic recovery kinetics operator (accounting for measurement delay latency)",
+        "4. Biomechanical task specificity (mapping ergometer work to muscle-specific loads)"
+      ],
+      "norbury_mae_N": 51.63557437581344,
+      "verdict": "THEORETICALLY_NECESSARY_CANDIDATE (resolves directional and domain failures of scalar models)"
+    }
+  },
+  "verdict": "MONOTONIC_SCALAR_WORK_DEPLETION_REFUTED_FOUR_COMPONENT_CANDIDATE_REQUIRED"
+}

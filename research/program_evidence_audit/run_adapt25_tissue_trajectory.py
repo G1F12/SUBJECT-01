@@ -26,11 +26,10 @@ def tendon_capacity(t_days, C0, tau_delay=14.0, tau_tendon=84.0, delta_C_max=0.2
     return C0 * (1.0 + remodel)
 
 
-def evaluate_trajectory(days, forces, label, tau_delay=14.0, tau_tendon=84.0, delta_C_max=0.20, B=8.45):
+def evaluate_trajectory(days, forces, label, SF0=1.50, tau_delay=14.0, tau_tendon=84.0, delta_C_max=0.20, B=8.45):
     """Evaluate daily safety factor and damage hazard along force trajectory."""
     F0 = forces[0]
-    C0 = 1.50 * F0  # Initial Safety Factor SF0 = 1.50
-    SF0 = 1.50
+    C0 = SF0 * F0  # Initial tendon capacity from baseline safety margin SF0
 
     # Daily simulation over trajectory length
     max_day = int(days[-1])
@@ -56,6 +55,9 @@ def evaluate_trajectory(days, forces, label, tau_delay=14.0, tau_tendon=84.0, de
         "final_force_N": float(forces[-1]),
         "force_gain_percent": float((np.max(forces) / F0 - 1.0) * 100.0),
         "initial_safety_factor": float(SF0),
+        "remodeling_latency_days": float(tau_delay),
+        "remodeling_tau_days": float(tau_tendon),
+        "damage_exponent_B": float(B),
         "min_safety_factor": min_sf,
         "min_safety_factor_day": min_sf_day,
         "days_below_threshold_1_50": days_below_1_50,
@@ -64,6 +66,35 @@ def evaluate_trajectory(days, forces, label, tau_delay=14.0, tau_tendon=84.0, de
         "mean_daily_damage_multiplier": mean_hazard_ratio,
         "tissue_gate_pass": min_sf >= 1.50,
     }
+
+
+def run_parametric_sensitivity_analysis(days, forces):
+    """Sweep key parameters: SF0, tau_delay, tau_tendon, and damage exponent B."""
+    sf0_grid = [1.20, 1.40, 1.50, 1.60, 1.70, 1.776, 1.80, 2.00]
+    tau_delay_grid = [0.0, 3.0, 7.0, 10.0, 14.0, 21.0]
+    tau_tendon_grid = [42.0, 84.0, 126.0]
+    b_grid = [3.0, 5.0, 8.45, 10.0, 12.0]
+
+    sensitivity = {
+        "sf0_sensitivity_standard_rate": [
+            evaluate_trajectory(days, forces, f"SF0_{val:.3f}", SF0=val)
+            for val in sf0_grid
+        ],
+        "tau_delay_sensitivity_standard_rate": [
+            evaluate_trajectory(days, forces, f"tau_delay_{val:.0f}d", tau_delay=val)
+            for val in tau_delay_grid
+        ],
+        "tau_tendon_sensitivity_standard_rate": [
+            evaluate_trajectory(days, forces, f"tau_tendon_{val:.0f}d", tau_tendon=val)
+            for val in tau_tendon_grid
+        ],
+        "damage_exponent_b_sensitivity_standard_rate": [
+            evaluate_trajectory(days, forces, f"B_{val:.2f}", B=val)
+            for val in b_grid
+        ],
+        "critical_sf0_threshold_for_zero_deficit": 1.776,
+    }
+    return sensitivity
 
 
 def main():
@@ -123,6 +154,15 @@ def main():
     ])
     res_adapt25 = evaluate_trajectory(adapt25_eval_days, adapt25_eval_forces, "Cohort_Mean_ADAPT25_Accelerated_Rate")
 
+    # Parametric sensitivity analysis
+    parametric_sensitivity = run_parametric_sensitivity_analysis(visit_days, cohort_forces)
+    adapt25_sensitivity = {
+        "sf0_sensitivity_adapt25_rate": [
+            evaluate_trajectory(adapt25_eval_days, adapt25_eval_forces, f"ADAPT25_SF0_{val:.3f}", SF0=val)
+            for val in [1.20, 1.40, 1.50, 1.60, 1.70, 1.776, 1.80, 2.00]
+        ]
+    }
+
     # Individual subject evaluations
     individual_results = {}
     for s in complete_sub_10:
@@ -143,6 +183,8 @@ def main():
             "adapt25_days_below_1_50": eval_acc["days_below_threshold_1_50"],
         }
 
+    w2_gain_pct = float((cohort_forces[1] / cohort_forces[0] - 1.0) * 100.0)
+
     protocol_path = HERE / "ADAPT25_TISSUE_TRAJECTORY_PROTOCOL.md"
     out = {
         "experiment_id": "EXP-0128",
@@ -157,15 +199,23 @@ def main():
             "W2_day14": float(cohort_forces[1]),
             "W4_day28": float(cohort_forces[2]),
             "POS_day42": float(cohort_forces[3]),
+            "day14_gain_percent": w2_gain_pct,
         },
         "cohort_standard_trajectory_eval": res_standard,
         "cohort_adapt25_trajectory_eval": res_adapt25,
+        "parametric_sensitivity_analysis": {
+            "standard_rate": parametric_sensitivity,
+            "adapt25_rate": adapt25_sensitivity,
+        },
         "individual_subjects_eval": individual_results,
         "key_findings": {
-            "standard_rate_sf_violation": "Even at the standard observed training rate, rapid neural strength gain in the first 14 days (+14.9%) causes tendon SF to drop to 1.305 (well below 1.50 threshold), spending 42/42 days in the sub-threshold zone.",
-            "adapt25_acceleration_penalty": "Accelerating force acquisition by +25% causes SF to drop earlier (by day 11) to 1.305, and increases cumulative damage hazard significantly.",
-            "individual_vulnerability_contrast": "High responders (e.g. Subject 007 with +48.9% force gain by week 4) experience severe tendon overload (SF drops to 1.007, near rupture threshold, damage multiplier 28.5x baseline). Low responders (e.g. Subject 001) maintain SF > 1.38.",
-            "decision_status": "HOLD_RATE_LIMITED_BY_COLLAGEN_SYNTHESIS confirmed on empirical human trajectories.",
+            "observed_force_trajectory": f"Across 10 complete participants in Santos et al., mean isometric leg press force rose from {cohort_forces[0]:.1f} N (W0) to {cohort_forces[1]:.1f} N at Day 14 (+{w2_gain_pct:.2f}% mean increase), plateaued at {cohort_forces[2]:.1f} N (Day 28), and reached {cohort_forces[3]:.1f} N at Day 42.",
+            "model_dependent_sf_violation_at_assumed_sf0": "Under the specific assumed initial safety margin SF0 = 1.50 and remodeling latency tau_delay = 14 d, the rapid neural strength increase (+18.35% by Day 14) temporarily depresses calculated tendon SF to 1.267 (occurring at Day 14), with 42/42 days below 1.50 and a 4.15x peak daily fatigue damage multiplier.",
+            "sensitivity_to_initial_reserve_sf0": "Parametric sensitivity reveals that the tissue safety deficit is entirely contingent on the assumed baseline reserve SF0. Setting SF0 >= 1.776 (well within human physiological in vivo patellar tendon capacity) completely eliminates the safety deficit (0 days below 1.50 across all 42 days for both standard and ADAPT25 accelerated rates).",
+            "sensitivity_to_remodeling_latency_and_damage_exponent": "Varying tau_delay from 0 to 21 d shifts min SF from 1.304 to 1.267, while damage multiplier scales from 1.66x (B=3.0) to 7.55x (B=12.0) under SF0 = 1.50.",
+            "individual_heterogeneity": "At SF0 = 1.50, high responders (Subject 004, +68.0% total gain; Subject 007, +48.9% gain by week 4) experience severe calculated tendon overload (min SF 0.938 to 1.036), whereas low responders (Subject 001) maintain SF > 1.38.",
+            "epistemic_limitation_and_removal_of_unsupported_claims": "Santos et al. collected external dynamometer force, not collagen turnover rates or in vivo tendon strain. These parametric simulations do not establish an empirical biological rate limit on collagen turnover or prove the impossibility of natural adaptation acceleration.",
+            "simulation_status": "PARAMETRIC_SIMULATION_DEMONSTRATES_DEPENDENCY_ON_BASELINE_RESERVE_WITHOUT_EMPIRICAL_COLLAGEN_RATE_LIMIT",
         },
     }
 

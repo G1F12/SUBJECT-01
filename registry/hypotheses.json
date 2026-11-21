@@ -10,7 +10,8 @@
       "EXP-0008",
       "EXP-0009",
       "EXP-0010",
-      "EXP-0014"
+      "EXP-0014",
+      "EXP-0132"
     ],
     "claim_level": "hypothesis"
   },
@@ -53,7 +54,8 @@
       "EXP-0010",
       "EXP-0012",
       "EXP-0013",
-      "EXP-0014"
+      "EXP-0014",
+      "EXP-0132"
     ],
     "claim_level": "hypothesis"
   },
@@ -130,7 +132,8 @@
     "related_experiments": [
       "EXP-0046",
       "EXP-0047",
-      "EXP-0048"
+      "EXP-0048",
+      "EXP-0132"
     ],
     "evidence_status": "MODEL_ONLY",
     "status_history": [

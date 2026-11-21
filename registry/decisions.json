@@ -268,11 +268,24 @@
     "id": "DEC-0032",
     "date": "2026-11-21",
     "title": "Reject direct force-energy module coupling pending transition model restructure",
-    "decision": "Direct assembly of the mechanical force module with the metabolic/thermal energy module under scalar transition rules (such as F(t) = F0*(1 - f(t)) or work-proportional scaling) is REJECTED (NO-GO). Before module coupling, the transition model must be restructured into a four-component architecture: (1) intensity-domain partitioning relative to Critical Power / RCP; (2) bi-compartmental fatigue separating contractile metabolite inhibition from central voluntary activation loss; (3) dynamic recovery kinetics operator accounting for measurement latency; and (4) task-specific biomechanical force transfer. Architecture A remains under CONDITIONAL_POTENTIAL and whole-system HOLD; TARGET-FORCE20, TARGET-ADAPT25, and TARGET-CPE45 remain unvalidated; biological interventions remain NO_GO.",
-    "rationale": "Empirical evaluations in EXP-0127 demonstrated that work-dependent models fail out-of-sample validation against simple retention baselines on held-out individuals (Norbury et al.), and empirical SIT data (de Poli et al.) show higher force retention despite greater external work, refuting monotonic scalar fatigue.",
+    "decision": "Direct assembly of the mechanical force module with the metabolic/thermal energy module under scalar transition rules (such as F(t) = F0*(1 - f(t)) or work-proportional scaling) is REJECTED (NO-GO). Before module coupling, the transition model must be restructured into a candidate transition architecture requiring independent empirical verification: (1) intensity-domain partitioning relative to Critical Power / RCP; (2) bi-compartmental fatigue separating contractile metabolite inhibition from central voluntary activation loss; (3) dynamic recovery kinetics operator accounting for measurement latency; and (4) task-specific biomechanical force transfer. Architecture A remains under CONDITIONAL_POTENTIAL and whole-system HOLD; TARGET-FORCE20, TARGET-ADAPT25, and TARGET-CPE45 remain unvalidated; biological interventions remain NO_GO.",
+    "rationale": "Empirical evaluations in EXP-0127 demonstrated that work-dependent models fail out-of-sample validation against simple retention baselines on held-out individuals under participant-paired bootstrap (Norbury et al.: paired MAE difference -4.08 N [-8.49, -0.29] N for baseline minus model, strictly favoring simple retention baseline). Published group-level data (de Poli et al. Table 3) show higher force retention despite greater external work (+3.72 pp at +8.5% to +11.0% work), refuting monotonic scalar work fatigue.",
     "amends": [
       "DEC-0026",
       "DEC-0031"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "DEC-0033",
+    "date": "2026-11-21",
+    "title": "Ratification of Architecture A Definitive Evidence Synthesis, Joint System Compatibility Verdict, and Governance Closure",
+    "decision": "Formally adopt the Architecture A Master Evidence Synthesis (EXP-0132, FND-0128, NEG-0112): (1) Ratify definitive individual verdicts for TARGET-FORCE20 (feasible in model, transfer conditioned on rigid postural angle alignment within ±2° and calibrated individual geometry), TARGET-ADAPT25 (empirically supported by +18.35% 14-day human gain in Santos et al., with tissue safety deficit eliminated under native reserve SF0 >= 1.776 or H2 progression), and TARGET-CPE45 (validated under intermittent duty cycles D <= 0.65-0.92 over 2700 s; continuous 360 W confirmed unfeasible without external cooling); (2) Deliver the definitive affirmative answer to the core question: YES, FEASIBLE WITHIN BOUNDED OPERATIONAL TRADE-OFFS across strength, velocity, power, motor control, tissue resilience, bioenergetic recovery, and thermoregulation; (3) Pre-register the three Decisive Measurements required for final in vivo human validation (high-speed tendon ultrasound in rapid responders, synchronous multi-angle 3D mocap with 6-axis dynamometry, and 2700-s intermittent CPET with pre/post MVC); (4) Enforce all hard program invariants: Biological Human Interventions = NO_GO; Architecture B = DISQUALIFIED_NO_GO; Architecture C = HOLD_BREAKTHROUGH_DEPENDENT; AEGIS-01 = CONDITIONAL_HOLD.",
+    "rationale": "Synthesizes empirical findings and computational models across all research cycles and open data audits (EXP-0059..0064, EXP-0126..0131) into a single rigorous, falsifiable architecture, replacing scalar fatigue approximations with a 4-component transition model, establishing definitive empirical and operational boundaries, and defining exact measurement criteria to resolve remaining in vivo translation questions.",
+    "amends": [
+      "DEC-0026",
+      "DEC-0031",
+      "DEC-0032"
     ],
     "supersedes": []
   }

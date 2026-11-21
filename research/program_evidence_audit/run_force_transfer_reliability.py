@@ -19,7 +19,7 @@ def text_sha256(path: Path) -> str:
 
 
 def compute_icc(matrix: np.ndarray):
-    """Compute two-way mixed ICC(3,1) consistency and agreement.
+    """Compute two-way mixed ICC(3,1) consistency and agreement, with ANOVA decomposition.
     matrix: shape (n_subjects, k_sessions)
     """
     n, k = matrix.shape
@@ -43,9 +43,14 @@ def compute_icc(matrix: np.ndarray):
     icc_consistency = (ms_rows - ms_error) / (ms_rows + (k - 1) * ms_error)
     icc_agreement = (ms_rows - ms_error) / (ms_rows + (k - 1) * ms_error + (k / n) * (ms_cols - ms_error))
 
-    # Within-subject SD
+    # Naive within-subject SD (includes training progression)
     sw = np.sqrt(np.mean(np.var(matrix, axis=1, ddof=1)))
     cv_percent = (sw / grand_mean) * 100.0
+
+    # Detrended within-subject SD (subtracting session mean progression)
+    detrended_matrix = matrix - col_means
+    sw_detrended = np.sqrt(np.mean(np.var(detrended_matrix, axis=1, ddof=1)))
+    cv_detrended_percent = (sw_detrended / grand_mean) * 100.0
 
     return {
         "n_subjects": int(n),
@@ -54,7 +59,24 @@ def compute_icc(matrix: np.ndarray):
         "icc_3_1_agreement": float(icc_agreement),
         "within_subject_sd_N": float(sw),
         "cv_percent": float(cv_percent),
+        "within_subject_sd_naive_N": float(sw),
+        "within_subject_sd_detrended_N": float(sw_detrended),
+        "cv_naive_percent": float(cv_percent),
+        "cv_detrended_percent": float(cv_detrended_percent),
         "grand_mean_N": float(grand_mean),
+        "anova_two_way_decomposition": {
+            "ss_total": float(ss_total),
+            "ss_between_subjects": float(ss_rows),
+            "ss_training_progression_sessions": float(ss_cols),
+            "ss_residual_error": float(ss_error),
+            "df_subjects": int(df_rows),
+            "df_sessions": int(df_cols),
+            "df_residual_error": int(df_error),
+            "ms_subjects": float(ms_rows),
+            "ms_sessions": float(ms_cols),
+            "ms_residual_error": float(ms_error),
+            "residual_error_sd_N": float(np.sqrt(ms_error)),
+        },
     }
 
 
@@ -159,30 +181,47 @@ def main():
             "favors": "model" if ci95[0] > 0 else ("baseline" if ci95[1] < 0 else "inconclusive"),
         }
 
-    # Angle transfer penalty
+    # Angle mismatch sensitivity check (100° and 140° models evaluated against 110° task data)
+    gradient_100_to_110 = (2976.8 - 2567.0) / 10.0  # 40.98 N/deg
+    gradient_110_to_140 = (3804.5 - 2976.8) / 30.0  # 27.59 N/deg
+    shift_10deg_N = gradient_100_to_110 * 10.0      # 409.8 N
+
     angle_transfer = {
-        "100deg_to_110deg_test": {
-            "target_experimental_angle": "~110 deg",
-            "model_configured_angle": "100 deg",
+        "diagnostic_context": "Santos et al. participants performed leg press at a single fixed knee angle of ~110°. Evaluating models configured at 100° and 140° against 110° data does not test model accuracy at those angles, but measures sensitivity to knee angle mismatch.",
+        "mismatch_gradient_N_per_deg": {
+            "100deg_to_110deg": float(gradient_100_to_110),
+            "110deg_to_140deg": float(gradient_110_to_140),
+        },
+        "artifact_magnitude_at_10deg_mismatch_N": float(shift_10deg_N),
+        "artifact_magnitude_percent_of_baseline": float((shift_10deg_N / w0_mean) * 100.0),
+        "100deg_to_110deg_mismatch_check": {
+            "task_measured_angle": "~110 deg",
+            "model_assumed_angle": "100 deg",
+            "angle_mismatch_deg": -10.0,
             "model_force_N": 2567.0,
             "bias_N": metrics["corrected_model_100deg"]["bias_N"],
             "mae_N": metrics["corrected_model_100deg"]["mae_N"],
+            "artifact_note": "Apparent low bias (+53.4 N) is an artifact of cancellation: unmodeled overprediction bias at 110° (+463.2 N) is cancelled by internal force drop from 110° to 100° (-409.8 N).",
         },
-        "110deg_to_110deg_test": {
-            "target_experimental_angle": "~110 deg",
-            "model_configured_angle": "110 deg",
+        "110deg_to_110deg_diagnostic_check": {
+            "task_measured_angle": "~110 deg",
+            "model_assumed_angle": "110 deg",
+            "angle_mismatch_deg": 0.0,
             "model_force_N": 2976.8,
             "bias_N": metrics["corrected_model_110deg"]["bias_N"],
             "mae_N": metrics["corrected_model_110deg"]["mae_N"],
+            "diagnostic_note": "Nominal matched diagnostic shows substantial systematic positive bias (+463.2 N, +18.4%), proving that closed-chain posture transfer without individual subject geometry overestimates capacity.",
         },
-        "140deg_to_110deg_test": {
-            "target_experimental_angle": "~110 deg",
-            "model_configured_angle": "140 deg",
+        "140deg_to_110deg_mismatch_check": {
+            "task_measured_angle": "~110 deg",
+            "model_assumed_angle": "140 deg",
+            "angle_mismatch_deg": +30.0,
             "model_force_N": 3804.5,
             "bias_N": metrics["corrected_model_140deg"]["bias_N"],
             "mae_N": metrics["corrected_model_140deg"]["mae_N"],
+            "artifact_note": "Large systematic mismatch (+1290.9 N bias) confirms steep mechanical advantage gradient at extended angles.",
         },
-        "angle_sensitivity_summary": "Model force increases by +409.8 N from 100° to 110°, and +827.7 N from 110° to 140°. Because experimental mean at ~110° is 2513.6 N, the 100° model fortuitously matches cohort mean (bias +53.4 N), while the matched 110° model has substantial positive bias (+463.2 N, MAE 613.6 N), demonstrating that posture transfer without individual subject geometry calibration introduces severe systematic bias.",
+        "angle_sensitivity_summary": "Model force increases by +409.8 N from 100° to 110° (41.0 N/deg) and +827.7 N from 110° to 140° (27.6 N/deg). An angle mismatch of just 10° produces a ~410 N artifact (~16.3% of baseline force), which is large enough to create or obscure the entire +20% TARGET-FORCE20 margin. The 100° model's apparent fit to 110° data is an error-cancellation artifact.",
     }
 
     # Repeatability analysis across sessions
@@ -250,16 +289,20 @@ def main():
         },
         "verdict": {
             "model_advantage_over_baseline": "NOT_ESTABLISHED",
+            "santos_comparison_status": "DIAGNOSTIC_AT_APPROX_110_DEG",
+            "angle_mismatch_sensitivity": "STEEP_GRADIENT_28_TO_41_N_PER_DEG_10DEG_PRODUCES_410N_SHIFT",
+            "training_progression_vs_repeatability": "SEPARATED_VIA_ANOVA_PROGRESSION_SS_1_60E6_DETRENDED_SW_309_1N_VS_NAIVE_385_7N",
             "angle_transfer_validity": "UNRELIABLE_WITHOUT_SUBJECT_GEOMETRY",
-            "task_repeatability": "MODERATE_TO_HIGH_WITHIN_PERSON_STABILITY_BUT_TRAINING_DRIFT_PRESENT",
+            "task_repeatability": "LONGITUDINAL_DISPERSION_CONFOUNDED_BY_TRAINING_PROGRESSION_PURE_TEST_RETEST_NOT_OBSERVED_IN_SANTOS",
             "tissue_safety_assessment": "NOT_ASSESSED_FROM_EXTERNAL_FORCE",
             "gate_status": "DATA_BLOCKED_FOR_CONFIRMATORY_FORCE20",
         },
         "limitations": [
-            "Cohort previously viewed in EXP-0087, EXP-0088, EXP-0091; diagnostic status only.",
-            "Single nominal experimental angle (~110°); no direct 100° or 140° trials in Santos.",
+            "Cohort previously viewed in EXP-0087, EXP-0088, EXP-0091; diagnostic status at ~110° only.",
+            "Santos et al. collected data only at ~110°; 100° and 140° evaluations represent angle mismatch sensitivity checks, not validation at those angles.",
+            "Angle mismatch sensitivity gradient (28-41 N/deg, ~410 N shift at 10°) indicates postural discrepancy can confound target effect sizes.",
+            "Longitudinal variance across 6 weeks (naive Sw=385.7 N) includes systematic training progression (+18.35% by W2); detrended Sw is 309.1 N, but pure within-day test-retest repeatability was not recorded in Santos.",
             "Individual body mass, height, segment lengths and COP unrecorded in published table.",
-            "Within-day repeated trials unrecorded; longitudinal repeatability confounded by training effect.",
             "Peak force alone does not identify internal patellar tendon force or tissue safety factor.",
         ],
     }

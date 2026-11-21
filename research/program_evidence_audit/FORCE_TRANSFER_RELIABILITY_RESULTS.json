@@ -5,7 +5,7 @@
   "source_id": "SRC-0090",
   "source_sha256": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
   "protocol_sha256_lf": "8547c350e08cbadbe8d77b6edcb36bb5f7ef63339774d189a0cca5e251de159c",
-  "runner_sha256_lf": "062ee0b10bccd4e9153d5146d73085ac26e10c7db0aabc1b84a03812a59c2c45",
+  "runner_sha256_lf": "91540bff461e2b9da0578ace977d5b29eacfce88d92f408fc6db8b96f96e9533",
   "cohort_baseline_summary": {
     "n_subjects": 11,
     "mean_force_N": 2513.601676405315,
@@ -121,28 +121,41 @@
     }
   },
   "angle_transfer_evaluation": {
-    "100deg_to_110deg_test": {
-      "target_experimental_angle": "~110 deg",
-      "model_configured_angle": "100 deg",
+    "diagnostic_context": "Santos et al. participants performed leg press at a single fixed knee angle of ~110\u00b0. Evaluating models configured at 100\u00b0 and 140\u00b0 against 110\u00b0 data does not test model accuracy at those angles, but measures sensitivity to knee angle mismatch.",
+    "mismatch_gradient_N_per_deg": {
+      "100deg_to_110deg": 40.98000000000002,
+      "110deg_to_140deg": 27.589999999999993
+    },
+    "artifact_magnitude_at_10deg_mismatch_N": 409.8000000000002,
+    "artifact_magnitude_percent_of_baseline": 16.303299120410056,
+    "100deg_to_110deg_mismatch_check": {
+      "task_measured_angle": "~110 deg",
+      "model_assumed_angle": "100 deg",
+      "angle_mismatch_deg": -10.0,
       "model_force_N": 2567.0,
       "bias_N": 53.39832359468458,
-      "mae_N": 477.0950174529628
+      "mae_N": 477.0950174529628,
+      "artifact_note": "Apparent low bias (+53.4 N) is an artifact of cancellation: unmodeled overprediction bias at 110\u00b0 (+463.2 N) is cancelled by internal force drop from 110\u00b0 to 100\u00b0 (-409.8 N)."
     },
-    "110deg_to_110deg_test": {
-      "target_experimental_angle": "~110 deg",
-      "model_configured_angle": "110 deg",
+    "110deg_to_110deg_diagnostic_check": {
+      "task_measured_angle": "~110 deg",
+      "model_assumed_angle": "110 deg",
+      "angle_mismatch_deg": 0.0,
       "model_force_N": 2976.8,
       "bias_N": 463.1983235946847,
-      "mae_N": 613.6340164434446
+      "mae_N": 613.6340164434446,
+      "diagnostic_note": "Nominal matched diagnostic shows substantial systematic positive bias (+463.2 N, +18.4%), proving that closed-chain posture transfer without individual subject geometry overestimates capacity."
     },
-    "140deg_to_110deg_test": {
-      "target_experimental_angle": "~110 deg",
-      "model_configured_angle": "140 deg",
+    "140deg_to_110deg_mismatch_check": {
+      "task_measured_angle": "~110 deg",
+      "model_assumed_angle": "140 deg",
+      "angle_mismatch_deg": 30.0,
       "model_force_N": 3804.5,
       "bias_N": 1290.8983235946848,
-      "mae_N": 1290.8983235946848
+      "mae_N": 1290.8983235946848,
+      "artifact_note": "Large systematic mismatch (+1290.9 N bias) confirms steep mechanical advantage gradient at extended angles."
     },
-    "angle_sensitivity_summary": "Model force increases by +409.8 N from 100\u00b0 to 110\u00b0, and +827.7 N from 110\u00b0 to 140\u00b0. Because experimental mean at ~110\u00b0 is 2513.6 N, the 100\u00b0 model fortuitously matches cohort mean (bias +53.4 N), while the matched 110\u00b0 model has substantial positive bias (+463.2 N, MAE 613.6 N), demonstrating that posture transfer without individual subject geometry calibration introduces severe systematic bias."
+    "angle_sensitivity_summary": "Model force increases by +409.8 N from 100\u00b0 to 110\u00b0 (41.0 N/deg) and +827.7 N from 110\u00b0 to 140\u00b0 (27.6 N/deg). An angle mismatch of just 10\u00b0 produces a ~410 N artifact (~16.3% of baseline force), which is large enough to create or obscure the entire +20% TARGET-FORCE20 margin. The 100\u00b0 model's apparent fit to 110\u00b0 data is an error-cancellation artifact."
   },
   "longitudinal_repeatability": {
     "four_sessions_10_subjects": {
@@ -152,7 +165,24 @@
       "icc_3_1_agreement": 0.7250809563872483,
       "within_subject_sd_N": 385.70129474234227,
       "cv_percent": 13.474976974487337,
-      "grand_mean_N": 2862.352161882017
+      "within_subject_sd_naive_N": 385.70129474234227,
+      "within_subject_sd_detrended_N": 309.082795189924,
+      "cv_naive_percent": 13.474976974487337,
+      "cv_detrended_percent": 10.798209923502212,
+      "grand_mean_N": 2862.352161882017,
+      "anova_two_way_decomposition": {
+        "ss_total": 19543218.50346678,
+        "ss_between_subjects": 15080253.840489205,
+        "ss_training_progression_sessions": 1596999.4345050782,
+        "ss_residual_error": 2865965.2284724982,
+        "df_subjects": 9,
+        "df_sessions": 3,
+        "df_residual_error": 27,
+        "ms_subjects": 1675583.7600543562,
+        "ms_sessions": 532333.1448350261,
+        "ms_residual_error": 106146.86031379623,
+        "residual_error_sd_N": 325.8018727904986
+      }
     },
     "three_sessions_11_subjects": {
       "n_subjects": 11,
@@ -161,7 +191,24 @@
       "icc_3_1_agreement": 0.6511198695383097,
       "within_subject_sd_N": 405.02061743713324,
       "cv_percent": 14.544198300924263,
-      "grand_mean_N": 2784.7572554851286
+      "within_subject_sd_naive_N": 405.02061743713324,
+      "within_subject_sd_detrended_N": 327.1171877462906,
+      "cv_naive_percent": 14.544198300924263,
+      "cv_detrended_percent": 11.746703850110052,
+      "grand_mean_N": 2784.7572554851286,
+      "anova_two_way_decomposition": {
+        "ss_total": 13970579.249413822,
+        "ss_between_subjects": 10361661.83733238,
+        "ss_training_progression_sessions": 1254793.0126625234,
+        "ss_residual_error": 2354124.3994189193,
+        "df_subjects": 10,
+        "df_sessions": 2,
+        "df_residual_error": 20,
+        "ms_subjects": 1036166.1837332379,
+        "ms_sessions": 627396.5063312617,
+        "ms_residual_error": 117706.21997094597,
+        "residual_error_sd_N": 343.083400896846
+      }
     },
     "pairwise_adjacent_transitions": {
       "W2_minus_W0": {
@@ -183,16 +230,20 @@
   },
   "verdict": {
     "model_advantage_over_baseline": "NOT_ESTABLISHED",
+    "santos_comparison_status": "DIAGNOSTIC_AT_APPROX_110_DEG",
+    "angle_mismatch_sensitivity": "STEEP_GRADIENT_28_TO_41_N_PER_DEG_10DEG_PRODUCES_410N_SHIFT",
+    "training_progression_vs_repeatability": "SEPARATED_VIA_ANOVA_PROGRESSION_SS_1_60E6_DETRENDED_SW_309_1N_VS_NAIVE_385_7N",
     "angle_transfer_validity": "UNRELIABLE_WITHOUT_SUBJECT_GEOMETRY",
-    "task_repeatability": "MODERATE_TO_HIGH_WITHIN_PERSON_STABILITY_BUT_TRAINING_DRIFT_PRESENT",
+    "task_repeatability": "LONGITUDINAL_DISPERSION_CONFOUNDED_BY_TRAINING_PROGRESSION_PURE_TEST_RETEST_NOT_OBSERVED_IN_SANTOS",
     "tissue_safety_assessment": "NOT_ASSESSED_FROM_EXTERNAL_FORCE",
     "gate_status": "DATA_BLOCKED_FOR_CONFIRMATORY_FORCE20"
   },
   "limitations": [
-    "Cohort previously viewed in EXP-0087, EXP-0088, EXP-0091; diagnostic status only.",
-    "Single nominal experimental angle (~110\u00b0); no direct 100\u00b0 or 140\u00b0 trials in Santos.",
+    "Cohort previously viewed in EXP-0087, EXP-0088, EXP-0091; diagnostic status at ~110\u00b0 only.",
+    "Santos et al. collected data only at ~110\u00b0; 100\u00b0 and 140\u00b0 evaluations represent angle mismatch sensitivity checks, not validation at those angles.",
+    "Angle mismatch sensitivity gradient (28-41 N/deg, ~410 N shift at 10\u00b0) indicates postural discrepancy can confound target effect sizes.",
+    "Longitudinal variance across 6 weeks (naive Sw=385.7 N) includes systematic training progression (+18.35% by W2); detrended Sw is 309.1 N, but pure within-day test-retest repeatability was not recorded in Santos.",
     "Individual body mass, height, segment lengths and COP unrecorded in published table.",
-    "Within-day repeated trials unrecorded; longitudinal repeatability confounded by training effect.",
     "Peak force alone does not identify internal patellar tendon force or tissue safety factor."
   ]
 }

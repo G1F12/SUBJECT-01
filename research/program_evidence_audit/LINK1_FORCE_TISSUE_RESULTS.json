@@ -1,0 +1,279 @@
+{
+  "experiment_id": "EXP-0129",
+  "title": "Open data link verification: Force -> Motion -> Tissue limits (Link 1)",
+  "source_ids": [
+    "SRC-0090",
+    "SRC-0081",
+    "SRC-0089",
+    "SRC-0085"
+  ],
+  "checksums": {
+    "santos_xlsx_sha256": "8f5b401960c467777ea16d99b6b819476bfe45d1589b14e7b6c05eb50c79ddfe",
+    "dpvalid_csv_sha256": "80dc705d5bf3c5a60d65a657ae0753054e3a797a3aa95f537c4f9f9b366772dd"
+  },
+  "admission_audit": {
+    "candidates": [
+      {
+        "cohort_id": "Zoger_2025_IsoMed2000",
+        "source_id": "SRC-0085",
+        "doi": "10.1186/s13102-025-01061-1",
+        "repository": "PMC11776222",
+        "data_availability_statement": "The datasets used and analysed during the current study are available from the corresponding author upon reasonable request.",
+        "open_data_available": false,
+        "task": "Bilateral isometric (100\u00b0 and 140\u00b0 knee angle) and isokinetic leg press",
+        "classification": "REQUEST_ONLY_BLOCKED",
+        "governance_compliance": "PASS_BLOCKED (governance prohibits unsolicited external data requests)"
+      },
+      {
+        "cohort_id": "OpenCap_Uhlrich_2023",
+        "source_id": "SRC-0081_related",
+        "doi": "10.1371/journal.pcbi.1011462",
+        "open_data_available": true,
+        "task": "Walking, squats, sit-to-stand, drop jumps",
+        "rejection_reason": "Protocol mismatch: no bilateral isometric leg press",
+        "classification": "PROTOCOL_MISMATCH_REJECTED"
+      },
+      {
+        "cohort_id": "Zushi_2024_ISLP",
+        "doi": "10.1371/journal.pone.0292428.s001",
+        "open_data_available": true,
+        "task": "Unilateral isometric leg press and vertical jumps",
+        "rejection_reason": "Protocol shift to unilateral; missing individual mass/height and absolute force [N]",
+        "classification": "PROTOCOL_MISMATCH_REJECTED"
+      },
+      {
+        "cohort_id": "Zenodo_6503956_Elderly",
+        "doi": "10.5281/zenodo.6503956",
+        "open_data_available": true,
+        "task": "Single-joint isometric knee extension & dynamic 1RM leg press in elderly",
+        "rejection_reason": "Dynamic 1RM load, elderly cohort, missing stand geometry and segment lengths",
+        "classification": "PROTOCOL_MISMATCH_REJECTED"
+      }
+    ],
+    "verdict": "EXTERNAL_OPEN_BILATERAL_ISOMETRIC_COHORTS_BLOCKED_REQUEST_ONLY"
+  },
+  "santos_w0_evaluation": {
+    "n_participants": 11,
+    "observed_mean_N": 2513.601676405315,
+    "observed_sd_N": 577.7471221344211,
+    "metrics": {
+      "loso_mean": {
+        "predicted_force_N": 2513.601676405315,
+        "mae_N": 508.7850221198536,
+        "rmse_N": 605.9462936994222,
+        "bias_N": -2.0670334131202914e-13,
+        "relative_mae_percent": 20.868142680382228
+      },
+      "grand_mean": {
+        "predicted_force_N": 2513.6016764053156,
+        "mae_N": 462.531838290776,
+        "rmse_N": 550.8602669994747,
+        "bias_N": -2.4804400957443496e-13,
+        "relative_mae_percent": 18.971038800347483
+      },
+      "fixed_const_2500N": {
+        "predicted_force_N": 2500.0,
+        "mae_N": 458.8222901802355,
+        "rmse_N": 551.0281656682963,
+        "bias_N": -13.601676405315423,
+        "relative_mae_percent": 18.720803153310285
+      },
+      "corrected_model_100deg": {
+        "predicted_force_N": 2567.0,
+        "mae_N": 477.0950174529628,
+        "rmse_N": 553.442331884231,
+        "bias_N": 53.39832359468458,
+        "relative_mae_percent": 19.953429768728096
+      },
+      "corrected_model_110deg": {
+        "predicted_force_N": 2976.7999999999997,
+        "mae_N": 613.6340164434446,
+        "rmse_N": 719.7219746121824,
+        "bias_N": 463.1983235946847,
+        "relative_mae_percent": 28.36489673769449
+      },
+      "corrected_model_140deg": {
+        "predicted_force_N": 3804.5,
+        "mae_N": 1290.8983235946848,
+        "rmse_N": 1403.5189758668387,
+        "bias_N": 1290.8983235946848,
+        "relative_mae_percent": 58.59210961484863
+      },
+      "strategy2_chain_100deg": {
+        "predicted_force_N": 3130.0,
+        "mae_N": 710.4151946464682,
+        "rmse_N": 826.6764343375647,
+        "bias_N": 616.3983235946845,
+        "relative_mae_percent": 33.05316431162932
+      },
+      "strategy2_chain_110deg": {
+        "predicted_force_N": 3629.6,
+        "mae_N": 1119.1788310101044,
+        "rmse_N": 1244.547826330864,
+        "bias_N": 1115.9983235946843,
+        "relative_mae_percent": 51.38853955969758
+      },
+      "strategy2_chain_140deg": {
+        "predicted_force_N": 4632.599999999999,
+        "mae_N": 2118.9983235946847,
+        "rmse_N": 2189.429361535973,
+        "bias_N": 2118.9983235946847,
+        "relative_mae_percent": 93.11179051169609
+      }
+    },
+    "paired_comparisons_vs_loso_mean": {
+      "loso_mean_minus_grand_mean": {
+        "paired_mae_difference_N": 46.25318382907761,
+        "ci95_N": [
+          30.049963216991305,
+          64.66449459915341
+        ],
+        "favors": "model"
+      },
+      "loso_mean_minus_fixed_const_2500N": {
+        "paired_mae_difference_N": 49.96273193961811,
+        "ci95_N": [
+          35.18390200544602,
+          66.60973992181484
+        ],
+        "favors": "model"
+      },
+      "loso_mean_minus_corrected_model_100deg": {
+        "paired_mae_difference_N": 31.69000466689084,
+        "ci95_N": [
+          -7.292799492090937,
+          74.18254553097702
+        ],
+        "favors": "inconclusive"
+      },
+      "loso_mean_minus_corrected_model_110deg": {
+        "paired_mae_difference_N": -104.84899432359106,
+        "ci95_N": [
+          -344.6513906190954,
+          158.76054307772264
+        ],
+        "favors": "inconclusive"
+      },
+      "loso_mean_minus_corrected_model_140deg": {
+        "paired_mae_difference_N": -782.1133014748309,
+        "ci95_N": [
+          -1157.9887851508302,
+          -313.0297491020621
+        ],
+        "favors": "baseline"
+      },
+      "loso_mean_minus_strategy2_chain_110deg": {
+        "paired_mae_difference_N": -610.3938088902509,
+        "ci95_N": [
+          -983.0887851508298,
+          -147.0829853747546
+        ],
+        "favors": "baseline"
+      }
+    },
+    "angular_sensitivity": {
+      "mismatch_gradient_100_to_110_N_per_deg": 40.98000000000002,
+      "mismatch_gradient_110_to_140_N_per_deg": 27.589999999999993,
+      "artifact_magnitude_at_10deg_mismatch_N": 409.8000000000002,
+      "artifact_magnitude_pct_of_baseline": 16.303299120410056,
+      "interpretation": "A 10-degree postural angle discrepancy generates a ~410 N shift (~16.3% of baseline force), comparable to the entire +20% target effect."
+    }
+  },
+  "santos_longitudinal_variance_partitioning": {
+    "n_subjects": 10,
+    "k_sessions": 4,
+    "icc_3_1_consistency": 0.7870700810787691,
+    "icc_3_1_agreement": 0.7250809563872483,
+    "within_subject_sd_naive_N": 385.70129474234227,
+    "within_subject_sd_detrended_N": 309.082795189924,
+    "cv_naive_percent": 13.474976974487337,
+    "cv_detrended_percent": 10.798209923502212,
+    "grand_mean_N": 2862.352161882017,
+    "anova_two_way_decomposition": {
+      "ss_total": 19543218.50346678,
+      "ss_between_subjects": 15080253.840489205,
+      "ss_training_progression_sessions": 1596999.4345050782,
+      "ss_residual_error": 2865965.2284724982,
+      "df_subjects": 9,
+      "df_sessions": 3,
+      "df_residual_error": 27,
+      "ms_subjects": 1675583.7600543562,
+      "ms_sessions": 532333.1448350261,
+      "ms_residual_error": 106146.86031379623,
+      "residual_error_sd_N": 325.8018727904986
+    }
+  },
+  "dpvalid_single_joint_benchmark": {
+    "source_id": "SRC-0081",
+    "dataset_path": "research/cycle16/data/dpvalid/dpvalid_isometric_trials.csv",
+    "sha256": "80dc705d5bf3c5a60d65a657ae0753054e3a797a3aa95f537c4f9f9b366772dd",
+    "n_participants": 20,
+    "n_trials": 125,
+    "specific_tension_sigma_mean_N_cm2": 26.41,
+    "specific_tension_sigma_sd_N_cm2": 4.7,
+    "specific_tension_ci95_N_cm2": [
+      17.58,
+      44.98
+    ],
+    "delta_r2_m2_pcsa_vs_baseline_f0": 0.0735,
+    "delta_r2_ci95": [
+      0.0259,
+      0.1428
+    ],
+    "delta_min_threshold": 0.08,
+    "outcome": "Outcome 3: INCONCLUSIVE (single-joint PCSA improvement falls short of delta_min=0.08 threshold against anthropometric baseline)",
+    "protocol_shift_note": "Single-joint isometric knee extension cannot directly validate closed-chain multi-joint leg press kinematics without individual segment geometry and pelvic constraint."
+  },
+  "scherpereel_squat_transfer": {
+    "source_id": "SRC-0089",
+    "participants": 12,
+    "mae_held_out_0lbs_constant_angle_dynamic": [
+      0.4104712822397931,
+      0.27045989039002244,
+      0.27076562660920506
+    ],
+    "paired_gain_0lbs_ci95": [
+      -0.0007979266243654482,
+      8.947732568820293e-05
+    ],
+    "mae_held_out_25lbs_constant_angle_dynamic": [
+      0.43569949626688703,
+      0.28769534177023626,
+      0.2882743552484356
+    ],
+    "paired_gain_25lbs_ci95": [
+      -0.0011430532859261306,
+      -9.151902631567229e-05
+    ],
+    "unit_ambiguity_blocker_ISS_0028": "ISS-0028: UNRESOLVED_source_table_Nm_plot_code_Nm_per_kg (README/table specifies N*m but Plot_3x3_plots.m lines 197-210 plots N*m/kg without normalization; moments cannot be injected into tissue force gates until resolved)"
+  },
+  "tissue_limits_and_enthesis_hazard": {
+    "patellar_moment_arm_m": {
+      "100deg": 0.046,
+      "110deg": 0.044649999999999995,
+      "140deg": 0.0388
+    },
+    "quasi_static_target_force_4800N": {
+      "bilateral_footplate_force_N": 4800.0,
+      "unilateral_tendon_force_N": 5268.0,
+      "case_2c_tendon_capacity_N": 10800.0,
+      "safety_factor": 2.05,
+      "safety_gate_passed": true,
+      "threshold": 1.5
+    },
+    "ballistic_explosive_recruitment_hazard": {
+      "rate_of_force_rise_dF_dt_N_per_s": 20000.0,
+      "local_enthesis_stress_concentration_factor": 1.56,
+      "local_enthesis_effective_safety_factor": 1.31,
+      "safety_gate_passed": false,
+      "hazard_verdict": "BALLISTIC_OVERLOAD_RISK_REQUIRING_RATE_LIMITER"
+    },
+    "transfer_boundaries": [
+      "Patellar tendon load is derived from rigid lever-arm geometry (Buford et al.), not measured in vivo.",
+      "In vivo human tendon strain during maximal closed-chain leg press has not been published in open datasets.",
+      "Direct transfer of squat inverse-dynamics moments to tissue safety gates is blocked by unit ambiguity ISS-0028.",
+      "Z\u00f6ger et al. external bilateral isometric leg press data remain blocked under request-only access."
+    ]
+  },
+  "verdict": "LINK1_THEORETICALLY_PLAUSIBLE_LACKING_IN_VIVO_TRANSFER_VALIDATION"
+}

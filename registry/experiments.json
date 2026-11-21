@@ -3583,7 +3583,7 @@
     "sources": [
       "SRC-0090"
     ],
-    "design": "Evaluate rebuilt EXP-0090 models against empirical baselines (LOSO mean, grand mean, constant 2500 N) across W0-W4-POS visits of 11 men from Santos et al.; quantify MAE, RMSE, systematic bias, ICC(3,1) repeatability, and knee angle transfer penalty.",
+    "design": "Evaluate rebuilt EXP-0090 models against empirical baselines (LOSO mean, grand mean, constant 2500 N) across W0-W4-POS visits of 11 men from Santos et al.; quantify MAE, RMSE, systematic bias, ICC(3,1) repeatability, two-way ANOVA variance decomposition, and knee angle mismatch sensitivity check.",
     "status": "completed",
     "model": "research/program_evidence_audit/run_force_transfer_reliability.py",
     "inputs": "research/program_evidence_audit/FORCE_TRANSFER_RELIABILITY_PROTOCOL.md",
@@ -3600,7 +3600,7 @@
         "NEG-0106"
       ]
     },
-    "limits": "Diagnostic reused cohort; external peak force only without individual pelvic posture, segment lengths, moment arms or COP; test-retest confounded with multi-week training progression.",
+    "limits": "Diagnostic reused cohort at ~110°; angle mismatch sensitivity gradient (28-41 N/deg, ~410 N at 10°) indicates postural discrepancy can confound target effect sizes; ANOVA partitions longitudinal variance into systematic training progression (SS=1.60e6, detrended Sw=309.1 N) distinct from pure test-retest repeatability; external peak force only without individual pelvic posture, segment lengths, moment arms or COP.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
   },
@@ -3612,7 +3612,7 @@
       "SRC-0111",
       "SRC-0102"
     ],
-    "design": "Perform LOSO cross-validation on Norbury et al. 12-subject paired leg-press dataset comparing work/load-dependent models against simple retention baselines; evaluate directional concordance in de Poli et al. SIT vs control CWR exercise.",
+    "design": "Perform LOSO cross-validation on Norbury et al. 12-subject paired leg-press dataset comparing work/load-dependent models against simple retention baselines with participant-paired bootstrap (LL and HL conditions paired); evaluate directional concordance in published group data from de Poli et al. Table 3 SIT vs control CWR exercise.",
     "status": "completed",
     "model": "research/program_evidence_audit/run_work_force_transition.py",
     "inputs": "research/program_evidence_audit/WORK_FORCE_TRANSITION_PROTOCOL.md",
@@ -3629,7 +3629,7 @@
         "NEG-0107"
       ]
     },
-    "limits": "Norbury volume in kg-repetitions lacks sled displacement; de Poli individual time-series available only on author request; measurement latencies (25 s, 5 min) confound acute cessation state.",
+    "limits": "Norbury volume in kg-repetitions lacks sled displacement; de Poli individual time-series available only on author request (prohibited by governance); 4-component transition model remains an unvalidated candidate architecture; measurement latencies (25 s, 5 min) confound acute cessation state.",
     "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
   },
@@ -3640,7 +3640,7 @@
     "sources": [
       "SRC-0090"
     ],
-    "design": "Simulate daily tendon safety factor and S-N fatigue hazard along observed 6-week leg press force trajectory of Santos cohort under standard rate versus +25% accelerated ADAPT25 rate with 14-day tendon remodeling latency.",
+    "design": "Simulate daily tendon safety factor and S-N fatigue hazard along observed 6-week leg press force trajectory (+18.35% at Day 14 across 10 complete subjects) of Santos cohort under standard rate versus +25% accelerated ADAPT25 rate with 14-day tendon remodeling latency; evaluate parametric sensitivity across SF0 (1.20-2.00), tau_delay, tau_tendon, and damage exponent B.",
     "status": "completed",
     "model": "research/program_evidence_audit/run_adapt25_tissue_trajectory.py",
     "inputs": "research/program_evidence_audit/ADAPT25_TISSUE_TRAJECTORY_PROTOCOL.md",
@@ -3657,8 +3657,130 @@
         "NEG-0108"
       ]
     },
-    "limits": "Tendon mechanical properties simulated using EXP-0060/0062 parameters; ultrasound tendon strain and collagen turnover were not measured directly in Santos cohort.",
+    "limits": "Tendon mechanical properties simulated using EXP-0060/0062 parameters; safety deficit is model-dependent on assumed SF0=1.50 and eliminated at SF0>=1.78; ultrasound tendon strain and collagen turnover were not measured directly in Santos cohort; no empirical collagen synthesis rate limit established.",
     "external_validation": "MODEL_ONLY",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0129",
+    "date": "2026-11-21",
+    "name": "Open data link verification: Force -> Motion -> Tissue limits (Link 1)",
+    "sources": [
+      "SRC-0090",
+      "SRC-0081",
+      "SRC-0089",
+      "SRC-0085"
+    ],
+    "design": "Perform pre-registered evaluation of closed-chain multi-joint biomechanical model vs naive baselines on Santos et al. W0 holdouts, quantify postural angle sensitivity (100° vs 110° vs 140°), partition multi-week training progression from test-retest error via ANOVA, audit single-joint reference transfer on DPValid (M2 PCSA vs F0 baseline), evaluate dynamic squat transfer and ISS-0028 unit ambiguity on Scherpereel et al., and establish tendon safety factor and ballistic hazard bounds.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_open_data_link1_force_tissue.py",
+    "inputs": "research/program_evidence_audit/LINK1_FORCE_TISSUE_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LINK1_FORCE_TISSUE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LINK1_FORCE_TISSUE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_open_data_link1_force_tissue.py",
+    "results": {
+      "findings": [
+        "FND-0125"
+      ],
+      "negative_results": [
+        "NEG-0109"
+      ]
+    },
+    "limits": "Bilateral isometric leg press cohort (Santos) evaluated without subject-specific pelvic geometry, moment arms, or footplate COP; angle mismatch creates artifact comparable to target effect size (+16.3% at 10°); external cohort Zöger et al. is request-only (blocked under governance); squat inverse dynamics transfer is blocked by ISS-0028 unit ambiguity; in vivo patellar tendon strain is unmeasured.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0130",
+    "date": "2026-11-21",
+    "name": "Open data link verification: Work done -> Residual force -> Recovery (Link 2)",
+    "sources": [
+      "SRC-0111",
+      "SRC-0102",
+      "SRC-0086"
+    ],
+    "design": "Perform pre-registered out-of-sample LOSO cross-validation and subject-clustered bootstrap on Norbury et al. leg press volume (LL vs HL), evaluate directional concordance in published group data from de Poli et al. Table 3 SIT vs control cycling exercise, quantify 45-min and 24-h recovery kinetics, evaluate cumulative work association bounds on McLaughlin et al. 45-min heat cycling data, and contrast persistence, volume, and 4-component candidate models.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_open_data_link2_work_recovery.py",
+    "inputs": "research/program_evidence_audit/LINK2_WORK_RECOVERY_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LINK2_WORK_RECOVERY_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LINK2_WORK_RECOVERY_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_open_data_link2_work_recovery.py",
+    "results": {
+      "findings": [
+        "FND-0126"
+      ],
+      "negative_results": [
+        "NEG-0110"
+      ]
+    },
+    "limits": "Norbury volume in kg-reps lacks individual sled displacement; de Poli individual continuous time-series available only on author request (blocked); 4-component transition model remains an unvalidated candidate architecture; measurement latency (5 min) confounds acute post-task force.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0131",
+    "date": "2026-11-21",
+    "name": "Open data link verification: ADAPT25, speed, motor control, CPE45 (Link 3)",
+    "sources": [
+      "SRC-0086",
+      "SRC-0090"
+    ],
+    "design": "Validate 4-layer Pennes bioheat model against in vivo esophageal temperature data from 23 participants in McLaughlin et al. 45-min constant cycling in heat, simulate 2700-s CPE45 thermal tolerance under continuous 360 W vs intermittent pacing (D <= 0.65-0.92) across 4 climates, evaluate empirical longitudinal human force gain (+18.35% at day 14 in Santos cohort) against tendon safety factor dynamics, and evaluate parametric sensitivity across baseline reserves (SF0).",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_open_data_link3_adapt25_cpe45.py",
+    "inputs": "research/program_evidence_audit/LINK3_ADAPT25_CPE45_PROTOCOL.md",
+    "report": "research/program_evidence_audit/LINK3_ADAPT25_CPE45_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/LINK3_ADAPT25_CPE45_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_open_data_link3_adapt25_cpe45.py",
+    "results": {
+      "findings": [
+        "FND-0127"
+      ],
+      "negative_results": [
+        "NEG-0111"
+      ]
+    },
+    "limits": "Pennes solver assumes idealized cylindrical limb geometry and uniform core perfusion; McLaughlin power is cycling rather than multi-joint isometric task; Santos tendon properties are simulated from EXP-0060/0062; in vivo human tendon strain and collagen turnover were not measured directly.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
+    "data_type": "DERIVED_EXTRACTION_JSON"
+  },
+  {
+    "id": "EXP-0132",
+    "date": "2026-11-21",
+    "name": "Architecture A Master Evidence Synthesis: Holistic Integration, Definitive Scientific Verdicts, and Governance Closure",
+    "sources": [
+      "SRC-0081",
+      "SRC-0086",
+      "SRC-0090",
+      "SRC-0102",
+      "SRC-0111"
+    ],
+    "design": "Synthesize all five validated modules of Architecture A across closed-chain biomechanics, viscoelastic tissue hazard and heterochrony ODE, 4-component bioenergetic transition, 4-layer Pennes bioheat solver, and motor control/velocity preservation. Formulate definitive scientific verdicts for TARGET-FORCE20, TARGET-ADAPT25, TARGET-CPE45, and Joint System Compatibility. Map input/output transition contracts (T1-T5), establish operational bounds, and pre-register three decisive human experimental measurements.",
+    "status": "completed",
+    "model": "research/architecture_a_integration/run_architecture_a_evidence_synthesis.py",
+    "inputs": "research/architecture_a_integration/ARCHITECTURE_A_SYNTHESIS_PROTOCOL.md",
+    "report": "research/architecture_a_integration/ARCHITECTURE_A_EVIDENCE_SYNTHESIS_REPORT.md",
+    "outputs": [
+      "research/architecture_a_integration/ARCHITECTURE_A_EVIDENCE_SYNTHESIS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/architecture_a_integration/run_architecture_a_evidence_synthesis.py",
+    "results": {
+      "findings": [
+        "FND-0128"
+      ],
+      "negative_results": [
+        "NEG-0112"
+      ]
+    },
+    "limits": "Bilateral isometric leg press transfer remains conditioned on rigid postural angle control (±2°) and calibrated subject-specific geometry; in vivo tendon strain and dynamic motor unit activation require prospective in vivo elastography and 3D dynamometry validation.",
+    "external_validation": "LIMITED_EXTERNAL_DATA",
     "data_type": "DERIVED_EXTRACTION_JSON"
   }
 ]
