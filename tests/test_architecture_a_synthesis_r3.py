@@ -50,6 +50,8 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertEqual(len(self.res["modules"]), 5)
         self.assertEqual(len(self.res["system_transitions"]), 5)
         self.assertEqual(len(self.res["decisive_measurements"]), 3)
+        self.assertIn("audit_trace_matrix", self.res)
+        self.assertIn("unified_consistent_scenario", self.res)
 
     # =========================================================================
     # Module 1: Closed-Chain Multijoint Biomechanics
@@ -60,6 +62,8 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
 
         # Bilateral force gains
         self.assertAlmostEqual(outs["strategy2_force_gain_100deg_pct"], 21.64, places=2)
+        self.assertAlmostEqual(outs["strategy2_force_gain_100deg_corrected_pct"], 21.93, places=2)
+        self.assertAlmostEqual(outs["strategy2_force_gain_140deg_corrected_pct"], 21.77, places=2)
         self.assertAlmostEqual(outs["strategy2_force_gain_with_reciprocal_inhibition_pct"], 21.78, places=2)
         self.assertAlmostEqual(outs["strategy2_transfer_efficiency_eta"], 0.988, places=3)
         self.assertAlmostEqual(outs["quad_isolated_transfer_efficiency_eta"], 0.764, places=3)
@@ -90,6 +94,12 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertAlmostEqual(outs["quasi_static_4800N_safety_factor"], 2.05, places=2)
         self.assertTrue(outs["quasi_static_safety_gate_passed"])
         self.assertAlmostEqual(outs["nominal_cyclic_fatigue_life_ratio"], 1.678, places=3)
+
+        # Dynamic posture comparison (100° fails vs 140° passes)
+        self.assertAlmostEqual(outs["posture_100deg_dynamic_sf"], 1.285, places=2)
+        self.assertFalse(outs["posture_100deg_dynamic_safety_gate_passed"])
+        self.assertAlmostEqual(outs["posture_140deg_dynamic_sf"], 1.747, places=2)
+        self.assertTrue(outs["posture_140deg_dynamic_safety_gate_passed"])
 
         # Explosive ballistic recruitment (20,000 N/s) failure
         self.assertAlmostEqual(outs["ballistic_20k_deep_to_superficial_shear_ratio"], 1.232, places=2)
@@ -221,9 +231,9 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
 
         # Joint System Compatibility
         jc = v["JOINT_SYSTEM_COMPATIBILITY"]
-        self.assertEqual(jc["status"], "COMPATIBLE_WITHIN_BOUNDED_OPERATIONAL_REGIME")
-        self.assertEqual(jc["verdict"], "YES_FEASIBLE_WITHIN_BOUNDED_OPERATIONAL_TRADE_OFFS")
-        self.assertTrue(jc["definitive_answer"].startswith("YES"))
+        self.assertEqual(jc["status"], "CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD")
+        self.assertEqual(jc["verdict"], "NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS")
+        self.assertTrue(jc["definitive_answer"].startswith("NO"))
         self.assertEqual(len(jc["trade_offs_and_bounds"]), 4)
 
     # =========================================================================

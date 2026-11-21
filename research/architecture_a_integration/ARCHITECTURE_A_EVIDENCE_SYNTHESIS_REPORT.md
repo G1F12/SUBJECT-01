@@ -5,7 +5,7 @@
 **Related Findings:** FND-0128  
 **Related Negative Results:** NEG-0112  
 **Related Decisions:** DEC-0033  
-**Requirements:** R3 (Holistic System Synthesis & Verdicts) and R4 (Governance Closure & Invariants)  
+**Requirements:** R1 (Evidence Base Correction), R2 (Open Data Link Verification), R3 (System Synthesis & Verdicts), R4 (Governance & Integrity)  
 **Protocol:** [ARCHITECTURE_A_SYNTHESIS_PROTOCOL.md](ARCHITECTURE_A_SYNTHESIS_PROTOCOL.md)  
 **Results JSON:** [ARCHITECTURE_A_EVIDENCE_SYNTHESIS_RESULTS.json](ARCHITECTURE_A_EVIDENCE_SYNTHESIS_RESULTS.json)  
 
@@ -16,13 +16,13 @@
 The central research question of the SUBJECT-01 scientific program asks:
 > *Can a single integrated biological system achieve +20% maximal functional strength at comparable mass (or +25% to its rate of acquisition) while simultaneously fulfilling the criteria for CPE45 endurance, contraction velocity, mechanical power, motor control, tissue resilience, and recovery in Architecture A?*
 
-**Definitive Scientific Verdict: YES, FEASIBLE WITHIN BOUNDED OPERATIONAL TRADE-OFFS.**
+**Definitive Scientific Verdict: NO, NOT CONFIRMED AT CURRENT EVIDENCE LEVEL. (CONDITIONAL COMPUTATIONAL POTENTIAL REMAINS ON WHOLE-SYSTEM HOLD).**
 
-Master system integration across all five validated computational and empirical modules confirms that Architecture A can achieve this complete multi-domain profile, provided operation is maintained within four strictly defined operational boundaries:
-1. **Posture Alignment Bound:** Expressing +20% functional force requires rigid joint angle maintenance within ±2° of task angle (avoiding the steep 28–41 N/deg mismatch gradient, which produces a 409.8 N artifact at 10° mismatch).
-2. **Rate of Force Application Bound:** Quasi-static loading preserves safety factor SF = 2.05 >= 1.50, but explosive ballistic loading (dF/dt = 20,000 N/s) concentrates viscoelastic shear in deep enthesis layers (SF = 1.31 < 1.50), demanding an active neural rate-limiter (dF/dt <= 12,000 N/s) or a >20% enthesis cross-sectional area buffer.
-3. **CPE45 Thermal Endurance Bound:** Continuous 360 W output is thermodynamically impossible without external cooling (T_core > 39.5°C breached in 1240–2365 s). However, intermittent duty-cycle operation (D <= 0.65-0.92) strictly preserves homeothermy across all operational climates over the entire 2700 s.
-4. **Bioenergetic Domain Partitioning:** Workload does not deplete maximal force via monotonic scalar equations; sub-CP work preserves force capacity, and acute fatigue restores to 98.3% within 45 minutes of spontaneous recovery.
+Master cross-module integration across all five computational and empirical modules reveals that while separate domains exhibit conditional mathematical or isolated experimental potential under compartmentalized assumptions, **simultaneous uncompromised achievement across all criteria in a single consistent physical state is NOT empirically confirmed**:
+1. **Force vs. Tissue Hazard:** At 100° deep knee flexion, the gravity-corrected Strategy 2 model achieves +21.93% bilateral force (3130 N), but under dynamic physiological loading (20 kN/s), local enthesis shear strain drops the safety factor to **SF = 1.285 < 1.50**, failing the mandatory tissue safety threshold. Passing tissue safety (**SF = 1.747 >= 1.50**) is achieved only in extended posture (140°), which alters force magnitude (4632.6 N) and requires strict angular constraint (28–41 N/deg gradient produces a 410 N artifact at 10° error).
+2. **Strength Acquisition Rate (`ADAPT25`):** Within-cohort force gain of +18.35% at 14 days is confirmed on Santos et al., but because the dataset contains **no comparative control cohort**, a +25% rate acceleration over standard training remains unproven. The modeled tissue safety threshold (SF0 >= 1.776) is an analytical ODE sensitivity property, not an in vivo human observation.
+3. **Endurance vs. Neuromuscular Capacity (`CPE45`):** Continuous 360 W power breaches the 39.5 °C hyperthermia limit in 1240–2365 s across all climates. Intermittent duty-cycle pacing (D <= 0.59 to 0.92) preserves homeothermy solely by **reducing total mechanical work from 972 kJ down to 619–902 kJ** (a 7% to 36% cut, as documented in EXP-0065). This verifies only the thermal channel; post-45-min force retention and motor control after 2700 s of heavy metabolic work remain unmeasured in open human datasets.
+4. **Recovery Transfer Gap:** Norbury et al. 98.3% force recovery applies strictly to 3 sets of unilateral leg press (~4 kJ of work) and cannot be transferred to 2700 s of cycling.
 
 ---
 
@@ -30,14 +30,28 @@ Master system integration across all five validated computational and empirical 
 
 | Target | Status Code | Definitive Scientific Verdict | Empirical & Computational Basis | Operational Boundary Condition |
 |---|---|---|---|---|
-| **TARGET-FORCE20** | `CONDITIONALLY_VALIDATED_IN_MODEL_AND_TRANSFER_BOUNDED` | **FEASIBLE UNDER RIGID POSTURAL ALIGNMENT** | Strategy 2 multijoint extensor coordination yields **+21.64%** bilateral force (+21.78% with synergy); transfer efficiency eta_chain = 0.988. Outperformed by constant baseline without individual geometry (+463.2 N bias). | Knee angle maintained within ±2°; segment geometry calibrated; ballistic rate limited. |
-| **TARGET-ADAPT25** | `EMPIRICALLY_SUPPORTED_WITH_TISSUE_RESERVE_GATE` | **EMPIRICALLY DEMONSTRATED IN COHORT & TISSUE FEASIBLE** | Empirically achieved in vivo in Santos et al. cohort (+18.35% mean force increase in 14 days). Tissue deficit (min SF = 1.267) is an artifact of low assumed SF0 = 1.50 and is completely eliminated (0 days deficit) under native physiological reserve SF0 >= 1.776 or Strategy H2 tendon-paced progression (hazard ratio 1.00x). | Native reserve SF0 >= 1.78 or synchronized Strategy H2 tendon-paced progression. |
-| **TARGET-CPE45** | `VALIDATED_INTERMITTENT_ENVELOPE_CONTINUOUS_360W_UNFEASIBLE` | **VALIDATED UNDER INTERMITTENT DUTY-CYCLE PACING** | 4-layer Pennes bioheat solver empirically validated against McLaughlin et al. heat cycling (N=23, MAE 0.586 °C vs persistence 1.275 °C). Continuous 360 W breaches 39.5 °C in all climates >= 20°C. Intermittent pacing preserves homeothermy: D <= 0.92 (temperate), D <= 0.74 (warm), D <= 0.59 (hot-dry), and D <= 0.65 (hot-humid). | Intermittent duty-cycle operation (D <= 0.65-0.92) across operational climates or >= 420 W external active cooling. |
-| **JOINT COMPATIBILITY** | `COMPATIBLE_WITHIN_BOUNDED_OPERATIONAL_REGIME` | **YES, FEASIBLE WITHIN BOUNDED OPERATIONAL TRADE-OFFS** | Synthesis of all 5 modules proves simultaneous achievement of force (+21.6%), velocity (-1.7%), power (+19.8%), motor control (CV < 2.5%), tissue safety (SF >= 1.50), recovery (98.3% at 45 min), and 2700 s thermal tolerance. | Strict adherence to the 4 operational bounds (posture, rate of force rise, thermal duty cycle, domain partitioning). |
+| **TARGET-FORCE20** | `CONDITIONALLY_VALIDATED_IN_MODEL_AND_TRANSFER_BOUNDED` | **FEASIBLE UNDER RIGID POSTURAL ALIGNMENT** | Strategy 2 yields **+21.93%** at 100° (3130 N) and **+21.77%** at 140° (4632.6 N) in corrected EXP-0090 (+21.64% in legacy EXP-0061). In deep flexion (100°), dynamic loading drops enthesis SF to **1.285 < 1.50** (FAIL); extended posture (140°) preserves **SF = 1.747 >= 1.50** (PASS). Nominal 110° model has +463.2 N bias; constant baseline beats model by 148 N MAE. | Knee angle maintained within ±2°; explosive rate capped (dF/dt <= 12,000 N/s) or posture extended to >= 140°. |
+| **TARGET-ADAPT25** | `EMPIRICALLY_SUPPORTED_WITH_TISSUE_RESERVE_GATE` | **EMPIRICALLY DEMONSTRATED IN COHORT & TISSUE FEASIBLE** | Mean force increased **+18.35% at 14 days** and +20.01% at 42 days in Santos et al. (N=10 complete). In simulation, zero deficit is achieved under physiological reserve SF0 >= 1.776 or H2 pacing. However, comparative rate acceleration is unproven due to absence of a control cohort, and human tendon adaptation was unmeasured. | Native reserve SF0 >= 1.78 or Strategy H2 tendon-paced progression; comparative control cohort required. |
+| **TARGET-CPE45** | `VALIDATED_INTERMITTENT_ENVELOPE_CONTINUOUS_360W_UNFEASIBLE` | **VALIDATED UNDER INTERMITTENT DUTY-CYCLE PACING** | 4-layer Pennes solver validated on McLaughlin N=23 (MAE 0.586 °C vs persistence 1.275 °C). Continuous 360 W breaches 39.5 °C in 1240–2365 s. Intermittent pacing maintains T_core < 39.5 °C: D <= 0.92 (temperate), D <= 0.74 (warm), D <= 0.59 (hot-dry), D <= 0.65 (hot-humid), cutting work to 619–902 kJ. Post-exercise force and motor steadiness after 2700 s unmeasured. | Intermittent duty-cycle operation (D <= 0.59-0.92) across operational climates or >= 420 W external cooling. |
+| **JOINT COMPATIBILITY** | `CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD` | **NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS** | Evaluated under unified physical conditions, simultaneous uncompromised achievement fails: deep flexion breaches tissue safety (SF=1.285), continuous 360 W breaches thermal limits, intermittent endurance cuts work and induces fatigue, and adaptation rate lacks control. | Architecture A placed on whole-system HOLD pending execution of the three pre-registered in vivo human measurements. |
 
 ---
 
-### 3. Architecture A System Synthesis: Multi-Module Architecture
+### 3. Comprehensive Audit Trace Matrix for Headline Figures
+
+| Figure | Audited Value | Source Artifact | Calculation Method & Conditions | Evidence Level | Status & Epistemic Limitations |
+|---|---|---|---|---|---|
+| **FORCE GAIN** | +21.93% (100°), +21.77% (140°), +21.64% (legacy) | EXP-0061, EXP-0090, DEC-0031 | 3-DOF closed-chain leg press optimization; 75 kg male | `COMPUTATIONAL_SIMULATION` | +21.64% was uncorrected gravity legacy; +21.93% is corrected at 100°. Santos holdout bias +463 N; constant baseline beats model by 148 N. |
+| **TISSUE SF** | SF = 1.285 (100°), SF = 1.747 (140°), SF = 2.05 (proxy) | EXP-0090, LINK1_FORCE_TISSUE | Bogaerts enthesis shear equation with dynamic rate (20 kN/s) vs isolated 4800 N rate=0 proxy | `COMPUTATIONAL_SIMULATION` | SF = 2.05 was isolated at rate=0; at 100° dynamic rate, SF = 1.285 < 1.50 (FAILS). Passes only at 140° extended posture (SF = 1.747). |
+| **ADAPT25 GAIN** | +18.35% at 14 d, +20.01% at 42 d | Santos et al. (SRC-0090), EXP-0128 | Within-subject mean bilateral leg press peak force across 10 participants | `RAW_HUMAN_OBSERVATION` | Observed within single training cohort; NO comparative control cohort exists; rate acceleration relative to control is UNASSESSED. |
+| **RESERVE SF0** | SF0 >= 1.776 | EXP-0128 (ADAPT25_TISSUE_TRAJECTORY) | Analytical ODE sensitivity: SF0 >= 1.50 * 1.1835 = 1.7753 | `COMPUTATIONAL_SIMULATION` | Model sensitivity limit; human in vivo tendon remodeling and strain were not measured in Santos. |
+| **MOTOR CONTROL** | CV = 2.1%, COP <= 0.045 m | Model proxy in synthesis; EXP-0111, EXP-0124 | Synthetic model threshold assumption | `SYNTHETIC_MODEL_PROXY` | Uncalibrated model proxy. Kudzia (EXP-0111) showed post-fatigue CV worsened to 2.83% (> 2.5%, ISS-0038). Post-CPE45 control unassessed. |
+| **RECOVERY** | 98.3% at 45 min, 91.0% at 5 min | Norbury et al. (SRC-0111), EXP-0130 | Mean post/pre MVC ratio in 12 males after 3 sets of leg press | `RAW_HUMAN_OBSERVATION` | Applies strictly to 3 sets of resistance exercise (~4 kJ); non-transferable to 2700 s heavy cycling (619-902 kJ). |
+| **CPE45 ENVELOPE** | D = 0.59 to 0.92, Work = 619 to 902 kJ | EXP-0063, EXP-0065, EXP-0131 | 4-layer Pennes bioheat solver on 4 climates over 2700 s | `COMPUTATIONAL_SIMULATION` | Continuous 360 W breaches 39.5 °C; intermittent D preserves T_core solely by cutting total mechanical work by 7% to 36% (EXP-0065). |
+
+---
+
+### 4. Architecture A System Synthesis: Multi-Module Architecture
 
 ```
 +---------------------------------------------------------------------------------------------------+
@@ -46,28 +60,25 @@ Master system integration across all five validated computational and empirical 
 |  MODULE 5: MOTOR CONTROL, VELOCITY & POWER                                                        |
 |  - Specific tension Δσ = +8% (26.41 N/cm²), Hypertrophy ΔCSA = +15% (Volume = const)              |
 |  - Intrinsic velocity Δv_max = +12% offsets pennation shift (14° -> 16°): Net v_max within -1.7%  |
-|  - Peak mechanical power amplified by +19.8%; Force steadiness CV < 2.5%                          |
+|  - Peak mechanical power amplified by +19.8%; Motor control steadiness unassessed after 2700 s    |
 +---------------------------------------------------------------------------------------------------+
                                                   │
                                                   ▼ (Transition T1)
 +---------------------------------------------------------------------------------------------------+
 |  MODULE 1: CLOSED-CHAIN MULTIJOINT BIOMECHANICS                                                   |
-|  - 3-DOF closed-chain leg press: Strategy 2 achieves +21.64% bilateral force (η_chain = 0.988)    |
-|  - Reciprocal antagonist inhibition (-25% coactivation) increases force to +21.78%                |
+|  - 3-DOF closed-chain leg press: Corrected gain +21.93% at 100° (3130 N) and +21.77% at 140°     |
 |  - Angular sensitivity: 27.59 to 40.98 N/deg; 10° mismatch produces 409.8 N artifact (16.3%)      |
-|  - Out-of-sample holdout: Nominal 110° model has +463.2 N bias; requires rigid posture ±2°        |
+|  - Out-of-sample holdout: Nominal 110° model has +463.2 N bias; constant baseline beats model     |
 +---------------------------------------------------------------------------------------------------+
          │                                                                   │
          ▼ (Transition T2 & T3)                                              ▼ (Transition T4)
 +----------------------------------------------------+  +-------------------------------------------+
 |  MODULE 2: VISCOELASTIC TISSUE HAZARD & ODE        |  |  MODULE 3: 4-COMPONENT TRANSITION INTERFACE|
-|  - Quasi-static 4800 N: Case 2C preserves          |  |  - Refutes scalar F = F0*(1 - f(W))       |
-|    SF = 2.05 >= 1.50 (fatigue life 1.678x)         |  |  - Norbury: +22.5% volume, identical      |
-|  - Ballistic 20,000 N/s: deep enthesis shear       |  |    5-min retention (91.04% vs 91.01%)     |
-|    drops SF to 1.31 < 1.50 (requires rate cap)     |  |  - de Poli: +11.1% work with +3.72 pp     |
-|  - Longitudinal Santos gain (+18.35% at 14d):      |  |    improved force retention               |
-|    deficit eliminated with SF0 >= 1.776 (0 days <  |  |  - Rapid recovery kinetics: 98.3% at      |
-|    1.50) or Strategy H2 pacing (hazard 1.00x)      |  |    45 min, 100.1% at 24 h                 |
+|  - 100° dynamic 20 kN/s: SF = 1.285 < 1.50 (FAIL)  |  |  - Refutes scalar F = F0*(1 - f(W))       |
+|  - 140° dynamic 20 kN/s: SF = 1.747 >= 1.50 (PASS) |  |  - Norbury: 98.3% recovery at 45 min      |
+|  - Isolated quasi-static 4800 N proxy: SF = 2.05   |  |    applies to 3 sets leg press (~4 kJ)    |
+|  - Santos gain +18.35% at 14d: zero deficit if     |  |  - de Poli: +11.1% work with +3.72 pp     |
+|    SF0 >= 1.776, but tendon unmeasured in vivo     |  |    retention in supra-critical sprints    |
 +----------------------------------------------------+  +-------------------------------------------+
                                                                              │
                                                                              ▼ (Transition T5)
@@ -75,62 +86,61 @@ Master system integration across all five validated computational and empirical 
 |  MODULE 4: 4-LAYER PENNES BIOHEAT SOLVER (CPE45, 2700 s)                                          |
 |  - Empirically validated on McLaughlin N=23 (MAE 0.586 °C vs persistence 1.275 °C)                |
 |  - Continuous 360 W breaches 39.5 °C in all climates >= 20 °C (1240–2365 s breach times)          |
-|  - Intermittent duty-cycle envelope strictly preserves homeothermy across all climates:           |
-|    * Temperate (20°C/50%RH): D <= 0.92   * Warm (28°C/60%RH): D <= 0.74                           |
-|    * Hot-Dry (35°C/30%RH):   D <= 0.59   * Hot-Humid (32°C/80%RH): D <= 0.65                      |
+|  - Intermittent duty-cycle envelope preserves T_core < 39.5 °C by reducing total work to          |
+|    619-902 kJ (EXP-0065); post-load muscular force and motor steadiness remain unmeasured         |
 +---------------------------------------------------------------------------------------------------+
 ```
 
 ---
 
-### 4. Transition Interface Analysis & Baseline Comparisons
+### 5. Transition Interface Analysis & Baseline Comparisons
 
 #### Transition T1: Contractile Enhancement -> Closed-Chain Footplate Force
 - **From / To:** Module 5 -> Module 1
-- **Input Contract:** Δσ=+8%, ΔCSA=+15%, Δθ=+2°, θ_knee in [100°, 110°]
-- **Measured Output:** +21.64% bilateral force gain (η_chain = 0.988); +21.78% with reciprocal inhibition
+- **Input Contract:** Δσ=+8%, ΔCSA=+15%, Δθ=+2°, θ_knee in [100°, 140°]
+- **Measured Output:** +21.93% at 100° (3130 N) and +21.77% at 140° (4632.6 N) in corrected model; legacy uncorrected was +21.64%
 - **Baseline Comparison:** Naive constant baseline 2500 N has lower MAE (458.8 N vs 613.6 N); uncoordinated activation causes COP breach (+0.1706 m > 0.16 m)
 - **Uncertainty Bounds:** Steep angular gradient 28-41 N/deg; 10° mismatch creates 409.8 N artifact (16.3%)
 - **Operational Boundary:** Rigid knee and hip angle alignment within ±2° during peak force generation
 
 #### Transition T2: Multijoint Muscle Force -> Tendon & Enthesis Shear Hazard
 - **From / To:** Module 1 -> Module 2
-- **Input Contract:** F_tendon at 4800 N and 7661 N, dF/dt in [0, 20,000] N/s
-- **Measured Output:** Quasi-static SF = 2.05 >= 1.50 (fatigue life 1.678x); Ballistic 20,000 N/s SF = 1.31 < 1.50
-- **Baseline Comparison:** Unadapted tendon reaches 92.20 MPa (> 85 MPa yield, SF = 1.03); Case 2C reaches 79.91 MPa (< 85 MPa, SF = 1.31)
+- **Input Contract:** F_tendon at 5373 N (140°) to 7474 N (100°), dF/dt in [0, 20,000] N/s
+- **Measured Output:** At 100° dynamic rate 20 kN/s: SF = 1.285 < 1.50 (FAIL); At 140° dynamic: SF = 1.747 >= 1.50 (PASS); Isolated quasi-static 4800 N proxy: SF = 2.05
+- **Baseline Comparison:** Unadapted tendon reaches 92.20 MPa (SF = 1.03); Case 2C reaches 79.83 MPa (SF = 1.285 at 100° vs SF = 1.747 at 140°)
 - **Uncertainty Bounds:** Deep-to-superficial shear multiplier k_deep = 1.120; individual min SF in [0.938, 1.487]
-- **Operational Boundary:** Explosive ballistic recruitment must be constrained (dF/dt <= 12,000 N/s) or buffered with >20% enthesis CSA
+- **Operational Boundary:** Explosive ballistic recruitment must be constrained (dF/dt <= 12,000 N/s) or posture extended to >= 140° to avoid enthesis shear breach
 
 #### Transition T3: Strength Acquisition Rate -> Tendon Remodeling Dynamics
 - **From / To:** Module 1 -> Module 2
 - **Input Contract:** +18.35% force at Day 14 (Santos et al.), initial reserve SF0
-- **Measured Output:** Empirical gain achieved in vivo; simulation shows zero deficit (0 days SF < 1.50) if SF0 >= 1.776; H2 progression hazard ratio = 1.00x
+- **Measured Output:** Within-cohort gain confirmed in Santos; simulation shows zero deficit (0 days SF < 1.50) if SF0 >= 1.776; H2 progression hazard ratio = 1.00x
 - **Baseline Comparison:** Uncoordinated H1 hazard 2.94x; assumed SF0 = 1.50 creates artificial 4.15x damage peak
-- **Uncertainty Bounds:** Critical threshold SF0 = 1.776; native human physiological tendon reserve is ~2.0-3.0
-- **Operational Boundary:** Tendon-paced progression (Strategy H2) or pre-screened native reserve SF0 >= 1.78
+- **Uncertainty Bounds:** Critical threshold SF0 = 1.776; native human physiological tendon reserve is ~2.0-3.0; in vivo tissue remodeling unmeasured
+- **Operational Boundary:** Tendon-paced progression (Strategy H2) or pre-screened native reserve SF0 >= 1.78; comparative control cohort required to establish rate
 
 #### Transition T4: Work Done -> Force Recovery & Capacity Retention
 - **From / To:** Module 4 -> Module 3
 - **Input Contract:** Workload W (kJ or kg·reps), intensity domain, recovery time t_rec
-- **Measured Output:** Norbury LL vs HL force retention identical (91.04% vs 91.01%); recovery restores 98.3% at 45 min and 100.1% at 24 h; de Poli SIT work +11.1% with +3.72 pp retention
+- **Measured Output:** Norbury LL vs HL force retention identical (91.04% vs 91.01%); recovery restores 98.3% at 45 min after 3 sets of leg press; de Poli SIT work +11.1% with +3.72 pp retention
 - **Baseline Comparison:** Volume linear model MAE 54.69 N vs Mean retention baseline 50.61 N (paired diff -4.08 N [-8.49, -0.29] N strictly favoring baseline)
-- **Uncertainty Bounds:** Paired dMAE 95% CI [-8.49, -0.29] N; 4-component transition model required
-- **Operational Boundary:** Exercise must be managed across intensity domains; sub-CP work does not deplete force capacity
+- **Uncertainty Bounds:** Paired dMAE 95% CI [-8.49, -0.29] N; non-transferable to 2700 s endurance
+- **Operational Boundary:** Exercise must be managed across intensity domains; sub-CP work does not deplete force capacity; post-endurance force requires multi-hour recovery
 
 #### Transition T5: Endurance Power & Heat -> 2700 s Homeothermy Envelope
 - **From / To:** Module 3 -> Module 4
 - **Input Contract:** P_mech = 360 W, η = 0.22, duration 2700 s, ambient climates
-- **Measured Output:** Continuous 360 W breaches 39.5°C in 1240-2365 s; Intermittent pacing (D <= 0.65-0.92) maintains T_core < 39.5°C across all climates
+- **Measured Output:** Continuous 360 W breaches 39.5°C in 1240-2365 s; Intermittent pacing (D <= 0.59-0.92) maintains T_core < 39.5°C by reducing work to 619-902 kJ (EXP-0065)
 - **Baseline Comparison:** Pennes solver MAE 0.586°C vs Persistence 1.275°C (paired diff +0.689 [0.501, 0.865] °C) on McLaughlin N=23
 - **Uncertainty Bounds:** Paired dMAE CI [+0.501, +0.865] °C; max energy closure error 0.00 J
-- **Operational Boundary:** Duty-cycle pacing (D <= 0.65 in hot-humid, D <= 0.92 in temperate) or active cooling (>= 420 W)
+- **Operational Boundary:** Duty-cycle pacing (D <= 0.59 in hot-dry, D <= 0.92 in temperate) or active cooling (>= 420 W); post-load neuromuscular function unassessed
 
 
 ---
 
-### 5. Pre-Registered Decisive Human Measurements
+### 6. Pre-Registered Decisive Human Measurements
 
-To resolve remaining in vivo translation gaps and upgrade Architecture A from conditional potential to full empirical certification, three decisive experimental measurements are pre-registered:
+To resolve remaining in vivo translation gaps and establish definitive empirical certification, three decisive experimental measurements are pre-registered:
 
 #### MEASUREMENT-1: In Vivo Tendon Strain & Modulus Tracking in Rapid Strength Responders
 - **Modality & Setup:** High-frame-rate ultrasound elastography + 3T MRI of the patellar tendon during maximal isometric leg press
@@ -156,7 +166,7 @@ To resolve remaining in vivo translation gaps and upgrade Architecture A from co
 
 ---
 
-### 6. Program Hard Invariants and Governance Verification
+### 7. Program Hard Invariants and Governance Verification
 
 All non-negotiable program invariants of SUBJECT-01 remain strictly enforced:
 - **Biological Human Interventions:** `NO_GO (Strictly Enforced)`
@@ -166,10 +176,11 @@ All non-negotiable program invariants of SUBJECT-01 remain strictly enforced:
 - **TARGET-CPE45 Status:** `INDEPENDENT_MANDATORY_REQUIREMENT (Intermittent Duty Cycle Envelope Validated)`
 - **TARGET-FORCE20 Status:** `FEASIBLE_UNDER_RIGID_POSTURAL_ALIGNMENT`
 - **TARGET-ADAPT25 Status:** `EMPIRICALLY_DEMONSTRATED_IN_COHORT_AND_TISSUE_FEASIBLE`
+- **JOINT COMPATIBILITY Status:** `CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD`
 
 ---
 
-### 7. Registration & Governance Ratification
+### 8. Registration & Governance Ratification
 - **Experiment ID:** EXP-0132
 - **Finding ID:** FND-0128
 - **Negative Result ID:** NEG-0112

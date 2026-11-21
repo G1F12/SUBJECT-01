@@ -901,8 +901,8 @@
     "id": "NEG-0112",
     "date": "2026-11-21",
     "experiment_id": "EXP-0132",
-    "title": "Unbounded operational claims fail: Continuous 360 W CPE45, unconstrained ballistic recruitment, and uncalibrated posture breach system safety envelopes",
-    "statement": "Holistic synthesis proves that continuous 360 W CPE45 breaches the 39.5 °C hyperthermia limit across all tested climates >= 20 °C (breach times 1240-2365 s), explosive unconstrained ballistic loading (dF/dt = 20,000 N/s) drops local enthesis safety factor to 1.31 < 1.50, and uncalibrated posture produces 28-41 N/deg artifacts (~410 N at 10° mismatch) that confound target effect sizes; joint system compatibility fails if operational boundaries are ignored.",
-    "reason": "Thermodynamic heat accumulation exceeds cutaneous dissipation under continuous 360 W; viscoelastic deep-layer shear stress concentrations exceed safety margins under rapid strain rates; multijoint moment transfer is steeply angle-dependent."
+    "title": "Uncoupled operational assumptions fail: Deep flexion dynamic tissue breach (SF=1.285), continuous 360 W hyperthermia, and post-endurance functional transfer gap",
+    "statement": "Holistic audit demonstrates that uncoupled operational assumptions produce false affirmative conclusions: (1) In deep flexion (100°), dynamic rate (20 kN/s) drops local enthesis SF to 1.285 < 1.50, failing tissue safety; (2) Continuous 360 W CPE45 breaches the 39.5 °C hyperthermia limit in all climates (1240-2365 s); (3) Intermittent CPE45 avoids hyperthermia solely by reducing mechanical work (619-902 kJ vs 972 kJ); (4) Transferring 98.3% recovery from 3 sets of leg press (Norbury, ~4 kJ) to 2700 s of heavy cycling is physiologically invalid; and (5) Santos cohort lacks a control group to evaluate +25% acquisition rate. Joint system compatibility is unconfirmed in vivo.",
+    "reason": "Viscoelastic deep-layer shear stress concentrations exceed safety margins in deep flexion under dynamic strain rates; continuous endurance heat accumulation exceeds cutaneous dissipation; resistance exercise recovery does not transfer to heavy metabolic endurance; comparative longitudinal training controls are absent."
   }
 ]
