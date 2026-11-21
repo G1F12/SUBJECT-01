@@ -3872,5 +3872,33 @@
     "limits": "Evaluated on ankle plantarflexion EQI resistance exercise (100-180 J per session, delay < 1 min, no net group fatigue). Does not cover multi-kJ whole-body cycling or 2700 s timeline.",
     "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "EXP-0136",
+    "date": "2026-11-21",
+    "name": "Decisive Out-of-Sample Evaluation of Actual Mechanical Work (Joules) Predicting Post-Exercise MVT in a High-Fatigue Modality",
+    "sources": [
+      "SRC-0115"
+    ],
+    "design": "Evaluated open dataset of Evangelidis et al. 2023 (PMC10030419, SRC-0115) featuring 9 healthy males performing 99 submaximal knee flexion contractions under ISO, CON, and ECC modes at 50% MVT. Confirmed pronounced fatigue (-18% to -34% MVT drop). Calculated actual mechanical work in Joules (~2.5-4.7 kJ) and active impulse. Executed Leave-One-Subject-Out (LOSO) cross-validation and participant-clustered bootstrap (5,000 resamples) comparing baseline retention models against models including measured work.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_hamstrings_fatigue_test.py",
+    "inputs": "research/program_evidence_audit/HAMSTRINGS_FATIGUE_REPORT.md",
+    "report": "research/program_evidence_audit/HAMSTRINGS_FATIGUE_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/HAMSTRINGS_FATIGUE_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_hamstrings_fatigue_test.py",
+    "results": {
+      "findings": [
+        "FND-0132"
+      ],
+      "negative_results": [
+        "NEG-0116"
+      ]
+    },
+    "limits": "Evaluated on isolated knee flexor resistance fatigue (99 submaximal contractions, ~3.4 kJ per dynamic session, immediate post-test MVT). Does not measure glycogen depletion or systemic cardiovascular load during whole-body exercise.",
+    "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

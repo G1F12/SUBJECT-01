@@ -1,0 +1,141 @@
+{
+  "experiment_id": "EXP-0136",
+  "title": "Decisive Out-of-Sample Evaluation of Actual Mechanical Work (Joules) Predicting Post-Exercise MVT in a High-Fatigue Modality",
+  "findings": [
+    "FND-0132"
+  ],
+  "negative_results": [
+    "NEG-0116"
+  ],
+  "decisions": [
+    "DEC-0033"
+  ],
+  "dataset_source": "SRC-0115",
+  "provenance": {
+    "excel_path": "data\\fatigue_hamstrings\\421_2022_5104_MOESM2_ESM.xlsx",
+    "excel_sha256": "ec9b6c6f6ecae5bb0f241eade56a4ef5b7869dc4ca8e748c2e1b3655ba1f2ce4",
+    "doi": "10.1007/s00421-022-05104-0",
+    "pmc_id": "PMC10030419",
+    "authors": "Pavlos E. Evangelidis, Xiyao Shan, Shun Otsuka, Chi Yang, Takaki Yamagishi, Yasuo Kawakami",
+    "journal": "European Journal of Applied Physiology (2023) 123:1015-1029",
+    "cohort": "9 healthy active males; 3 within-subject conditions (ISO, CON, ECC); 99 submaximal knee flexions at 50% MVT"
+  },
+  "condition_fatigue_kinetics": {
+    "ISO": {
+      "n_trials": 9,
+      "pre_mean": 104.65972191789298,
+      "pre_sd": 20.711819787327624,
+      "post_mean": 84.17972697888888,
+      "post_sd": 18.534477861020903,
+      "drop_pct_mean": -18.411621001168296,
+      "drop_pct_sd": 14.648730713999756,
+      "work_j_mean": 0.0,
+      "work_j_min": 0.0,
+      "work_j_max": 0.0,
+      "impulse_nms_mean": 25409.23912828637,
+      "impulse_nms_min": 18784.140969860866,
+      "impulse_nms_max": 33730.824956398326
+    },
+    "CON": {
+      "n_trials": 9,
+      "pre_mean": 118.87725657535663,
+      "pre_sd": 25.934220822306955,
+      "post_mean": 77.16093824665285,
+      "post_sd": 15.886462120131306,
+      "drop_pct_mean": -33.59171047680135,
+      "drop_pct_sd": 15.013546911309284,
+      "work_j_mean": 3409.8488829917987,
+      "work_j_min": 2661.850618517832,
+      "work_j_max": 4457.252430889587,
+      "impulse_nms_mean": 24421.243721603518,
+      "impulse_nms_min": 19064.10076691994,
+      "impulse_nms_max": 31922.7190643
+    },
+    "ECC": {
+      "n_trials": 9,
+      "pre_mean": 109.35653687258178,
+      "pre_sd": 22.331388237945852,
+      "post_mean": 75.51726020924843,
+      "post_sd": 17.750743292795853,
+      "drop_pct_mean": -30.91677731924344,
+      "drop_pct_sd": 7.525804670735897,
+      "work_j_mean": 3514.592963345518,
+      "work_j_min": 2552.438583139817,
+      "work_j_max": 4670.669918961697,
+      "impulse_nms_mean": 25171.417938259427,
+      "impulse_nms_min": 18280.4947850329,
+      "impulse_nms_max": 33451.20923190193
+    }
+  },
+  "loso_evaluations": {
+    "dynamic_conditions_con_ecc": {
+      "n_participants": 9,
+      "n_observations": 18,
+      "maes": {
+        "unperturbed": 37.77779749601855,
+        "mean_retention": 11.245912590111118,
+        "cond_retention": 11.585197097059474,
+        "linear_pre": 14.078833107966132,
+        "pre_plus_cond": 14.268027022324272,
+        "pre_plus_work": 14.131095388925427,
+        "pre_plus_cond_plus_work": 13.724293433654196,
+        "pre_plus_impulse": 14.131095388925596,
+        "pre_plus_cond_plus_impulse": 13.72429343365389
+      },
+      "dmae_base_minus_work": 0.5437335886700758,
+      "dmae_95ci": [
+        -4.211380367493637,
+        6.252004528396709
+      ],
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "all_conditions_iso_con_ecc": {
+      "n_participants": 9,
+      "n_observations": 27,
+      "maes": {
+        "unperturbed": 32.01186331034707,
+        "mean_retention": 13.512270678914126,
+        "cond_retention": 12.769692487150703,
+        "linear_pre": 13.539039929521026,
+        "pre_plus_cond": 12.762405125727325,
+        "pre_plus_work": 13.185481952348754,
+        "pre_plus_cond_plus_work": 13.093397814805586,
+        "pre_plus_impulse": 11.863520604533914,
+        "pre_plus_cond_plus_impulse": 12.283848517085099
+      },
+      "dmae_base_minus_work": -0.3309926890782613,
+      "dmae_95ci": [
+        -1.4787538120477979,
+        0.8895833858116635
+      ],
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    }
+  },
+  "regression_and_collinearity": {
+    "pre_work_correlation": 0.8342918436384871,
+    "intercept": 17.18917618107002,
+    "pre_coef": -0.33636890919086,
+    "is_ecc_coef": -7.916683543869996,
+    "work_coef": 0.029314605607899835,
+    "physical_interpretation": "Work exhibits a strong positive correlation with baseline strength (r = +0.834). In the multiple regression, the work coefficient is positive (+0.0293 J^-1*Nm), directly contradicting capacity-depletion fatigue models where work reduces residual force."
+  },
+  "depletion_formulation_audit": {
+    "mae_constant_retention": 11.245912590111118,
+    "mae_physical_depletion": 13.579821484746212,
+    "dmae_retention_minus_depletion": -2.333908894635094,
+    "verdict": "DEPLETION_MODEL_INFERIOR_TO_CONSTANT_RETENTION"
+  },
+  "scientific_conclusion": {
+    "direct_test_passed": true,
+    "pronounced_fatigue_verified": true,
+    "mean_force_depression_pct": {
+      "CON": -33.59171047680135,
+      "ECC": -30.91677731924344,
+      "ISO": -18.411621001168296
+    },
+    "work_improves_prediction_on_held_out": false,
+    "bootstrap_95ci_spans_zero": true,
+    "simpler_retention_baseline_superior": true,
+    "epistemic_decision": "Even in a regime of pronounced fatigue (18% to 34% force depression), actual mechanical work in Joules does not improve out-of-sample prediction of residual maximal force on held-out participants. Simple baseline retention (MAE = 11.25 Nm) beats models including mechanical work (MAE = 13.72 Nm). Direct modular coupling in Architecture A remains rejected (CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD)."
+  }
+}

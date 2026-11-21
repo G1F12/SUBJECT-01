@@ -2029,5 +2029,26 @@
       "sha256": "21d242d7ba0e1021fbbdf923851de15079f3ec5d84abce207aba02356b1999e0",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "id": "SRC-0115",
+    "date": "2026-11-21",
+    "name": "Evangelidis et al. hamstrings fatigue and maximal voluntary torque under isometric, concentric, and eccentric contractions",
+    "type": "primary_data",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/program_evidence_audit/HAMSTRINGS_FATIGUE_REPORT.md",
+    "doi": "10.1007/s00421-022-05104-0",
+    "url": "https://doi.org/10.1007/s00421-022-05104-0",
+    "calibration_review": {
+      "access": "CC BY 4.0 XLSX and PDF downloaded from Springer ESM; SHA-256 verified against raw bytes.",
+      "scope": "9 healthy men; within-subject crossover (ISO, CON, ECC); 99 submaximal knee flexions at 50% MVT on Con-Trex isokinetic dynamometer (0-40 deg RoM at 8 deg/s). Pronounced fatigue (18-34% MVT drop). Dynamic mechanical work (~2.5-4.7 kJ) and active impulse measured across all sessions. Decisive LOSO test conducted in EXP-0136."
+    },
+    "external_provenance": {
+      "article_pmc": "PMC10030419",
+      "article_doi": "10.1007/s00421-022-05104-0",
+      "xlsx_sha256": "ec9b6c6f6ecae5bb0f241eade56a4ef5b7869dc4ca8e748c2e1b3655ba1f2ce4",
+      "pdf_sha256": "c4161c6741690820e17b930462fd45ecd4d2183e5fa0259ca5bf5534f934ad28",
+      "license": "CC BY 4.0"
+    }
   }
 ]

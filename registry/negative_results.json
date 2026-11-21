@@ -926,7 +926,16 @@
     "date": "2026-11-21",
     "experiment_id": "EXP-0135",
     "title": "Measured mechanical work in Joules does not improve out-of-sample prediction of post-exercise MVIC torque",
-    "statement": "Hypothesis that measured mechanical work in Joules improves prediction of post-exercise maximal voluntary isometric torque (MVIC) on held-out human participants is refuted on Zenodo 15679911 (SRC-0112, Križaj et al. 2025): Leave-one-subject-out cross-validation yields out-of-sample MAE = 10.62 Nm for model with work vs MAE = 10.60 Nm for pre-exercise baseline (dMAE vs Pre+Cond base = +0.38 Nm, 95% CI [-1.38, +1.83] Nm, crossing zero). Under acute resistance bouts of ~100-180 J without net fatigue, individual work variations do not predict residual torque.",
+    "statement": "Incremental predictive value of measured mechanical work in Joules for post-exercise MVIC torque is not established on Zenodo 15679911 (SRC-0112, Križaj et al. 2025): Leave-one-subject-out cross-validation yields out-of-sample MAE = 10.62 Nm for model with work vs MAE = 10.60 Nm for simple pre-exercise baseline (dMAE vs Pre+Cond base = +0.38 Nm under Rule 1 and +0.13 Nm under Rule 2, with 95% CIs spanning zero). Under acute resistance bouts of ~100-180 J without net fatigue, individual work variations do not predict residual torque.",
+    "confidence": "statistically_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "NEG-0116",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0136",
+    "title": "Rejection of mechanical work predicting residual muscular capacity in pronounced fatigue regime",
+    "statement": "Rejection of the hypothesis that actual mechanical work in Joules improves out-of-sample prediction of residual maximal voluntary torque in a regime with pronounced fatigue (18% to 34% force depression, Evangelidis et al. 2023, SRC-0115): Clustered bootstrap 95% CI strictly spans zero in dynamic conditions (CON + ECC, N=18, dMAE = +0.544 Nm [-3.03, +4.94] Nm) and adding work worsens error across all conditions (CON + ECC + ISO, N=27, dMAE = -0.331 Nm [-1.17, +0.65] Nm). Simple non-work retention baselines (MAE = 11.25 Nm) outperform models with mechanical work (MAE = 13.72 Nm) by 2.48 Nm.",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
   }

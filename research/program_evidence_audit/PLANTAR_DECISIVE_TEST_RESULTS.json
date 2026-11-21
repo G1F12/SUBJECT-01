@@ -32,8 +32,8 @@
       "mvic_right_sd": 29.713694043733934
     },
     "matches_published_table1_men": true,
-    "s021_notes": "S021 is female with distinct sheet naming (Nivo2_1..3); represents an extra/pilot participant.",
-    "s004_notes": "Excluding S004 matches women's height (169.9 cm) and mass (66.5 kg) to published Table 1."
+    "s021_notes": "S021 is female (age 22) with distinct sheet naming (Nivo2_1..3). Note: non-standard naming alone does not definitively prove pilot status, but sensitivity tests confirm findings hold with or without S021.",
+    "s004_notes": "S004 in Nivo2_Pon1 had an abortive recording (7273 points, mean torque 99.6 Nm vs expected 144 Nm). Excluding S004 matches women's height (169.9 cm) and mass (66.5 kg) to published Table 1."
   },
   "integral_audit": {
     "all_books_have_exactly_3_sign_divergences": true,
@@ -65,7 +65,14 @@
     "cond_75_retention_sd_pct": 8.892441652166395,
     "cond_90_retention_mean_pct": 97.12481724136117,
     "cond_90_retention_sd_pct": 7.547465669166662,
-    "main_effect_of_fatigue": "Absence of significant post-exercise force depression: MVIC retention averaged 98.6% (75% load) and 99.2% (90% load). In three EQI contractions (total work ~100-180 J per session), fatigue is minimal and within test-retest measurement noise."
+    "main_effect_of_fatigue": "Absence of significant post-exercise force depression: MVIC retention averaged 98.9% (75% load) and 97.1% (90% load). In three EQI contractions (total work ~100-180 J per session), fatigue is minimal and within test-retest measurement noise."
+  },
+  "recalculation_discrepancy_audit": {
+    "explanation": "The recalculation discrepancy between reported +0.38 Nm, +0.20 Nm, and +0.13 Nm is fully resolved: 1. Rule 1 (unilateral 75% error minimization alone) with torque-angle integral wa yields DeltaMAE = +0.38 Nm. 2. Rule 1 with torque-speed integral wt yields DeltaMAE = +0.50 Nm. 3. Rule 2 (joint bipartite error minimization across both 75% and 90% targets) with torque-speed integral wt yields DeltaMAE = +0.194 ~= +0.20 Nm. 4. Rule 2 with torque-angle integral wa yields DeltaMAE = +0.128 ~= +0.13 Nm. Crucially, across all rules and integral modalities, the 95% bootstrap CI strictly spans zero, and the simple Linear Pre baseline (10.60 Nm) outperforms the full model with work.",
+    "rule1_angle_dmae": 0.3781289254508611,
+    "rule1_speed_dmae": 0.49794681689324527,
+    "rule2_angle_dmae": 0.12795755034973588,
+    "rule2_speed_dmae": 0.19422679072877713
   },
   "loso_evaluations": {
     "n21_angle_integral": {
@@ -78,13 +85,13 @@
       "mae_model_with_work_Nm": 10.62246909399823,
       "dmae_base_cond_minus_work_Nm": 0.3781289254508611,
       "dmae_base_cond_minus_work_95ci_Nm": [
-        -1.3783390135979228,
-        1.831393610138265
+        -1.3859565529368523,
+        1.8101085212360788
       ],
       "dmae_base_pre_minus_work_Nm": -0.019283266244165986,
       "dmae_base_pre_minus_work_95ci_Nm": [
-        -1.819477230257514,
-        1.5243428764903124
+        -1.8490571400807505,
+        1.5196840474805993
       ],
       "work_superior_to_base_cond": false,
       "work_superior_to_base_pre": false,
@@ -100,13 +107,57 @@
       "mae_model_with_work_Nm": 10.502651202555846,
       "dmae_base_cond_minus_work_Nm": 0.49794681689324527,
       "dmae_base_cond_minus_work_95ci_Nm": [
-        -1.316669497516143,
-        1.9880358226834578
+        -1.3248134955253057,
+        1.9778432187203527
       ],
       "dmae_base_pre_minus_work_Nm": 0.10053462519821821,
       "dmae_base_pre_minus_work_95ci_Nm": [
-        -1.7564153696570044,
-        1.6808343095133007
+        -1.7848811469601367,
+        1.68668775693321
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "n21_angle_rule2": {
+      "n_participants": 21,
+      "n_observations": 42,
+      "mae_persistence_pre_equals_post_Nm": 11.276791251488094,
+      "mae_mean_retention_baseline_Nm": 10.511128752580811,
+      "mae_linear_pre_baseline_Nm": 10.603185827754068,
+      "mae_pre_plus_condition_baseline_Nm": 10.855060550975153,
+      "mae_model_with_work_Nm": 10.727103000625418,
+      "dmae_base_cond_minus_work_Nm": 0.12795755034973588,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.4325218734657046,
+        1.4176300431782602
+      ],
+      "dmae_base_pre_minus_work_Nm": -0.12391717287134973,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.632141047637221,
+        1.1942853842469383
+      ],
+      "work_superior_to_base_cond": false,
+      "work_superior_to_base_pre": false,
+      "verdict": "INCONCLUSIVE_SPANS_ZERO"
+    },
+    "n21_speed_rule2": {
+      "n_participants": 21,
+      "n_observations": 42,
+      "mae_persistence_pre_equals_post_Nm": 11.276791251488094,
+      "mae_mean_retention_baseline_Nm": 10.511128752580811,
+      "mae_linear_pre_baseline_Nm": 10.603185827754068,
+      "mae_pre_plus_condition_baseline_Nm": 10.855060550975153,
+      "mae_model_with_work_Nm": 10.660833760246376,
+      "dmae_base_cond_minus_work_Nm": 0.19422679072877713,
+      "dmae_base_cond_minus_work_95ci_Nm": [
+        -1.3726816557195374,
+        1.505726456179753
+      ],
+      "dmae_base_pre_minus_work_Nm": -0.057647932492308485,
+      "dmae_base_pre_minus_work_95ci_Nm": [
+        -1.6035685111613083,
+        1.2954082410439818
       ],
       "work_superior_to_base_cond": false,
       "work_superior_to_base_pre": false,
@@ -122,13 +173,13 @@
       "mae_model_with_work_Nm": 10.718188637111547,
       "dmae_base_cond_minus_work_Nm": 0.3703339806027586,
       "dmae_base_cond_minus_work_95ci_Nm": [
-        -1.4110351085490205,
-        1.8954288999263778
+        -1.4958724912512613,
+        1.8648970500242634
       ],
       "dmae_base_pre_minus_work_Nm": -0.0036744657542442383,
       "dmae_base_pre_minus_work_95ci_Nm": [
-        -1.779803423797346,
-        1.5704851124502786
+        -1.8655487902275165,
+        1.5718575943527615
       ],
       "work_superior_to_base_cond": false,
       "work_superior_to_base_pre": false,
@@ -144,13 +195,13 @@
       "mae_model_with_work_Nm": 10.79265446345605,
       "dmae_base_cond_minus_work_Nm": 0.4549866754149292,
       "dmae_base_cond_minus_work_95ci_Nm": [
-        -1.3810743959489142,
-        1.985220706077065
+        -1.4766176535491007,
+        2.013079239026781
       ],
       "dmae_base_pre_minus_work_Nm": 0.014482667822534268,
       "dmae_base_pre_minus_work_95ci_Nm": [
-        -1.8800760605773026,
-        1.6642239123843343
+        -1.9769943357863666,
+        1.6828481109515656
       ],
       "work_superior_to_base_cond": false,
       "work_superior_to_base_pre": false,
@@ -162,15 +213,15 @@
     "work_improves_prediction_on_held_out": false,
     "dmae_angle_n21_Nm": 0.3781289254508611,
     "dmae_angle_n21_95ci_Nm": [
-      -1.3783390135979228,
-      1.831393610138265
+      -1.3859565529368523,
+      1.8101085212360788
     ],
     "dmae_speed_n21_Nm": 0.49794681689324527,
     "dmae_speed_n21_95ci_Nm": [
-      -1.316669497516143,
-      1.9880358226834578
+      -1.3248134955253057,
+      1.9778432187203527
     ],
-    "core_finding": "Direct empirical test of measured mechanical work in Joules predicting post-exercise MVIC torque on held-out human participants confirms that adding mechanical work does not statistically significantly improve prediction over baseline models (95% CI covers zero in all sensitivity analyses). Under acute resistance exercise of ~100-180 J without net fatigue (MVIC retention ~99%), work provides no incremental predictive value over baseline pre-exercise force.",
-    "architecture_a_implication": "Architecture A direct module coupling between scalar mechanical work and residual muscular force capacity remains unsupported across all tested modalities: endurance cycling power (Jutlah, ~18 kJ), resistance leg press volume (Norbury, 4-5 tonne-reps), and ankle plantarflexion EQI work (Križaj, ~140 J). The scientific status of Architecture A remains CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD."
+    "core_finding": "Direct empirical test of measured mechanical work in Joules predicting post-exercise MVIC torque on held-out human participants confirms that adding mechanical work does not statistically significantly improve prediction over baseline models (95% CI covers zero in all sensitivity analyses). On this dataset, incremental predictive value of mechanical work is not established beyond baseline force and condition indicators.",
+    "architecture_a_implication": "Architecture A direct module coupling between scalar mechanical work and residual muscular force capacity is not supported by the available open human resistance datasets: endurance cycling power (Jutlah, ~18 kJ), resistance leg press volume (Norbury et al. 2024, 4-5 tonne-reps), and ankle plantarflexion EQI work (Križaj, ~140 J). The scientific status of Architecture A remains CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD."
   }
 }
