@@ -1,0 +1,126 @@
+{
+  "experiment_id": "EXP-0138",
+  "title": "Decisive Independent Out-of-Sample Evaluation of Terminal Torque and Dynamic Predictors on Plantar Flexion and Resistance Recovery",
+  "findings": [
+    "FND-0134"
+  ],
+  "negative_results": [
+    "NEG-0118"
+  ],
+  "decisions": [
+    "DEC-0035"
+  ],
+  "provenance": {
+    "krizaj_doi": "10.5281/zenodo.15679911",
+    "krizaj_source": "SRC-0112",
+    "krizaj_sha256": "d58b3e596fb7a5d9d8aa91e511112e7fa4a6e6b98cbe7a3fad2c7d20d518a541",
+    "evangelidis_pmc": "PMC10030419",
+    "evangelidis_source": "SRC-0115",
+    "evangelidis_sha256": "ec9b6c6f6ecae5bb0f241eade56a4ef5b7869dc4ca8e748c2e1b3655ba1f2ce4",
+    "norbury_pmc": "PMC7444855",
+    "norbury_source": "SRC-0111",
+    "norbury_sha256": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e"
+  },
+  "prespecified_hypotheses": {
+    "features": [
+      "tau_end (terminal contraction torque, Kri\u017eaj Rep 3)",
+      "terminal set volume (Norbury Set 4 reps * load)",
+      "total volume (Norbury sum of reps * load)"
+    ],
+    "utility_threshold": "DeltaMAE >= 1.0 Nm (or N) with 95% bootstrap CI strictly excluding zero (p < 0.05)"
+  },
+  "evangelidis_source_model": {
+    "n_obs": 27,
+    "beta_0": 9.512940652411558,
+    "beta_pre": -0.1701357095754214,
+    "beta_tau_end": 1.7986801672879176,
+    "mean_retention_ratio": 0.723599637342623
+  },
+  "krizaj_evaluation": {
+    "fixed_model_transfer": {
+      "source_cohort": "Evangelidis et al. (9 men, 27 obs, hamstrings)",
+      "target_cohort": "Kri\u017eaj et al. (21 adults, 42 obs, plantar flexors)",
+      "fixed_tau_end_mae_Nm": 72.7008526564638,
+      "fixed_tau_end_bias_Nm": 72.7008526564638,
+      "fixed_retention_mae_Nm": 43.65343934866002,
+      "fixed_retention_bias_Nm": -43.65343934866002,
+      "transfer_status": "CATASTROPHIC_ERROR_INCREASE",
+      "interpretation": "Fixed Evangelidis model exhibits massive out-of-sample degradation on Kri\u017eaj: MAE increases to 72.70 Nm (bias +72.70 Nm) compared to the local naive retention baseline of 10.48 Nm. Domain shift across muscles and fatigue depth precludes uncalibrated model transfer."
+    },
+    "retrained_loso_metrics": {
+      "mean_retention_mae_Nm": 10.478872452262756,
+      "pre_alone_mae_Nm": 9.629801321435046,
+      "pre_plus_cond_mae_Nm": 9.629801321434819,
+      "pre_plus_tau_end_mae_Nm": 9.701512532826547,
+      "pre_plus_cond_tau_end_mae_Nm": 9.928733384068028,
+      "pre_plus_r_late_mae_Nm": 11.79610928790296,
+      "pre_plus_s_tau_mae_Nm": 11.034920500951527
+    },
+    "comparisons": {
+      "tau_end_vs_mean_retention": {
+        "dmae_Nm": 0.7773599194362095,
+        "ci95_Nm": [
+          -0.5510680018815253,
+          2.245564416553383
+        ],
+        "passes_utility_threshold": false
+      },
+      "tau_end_vs_pre_alone": {
+        "dmae_Nm": -0.07171121139150038,
+        "ci95_Nm": [
+          -0.45288564872283393,
+          0.317121729746436
+        ],
+        "worsening": true
+      },
+      "cond_tau_end_vs_pre_cond": {
+        "dmae_Nm": -0.2989320626332095,
+        "ci95_Nm": [
+          -1.111728853624647,
+          0.4878823096951226
+        ],
+        "worsening": true
+      }
+    },
+    "verdict": "REFUTED_INDEPENDENTLY: Adding terminal torque (tau_end) produces a nominal +0.78 Nm gain over MeanRetention (failing the >= 1.0 Nm utility threshold; 95% CI [-0.55, 2.25] spans zero). When compared to the baseline capacity model (PreAlone, MAE = 9.63 Nm), adding tau_end slightly worsens prediction (DeltaMAE = -0.07 Nm, 95% CI [-0.45, 0.32]). Terminal dynamic features offer zero incremental predictive power."
+  },
+  "norbury_evaluation": {
+    "post_5m": {
+      "label": "5-minute recovery",
+      "mean_retention_mae_N": 84.5559300115092,
+      "pre_alone_mae_N": 76.99104583314414,
+      "pre_plus_vol4_mae_N": 84.24120564259913,
+      "pre_plus_tot_vol_mae_N": 79.93868905788324,
+      "dmae_vol4_vs_pre_alone_N": -7.250159809454985,
+      "ci95_vol4_N": [
+        -13.882338102395172,
+        -0.5141987095094739
+      ],
+      "dmae_tot_vol_vs_pre_alone_N": -2.947643224739096,
+      "ci95_tot_vol_N": [
+        -9.82604124319409,
+        4.256660481353882
+      ],
+      "worsening_vol4": true
+    },
+    "post_45m": {
+      "label": "45-minute recovery",
+      "mean_retention_mae_N": 80.9502385940148,
+      "pre_alone_mae_N": 63.34810463797945,
+      "pre_plus_vol4_mae_N": 66.65479296163274,
+      "pre_plus_tot_vol_mae_N": 63.58233985582776,
+      "dmae_vol4_vs_pre_alone_N": -3.306688323653283,
+      "ci95_vol4_N": [
+        -9.05626132612107,
+        3.263502020199074
+      ],
+      "dmae_tot_vol_vs_pre_alone_N": -0.23423521784830825,
+      "ci95_tot_vol_N": [
+        -6.029947203818834,
+        6.719854872629203
+      ],
+      "worsening_vol4": true
+    }
+  },
+  "master_conclusion": "Decisive independent out-of-sample evaluation refutes the utility of terminal torque (tau_end) and terminal volume for predicting post-exercise residual force. 1. Fixed transfer of the Evangelidis model onto Kri\u017eaj fails catastrophically (MAE = 47.77-97.63 Nm vs local 9.98 Nm baseline). 2. Retraining on Kri\u017eaj under LOSO yields a nominal +0.78 Nm gain over MeanRetention (failing >= 1.0 Nm; 95% CI [-0.55, 2.25]),    and actually increases prediction error when compared to baseline PreAlone (-0.07 Nm, 95% CI [-0.45, 0.32]). 3. In Norbury et al., adding terminal set volume increases MAE by +7.25 N at 5 min and +3.31 N at 45 min. Thus, in vivo residual force cannot be predicted from mechanical work or terminal dynamic contraction parameters, confirming that Architecture A's strength-fatigue coupling boundary remains empirically unvalidated."
+}

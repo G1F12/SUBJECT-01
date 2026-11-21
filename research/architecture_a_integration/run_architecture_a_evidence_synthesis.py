@@ -147,6 +147,13 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             "angle_artifact_span_at_10deg_N": 409.8,
             "paired_dmae_ci95_N": [-344.7, 31.3],
         },
+        "angular_sensitivity_analysis": {
+            "source": "3-DOF closed-chain kinematic Jacobian J^T(theta) * F_plate; gradient 27.59 to 40.98 N/deg",
+            "implication": "Strict experimental alignment and posture control within ±2° during peak exertion; does not imply unviability of strength increase",
+            "posture_100deg_sf_violation_scope": "Safety factor failure (SF = 1.285 < 1.50) is specific to Strategy 2 dynamic recruitment rate (20 kN/s) in deep flexion",
+            "posture_140deg_sf_pass_scope": "Model threshold passes (SF = 1.747 >= 1.50); transfer uncertainty bounded by angular sensitivity and individual anatomy",
+            "santos_110deg_diagnostic_scope": "Diagnostic of nominal model overestimation (+463.2 N bias; constant baseline wins by 148 N MAE), proving individual geometry is required",
+        },
     }
 
     # -------------------------------------------------------------------------
@@ -317,7 +324,32 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
             },
             "active_cooling_required_hot_humid_W": 420.0,
             "aegis01_temperate_max_D": 0.69,
-            "channel_tested": "THERMAL ONLY. Neuromuscular power maintenance, motor steadiness, and post-exercise MVC remain unmeasured in joint 2700 s trials.",
+            "channel_tested": "THERMAL ONLY. Neuromuscular power maintenance, motor steadiness, tissue wear, and post-exercise MVC remain unmeasured (не оценено) in joint 2700 s trials.",
+            "canonical_target_definition": "2700 s alternating explosive and submaximal efforts with short recovery (research/targets/CPE45.json)",
+            "isolated_thermal_scenario": "Continuous 360 W is an isolated extreme thermal stress scenario (972 kJ work); continuous absolute maximum power is explicitly NOT required by CPE45.json.",
+            "unmeasured_channels_in_cpe45": {
+                "power_maintenance": "UNASSESSED ('не оценено')",
+                "motor_control": "UNASSESSED ('не оценено')",
+                "tissue_wear": "UNASSESSED ('не оценено')",
+                "post_load_mvc": "UNASSESSED ('не оценено')",
+            },
+            "open_threshold_sensitivities": {
+                "post45_mvc_retention": {
+                    "source": "Working assumption (null in CPE45.json)",
+                    "sensitivity": "At >= 95% threshold, neither Norbury resistance recovery (93.34%) nor heavy endurance passes without multi-hour recovery. At >= 85%, resistance recovery passes, but 2700 s metabolic endurance remains unmeasured.",
+                    "status": "UNASSESSED_IN_VIVO_2700S",
+                },
+                "motor_control_cv": {
+                    "source": "Working assumption (null in CPE45.json)",
+                    "sensitivity": "At <= 2.5% threshold, Kudzia post-fatigue (CV = 2.83%) fails while baseline (CV = 0.61%) passes. At <= 3.5%, fatigued state passes. Unmeasured over 2700 s.",
+                    "status": "UNASSESSED_IN_VIVO_2700S",
+                },
+                "tissue_wear_safety_factor": {
+                    "source": "Design standard (SF >= 1.50)",
+                    "sensitivity": "Unmeasured during 2700 s alternating load; marked UNASSESSED ('не оценено').",
+                    "status": "UNASSESSED_IN_VIVO_2700S",
+                },
+            },
         },
         "baseline_comparison": {
             "pennes_mae_C": 0.586,
@@ -670,6 +702,25 @@ def build_system_synthesis(evidence: Dict[str, Any]) -> Dict[str, Any]:
                 "3. CPE45 Thermal Endurance Bound: Sustained 360 W equivalent power must follow intermittent duty cycling (D <= 0.59-0.92) or external cooling (>= 420 W) to avoid core temperature exceeding 39.5 °C, accepting a 7% to 36% reduction in total mechanical work.",
                 "4. Bioenergetic Domain Management: High-power work induces neuromuscular and central fatigue; recovery from brief resistance exercise (Norbury 93.01% LL, 93.67% HL at 45 min after 3 sets in kg·reps) cannot be transferred to 2700 s of heavy metabolic endurance without multi-hour recovery windows.",
             ],
+            "confirmation_rule": {
+                "formula": "(FORCE20 OR ADAPT25) AND (Velocity AND Power AND Tissue Safety AND Motor Control AND CPE45 AND Recovery)",
+                "threshold_sources": {
+                    "FORCE20": "Canonical target (+20% functional strength at comparable mass; TARGET-FORCE20)",
+                    "ADAPT25": "Canonical target (+25% rate of strength acquisition vs comparable control; TARGET-ADAPT25)",
+                    "Velocity": "Working assumption (v_max preservation within -10%; achieved -1.7% in simulation)",
+                    "Power": "Working assumption (P_peak >= +15%; achieved +19.8% in simulation)",
+                    "Tissue Safety": "Design standard (SF >= 1.50; passes at 140° SF=1.747, fails at 100° dynamic 20 kN/s SF=1.285; unmeasured in vivo)",
+                    "Motor Control": "Working assumption (CV <= 2.5%, |COP| <= 0.16 m; unassessed over 2700 s)",
+                    "CPE45": "Canonical target (2700 s alternating explosive/submaximal efforts; TARGET-CPE45, CPE45.json; thermal model validated with work cut; power, motor control, tissue wear, and post-load MVC unmeasured / 'не оценено')",
+                    "Recovery": "Working assumption (post-load MVC retention >= 90-95%; Norbury achieves 93.34% at 45m; 2700 s metabolic endurance unmeasured)",
+                },
+                "scenario_rejection_boundary": (
+                    "Rejection of an individual scenario (such as continuous 360 W thermal or 100° 20 kN/s dynamic) limits "
+                    "the conclusion strictly to that scenario; justified configurations remain (e.g. intermittent pacing "
+                    "with reduced work, extended 140° posture, rate limiting), but whole-system uncompromised simultaneous "
+                    "satisfaction remains unproven pending decisive in vivo empirical measurements."
+                ),
+            },
         },
     }
 
@@ -795,6 +846,56 @@ Master cross-module integration across all five computational and empirical modu
 | **TARGET-ADAPT25** | `RATE_ACCELERATION_UNASSESSED_PENDING_CONTROL_COHORT` | **WITHIN-COHORT GAIN OBSERVED (+18.35%), COMPARATIVE RATE UNASSESSED** | Mean force increased **+18.35% at 14 days** and +20.01% at 42 days in Santos et al. (N=10 complete). In simulation, zero deficit is achieved under physiological reserve SF0 >= 1.776 or H2 pacing. However, comparative rate acceleration is unproven due to absence of a control cohort, and human tendon adaptation was unmeasured. | Native reserve SF0 >= 1.78 or Strategy H2 tendon-paced progression; comparative control cohort required. |
 | **TARGET-CPE45** | `NOT_EXTERNALLY_VALIDATED` | **THERMAL SOLVER VALIDATED (WORK CUT), CHANNELS NOT EXTERNALLY VALIDATED** | TARGET-CPE45 defined per research/targets/CPE45.json as 2700 s requirement. 4-layer Pennes solver validated on McLaughlin N=23 (MAE 0.586 °C vs persistence 1.275 °C). Continuous 360 W breaches 39.5 °C in 1240–2365 s. Intermittent pacing maintains T_core < 39.5 °C (D <= 0.59-0.92), but only by cutting work to 619–902 kJ. In Norbury, recovery at 45 min was 93.01% LL / 93.67% HL in kg·reps; power maintenance, control, and post-load MVC over 2700 s unmeasured. | Intermittent duty-cycle operation (D <= 0.59-0.92) across operational climates or >= 420 W external cooling. |
 | **JOINT COMPATIBILITY** | `CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD` | **NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS** | Evaluated under unified physical conditions, simultaneous uncompromised achievement fails: deep flexion breaches tissue safety (SF=1.285), continuous 360 W breaches thermal limits, intermittent endurance cuts work and induces fatigue, and adaptation rate lacks control. | Architecture A placed on whole-system HOLD pending execution of the three pre-registered in vivo human measurements. |
+
+---
+
+### 2.1 Multi-Criteria Scenario Evidence Matrix (Aligned with Canonical Target Specifications)
+
+Per canonical `research/targets/CPE45.json`, the target demands a 2700 s alternating explosive and submaximal load schedule; continuous absolute power is explicitly NOT required. Unmeasured channels are marked strictly as **не оценено (UNASSESSED)**:
+
+| Scenario / Configuration | Force / Adapt Target | Velocity & Power | Tissue Safety (SF >= 1.50) | Motor Control (CV <= 2.5%) | CPE45 Thermal (T_core < 39.5°C) | Post-Load MVC & Recovery | Overall Scenario Status |
+|---|---|---|---|---|---|---|---|
+| **1. Strategy 2 at 100° (20 kN/s dynamic)** | +21.93% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.285 (FAILS for this scenario)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **SCENARIO REJECTED (Local enthesis shear breach)** |
+| **2. Strategy 2 at 140° (20 kN/s dynamic)** | +21.77% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.747 (PASSES model threshold)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **CONDITIONALLY FEASIBLE (Requires rigid ±2° alignment)** |
+| **3. Santos 6-week Longitudinal (110°)** | +18.35% at 14d / +20.01% at 42d (PASS within cohort) | *Не оценено* | SF0 >= 1.776 in ODE (PASS in model, unmeasured in vivo) | *Не оценено* | *Не оценено* | *Не оценено* | **UNASSESSED FOR ADAPT25 (No comparative control cohort)** |
+| **4. Continuous 360 W for 2700 s (Isolated Thermal Stress)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Breaches 39.5°C in 1240–2365 s (FAILS)** | *Не оценено* | **SCENARIO REJECTED (Continuous max power not required by CPE45)** |
+| **5. Intermittent 360 W (D = 0.59–0.92, 2700 s)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Peak T_core < 39.5°C (PASSES solely by cutting work 7–36%)** | *Не оценено* | **PARTIALLY VALIDATED (Thermal solver validated; functional channels unassessed)** |
+| **6. Norbury Resistance Recovery (3 sets, kg·reps)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | 93.34% at 45m, 99.10% at 24h (PASS in kg·reps) | **NON-TRANSFERABLE (Resistance exercise in kg·reps; non-transferable to 2700 s endurance)** |
+| **7. Whole-System Combined Architecture A** | Not confirmed in vivo | Feasible in model | Passes only at 140° | Unassessed after 2700 s | Validated with work cut | Unassessed after 2700 s | **CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD** |
+
+---
+
+### 2.2 Program Decision Rule & Open Threshold Sensitivity Analysis
+
+#### Master Confirmation Rule
+To confirm feasibility of the ultimate program goal, an architecture must satisfy the logical conjunction:
+$$\\big(\\text{{FORCE20}} \\lor \\text{{ADAPT25}}\\big) \\land \\big(\\text{{Velocity}} \\land \\text{{Power}} \\land \\text{{Tissue Safety}} \\land \\text{{Motor Control}} \\land \\text{{CPE45}} \\land \\text{{Recovery}}\\big)$$
+
+#### Threshold Sources and Classification
+- **`FORCE20` (+20% maximal functional force):** Canonical program objective (`TARGET-FORCE20`).
+- **`ADAPT25` (+25% strength acquisition rate):** Canonical program objective (`TARGET-ADAPT25`). Requires comparative control cohort.
+- **`Velocity` (v_max >= -10%):** Working assumption; achieved -1.7% in Strategy 2 simulation via intrinsic shortening velocity adaptation (+12%).
+- **`Power` (P_peak >= +15%):** Working assumption; achieved +19.8% in Strategy 2 simulation.
+- **`Tissue Safety` (Safety Factor >= 1.50):** Musculoskeletal engineering design standard. Fails at 100° dynamic 20 kN/s (SF = 1.285); passes at 140° extended posture (SF = 1.747). Unmeasured in human subjects during rapid adaptation.
+- **`Motor Control` (Force steadiness CV <= 2.5%, |x_COP| <= 0.16 m):** Working assumption (null in `CPE45.json`). Fails in fatigued state (Kudzia post-fatigue CV = 2.83%). Unmeasured over 2700 s.
+- **`CPE45` (2700 s Combat-Like Performance Endurance):** Canonical program objective (`TARGET-CPE45`, `research/targets/CPE45.json`). Pacing preserves homeothermy only by reducing work from 972 kJ to 619–902 kJ. Power, control, tissue wear, and post-load MVC are unassessed (*не оценено*).
+- **`Recovery` (Post-load MVC retention >= 90-95%):** Working assumption (null in `CPE45.json`). Norbury resistance exercise achieves 93.34% at 45 min; unassessed for 2700 s metabolic endurance.
+
+#### Scenario Rejection Boundary
+Rejection of an individual scenario (such as continuous 360 W thermal stress or 100° 20 kN/s dynamic loading) limits the negative conclusion strictly to that scenario. Justified operational configurations remain (e.g. intermittent duty-cycle pacing with reduced work, extended 140° knee posture, rate-limiting below 12,000 N/s). However, simultaneous uncompromised achievement across all dimensions in a single physical system remains on whole-system HOLD pending decisive empirical measurements.
+
+#### Sensitivity of Open Thresholds
+1. **Post-45-min MVC Retention Threshold:**
+   - If set to >= 95.0%: Neither Norbury resistance exercise (93.34%) nor heavy endurance models pass without multi-hour recovery.
+   - If set to >= 85.0%: Resistance exercise passes easily (93.34%), but heavy metabolic endurance (619–902 kJ) remains unassessed in vivo.
+2. **Motor Control Steadiness Threshold (CV):**
+   - If set to <= 2.5%: Baseline states pass (Kudzia baseline CV = 0.61%), but fatigued states fail (Kudzia fatigued CV = 2.83%).
+   - If set to <= 3.5%: Fatigued states pass. Both thresholds remain unmeasured during 2700 s alternating load.
+3. **Angular Sensitivity Source & Diagnostic Scope:**
+   - The angular gradient (27.59 to 40.98 N/deg) originates directly from the 3-DOF closed-chain kinematic Jacobian:
+     tau_joints = J^T(theta) * F_plate
+   - A 10° posture mismatch creates a 409.8 N (16.3%) force artifact. This demonstrates that experimental testing requires strict ±2° alignment control, not that strength increase itself is unviable.
+   - Evaluation on Santos at 110° diagnosed that the nominal model overestimates force by +463.2 N bias (with a constant naive baseline achieving lower MAE by 148 N), proving that subject-specific anatomical geometry is required for out-of-sample predictions.
 
 ---
 

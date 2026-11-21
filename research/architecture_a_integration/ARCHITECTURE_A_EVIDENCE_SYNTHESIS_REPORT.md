@@ -37,6 +37,56 @@ Master cross-module integration across all five computational and empirical modu
 
 ---
 
+### 2.1 Multi-Criteria Scenario Evidence Matrix (Aligned with Canonical Target Specifications)
+
+Per canonical `research/targets/CPE45.json`, the target demands a 2700 s alternating explosive and submaximal load schedule; continuous absolute power is explicitly NOT required. Unmeasured channels are marked strictly as **не оценено (UNASSESSED)**:
+
+| Scenario / Configuration | Force / Adapt Target | Velocity & Power | Tissue Safety (SF >= 1.50) | Motor Control (CV <= 2.5%) | CPE45 Thermal (T_core < 39.5°C) | Post-Load MVC & Recovery | Overall Scenario Status |
+|---|---|---|---|---|---|---|---|
+| **1. Strategy 2 at 100° (20 kN/s dynamic)** | +21.93% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.285 (FAILS for this scenario)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **SCENARIO REJECTED (Local enthesis shear breach)** |
+| **2. Strategy 2 at 140° (20 kN/s dynamic)** | +21.77% (PASS) | -1.7% / +19.8% (PASS) | **SF = 1.747 (PASSES model threshold)** | Model proxy 2.1% (PASS) | *Не оценено* | *Не оценено* | **CONDITIONALLY FEASIBLE (Requires rigid ±2° alignment)** |
+| **3. Santos 6-week Longitudinal (110°)** | +18.35% at 14d / +20.01% at 42d (PASS within cohort) | *Не оценено* | SF0 >= 1.776 in ODE (PASS in model, unmeasured in vivo) | *Не оценено* | *Не оценено* | *Не оценено* | **UNASSESSED FOR ADAPT25 (No comparative control cohort)** |
+| **4. Continuous 360 W for 2700 s (Isolated Thermal Stress)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Breaches 39.5°C in 1240–2365 s (FAILS)** | *Не оценено* | **SCENARIO REJECTED (Continuous max power not required by CPE45)** |
+| **5. Intermittent 360 W (D = 0.59–0.92, 2700 s)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | **Peak T_core < 39.5°C (PASSES solely by cutting work 7–36%)** | *Не оценено* | **PARTIALLY VALIDATED (Thermal solver validated; functional channels unassessed)** |
+| **6. Norbury Resistance Recovery (3 sets, kg·reps)** | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | *Не оценено* | 93.34% at 45m, 99.10% at 24h (PASS in kg·reps) | **NON-TRANSFERABLE (Resistance exercise in kg·reps; non-transferable to 2700 s endurance)** |
+| **7. Whole-System Combined Architecture A** | Not confirmed in vivo | Feasible in model | Passes only at 140° | Unassessed after 2700 s | Validated with work cut | Unassessed after 2700 s | **CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD** |
+
+---
+
+### 2.2 Program Decision Rule & Open Threshold Sensitivity Analysis
+
+#### Master Confirmation Rule
+To confirm feasibility of the ultimate program goal, an architecture must satisfy the logical conjunction:
+$$\big(\text{FORCE20} \lor \text{ADAPT25}\big) \land \big(\text{Velocity} \land \text{Power} \land \text{Tissue Safety} \land \text{Motor Control} \land \text{CPE45} \land \text{Recovery}\big)$$
+
+#### Threshold Sources and Classification
+- **`FORCE20` (+20% maximal functional force):** Canonical program objective (`TARGET-FORCE20`).
+- **`ADAPT25` (+25% strength acquisition rate):** Canonical program objective (`TARGET-ADAPT25`). Requires comparative control cohort.
+- **`Velocity` (v_max >= -10%):** Working assumption; achieved -1.7% in Strategy 2 simulation via intrinsic shortening velocity adaptation (+12%).
+- **`Power` (P_peak >= +15%):** Working assumption; achieved +19.8% in Strategy 2 simulation.
+- **`Tissue Safety` (Safety Factor >= 1.50):** Musculoskeletal engineering design standard. Fails at 100° dynamic 20 kN/s (SF = 1.285); passes at 140° extended posture (SF = 1.747). Unmeasured in human subjects during rapid adaptation.
+- **`Motor Control` (Force steadiness CV <= 2.5%, |x_COP| <= 0.16 m):** Working assumption (null in `CPE45.json`). Fails in fatigued state (Kudzia post-fatigue CV = 2.83%). Unmeasured over 2700 s.
+- **`CPE45` (2700 s Combat-Like Performance Endurance):** Canonical program objective (`TARGET-CPE45`, `research/targets/CPE45.json`). Pacing preserves homeothermy only by reducing work from 972 kJ to 619–902 kJ. Power, control, tissue wear, and post-load MVC are unassessed (*не оценено*).
+- **`Recovery` (Post-load MVC retention >= 90-95%):** Working assumption (null in `CPE45.json`). Norbury resistance exercise achieves 93.34% at 45 min; unassessed for 2700 s metabolic endurance.
+
+#### Scenario Rejection Boundary
+Rejection of an individual scenario (such as continuous 360 W thermal stress or 100° 20 kN/s dynamic loading) limits the negative conclusion strictly to that scenario. Justified operational configurations remain (e.g. intermittent duty-cycle pacing with reduced work, extended 140° knee posture, rate-limiting below 12,000 N/s). However, simultaneous uncompromised achievement across all dimensions in a single physical system remains on whole-system HOLD pending decisive empirical measurements.
+
+#### Sensitivity of Open Thresholds
+1. **Post-45-min MVC Retention Threshold:**
+   - If set to >= 95.0%: Neither Norbury resistance exercise (93.34%) nor heavy endurance models pass without multi-hour recovery.
+   - If set to >= 85.0%: Resistance exercise passes easily (93.34%), but heavy metabolic endurance (619–902 kJ) remains unassessed in vivo.
+2. **Motor Control Steadiness Threshold (CV):**
+   - If set to <= 2.5%: Baseline states pass (Kudzia baseline CV = 0.61%), but fatigued states fail (Kudzia fatigued CV = 2.83%).
+   - If set to <= 3.5%: Fatigued states pass. Both thresholds remain unmeasured during 2700 s alternating load.
+3. **Angular Sensitivity Source & Diagnostic Scope:**
+   - The angular gradient (27.59 to 40.98 N/deg) originates directly from the 3-DOF closed-chain kinematic Jacobian:
+     tau_joints = J^T(theta) * F_plate
+   - A 10° posture mismatch creates a 409.8 N (16.3%) force artifact. This demonstrates that experimental testing requires strict ±2° alignment control, not that strength increase itself is unviable.
+   - Evaluation on Santos at 110° diagnosed that the nominal model overestimates force by +463.2 N bias (with a constant naive baseline achieving lower MAE by 148 N), proving that subject-specific anatomical geometry is required for out-of-sample predictions.
+
+---
+
 ### 3. Comprehensive Audit Trace Matrix for Headline Figures
 
 | Figure | Audited Value | Source Artifact | Calculation Method & Conditions | Evidence Level | Status & Epistemic Limitations |

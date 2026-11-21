@@ -3928,5 +3928,35 @@
     "limits": "Evaluated on 9 participants performing 99 submaximal knee flexion contractions. Terminal torque nominally reaches DeltaMAE = +1.02 Nm over MeanRetention, but 95% bootstrap CI spans zero due to high inter-subject variance on N=9. Independent open transfer bounded by absence of continuous repetition dynamometry.",
     "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "EXP-0138",
+    "date": "2026-11-21",
+    "name": "Decisive Independent Out-of-Sample Evaluation of Terminal Torque and Dynamic Predictors on Plantar Flexion and Resistance Recovery",
+    "sources": [
+      "SRC-0111",
+      "SRC-0112",
+      "SRC-0115"
+    ],
+    "design": "Evaluated out-of-sample transfer and local retraining of terminal torque (tau_end) and repetition dynamics on two independent open cohorts: Križaj et al. 2025 (SRC-0112, Zenodo 15679911, N=21, 42 obs) and Norbury et al. 2020 (SRC-0111, PMC7444855, N=12, 24 obs). Pre-specified feature mapping, measurement delays, LOSO participant split, and utility threshold (DeltaMAE >= 1.0 Nm/N with 95% participant-clustered bootstrap CI strictly excluding zero) prior to execution. Tested fixed Evangelidis model transfer vs local LOSO retraining.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_independent_torque_transfer_test.py",
+    "inputs": "tmp/zenodo_15679911/EQI_StudyPlantarFlexion_RawData.xlsx",
+    "report": "research/program_evidence_audit/INDEPENDENT_TORQUE_TRANSFER_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/INDEPENDENT_TORQUE_TRANSFER_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_independent_torque_transfer_test.py",
+    "results": {
+      "findings": [
+        "FND-0134"
+      ],
+      "negative_results": [
+        "NEG-0118"
+      ]
+    },
+    "limits": "Evaluated across 21 participants in plantar flexion (acute post-exercise MVIC) and 12 participants in leg press resistance recovery (5 min, 45 min). Fixed Evangelidis model suffers catastrophic domain shift (MAE 47.77-97.63 Nm vs local 9.98 Nm baseline). Local LOSO retraining yields DeltaMAE = +0.78 Nm vs MeanRetention (failing >= 1.0 Nm; 95% CI [-0.55, 2.25]) and increases error vs PreAlone (-0.07 Nm). Adding terminal set volume in Norbury worsens MAE by +7.25 N at 5 min and +3.31 N at 45 min.",
+    "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

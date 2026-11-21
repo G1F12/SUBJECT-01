@@ -241,6 +241,29 @@ class TestArchitectureASynthesisR3(unittest.TestCase):
         self.assertTrue(jc["definitive_answer"].startswith("NO"))
         self.assertEqual(len(jc["trade_offs_and_bounds"]), 4)
 
+        # Master Confirmation Rule & Threshold Sources
+        self.assertIn("confirmation_rule", jc)
+        rule = jc["confirmation_rule"]
+        self.assertIn("(FORCE20 OR ADAPT25)", rule["formula"])
+        self.assertIn("CPE45", rule["formula"])
+        self.assertIn("Recovery", rule["formula"])
+        self.assertEqual(len(rule["threshold_sources"]), 8)
+        self.assertIn("scenario_rejection_boundary", rule)
+
+    def test_cpe45_canonical_matrix_and_decision_rule(self):
+        m4 = self.res["modules"]["module_4_pennes_bioheat_solver"]
+        outs = m4["measured_outputs"]
+        self.assertIn("canonical_target_definition", outs)
+        self.assertIn("unmeasured_channels_in_cpe45", outs)
+        self.assertIn("open_threshold_sensitivities", outs)
+
+        # Report content assertions
+        report_text = self.report_path.read_text(encoding="utf-8")
+        self.assertIn("### 2.1 Multi-Criteria Scenario Evidence Matrix", report_text)
+        self.assertIn("### 2.2 Program Decision Rule & Open Threshold Sensitivity Analysis", report_text)
+        self.assertIn("не оценено", report_text)
+        self.assertIn("Master Confirmation Rule", report_text)
+
     # =========================================================================
     # Pre-Registered Decisive Measurements
     # =========================================================================

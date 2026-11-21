@@ -71,10 +71,13 @@ def main():
         ("10. Decisive Torque Dynamics Test (EXP-0137)", [
             sys.executable, "research/program_evidence_audit/run_torque_dynamics_test.py"
         ]),
-        ("11. Architecture A Master Synthesis (EXP-0132)", [
+        ("11. Decisive Independent Torque Transfer Test (EXP-0138)", [
+            sys.executable, "research/program_evidence_audit/run_independent_torque_transfer_test.py"
+        ]),
+        ("12. Architecture A Master Synthesis (EXP-0132)", [
             sys.executable, "research/architecture_a_integration/run_architecture_a_evidence_synthesis.py"
         ]),
-        ("12. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
+        ("13. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
     ]
 
     summary = []

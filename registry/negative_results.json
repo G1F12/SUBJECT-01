@@ -947,5 +947,14 @@
     "statement": "Rejection of the hypothesis that sequential torque decay features (R_late, S_tau) or cumulative mechanical work improve out-of-sample prediction of post-exercise maximal capacity. Absolute terminal torque (tau_end) nominally reduces error (MAE 10.22 Nm vs 11.25 Nm for MeanRetention), but fails the pre-specified utility criterion because its 95% participant-clustered bootstrap confidence interval [-3.84, +6.75] Nm strictly spans zero on N=9. Adding mechanical work in Joules to terminal torque actively degrades predictive performance by +1.62 Nm.",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "NEG-0118",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0138",
+    "title": "Failure of terminal contraction dynamics and repetition volume to achieve statistically confirmed prediction of post-exercise force on independent cohorts",
+    "statement": "Rejection of the hypothesis that terminal contraction torque (tau_end) or terminal set volume improves out-of-sample prediction of residual force or power on independent human cohorts. Fixed model transfer from Evangelidis to Križaj fails with catastrophic error (MAE 47.77-97.63 Nm vs local baseline 9.98 Nm). Retrained LOSO evaluation on Križaj fails the pre-specified utility criterion (DeltaMAE = +0.78 Nm < 1.0 Nm, 95% CI [-0.55, +2.25] Nm spanning zero) and worsens error relative to PreAlone (-0.07 Nm). Adding terminal set volume in Norbury worsens prediction error by +7.25 N at 5 min and +3.31 N at 45 min.",
+    "confidence": "statistically_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

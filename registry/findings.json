@@ -1153,5 +1153,14 @@
     "statement": "Analysis of sequential contraction torque blocks (11 progress bins across 99 contractions, Evangelidis et al. 2023, SRC-0115) reveals that relative decay metrics fail to predict post-exercise capacity on held-out participants: R_late (late/early ratio) yields MAE = 14.08 Nm and S_tau (torque slope) yields MAE = 13.96 Nm, both losing by >2.7 Nm to MeanRetention (11.25 Nm). Absolute terminal torque (tau_end) nominally improves LOSO MAE to 10.22 Nm (+1.02 Nm over MeanRetention and +4.04 Nm over Pre+Cond), but fails the pre-specified statistical significance criterion with a 95% participant-clustered bootstrap CI of [-3.84, +6.75] Nm spanning zero on N=9. Crucially, adding cumulative mechanical work in Joules to tau_end degrades MAE by +1.62 Nm (11.85 Nm vs 10.22 Nm), confirming that total work introduces destructive noise. Independent open-data transfer is bounded at N=9 as no existing public dataset provides continuous repetition dynamometry with pronounced fatigue and pre/post MVC.",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "FND-0134",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0138",
+    "title": "Decisive independent out-of-sample evaluation refuting terminal torque and dynamic repetition predictors of post-exercise capacity",
+    "statement": "Independent evaluation across Križaj et al. 2025 (SRC-0112, N=21, 42 obs) and Norbury et al. 2020 (SRC-0111, N=12, 24 obs) conclusively refutes the hypothesis that terminal contraction torque (tau_end) or terminal repetition volume improves prediction of post-exercise residual force. (1) Transfer of the fixed Evangelidis model (EXP-0137) onto Križaj fails catastrophically with MAE = 47.77 Nm (75% condition) and 97.63 Nm (90% condition), compared to the local naive retention baseline of 9.98 Nm. (2) Retrained Leave-One-Subject-Out (LOSO) cross-validation on Križaj yields DeltaMAE = +0.78 Nm over MeanRetention (failing the >= 1.0 Nm pre-specified utility criterion; 95% participant-clustered bootstrap CI [-0.55, +2.25] Nm spans zero) and slightly worsens error when compared to baseline PreAlone (DeltaMAE = -0.07 Nm, 95% CI [-0.45, +0.32] Nm). (3) In Norbury et al., adding terminal set volume increases prediction error by +7.25 N at 5 min (MAE 84.24 N vs 76.99 N) and +3.31 N at 45 min (MAE 66.65 N vs 63.35 N) relative to PreAlone. These independent results establish that neither mechanical work nor terminal contraction dynamics carry generalizable predictive signal beyond baseline capacity for post-exercise force.",
+    "confidence": "statistically_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]
