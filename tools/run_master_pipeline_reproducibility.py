@@ -68,10 +68,13 @@ def main():
         ("9. Decisive Hamstrings Fatigue Work Test (EXP-0136)", [
             sys.executable, "research/program_evidence_audit/run_hamstrings_fatigue_test.py"
         ]),
-        ("10. Architecture A Master Synthesis (EXP-0132)", [
+        ("10. Decisive Torque Dynamics Test (EXP-0137)", [
+            sys.executable, "research/program_evidence_audit/run_torque_dynamics_test.py"
+        ]),
+        ("11. Architecture A Master Synthesis (EXP-0132)", [
             sys.executable, "research/architecture_a_integration/run_architecture_a_evidence_synthesis.py"
         ]),
-        ("11. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
+        ("12. Full Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/"]),
     ]
 
     summary = []

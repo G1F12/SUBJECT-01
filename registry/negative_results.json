@@ -938,5 +938,14 @@
     "statement": "Rejection of the hypothesis that actual mechanical work in Joules improves out-of-sample prediction of residual maximal voluntary torque in a regime with pronounced fatigue (18% to 34% force depression, Evangelidis et al. 2023, SRC-0115): Clustered bootstrap 95% CI strictly spans zero in dynamic conditions (CON + ECC, N=18, dMAE = +0.544 Nm [-3.03, +4.94] Nm) and adding work worsens error across all conditions (CON + ECC + ISO, N=27, dMAE = -0.331 Nm [-1.17, +0.65] Nm). Simple non-work retention baselines (MAE = 11.25 Nm) outperform models with mechanical work (MAE = 13.72 Nm) by 2.48 Nm.",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "NEG-0117",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0137",
+    "title": "Failure of dynamic torque decay metrics and cumulative work to achieve statistically confirmed prediction of residual force",
+    "statement": "Rejection of the hypothesis that sequential torque decay features (R_late, S_tau) or cumulative mechanical work improve out-of-sample prediction of post-exercise maximal capacity. Absolute terminal torque (tau_end) nominally reduces error (MAE 10.22 Nm vs 11.25 Nm for MeanRetention), but fails the pre-specified utility criterion because its 95% participant-clustered bootstrap confidence interval [-3.84, +6.75] Nm strictly spans zero on N=9. Adding mechanical work in Joules to terminal torque actively degrades predictive performance by +1.62 Nm.",
+    "confidence": "statistically_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

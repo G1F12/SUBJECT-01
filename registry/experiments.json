@@ -3900,5 +3900,33 @@
     "limits": "Evaluated on isolated knee flexor resistance fatigue (99 submaximal contractions, ~3.4 kJ per dynamic session, immediate post-test MVT). Does not measure glycogen depletion or systemic cardiovascular load during whole-body exercise.",
     "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "EXP-0137",
+    "date": "2026-11-21",
+    "name": "Decisive Out-of-Sample Evaluation of Sequential Torque Fatigue Dynamics Predicting Post-Exercise Residual Force",
+    "sources": [
+      "SRC-0115"
+    ],
+    "design": "Evaluated sequential contraction torque blocks (11 progress bins from 9.09% to 100% across 99 contractions) from Evangelidis et al. 2023 (PMC10030419, SRC-0115). Pre-specified dynamic features (R_late, S_tau, tau_end) and utility threshold (DeltaMAE >= 1.0 Nm with 95% CI excluding zero) prior to testing. Executed Leave-One-Subject-Out (LOSO) cross-validation and participant-clustered bootstrap (5,000 resamples). Assessed transfer boundary on independent open data.",
+    "status": "completed",
+    "model": "research/program_evidence_audit/run_torque_dynamics_test.py",
+    "inputs": "research/program_evidence_audit/TORQUE_DYNAMICS_REPORT.md",
+    "report": "research/program_evidence_audit/TORQUE_DYNAMICS_REPORT.md",
+    "outputs": [
+      "research/program_evidence_audit/TORQUE_DYNAMICS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/program_evidence_audit/run_torque_dynamics_test.py",
+    "results": {
+      "findings": [
+        "FND-0133"
+      ],
+      "negative_results": [
+        "NEG-0117"
+      ]
+    },
+    "limits": "Evaluated on 9 participants performing 99 submaximal knee flexion contractions. Terminal torque nominally reaches DeltaMAE = +1.02 Nm over MeanRetention, but 95% bootstrap CI spans zero due to high inter-subject variance on N=9. Independent open transfer bounded by absence of continuous repetition dynamometry.",
+    "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

@@ -1144,5 +1144,14 @@
     "statement": "In an empirical regime of pronounced muscular fatigue (18% to 34% maximal voluntary force depression, Evangelidis et al. 2023, SRC-0115), actually measured mechanical work in Joules (~2.5-4.7 kJ) does not provide statistically significant predictive value for post-exercise maximal capacity on held-out human participants: (1) In dynamic knee flexions (CON + ECC, N=18, 9 participants), adding mechanical work to pre-exercise MVT + condition yields dMAE = +0.544 Nm with a participant-clustered bootstrap 95% CI of [-3.03, +4.94] Nm, strictly spanning zero; (2) Simpler non-work retention baselines dominate: MeanRetention achieves MAE = 11.25 Nm, outperforming the full work model (MAE = 13.72 Nm) by 2.48 Nm; (3) A physical capacity depletion formulation (Post = Pre * (1 - alpha * W)) yields MAE = 13.55 Nm, performing 2.30 Nm worse than constant retention; (4) Collinearity and regression sign reversal: mechanical work is strongly correlated with baseline strength (r = +0.834) and receives a positive coefficient (beta_work = +0.0293 J^-1*Nm), contradicting capacity-depleting fatigue mechanics; (5) Across all conditions (CON + ECC + ISO, N=27), adding work increases MAE from 12.76 Nm to 13.09 Nm (dMAE = -0.331 Nm, 95% CI [-1.17, +0.65] Nm).",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "id": "FND-0133",
+    "date": "2026-11-21",
+    "experiment_id": "EXP-0137",
+    "title": "Decisive out-of-sample evaluation of sequential torque fatigue dynamics and open data transfer boundary",
+    "statement": "Analysis of sequential contraction torque blocks (11 progress bins across 99 contractions, Evangelidis et al. 2023, SRC-0115) reveals that relative decay metrics fail to predict post-exercise capacity on held-out participants: R_late (late/early ratio) yields MAE = 14.08 Nm and S_tau (torque slope) yields MAE = 13.96 Nm, both losing by >2.7 Nm to MeanRetention (11.25 Nm). Absolute terminal torque (tau_end) nominally improves LOSO MAE to 10.22 Nm (+1.02 Nm over MeanRetention and +4.04 Nm over Pre+Cond), but fails the pre-specified statistical significance criterion with a 95% participant-clustered bootstrap CI of [-3.84, +6.75] Nm spanning zero on N=9. Crucially, adding cumulative mechanical work in Joules to tau_end degrades MAE by +1.62 Nm (11.85 Nm vs 10.22 Nm), confirming that total work introduces destructive noise. Independent open-data transfer is bounded at N=9 as no existing public dataset provides continuous repetition dynamometry with pronounced fatigue and pre/post MVC.",
+    "confidence": "statistically_reproduced",
+    "data_type": "PRIMARY_OPEN_DATA"
   }
 ]

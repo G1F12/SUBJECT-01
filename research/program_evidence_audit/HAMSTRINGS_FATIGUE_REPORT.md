@@ -19,21 +19,31 @@
 > **Core Research Question:**  
 > In a biological regime characterized by **pronounced fatigue** (18% to 34% maximal voluntary force depression), does measured mechanical work in Joules ($W = \int \tau \cdot d\theta$) improve the out-of-sample prediction of post-exercise maximal capacity on held-out human participants beyond pre-exercise capacity and condition indicators?
 
-#### Definitive Scientific Findings:
+#### Definitive Scientific Findings & Methodological Invariants:
 1. **Pronounced Fatigue Confirmed:** Unlike previous low-fatigue resistance tests (e.g. Križaj et al. 2025 where post-exercise force was retained at ~98%), this protocol produced substantial, statistically significant force depression:
    - **Concentric (CON):** $-33.59\% \pm 15.01\%$ force drop (Pre: $118.88\text{ Nm} \to$ Post: $77.16\text{ Nm}$).
    - **Eccentric (ECC):** $-30.92\% \pm 7.53\%$ force drop (Pre: $109.36\text{ Nm} \to$ Post: $75.52\text{ Nm}$).
    - **Isometric (ISO):** $-18.41\% \pm 14.65\%$ force drop (Pre: $104.66\text{ Nm} \to$ Post: $84.18\text{ Nm}$).
-2. **Out-of-Sample Prediction on Held-Out Participants:** **NO IMPROVEMENT.**
-   - In dynamic contractions (CON + ECC, N=18), adding mechanical work in Joules to a pre-exercise force + condition baseline yields $\Delta\text{MAE} = +0.544\text{ Nm}$ with a 95% bootstrap confidence interval of **[-3.032, +4.939] Nm**, which strictly spans zero.
-   - Across all modalities (CON + ECC + ISO, N=27), adding mechanical work *worsens* error from 12.762 Nm to 13.093 Nm ($\Delta\text{MAE} = -0.331\text{ Nm}$, 95% CI **[-1.172, +0.654] Nm**).
-3. **Simpler Baseline Dominance:**
+
+2. **Physical Nature of Mechanical Work in Joules:**
+   - Mechanical work values in Joules represent an **estimate of external shaft work** calculated from published mean torque values (%MVT) across 11 binned contraction intervals and nominal 40° ($0.6981\text{ rad}$) angular displacement across the 99 contractions ($W = \sum 3 \cdot \tau_k \cdot \Delta\theta$).
+   - They do **not** represent continuous microsecond dynamometer integration, but constitute the highest-resolution published torque-displacement work estimate available for this cohort.
+
+3. **Out-of-Sample Prediction on Held-Out Participants & Framing:**
+   - In dynamic contractions (CON + ECC, N=18), adding mechanical work in Joules to a pre-exercise force + condition baseline yields $\Delta\text{MAE} = +0.544\text{ Nm}$ relative to `Pre + Cond` (improving error from 14.268 Nm to 13.724 Nm).
+   - However, its 95% participant-clustered bootstrap confidence interval with 5,000 resamples is **[-4.211, +6.252] Nm** (exploratory 2,000-sample run yielded `[-3.032, +4.939] Nm`). **Both intervals strictly span zero ($p > 0.05$)**, demonstrating that the +0.54 Nm reduction is statistically indistinguishable from random noise.
+   - **Crucial Comparison Framing:** The +0.54 Nm improvement is strictly relative to the multi-feature baseline `Pre + Cond` (14.27 Nm). Compared to the parsimonious baseline `MeanRetention` (11.246 Nm), the work model performs **2.478 Nm WORSE** (13.724 Nm vs 11.246 Nm).
+   - Across all modalities (CON + ECC + ISO, N=27), adding mechanical work *worsens* error from 12.762 Nm to 13.093 Nm ($\Delta\text{MAE} = -0.331\text{ Nm}$, 95% CI **[-1.479, +0.890] Nm**).
+
+4. **Simpler Baseline Dominance:**
    - The simple non-work baseline `MeanRetention` achieves an MAE of **11.246 Nm**, beating the full model with work (MAE = **13.724 Nm**) by **2.48 Nm**.
    - The physical capacity depletion model ($MVT_{\text{post}} = MVT_{\text{pre}} \cdot (1 - \alpha \cdot W)$) achieves an MAE of **13.549 Nm**, performing **2.30 Nm worse** than constant retention.
-4. **Collinearity and Regression Reversal:**
+
+5. **Collinearity and Regression Reversal:**
    - Mechanical work is heavily confounded with baseline strength ($r = +0.834$).
    - Multiple linear regression fits a **positive coefficient** for work ($\beta_{\text{work}} = +0.0293\text{ J}^{-1}\cdot\text{Nm}$), because stronger individuals perform more absolute work while also maintaining higher absolute post-exercise torque. This is the direct inverse of a capacity depletion mechanism.
-5. **Conclusion:** Even under severe muscular fatigue, actual mechanical work in Joules does not transfer to independent individuals to predict post-exercise capacity. Direct modular coupling in Architecture A remains rejected (**CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD**).
+
+6. **Conclusion:** Even under severe muscular fatigue, actual mechanical work in Joules does not transfer to independent individuals to predict post-exercise capacity. Direct modular coupling in Architecture A remains rejected (**CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD**).
 
 ---
 
@@ -60,8 +70,8 @@ Participants performed 99 submaximal intermittent contractions (5 s contraction,
 | **Linear Pre Baseline** | $MVT_{\text{pre}}$ | 14.08 | +0.19 | - | Linear baseline |
 | **Pre + Condition Base** | $MVT_{\text{pre}} + \text{is\_ECC}$ | 14.27 | 0.00 | [0.00, 0.00] | Context-indexed base |
 | **Pre + Work** | $MVT_{\text{pre}} + W_{\text{Joules}}$ | 14.13 | +0.14 | - | Worsens vs Linear Pre |
-| **Pre + Cond + Work** | $MVT_{\text{pre}} + \text{is\_ECC} + W_{\text{Joules}}$ | 13.72 | +0.54 | [-3.03, +4.94] | **Inconclusive (spans zero)** |
-| **Pre + Cond + Impulse**| $MVT_{\text{pre}} + \text{is\_ECC} + I_{\text{Nms}}$ | 13.72 | +0.54 | [-3.03, +4.94] | Inconclusive (spans zero) |
+| **Pre + Cond + Work** | $MVT_{\text{pre}} + \text{is\_ECC} + W_{\text{Joules}}$ | 13.72 | +0.54 | [-4.21, +6.25] | **Inconclusive (spans zero)** |
+| **Pre + Cond + Impulse**| $MVT_{\text{pre}} + \text{is\_ECC} + I_{\text{Nms}}$ | 13.72 | +0.54 | [-4.21, +6.25] | Inconclusive (spans zero) |
 | **Unperturbed Identity**| Identity ($MVT_{\text{post}} = MVT_{\text{pre}}$) | 37.78 | -23.51 | - | Naive Persistence |
 
 #### All Conditions (CON + ECC + ISO, N=27, 9 subjects):

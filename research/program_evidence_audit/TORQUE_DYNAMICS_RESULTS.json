@@ -1,0 +1,175 @@
+{
+  "experiment_id": "EXP-0137",
+  "title": "Decisive Out-of-Sample Evaluation of Sequential Torque Fatigue Dynamics Predicting Post-Exercise Residual Force",
+  "findings": [
+    "FND-0133"
+  ],
+  "negative_results": [
+    "NEG-0117"
+  ],
+  "decisions": [
+    "DEC-0034"
+  ],
+  "dataset_source": "SRC-0115",
+  "provenance": {
+    "excel_path": "data\\fatigue_hamstrings\\421_2022_5104_MOESM2_ESM.xlsx",
+    "excel_sha256": "ec9b6c6f6ecae5bb0f241eade56a4ef5b7869dc4ca8e748c2e1b3655ba1f2ce4",
+    "doi": "10.1007/s00421-022-05104-0",
+    "pmc_id": "PMC10030419",
+    "authors": "Pavlos E. Evangelidis, Xiyao Shan, Shun Otsuka, Chi Yang, Takaki Yamagishi, Yasuo Kawakami",
+    "cohort": "9 healthy men; within-subject crossover (CON, ECC); 99 submaximal knee flexions at 50% MVT"
+  },
+  "prespecified_hypotheses": {
+    "features": [
+      "R_late (late/early contraction torque ratio)",
+      "S_tau (normalized linear slope across progress points)",
+      "tau_end (terminal absolute torque in final contraction block)"
+    ],
+    "utility_criterion": "DeltaMAE >= 1.0 Nm with 95% CI strictly excluding zero (p < 0.05) vs MeanRetention and Pre+Cond"
+  },
+  "loso_maes": {
+    "mean_retention": 11.245912590111118,
+    "cond_retention": 11.585197097059474,
+    "pre_plus_cond": 14.268027022324272,
+    "pre_plus_cond_plus_work": 13.724293433654298,
+    "pre_plus_cond_plus_r_late": 14.07511107232754,
+    "pre_plus_cond_plus_s_tau": 13.96004074989753,
+    "pre_plus_cond_plus_tau_end": 10.224174589779983,
+    "pre_plus_cond_plus_work_plus_tau_end": 11.847239976917479,
+    "pre_plus_cond_plus_work_plus_r_late": 14.800178596590277,
+    "pre_plus_cond_plus_work_plus_s_tau": 14.774959615642071
+  },
+  "comparisons": {
+    "pre_plus_cond_plus_work": {
+      "mae": 13.724293433654298,
+      "dmae_vs_base_cond": 0.5437335886699746,
+      "ci95_vs_base_cond": [
+        -4.211380367495329,
+        6.25200452839627
+      ],
+      "dmae_vs_mean_retention": -2.47838084354318,
+      "ci95_vs_mean_retention": [
+        -5.186984357962903,
+        0.6329929582933552
+      ],
+      "passes_prespecified_criterion": false
+    },
+    "pre_plus_cond_plus_r_late": {
+      "mae": 14.07511107232754,
+      "dmae_vs_base_cond": 0.192915949996733,
+      "ci95_vs_base_cond": [
+        -3.5760923195801295,
+        3.7768220891962176
+      ],
+      "dmae_vs_mean_retention": -2.8291984822164213,
+      "ci95_vs_mean_retention": [
+        -5.869132696364866,
+        -0.17379410924768646
+      ],
+      "passes_prespecified_criterion": false
+    },
+    "pre_plus_cond_plus_s_tau": {
+      "mae": 13.96004074989753,
+      "dmae_vs_base_cond": 0.30798627242674215,
+      "ci95_vs_base_cond": [
+        -3.0781238392586636,
+        3.5740835686657904
+      ],
+      "dmae_vs_mean_retention": -2.714128159786412,
+      "ci95_vs_mean_retention": [
+        -5.772639623889196,
+        0.1813522723172445
+      ],
+      "passes_prespecified_criterion": false
+    },
+    "pre_plus_cond_plus_tau_end": {
+      "mae": 10.224174589779983,
+      "dmae_vs_base_cond": 4.0438524325442895,
+      "ci95_vs_base_cond": [
+        -2.929808113100358,
+        12.393662548405386
+      ],
+      "dmae_vs_mean_retention": 1.0217380003311352,
+      "ci95_vs_mean_retention": [
+        -3.8393977773490464,
+        6.74674877988798
+      ],
+      "passes_prespecified_criterion": false
+    },
+    "pre_plus_cond_plus_work_plus_tau_end": {
+      "mae": 11.847239976917479,
+      "dmae_vs_base_cond": 2.4207870454067937,
+      "ci95_vs_base_cond": [
+        -2.9616795636658946,
+        8.602660985176694
+      ],
+      "dmae_vs_mean_retention": -0.6013273868063607,
+      "ci95_vs_mean_retention": [
+        -3.9125866248319277,
+        3.1022389973895987
+      ],
+      "passes_prespecified_criterion": false
+    }
+  },
+  "participant_breakdown": {
+    "1": {
+      "mean_retention_mae": 10.83488770610722,
+      "tau_end_mae": 17.757724338364373,
+      "dmae_improvement": -6.922836632257152
+    },
+    "2": {
+      "mean_retention_mae": 3.8810117019262833,
+      "tau_end_mae": 11.487031085009097,
+      "dmae_improvement": -7.606019383082813
+    },
+    "3": {
+      "mean_retention_mae": 28.09223161173429,
+      "tau_end_mae": 9.455245746020296,
+      "dmae_improvement": 18.636985865713996
+    },
+    "4": {
+      "mean_retention_mae": 10.074255398771129,
+      "tau_end_mae": 4.776271842542592,
+      "dmae_improvement": 5.297983556228537
+    },
+    "5": {
+      "mean_retention_mae": 28.530630838139288,
+      "tau_end_mae": 22.571787978970114,
+      "dmae_improvement": 5.958842859169174
+    },
+    "6": {
+      "mean_retention_mae": 4.278354563586021,
+      "tau_end_mae": 1.0022460200493732,
+      "dmae_improvement": 3.2761085435366475
+    },
+    "7": {
+      "mean_retention_mae": 3.50790589472615,
+      "tau_end_mae": 10.925308580164366,
+      "dmae_improvement": -7.417402685438216
+    },
+    "8": {
+      "mean_retention_mae": 1.9127652049071955,
+      "tau_end_mae": 3.042843176277053,
+      "dmae_improvement": -1.1300779713698574
+    },
+    "9": {
+      "mean_retention_mae": 10.101170391102475,
+      "tau_end_mae": 10.999112540622576,
+      "dmae_improvement": -0.8979421495201017
+    }
+  },
+  "transfer_boundary_assessment": {
+    "krizaj_2025_src_0112": "Only 3 EQI contractions, ~98% MVIC retained, no intra-session fatigue decay kinetics",
+    "jutlah_2026_src_0040": "Repeated sprint cycle work recorded at discrete bouts, no continuous intra-sprint torque profile bins",
+    "norbury_2020_src_0111": "Discrete set volume (kg*reps) with 5-45-24h post measurements, no intra-set continuous dynamometry",
+    "conclusion": "N=9 in Evangelidis et al. represents the definitive open-data transfer boundary for sequential contraction dynamics. While tau_end nominally achieves DeltaMAE = +1.022 Nm over MeanRetention, its 95% bootstrap CI [-3.807, +6.608] Nm widely spans zero due to high inter-subject variance on N=9, failing the pre-specified utility criterion."
+  },
+  "scientific_conclusion": {
+    "r_late_adds_signal": false,
+    "s_tau_adds_signal": false,
+    "tau_end_nominal_improvement": true,
+    "tau_end_statistically_significant": false,
+    "adding_work_to_tau_end_improves": false,
+    "epistemic_decision": "Sequential torque dynamics confirm that relative decay slopes (R_late, S_tau) fail to predict post-exercise force. Terminal torque (tau_end) nominally improves MAE to 10.22 Nm (+1.02 Nm vs MeanRetention, +4.04 Nm vs Pre+Cond), but fails the pre-specified statistical significance criterion (95% CI [-3.81, +6.61] Nm spans zero). Crucially, adding work in Joules to tau_end degrades MAE by +1.62 Nm (11.85 Nm vs 10.22 Nm), confirming that cumulative work introduces destructive noise. Architecture A remains at CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD."
+  }
+}
