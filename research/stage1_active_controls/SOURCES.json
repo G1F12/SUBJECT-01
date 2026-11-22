@@ -1,0 +1,416 @@
+{
+  "base_commit": "0ce90d115fba4a84d56107c77f8a02f5d0669283",
+  "checked_date": "2026-11-22",
+  "files": {
+    "malliaras.pdf": {
+      "url": "https://paulogentil.com/pdf/Patellar%20tendon%20adaptation%20in%20relation%20to%20load-intensity%20and%20contraction%20type.pdf",
+      "sha256": "4af498170f746be102c09a7a2ba6a9efacefb9610269e9c8227aca0218881bf7"
+    },
+    "All_data_except_SWV.csv": {
+      "url": "https://zenodo.org/api/records/14259356/files/All_data_except_SWV.csv/content",
+      "sha256": "3c8af1c80486e8543b1496b98f20b0aa4a97d042840877b0a7d84544c8097cc7"
+    },
+    "tendon_SWV_data.csv": {
+      "url": "https://zenodo.org/api/records/14259356/files/tendon_SWV_data.csv/content",
+      "sha256": "4290d724e6faa09c4938f004b1dcda36db6a652e1b820dc3a295cb5004fdaf54"
+    },
+    "werkhausen.mat": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6486809.1/peerj-07-6764-s001.mat",
+      "sha256": "0fd4af4f3b9472d05726cc7d56e9b57640fc663c9e719759cfbbe36ab4c2f79f"
+    },
+    "triathletes.docx": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12301477.1/41598_2025_12721_MOESM1_ESM.docx",
+      "sha256": "bdcba8e4636a5671b0aed66fe416f70e405bb1a229d1ca78917a86492d3fd9a2"
+    },
+    "arampatzis2007.pdf": {
+      "url": "https://www.oliverfinlay.com/assets/pdf/arampatzis%20et%20al%20%282007%29%20%20adaptational%20responses%20of%20the%20human%20achilles%20tendon%20by%20modulation%20of%20the%20applied%20cyclic%20strain%20magnitude.pdf",
+      "sha256": "098be8ca5a9872161ef72125fc70d3165ed7d59dab87fb818761243efea804d3"
+    },
+    "kongsgaard2007.pdf": {
+      "url": "https://www.paulogentil.com/pdf/Region%20specific%20patellar%20tendon%20hypertrophy%20in%20humans%20following%20resistance%20training.pdf",
+      "sha256": "2833cfaaf02032273ac0c6b5c7829ae30bb72a18b4803f2369e852aabed1f083"
+    },
+    "triathletes.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12301477/fullTextXML",
+      "sha256": "7ef2c3612d6bdc0e68197ca3bf979d4bc0f19c3b00a287ca0a57beca289aeb4d"
+    },
+    "rehab.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9768072/fullTextXML",
+      "sha256": "e999fc790a810b050bd7a45cb4ab4c804fcb480a202fed43b4b96739f6805d60"
+    },
+    "frontiers2018.html": {
+      "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2018.00794/full",
+      "sha256": "128fd1525f440ccc126db799b4977ec2c6ac1d3a35e2fb3769dcc3a3707bfdba"
+    },
+    "werkhausen2019.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6486809/fullTextXML",
+      "sha256": "a7d04adca12188cc7d1f0bdb972bc5a79ac97f5496c9198125dbc8c47e513425"
+    },
+    "bohm_thesis.pdf": {
+      "url": "https://edoc.hu-berlin.de/bitstream/handle/18452/17771/bohm.pdf?isAllowed=y&sequence=1",
+      "sha256": "3ab198bafc8b21fb7053a86f6111d8a32cfef60cca4a40e6af01fa4492c2a06e"
+    }
+  },
+  "cases": {
+    "malliaras_MVC_vs_concentric": {
+      "weeks": 12, "n": [10, 9], "paired": false,
+      "comparator": "concentric active control", "units": "percent, individual pre-normalized",
+      "change_mean_sd": [[23.1, 17.3], [17.6, 19.9]]
+    },
+    "malliaras_MVC_vs_eccentric": {
+      "weeks": 12, "n": [10, 10], "paired": false,
+      "comparator": "standard eccentric active control", "units": "percent, individual pre-normalized",
+      "change_mean_sd": [[23.1, 17.3], [16.2, 13.8]]
+    },
+    "malliaras_MVC_vs_inactive": {
+      "weeks": 12, "n": [10, 9], "paired": false,
+      "comparator": "no training; diagnostic FORCE20 comparison only", "units": "percent, individual pre-normalized",
+      "change_mean_sd": [[23.1, 17.3], [10.1, 27.2]]
+    },
+    "malliaras_5RM_vs_concentric": {
+      "weeks": 12, "n": [10, 9], "paired": false,
+      "comparator": "concentric active control", "units": "percent, individual pre-normalized",
+      "change_mean_sd": [[76.7, 37.7], [52.7, 17.4]]
+    },
+    "centner_active_MVC": {
+      "weeks": 14,
+      "n": [12, 9],
+      "paired": false,
+      "comparator": "active LL-BFR; n values are conservative lower bounds from 36/38 measured",
+      "units": "N m",
+      "moments": [[[189.0, 83.1], [214.6, 86.1]], [[226.7, 47.6], [248.9, 48.5]]]
+    },
+    "arampatzis2007_active": {
+      "weeks": 14,
+      "n": [
+        11,
+        11
+      ],
+      "paired": true,
+      "comparator": "lower-strain active contralateral leg",
+      "units": "N m",
+      "moments": [
+        [
+          [
+            109.5,
+            15.2
+          ],
+          [
+            144.1,
+            22.7
+          ]
+        ],
+        [
+          [
+            114.4,
+            12.7
+          ],
+          [
+            137.7,
+            15.8
+          ]
+        ]
+      ]
+    },
+    "arampatzis2007_inactive": {
+      "weeks": 14,
+      "n": [
+        11,
+        10
+      ],
+      "paired": false,
+      "comparator": "different people, no training; diagnostic FORCE20 comparison only",
+      "units": "N m",
+      "moments": [
+        [
+          [
+            109.5,
+            15.2
+          ],
+          [
+            144.1,
+            22.7
+          ]
+        ],
+        [
+          [
+            135,
+            38.3
+          ],
+          [
+            141.2,
+            39.2
+          ]
+        ]
+      ]
+    },
+    "kongsgaard2007_MVC": {
+      "weeks": 12,
+      "n": [
+        12,
+        12
+      ],
+      "paired": true,
+      "comparator": "light active contralateral leg",
+      "units": "percent, individual pre-normalized",
+      "change_mean_sem": [
+        [
+          14.6,
+          4.3
+        ],
+        [
+          6.1,
+          4
+        ]
+      ]
+    },
+    "kongsgaard2007_1RM": {
+      "weeks": 12,
+      "n": [
+        12,
+        12
+      ],
+      "paired": true,
+      "comparator": "light active contralateral leg",
+      "units": "percent, individual pre-normalized",
+      "change_mean_sem": [
+        [
+          35.3,
+          4.4
+        ],
+        [
+          19.5,
+          2.3
+        ]
+      ]
+    },
+    "werkhausen2019_MVC": {
+      "weeks": 10,
+      "n": [
+        11,
+        10
+      ],
+      "paired": false,
+      "comparator": "no plantar flexor strength training; diagnostic FORCE20 comparison only",
+      "units": "N m",
+      "moments": [
+        [
+          [
+            172,
+            50
+          ],
+          [
+            198,
+            51
+          ]
+        ],
+        [
+          [
+            170,
+            51
+          ],
+          [
+            180,
+            62
+          ]
+        ]
+      ]
+    },
+    "triathletes_knee_MVC": {
+      "weeks": 12,
+      "n": [
+        9,
+        9
+      ],
+      "paired": false,
+      "comparator": "endurance only; diagnostic FORCE20 comparison only",
+      "units": "N m",
+      "moments": [
+        [
+          [
+            317.02,
+            35.93
+          ],
+          [
+            345.07,
+            40.44
+          ]
+        ],
+        [
+          [
+            305.87,
+            37.7
+          ],
+          [
+            301.25,
+            40.15
+          ]
+        ]
+      ]
+    },
+    "triathletes_ankle_MVC": {
+      "weeks": 12,
+      "n": [
+        9,
+        9
+      ],
+      "paired": false,
+      "comparator": "endurance only; diagnostic FORCE20 comparison only",
+      "units": "N m",
+      "moments": [
+        [
+          [
+            206.49,
+            40.07
+          ],
+          [
+            224.72,
+            33.72
+          ]
+        ],
+        [
+          [
+            218.75,
+            33.9
+          ],
+          [
+            221.86,
+            39.35
+          ]
+        ]
+      ]
+    },
+    "triathletes_squat_1RM": {
+      "weeks": 12,
+      "n": [
+        9,
+        9
+      ],
+      "paired": false,
+      "comparator": "endurance only; diagnostic FORCE20 comparison only",
+      "units": "kg",
+      "moments": [
+        [
+          [
+            84.67,
+            14.17
+          ],
+          [
+            100.44,
+            12.3
+          ]
+        ],
+        [
+          [
+            78.89,
+            12.91
+          ],
+          [
+            77.67,
+            12.95
+          ]
+        ]
+      ]
+    }
+  },
+  "tissue": {
+    "arampatzis2007_high_native_max_strain": {
+      "pre": [
+        4.8,
+        1.6
+      ],
+      "post": [
+        4.8,
+        0.9
+      ],
+      "n": 11,
+      "units": "percentage points"
+    },
+    "arampatzis2007_low_native_max_strain": {
+      "pre": [
+        4.6,
+        1.5
+      ],
+      "post": [
+        5.4,
+        1.3
+      ],
+      "n": 11,
+      "units": "percentage points"
+    },
+    "arampatzis2007_high_native_max_elongation": {
+      "pre": [
+        13.8,
+        4.3
+      ],
+      "post": [
+        13.6,
+        2.8
+      ],
+      "n": 11,
+      "units": "mm"
+    },
+    "arampatzis2007_high_native_max_estimated_force": {
+      "pre": [
+        2084,
+        447
+      ],
+      "post": [
+        2992,
+        444
+      ],
+      "n": 11,
+      "units": "N"
+    },
+    "arampatzis2007_high_stiffness": {
+      "pre": [
+        167.7,
+        36.8
+      ],
+      "post": [
+        228.1,
+        39.7
+      ],
+      "n": 11,
+      "units": "N/mm"
+    }
+  },
+  "additional_inputs": {
+    "malliaras_high_tissue_pct_mean_sd_n": {
+      "estimated_peak_tendon_force": [30.9, 17.4, 10],
+      "estimated_peak_tendon_stress": [24.4, 22.3, 10],
+      "max_strain": [-10.3, 27, 10],
+      "max_elongation": [-13.9, 21.9, 10]
+    },
+    "rehab_high_load_mvc_percent_mean_sd_n": [
+      7.2,
+      9.9,
+      15
+    ],
+    "arampatzis_body_mass_prepost_mean_sd_kg": [
+      [
+        64.1,
+        5
+      ],
+      [
+        64.8,
+        4.8
+      ]
+    ],
+    "kongsgaard_common_force_mean_sem_n": [
+      4725,
+      374,
+      12
+    ],
+    "kongsgaard_heavy_common_force_stiffness_mean_sem": [
+      [
+        3676,
+        377
+      ],
+      [
+        4213,
+        405
+      ]
+    ]
+  }
+}

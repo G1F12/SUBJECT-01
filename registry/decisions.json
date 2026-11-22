@@ -418,5 +418,25 @@
     "negative_results": [
       "NEG-0121"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0039",
+    "title": "Stage 1 HOLD after active-comparator and augmented native-maximum checks",
+    "decision": "Keep ADAPT25 and FORCE20 unconfirmed. Retain measured tendon response at achieved post-training maxima as task-specific evidence.",
+    "rationale": "Active time-normalized intervals do not clear the required margin. Native strength gains above 20% on point estimates do not jointly establish a comparable-control effect, comparable individual mass and a sufficient local tissue reserve.",
+    "amends": [
+      "DEC-0038"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0142"
+    ],
+    "findings": [
+      "FND-0138"
+    ],
+    "negative_results": [
+      "NEG-0122"
+    ]
   }
 ]

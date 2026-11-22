@@ -1,0 +1,282 @@
+{
+  "CG_post": {
+    "run_FA": {
+      "steps": 8,
+      "length_excursion_mm": 10.525802217,
+      "recoil_proxy_mm": 5.244970349,
+      "estimated_peak_force_magnitude_N": 3238.545654486,
+      "negative_signed_peaks": 8,
+      "has_ankle_moment": true
+    },
+    "run_FB": {
+      "steps": 7,
+      "length_excursion_mm": 17.921080689,
+      "recoil_proxy_mm": 13.384954886,
+      "estimated_peak_force_magnitude_N": 4340.092874324,
+      "negative_signed_peaks": 7,
+      "has_ankle_moment": false
+    },
+    "run_FD": {
+      "steps": 8,
+      "length_excursion_mm": 12.570884801,
+      "recoil_proxy_mm": 12.157687698,
+      "estimated_peak_force_magnitude_N": 3215.436052474,
+      "negative_signed_peaks": 8,
+      "has_ankle_moment": true
+    },
+    "run_FE": {
+      "steps": 10,
+      "length_excursion_mm": 12.988761294,
+      "recoil_proxy_mm": 11.23090378,
+      "estimated_peak_force_magnitude_N": 2906.738858351,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_FF": {
+      "steps": 8,
+      "length_excursion_mm": 8.372180414,
+      "recoil_proxy_mm": 8.364340295,
+      "estimated_peak_force_magnitude_N": 4837.092880273,
+      "negative_signed_peaks": 8,
+      "has_ankle_moment": false
+    },
+    "run_FH": {
+      "steps": 9,
+      "length_excursion_mm": 10.960149594,
+      "recoil_proxy_mm": 10.958422647,
+      "estimated_peak_force_magnitude_N": 2957.798654745,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": false
+    },
+    "run_FI": {
+      "steps": 9,
+      "length_excursion_mm": 11.987524832,
+      "recoil_proxy_mm": 11.202585487,
+      "estimated_peak_force_magnitude_N": 5026.120476181,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    }
+  },
+  "CG_pre": {
+    "run_FA": {
+      "steps": 9,
+      "length_excursion_mm": 9.356643543,
+      "recoil_proxy_mm": 6.289708313,
+      "estimated_peak_force_magnitude_N": 3317.258759318,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_FB": {
+      "steps": 8,
+      "length_excursion_mm": 15.25067054,
+      "recoil_proxy_mm": 14.831280354,
+      "estimated_peak_force_magnitude_N": 4307.936952523,
+      "negative_signed_peaks": 8,
+      "has_ankle_moment": false
+    },
+    "run_FD": {
+      "steps": 10,
+      "length_excursion_mm": 13.45910204,
+      "recoil_proxy_mm": 12.997018508,
+      "estimated_peak_force_magnitude_N": 3517.800863032,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_FE": {
+      "steps": 12,
+      "length_excursion_mm": 10.369409197,
+      "recoil_proxy_mm": 9.401788238,
+      "estimated_peak_force_magnitude_N": 2660.812462024,
+      "negative_signed_peaks": 12,
+      "has_ankle_moment": true
+    },
+    "run_FF": {
+      "steps": 10,
+      "length_excursion_mm": 6.67872906,
+      "recoil_proxy_mm": 6.678383343,
+      "estimated_peak_force_magnitude_N": 4336.681998526,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": false
+    },
+    "run_FH": {
+      "steps": 10,
+      "length_excursion_mm": 12.849790565,
+      "recoil_proxy_mm": 10.786755338,
+      "estimated_peak_force_magnitude_N": 2888.10772342,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": false
+    },
+    "run_FI": {
+      "steps": 9,
+      "length_excursion_mm": 11.335259478,
+      "recoil_proxy_mm": 9.087772593,
+      "estimated_peak_force_magnitude_N": 4627.696238643,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    }
+  },
+  "TG_post": {
+    "run_DB": {
+      "steps": 9,
+      "length_excursion_mm": 11.950087275,
+      "recoil_proxy_mm": 11.942456165,
+      "estimated_peak_force_magnitude_N": 3288.074953264,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DE": {
+      "steps": 11,
+      "length_excursion_mm": 14.530913032,
+      "recoil_proxy_mm": 14.530913032,
+      "estimated_peak_force_magnitude_N": 4456.434336699,
+      "negative_signed_peaks": 11,
+      "has_ankle_moment": true
+    },
+    "run_DF": {
+      "steps": 10,
+      "length_excursion_mm": 7.991809626,
+      "recoil_proxy_mm": 7.938859995,
+      "estimated_peak_force_magnitude_N": 2461.2334858,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_DG": {
+      "steps": 10,
+      "length_excursion_mm": 10.130303167,
+      "recoil_proxy_mm": 6.244959323,
+      "estimated_peak_force_magnitude_N": 4400.314084748,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_DH": {
+      "steps": 9,
+      "length_excursion_mm": 8.288088307,
+      "recoil_proxy_mm": 8.103462012,
+      "estimated_peak_force_magnitude_N": 3995.735442691,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DI": {
+      "steps": 7,
+      "length_excursion_mm": 13.200844635,
+      "recoil_proxy_mm": 12.901785855,
+      "estimated_peak_force_magnitude_N": 5398.694374391,
+      "negative_signed_peaks": 7,
+      "has_ankle_moment": true
+    },
+    "run_DJ": {
+      "steps": 9,
+      "length_excursion_mm": 12.32683768,
+      "recoil_proxy_mm": 11.675150943,
+      "estimated_peak_force_magnitude_N": 1832.645632607,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DK": {
+      "steps": 9,
+      "length_excursion_mm": 5.130641356,
+      "recoil_proxy_mm": 3.65309669,
+      "estimated_peak_force_magnitude_N": 4086.39067599,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DN": {
+      "steps": 9,
+      "length_excursion_mm": 9.002034843,
+      "recoil_proxy_mm": 8.767335167,
+      "estimated_peak_force_magnitude_N": 4734.93097281,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DO": {
+      "steps": 11,
+      "length_excursion_mm": 9.495062171,
+      "recoil_proxy_mm": 5.156660766,
+      "estimated_peak_force_magnitude_N": 3409.696052254,
+      "negative_signed_peaks": 11,
+      "has_ankle_moment": true
+    }
+  },
+  "TG_pre": {
+    "run_DB": {
+      "steps": 9,
+      "length_excursion_mm": 15.244187178,
+      "recoil_proxy_mm": 15.244187178,
+      "estimated_peak_force_magnitude_N": 3402.887670606,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DE": {
+      "steps": 10,
+      "length_excursion_mm": 13.019979309,
+      "recoil_proxy_mm": 13.019979309,
+      "estimated_peak_force_magnitude_N": 5006.430731804,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_DF": {
+      "steps": 11,
+      "length_excursion_mm": 11.72512997,
+      "recoil_proxy_mm": 11.54298815,
+      "estimated_peak_force_magnitude_N": 2238.836046983,
+      "negative_signed_peaks": 11,
+      "has_ankle_moment": true
+    },
+    "run_DG": {
+      "steps": 11,
+      "length_excursion_mm": 11.29649478,
+      "recoil_proxy_mm": 11.29649478,
+      "estimated_peak_force_magnitude_N": 5018.467170561,
+      "negative_signed_peaks": 11,
+      "has_ankle_moment": true
+    },
+    "run_DH": {
+      "steps": 9,
+      "length_excursion_mm": 13.458872503,
+      "recoil_proxy_mm": 12.864012372,
+      "estimated_peak_force_magnitude_N": 1882.047016231,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DI": {
+      "steps": 9,
+      "length_excursion_mm": 15.722013453,
+      "recoil_proxy_mm": 15.673939332,
+      "estimated_peak_force_magnitude_N": 5224.114157632,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DJ": {
+      "steps": 8,
+      "length_excursion_mm": 10.405959917,
+      "recoil_proxy_mm": 10.3326157,
+      "estimated_peak_force_magnitude_N": 3055.906138423,
+      "negative_signed_peaks": 8,
+      "has_ankle_moment": true
+    },
+    "run_DK": {
+      "steps": 10,
+      "length_excursion_mm": 13.962453495,
+      "recoil_proxy_mm": 13.546559007,
+      "estimated_peak_force_magnitude_N": 3976.746069083,
+      "negative_signed_peaks": 10,
+      "has_ankle_moment": true
+    },
+    "run_DN": {
+      "steps": 9,
+      "length_excursion_mm": 11.171069119,
+      "recoil_proxy_mm": 10.724812733,
+      "estimated_peak_force_magnitude_N": 4604.909364439,
+      "negative_signed_peaks": 9,
+      "has_ankle_moment": true
+    },
+    "run_DO": {
+      "steps": 11,
+      "length_excursion_mm": 16.372979696,
+      "recoil_proxy_mm": 16.204867126,
+      "estimated_peak_force_magnitude_N": 5900.272682216,
+      "negative_signed_peaks": 11,
+      "has_ankle_moment": true
+    }
+  }
+}

@@ -4057,5 +4057,41 @@
       ]
     },
     "limits": "No individually linked tissue margin for either pass. Marker reconstructions are subset-only. Geometry and augmented matched-state data remain absent."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0142",
+    "name": "Stage 1 active-comparator rate checks and native maximum tissue loading",
+    "status": "completed",
+    "sources": [
+      "SRC-0128",
+      "SRC-0129",
+      "SRC-0130",
+      "SRC-0131",
+      "SRC-0132",
+      "SRC-0133",
+      "SRC-0134",
+      "SRC-0135"
+    ],
+    "design": "Published-summary covariance sensitivity, matched participant CSV analysis, and within-participant running stance supplement analysis. No cross-cohort pooling.",
+    "model": "research/stage1_active_controls/run.py",
+    "protocol": "research/stage1_active_controls/PROTOCOL.md",
+    "inputs": "research/stage1_active_controls/SOURCES.json",
+    "report": "research/stage1_active_controls/REPORT.md",
+    "outputs": [
+      "research/stage1_active_controls/RESULTS.json",
+      "research/stage1_active_controls/WERKHAUSEN_STANCE.json",
+      "research/stage1_active_controls/VESTERHUS_RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_active_controls/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0138"
+      ],
+      "negative_results": [
+        "NEG-0122"
+      ]
+    },
+    "limits": "Published paired covariance and native-max tissue reserve absent. Vesterhus dates and follow-up body mass absent. Unconditional pass not established."
   }
 ]

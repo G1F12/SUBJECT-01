@@ -1,0 +1,1099 @@
+{
+  "experiment": "EXP-0142",
+  "stage1": "HOLD",
+  "cases": {
+    "malliaras_MVC_vs_concentric": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.925,
+        "ci95_narrowest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ],
+        "ci95_widest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 1.4666666666666668,
+        "ci95_narrowest": [
+          0.19195882526214203,
+          2.7413745080711918
+        ],
+        "ci95_widest": [
+          0.19195882526214203,
+          2.7413745080711918
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.09166666666666679,
+        "ci95_narrowest": [
+          -1.8172854106965235,
+          2.000618744029857
+        ],
+        "ci95_widest": [
+          -1.8172854106965235,
+          2.000618744029857
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 23.1,
+        "ci95_narrowest": [
+          10.724325526707503,
+          35.4756744732925
+        ],
+        "ci95_widest": [
+          10.724325526707503,
+          35.4756744732925
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 5.5,
+        "ci95_narrowest": [
+          -14.327627954255586,
+          25.327627954255586
+        ],
+        "ci95_widest": [
+          -14.327627954255586,
+          25.327627954255586
+        ]
+      }
+    },
+    "malliaras_MVC_vs_eccentric": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.925,
+        "ci95_narrowest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ],
+        "ci95_widest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 1.3499999999999999,
+        "ci95_narrowest": [
+          0.5273395581337355,
+          2.172660441866264
+        ],
+        "ci95_widest": [
+          0.5273395581337355,
+          2.172660441866264
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.23750000000000013,
+        "ci95_narrowest": [
+          -1.218881108205162,
+          1.6938811082051621
+        ],
+        "ci95_widest": [
+          -1.218881108205162,
+          1.6938811082051621
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 23.1,
+        "ci95_narrowest": [
+          10.724325526707503,
+          35.4756744732925
+        ],
+        "ci95_widest": [
+          10.724325526707503,
+          35.4756744732925
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 6.900000000000002,
+        "ci95_narrowest": [
+          -8.930736806762138,
+          22.730736806762142
+        ],
+        "ci95_widest": [
+          -8.930736806762138,
+          22.730736806762142
+        ]
+      }
+    },
+    "malliaras_MVC_vs_inactive": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.925,
+        "ci95_narrowest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ],
+        "ci95_widest": [
+          0.8936937938922918,
+          2.9563062061077083
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.8416666666666667,
+        "ci95_narrowest": [
+          -0.9006475688209251,
+          2.5839809021542584
+        ],
+        "ci95_widest": [
+          -0.9006475688209251,
+          2.5839809021542584
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.8729166666666668,
+        "ci95_narrowest": [
+          -1.5454381317296138,
+          3.2912714650629473
+        ],
+        "ci95_widest": [
+          -1.5454381317296138,
+          3.2912714650629473
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 23.1,
+        "ci95_narrowest": [
+          10.724325526707503,
+          35.4756744732925
+        ],
+        "ci95_widest": [
+          10.724325526707503,
+          35.4756744732925
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 13.000000000000002,
+        "ci95_narrowest": [
+          -11.418988094177648,
+          37.41898809417765
+        ],
+        "ci95_widest": [
+          -11.418988094177648,
+          37.41898809417765
+        ]
+      }
+    },
+    "malliaras_5RM_vs_concentric": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 6.391666666666667,
+        "ci95_narrowest": [
+          4.144253720408829,
+          8.639079612924505
+        ],
+        "ci95_widest": [
+          4.144253720408829,
+          8.639079612924505
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 4.391666666666667,
+        "ci95_narrowest": [
+          3.2770980013179862,
+          5.506235332015347
+        ],
+        "ci95_widest": [
+          3.2770980013179862,
+          5.506235332015347
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.9020833333333336,
+        "ci95_narrowest": [
+          -1.7792594096473517,
+          3.583426076314019
+        ],
+        "ci95_widest": [
+          -1.7792594096473517,
+          3.583426076314019
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 76.7,
+        "ci95_narrowest": [
+          49.73104464490595,
+          103.66895535509406
+        ],
+        "ci95_widest": [
+          49.73104464490595,
+          103.66895535509406
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 24.0,
+        "ci95_narrowest": [
+          -6.572518939013168,
+          54.572518939013165
+        ],
+        "ci95_widest": [
+          -6.572518939013168,
+          54.572518939013165
+        ]
+      }
+    },
+    "centner_active_MVC": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 0.9674981103552535,
+        "ci95_narrowest": [
+          0.7692542911286204,
+          1.1657419295818865
+        ],
+        "ci95_widest": [
+          -3.3656912930866523,
+          5.300687513797159
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.6994769676728217,
+        "ci95_narrowest": [
+          0.6083810487975123,
+          0.7905728865481312
+        ],
+        "ci95_widest": [
+          -1.740878525580249,
+          3.1398324609258923
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.09315190076422628,
+        "ci95_narrowest": [
+          -0.14371696799830594,
+          0.3300207695267585
+        ],
+        "ci95_widest": [
+          -5.3764290719484,
+          5.562732873476853
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 13.544973544973548,
+        "ci95_narrowest": [
+          10.769560075800687,
+          16.32038701414641
+        ],
+        "ci95_widest": [
+          -47.11967810321313,
+          74.20962519316024
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 3.752295997554043,
+        "ci95_narrowest": [
+          0.5770733550810823,
+          6.927518640027004
+        ],
+        "ci95_widest": [
+          -68.40740371725111,
+          75.9119957123592
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": -12.199999999999989,
+        "ci95_narrowest": [
+          -20.853735141443337,
+          -3.54626485855664
+        ],
+        "ci95_widest": [
+          -130.26439529977944,
+          105.86439529977946
+        ]
+      },
+      "force20_required_pre_post_correlation": null
+    },
+    "arampatzis2007_active": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 2.257012393998695,
+        "ci95_narrowest": [
+          2.1388179123744915,
+          2.3752068756228986
+        ],
+        "ci95_widest": [
+          0.3856351203037549,
+          4.128389667693635
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 1.4547952047952037,
+        "ci95_narrowest": [
+          1.4332611494379597,
+          1.4763292601524478
+        ],
+        "ci95_widest": [
+          0.15083170390123013,
+          2.7587587056891776
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.4385183880046904,
+        "ci95_narrowest": [
+          0.4385183880046904,
+          0.4385183880046904
+        ],
+        "ci95_widest": [
+          -3.0628132618077166,
+          3.9398500378170973
+        ],
+        "conditional_ci95": {
+          "0": {
+            "required_change_correlation_for_positive_lower_bound": 0.9469034309319929,
+            "if_change_correlation_zero": [
+              -1.3183963310047802,
+              2.195433107014161
+            ]
+          },
+          "0.5": {
+            "required_change_correlation_for_positive_lower_bound": 0.8850495437634084,
+            "if_change_correlation_zero": [
+              -0.8067614642554335,
+              1.6837982402648142
+            ]
+          },
+          "0.7": {
+            "required_change_correlation_for_positive_lower_bound": 0.8034021533692816,
+            "if_change_correlation_zero": [
+              -0.5291132271640904,
+              1.4061500031734713
+            ]
+          },
+          "0.9": {
+            "required_change_correlation_for_positive_lower_bound": 0.4085893502659276,
+            "if_change_correlation_zero": [
+              -0.12884390797847706,
+              1.0058806839878578
+            ]
+          }
+        }
+      },
+      "intervention_gain_pct": {
+        "estimate": 31.59817351598173,
+        "ci95_narrowest": [
+          29.943450773242883,
+          33.252896258720575
+        ],
+        "ci95_widest": [
+          5.398891684252572,
+          57.797455347710894
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 11.231040648848879,
+        "ci95_narrowest": [
+          11.231040648848879,
+          11.231040648848879
+        ],
+        "ci95_widest": [
+          -33.223730195395916,
+          55.68581149309367
+        ],
+        "conditional_ci95": {
+          "0": {
+            "required_change_correlation_for_positive_lower_bound": 0.8034876182906766,
+            "if_change_correlation_zero": [
+              -11.37973380920159,
+              33.84181510689935
+            ]
+          },
+          "0.5": {
+            "required_change_correlation_for_positive_lower_bound": 0.5439160753856724,
+            "if_change_correlation_zero": [
+              -4.801365864117756,
+              27.263447161815513
+            ]
+          },
+          "0.7": {
+            "required_change_correlation_for_positive_lower_bound": 0.20121461203740013,
+            "if_change_correlation_zero": [
+              -1.233085208935531,
+              23.69516650663329
+            ]
+          },
+          "0.9": {
+            "required_change_correlation_for_positive_lower_bound": -1.457007258820459,
+            "if_change_correlation_zero": [
+              3.905004326227697,
+              18.55707697147006
+            ]
+          }
+        }
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": 12.699999999999989,
+        "ci95_narrowest": [
+          9.7037312303892,
+          15.696268769610777
+        ],
+        "ci95_widest": [
+          -14.803866239431695,
+          40.203866239431676
+        ]
+      },
+      "force20_required_pre_post_correlation": 0.5924670942535002
+    },
+    "arampatzis2007_inactive": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 2.257012393998695,
+        "ci95_narrowest": [
+          2.1388179123744915,
+          2.3752068756228986
+        ],
+        "ci95_widest": [
+          0.3856351203037549,
+          4.128389667693635
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.328042328042328,
+        "ci95_narrowest": [
+          0.29553094774981026,
+          0.3605537083348458
+        ],
+        "ci95_widest": [
+          -2.6718754770173914,
+          3.327960133102047
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 1.846959483945785,
+        "ci95_narrowest": [
+          1.7202657074364942,
+          1.9736532604550758
+        ],
+        "ci95_widest": [
+          -2.3567929441133417,
+          6.050711912004911
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 31.59817351598173,
+        "ci95_narrowest": [
+          29.943450773242883,
+          33.252896258720575
+        ],
+        "ci95_widest": [
+          5.398891684252572,
+          57.797455347710894
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 27.00558092338914,
+        "ci95_narrowest": [
+          25.265028074891678,
+          28.7461337718866
+        ],
+        "ci95_widest": [
+          -22.707849139171344,
+          76.71901098594962
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": 12.699999999999989,
+        "ci95_narrowest": [
+          9.7037312303892,
+          15.696268769610777
+        ],
+        "ci95_widest": [
+          -14.803866239431695,
+          40.203866239431676
+        ]
+      },
+      "force20_required_pre_post_correlation": 0.5924670942535002
+    },
+    "kongsgaard2007_MVC": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.2166666666666666,
+        "ci95_narrowest": [
+          0.42798031763382927,
+          2.005353015699504
+        ],
+        "ci95_widest": [
+          0.42798031763382927,
+          2.005353015699504
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.5083333333333333,
+        "ci95_narrowest": [
+          -0.2253283866972129,
+          1.2419950533638795
+        ],
+        "ci95_widest": [
+          -0.2253283866972129,
+          1.2419950533638795
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.5812499999999999,
+        "ci95_narrowest": [
+          0.4528591989946543,
+          0.7096408010053455
+        ],
+        "ci95_widest": [
+          -1.1245134990710204,
+          2.28701349907102
+        ],
+        "required_change_correlation_for_positive_lower_bound": 0.7778421932264353,
+        "ci95_if_change_correlation_zero": [
+          -0.6283187893926919,
+          1.790818789392692
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 14.6,
+        "ci95_narrowest": [
+          5.135763811605953,
+          24.064236188394048
+        ],
+        "ci95_widest": [
+          5.135763811605953,
+          24.064236188394048
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 8.5,
+        "ci95_narrowest": [
+          7.8397044519725085,
+          9.160295548027491
+        ],
+        "ci95_widest": [
+          -9.768176828760602,
+          26.768176828760602
+        ],
+        "required_change_correlation_for_positive_lower_bound": 0.5690602997560786,
+        "ci95_if_change_correlation_zero": [
+          -4.425986903474929,
+          21.42598690347493
+        ]
+      }
+    },
+    "kongsgaard2007_1RM": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 2.9416666666666664,
+        "ci95_narrowest": [
+          2.1346387746330655,
+          3.7486945587002674
+        ],
+        "ci95_widest": [
+          2.1346387746330655,
+          3.7486945587002674
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 1.625,
+        "ci95_narrowest": [
+          1.203144510982436,
+          2.046855489017564
+        ],
+        "ci95_widest": [
+          1.203144510982436,
+          2.046855489017564
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.9104166666666664,
+        "ci95_narrowest": [
+          0.6307081359050206,
+          1.1901251974283122
+        ],
+        "ci95_widest": [
+          -0.42393058663888983,
+          2.2447639199722227
+        ],
+        "required_change_correlation_for_positive_lower_bound": 0.11808074306032866,
+        "ci95_if_change_correlation_zero": [
+          -0.05361638634161103,
+          1.874449719674944
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 35.3,
+        "ci95_narrowest": [
+          25.615665295596784,
+          44.98433470440321
+        ],
+        "ci95_widest": [
+          25.615665295596784,
+          44.98433470440321
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 15.799999999999997,
+        "ci95_narrowest": [
+          11.177931163807553,
+          20.42206883619244
+        ],
+        "ci95_widest": [
+          1.053399427386017,
+          30.546600572613976
+        ],
+        "required_change_correlation_for_positive_lower_bound": -1.3281793323371447,
+        "ci95_if_change_correlation_zero": [
+          4.872380204849721,
+          26.727619795150275
+        ]
+      }
+    },
+    "werkhausen2019_MVC": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.5116279069767447,
+        "ci95_narrowest": [
+          1.2554756925237014,
+          1.767780121429788
+        ],
+        "ci95_widest": [
+          -2.7285087492885247,
+          5.7517645632420145
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.5882352941176472,
+        "ci95_narrowest": [
+          0.25159675013145166,
+          0.9248738381038427
+        ],
+        "ci95_widest": [
+          -4.293023593682182,
+          5.469494181917476
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.7763337893296858,
+        "ci95_narrowest": [
+          0.28165824533987566,
+          1.2710093333194958
+        ],
+        "ci95_widest": [
+          -6.6910040802937605,
+          8.243671658953131
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 15.116279069767447,
+        "ci95_narrowest": [
+          12.554756925237015,
+          17.67780121429788
+        ],
+        "ci95_widest": [
+          -27.28508749288525,
+          57.51764563242014
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 9.233926128590976,
+        "ci95_narrowest": [
+          4.980006819977212,
+          13.48784543720474
+        ],
+        "ci95_widest": [
+          -55.8495761386059,
+          74.31742839578786
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": -8.400000000000006,
+        "ci95_narrowest": [
+          -14.446282270515036,
+          -2.353717729484975
+        ],
+        "ci95_widest": [
+          -82.97081466968532,
+          66.17081466968531
+        ]
+      },
+      "force20_required_pre_post_correlation": null
+    },
+    "triathletes_knee_MVC": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 0.7373351839000692,
+        "ci95_narrowest": [
+          0.7104434887930754,
+          0.7642268790070631
+        ],
+        "ci95_widest": [
+          -0.869998918658287,
+          2.3446692864584255
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": -0.12587046784581687,
+        "ci95_narrowest": [
+          -0.18910390857772777,
+          -0.06263702711390598
+        ],
+        "ci95_widest": [
+          -1.7442894725690783,
+          1.4925485368774445
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.8946732687073403,
+        "ci95_narrowest": [
+          0.8111821341025429,
+          0.9781644033121377
+        ],
+        "ci95_widest": [
+          -1.68915103534263,
+          3.478497572757311
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 8.848022206800831,
+        "ci95_narrowest": [
+          8.525321865516906,
+          9.170722548084756
+        ],
+        "ci95_widest": [
+          -10.439987023899445,
+          28.136031437501106
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 10.358467820950633,
+        "ci95_narrowest": [
+          9.53389829318272,
+          11.183037348718546
+        ],
+        "ci95_widest": [
+          -17.013116547914414,
+          37.73005218981568
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": -35.353999999999985,
+        "ci95_narrowest": [
+          -37.41095568860209,
+          -33.29704431139788
+        ],
+        "ci95_widest": [
+          -99.58082717370641,
+          28.87282717370644
+        ]
+      },
+      "force20_required_pre_post_correlation": null
+    },
+    "triathletes_ankle_MVC": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 0.7357095581706941,
+        "ci95_narrowest": [
+          0.42898480645966747,
+          1.0424343098817206
+        ],
+        "ci95_widest": [
+          -1.663084743292122,
+          3.13450385963351
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": 0.11847619047619107,
+        "ci95_narrowest": [
+          -0.027000865376842376,
+          0.2639532463292245
+        ],
+        "ci95_widest": [
+          -2.0405867592652878,
+          2.27753914021767
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 0.5876143200754552,
+        "ci95_narrowest": [
+          0.231035917276127,
+          0.9441927228747835
+        ],
+        "ci95_widest": [
+          -3.023187583028506,
+          4.198416223179416
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 8.828514698048329,
+        "ci95_narrowest": [
+          5.147817677516009,
+          12.509211718580648
+        ],
+        "ci95_widest": [
+          -19.957016919505463,
+          37.61404631560212
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 7.406800412334036,
+        "ci95_narrowest": [
+          3.3330938469040365,
+          11.480506977764035
+        ],
+        "ci95_widest": [
+          -31.321360358886004,
+          46.134961183554076
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": -23.068000000000012,
+        "ci95_narrowest": [
+          -34.10914779935756,
+          -12.02685220064247
+        ],
+        "ci95_widest": [
+          -85.94812075874721,
+          39.812120758747184
+        ]
+      },
+      "force20_required_pre_post_correlation": null
+    },
+    "triathletes_squat_1RM": {
+      "intervention_rate_pp_per_week": {
+        "estimate": 1.5521042478642573,
+        "ci95_narrowest": [
+          1.2109684205382232,
+          1.8932400751902914
+        ],
+        "ci95_widest": [
+          -0.6501033786698944,
+          3.754311874398409
+        ]
+      },
+      "comparator_rate_pp_per_week": {
+        "estimate": -0.12887142434613585,
+        "ci95_narrowest": [
+          -0.14832989609401676,
+          -0.10941295259825494
+        ],
+        "ci95_widest": [
+          -2.212394146588053,
+          1.9546512978957815
+        ]
+      },
+      "adapt25_margin_pp_per_week": {
+        "estimate": 1.7131935282969273,
+        "ci95_narrowest": [
+          1.371191678335213,
+          2.0551953782586416
+        ],
+        "ci95_widest": [
+          -1.697471438376563,
+          5.123858494970418
+        ]
+      },
+      "intervention_gain_pct": {
+        "estimate": 18.625250974371088,
+        "ci95_narrowest": [
+          14.53162104645868,
+          22.718880902283495
+        ],
+        "ci95_widest": [
+          -7.8012405440387305,
+          45.0517424927809
+        ]
+      },
+      "control_adjusted_gain_pp": {
+        "estimate": 20.17170806652472,
+        "ci95_narrowest": [
+          16.07142405046217,
+          24.271992082587268
+        ],
+        "ci95_widest": [
+          -16.207861646196616,
+          56.55127777924605
+        ]
+      },
+      "force20_direct_margin_native_units": {
+        "estimate": -1.1640000000000015,
+        "ci95_narrowest": [
+          -4.779814484000129,
+          2.4518144840001255
+        ],
+        "ci95_widest": [
+          -23.689048392674295,
+          21.36104839267429
+        ]
+      },
+      "force20_required_pre_post_correlation": null
+    }
+  },
+  "tissue": {
+    "arampatzis2007_high_native_max_strain": {
+      "estimate": 0.0,
+      "ci95_narrowest": [
+        -0.4702663988178354,
+        0.4702663988178354
+      ],
+      "ci95_widest": [
+        -1.6795228529208408,
+        1.6795228529208408
+      ]
+    },
+    "arampatzis2007_low_native_max_strain": {
+      "estimate": 0.8000000000000007,
+      "ci95_narrowest": [
+        0.665638171766334,
+        0.9343618282336674
+      ],
+      "ci95_widest": [
+        -1.0810655952713406,
+        2.681065595271342
+      ]
+    },
+    "arampatzis2007_high_native_max_elongation": {
+      "estimate": -0.20000000000000107,
+      "ci95_narrowest": [
+        -1.2077137117525056,
+        0.8077137117525035
+      ],
+      "ci95_widest": [
+        -4.969844902295187,
+        4.569844902295185
+      ]
+    },
+    "arampatzis2007_high_native_max_estimated_force": {
+      "estimate": 908.0,
+      "ci95_narrowest": [
+        905.9845725765015,
+        910.0154274234985
+      ],
+      "ci95_widest": [
+        309.41805521901244,
+        1506.5819447809877
+      ]
+    },
+    "arampatzis2007_high_stiffness": {
+      "estimate": 60.400000000000006,
+      "ci95_narrowest": [
+        58.45175349061177,
+        62.34824650938824
+      ],
+      "ci95_widest": [
+        9.006600700622286,
+        111.79339929937773
+      ]
+    },
+    "malliaras_high_estimated_peak_tendon_force": {
+      "estimate": 30.9,
+      "ci95_narrowest": [
+        18.452789836110433,
+        43.347210163889564
+      ],
+      "ci95_widest": [
+        18.452789836110433,
+        43.347210163889564
+      ]
+    },
+    "malliaras_high_estimated_peak_tendon_stress": {
+      "estimate": 24.4,
+      "ci95_narrowest": [
+        8.447540996854176,
+        40.352459003145825
+      ],
+      "ci95_widest": [
+        8.447540996854176,
+        40.352459003145825
+      ]
+    },
+    "malliaras_high_max_strain": {
+      "estimate": -10.3,
+      "ci95_narrowest": [
+        -29.614636461207944,
+        9.014636461207942
+      ],
+      "ci95_widest": [
+        -29.614636461207944,
+        9.014636461207942
+      ]
+    },
+    "malliaras_high_max_elongation": {
+      "estimate": -13.9,
+      "ci95_narrowest": [
+        -29.56631624075756,
+        1.7663162407575559
+      ],
+      "ci95_widest": [
+        -29.56631624075756,
+        1.7663162407575559
+      ]
+    }
+  },
+  "rehab_high_load_mvc": {
+    "estimate_pct": 7.2,
+    "ci95_pct": [
+      1.717562738507807,
+      12.682437261492193
+    ]
+  },
+  "werkhausen_running_diagnostic": {
+    "TG": {
+      "paired_n": 10,
+      "paired_n_also_with_ankle_moment": 10,
+      "negative_signed_peaks": [
+        97,
+        94
+      ],
+      "total_steps": [
+        97,
+        94
+      ],
+      "length_excursion_mm": {
+        "pre_mean": 13.237913942,
+        "post_mean": 10.2046622092,
+        "mean_change": -3.0332517328,
+        "ci95": [
+          -5.455861116602447,
+          -0.610642348997553
+        ]
+      },
+      "recoil_proxy_mm": {
+        "pre_mean": 13.0450455687,
+        "post_mean": 9.0914679948,
+        "mean_change": -3.9535775739,
+        "ci95": [
+          -6.886730835865725,
+          -1.0204243119342746
+        ]
+      },
+      "estimated_peak_force_magnitude_N": {
+        "pre_mean": 4031.0617047978,
+        "post_mean": 3806.4150011254,
+        "mean_change": -224.64670367239998,
+        "ci95": [
+          -1066.6573102981863,
+          617.3639029533863
+        ]
+      }
+    },
+    "CG": {
+      "paired_n": 7,
+      "paired_n_also_with_ankle_moment": 4,
+      "negative_signed_peaks": [
+        68,
+        59
+      ],
+      "total_steps": [
+        68,
+        59
+      ],
+      "length_excursion_mm": {
+        "pre_mean": 11.328514917571429,
+        "post_mean": 12.189483405857143,
+        "mean_change": 0.8609684882857148,
+        "ci95": [
+          -0.7330187006517356,
+          2.454955677223165
+        ]
+      },
+      "recoil_proxy_mm": {
+        "pre_mean": 10.010386669571428,
+        "post_mean": 10.363409306,
+        "mean_change": 0.35302263642857123,
+        "ci95": [
+          -1.0447624102321686,
+          1.7508076830893113
+        ]
+      },
+      "estimated_peak_force_magnitude_N": {
+        "pre_mean": 3665.1849996408573,
+        "post_mean": 3788.8322072620003,
+        "mean_change": 123.64720762114295,
+        "ci95": [
+          -134.12975977867933,
+          381.42417502096527
+        ]
+      }
+    }
+  }
+}

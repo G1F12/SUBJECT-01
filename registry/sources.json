@@ -2233,5 +2233,109 @@
     "calibration_review": {
       "scope": "Publisher PDF Table 1 reviewed. N=24, 140-degree group distribution; no individual geometry or tendon measurements."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0128",
+    "name": "Arampatzis et al. 2007, paired Achilles loading",
+    "type": "primary_article",
+    "doi": "10.1242/jeb.003814",
+    "url": "https://doi.org/10.1242/jeb.003814",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher version, Table 1. Paired legs, maximal torque and ultrasound-derived complex strain at each visit, with unknown individual covariance."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0129",
+    "name": "Kongsgaard et al. 2007, active knee extension comparison",
+    "type": "primary_article",
+    "doi": "10.1111/j.1748-1716.2007.01714.x",
+    "url": "https://doi.org/10.1111/j.1748-1716.2007.01714.x",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher Tables 1–2, paired legs. Peak MVC and 1RM plus separate tendon mechanics at common force."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0130",
+    "name": "Malliaras et al. 2013, tendon mechanics and active knee extension comparisons",
+    "type": "primary_article",
+    "doi": "10.1016/j.jbiomech.2013.04.022",
+    "url": "https://doi.org/10.1016/j.jbiomech.2013.04.022",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher Tables 1–2. Independent groups, endpoint MVC and native-max tendon strain, publication reports SD of participant changes."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0131",
+    "name": "Vesterhus et al. 2024, linked strength and tendon data",
+    "type": "open_dataset",
+    "doi": "10.5281/zenodo.14259356",
+    "url": "https://doi.org/10.5281/zenodo.14259356",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "Both CSV files matched by FP. Completer counts, active observational groups, common-load stiffness and no individually dated strength series."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0132",
+    "name": "Werkhausen et al. 2019, running stance data",
+    "type": "primary_article",
+    "doi": "10.7717/peerj.6764",
+    "url": "https://doi.org/10.7717/peerj.6764",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS plus public MAT supplement. Same project as Werkhausen 2018, no MVC participant crosswalk in supplement."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0133",
+    "name": "Strength training in well-trained triathletes, 2025",
+    "type": "primary_article",
+    "doi": "10.1038/s41598-025-12721-0",
+    "url": "https://doi.org/10.1038/s41598-025-12721-0",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS Table 1 and two-table supplementary DOCX. Endurance-only control. Isometric tendon stiffness and strength summaries."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0134",
+    "name": "Controlled clinical trial of Achilles tendinopathy",
+    "type": "primary_article",
+    "doi": "10.1186/s40798-022-00545-5",
+    "url": "https://doi.org/10.1186/s40798-022-00545-5",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS methods, figures and tables. Active eccentric comparator, symptomatic population and unequal exercise exposure."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0135",
+    "name": "Centner et al. 2019/2020, Achilles tendon and isometric torque",
+    "type": "primary_article",
+    "doi": "10.1152/japplphysiol.00602.2019",
+    "url": "https://doi.org/10.1152/japplphysiol.00602.2019",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_controls/REPORT.md",
+    "calibration_review": {
+      "scope": "Published Results and Fig. 5 via search viewer. Independent active comparisons, conservative n for MVC. Direct PDF returned HTTP 403."
+    }
   }
 ]
