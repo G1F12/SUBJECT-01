@@ -964,5 +964,13 @@
     "title": "Joint 2700-second data eligibility unmet",
     "statement": "No inspected source jointly supplies calibrated external work, matched output, movement and response control, short-rest recovery and timed post-load function for the same 2700 s sessions. Thresholds remain unapproved.",
     "confidence": "targeted_source_audit"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0120",
+    "experiment_id": "EXP-0140",
+    "title": "No measured joint force or adaptation and tissue pass",
+    "statement": "Corrected scenario at 100 degrees fails SF 1.50 (SF 1.285 at 20 kN/s) under EXP-0090 assumptions; the 140-degree pass is model-only. Harden active comparison does not establish the +25% isometric rate objective and lacks same-configuration tendon measurements. Kay nontraining control has an uncertain denominator and independent same-cohort proxies do not establish a failure margin.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

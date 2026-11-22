@@ -2086,5 +2086,113 @@
     "audit_report": "research/cpe45_human_evidence/REPORT.md",
     "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
     "limits": "Publisher DOCX inspected; aggregate pre-sprint tables only."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0119",
+    "name": "Harden et al. randomized active-control leg-press strength supplement",
+    "type": "primary_data",
+    "doi": "10.1371/journal.pone.0236663",
+    "url": "https://doi.org/10.1371/journal.pone.0236663",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    },
+    "external_provenance": {
+      "version": "PLOS S1 Data, 2020 publication",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0236663.s001&type=supplementary",
+      "license": "CC BY",
+      "sha256": "b40bfa77121b486b9f070354386a78b5e6c37347e97c5356460b840b8ad3c5b1"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0120",
+    "name": "Kay et al. plantarflexor torque and Achilles myotonometry",
+    "type": "primary_data",
+    "doi": "10.24339/2b8cc31f-2d8e-4060-b52f-eb98d1d5aec4",
+    "url": "https://doi.org/10.24339/2b8cc31f-2d8e-4060-b52f-eb98d1d5aec4",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    },
+    "external_provenance": {
+      "version": "Northampton file 56341749",
+      "url": "https://pure.northampton.ac.uk/ws/portalfiles/portal/56341749/Dataset.xlsx",
+      "license": "Public read; redistribution permission not established",
+      "sha256": "820a9d5739c6e2e8fc7201d1782591eab96f450aa81dca45e458c37f2386f229"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0121",
+    "name": "Vesterhus et al. maximal isometric knee torque and patellar tendon properties",
+    "type": "primary_data",
+    "doi": "10.5281/zenodo.14259356",
+    "url": "https://doi.org/10.5281/zenodo.14259356",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    },
+    "external_provenance": {
+      "version": "Zenodo record 14259356",
+      "url": "https://zenodo.org/records/14259356/files/All_data_except_SWV.csv?download=1",
+      "license": "CC BY 4.0",
+      "sha256": "3c8af1c80486e8543b1496b98f20b0aa4a97d042840877b0a7d84544c8097cc7"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0122",
+    "name": "Mannarino et al. isometric knee torque and patellar tendon elastography",
+    "type": "primary_data",
+    "doi": "10.1371/journal.pone.0205782",
+    "url": "https://doi.org/10.1371/journal.pone.0205782",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    },
+    "external_provenance": {
+      "version": "Figshare v1, 7999763, file 14895362",
+      "url": "https://ndownloader.figshare.com/files/14895362",
+      "license": "CC BY",
+      "sha256": "6094fd778af880688d48edf964723cea116e77d1afe14f72001455a4246f3aca"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0123",
+    "name": "Zushi et al. unilateral leg-press peak force supplement",
+    "type": "primary_data",
+    "doi": "10.1371/journal.pone.0292428",
+    "url": "https://doi.org/10.1371/journal.pone.0292428",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    },
+    "external_provenance": {
+      "version": "PLOS S1, 2024 publication",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0292428.s001",
+      "license": "CC BY",
+      "sha256": "8652e52ef31fed3e8a6276e9f60aeb53be9b0a0051081abf6c4f76add51852e6"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0124",
+    "name": "Walker et al. active training comparisons at 0, 5 and 10 weeks",
+    "type": "primary_article",
+    "doi": "10.3389/fphys.2016.00149",
+    "url": "https://doi.org/10.3389/fphys.2016.00149",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/strength_path_evidence/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
+    }
   }
 ]

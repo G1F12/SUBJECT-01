@@ -3992,5 +3992,39 @@
       ]
     },
     "limits": "No eligible joint 2700 s cohort or approved criteria. Continuous 360 W is a separate scenario."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0140",
+    "name": "Human evidence for FORCE20 and ADAPT25 with same-trajectory tissue constraints",
+    "status": "completed",
+    "sources": [
+      "SRC-0081",
+      "SRC-0090",
+      "SRC-0119",
+      "SRC-0120",
+      "SRC-0121",
+      "SRC-0122",
+      "SRC-0123",
+      "SRC-0124"
+    ],
+    "design": "Participant-held-out prediction errors, active-control changes per week, independent partial tissue observations and conditional model sensitivity. Seven input files plus Walker published summaries.",
+    "model": "research/strength_path_evidence/run.py",
+    "protocol": "research/strength_path_evidence/PROTOCOL.md",
+    "inputs": "research/strength_path_evidence/SOURCES.json",
+    "report": "research/strength_path_evidence/REPORT.md",
+    "outputs": [
+      "research/strength_path_evidence/RESULTS.json"
+    ],
+    "reproduction_command": "python research/strength_path_evidence/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0136"
+      ],
+      "negative_results": [
+        "NEG-0120"
+      ]
+    },
+    "limits": "No measured joint pass of the strength and tissue criteria; FORCE20 model only at 100/140 degrees; no time-resolved common active-control tissue outcome for ADAPT25."
   }
 ]

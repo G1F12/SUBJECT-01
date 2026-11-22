@@ -480,7 +480,8 @@
       "ISS-0032"
     ],
     "required_inputs": "Independent test-retest force and body mass measurements in the actual multicondition protocol, control change-score variance, target contrast and confidence coverage, independent joint-outcome thresholds and preregistered prospective analysis.",
-    "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation. EXP-0112 adds independent individual hip test-retest contrasts; some exceed 20%, but task-specific leg-press reliability and body mass still required. EXP-0113 identifies a separate 24-hour leg-press reliability report on the same dynamometer type; cohort overlap and transfer to the target protocol remain unverified. EXP-0126 evaluates multi-session isometric leg press repeatability on the Santos cohort across 4 visits: two-way ANOVA separates systematic training progression (+18.35% by W2, SS=1.60e6) from residual measurement error (detrended Sw=309.1 N vs naive Sw=385.7 N), confirming that longitudinal training dispersion is distinct from pure within-day test-retest repeatability (literature CV 3-6%). Angle mismatch sensitivity (28-41 N/deg, ~410 N at 10 deg) confirms that tight posture and angle control are mandatory to resolve the +20% target margin without unmodeled variance masking the effect."
+    "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation. EXP-0112 adds independent individual hip test-retest contrasts; some exceed 20%, but task-specific leg-press reliability and body mass still required. EXP-0113 identifies a separate 24-hour leg-press reliability report on the same dynamometer type; cohort overlap and transfer to the target protocol remain unverified. EXP-0126 evaluates multi-session isometric leg press repeatability on the Santos cohort across 4 visits: two-way ANOVA separates systematic training progression (+18.35% by W2, SS=1.60e6) from residual measurement error (detrended Sw=309.1 N vs naive Sw=385.7 N), confirming that longitudinal training dispersion is distinct from pure within-day test-retest repeatability (literature CV 3-6%). Angle mismatch sensitivity (28-41 N/deg, ~410 N at 10 deg) confirms that tight posture and angle control are mandatory to resolve the +20% target margin without unmodeled variance masking the effect.",
+    "progress_exp_0140": "Harden provided an independent ISO90 force outcome in N/kg but no individual geometry or tendon strength; the fixed corrected force model still lacks direct matched bilateral external validation at 100/140 degrees."
   },
   {
     "id": "ISS-0037",
@@ -552,5 +553,17 @@
     ],
     "required_inputs": "Corrected source files with hashes or author-confirmed trial-level missingness and export history; phase, side and order labels; force calibration and object orientation.",
     "progress": "Article and raw archive checked, numeric content of repeated groups hashed, source contacted only through unsent local draft. Seek independent open measurements of motor control with functional force while waiting."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "ISS-0041",
+    "title": "ADAPT25 lacks controlled early strength trajectories linked to tissue capacity",
+    "status": "open",
+    "priority": "high",
+    "related_experiments": [
+      "EXP-0128",
+      "EXP-0140"
+    ],
+    "required_inputs": "Participant-linked baseline, intermediate and follow-up maximal strength on the same schedule in active comparator and candidate arms, with load exposure and tissue function for the same participants. Positive comparator trajectory, lower interval for rate difference vs 1.25× comparator above zero, and enough tissue reserve are required."
   }
 ]

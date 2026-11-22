@@ -1170,5 +1170,13 @@
     "title": "Scope of human CPE45 partial measurements",
     "statement": "McLaughlin (N=24) shows 455.5 kJ [407.0, 505.7] and rectal change +1.31 C [1.10, 1.52] from exercise minutes 1 to 45. Jutlah (N=21) peak losses of 15.73–21.08% compare first and last two efforts in short repeated-sprint tests; visit order is confounded with rest duration. Goodall (N=10) reported knee-extensor MVC loss of 11% (SD 6%) within 150 s after a simulated 45-minute half.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0136",
+    "experiment_id": "EXP-0140",
+    "title": "Controlled rate and posture-specific prediction estimates from human data",
+    "statement": "Harden ISO90 (6+6) after four training weeks: AEL minus TRAD +0.91 percentage points per training week (95% CI -0.89 to +2.74), excess above 1.25 times TRAD +0.53 (-1.53 to +2.61). Santos W0 near 110 degrees (N=11): model MAE 613.6 N vs LOSO 508.8 N, paired improvement -104.8 N (-345.6 to +161.3). DPValid M2 adds pooled delta R2 0.0738 (0.0280 to 0.1472) against F0 in a single-joint diagnostic. Tissue proxies in Kay, Mannarino and Vesterhus are separate cohort evidence.",
+    "confidence": "statistically_reproduced"
   }
 ]

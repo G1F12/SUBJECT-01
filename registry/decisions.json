@@ -378,5 +378,25 @@
     "negative_results": [
       "NEG-0119"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0037",
+    "title": "Stage 1 strength and tissue paths are pending decisive measurements",
+    "decision": "Keep FORCE20 and ADAPT25 insufficient at program level and neither ready for compatibility. Record 100-degree FORCE20 specifically as failed within the tested tissue model. Preserve the separate EXP-0139 CPE45 status.",
+    "rationale": "Current tests provide measured strength and adaptation estimates and partial tissue evidence. No dataset jointly passes the applicable strength and tissue thresholds in the same configuration.",
+    "amends": [
+      "DEC-0035"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0140"
+    ],
+    "findings": [
+      "FND-0136"
+    ],
+    "negative_results": [
+      "NEG-0120"
+    ]
   }
 ]
