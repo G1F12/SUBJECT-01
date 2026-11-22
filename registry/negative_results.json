@@ -972,5 +972,13 @@
     "title": "No measured joint force or adaptation and tissue pass",
     "statement": "Corrected scenario at 100 degrees fails SF 1.50 (SF 1.285 at 20 kN/s) under EXP-0090 assumptions; the 140-degree pass is model-only. Harden active comparison does not establish the +25% isometric rate objective and lacks same-configuration tendon measurements. Kay nontraining control has an uncertain denominator and independent same-cohort proxies do not establish a failure margin.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0121",
+    "experiment_id": "EXP-0141",
+    "title": "No joint strength-threshold and tissue pass on newly audited linked studies",
+    "statement": "Walker same-cohort tendon stiffness and Massey common-load strain/stiffness cannot establish a safety margin at augmented output. Neither rate contrast demonstrates +25% with a positive lower confidence bound. At 140 degrees the fixed EXP-0090 nominal force model underperforms LOSO means on both inspected external cohorts. Model gain +21.77% with SF 1.747 remains conditional, and matched augmented human measurements are absent.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

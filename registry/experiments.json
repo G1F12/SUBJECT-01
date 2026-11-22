@@ -4026,5 +4026,36 @@
       ]
     },
     "limits": "No measured joint pass of the strength and tissue criteria; FORCE20 model only at 100/140 degrees; no time-resolved common active-control tissue outcome for ADAPT25."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0141",
+    "name": "Stage 1 linked Walker tendon outcomes and external 140-degree isometric force benchmark",
+    "status": "completed",
+    "sources": [
+      "SRC-0085",
+      "SRC-0124",
+      "SRC-0125",
+      "SRC-0126",
+      "SRC-0127"
+    ],
+    "design": "Recompute full and late Walker active-comparator rate contrasts with same-cohort tissue outcome audit. Cross-check another active-controlled strength/tendon cohort (Massey) and benchmark fixed EXP-0090 force predictions on independent angle-matched human summaries and isolated figure markers.",
+    "model": "research/stage1_followup/run.py",
+    "protocol": "research/stage1_followup/PROTOCOL.md",
+    "inputs": "research/stage1_followup/SOURCES.json",
+    "report": "research/stage1_followup/REPORT.md",
+    "outputs": [
+      "research/stage1_followup/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_followup/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0137"
+      ],
+      "negative_results": [
+        "NEG-0121"
+      ]
+    },
+    "limits": "No individually linked tissue margin for either pass. Marker reconstructions are subset-only. Geometry and augmented matched-state data remain absent."
   }
 ]

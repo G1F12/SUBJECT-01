@@ -1,0 +1,28 @@
+{
+  "base_commit": "6dc21c56488e5d6cd19b32eeb2e02726826b298f",
+  "checked_date": "2026-11-22",
+  "files": {
+    "walker2016.pdf": ["https://public-pages-files-2025.frontiersin.org/journals/physiology/articles/10.3389/fphys.2016.00149/pdf", "8639afe18101265321db3e2f81dc476f7d6afff688bb98d08e526fbc4bd1feed"],
+    "walker2016_xml.xml": ["https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4847223/fullTextXML", "e204c282075db844a0c5f9b164681f98e857d8b8eeb201fbbd7a0dd7323ea3b0"],
+    "walker2020.pdf": ["https://jyx.jyu.fi/bitstreams/eb80df55-99c4-4243-8ff2-b3f840db3d30/download", "10928fd3720f97670b8d2219cfd29d3e67e8e5404248e1a5643e5daa675278e4"],
+    "walker2020.xml": ["https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7560914/fullTextXML", "007aa6e2a1e767d81bc4fcb26b88e0528c0fbe379cbeef3cdeffe9a114489a27"],
+    "walker_fig4.png": ["https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00421-020-04462-x/MediaObjects/421_2020_4462_Fig4_HTML.png", "f87f87365297067486e68ca354c7978456220a79b93ff0b3fdef6a7f42aecbe7"],
+    "massey.html": ["https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2018.01170/full", "5bf2367fbbbbb41b5972954f1f09c9222826de65adbafe6e6c12f88ece44a45a"],
+    "zoger.xml": ["https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11776222/fullTextXML", "c5d678eeb0b62b76d01fcaaa86e57b4a46733b7c5167ad793822d8938694a15d"],
+    "zoger_fig2.png": ["https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13102-025-01061-1/MediaObjects/13102_2025_1061_Fig2_HTML.png", "3f5ec5686adc32c1f0358895c2e6f122d773f81a93d320eb8b073cb0f6276b0a"],
+    "petrovic.pdf": ["https://sportlogia.ffvs.unibl.org/old-site/no15engl/eng8.pdf", "96467a4ced36f9e911e0aef3e150eda4c6144e781fe17b9743cd41ab57920a48"]
+  },
+  "access_notes": {
+    "walker": "Published 2016 and 2020 articles are CC BY. No supplementary-material elements or PDF embedded files in the checked versions. Springer Fig. 4 is published by the authors under the article license and shows individual results without participant labels or force-tissue crosswalk. 2020 methods explicitly link the 2016 and 2020 cohort.",
+    "massey": "CC BY published Frontiers article, Tables 1–2. The university repository points to the article PDF. No participant sheet admitted; associated strength paper Balshaw 2016 uses unequal analytic Ns, so no individual joins or pooling.",
+    "zoger": "Published tables and panels in final article. The authors' data statement requires a request for original data. Only Fig. 2 panels A and D and summary tables are used. Consult the license attached to the current publisher version before redistribution.",
+    "petrovic": "2019 publisher PDF Table 1 with three angles and body mass summary. Graph is a regression of dynamic leg press against 140-degree force without individual geometric covariates or identifiers. License for raw redistribution not established.",
+    "other": "Walker 2017 endocrine subset does not add direct tendon outcome; the relevant tissue extension is Walker 2020. Werkhausen 2018/2019 compares training and nontraining control in plantarflexion, distinct from the active protocol and target leg press. HARDEN remains partial per EXP-0140. No closed files or new measurements requested."
+  },
+  "transcribed_published_statistics": {
+    "walker_late_mvc_pct_mean_sd_n": {"AEL": [7, 7, 10], "TRAD": [-0.8, 8, 10]},
+    "petrovic_force_mean_sd_n": {"80": [2145.83, 266.82, 24], "110": [2842.58, 451.86, 24], "140": [3292, 444.24, 24]},
+    "zoger_force_mean_sd_n": {"100": {"S2": [2920.5, 633.0, 28], "S3": [2959.5, 641.9, 28], "S2_minus_S3": [-39.1, 131.4, 28]}, "140": {"S2": [5461.4, 1130.5, 28], "S3": [5393.1, 1157.1, 28], "S2_minus_S3": [68.3, 320.1, 28]}},
+    "massey_n": {"MVT": [13, 15], "free_tendon": [13, 15], "aponeurosis_complex": [13, 14]}
+  }
+}

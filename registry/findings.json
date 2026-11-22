@@ -1178,5 +1178,13 @@
     "title": "Controlled rate and posture-specific prediction estimates from human data",
     "statement": "Harden ISO90 (6+6) after four training weeks: AEL minus TRAD +0.91 percentage points per training week (95% CI -0.89 to +2.74), excess above 1.25 times TRAD +0.53 (-1.53 to +2.61). Santos W0 near 110 degrees (N=11): model MAE 613.6 N vs LOSO 508.8 N, paired improvement -104.8 N (-345.6 to +161.3). DPValid M2 adds pooled delta R2 0.0738 (0.0280 to 0.1472) against F0 in a single-joint diagnostic. Tissue proxies in Kay, Mannarino and Vesterhus are separate cohort evidence.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0137",
+    "experiment_id": "EXP-0141",
+    "title": "Same-cohort Walker tissue data and external 140-degree force measurements narrow the Stage 1 decision",
+    "statement": "Walker 2020 links the 2016 strength cohort to a tendon assessment. Full-course AEL−1.25×TRAD is +0.42 [-0.71,1.55] percentage points per training week; late AEL−TRAD is +1.56 [0.15,2.97] but TRAD is indistinguishable from zero. Zoger 140-degree S3 fixed baseline bias is -1588.6 [-2037.3,-1139.9] N, RMSE 1953.1 N versus 1178.3 N for LOSO mean. Petrovic 140-degree bias is +512.5 [324.9,700.1] N, also worse than LOSO by RMSE.",
+    "confidence": "statistically_reproduced"
   }
 ]

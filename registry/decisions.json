@@ -398,5 +398,25 @@
     "negative_results": [
       "NEG-0120"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0038",
+    "title": "Stage 1 HOLD after linked tendon and 140-degree force checks",
+    "decision": "Classify both ADAPT25 and FORCE20 at 140 degrees as insufficient. Neither transfers to compatibility. Preserve the 100-degree model-only failure and the separate CPE45 decision.",
+    "rationale": "EXP-0141 newly locates tissue evidence in the Walker cohort and compares a second controlled linked source. The full-course +25% threshold and local tissue reserve are unresolved. Exact nominal 140-degree human strength improves the baseline audit but does not establish individual geometric transfer or augmentation efficacy.",
+    "amends": [
+      "DEC-0037"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0141"
+    ],
+    "findings": [
+      "FND-0137"
+    ],
+    "negative_results": [
+      "NEG-0121"
+    ]
   }
 ]

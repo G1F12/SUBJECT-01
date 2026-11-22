@@ -2194,5 +2194,44 @@
     "calibration_review": {
       "scope": "Outcome, access and protocol checked against EXP-0140 source audit."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0125",
+    "name": "Walker 2020 linked strength cohort and patellar tendon stiffness with eccentric loading",
+    "type": "primary_article",
+    "doi": "10.1007/s00421-020-04462-x",
+    "url": "https://doi.org/10.1007/s00421-020-04462-x",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_followup/REPORT.md",
+    "calibration_review": {
+      "scope": "Published table, full-text XML, institutional PDF and Fig. 4 inspected. Same cohort as SRC-0124; no labeled linkage across measured outcomes."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0126",
+    "name": "Massey et al. active comparison of sustained and explosive strength training with tendon outcomes",
+    "type": "primary_article",
+    "doi": "10.3389/fphys.2018.01170",
+    "url": "https://doi.org/10.3389/fphys.2018.01170",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_followup/REPORT.md",
+    "calibration_review": {
+      "scope": "Published table and endpoint Ns reviewed. Group-level strength, local elongation and stiffness; no individualized common trajectory or failure load."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0127",
+    "name": "Petrovic et al. multi-angle isometric leg press absolute force",
+    "type": "primary_article",
+    "doi": "10.5550/sgia.191501.en.pkdz",
+    "url": "https://doi.org/10.5550/sgia.191501.en.pkdz",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_followup/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher PDF Table 1 reviewed. N=24, 140-degree group distribution; no individual geometry or tendon measurements."
+    }
   }
 ]

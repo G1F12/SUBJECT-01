@@ -1,0 +1,1490 @@
+{
+  "experiment_id": "EXP-0141",
+  "stage1": "HOLD",
+  "ready_for_compatibility": false,
+  "ADAPT25": {
+    "status": "INSUFFICIENT_DATA",
+    "walker": {
+      "mvc_rate_pct_baseline_per_week": {
+        "whole": {
+          "10": {
+            "AEL": {
+              "estimate": 1.77,
+              "ci95": [
+                1.0689502321487487,
+                2.4710497678512513
+              ]
+            },
+            "TRAD": {
+              "estimate": 1.08,
+              "ci95": [
+                0.29310740343226893,
+                1.8668925965677312
+              ]
+            },
+            "CON": {
+              "estimate": 0.12,
+              "ci95": [
+                -0.3147308792474498,
+                0.5547308792474498
+              ]
+            },
+            "AEL_minus_TRAD": {
+              "estimate": 0.69,
+              "ci95": [
+                -0.2896968370539593,
+                1.669696837053959
+              ]
+            },
+            "AEL_minus_1_25_TRAD": {
+              "estimate": 0.41999999999999993,
+              "ci95": [
+                -0.7104088033213674,
+                1.5504088033213672
+              ]
+            },
+            "rounding_outer_interval": [
+              -0.7269825532006764,
+              1.5669825532006763
+            ],
+            "AEL_minus_CON": {
+              "estimate": 1.65,
+              "ci95": [
+                0.878131315250114,
+                2.421868684749886
+              ]
+            }
+          },
+          "11": {
+            "AEL": {
+              "estimate": 1.6090909090909091,
+              "ci95": [
+                0.9717729383170443,
+                2.246408879864774
+              ]
+            },
+            "TRAD": {
+              "estimate": 0.9818181818181819,
+              "ci95": [
+                0.2664612758475172,
+                1.6971750877888465
+              ]
+            },
+            "CON": {
+              "estimate": 0.10909090909090909,
+              "ci95": [
+                -0.28611898113404527,
+                0.5043007993158635
+              ]
+            },
+            "AEL_minus_TRAD": {
+              "estimate": 0.6272727272727272,
+              "ci95": [
+                -0.26336076095814487,
+                1.5179062155035994
+              ]
+            },
+            "AEL_minus_1_25_TRAD": {
+              "estimate": 0.3818181818181816,
+              "ci95": [
+                -0.6458261848376068,
+                1.40946254847397
+              ]
+            },
+            "rounding_outer_interval": [
+              -0.6608932301824337,
+              1.4245295938187972
+            ],
+            "AEL_minus_CON": {
+              "estimate": 1.5,
+              "ci95": [
+                0.7983011956819218,
+                2.2016988043180783
+              ]
+            }
+          },
+          "12": {
+            "AEL": {
+              "estimate": 1.4749999999999999,
+              "ci95": [
+                0.8907918601239571,
+                2.0592081398760427
+              ]
+            },
+            "TRAD": {
+              "estimate": 0.9,
+              "ci95": [
+                0.24425616952689078,
+                1.5557438304731093
+              ]
+            },
+            "CON": {
+              "estimate": 0.09999999999999999,
+              "ci95": [
+                -0.2622757327062082,
+                0.46227573270620814
+              ]
+            },
+            "AEL_minus_TRAD": {
+              "estimate": 0.5749999999999998,
+              "ci95": [
+                -0.24141403087829916,
+                1.3914140308782987
+              ]
+            },
+            "AEL_minus_1_25_TRAD": {
+              "estimate": 0.34999999999999987,
+              "ci95": [
+                -0.5920073361011398,
+                1.2920073361011395
+              ]
+            },
+            "rounding_outer_interval": [
+              -0.605818794333897,
+              1.3058187943338968
+            ],
+            "AEL_minus_CON": {
+              "estimate": 1.3749999999999998,
+              "ci95": [
+                0.7317760960417615,
+                2.018223903958238
+              ]
+            }
+          }
+        },
+        "late": {
+          "5": {
+            "AEL": {
+              "estimate": 1.4,
+              "ci95": [
+                0.39850033164106957,
+                2.4014996683589303
+              ]
+            },
+            "TRAD": {
+              "estimate": -0.16,
+              "ci95": [
+                -1.3045710495530634,
+                0.9845710495530634
+              ]
+            },
+            "AEL_minus_TRAD": {
+              "estimate": 1.5599999999999998,
+              "ci95": [
+                0.1457441186073849,
+                2.9742558813926148
+              ]
+            },
+            "AEL_minus_1_25_TRAD": {
+              "estimate": 1.5999999999999999,
+              "ci95": [
+                -0.035662048132227175,
+                3.2356620481322267
+              ]
+            },
+            "rounding_outer_interval": [
+              -0.2545760298164512,
+              3.454576029816451
+            ]
+          }
+        }
+      },
+      "tissue": {
+        "Absolute (N·mm−1)": {
+          "10_AEL_10_TRAD": {
+            "estimate": 2.9000000000000004,
+            "ci95": [
+              -25.95813148140919,
+              31.758131481409194
+            ]
+          },
+          "8_AEL_9_TRAD": {
+            "estimate": 2.9000000000000004,
+            "ci95": [
+              -28.610508350814335,
+              34.41050835081433
+            ]
+          },
+          "8_AEL_8_TRAD": {
+            "estimate": 2.9000000000000004,
+            "ci95": [
+              -30.075819768471092,
+              35.87581976847109
+            ]
+          },
+          "group_paired_change_pct_mean_sd": {
+            "AEL": [
+              -6.6,
+              26.9
+            ],
+            "TRAD": [
+              -9.5,
+              33.9
+            ]
+          }
+        },
+        "Relative (N·mm−1)": {
+          "10_AEL_10_TRAD": {
+            "estimate": 9.700000000000001,
+            "ci95": [
+              -16.635067956692907,
+              36.03506795669291
+            ]
+          },
+          "8_AEL_9_TRAD": {
+            "estimate": 9.700000000000001,
+            "ci95": [
+              -19.05947685917789,
+              38.45947685917789
+            ]
+          },
+          "8_AEL_8_TRAD": {
+            "estimate": 9.700000000000001,
+            "ci95": [
+              -20.391805006280656,
+              39.791805006280654
+            ]
+          },
+          "group_paired_change_pct_mean_sd": {
+            "AEL": [
+              8.4,
+              24.6
+            ],
+            "TRAD": [
+              -1.3,
+              30.9
+            ]
+          }
+        },
+        "Hysteresis (%)": {
+          "10_AEL_10_TRAD": {
+            "estimate": -17.3,
+            "ci95": [
+              -53.945390440633446,
+              19.345390440633448
+            ]
+          },
+          "8_AEL_9_TRAD": {
+            "estimate": -17.3,
+            "ci95": [
+              -58.05406198413101,
+              23.454061984131013
+            ]
+          },
+          "8_AEL_8_TRAD": {
+            "estimate": -17.3,
+            "ci95": [
+              -59.144612417631365,
+              24.544612417631367
+            ]
+          },
+          "group_paired_change_pct_mean_sd": {
+            "AEL": [
+              -4.8,
+              41.6
+            ],
+            "TRAD": [
+              12.5,
+              36.1
+            ]
+          }
+        }
+      },
+      "published_pairing": "same cohort, unlabeled figures and group summaries; no individual crosswalk",
+      "linked_stiffness_full_trajectory": false
+    },
+    "massey": {
+      "MVT": {
+        "ECT_and_SCT_pre_post_mean_sd": [
+          [
+            [
+              234.0,
+              27.0
+            ],
+            [
+              273.0,
+              36.0
+            ]
+          ],
+          [
+            [
+              237.0,
+              49.0
+            ],
+            [
+              293.0,
+              47.0
+            ]
+          ]
+        ],
+        "sensitivity": {
+          "-1": {
+            "ECT": {
+              "estimate": 1.3888888888888888,
+              "ci95": [
+                0.03310117589510542,
+                2.7446766018826723
+              ]
+            },
+            "SCT": {
+              "estimate": 1.9690576652601968,
+              "ci95": [
+                0.09975288360663459,
+                3.838362446913759
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5801687763713079,
+              "ci95": [
+                -1.62772786677499,
+                2.788065419517606
+              ]
+            },
+            "SCT_minus_1_25_ECT": {
+              "estimate": 0.2329465541490856,
+              "ci95": [
+                -2.168419086002676,
+                2.634312194300847
+              ]
+            }
+          },
+          "0": {
+            "ECT": {
+              "estimate": 1.3888888888888888,
+              "ci95": [
+                0.4204690938933292,
+                2.3573086838844484
+              ]
+            },
+            "SCT": {
+              "estimate": 1.9690576652601968,
+              "ci95": [
+                0.6469727606235987,
+                3.291142569896795
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5801687763713079,
+              "ci95": [
+                -0.9863110828475936,
+                2.1466486355902097
+              ]
+            },
+            "SCT_minus_1_25_ECT": {
+              "estimate": 0.2329465541490856,
+              "ci95": [
+                -1.4728927744513773,
+                1.9387858827495486
+              ]
+            }
+          },
+          "0.5": {
+            "ECT": {
+              "estimate": 1.3888888888888888,
+              "ci95": [
+                0.6905514434827257,
+                2.087226334295052
+              ]
+            },
+            "SCT": {
+              "estimate": 1.9690576652601968,
+              "ci95": [
+                1.0337969747329474,
+                2.904318355787446
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5801687763713079,
+              "ci95": [
+                -0.5349282889692699,
+                1.6952658417118858
+              ]
+            },
+            "SCT_minus_1_25_ECT": {
+              "estimate": 0.2329465541490856,
+              "ci95": [
+                -0.984276769153152,
+                1.4501698774513232
+              ]
+            }
+          },
+          "0.9": {
+            "ECT": {
+              "estimate": 1.3888888888888888,
+              "ci95": [
+                1.031753314757528,
+                1.7460244630202497
+              ]
+            },
+            "SCT": {
+              "estimate": 1.9690576652601968,
+              "ci95": [
+                1.549348467615514,
+                2.3887668629048795
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5801687763713079,
+              "ci95": [
+                0.05521080453700744,
+                1.1051267482056084
+              ]
+            },
+            "SCT_minus_1_25_ECT": {
+              "estimate": 0.2329465541490856,
+              "ci95": [
+                -0.3498711247945432,
+                0.8157642330927144
+              ]
+            }
+          },
+          "1": {
+            "ECT": {
+              "estimate": 1.3888888888888888,
+              "ci95": [
+                1.195204929889777,
+                1.5825728478880008
+              ]
+            },
+            "SCT": {
+              "estimate": 1.9690576652601968,
+              "ci95": [
+                1.9301138156424142,
+                2.0080015148779795
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5801687763713079,
+              "ci95": [
+                0.3841634296769343,
+                0.7761741230656816
+              ]
+            },
+            "SCT_minus_1_25_ECT": {
+              "estimate": 0.2329465541490856,
+              "ci95": [
+                -0.010995485869230576,
+                0.4768885941674018
+              ]
+            }
+          }
+        }
+      },
+      "free_tendon_stiffness_N_mm": {
+        "ECT_and_SCT_pre_post_mean_sd": [
+          [
+            [
+              2605.0,
+              446.0
+            ],
+            [
+              3122.0,
+              632.0
+            ]
+          ],
+          [
+            [
+              2835.0,
+              444.0
+            ],
+            [
+              3239.0,
+              575.0
+            ]
+          ]
+        ],
+        "sensitivity": {
+          "-1": {
+            "ECT": {
+              "estimate": 517.0,
+              "ci95": [
+                -134.42888033925306,
+                1168.428880339253
+              ]
+            },
+            "SCT": {
+              "estimate": 404.0,
+              "ci95": [
+                -160.30339085460048,
+                968.3033908546005
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": -113.0,
+              "ci95": [
+                -933.3181114423342,
+                707.3181114423342
+              ]
+            }
+          },
+          "0": {
+            "ECT": {
+              "estimate": 517.0,
+              "ci95": [
+                49.56388227843206,
+                984.4361177215679
+              ]
+            },
+            "SCT": {
+              "estimate": 404.0,
+              "ci95": [
+                1.6934319629211245,
+                806.3065680370789
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": -113.0,
+              "ci95": [
+                -700.0451432168895,
+                474.0451432168895
+              ]
+            }
+          },
+          "0.5": {
+            "ECT": {
+              "estimate": 517.0,
+              "ci95": [
+                177.0514845511296,
+                856.9485154488705
+              ]
+            },
+            "SCT": {
+              "estimate": 404.0,
+              "ci95": [
+                114.93823572866097,
+                693.061764271339
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": -113.0,
+              "ci95": [
+                -537.8246436966435,
+                311.8246436966435
+              ]
+            }
+          },
+          "0.9": {
+            "ECT": {
+              "estimate": 517.0,
+              "ci95": [
+                334.73709000426254,
+                699.2629099957375
+              ]
+            },
+            "SCT": {
+              "estimate": 404.0,
+              "ci95": [
+                259.3569681389099,
+                548.6430318610901
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": -113.0,
+              "ci95": [
+                -334.7766568318949,
+                108.77665683189491
+              ]
+            }
+          },
+          "1": {
+            "ECT": {
+              "estimate": 517.0,
+              "ci95": [
+                404.6013249136354,
+                629.3986750863646
+              ]
+            },
+            "SCT": {
+              "estimate": 404.0,
+              "ci95": [
+                331.4546180550023,
+                476.5453819449977
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": -113.0,
+              "ci95": [
+                -241.21890868535712,
+                15.218908685357121
+              ]
+            }
+          }
+        }
+      },
+      "free_tendon_strain_pct": {
+        "ECT_and_SCT_pre_post_mean_sd": [
+          [
+            [
+              6.8,
+              1.7
+            ],
+            [
+              6.0,
+              1.1
+            ]
+          ],
+          [
+            [
+              7.2,
+              1.4
+            ],
+            [
+              6.9,
+              1.7
+            ]
+          ]
+        ],
+        "sensitivity": {
+          "-1": {
+            "ECT": {
+              "estimate": -0.7999999999999998,
+              "ci95": [
+                -2.4920230658162414,
+                0.8920230658162418
+              ]
+            },
+            "SCT": {
+              "estimate": -0.2999999999999998,
+              "ci95": [
+                -2.0167227788510904,
+                1.4167227788510908
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5,
+              "ci95": [
+                -1.7926380867180027,
+                2.7926380867180027
+              ]
+            }
+          },
+          "0": {
+            "ECT": {
+              "estimate": -0.7999999999999998,
+              "ci95": [
+                -2.023601994163207,
+                0.42360199416320765
+              ]
+            },
+            "SCT": {
+              "estimate": -0.2999999999999998,
+              "ci95": [
+                -1.5195773364256622,
+                0.9195773364256625
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5,
+              "ci95": [
+                -1.143110112762436,
+                2.143110112762436
+              ]
+            }
+          },
+          "0.5": {
+            "ECT": {
+              "estimate": -0.7999999999999998,
+              "ci95": [
+                -1.7024033092543318,
+                0.10240330925433228
+              ]
+            },
+            "SCT": {
+              "estimate": -0.2999999999999998,
+              "ci95": [
+                -1.1703360095799578,
+                0.5703360095799581
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5,
+              "ci95": [
+                -0.6924151075219478,
+                1.6924151075219478
+              ]
+            }
+          },
+          "0.9": {
+            "ECT": {
+              "estimate": -0.7999999999999998,
+              "ci95": [
+                -1.3177215916876204,
+                -0.28227840831237927
+              ]
+            },
+            "SCT": {
+              "estimate": -0.2999999999999998,
+              "ci95": [
+                -0.7166263093112653,
+                0.11662630931126555
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5,
+              "ci95": [
+                -0.13322317666724603,
+                1.133223176667246
+              ]
+            }
+          },
+          "1": {
+            "ECT": {
+              "estimate": -0.7999999999999998,
+              "ci95": [
+                -1.162576371246337,
+                -0.4374236287536626
+              ]
+            },
+            "SCT": {
+              "estimate": -0.2999999999999998,
+              "ci95": [
+                -0.46613446246946005,
+                -0.1338655375305396
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 0.5,
+              "ci95": [
+                0.11286518270308349,
+                0.8871348172969165
+              ]
+            }
+          }
+        }
+      },
+      "aponeurosis_complex_stiffness_N_mm": {
+        "ECT_and_SCT_pre_post_mean_sd": [
+          [
+            [
+              592.0,
+              118.0
+            ],
+            [
+              595.0,
+              101.0
+            ]
+          ],
+          [
+            [
+              560.0,
+              177.0
+            ],
+            [
+              687.0,
+              285.0
+            ]
+          ]
+        ],
+        "sensitivity": {
+          "-1": {
+            "ECT": {
+              "estimate": 3.0,
+              "ci95": [
+                -129.3403755049132,
+                135.3403755049132
+              ]
+            },
+            "SCT": {
+              "estimate": 127.0,
+              "ci95": [
+                -139.75085827309368,
+                393.7508582730937
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 124.0,
+              "ci95": [
+                -164.16013859111382,
+                412.1601385911138
+              ]
+            }
+          },
+          "0": {
+            "ECT": {
+              "estimate": 3.0,
+              "ci95": [
+                -90.8602936814894,
+                96.8602936814894
+              ]
+            },
+            "SCT": {
+              "estimate": 127.0,
+              "ci95": [
+                -66.70655471209886,
+                320.70655471209886
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 124.0,
+              "ci95": [
+                -84.4926232831684,
+                332.4926232831684
+              ]
+            }
+          },
+          "0.5": {
+            "ECT": {
+              "estimate": 3.0,
+              "ci95": [
+                -63.76559443734806,
+                69.76559443734806
+              ]
+            },
+            "SCT": {
+              "estimate": 127.0,
+              "ci95": [
+                -16.893480786764513,
+                270.8934807867645
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 124.0,
+              "ci95": [
+                -29.910408509694435,
+                277.91040850969443
+              ]
+            }
+          },
+          "0.9": {
+            "ECT": {
+              "estimate": 3.0,
+              "ci95": [
+                -28.240302448120527,
+                34.24030244812053
+              ]
+            },
+            "SCT": {
+              "estimate": 127.0,
+              "ci95": [
+                41.84239674268264,
+                212.15760325731736
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 124.0,
+              "ci95": [
+                35.238562694143695,
+                212.7614373058563
+              ]
+            }
+          },
+          "1": {
+            "ECT": {
+              "estimate": 3.0,
+              "ci95": [
+                -7.272997185312896,
+                13.272997185312896
+              ]
+            },
+            "SCT": {
+              "estimate": 127.0,
+              "ci95": [
+                64.6426565075885,
+                189.3573434924115
+              ]
+            },
+            "SCT_minus_ECT": {
+              "estimate": 124.0,
+              "ci95": [
+                61.139475002264824,
+                186.86052499773518
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "FORCE20": {
+    "status": "INSUFFICIENT_DATA",
+    "zoger": {
+      "100": {
+        "full_sample": {
+          "S2": {
+            "n": 28,
+            "observed_peak_N": {
+              "estimate": 2920.5,
+              "ci95": [
+                2675.0482238824993,
+                3165.9517761175007
+              ]
+            },
+            "fixed_baseline_model_prediction_N": 2567.0,
+            "model_minus_observed_bias_N": {
+              "estimate": -353.5,
+              "ci95": [
+                -598.9517761175008,
+                -108.04822388249923
+              ]
+            },
+            "model_RMSE_N": 715.0810643356658,
+            "LOSO_mean_RMSE_N": 644.6156477571216,
+            "MAE_model_lower_bound_N": 353.5,
+            "MAE_LOSO_upper_bound_N": 644.6156477571216,
+            "MAE_LOSO_advantage_guaranteed_in_sample": false
+          },
+          "S3": {
+            "n": 28,
+            "observed_peak_N": {
+              "estimate": 2959.5,
+              "ci95": [
+                2710.597164155097,
+                3208.402835844903
+              ]
+            },
+            "fixed_baseline_model_prediction_N": 2567.0,
+            "model_minus_observed_bias_N": {
+              "estimate": -392.5,
+              "ci95": [
+                -641.4028358449032,
+                -143.59716415509678
+              ]
+            },
+            "model_RMSE_N": 742.54717190223,
+            "LOSO_mean_RMSE_N": 653.6789641315897,
+            "MAE_model_lower_bound_N": 392.5,
+            "MAE_LOSO_upper_bound_N": 653.6789641315897,
+            "MAE_LOSO_advantage_guaranteed_in_sample": false
+          }
+        },
+        "full_sample_S2_minus_S3_N": {
+          "estimate": -39.1,
+          "ci95": [
+            -90.05160091917789,
+            11.851600919177883
+          ]
+        },
+        "parsed_marker_count": 16,
+        "centers_pixels": [
+          [
+            510.5,
+            177.5
+          ],
+          [
+            491.0,
+            181.0
+          ],
+          [
+            345.5,
+            182.0
+          ],
+          [
+            311.5,
+            189.0
+          ],
+          [
+            395.0,
+            189.0
+          ],
+          [
+            286.5,
+            196.0
+          ],
+          [
+            448.0,
+            199.5
+          ],
+          [
+            464.5,
+            200.5
+          ],
+          [
+            278.0,
+            204.5
+          ],
+          [
+            380.5,
+            210.5
+          ],
+          [
+            360.0,
+            216.5
+          ],
+          [
+            559.0,
+            219.5
+          ],
+          [
+            346.0,
+            225.5
+          ],
+          [
+            433.5,
+            226.0
+          ],
+          [
+            302.5,
+            228.0
+          ],
+          [
+            389.5,
+            230.5
+          ]
+        ],
+        "digitized_only_S2_mean_N": 2905.941507395801,
+        "digitized_only_S3_mean_N": 2930.7967197510134,
+        "digitized_only_S2_minus_S3_mean_N": -24.85521235521236,
+        "subset_prediction_compare": {
+          "model_MAE_N": 610.5368787366709,
+          "model_bias_N": -363.79671975101337,
+          "LOSO_MAE_N": 598.0899082699636,
+          "persistence_S2_to_S3_MAE_N": 118.96718146718138,
+          "LOSO_minus_model_MAE_N": {
+            "estimate": -12.44697046670737,
+            "ci95": [
+              -172.83846606425394,
+              152.43068429653408
+            ]
+          },
+          "LOSO_minus_model_center_pixel_error_envelope_N": [
+            -62.44697046670737,
+            37.55302953329263
+          ],
+          "persistence_minus_model_MAE_N": {
+            "estimate": -491.56969726948955,
+            "ci95": [
+              -730.3704875520058,
+              -278.0345122006657
+            ]
+          }
+        }
+      },
+      "140": {
+        "full_sample": {
+          "S2": {
+            "n": 28,
+            "observed_peak_N": {
+              "estimate": 5461.4,
+              "ci95": [
+                5023.037862715901,
+                5899.762137284099
+              ]
+            },
+            "fixed_baseline_model_prediction_N": 3804.5,
+            "model_minus_observed_bias_N": {
+              "estimate": -1656.8999999999996,
+              "ci95": [
+                -2095.2621372840986,
+                -1218.5378627159007
+              ]
+            },
+            "model_RMSE_N": 1994.4181914784067,
+            "LOSO_mean_RMSE_N": 1151.2448495883505,
+            "MAE_model_lower_bound_N": 1656.8999999999996,
+            "MAE_LOSO_upper_bound_N": 1151.2448495883505,
+            "MAE_LOSO_advantage_guaranteed_in_sample": true
+          },
+          "S3": {
+            "n": 28,
+            "observed_peak_N": {
+              "estimate": 5393.1,
+              "ci95": [
+                4944.423459485687,
+                5841.776540514314
+              ]
+            },
+            "fixed_baseline_model_prediction_N": 3804.5,
+            "model_minus_observed_bias_N": {
+              "estimate": -1588.6000000000004,
+              "ci95": [
+                -2037.2765405143134,
+                -1139.9234594856873
+              ]
+            },
+            "model_RMSE_N": 1953.1290823957338,
+            "LOSO_mean_RMSE_N": 1178.3329636963117,
+            "MAE_model_lower_bound_N": 1588.6000000000004,
+            "MAE_LOSO_upper_bound_N": 1178.3329636963117,
+            "MAE_LOSO_advantage_guaranteed_in_sample": true
+          }
+        },
+        "full_sample_S2_minus_S3_N": {
+          "estimate": 68.3,
+          "ci95": [
+            -55.82182233050871,
+            192.4218223305087
+          ]
+        },
+        "parsed_marker_count": 25,
+        "centers_pixels": [
+          [
+            503.5,
+            600.5
+          ],
+          [
+            481.0,
+            626.0
+          ],
+          [
+            338.5,
+            649.0
+          ],
+          [
+            322.0,
+            660.5
+          ],
+          [
+            451.5,
+            667.5
+          ],
+          [
+            324.5,
+            675.5
+          ],
+          [
+            392.5,
+            676.5
+          ],
+          [
+            446.5,
+            678.0
+          ],
+          [
+            262.5,
+            680.5
+          ],
+          [
+            429.0,
+            683.5
+          ],
+          [
+            305.0,
+            689.0
+          ],
+          [
+            419.0,
+            689.0
+          ],
+          [
+            396.0,
+            697.5
+          ],
+          [
+            330.5,
+            705.0
+          ],
+          [
+            415.5,
+            705.0
+          ],
+          [
+            435.0,
+            709.5
+          ],
+          [
+            450.0,
+            715.0
+          ],
+          [
+            345.5,
+            718.0
+          ],
+          [
+            556.0,
+            722.5
+          ],
+          [
+            388.0,
+            729.5
+          ],
+          [
+            473.0,
+            737.5
+          ],
+          [
+            526.5,
+            746.0
+          ],
+          [
+            328.5,
+            750.5
+          ],
+          [
+            326.5,
+            765.5
+          ],
+          [
+            462.0,
+            798.0
+          ]
+        ],
+        "digitized_only_S2_mean_N": 5424.770522540149,
+        "digitized_only_S3_mean_N": 5336.647917176164,
+        "digitized_only_S2_minus_S3_mean_N": 88.12260536398462,
+        "subset_prediction_compare": {
+          "model_MAE_N": 1576.1997733757237,
+          "model_bias_N": -1532.1479171761637,
+          "LOSO_MAE_N": 933.3912121953207,
+          "persistence_S2_to_S3_MAE_N": 264.6743295019158,
+          "LOSO_minus_model_MAE_N": {
+            "estimate": -642.8085611804031,
+            "ci95": [
+              -1057.4121796010982,
+              -185.99824450422676
+            ]
+          },
+          "LOSO_minus_model_center_pixel_error_envelope_N": [
+            -692.8085611804031,
+            -592.8085611804031
+          ],
+          "persistence_minus_model_MAE_N": {
+            "estimate": -1311.525443873808,
+            "ci95": [
+              -1702.774934376783,
+              -917.0606195483822
+            ]
+          }
+        }
+      }
+    },
+    "petrovic_140": {
+      "n": 24,
+      "observed_peak_N": {
+        "estimate": 3292.0,
+        "ci95": [
+          3104.4138997601217,
+          3479.5861002398783
+        ]
+      },
+      "fixed_baseline_model_prediction_N": 3804.5,
+      "model_minus_observed_bias_N": {
+        "estimate": 512.5,
+        "ci95": [
+          324.91389976012164,
+          700.0861002398783
+        ]
+      },
+      "model_RMSE_N": 672.1477108493341,
+      "LOSO_mean_RMSE_N": 453.7946414691198,
+      "MAE_model_lower_bound_N": 512.5,
+      "MAE_LOSO_upper_bound_N": 453.7946414691198,
+      "MAE_LOSO_advantage_guaranteed_in_sample": true
+    },
+    "model_scenario_140_grid": [
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.4939,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.4064,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": false,
+        "joint_gate_pass": false
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.6134,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.5189,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 63.592,
+        "local_sf": 1.6433,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.0,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 53.287,
+        "local_stress_MPa": 67.55,
+        "local_sf": 1.547,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.718,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.0,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.6173,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.8554,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.08,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.7467,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 2000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 55.297,
+        "local_sf": 1.8898,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      },
+      {
+        "posture": "extended_140deg_int",
+        "scenario": "strategy_2_coordinated_chain",
+        "plate_force_bilateral_N": 4632.6,
+        "quadriceps_moment_Nm_single_limb": 264.9,
+        "equivalent_tendon_force_N": 5541.84,
+        "moment_arm_m": 0.0478,
+        "csa_multiplier": 1.15,
+        "uts_multiplier": 1.1,
+        "rate_N_s": 20000,
+        "nominal_stress_MPa": 46.336,
+        "local_stress_MPa": 58.739,
+        "local_sf": 1.7791,
+        "plate_gain_pct": 21.77,
+        "force_goal_pass": true,
+        "conditional_tissue_gate_pass": true,
+        "joint_gate_pass": true
+      }
+    ],
+    "observed_augmentation_contrast_at_matched_pose": null,
+    "observed_individual_geometry_and_tissue_at_matched_pose": null
+  },
+  "dependencies_sha256_lf": {
+    "research/stage1_followup/run.py": "060fb2185304bc89215b5e6999c0ca21577cb1995ec39c2a1a12791ae4a4763d",
+    "research/stage1_followup/PROTOCOL.md": "06668e9b81072f9f39a1e2e04ddba9a1fc5ffdc72aea096271b561f6c2cdf82e",
+    "research/stage1_followup/SOURCES.json": "76a4b67679e7a72707158a75ecbf4bc42e12232feed67ec697f1539ce194805e",
+    "research/program_evidence_audit/GRAVITY_REBUILD_RESULTS.json": "97e1851e0c41802be02c79834311dca2d0e4e8b2f9c892395e1220dc1d1e5a49"
+  }
+}
