@@ -92,7 +92,8 @@
     "next_action": "Identify context-specific recovery from simultaneous individual PCr–VO2–power data; repeat locked participant holdout before architecture efficacy claims.",
     "progress_2026_11_04": "Dynamic model implemented and software-verified EXP-0011..0014; participant endpoint transfer negative. Empirical CPE45 validation, central/damage/thermal feedback remain unresolved.",
     "progress_recovery_2026_11_04": "New independent21participant source,14dev/7test: physical correction fails. Exact metabolic-scale confounding and flat recovery profile; empiricalCPE45 validation remains absent.",
-    "progress_cycle5_2026_11_04": "Two exact D2 symmetries and nine-combination quotient established. Real PCr files acquired, but no joint calibrated continuousVO2-power-PCr source. Historical negative tests preserved; issue remains open."
+    "progress_cycle5_2026_11_04": "Two exact D2 symmetries and nine-combination quotient established. Real PCr files acquired, but no joint calibrated continuousVO2-power-PCr source. Historical negative tests preserved; issue remains open.",
+    "progress_exp_0139": "OPEN: partial human evidence reproduced. Await synchronized same-participant 2700 s effort/rest sessions with mechanical output, movement and control trials, exact post-test delays, and approved workload and outcome criteria."
   },
   {
     "id": "ISS-0012",

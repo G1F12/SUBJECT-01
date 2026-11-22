@@ -358,5 +358,25 @@
       "NEG-0118"
     ],
     "statement": "Definitive Scientific Verdict on Architecture A and Ultimate Program Goal: Whole-System HOLD (status = CONDITIONAL_POTENTIAL_WHOLE_SYSTEM_HOLD, verdict = NOT_CONFIRMED_PENDING_DECISIVE_MEASUREMENTS; Definitive Answer = NO, NOT CONFIRMED AT CURRENT EVIDENCE LEVEL). Rigorous multi-module physical evaluation and open-data empirical audits confirm that no single configuration simultaneously satisfies all target requirements under a unified physical state: (1) TARGET-FORCE20: in 100° flexed posture, force gain +21.93% is accompanied by enthesis shear SF = 1.285 < 1.50 at dynamic rate (20 kN/s), failing tissue safety; in 140° extended posture, force gain is +21.77% and dynamic SF = 1.747 >= 1.50, but model is vulnerable to steep angular artifacts (28-41 N/deg, ~410 N error at 10° misalignment) and loses to constant baseline by 148 N MAE on Santos data; (2) TARGET-ADAPT25: within-cohort force gain (+18.35% at 14 d) is empirically confirmed in Santos et al., but comparative rate acceleration (+25% over control) is unassessed due to absence of a control cohort, and initial reserve SF0 >= 1.776 is an ODE model sensitivity limit without in vivo human tendon imaging; (3) TARGET-CPE45: 4-layer Pennes bioheat solver is empirically validated on McLaughlin (MAE 0.586 °C vs persistence 1.275 °C), but continuous 360 W is an isolated thermal scenario that breaches 39.5 °C in 1240-2365 s (continuous max power is NOT required by canonical CPE45.json); intermittent pacing (D <= 0.59-0.92) avoids hyperthermia solely by cutting mechanical work by 7% to 36% (619-902 kJ vs 972 kJ); power maintenance, motor control (with CV=2.1% unconfirmed as a proxy), tissue wear, and post-load MVC over 2700 s are marked strictly as не оценено (UNASSESSED); (4) Work-to-force prediction: evaluated across 4 independent human datasets (Jutlah, Norbury, Križaj, Evangelidis), actual mechanical work in Joules does not improve out-of-sample prediction of post-exercise capacity, and adding work degrades precision; (5) Sequential torque dynamics (EXP-0138): terminal torque tau_end and terminal volume fail out-of-sample transfer (MAE 72.51 Nm vs fixed baseline 44.97 Nm) and fail local utility criteria on Križaj (PreAlone 10.60 Nm vs Pre+tau_end 10.71 Nm, Delta = -0.10 Nm, CI [-0.75, +0.50]) and Norbury (+1.93 N at 5m, +1.44 N at 45m, both CIs crossing zero); (6) Open-data transfer boundary is firmly established; (7) Specific decisive measurement outcomes are ratified to definitively confirm (all 3 passing) or reject (any 1 failing) Architecture A in vivo."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0036",
+    "title": "CPE45 remains unconfirmed on partial human evidence",
+    "decision": "Record TARGET-CPE45 as NOT_CONFIRMED_PARTIAL_EVIDENCE for TARGET-FORCE20 and TARGET-ADAPT25. Keep the continuous 360 W model separate and the new thresholds exploratory.",
+    "rationale": "EXP-0139 quantifies separate measured channels. A synchronized 2700 s cohort and approved criteria are missing. McLaughlin uses rectal temperature as the reference; EXP-0131 misidentifies the site.",
+    "amends": [
+      "DEC-0035"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0139"
+    ],
+    "findings": [
+      "FND-0135"
+    ],
+    "negative_results": [
+      "NEG-0119"
+    ]
   }
 ]

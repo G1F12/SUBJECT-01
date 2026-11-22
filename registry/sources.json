@@ -2050,5 +2050,41 @@
       "pdf_sha256": "c4161c6741690820e17b930462fd45ecd4d2183e5fa0259ca5bf5534f934ad28",
       "license": "CC BY 4.0"
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0116",
+    "name": "Goodall et al. simulated soccer and 45-minute knee-extension MVC",
+    "type": "primary_article",
+    "doi": "10.1007/s00421-017-3561-9",
+    "url": "https://doi.org/10.1007/s00421-017-3561-9",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_human_evidence/REPORT.md",
+    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "limits": "Article results and 150 s upper bound for post measurement reviewed; raw data not obtained."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0117",
+    "name": "Marshall et al. SAFT90 hamstring torque and sprint time",
+    "type": "primary_article",
+    "doi": "10.1371/journal.pone.0102753",
+    "url": "https://doi.org/10.1371/journal.pone.0102753",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_human_evidence/REPORT.md",
+    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "limits": "Matched 15-minute blocks; access explicitly limited to summary results."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0118",
+    "name": "Almquist et al. sprint cycling supplementary tables",
+    "type": "primary_data",
+    "doi": "10.6084/m9.figshare.14678322.v1",
+    "url": "https://doi.org/10.6084/m9.figshare.14678322.v1",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/cpe45_human_evidence/REPORT.md",
+    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "limits": "Publisher DOCX inspected; aggregate pre-sprint tables only."
   }
 ]

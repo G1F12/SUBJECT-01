@@ -1,6 +1,8 @@
 # LINK 3 SCIENTIFIC VERIFICATION REPORT: EXP-0131
 ## ADAPT25, Speed, Motor Control, and CPE45 Bioheat on Open Cohort Data
 
+**Уточнение EXP-0139.** Референсный датчик в исходной книге McLaughlin помечен `Rectal`. Ниже сохранён текст EXP-0131 с ошибочным обозначением `esophageal`. Наблюдения относятся к первым 45 минутам непрерывного теста. Выводы о 360 Вт и прерывистых режимах относятся к историческому расчёту модели. Статус данных CPE45 и разбор измеренных условий приведены в [EXP-0139](../cpe45_human_evidence/REPORT.md).
+
 **Experiment ID:** EXP-0131  
 **Related Findings:** FND-0127  
 **Related Negative Results:** NEG-0111  

@@ -3958,5 +3958,39 @@
     "limits": "Evaluated across 21 participants in plantar flexion (same-leg pre/post MVIC) and 12 participants in leg press resistance recovery (4 sets, 5 min, 45 min). Fixed Evangelidis model suffers catastrophic domain shift (MAE 72.51 Nm vs fixed source baseline 44.97 Nm and local target baseline 10.60 Nm). Local LOSO retraining on Križaj yields baseline PreAlone MAE = 10.60 Nm (invariant across matching rules and condition permutations); adding tau_end yields 10.71 Nm (Rule 2) and 10.79 Nm (Rule 1), worsening prediction by -0.10 to -0.18 Nm (all CIs cross zero). In Norbury et al. 2024, aligned recalculation yields nominal gains of +1.93 N at 5 min (49.50 -> 47.58 N, 95% CI [-6.13, 10.31]) and +1.44 N at 45 min (34.38 -> 32.94 N, 95% CI [-4.22, 6.87]), both crossing zero and failing pre-specified utility.",
     "external_validation": "OUT_OF_SAMPLE_CROSS_VALIDATION",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0139",
+    "name": "CPE45 human evidence audit across measured and published partial outcomes",
+    "status": "completed",
+    "sources": [
+      "SRC-0040",
+      "SRC-0086",
+      "SRC-0087",
+      "SRC-0088",
+      "SRC-0111",
+      "SRC-0116",
+      "SRC-0117",
+      "SRC-0118"
+    ],
+    "design": "Participant-paired replay across five public files, two published halftime outcomes, and reproduction of locked prior transfer checks.",
+    "model": "research/cpe45_human_evidence/run.py",
+    "protocol": "research/cpe45_human_evidence/PROTOCOL.md",
+    "inputs": "research/cpe45_human_evidence/SOURCES.json",
+    "report": "research/cpe45_human_evidence/REPORT.md",
+    "outputs": [
+      "research/cpe45_human_evidence/RESULTS.json"
+    ],
+    "reproduction_command": "python research/cpe45_human_evidence/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0135"
+      ],
+      "negative_results": [
+        "NEG-0119"
+      ]
+    },
+    "limits": "No eligible joint 2700 s cohort or approved criteria. Continuous 360 W is a separate scenario."
   }
 ]

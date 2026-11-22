@@ -1162,5 +1162,13 @@
     "statement": "Independent evaluation across Križaj et al. 2025 (SRC-0112, N=21 adults, 42 bilateral leg obs) and Norbury et al. 2024 (SRC-0111, DOI 10.1113/EP091705, N=12 men, 24 obs, 4 sets to failure) conclusively refutes the hypothesis that terminal contraction torque (tau_end) or terminal repetition volume provides statistically confirmed out-of-sample predictive utility for post-exercise residual force. (1) Direct transfer of the fixed Evangelidis hamstrings model onto Križaj fails catastrophically with overall MAE = 72.51 Nm (bias +72.51 Nm; 47.77 Nm at 75% and 97.24 Nm at 90%), performing substantially worse than the fixed source retention baseline of 44.97 Nm and the local target benchmark of 10.60 Nm, driven by marked divergence in fatigue depth (72.4% retention over 99 contractions vs 97.3% over 3 contractions). (2) Retrained Leave-One-Subject-Out (LOSO) cross-validation on Križaj yields an invariant baseline PreAlone MAE of 10.60 Nm (10.6032 Nm) across all bipartite matching rules and condition permutations; adding terminal torque yields 10.71 Nm under Rule 2 (Joint Bipartite Error) and 10.79 Nm under Rule 1 (Unilateral 75% Error), slightly worsening prediction error (-0.10 to -0.18 Nm; 95% CIs [-0.75, +0.50] and [-0.42, +0.03] spanning zero). (3) In Norbury et al. 2024, resolving an indexing misalignment in prediction alignment reveals nominal error reductions from 49.50 N to 47.58 N at 5 min (Delta = +1.93 N, 95% CI [-6.13, +10.31] N) and from 34.38 N to 32.94 N at 45 min (Delta = +1.44 N, 95% CI [-4.22, +6.87] N). Because both 95% bootstrap CIs cross zero (p > 0.05), neither terminal set volume nor total volume provides statistically confirmed utility beyond baseline force alone.",
     "confidence": "statistically_reproduced",
     "data_type": "PRIMARY_OPEN_DATA"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0135",
+    "experiment_id": "EXP-0139",
+    "title": "Scope of human CPE45 partial measurements",
+    "statement": "McLaughlin (N=24) shows 455.5 kJ [407.0, 505.7] and rectal change +1.31 C [1.10, 1.52] from exercise minutes 1 to 45. Jutlah (N=21) peak losses of 15.73–21.08% compare first and last two efforts in short repeated-sprint tests; visit order is confounded with rest duration. Goodall (N=10) reported knee-extensor MVC loss of 11% (SD 6%) within 150 s after a simulated 45-minute half.",
+    "confidence": "statistically_reproduced"
   }
 ]
