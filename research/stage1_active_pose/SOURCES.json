@@ -1,0 +1,415 @@
+{
+  "files": {
+    "kubo.pdf": [
+      "https://www.wheelersportstech.com/wp-content/uploads/2023/05/Effects-of-plyometric-and-isometric-training-on-muscle-and-tendon-stiffness-in-vivo.pdf",
+      "b25f42596168a733329cf0fe942da02d17435acb866de6cf432caeffe358f2c1"
+    ],
+    "ply-list.xml": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC5555899",
+      "056851b60a34e191d4011924e0b0e26437d7d27291b2e9ae8992ed5cea6c0435"
+    ],
+    "ply.xml": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/PMC5555899.1/PMC5555899.1.xml",
+      "37f03f1234fad797af82a731f506254a5654dc6bfaf270af59d005f46f476eae"
+    ],
+    "coord.pdf": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/PMC10960029.1/PMC10960029.1.pdf",
+      "255013942b4de1e4dbee7cb77ca7e3e98ae80c7a876cecb82296c5c8e8b5a867"
+    ],
+    "coord.xml": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/PMC10960029.1/PMC10960029.1.xml",
+      "f8156eb7d71a44f5ff74b5cc15281a4060aae32c703bb8b6cda3ad7cf1adf944"
+    ],
+    "coord-list.xml": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10960029",
+      "be4e0260252a3ca9c90a0d13031a92edaa7257c4ae5ab33cd9e3cdaf11a3bad2"
+    ],
+    "coord-s1.docx": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/PMC10960029.1/41598_2024_56840_MOESM1_ESM.docx",
+      "4c8d66c0818aa92297c95836beb1f0f25179ccd47d2192baa0adceb2f9c9e282"
+    ],
+    "coord-correction.xml": [
+      "https://pmc-oa-opendata.s3.amazonaws.com/PMC11074321.1/PMC11074321.1.xml",
+      "bd70a1b3193b91e048d0784ffecd586a9b41622b74f644f1638ecf5671341a2b"
+    ],
+    "foure.pdf": [
+      "https://hal.science/hal-02130763/document",
+      "42b43d356a95ef01327cd23d6e26d2773d1c57eed24d3ced6317268235040d0b"
+    ],
+    "bohm-thesis.pdf": [
+      "https://edoc.hu-berlin.de/bitstream/handle/18452/17771/bohm.pdf?isAllowed=y&sequence=1",
+      "3ab198bafc8b21fb7053a86f6111d8a32cfef60cca4a40e6af01fa4492c2a06e"
+    ]
+  },
+  "web_only": {
+    "kubo_yata_2017": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0042-121000.pdf",
+    "arampatzis_2010": "https://pubmed.ncbi.nlm.nih.gov/20863501/",
+    "kubo_ikebukuro_2021": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8554776/"
+  },
+  "kubo_ishigaki": {
+    "n": 11,
+    "weeks": 12,
+    "isometric_mvc_angle_deg_plantarflexion": 10,
+    "tendon_assessment_angle_deg_plantarflexion": 0,
+    "mvc_nm_mean_sd": {
+      "iso": [
+        [
+          104.3,
+          16.7
+        ],
+        [
+          124.8,
+          15.0
+        ]
+      ],
+      "ply": [
+        [
+          103.3,
+          7.6
+        ],
+        [
+          107.3,
+          9.4
+        ]
+      ]
+    },
+    "individual_gain_pct_sd": {
+      "iso": [
+        22.1,
+        14.2
+      ],
+      "ply": [
+        4.4,
+        5.0
+      ]
+    },
+    "rounding_half_step": 0.05,
+    "iso_ramp_peak_elongation_mm": [
+      [
+        21.3,
+        2.8
+      ],
+      [
+        21.7,
+        2.8
+      ]
+    ],
+    "iso_ballistic_peak_elongation_mm": [
+      [
+        16.6,
+        2.7
+      ],
+      [
+        16.0,
+        3.2
+      ]
+    ],
+    "ply_ramp_peak_elongation_mm": [
+      [
+        21.3,
+        2.8
+      ],
+      [
+        21.9,
+        3.3
+      ]
+    ],
+    "ply_ballistic_peak_elongation_mm": [
+      [
+        15.9,
+        3.5
+      ],
+      [
+        18.2,
+        4.2
+      ]
+    ],
+    "ramp_stiffness_n_per_mm": {
+      "iso": [
+        23.7,
+        32.5
+      ],
+      "ply": [
+        22.6,
+        23.3
+      ]
+    },
+    "ballistic_stiffness_n_per_mm": {
+      "iso": [
+        19.2,
+        24.2
+      ],
+      "ply": [
+        20.7,
+        20.9
+      ]
+    }
+  },
+  "tsai": {
+    "weeks": [
+      0,
+      8,
+      16
+    ],
+    "summary_n_legs": {
+      "HFHV": 12,
+      "HFLV": 11,
+      "LFHV": 12,
+      "LFLV": 13,
+      "REF": 11,
+      "control": 13
+    },
+    "mvc_nm_mean_sd": {
+      "HFHV": [
+        [
+          230,
+          50.4
+        ],
+        [
+          252,
+          55.3
+        ],
+        [
+          258,
+          43.4
+        ]
+      ],
+      "HFLV": [
+        [
+          224,
+          45.3
+        ],
+        [
+          239,
+          47.5
+        ],
+        [
+          249,
+          45.9
+        ]
+      ],
+      "LFHV": [
+        [
+          253,
+          53.6
+        ],
+        [
+          278,
+          47.9
+        ],
+        [
+          268,
+          29.0
+        ]
+      ],
+      "LFLV": [
+        [
+          250,
+          41.0
+        ],
+        [
+          286,
+          43.1
+        ],
+        [
+          286,
+          40.9
+        ]
+      ],
+      "REF": [
+        [
+          230,
+          43.0
+        ],
+        [
+          253,
+          42.6
+        ],
+        [
+          244,
+          42.5
+        ]
+      ],
+      "control": [
+        [
+          245,
+          52.2
+        ],
+        [
+          247,
+          50.2
+        ],
+        [
+          246,
+          42.8
+        ]
+      ]
+    },
+    "strain_fig3c_y_12_and_2_pct": [
+      583,
+      728
+    ],
+    "strain_fig3c_median_y": {
+      "HFHV": [
+        661,
+        676,
+        667
+      ],
+      "HFLV": [
+        676,
+        674,
+        683
+      ],
+      "LFHV": [
+        671,
+        668,
+        665
+      ],
+      "LFLV": [
+        660,
+        671,
+        666
+      ],
+      "REF": [
+        678,
+        684,
+        678
+      ],
+      "control": [
+        677,
+        670,
+        672
+      ]
+    },
+    "corrected_recovery_hours": {
+      "HFHV": [
+        24,
+        48
+      ],
+      "HFLV": [
+        24,
+        48
+      ],
+      "LFHV": [
+        48,
+        96
+      ],
+      "LFLV": [
+        48,
+        96
+      ],
+      "REF": [
+        24,
+        72
+      ]
+    },
+    "weekly_loading_seconds": {
+      "HFHV": 300,
+      "HFLV": 180,
+      "LFHV": 300,
+      "LFLV": 180,
+      "REF": 240
+    }
+  },
+  "kubo_yata": {
+    "weeks": 12,
+    "paired_legs_n": 9,
+    "passive_control_n": 8,
+    "mvc_nm_mean_sd": {
+      "con": [
+        [
+          226,
+          40
+        ],
+        [
+          266,
+          53
+        ]
+      ],
+      "ecc": [
+        [
+          228,
+          50
+        ],
+        [
+          259,
+          50
+        ]
+      ],
+      "passive": [
+        [
+          225,
+          49
+        ],
+        [
+          216,
+          51
+        ]
+      ]
+    },
+    "individual_1rm_gain_pct_sd": {
+      "con": [
+        62.4,
+        13.9
+      ],
+      "ecc": [
+        48.5,
+        17.3
+      ]
+    },
+    "max_patellar_tendon_elongation_mm": {
+      "con": [
+        5.2,
+        4.5
+      ],
+      "ecc": [
+        4.9,
+        4.7
+      ],
+      "passive": [
+        5.1,
+        4.7
+      ]
+    }
+  },
+  "foure": {
+    "weeks": 14,
+    "n": [
+      9,
+      10
+    ],
+    "mvc_nm_mean_sd": {
+      "ply": [
+        [
+          133,
+          16
+        ],
+        [
+          141,
+          18
+        ]
+      ],
+      "control": [
+        [
+          131,
+          16
+        ],
+        [
+          132,
+          15
+        ]
+      ]
+    },
+    "common_load_tendon_elongation_mm": {
+      "ply": [
+        14.5,
+        15.1
+      ],
+      "control": [
+        14.8,
+        14.8
+      ]
+    },
+    "published_dissipation_coefficient_relative_change_pct": -35.0
+  }
+}

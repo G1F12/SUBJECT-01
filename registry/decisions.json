@@ -518,5 +518,25 @@
     "negative_results": [
       "NEG-0126"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0044",
+    "title": "Retain Stage 1 HOLD with a passing ADAPT25 strength component",
+    "decision": "Keep Stage 1 on HOLD.",
+    "rationale": "Tissue follows a separate pose and intermediate measurements are unavailable.",
+    "amends": [
+      "DEC-0043"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0147"
+    ],
+    "findings": [
+      "FND-0143"
+    ],
+    "negative_results": [
+      "NEG-0127"
+    ]
   }
 ]

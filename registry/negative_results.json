@@ -1020,5 +1020,13 @@
     "title": "Active trajectory confidence intervals and missing same-pose capacity keep Stage 1 open",
     "statement": "Quinlan young ECC-vs-CON margin +0.39 [-1.24,2.01] pp/week. Kubo knee adjusted +38.18 [21.31,55.05] pp only conditionally at rho=0.9; subject mass trajectory, paired uncertainty, and tissue capacity are absent. Geremia has calculated internal force and no parallel comparator. NCT03079180 has no posted results.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0127",
+    "experiment_id": "EXP-0147",
+    "title": "Tissue trajectory absent in the passing strength configuration",
+    "statement": "Strength at 10 degrees and tissue at neutral. Tsai matched-volume active contrast precision insufficient.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

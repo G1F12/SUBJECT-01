@@ -1,3 +1,5 @@
+**EXP-0147 / DEC-0044. HOLD.** Kubo ISO vs PLY ADAPT25 MVC +1.38 [0.24; 2.53] pp/week. Strength at 10 degrees, tissue at 0 degrees. [EXP-0147](research/stage1_active_pose/REPORT.md)
+
 # SUBJECT-01 — план программы до итоговой демонстрации
 
 ## Конечная цель

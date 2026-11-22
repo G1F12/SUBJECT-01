@@ -4222,5 +4222,36 @@
       ]
     },
     "limits": "Active strength contrasts cross threshold; passive-control and single-cohort gains omit adequate same-configuration tissue capacity or linked external moment."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0147",
+    "name": "Robust paired rate contrast and test posture audit",
+    "status": "completed",
+    "sources": [
+      "SRC-0161",
+      "SRC-0162",
+      "SRC-0163",
+      "SRC-0164",
+      "SRC-0165"
+    ],
+    "design": "Evaluate ADAPT25 across all compatible cross-limb correlations, then compare tissue-test geometry and matched-volume cohorts.",
+    "model": "research/stage1_active_pose/run.py",
+    "protocol": "research/stage1_active_pose/PROTOCOL.md",
+    "inputs": "research/stage1_active_pose/SOURCES.json",
+    "report": "research/stage1_active_pose/REPORT.md",
+    "outputs": [
+      "research/stage1_active_pose/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_active_pose/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0143"
+      ],
+      "negative_results": [
+        "NEG-0127"
+      ]
+    },
+    "limits": "Strength measured at 10 degrees plantarflexion and tissue at 0 degrees, without intermediate tissue data."
   }
 ]

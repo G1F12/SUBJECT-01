@@ -2661,5 +2661,70 @@
     "calibration_review": {
       "scope": "Registry JSON and linked PMC7807501.1 JATS and inventory downloaded. No posted results or public early force and tendon participant trajectories."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0161",
+    "name": "Kubo Ishigaki paired isometric and plyometric training",
+    "doi": "10.14814/phy2.13374",
+    "url": "https://doi.org/10.14814/phy2.13374",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0162",
+    "name": "Tsai matched volume Achilles loading",
+    "doi": "10.1038/s41598-024-56840-6",
+    "url": "https://doi.org/10.1038/s41598-024-56840-6",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0163",
+    "name": "Kubo Yata concentric and eccentric knee extension",
+    "doi": "10.1055/s-0042-121000",
+    "url": "https://doi.org/10.1055/s-0042-121000",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0164",
+    "name": "Foure plyometric training and Achilles mechanics",
+    "doi": "10.1152/japplphysiol.01150.2009",
+    "url": "https://doi.org/10.1152/japplphysiol.01150.2009",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0165",
+    "name": "Bohm Achilles strain rate and duration",
+    "doi": "10.1242/jeb.112268",
+    "url": "https://doi.org/10.1242/jeb.112268",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
   }
 ]
