@@ -458,5 +458,25 @@
     "negative_results": [
       "NEG-0123"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0041",
+    "title": "Stage 1 HOLD following native-peak and active RCT checks",
+    "decision": "Keep FORCE20 and ADAPT25 unconfirmed in Stage 1. Retain native-peak tissue measurements, grouped strength changes, and the conditional interval from the linked clinical data as separate reported results.",
+    "rationale": "Controlled strength margins do not meet thresholds on the analyzed summaries. The public mediation supplement contains code and adjusted contrasts rather than paired data. No eligible study shows local tissue reserve at a passing force or adaptation rate.",
+    "amends": [
+      "DEC-0040"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0144"
+    ],
+    "findings": [
+      "FND-0140"
+    ],
+    "negative_results": [
+      "NEG-0124"
+    ]
   }
 ]

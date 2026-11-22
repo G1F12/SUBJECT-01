@@ -2415,5 +2415,83 @@
     "calibration_review": {
       "scope": "JATS and NCT03724461 JSON checked. Paper shares trial with protocol, publishes selected strength outcomes, and does not report registered tendon outcomes."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0142",
+    "name": "Agergaard et al. 2021 heavy versus moderate slow resistance clinical cohort",
+    "type": "primary_article",
+    "doi": "10.1111/sms.14013",
+    "url": "https://doi.org/10.1111/sms.14013",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "Open thesis Paper I and Paper II linked via trial NCT03096067. Maximum isometric joint moment and tendon force–strain summary, native peak strain read from Paper II Fig. 1B. No raw paired trajectory."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0143",
+    "name": "Agergaard et al. TEREX randomized active restitution comparison",
+    "type": "primary_article",
+    "doi": "10.1111/sms.70235",
+    "url": "https://doi.org/10.1111/sms.70235",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher JATS and all three supplemental PDFs checked. Absolute and normalized strength are reported for different analysis sets; imaging and symptoms without peak mechanical measurements."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0144",
+    "name": "Nulty et al. strength training, active placebo and tendon morphology",
+    "type": "primary_article",
+    "doi": "10.1002/ejsc.12281",
+    "url": "https://doi.org/10.1002/ejsc.12281",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher JATS, open PDF and DOCX supplement inspected. Knee extensor MVT and maximum values from ramp-based separate tendon test, no individual microdata."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0145",
+    "name": "Carroll et al. randomized trial of supervised training across dietary groups",
+    "type": "primary_article",
+    "doi": "10.1016/j.tjnut.2024.04.001",
+    "url": "https://doi.org/10.1016/j.tjnut.2024.04.001",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS, participant flow figure and tables S1–S3 checked. Mean individual 1RM changes plus smaller separate-isometric tendon samples."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0146",
+    "name": "Deng et al. baseline-adjusted quadriceps strength and imaging",
+    "type": "primary_article",
+    "doi": "10.1016/j.jsams.2024.12.006",
+    "url": "https://doi.org/10.1016/j.jsams.2024.12.006",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher PDF and supplemental DOCX Table A.5 and R code inspected. Adjusted difference available; the code refers to mediation_dataset.sav, which is not packaged."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0147",
+    "name": "Breda et al. progressive loading versus eccentric exercise trial",
+    "type": "primary_article",
+    "doi": "10.1136/bjsports-2020-103403",
+    "url": "https://doi.org/10.1136/bjsports-2020-103403",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_active_trials/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS and PDF supplement inspected. Parent RCT of Deng; efficacy and symptoms plus dynamometer methods, no exercise-arm force trajectory."
+    }
   }
 ]

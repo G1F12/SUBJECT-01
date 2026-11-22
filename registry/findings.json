@@ -1202,5 +1202,13 @@
     "title": "Four-visit tissue trajectory and direct longitudinal force gains in near-extended leg press",
     "statement": "Weidlich mass-normalized rate margin is -0.042 [-0.851,0.767] pp/week, with published tissue strain time-by-group p=0.043. Bogdanis observed +22.0% at 146±4 degrees and +57.4% at 162±4 degrees in the same test configurations over training. In McMahon, both XLSX files repeat the separate ambiguous ID codes within both training groups.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0140",
+    "experiment_id": "EXP-0144",
+    "title": "Active trial reanalysis distinguishes native-peak loading from common-load properties",
+    "statement": "Agergaard HSR joint moment +15.54% and estimated tendon peak load +21.81%; peak strain graph 7.14% to 8.21% vs +0.20 pp at a common load. TEREX short restitution per-protocol moment +22.84% before and +4.62 pp after active-control adjustment. Carroll mixed-protein leg press +45.0% [32.04,57.96] before and +10.0 pp [-14.10,34.10] after active-control adjustment.",
+    "confidence": "statistically_reproduced"
   }
 ]

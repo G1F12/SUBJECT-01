@@ -1,0 +1,654 @@
+{
+  "base_commit": "8ed416100e02521b71125555b800aa9907687726",
+  "checked_date": "2026-11-22",
+  "files": {
+    "agergaard_thesis.pdf": {
+      "url": "https://www.fysio.dk/globalassets/documents/fafo/afhandlinger/phd/2021/ph.d.-anne-sofie-agergaard-2021.pdf?download=1",
+      "sha256": "a6e18ddb635c215613d59e5afcac9e249ed32352ed321e4652a389702ce80bd2"
+    },
+    "agergaard_trial.json": {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03096067",
+      "sha256": "a926d4a9698bfba456335eb13e5d4c6327d435910ec0a21bbaadb8113a8067b3"
+    },
+    "terex.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12968374.1/PMC12968374.1.xml",
+      "sha256": "e1ff3755a90c38428729db0f8e0fd331d21ef5236db473a1398266b4ec5c1fef"
+    },
+    "terex_s1.pdf": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12968374.1/SMS-36-e70235-s001.pdf",
+      "sha256": "dacb85e9ce99b23baefc95e332fff9c6761c1ee358645315f4277242e5e5b17f"
+    },
+    "terex_s2.pdf": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12968374.1/SMS-36-e70235-s002.pdf",
+      "sha256": "9ed021c0425fb5f888034053d2752e878246d35bd9558151ec82a496858f5f5e"
+    },
+    "terex_s3.pdf": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12968374.1/SMS-36-e70235-s003.pdf",
+      "sha256": "791242108c328a57547291887b7f70b553dfbd9d8115ab202dca2f62e63413e7"
+    },
+    "nulty.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11917387.1/PMC11917387.1.xml",
+      "sha256": "23857cc3a76a2e86b1a204c050cc942d64b7896784f3bd312f40de9b288bb69d"
+    },
+    "nulty_supp.docx": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11917387.1/EJSC-25-e12281-s001.docx",
+      "sha256": "863d69770638da9c0cae2ed0a72733ab31b0b0448d14a006d0a2c021fb244c3d"
+    },
+    "nulty.pdf": {
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/25677/1/Hydrolysed%20Collagen%20Supplementation%20Enhances%20Patellar%20Tendon%20Adaptations%20to%2012%20Weeks%20Resistance%20Training%20in%20Middle%20Aged%20Men.pdf",
+      "sha256": "a73ff9fe07e4833bd8c7c20fb0724d124559e3a654558b3fff61c84f061bbd5d"
+    },
+    "protein.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11923425.1/PMC11923425.1.xml",
+      "sha256": "12ceaf166175d698f6e21e95c23cd389d4cdc07d97e0038d5ba18862f3294f2c"
+    },
+    "protein_supp.docx": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11923425.1/mmc1.docx",
+      "sha256": "34ad5c3a608ceb11d3c5516e25d47767854dad3f188fc0bee8952288e16d49e4"
+    },
+    "protein_fig1.jpg": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11923425.1/gr1.jpg",
+      "sha256": "a56a97fa5b3d4e7efabda2ac00a734768b71a19e55319ec0776e2226b92b6aa6"
+    },
+    "deng.pdf": {
+      "url": "https://pure.eur.nl/ws/files/198446064/1-s2.0-S1440244024005978-main.pdf",
+      "sha256": "a84dbfb0961e4bdf7c23d22b926889a60367cc776d2c458aebc5be5bc541b18c"
+    },
+    "deng_mmc1.docx": {
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1440244024005978-mmc1.docx",
+      "sha256": "c138bc28e5d69e72640398ff36147fd5936e725133c29689665cdc5dfc6174f9"
+    },
+    "breda.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8070614/fullTextXML",
+      "sha256": "9d073a9140aa67683be6fbb0fc8ffc082c2f886d0807fdf9c9495810dca56f65"
+    },
+    "breda_supp.pdf": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8070614.1/bjsports-2020-103403supp001.pdf",
+      "sha256": "19ea05d8490e91b8b66806551d0f5211e1369ead1d6d91b1872aa83b4d51bcac"
+    }
+  },
+  "strength": {
+    "agergaard_HSR_vs_MSR_MVC": {
+      "weeks": 12,
+      "units": "N m",
+      "n": [
+        21,
+        21
+      ],
+      "prepost": [
+        [
+          [
+            193,
+            11
+          ],
+          [
+            223,
+            11
+          ]
+        ],
+        [
+          [
+            194,
+            10
+          ],
+          [
+            213,
+            10
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM"
+    },
+    "agergaard_HSR_vs_MSR_MVC_per_protocol": {
+      "weeks": 12,
+      "units": "N m",
+      "n": [
+        16,
+        19
+      ],
+      "prepost": [
+        [
+          [
+            191,
+            13
+          ],
+          [
+            225,
+            13
+          ]
+        ],
+        [
+          [
+            197,
+            11
+          ],
+          [
+            216,
+            10
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM"
+    },
+    "terex_ER_vs_SR_itt": {
+      "weeks": 12,
+      "units": "N m/kg",
+      "n": [
+        24,
+        28
+      ],
+      "prepost": [
+        [
+          [
+            2.1,
+            0.1
+          ],
+          [
+            2.5,
+            0.1
+          ]
+        ],
+        [
+          [
+            2.2,
+            0.1
+          ],
+          [
+            2.6,
+            0.1
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "rounding_half_step": 0.05
+    },
+    "terex_ER_vs_SR_per_protocol": {
+      "weeks": 12,
+      "units": "N m",
+      "n": [
+        23,
+        21
+      ],
+      "prepost": [
+        [
+          [
+            182.3,
+            11.1
+          ],
+          [
+            215.5,
+            12.9
+          ]
+        ],
+        [
+          [
+            165.1,
+            10.3
+          ],
+          [
+            202.8,
+            11.7
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM"
+    },
+    "terex_SR_vs_ER_per_protocol": {
+      "weeks": 12,
+      "units": "N m",
+      "n": [
+        21,
+        23
+      ],
+      "prepost": [
+        [
+          [
+            165.1,
+            10.3
+          ],
+          [
+            202.8,
+            11.7
+          ]
+        ],
+        [
+          [
+            182.3,
+            11.1
+          ],
+          [
+            215.5,
+            12.9
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM"
+    },
+    "nulty_COL_vs_PLA_MVT": {
+      "weeks": 12,
+      "units": "N m",
+      "n": [
+        9,
+        11
+      ],
+      "prepost": [
+        [
+          [
+            213,
+            62
+          ],
+          [
+            233,
+            44
+          ]
+        ],
+        [
+          [
+            232,
+            56
+          ],
+          [
+            247,
+            46
+          ]
+        ]
+      ],
+      "uncertainty_type": "SD"
+    },
+    "nulty_COL_vs_PLA_10RM": {
+      "weeks": 12,
+      "units": "kg",
+      "n": [
+        9,
+        11
+      ],
+      "prepost": [
+        [
+          [
+            72,
+            14
+          ],
+          [
+            109,
+            19
+          ]
+        ],
+        [
+          [
+            67,
+            16
+          ],
+          [
+            97,
+            18
+          ]
+        ]
+      ],
+      "uncertainty_type": "SD"
+    },
+    "carroll_mixed_vs_normal_legpress": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        14,
+        11
+      ],
+      "change_pct_sem": [
+        [
+          45,
+          6
+        ],
+        [
+          35,
+          9
+        ]
+      ]
+    },
+    "carroll_mixed_vs_normal_extension": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        14,
+        11
+      ],
+      "change_pct_sem": [
+        [
+          45,
+          9
+        ],
+        [
+          46,
+          8
+        ]
+      ]
+    },
+    "carroll_beef_vs_mixed_legpress": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        9,
+        14
+      ],
+      "change_pct_sem": [
+        [
+          30,
+          9
+        ],
+        [
+          45,
+          6
+        ]
+      ]
+    },
+    "carroll_beef_vs_mixed_extension": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        9,
+        14
+      ],
+      "change_pct_sem": [
+        [
+          38,
+          11
+        ],
+        [
+          45,
+          9
+        ]
+      ]
+    },
+    "carroll_beef_vs_normal_legpress": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        9,
+        11
+      ],
+      "change_pct_sem": [
+        [
+          30,
+          9
+        ],
+        [
+          35,
+          9
+        ]
+      ]
+    },
+    "carroll_beef_vs_normal_extension": {
+      "weeks": 12,
+      "units": "individual change %",
+      "n": [
+        9,
+        11
+      ],
+      "change_pct_sem": [
+        [
+          38,
+          11
+        ],
+        [
+          46,
+          8
+        ]
+      ]
+    },
+    "carroll_mixed_vs_normal_legpress_ratio_of_means": {
+      "weeks": 12,
+      "units": "kg",
+      "n": [
+        14,
+        11
+      ],
+      "prepost": [
+        [
+          [
+            167,
+            10
+          ],
+          [
+            246,
+            15
+          ]
+        ],
+        [
+          [
+            176,
+            12
+          ],
+          [
+            232,
+            17
+          ]
+        ]
+      ],
+      "uncertainty_type": "SEM"
+    }
+  },
+  "tissue": {
+    "agergaard_HSR_native_peak_force_pct": {
+      "n": 21,
+      "prepost": [
+        [
+          4589,
+          285
+        ],
+        [
+          5590,
+          335
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": true
+    },
+    "agergaard_MSR_native_peak_force_pct": {
+      "n": 20,
+      "prepost": [
+        [
+          5303,
+          305
+        ],
+        [
+          5968,
+          379
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": true
+    },
+    "agergaard_HSR_common_load_strain_pp": {
+      "n": 21,
+      "prepost": [
+        [
+          5.2,
+          0.2
+        ],
+        [
+          5.4,
+          0.2
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "agergaard_MSR_common_load_strain_pp": {
+      "n": 20,
+      "prepost": [
+        [
+          4.9,
+          0.2
+        ],
+        [
+          5.1,
+          0.2
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "nulty_COL_native_ramp_peak_force_pct": {
+      "n": 9,
+      "prepost": [
+        [
+          3408,
+          1026
+        ],
+        [
+          3963,
+          1157
+        ]
+      ],
+      "uncertainty_type": "SD",
+      "relative": true
+    },
+    "nulty_PLA_native_ramp_peak_force_pct": {
+      "n": 11,
+      "prepost": [
+        [
+          2956,
+          990
+        ],
+        [
+          3658,
+          1041
+        ]
+      ],
+      "uncertainty_type": "SD",
+      "relative": true
+    },
+    "nulty_COL_native_ramp_strain_pp": {
+      "n": 9,
+      "prepost": [
+        [
+          11.3,
+          3.4
+        ],
+        [
+          9.1,
+          2.3
+        ]
+      ],
+      "uncertainty_type": "SD",
+      "relative": false
+    },
+    "nulty_PLA_native_ramp_strain_pp": {
+      "n": 11,
+      "prepost": [
+        [
+          10.7,
+          4
+        ],
+        [
+          9.9,
+          2.6
+        ]
+      ],
+      "uncertainty_type": "SD",
+      "relative": false
+    },
+    "carroll_mixed_native_isometric_strain_pp": {
+      "n": 11,
+      "prepost": [
+        [
+          5.94,
+          0.84
+        ],
+        [
+          6.42,
+          0.83
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "carroll_normal_native_isometric_strain_pp": {
+      "n": 9,
+      "prepost": [
+        [
+          6.33,
+          0.58
+        ],
+        [
+          7.31,
+          1.19
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "carroll_beef_native_isometric_strain_pp": {
+      "n": 5,
+      "prepost": [
+        [
+          7.93,
+          1.03
+        ],
+        [
+          9.95,
+          0.07
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "terex_ER_tendon_thickness_mm": {
+      "n": 24,
+      "prepost": [
+        [
+          7.6,
+          0.3
+        ],
+        [
+          7.3,
+          0.3
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    },
+    "terex_SR_tendon_thickness_mm": {
+      "n": 28,
+      "prepost": [
+        [
+          6.8,
+          0.4
+        ],
+        [
+          6.8,
+          0.5
+        ]
+      ],
+      "uncertainty_type": "SEM",
+      "relative": false
+    }
+  },
+  "agergaard_peak_strain_pixels": {
+    "source": "Dissertation PDF page 136, Paper II Fig. 1B, rendered at 140 dpi",
+    "axis_origin_and_ten_percent_x": [
+      648,
+      984
+    ],
+    "markers": {
+      "HSR": [
+        888,
+        924
+      ],
+      "MSR": [
+        901,
+        918
+      ]
+    },
+    "digitizing_error_each_px": 2
+  },
+  "deng_partial": {
+    "weeks": 12,
+    "difference_N_per_kg": 0.54,
+    "ci95_N_per_kg": [
+      0.26,
+      0.82
+    ],
+    "analysis_complete_n": 61,
+    "randomized_n": 76
+  }
+}

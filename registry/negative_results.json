@@ -996,5 +996,13 @@
     "title": "No joint strength and sufficient tissue pass for longitudinal knee extension or augmented leg press",
     "statement": "Weidlich controlled rate does not clear the threshold despite tissue observations. Eriksen active margin +0.90 [-6.67,8.47] pp/month under unknown covariance. Bogdanis did not supply exact 140-degree augmentation, angle-specific paired uncertainty or local tissue measurements. Rieder active reference rate was negative.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0124",
+    "experiment_id": "EXP-0144",
+    "title": "Neither strength criterion passes jointly with local tissue reserve",
+    "statement": "ADAPT25 margins in pp/week: Agergaard +0.28 [-2.90,3.45], TEREX ER vs SR -0.31 [-3.10,2.49], Nulty +0.11 [-4.60,4.82], Carroll mixed vs normal leg press +0.10 [-2.26,2.47]. Deng adjusted +0.54 [0.26,0.82] N/kg benefit leaves EET control gain unidentified. The necessary strength and tissue evidence is unpaired or absent.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

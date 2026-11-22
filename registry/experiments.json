@@ -4125,5 +4125,37 @@
       ]
     },
     "limits": "No paired strength progression and sufficient measured tissue reserve in an eligible configuration. Exact nominal 140-degree augmented measurement, paired uncertainty, and participant-level mass and tissue data remain unavailable."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0144",
+    "name": "Active trials with independent strength and tendon measurements",
+    "status": "completed",
+    "sources": [
+      "SRC-0142",
+      "SRC-0143",
+      "SRC-0144",
+      "SRC-0145",
+      "SRC-0146",
+      "SRC-0147"
+    ],
+    "design": "Compute dose and frequency comparisons, placebo-controlled strength and ramp biomechanics, supplement-derived individual 1RM changes, and partial adjusted mediator contrast without merging cohorts.",
+    "model": "research/stage1_active_trials/run.py",
+    "protocol": "research/stage1_active_trials/PROTOCOL.md",
+    "inputs": "research/stage1_active_trials/SOURCES.json",
+    "report": "research/stage1_active_trials/REPORT.md",
+    "outputs": [
+      "research/stage1_active_trials/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_active_trials/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0140"
+      ],
+      "negative_results": [
+        "NEG-0124"
+      ]
+    },
+    "limits": "Unequal test configurations or missing trial-level covariance/participant linkage and local capacity. Deng supplement does not include group-specific strength trajectories."
   }
 ]
