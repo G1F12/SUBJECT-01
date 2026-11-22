@@ -1,0 +1,341 @@
+{
+  "base_commit": "05ebfd6656c299a1c62a0ad90fb4705f35a6dbed",
+  "checked_date": "2026-11-22",
+  "files": {
+    "bogdanis_scribd.html": {
+      "url": "https://www.scribd.com/document/650484545/bogdanis2018",
+      "sha256": "928a5edf91c1b132099c5d59972922489717a2bd2a82577567b0bfb1200ba58a"
+    },
+    "rodriguez2025.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12611406.1/PMC12611406.1.xml",
+      "sha256": "478bdeecb6c50821614e05b88abf5d554d3c9c7ff4823a83c0882182447f4a26"
+    },
+    "mcmahon_s1.xlsx": {
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0197852.s001",
+      "sha256": "ed35cf82b4ed3c8eb78011381ef5d130cb7c4c771fbb2e72969680ff21fbba65"
+    },
+    "mcmahon_s2.xlsx": {
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0197852.s002",
+      "sha256": "36cf3066182c147b5ab221e030225be6c144ccd1a7c20d4db6a51b495b432b3c"
+    },
+    "mcmahon.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5963774/fullTextXML",
+      "sha256": "ebb0c455f2f542ec4cc0df8befe66de51871c62279d5e8fdf0098997efe64549"
+    },
+    "eriksen.xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6357404/fullTextXML",
+      "sha256": "6e7680b026b904d263d5cf8975c42fbc2a4a3a0e188408b3a0fbe0af11e2a4bb"
+    },
+    "eriksen_fig2.jpg": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6357404.1/12877_2019_1043_Fig2_HTML.jpg",
+      "sha256": "03a34483fbdc8a5ec29aa2757ae4ac6e4f1bd276f971dec4cd50c64ae8fdb08b"
+    },
+    "weidlich.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11519156.1/PMC11519156.1.xml",
+      "sha256": "75d33f2a885c62e0364ec6b427cbf03ec7e95e6bbb6594b2200caa671b1bcbea"
+    },
+    "weidlich_fig3.jpg": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11519156.1/421_2024_5525_Fig3_HTML.jpg",
+      "sha256": "6722f2350ac5596c93606061ba9ab85f6e230d0c7eff092d5cb0d5e8515ae25b"
+    },
+    "weidlich_fig4.jpg": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11519156.1/421_2024_5525_Fig4_HTML.jpg",
+      "sha256": "e8367031e5c32c6930b160e89233ede4d938d02dbd6ea3209c7132df08c3b94b"
+    },
+    "rieder.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9633993.1/PMC9633993.1.xml",
+      "sha256": "de76c61b87be3b68bdeab777c4ace852b456525e09471a0c4fe2961e71a0c368"
+    },
+    "rieder_table1.docx": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9633993.1/Table1.docx",
+      "sha256": "e2b165e80a67f18a4439b11b6ccc4bb736523a3940e16dd1406126c58e9c68e1"
+    },
+    "rodriguez_trial.json": {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03724461",
+      "sha256": "007d0125f9d63753cb775997dace701a8efc7e042e62fb8bce20050fe07ee518"
+    }
+  },
+  "bogdanis": {
+    "weeks": 6,
+    "S_MTU_n": 7,
+    "L_MTU_n": 8,
+    "L_MTU_all_angles_gain_pct": 12.3,
+    "measurements": [
+      {"angle_mean_sd_deg": [146, 4], "S_MTU_gain_pct": 22.0, "published_change_from_zero_p": 0.019},
+      {"angle_mean_sd_deg": [162, 4], "S_MTU_gain_pct": 57.4, "published_change_from_zero_p": 0.001}
+    ]
+  },
+  "weidlich": {
+    "I_weeks": [
+      0,
+      17,
+      29,
+      35
+    ],
+    "C_weeks": [
+      0,
+      12,
+      24,
+      36
+    ],
+    "normalized_moment_mean_sd_n": {
+      "I": [
+        [
+          3.83,
+          0.6,
+          10
+        ],
+        [
+          3.96,
+          0.4,
+          10
+        ],
+        [
+          4.02,
+          0.5,
+          10
+        ],
+        [
+          4.09,
+          0.5,
+          10
+        ]
+      ],
+      "C": [
+        [
+          3.66,
+          0.2,
+          11
+        ],
+        [
+          3.78,
+          0.3,
+          11
+        ],
+        [
+          3.68,
+          0.4,
+          10
+        ],
+        [
+          3.96,
+          0.3,
+          11
+        ]
+      ]
+    },
+    "tissue": {
+      "mean_elongation_mm_I": [
+        4.4,
+        4.6,
+        4.7,
+        4.1
+      ],
+      "mean_elongation_mm_C": [
+        4.2,
+        4.3,
+        4.9,
+        4.7
+      ],
+      "estimated_tendon_force_kN_I": [
+        5.38,
+        5.6,
+        5.7,
+        5.77
+      ],
+      "estimated_tendon_force_kN_C": [
+        5.02,
+        5.24,
+        5.01,
+        5.54
+      ],
+      "strain_time_by_group_p": 0.043,
+      "frequency_at_least_9pct_C_M1_M3_M4_pct": [
+        18,
+        80,
+        64
+      ],
+      "frequency_at_least_9pct_I_mean_sd_pct": [
+        38,
+        9
+      ],
+      "symptomatic_counts_I": [
+        3,
+        3,
+        1,
+        2
+      ],
+      "symptomatic_counts_C": [
+        1,
+        1,
+        3,
+        1
+      ]
+    }
+  },
+  "eriksen": {
+    "calibration_y": [
+      185,
+      5
+    ],
+    "pixels": {
+      "CON": [
+        [
+          70,
+          62
+        ],
+        [
+          62,
+          52
+        ]
+      ],
+      "MRT": [
+        [
+          82,
+          70
+        ],
+        [
+          74,
+          60
+        ]
+      ],
+      "HRT": [
+        [
+          68,
+          57
+        ],
+        [
+          44,
+          30
+        ]
+      ]
+    },
+    "tissue": {
+      "weeks_approx": 52,
+      "group_n": {
+        "HRT": 10,
+        "MRT": 13,
+        "CON": 10
+      },
+      "max_strain_pct_mean_sem": {
+        "HRT": [
+          [
+            5.5,
+            0.6
+          ],
+          [
+            5.7,
+            0.5
+          ]
+        ],
+        "MRT": [
+          [
+            5.3,
+            0.5
+          ],
+          [
+            6.1,
+            0.6
+          ]
+        ],
+        "CON": [
+          [
+            6,
+            0.8
+          ],
+          [
+            6.4,
+            0.5
+          ]
+        ]
+      },
+      "max_tendon_force_N_mean_sem": {
+        "HRT": [
+          [
+            5020,
+            530
+          ],
+          [
+            5550,
+            470
+          ]
+        ],
+        "MRT": [
+          [
+            4070,
+            480
+          ],
+          [
+            4690,
+            490
+          ]
+        ],
+        "CON": [
+          [
+            4890,
+            390
+          ],
+          [
+            5020,
+            330
+          ]
+        ]
+      }
+    }
+  },
+  "rieder": {
+    "moment_means": {
+      "HSR": [
+        193,
+        210
+      ],
+      "WBV": [
+        212,
+        209
+      ],
+      "WLC": [
+        199,
+        208
+      ]
+    },
+    "paired_change_Nm_and_published_ci": {
+      "HSR": [
+        17,
+        6,
+        27
+      ],
+      "WBV": [
+        -3,
+        -16,
+        9
+      ],
+      "WLC": [
+        8,
+        1,
+        16
+      ]
+    },
+    "published_HSR_WBV_adjusted_difference_Nm": [
+      19.7,
+      5.5,
+      33.9
+    ],
+    "tissue": {
+      "HSR_strain_pp_change_and_ci": [
+        1.4,
+        0.3,
+        2.5
+      ],
+      "WBV_strain_pp_change_and_ci": [
+        0.4,
+        -0.4,
+        1.1
+      ],
+      "HSR_estimated_peak_tendon_force_N_change_and_ci": [
+        398,
+        198,
+        598
+      ]
+    }
+  }
+}

@@ -988,5 +988,13 @@
     "title": "Neither native-max increase nor active-comparator acceleration establishes both Stage 1 thresholds",
     "statement": "Arampatzis paired active rate margin +0.44 pp/week [-3.06,3.94] under widest covariance bound. Malliaras active margins +0.09 [-1.82,2.00] and +0.24 [-1.22,1.69] pp/week. No same-configuration capacity measurement, and no matched augmented target 140-degree leg press cohort in the audited files.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0123",
+    "experiment_id": "EXP-0143",
+    "title": "No joint strength and sufficient tissue pass for longitudinal knee extension or augmented leg press",
+    "statement": "Weidlich controlled rate does not clear the threshold despite tissue observations. Eriksen active margin +0.90 [-6.67,8.47] pp/month under unknown covariance. Bogdanis did not supply exact 140-degree augmentation, angle-specific paired uncertainty or local tissue measurements. Rieder active reference rate was negative.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

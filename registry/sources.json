@@ -2337,5 +2337,83 @@
     "calibration_review": {
       "scope": "Published Results and Fig. 5 via search viewer. Independent active comparisons, conservative n for MVC. Direct PDF returned HTTP 403."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0136",
+    "name": "Weidlich et al. volleyball season strength and tissue follow-up",
+    "type": "primary_article",
+    "doi": "10.1007/s00421-024-05525-z",
+    "url": "https://doi.org/10.1007/s00421-024-05525-z",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "Four visits in active team comparison; full JATS and Figs 3–4 checked. Tendon elongation at native maximum estimated using ramp extrapolation; no complete cross-panel join."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0137",
+    "name": "Eriksen et al. year-long patellar tendon and strength trial",
+    "type": "primary_article",
+    "doi": "10.1186/s12877-019-1043-0",
+    "url": "https://doi.org/10.1186/s12877-019-1043-0",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "Published Figure 2A digitized; JATS Tables 1–4 checked, including ultrasound ramp response and biopsies. No paired strength covariance."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0138",
+    "name": "McMahon et al. strength and tendon workbook",
+    "type": "primary_article",
+    "doi": "10.1371/journal.pone.0197852",
+    "url": "https://doi.org/10.1371/journal.pone.0197852",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "Both publisher XLSX supplements audited and strength rows recalculated. Duplicate participant codes remain ambiguous across rows. No individual inactive control or loading margin."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0139",
+    "name": "Rieder et al. active clinical comparison in patellar tendinopathy",
+    "type": "primary_article",
+    "doi": "10.3389/fphys.2022.1017931",
+    "url": "https://doi.org/10.3389/fphys.2022.1017931",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher JATS and original supplemental DOCX. Paired group summaries in Table S2, no individual linkage. Negative active reference strength rate."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0140",
+    "name": "Bogdanis et al. training-related change in multi-angle leg press force",
+    "type": "primary_article",
+    "doi": "10.1080/17461391.2018.1510989",
+    "url": "https://doi.org/10.1080/17461391.2018.1510989",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "Publisher abstract and publicly indexed article text checked. Measured unadjusted +22.0% at 146 degrees and +57.4% at 162 degrees. Exact 140-degree condition and tissue channel absent."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0141",
+    "name": "Rodriguez-Lopez et al. contralateral power training outcomes",
+    "type": "primary_article",
+    "doi": "10.1111/sms.70165",
+    "url": "https://doi.org/10.1111/sms.70165",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_longitudinal/REPORT.md",
+    "calibration_review": {
+      "scope": "JATS and NCT03724461 JSON checked. Paper shares trial with protocol, publishes selected strength outcomes, and does not report registered tendon outcomes."
+    }
   }
 ]

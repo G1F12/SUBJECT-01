@@ -4093,5 +4093,37 @@
       ]
     },
     "limits": "Published paired covariance and native-max tissue reserve absent. Vesterhus dates and follow-up body mass absent. Unconditional pass not established."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0143",
+    "name": "Four-visit tendon and strength trajectories, linked workbooks, and multi-angle augmented leg press",
+    "status": "completed",
+    "sources": [
+      "SRC-0136",
+      "SRC-0137",
+      "SRC-0138",
+      "SRC-0139",
+      "SRC-0140",
+      "SRC-0141"
+    ],
+    "design": "Group trend sensitivity with uncertain visit covariance, exact workbook row linkage and duplicate-code sensitivity, Fig. 2A digitization, and angle-specific published gains at native leg press positions.",
+    "model": "research/stage1_longitudinal/run.py",
+    "protocol": "research/stage1_longitudinal/PROTOCOL.md",
+    "inputs": "research/stage1_longitudinal/SOURCES.json",
+    "report": "research/stage1_longitudinal/REPORT.md",
+    "outputs": [
+      "research/stage1_longitudinal/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_longitudinal/run.py <source_directory> --check",
+    "results": {
+      "findings": [
+        "FND-0139"
+      ],
+      "negative_results": [
+        "NEG-0123"
+      ]
+    },
+    "limits": "No paired strength progression and sufficient measured tissue reserve in an eligible configuration. Exact nominal 140-degree augmented measurement, paired uncertainty, and participant-level mass and tissue data remain unavailable."
   }
 ]

@@ -438,5 +438,25 @@
     "negative_results": [
       "NEG-0122"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0040",
+    "title": "Stage 1 HOLD after linked workbooks and longitudinal near-extended leg press",
+    "decision": "Retain unconfirmed FORCE20 and ADAPT25 after new direct evidence at test angles 146 and 162 degrees and four-visit tissue follow-up in separate knee extension cohorts.",
+    "rationale": "The observed extended-position force gain lacks angle-specific paired uncertainty, mass comparison and tissue reserve. The cohort with a measured tissue trajectory does not demonstrate the required strength acceleration.",
+    "amends": [
+      "DEC-0039"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0143"
+    ],
+    "findings": [
+      "FND-0139"
+    ],
+    "negative_results": [
+      "NEG-0123"
+    ]
   }
 ]

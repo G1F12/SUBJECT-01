@@ -483,7 +483,8 @@
     "progress": "Scenario computed from published single-joint MD95, not a leg-press calibration or actual sample-size recommendation. EXP-0112 adds independent individual hip test-retest contrasts; some exceed 20%, but task-specific leg-press reliability and body mass still required. EXP-0113 identifies a separate 24-hour leg-press reliability report on the same dynamometer type; cohort overlap and transfer to the target protocol remain unverified. EXP-0126 evaluates multi-session isometric leg press repeatability on the Santos cohort across 4 visits: two-way ANOVA separates systematic training progression (+18.35% by W2, SS=1.60e6) from residual measurement error (detrended Sw=309.1 N vs naive Sw=385.7 N), confirming that longitudinal training dispersion is distinct from pure within-day test-retest repeatability (literature CV 3-6%). Angle mismatch sensitivity (28-41 N/deg, ~410 N at 10 deg) confirms that tight posture and angle control are mandatory to resolve the +20% target margin without unmodeled variance masking the effect.",
     "progress_exp_0140": "Harden provided an independent ISO90 force outcome in N/kg but no individual geometry or tendon strength; the fixed corrected force model still lacks direct matched bilateral external validation at 100/140 degrees.",
     "progress_exp_0141": "EXP-0141: exact nominal 140-degree force exists in Zoger and Petrovic published outputs. Full individual geometry, matched augmented force and tissue assessment remain missing.",
-    "progress_exp_0142": "EXP-0142: Arampatzis and Malliaras measured tendon deformation at the attained post-training maximum in separate joint configurations. Neither demonstrated the controlled +20% lower bound and local reserve. Exact knee angle 140 augmented-output pair remains missing."
+    "progress_exp_0142": "EXP-0142: Arampatzis and Malliaras measured tendon deformation at the attained post-training maximum in separate joint configurations. Neither demonstrated the controlled +20% lower bound and local reserve. Exact knee angle 140 augmented-output pair remains missing.",
+    "progress_exp_0143": "EXP-0143 Bogdanis measured longitudinal gains at 146 and 162 deg. The exact 140-degree condition, paired uncertainty and tissue reserve remain missing. Near-extended strength gains are no longer only a model result."
   },
   {
     "id": "ISS-0037",
@@ -568,6 +569,7 @@
     ],
     "required_inputs": "Participant-linked baseline, intermediate and follow-up maximal strength on the same schedule in active comparator and candidate arms, with load exposure and tissue function for the same participants. Positive comparator trajectory, lower interval for rate difference vs 1.25× comparator above zero, and enough tissue reserve are required.",
     "progress_exp_0141": "EXP-0141: Walker 2020 links to the Walker 2016 strength cohort; publications provide pre/post tendon summaries but no matched participant-level force/tissue trajectory or measured margin. Active-control full-course rate threshold remains unresolved.",
-    "progress_exp_0142": "EXP-0142: Active comparisons now include different isometric doses, knee extension contractions and Vesterhus matched CSVs. The required rate margin with tissue function along the same trajectory remains unresolved."
+    "progress_exp_0142": "EXP-0142: Active comparisons now include different isometric doses, knee extension contractions and Vesterhus matched CSVs. The required rate margin with tissue function along the same trajectory remains unresolved.",
+    "progress_exp_0143": "EXP-0143 Weidlich provided four same-cohort strength and tendon visits; the active-control rate margin did not clear zero. Exact participant dates and linked early strength/tissue records remain missing."
   }
 ]

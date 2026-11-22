@@ -1194,5 +1194,13 @@
     "title": "Native-max tendon deformation and active comparison audited in humans",
     "statement": "Arampatzis high leg: moment +31.60%, force derived from moment arm +908 N [309,1507], and mean strain change 0.00 pp [-1.68,1.68] using widest covariance-based intervals. Malliaras: isometric moment +23.1% [10.72,35.48], estimated tendon stress +24.4% [8.45,40.35]. Vesterhus: n=32 linked force records, equal-cycle contrast -2.22 pp [-8.97,4.54].",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0139",
+    "experiment_id": "EXP-0143",
+    "title": "Four-visit tissue trajectory and direct longitudinal force gains in near-extended leg press",
+    "statement": "Weidlich mass-normalized rate margin is -0.042 [-0.851,0.767] pp/week, with published tissue strain time-by-group p=0.043. Bogdanis observed +22.0% at 146±4 degrees and +57.4% at 162±4 degrees in the same test configurations over training. In McMahon, both XLSX files repeat the separate ambiguous ID codes within both training groups.",
+    "confidence": "statistically_reproduced"
   }
 ]
