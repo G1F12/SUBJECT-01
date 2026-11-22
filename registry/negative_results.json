@@ -1012,5 +1012,13 @@
     "title": "Unknown paired covariance and missing tissue capacity prevent a joint pass",
     "statement": "Kubo at 90 degrees gives +20.22 pp adjusted strength gain by table means versus +17.50 pp from published text gains. Conditional 95% range at both correlations 0.5 is [-0.01,40.45] pp; ADAPT25 +1.07 [-0.87,3.01] pp/week. Tissue response was measured at two visits with no local capacity assessment. Male seasonal control rate is negative.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0126",
+    "experiment_id": "EXP-0146",
+    "title": "Active trajectory confidence intervals and missing same-pose capacity keep Stage 1 open",
+    "statement": "Quinlan young ECC-vs-CON margin +0.39 [-1.24,2.01] pp/week. Kubo knee adjusted +38.18 [21.31,55.05] pp only conditionally at rho=0.9; subject mass trajectory, paired uncertainty, and tissue capacity are absent. Geremia has calculated internal force and no parallel comparator. NCT03079180 has no posted results.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

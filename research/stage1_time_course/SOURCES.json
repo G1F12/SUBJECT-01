@@ -1,0 +1,100 @@
+{
+  "files": {
+    "kubo.pdf": ["https://paulogentil.com/pdf/Time%20Course%20of%20Changes%20in%20Muscle%20and%20Tendon%20Properties%20During%20Strength%20Training%20and%20Detraining.pdf", "d1e9d30845325430e648edfa48dd8cd9c73e4762f89b630afb30da5ab17efe26"],
+    "kubo-achilles.pdf": ["https://paulogentil.com/pdf/TREINO%20DE%20FORC%CC%A7A/Outras%20adaptac%CC%A7o%CC%83es/Time%20course%20of%20changes%20in%20the%20human%20Achilles%20tendon%20properties%20and%20metabolism%20during%20training%20and%20detraining%20in%20vivo.pdf", "e2eae8899b0f01d66b7ee074e50f48d964570d2505e0b159c8c4d013a62f3cc7"],
+    "seynnes.pdf": ["https://paulogentil.com/pdf/Training-induced%20changes%20in%20structural%20and%20mechanical%20properties%20of%20the%20patellar%20tendon%20are%20related%20to%20muscle%20hypertrophy%20but%20not%20to%20strength%20gains.pdf", "5cf8f6b034708ba4289e9e2d951276208daa32339977f88a9522d6c3b750aa2f"],
+    "epro.pdf": ["https://researchonline.ljmu.ac.uk/id/eprint/6084/1/1008.full.pdf", "3a32f3be124f4a6a8f2e5b3192469c1f8547caa9048334781ba985b689db2986"],
+    "quinlan-list.xml": ["https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8492846", "d18ed4836a8819163b657fa4362f29ba3f0160fb7e717a38ec66b9544ea0078e"],
+    "quinlan.pdf": ["https://pmc-oa-opendata.s3.amazonaws.com/PMC8492846.1/PMC8492846.1.pdf", "eaa12732ba71d8b5af67638491a0ae4e139cb97808f1bf8148f6b7330b1ef997"],
+    "quinlan.xml": ["https://pmc-oa-opendata.s3.amazonaws.com/PMC8492846.1/PMC8492846.1.xml", "76c3dfd1101f58582c7a753ddd660f34513ba306874412a5303e13107df190da"],
+    "nct.json": ["https://clinicaltrials.gov/api/v2/studies/NCT03079180", "1537af8c580321eb2b35a972a5646fb2823438c3c0991c4fc2d2b15dd55dce9e"],
+    "letocart-list.xml": ["https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7807501", "9f21478395cec2e6ca2492df14c84a0c200433127dacc6541cafe74fe1d6984c"],
+    "letocart.xml": ["https://pmc-oa-opendata.s3.amazonaws.com/PMC7807501.1/PMC7807501.1.xml", "8b1a42ea3eb582359a543482ba5ad8a67bcc1225f4b020aefa9039721cff5b0c"]
+  },
+  "web_only": {
+    "geremia": "https://research.vu.nl/files/249080473/Effects_of_high_loading_by_eccentric_triceps_surae_training_on_Achilles_tendon_properties_in_humans.pdf",
+    "grosset": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4082599/"
+  },
+  "kubo_knee": {
+    "time_months": [0,1,2,3,4,5,6],
+    "n": [8,6],
+    "dispersion": "SD",
+    "mvc": [[226,48],[238,67],[289,59],[315,62],[303,40],[294,49],[290,58]],
+    "control_mvc": [[249,64],null,null,[252,53],null,null,[250,59]],
+    "max_elongation_mm": [[25.5,5.3],[26.7,5.2],[26.5,4.1],[25.9,3.6],[28.6,5.4],[28.8,4.3],[28.7,5.4]],
+    "control_max_elongation_mm": [[25.4,6.6],null,null,[26.8,7.2],null,null,[25.9,7.0]],
+    "stiffness_published": [69.2,67.8,77.4,104.4,93.2,85.4,76.3],
+    "figure2a_axis_y_0_and_50_pct": [542,239],
+    "figure2a_bars_center_and_upper_error_y": [[516,488],[363,322],[297,276],[317,272],[345,299],[350,311]],
+    "body_mass_kg_baseline": [62.6,69.4]
+  },
+  "kubo_achilles": {
+    "time_months": [0,1,2,3,4,5,6],
+    "n": [9,7],
+    "dispersion": "SEM",
+    "mvc": [[130,11],[146,8],[155,8],[160,8],[152,9],[149,6],[149,7]],
+    "control_mvc": [[135,14],[138,11],[133,9],[136,12],[138,10],[134,11],[137,13]],
+    "max_elongation_mm": [[18.8,0.9],[20.8,0.9],[21.0,0.8],[18.5,0.6],[23.1,1.2],[23.1,1.1],[23.4,0.7]],
+    "control_max_elongation_mm": [[21.4,0.9],[22.0,0.7],[20.9,1.0],[21.2,0.9],[21.8,0.8],[20.7,0.9],[21.7,1.0]],
+    "stiffness_published": [183,191,210,277,206,192,186],
+    "body_mass_kg_baseline": [69.1,73.9]
+  },
+  "epro": {
+    "n_medium": [21,13],
+    "n_long": [12,13],
+    "medium_mvc": [[116.4,25.4],[145.8,35.3]],
+    "long_mvc": [[116.3,30.8],[141.5,36.2],[145.9,30.2]],
+    "control_mvc": [[117.5,28.6],[124.3,29.5],[126.9,28.9]],
+    "medium_peak_strain_pct": [[4.4,1.0],[4.7,1.3]],
+    "long_peak_strain_pct": [[4.3,1.1],[4.6,1.3],[4.5,1.2]],
+    "control_peak_strain_pct": [[4.3,1.2],[4.6,1.3],[4.7,1.3]],
+    "medium_stiffness_n_per_mm": [513.3,614.1],
+    "long_stiffness_n_per_mm": [488.4,598.2,637.1]
+  },
+  "seynnes": {
+    "n": 15,
+    "mvc": [[260.3,47.4],[341.6,49.8]],
+    "text_gain_pct_and_dispersion": [32,9],
+    "common_force_tissue": {"stress_mpa":[44.0,42.4],"elongation_mm":[4.7,3.9],"strain_pct":[8.9,7.2],"stiffness_n_per_mm":[1864,2288]},
+    "baseline_mass_kg": 73.6
+  },
+  "quinlan": {
+    "weeks": [2,4,6,8],
+    "figure5_axis_y_0_and_50_pct": [752,563],
+    "figure5_change_center_and_upper_error_y": {
+      "young_con": [[734,685],[749,703],[738,698],[719,685]],
+      "young_ecc": [[711,649],[699,649],[696,636],[699,645]],
+      "older_con": [[717,683],[714,645],[689,622],[678,634]],
+      "older_ecc": [[729,699],[713,677],[698,649],[683,630]]
+    },
+    "strength_n": {"young_con":10,"young_ecc":10,"older_con":8,"older_ecc":9},
+    "tendon_n": {"young_con":10,"young_ecc":9,"older_con":8,"older_ecc":8},
+    "figure1_axis_y_at_0_and_4000_n_per_mm": [383,182],
+    "figure1_stiffness_center_y": {
+      "young_con": [295,280,271,270,264],
+      "young_ecc": [294,268,260,259,257],
+      "older_con": [315,304,290,281,267],
+      "older_ecc": [320,300,293,281,268]
+    }
+  },
+  "geremia": {
+    "n": 15,
+    "time_week": [-4,0,4,8,12],
+    "calculated_peak_tendon_force_n": [[2749.5,491.1],[2714.8,426.8],[3339.8,383.6],[4051.9,322.0],[4053.1,560.5]],
+    "native_peak_strain_pct": [[7.9,1.4],[8.1,1.1],[8.2,1.8],[7.4,1.4],[7.4,1.2]],
+    "native_peak_stress_mpa": [43.6,44.1,52.4,58.0,57.4],
+    "common_force_stiffness_n_per_mm": [177.0,170.2,212.8,275.9,270.3]
+  },
+  "grosset": {
+    "weeks": 12,
+    "n": [8,9],
+    "high_and_low_force_pct_sem": [[13.6,6.9],[17.8,5.5]],
+    "high_and_low_peak_stiffness_n_per_mm": [[940.7,1461.0],[953.3,1016.4]]
+  },
+  "nct03079180": {
+    "has_results": false,
+    "ipd_sharing": "NO",
+    "registered_weeks": [-4,0,4,8,12],
+    "linked_article_doi": "10.1186/s12877-020-02000-0"
+  }
+}

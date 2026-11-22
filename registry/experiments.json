@@ -4188,5 +4188,39 @@
       ]
     },
     "limits": "Native peak deformation covers endpoint mechanics. Paired strength uncertainty, intermediate exposure and local tissue capacity remain missing."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0146",
+    "name": "Active contraction comparison and monthly strength and tendon response",
+    "status": "completed",
+    "sources": [
+      "SRC-0153",
+      "SRC-0154",
+      "SRC-0155",
+      "SRC-0156",
+      "SRC-0157",
+      "SRC-0158",
+      "SRC-0159",
+      "SRC-0160"
+    ],
+    "design": "Digitize relative strength and tendon trajectories, calculate active age-stratified contrasts and conditional control-adjusted gains, and audit time-course registry linkage.",
+    "model": "research/stage1_time_course/run.py",
+    "protocol": "research/stage1_time_course/PROTOCOL.md",
+    "inputs": "research/stage1_time_course/SOURCES.json",
+    "report": "research/stage1_time_course/REPORT.md",
+    "outputs": [
+      "research/stage1_time_course/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_time_course/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0142"
+      ],
+      "negative_results": [
+        "NEG-0126"
+      ]
+    },
+    "limits": "Active strength contrasts cross threshold; passive-control and single-cohort gains omit adequate same-configuration tissue capacity or linked external moment."
   }
 ]

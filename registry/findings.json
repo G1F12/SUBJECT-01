@@ -1218,5 +1218,13 @@
     "title": "Same-pose higher strength and lower native-peak patellar tendon elongation",
     "statement": "At 90-degree flexion, Kubo observed +49.76% static MVC by ratio of published means. Figure 2A gives estimated native-peak tendon force 5.50 to 7.71 kN and elongation 6.30 to 4.80 mm. Four-visit seasonal male and female data gave mass-normalized maximum moment gains +17.22% and +0.60%.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0142",
+    "experiment_id": "EXP-0146",
+    "title": "Monthly and biweekly tissue trajectories narrow strength-gain interpretation",
+    "statement": "Kubo knee MVC +40.43% [32.23,48.62] before control, with peak elongation 25.5 to 25.9 mm at training end and 28.6 mm one month later. Geremia estimated native-peak tendon force +49.30% [24.87,73.73] under rho=-1 with mean strain 8.1 to 7.4%.",
+    "confidence": "statistically_reproduced"
   }
 ]

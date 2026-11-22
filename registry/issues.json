@@ -486,7 +486,8 @@
     "progress_exp_0142": "EXP-0142: Arampatzis and Malliaras measured tendon deformation at the attained post-training maximum in separate joint configurations. Neither demonstrated the controlled +20% lower bound and local reserve. Exact knee angle 140 augmented-output pair remains missing.",
     "progress_exp_0143": "EXP-0143 Bogdanis measured longitudinal gains at 146 and 162 deg. The exact 140-degree condition, paired uncertainty and tissue reserve remain missing. Near-extended strength gains are no longer only a model result.",
     "progress_exp_0144": "EXP-0144: Carroll's leg press gains and TEREX's isolated knee extension gains do not clear the active-control threshold. Individual co-measurement of strength and local tissue reserve at matched geometry remains absent.",
-    "progress_exp_0145": "EXP-0145: Kubo at 90 degrees shows +20.22 pp by table means and +17.50 pp by text percentages. Paired strength covariance and regional reserve are absent. Nominal 140-degree force is a distinct configuration."
+    "progress_exp_0145": "EXP-0145: Kubo at 90 degrees shows +20.22 pp by table means and +17.50 pp by text percentages. Paired strength covariance and regional reserve are absent. Nominal 140-degree force is a distinct configuration.",
+    "progress_exp_0146": "EXP-0146: Kubo knee measured seven strength and tissue visits at 90-degree flexion with conditional controlled +38.18 pp. Geremia provides estimated peak Achilles force, not linked external moment. Neither supplies required regional capacity or exact 140-degree leg press."
   },
   {
     "id": "ISS-0037",
@@ -574,6 +575,7 @@
     "progress_exp_0142": "EXP-0142: Active comparisons now include different isometric doses, knee extension contractions and Vesterhus matched CSVs. The required rate margin with tissue function along the same trajectory remains unresolved.",
     "progress_exp_0143": "EXP-0143 Weidlich provided four same-cohort strength and tendon visits; the active-control rate margin did not clear zero. Exact participant dates and linked early strength/tissue records remain missing.",
     "progress_exp_0144": "EXP-0144: Randomized loading, recovery and placebo comparisons leave the 25 percent acceleration unresolved. Deng's baseline-adjusted +0.54 N/kg cannot determine the EET rate without the original data or arm-wise change and covariance.",
-    "progress_exp_0145": "EXP-0145: Kubo's same-person static/dynamic contrast can pass conditionally at high assumed correlation. Observed bilateral covariance and early tissue visits are missing. Four-visit male seasonal control has negative endpoint rate."
+    "progress_exp_0145": "EXP-0145: Kubo's same-person static/dynamic contrast can pass conditionally at high assumed correlation. Observed bilateral covariance and early tissue visits are missing. Four-visit male seasonal control has negative endpoint rate.",
+    "progress_exp_0146": "EXP-0146: Quinlan active within-age contrasts have positive young CON control rate but an interval crossing zero for the 25% margin. NCT03079180 posts no results and the linked archive does not supply early force-tissue records."
   }
 ]

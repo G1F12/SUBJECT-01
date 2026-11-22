@@ -498,5 +498,25 @@
     "negative_results": [
       "NEG-0125"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0043",
+    "title": "Stage 1 HOLD after longitudinal tissue and contraction-mode evidence",
+    "decision": "Keep FORCE20 and ADAPT25 on HOLD and retain joint strength and tissue trajectories from the tested isometric configurations.",
+    "rationale": "Active contrasts do not establish the acceleration threshold; conditional strength gains and lower or unchanged peak elongation leave the local tissue capacity and controlled external outcome unresolved.",
+    "amends": [
+      "DEC-0042"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0146"
+    ],
+    "findings": [
+      "FND-0142"
+    ],
+    "negative_results": [
+      "NEG-0126"
+    ]
   }
 ]

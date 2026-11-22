@@ -2558,5 +2558,108 @@
     "calibration_review": {
       "scope": "PMC10482817.1 PDF and package inventory confirmed. Screening association only; no pooling with seasonal intervention cohorts."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0153",
+    "name": "Kubo et al. monthly knee extensor training and detraining",
+    "type": "primary_article",
+    "doi": "10.1519/JSC.0b013e3181c865e2",
+    "url": "https://doi.org/10.1519/JSC.0b013e3181c865e2",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "Tables 1-2 and Fig. 2A in downloaded publisher PDF, seven active visits and three untrained reference visits."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0154",
+    "name": "Kubo et al. monthly Achilles training and detraining",
+    "type": "primary_article",
+    "doi": "10.1007/s00421-011-2248-x",
+    "url": "https://doi.org/10.1007/s00421-011-2248-x",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "Tables 1-4 and force-elongation curves in downloaded publisher PDF. Untrained reference and seven visits."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0155",
+    "name": "Epro et al. Achilles adaptation after 14 weeks and 1.5 years",
+    "type": "primary_article",
+    "doi": "10.1242/jeb.146407",
+    "url": "https://doi.org/10.1242/jeb.146407",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "Institutional PDF and Table 1, distinct 21-person and 12-person intervention summaries and 13-person no-contact control."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0156",
+    "name": "Seynnes et al. tendon properties after nine-week knee extension training",
+    "type": "primary_article",
+    "doi": "10.1152/japplphysiol.00213.2009",
+    "url": "https://doi.org/10.1152/japplphysiol.00213.2009",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "Downloaded PDF methods and Table 2 checked. Tendon properties at common absolute load and at 90 degrees; strength peak across angles."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0157",
+    "name": "Quinlan et al. concentric and eccentric training trajectories",
+    "type": "primary_article",
+    "doi": "10.1007/s11357-021-00396-0",
+    "url": "https://doi.org/10.1007/s11357-021-00396-0",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC8492846.1 PDF, JATS and inventory; four active arms, Figs. 1 and 5 digitized. No individual linked file."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0158",
+    "name": "Geremia et al. Achilles load and strain trajectory",
+    "type": "primary_article",
+    "doi": "10.1007/s00421-018-3904-1",
+    "url": "https://doi.org/10.1007/s00421-018-3904-1",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "VU public PDF via web view, Table 2 and methods. Independently timed pretraining interval. Direct file fetch unsuccessful."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0159",
+    "name": "Grosset et al. low versus high intensity tendon response",
+    "type": "primary_article",
+    "doi": "10.1007/s11357-014-9657-9",
+    "url": "https://doi.org/10.1007/s11357-014-9657-9",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC full text results, tables and methods for estimated tendon-force response. No arm-level external MVC trajectory in public summary."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0160",
+    "name": "NCT03079180 planned tendon and strength time course",
+    "type": "trial_registry",
+    "url": "https://clinicaltrials.gov/study/NCT03079180",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_time_course/REPORT.md",
+    "calibration_review": {
+      "scope": "Registry JSON and linked PMC7807501.1 JATS and inventory downloaded. No posted results or public early force and tendon participant trajectories."
+    }
   }
 ]
