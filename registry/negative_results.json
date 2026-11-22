@@ -1004,5 +1004,13 @@
     "title": "Neither strength criterion passes jointly with local tissue reserve",
     "statement": "ADAPT25 margins in pp/week: Agergaard +0.28 [-2.90,3.45], TEREX ER vs SR -0.31 [-3.10,2.49], Nulty +0.11 [-4.60,4.82], Carroll mixed vs normal leg press +0.10 [-2.26,2.47]. Deng adjusted +0.54 [0.26,0.82] N/kg benefit leaves EET control gain unidentified. The necessary strength and tissue evidence is unpaired or absent.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0125",
+    "experiment_id": "EXP-0145",
+    "title": "Unknown paired covariance and missing tissue capacity prevent a joint pass",
+    "statement": "Kubo at 90 degrees gives +20.22 pp adjusted strength gain by table means versus +17.50 pp from published text gains. Conditional 95% range at both correlations 0.5 is [-0.01,40.45] pp; ADAPT25 +1.07 [-0.87,3.01] pp/week. Tissue response was measured at two visits with no local capacity assessment. Male seasonal control rate is negative.",
+    "confidence": "computed_and_scope_audited"
   }
 ]

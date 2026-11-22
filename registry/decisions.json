@@ -478,5 +478,25 @@
     "negative_results": [
       "NEG-0124"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0042",
+    "title": "Retain Stage 1 HOLD after same-pose native peak reanalysis",
+    "decision": "Retain HOLD for FORCE20 and ADAPT25. Record the 90-degree static-versus-dynamic configuration as an eligible partial human candidate and the seasonal cohorts as separate evidence.",
+    "rationale": "Active-control force and rate intervals depend on unknown pairing. The tissue tests show an elastic response at the new maximum and omit intermediate regional capacity.",
+    "amends": [
+      "DEC-0041"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0145"
+    ],
+    "findings": [
+      "FND-0141"
+    ],
+    "negative_results": [
+      "NEG-0125"
+    ]
   }
 ]

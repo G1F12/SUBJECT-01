@@ -1210,5 +1210,13 @@
     "title": "Active trial reanalysis distinguishes native-peak loading from common-load properties",
     "statement": "Agergaard HSR joint moment +15.54% and estimated tendon peak load +21.81%; peak strain graph 7.14% to 8.21% vs +0.20 pp at a common load. TEREX short restitution per-protocol moment +22.84% before and +4.62 pp after active-control adjustment. Carroll mixed-protein leg press +45.0% [32.04,57.96] before and +10.0 pp [-14.10,34.10] after active-control adjustment.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0141",
+    "experiment_id": "EXP-0145",
+    "title": "Same-pose higher strength and lower native-peak patellar tendon elongation",
+    "statement": "At 90-degree flexion, Kubo observed +49.76% static MVC by ratio of published means. Figure 2A gives estimated native-peak tendon force 5.50 to 7.71 kN and elongation 6.30 to 4.80 mm. Four-visit seasonal male and female data gave mass-normalized maximum moment gains +17.22% and +0.60%.",
+    "confidence": "statistically_reproduced"
   }
 ]

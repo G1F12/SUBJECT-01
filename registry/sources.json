@@ -2493,5 +2493,70 @@
     "calibration_review": {
       "scope": "JATS and PDF supplement inspected. Parent RCT of Deng; efficacy and symptoms plus dynamometer methods, no exercise-arm force trajectory."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0148",
+    "name": "Domroes et al. individualized loading in male adolescent handball players",
+    "type": "primary_article",
+    "doi": "10.1111/sms.14555",
+    "url": "https://doi.org/10.1111/sms.14555",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_cohorts/REPORT.md",
+    "calibration_review": {
+      "scope": "Humboldt PDF, source inventory, four linked visit summaries and overplotted individual trajectories in Figure 3."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0149",
+    "name": "Domroes et al. individualized loading in female adolescent handball players",
+    "type": "primary_article",
+    "doi": "10.1186/s40798-025-00817-w",
+    "url": "https://doi.org/10.1186/s40798-025-00817-w",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_cohorts/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC11805736.1 PDF, XML, package inventory and tables 1-2 checked. Individual data available on reasonable request."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0150",
+    "name": "Kubo et al. isometric training at different knee angles",
+    "type": "primary_article",
+    "doi": "10.1111/j.1600-0838.2005.00450.x",
+    "url": "https://doi.org/10.1111/j.1600-0838.2005.00450.x",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_cohorts/REPORT.md",
+    "calibration_review": {
+      "scope": "Original article PDF checked. Measured 80-degree MVC and elongation in same ramp; trained-angle time series use different poses."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0151",
+    "name": "Kubo et al. static versus dynamic training",
+    "type": "primary_article",
+    "doi": "10.1152/japplphysiol.91381.2008",
+    "url": "https://doi.org/10.1152/japplphysiol.91381.2008",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_cohorts/REPORT.md",
+    "calibration_review": {
+      "scope": "Original article PDF tables 1-2 and Figure 2A digitized. No individual paired covariance or intermediate tendon records."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0152",
+    "name": "Mersmann et al. prospective association between tendon strain and symptoms",
+    "type": "primary_article",
+    "doi": "10.1186/s40798-023-00627-y",
+    "url": "https://doi.org/10.1186/s40798-023-00627-y",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_cohorts/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC10482817.1 PDF and package inventory confirmed. Screening association only; no pooling with seasonal intervention cohorts."
+    }
   }
 ]

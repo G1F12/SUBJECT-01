@@ -4157,5 +4157,36 @@
       ]
     },
     "limits": "Unequal test configurations or missing trial-level covariance/participant linkage and local capacity. Deng supplement does not include group-specific strength trajectories."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0145",
+    "name": "Paired static and dynamic training and seasonal tendon cohorts",
+    "status": "completed",
+    "sources": [
+      "SRC-0148",
+      "SRC-0149",
+      "SRC-0150",
+      "SRC-0151",
+      "SRC-0152"
+    ],
+    "design": "Reanalyze same-participant legs with unknown paired covariance, digitize native peak and common-load patellar tendon elongation, and assess separate four-visit team cohorts.",
+    "model": "research/stage1_tendon_cohorts/run.py",
+    "protocol": "research/stage1_tendon_cohorts/PROTOCOL.md",
+    "inputs": "research/stage1_tendon_cohorts/SOURCES.json",
+    "report": "research/stage1_tendon_cohorts/REPORT.md",
+    "outputs": [
+      "research/stage1_tendon_cohorts/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_tendon_cohorts/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0141"
+      ],
+      "negative_results": [
+        "NEG-0125"
+      ]
+    },
+    "limits": "Native peak deformation covers endpoint mechanics. Paired strength uncertainty, intermediate exposure and local tissue capacity remain missing."
   }
 ]
