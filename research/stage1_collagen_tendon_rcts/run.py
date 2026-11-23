@@ -144,7 +144,12 @@ def analyze_lee_2025(cfg: dict) -> dict:
         },
         "passes_adapt25": False,
         "passes_force20": False,
-        "verdict": "HOLD — MECHANISTIC DECOUPLING PROVEN: Collagen significantly accelerates patellar tendon stiffness (+56.4% vs +18.9%, p=0.009), modulus (p=0.018), and CSA (+6.5% vs 0.0%, p=0.027) while reducing strain 11.3->9.1%, YET yields no statistically detectable strength/power acceleration (KE MVT GxT p=0.754, pRTD p=0.637, CMJ power p=0.422; wide CIs span zero).",
+        "verdict": (
+            "HOLD (NO DETECTABLE STRENGTH ACCELERATION DESPITE TENDON REMODELING): Collagen significantly accelerates patellar tendon stiffness "
+            "(+56.4% vs +18.9%, p=0.009), modulus (p=0.018), and CSA (+6.5% vs 0.0%, p=0.027) while reducing strain 11.3->9.1%, "
+            "YET yields no statistically detectable strength/power advantage (KE MVT GxT p=0.754, pRTD p=0.637, CMJ power p=0.422); "
+            "however, n=9 vs 11 leaves wide ADAPT25 95% CIs ([-0.964; +1.182] at r=0.9) that do not prove strict zero effect."
+        ),
     }
 
 
@@ -231,10 +236,10 @@ def run_experiment(data_root: Path) -> dict:
         "summary_ruling": (
             "Testing a new internal biological mechanism — hydrolysed/bioactive collagen peptides + heavy RT across 3 double-blind RCTs "
             "on the patellar tendon (Balshaw 2025 n=39, Lee 2025 n=20, Lee 2023 n=17) plus strain-targeted Achilles loading (Radovanovic 2022 n=44) — "
-            "yields 0/4 cohorts closing Stage 1. Crucially, Lee 2025 and Radovanovic 2022 establish a mechanistic decoupling: "
-            "targeted biological/mechanical interventions CAN significantly accelerate tendon matrix remodeling (stiffness +20..+56%, CSA +6.5..+9.0%, strain reduction) "
-            "WITHOUT producing ADAPT25 or FORCE20 maximal strength superiority (KE MVT GxT p=0.754 in Lee 2025, p>=0.596 / ADAPT25=-0.382 pp/wk in Balshaw 2025, "
-            "PF MVC +7.2% with CMJ decline in Radovanovic 2022). Stage 1 remains HOLD / DATA_BLOCKED."
+            "yields 0/4 cohorts closing Stage 1. In Lee 2025 and Radovanovic 2022, significant tendon remodeling (stiffness +20..+56%, CSA +6.5..+9.0%, strain reduction) "
+            "was not accompanied by statistically detectable ADAPT25 or FORCE20 strength superiority (KE MVT GxT p=0.754 in Lee 2025, though wide n=9 vs 11 CIs do not prove strict zero effect; "
+            "PF MVC +7.2% with CMJ decline in Radovanovic 2022). In the largest trial (Balshaw 2025 n=39), ADAPT25 KE MVT is -0.382 [-0.852; +0.089] pp/wk (p>=0.596), "
+            "practically ruling out a large +25% acceleration, while collagen also did not significantly alter tendon remodeling (p>=0.365). Stage 1 remains HOLD / DATA_BLOCKED."
         ),
     }
 

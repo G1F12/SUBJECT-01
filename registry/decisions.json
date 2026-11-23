@@ -685,7 +685,7 @@
     "id": "DEC-0052",
     "title": "Update Stage 2 spatial anchor in meters and record Stage 3 within-person compatibility constraints while maintaining HOLD / DATA_BLOCKED",
     "decision": "Keep Stage 2 (CPE45) and Stage 3 on HOLD / DATA_BLOCKED and preserve canonical CPE45.json (success_thresholds=null); adopt DUO-GAIT (n=16) as a partial provisional human anchor in meters for working spatial coordination assumptions and record Agostinelli 2025 (n=33) empirical strength-vs-VO2max thermal/lactate constraints for Stage 3.",
-    "rationale": "EXP-0155 v2 (independent statistical audit & corrigendum) replaces UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination in meters with an additive 2x2 RM decomposition (DUO-GAIT n=16), separates pure SHAM HA from underpowered ANCOVA BFR contrasts in Goepp 2026 (retracting overstated MVC and zero-BFR claims), and retracts overstated 'no thermal/cognitive harm' claims in Agostinelli 2025 after Cook's D, VIF, Huber, and LOOCV checks confirm only robust VO2max thermal prediction (R2_LOOCV=0.409) and covariate-sensitive RelStr speed association. Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED.",
+    "rationale": "EXP-0155 v2 (independent statistical audit & corrigendum) replaces UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination in meters with a 2x2 RM decomposition showing no detectable interaction at n=16 (p>=0.229; wide CIs do not prove zero interaction) and channel-separated detectable main effects (DUO-GAIT n=16), separates pure SHAM HA from underpowered ANCOVA BFR contrasts in Goepp 2026 (retracting overstated MVC and zero-BFR claims), and retracts overstated 'no thermal/cognitive harm' claims in Agostinelli 2025 after Cook's D, VIF, Huber, and LOOCV checks confirm only robust VO2max thermal prediction (R2_LOOCV=0.409) and covariate-sensitive RelStr speed association. Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED.",
     "amends": [
       "DEC-0048"
     ],
@@ -705,7 +705,7 @@
     "id": "DEC-0053",
     "title": "Maintain Stage 1 HOLD / DATA_BLOCKED after testing collagen-peptide patellar tendon RCTs and high-load Achilles RCT",
     "decision": "Keep Stage 1 on HOLD / DATA_BLOCKED after 0/4 new tendon-remodeling RCTs (N=120) satisfy ADAPT25 or FORCE20 simultaneously with validated tendon safety.",
-    "rationale": "EXP-0156 tests a new internal nutritional/biological mechanism (collagen peptides + heavy RT on patellar tendon with validated <9.0% strain criterion) across 3 double-blind RCTs plus high-loading Achilles RT and proves mechanistic decoupling: accelerating tendon matrix stiffness/CSA does not yield ADAPT25 or FORCE20 strength superiority.",
+    "rationale": "EXP-0156 tests collagen peptides + heavy RT on the patellar tendon across 3 double-blind RCTs plus high-loading Achilles RT: 0/4 pass ADAPT25 or FORCE20; in Lee 2025 significant tendon remodeling was not accompanied by detectable strength superiority (p=0.754, though wide n=20 CIs do not prove strict zero effect), and in Balshaw 2025 (n=39) upper 95% CI +0.089 pp/wk practically excludes large +25% acceleration.",
     "amends": [
       "DEC-0051"
     ],
@@ -737,6 +737,34 @@
       "FND-0153"
     ],
     "negative_results": [
+      "NEG-0137"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0055",
+    "title": "Freeze externally grounded Candidate Final CPE45 Protocol and Minimal MEASUREMENT-3 Spec while keeping canonical CPE45.json unratified pending human data",
+    "decision": "Publish ratification-ready research/targets/CPE45_CANDIDATE_FINAL_SPEC.json and research/targets/CPE45_FINAL_PROTOCOL_AND_MEASUREMENT3.md (verified against tools/cpe45.py via tools/verify_cpe45_candidate_spec.py), while keeping canonical research/targets/CPE45.json untouched (success_thresholds=null, historical_experiments_cpe45_status='not_assessed') in strict compliance with GOVERNANCE.md (DEC-0007) and tools/validate_repository.py.",
+    "rationale": "Every threshold in CPE45_CANDIDATE_FINAL_SPEC.json is anchored to independent external physiological, biomechanical, cognitive, or occupational standards (ISO 9886 <39.0 C PASS / 39.5 C abort, NIOSH, IOC Heat Consensus PMC9811094, Girard 2011, Glaister 2005, Enoka & Duchateau 2016, Maunder 2021, Sanchez-Medina 2011, Begg 2007, Schmit 2017) rather than fitted to EXP-0139..0157 cohorts. Ratification into canonical CPE45.json remains gated by GOVERNANCE.md (DEC-0007) until independent joint 2700-s human data (MEASUREMENT-3, N=24) are acquired.",
+    "amends": [
+      "DEC-0046",
+      "DEC-0054"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0149",
+      "EXP-0151",
+      "EXP-0155",
+      "EXP-0157"
+    ],
+    "findings": [
+      "FND-0145",
+      "FND-0151",
+      "FND-0153"
+    ],
+    "negative_results": [
+      "NEG-0129",
+      "NEG-0135",
       "NEG-0137"
     ]
   }

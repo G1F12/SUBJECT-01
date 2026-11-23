@@ -1,0 +1,148 @@
+{
+  "spec_id": "CPE45-CANDIDATE-FINAL-SPEC-V1",
+  "status": "CANDIDATE_READY_FOR_EMPIRICAL_CALIBRATION_AND_DEC_RATIFICATION",
+  "canonical_file_untouched": "research/targets/CPE45.json",
+  "ratification_blocked_by": [
+    "GOVERNANCE.md (DEC-0007, L39): thresholds require empirical physiological validation; synthetic PASS is not empirical validation.",
+    "tools/validate_repository.py (L72-73): enforces success_thresholds=null and historical_experiments_cpe45_status='not_assessed' until ratified after independent joint 2700-s human validation.",
+    "ISS-0011 / ISS-0012 / ISS-0013: 0 open human datasets combine full 2700-s alternating load, calibrated power/velocity, spatial meters, concurrent cognition, core temperature, and post45 recovery."
+  ],
+  "anti_fitting_statement": "Every threshold below is derived from external peer-reviewed physiological, biomechanical, cognitive-ergonomic, or occupational heat standards (ISO 9886, NIOSH, IOC Heat Consensus, Girard 2011, Glaister 2005, Enoka & Duchateau 2016, Sanchez-Medina 2011, Maunder 2021, Begg 2007, Schmit 2017) — NOT fitted to pass existing partial cohorts in EXP-0139..0157.",
+  "duration_s": 2700.0,
+  "intensity_schedule": {
+    "structure": "5 identical 540-s macro-blocks partitioning [0, 2700] s without gaps or overlaps",
+    "n_blocks": 5,
+    "block_duration_s": 540.0,
+    "per_block_sequence": [
+      {
+        "repeat": 3,
+        "effort": {
+          "duration_s": 6.0,
+          "task_id": "explosive_sprint_6s",
+          "prescription": "Maximal all-out explosive bout (1:4 work:rest matches fast PCr resynthesis half-time ~21-30 s; Glaister 2005 SRC-0031, Girard 2011 SRC-0029)"
+        },
+        "recovery": {
+          "duration_s": 24.0,
+          "task_id": "active_recovery_24s",
+          "prescription": "Unloaded / low-intensity active recovery (<=30% CP)"
+        }
+      },
+      {
+        "repeat": 2,
+        "effort": {
+          "duration_s": 165.0,
+          "task_id": "submax_sustained_165s",
+          "prescription": "High-submaximal sustained effort prescribed at >=80% individual Critical Power (CP) or >=75% P_VO2max (heavy-to-severe oxidative domain; Enoka & Duchateau 2016 SRC-0030)"
+        },
+        "recovery": {
+          "duration_s": 60.0,
+          "task_id": "active_recovery_60s",
+          "prescription": "Low-intensity active recovery (<=30% CP)"
+        }
+      }
+    ],
+    "totals_over_2700s": {
+      "n_explosive_efforts": 15,
+      "n_submax_efforts": 10,
+      "total_effort_s": 1740.0,
+      "total_recovery_s": 960.0,
+      "duty_cycle": 0.6444444444444445
+    }
+  },
+  "early_late_windows_s": {
+    "early_start_s": 0.0,
+    "early_end_s": 540.0,
+    "late_start_s": 2160.0,
+    "late_end_s": 2700.0,
+    "max_gap_s": 1.0,
+    "recommended_effort_sampling_hz": 100.0,
+    "matched_whole_efforts_per_window": {
+      "explosive_sprint_6s": 3,
+      "submax_sustained_165s": 2
+    },
+    "sensitivity_windows_s": [
+      {"name": "inner_300s", "early_end_s": 300.0, "late_start_s": 2400.0},
+      {"name": "thirds_900s", "early_end_s": 900.0, "late_start_s": 1800.0}
+    ]
+  },
+  "post45_observation_times_s": {
+    "post_acute_window_s": [2730.0, 2850.0],
+    "post_5min_s": 3000.0,
+    "post_45min_s": 5400.0,
+    "post_24h_s": 89100.0,
+    "mandatory_timestamp_rule": "Exact individual elapsed timestamp t > 2700 s must be recorded for every post45 test; nominal labels without timestamps are inadmissible."
+  },
+  "candidate_success_thresholds": {
+    "aggregation_rule": "vector_all_mandatory_channels_pass_simultaneously_no_weighted_score",
+    "missing_channel_rule": "not_assessed_never_pass",
+    "statistical_rule": "Participant-clustered 95% bootstrap CI must satisfy each channel bound (no reliance on point estimates alone).",
+    "absolute_demand_floor": {
+      "work_positive_2700s_kJ_per_kg_min": 5.5,
+      "reference_75kg_work_kJ_min": 412.5,
+      "submax_effort_prescription_min_pct_cp": 80.0,
+      "external_basis": "Prevents low-output pacing gaming (COMBAT_LIKE_ENDURANCE_45MIN.md L119); 5.5 kJ/kg over 2700 s (~2.04 W/kg mean across D=0.6444) reflects heavy-domain sustained output in trained adults while preserving absolute Joules & Watts alongside mass-normalized values."
+    },
+    "mechanical_retention_late_vs_early": {
+      "explosive_peak_power_drop_pct_max": 15.0,
+      "explosive_basis": "Girard et al. 2011 (SRC-0029): >15% repeated-sprint peak power decrement indicates severe neuromuscular/metabolic breakdown.",
+      "submax_mean_power_drop_pct_max": 10.0,
+      "submax_basis": "Maunder et al. 2021 endurance durability framework: >5-10% loss of sustainable heavy-domain power marks clinically relevant durability failure.",
+      "in_task_peak_force_drop_pct_max": 10.0,
+      "in_task_velocity_drop_pct_max": 15.0,
+      "velocity_basis": "Sanchez-Medina & Gonzalez-Badillo 2011: >15-20% intraset/in-task velocity loss marks nonlinear rise in metabolic stress and fast-twitch impairment.",
+      "between_effort_recovery_ratio_min": 0.90,
+      "recovery_basis": "Consistent with <=10% residual decrement entering next matched bout after 24 s / 60 s recovery."
+    },
+    "spatial_motor_control_meters": {
+      "coordination_error_m_rel_increase_pct_max": 20.0,
+      "coordination_error_m_abs_increase_max": 0.003,
+      "coordination_status": "PROVISIONAL_REQUIRES_MEASUREMENT3_RELIABILITY_ANCHOR",
+      "coordination_basis": "Begg et al. 2007 / Barrett et al. 2010 adult minimum foot/obstacle clearance safety margin (~10-20 mm mean; >20-25% or >3 mm loss elevates trip/contact risk), corroborated by DUO-GAIT (SRC-0195).",
+      "maneuver_error_m_rel_increase_pct_max": 15.0,
+      "maneuver_error_m_abs_increase_max": 0.05,
+      "maneuver_status": "PROVISIONAL_REQUIRES_MEASUREMENT3_RELIABILITY_ANCHOR",
+      "maneuver_basis": "Standardized change-of-direction / corridor path-tracking error bound; must be verified against familiarization SEM in MEASUREMENT-3."
+    },
+    "concurrent_cognitive_control": {
+      "correct_latency_increase_ms_max": 20.0,
+      "correct_latency_increase_pct_max": 5.0,
+      "accuracy_drop_pp_max": 3.0,
+      "accuracy_absolute_min_pct": 90.0,
+      "omission_rate_pct_max": 5.0,
+      "joint_evaluation_rule": "Latency evaluated on correct trials only and ALWAYS jointly with accuracy and omissions (fast errors cannot pass).",
+      "external_basis": "Lambourne & Tomporowski 2010; Schmit et al. 2017 hyperthermia-cognition threshold; Enoka & Duchateau 2016 (SRC-0030)."
+    },
+    "thermoregulatory_safety_gate": {
+      "core_temp_pass_ceiling_C": 39.0,
+      "medical_abort_ceiling_C": 39.5,
+      "external_basis": "ISO 9886:2004 (38.5 C unacclimatized / 39.0 C monitored acclimatized), NIOSH 2016, and IOC Heat Consensus (Racinais et al. 2023 PMC9811094: >=39.5-40.0 C marks high exertional heat-illness and central failure risk). Tightened from EXP-0149 working_default 39.5 C so medical abort ceiling is never treated as a PASS target."
+    },
+    "post45_recovery_vector": {
+      "post_acute_mvc_retention_pct_min": 85.0,
+      "post_45min_mvc_retention_pct_min": 93.0,
+      "post_45min_cog_accuracy_drop_pp_max": 2.0,
+      "post_45min_cog_rt_increase_ms_max": 15.0,
+      "post_24h_mvc_retention_pct_min": 95.0,
+      "post_24h_cmj_retention_pct_min": 95.0,
+      "post_24h_tendon_pain_nrs_max": 2.0,
+      "external_basis": "Separates reversible acute metabolic fatigue (+0.5-5 min) from persistent structural/EIMD damage (+24 h; Carroll 2017, Deely 2022) and ensures short-term operational readiness (+45 min)."
+    }
+  },
+  "measurement3_minimal_protocol": {
+    "design": "Within-subject randomized counterbalanced crossover (2 familiarization sessions + 2 experimental sessions >=7 d apart: CPE45 intermittent D=0.6444 vs Joule-matched continuous CONT; temperate 20 C / 50% RH primary, optional warm 32 C / 50% RH arm).",
+    "sample_size": {
+      "target_completers": 24,
+      "sex_balance": "12 female, 12 male (18-35 y, trained adults)",
+      "enrollment_with_15pct_buffer": 28,
+      "power_basis": ">85% power at alpha=0.05 (two-sided) for paired dz=0.65 and +-0.4 SD 95% CI precision on retention/recovery proportions."
+    },
+    "mandatory_hardware_sync": [
+      "Calibrated power/force ergometer (>=100 Hz, signed power_W and force_N)",
+      "3D optical/IMU kinematics (>=100 Hz, hardware TTL-synced, speed_m_s, acceleration_m_s2, coordination_error_m, maneuver_error_m; max_gap_s <=1.0 s)",
+      "Concurrent standardized Go/No-Go + 2-back stimulus-response system (>=15 trials per 540-s block; explicit omitted flag, never zero-imputed)",
+      "Ingestible telemetric core-temp pill (0.1 Hz, ISO 9886 calibrated) + ECG HR + ambient WBGT",
+      "Isometric MVC + interpolated twitch (VA) + CMJ at Pre, +2 min, +5 min, +45 min, +24 h with exact timestamps t > 2700 s"
+    ],
+    "ethics_and_safety": "Requires independent IRB/ethics approval, medical screening, pre-hydration verification (USG <1.020), and automatic session termination at T_core >=39.5 C or any heat-illness/musculoskeletal red flag. No human testing is performed within SUBJECT-01 computational cycles."
+  }
+}

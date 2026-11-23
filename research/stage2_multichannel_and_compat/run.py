@@ -199,11 +199,13 @@ def analyze_duogait(data_root: Path, src_cfg: dict, rng: np.random.Generator) ->
         "metrics": out_metrics,
         "clearances_min_cv_outlier_sensitivity": cv_sensitivity,
         "cpe45_spatial_anchor_verdict": (
-            "PARTIAL HUMAN EMPIRICAL ANCHOR IN METERS (CORRECTED VIA 2x2 RM DECOMPOSITION): "
-            "Fatigue and cognitive dual-task act ADDITIVELY (zero significant Fatigue x Dual-Task interaction on all 7 metrics, p>=0.229) "
-            "on distinct spatial channels: cognitive dual-task dominates speed (-0.142 m/s, p=0.0002, eta_p2=0.612), stride length (-0.087 m, p=0.0009), "
-            "and max-clearance asymmetry (+0.0255, p=0.0031), whereas physical fatigue dominates minimum foot clearance (-1.14 mm, p=0.0084, Wilcoxon p=0.0042), "
-            "minimum-clearance CV (Wilcoxon p=0.0110; log p=0.0116; excl. outlier sub_18 p=0.0112), and stride-time CV (+0.0024, p=0.0384). "
+            "PARTIAL HUMAN EMPIRICAL ANCHOR IN METERS (2x2 RM DECOMPOSITION — NO CLAIM OF PROVEN ZERO INTERACTION): "
+            "At n=16, no statistically detectable Fatigue x Dual-Task interaction was found across all 7 metrics (p>=0.229), "
+            "though wide n=16 interaction CIs (e.g. clearances_min_avg eta_p2=0.095) do NOT prove strict additivity or zero interaction. "
+            "Detectable main effects separate by channel: Dual-Task is detected on speed (-0.142 m/s, p=0.0002, eta_p2=0.612), stride length (-0.087 m, p=0.0009), "
+            "and max-clearance asymmetry (+0.0255, p=0.0031), whereas Fatigue is detected on minimum foot clearance (-1.14 mm, p=0.0084, Wilcoxon p=0.0042), "
+            "minimum-clearance CV (Wilcoxon p=0.0110; log p=0.0116; excl. outlier sub_18 p=0.0112), and stride-time CV (+0.0024, p=0.0384); "
+            "non-significant secondary main effects do not prove zero contribution. "
             "Still NOT full CPE45 closure (~360 s << 2700 s, no heavy resistance alternation, no core temp, no post45)."
         ),
     }
@@ -622,8 +624,8 @@ def run_experiment(data_root: Path) -> dict:
         "track3_agostinelli2025_stage3_compat_probe": agostinelli,
         "summary_ruling": (
             "EXP-0155 v2 (independent statistical audit & corrigendum): "
-            "(1) DUO-GAIT (n=16) 2x2 RM decomposition shows Fatigue and Dual-Task act additively (interaction p>=0.229) on distinct channels "
-            "(Dual-Task drives speed/asymmetry; Fatigue drives min foot clearance and clearance CV after accounting for outlier sub_18); "
+            "(1) DUO-GAIT (n=16) 2x2 RM decomposition finds no statistically detectable Fatigue x Dual-Task interaction (p>=0.229; wide CIs do not prove zero interaction) "
+            "and shows detectable main effects split by channel (Dual-Task on speed/asymmetry; Fatigue on min foot clearance and clearance CV after accounting for outlier sub_18); "
             "(2) Goepp 2026 (n=20) separates pure SHAM HA gains (T_re -0.184 C p=0.0089, SART B3 +21.52 pp p=0.0036; MVC drop NS p=0.146) "
             "from baseline-adjusted ANCOVA BFR contrasts (all p>=0.297, but wide n=10/arm CIs do not prove equivalence); "
             "(3) Agostinelli 2025 (n=33) confirms robust VO2max thermal prediction (R2_LOOCV=0.409), shows RelStr speed slope is sensitive to collinear PBF (r=-0.77, p=0.083) "
