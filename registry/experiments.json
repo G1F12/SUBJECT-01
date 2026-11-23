@@ -4253,5 +4253,256 @@
       ]
     },
     "limits": "Strength measured at 10 degrees plantarflexion and tissue at 0 degrees, without intermediate tissue data."
+  },
+  {
+    "date": "2026-11-22",
+    "id": "EXP-0148",
+    "name": "Dynamic force and tendon response in the same movement",
+    "status": "completed",
+    "sources": [
+      "SRC-0166",
+      "SRC-0167",
+      "SRC-0168",
+      "SRC-0169"
+    ],
+    "design": "Recalculate static force, digitize phase means, distinguish peak from average contact force, and assess paired active comparison.",
+    "model": "research/stage1_dynamic_pose/run.py",
+    "protocol": "research/stage1_dynamic_pose/PROTOCOL.md",
+    "inputs": "research/stage1_dynamic_pose/SOURCES.json",
+    "report": "research/stage1_dynamic_pose/REPORT.md",
+    "outputs": [
+      "research/stage1_dynamic_pose/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_dynamic_pose/run.py --check",
+    "results": {
+      "findings": [
+        "FND-0144"
+      ],
+      "negative_results": [
+        "NEG-0128"
+      ]
+    },
+    "limits": "Dynamic outcomes cover grouped phase means. Participant peak and regional tissue capacity absent."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0149",
+    "name": "CPE45 working specification, schedule, early/late windows, post45 times, and EXP-0139 threshold sensitivity",
+    "status": "completed",
+    "sources": [
+      "SRC-0040",
+      "SRC-0086",
+      "SRC-0087",
+      "SRC-0088",
+      "SRC-0111",
+      "SRC-0116",
+      "SRC-0117"
+    ],
+    "design": "Construct a provisional working CPE45 specification (5x540 s schedule, D=0.6444, 540/2160 s windows, acute/5m/45m/24h post45 probes, 3 threshold tiers), compute empirical participant pass rates on verified EXP-0139 datasets, and verify tools/cpe45.py conformance on a deterministic synthetic fixture while preserving canonical CPE45.json null thresholds.",
+    "model": "research/cpe45_working_spec/run.py",
+    "protocol": "research/cpe45_working_spec/PROTOCOL.md",
+    "inputs": "research/cpe45_working_spec/SOURCES.json",
+    "report": "research/cpe45_working_spec/REPORT.md",
+    "outputs": [
+      "research/cpe45_working_spec/WORKING_SPEC.json",
+      "research/cpe45_working_spec/RESULTS.json"
+    ],
+    "reproduction_command": "python research/cpe45_working_spec/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0145"
+      ],
+      "negative_results": [
+        "NEG-0129"
+      ]
+    },
+    "limits": "Provisional working assumptions only; canonical CPE45.json remains unapproved (success_thresholds=null). Coordination and maneuver errors in meters lack any human calibration anchor."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0150",
+    "name": "Stage 1 audit of individual 3-arm EQI vs ECC tendon RCT (Krizaj 2026) and longitudinal tendon cohorts",
+    "status": "completed",
+    "sources": [
+      "SRC-0170",
+      "SRC-0171",
+      "SRC-0172"
+    ],
+    "design": "Participant-level bootstrap analysis of FORCE20 control-adjusted gains, ADAPT25 active-controlled rates, tendon thickness/stiffness correlations, ROM, and 12-session pain in Krizaj 2026 (N=46, Zenodo 19202208), paired with 3-visit patellar tendon reanalysis (OLeary 2026) and walking tendon transfer audit (Waugh 2021).",
+    "model": "research/stage1_eqi_tendon_rct/run.py",
+    "protocol": "research/stage1_eqi_tendon_rct/PROTOCOL.md",
+    "inputs": "research/stage1_eqi_tendon_rct/SOURCES.json",
+    "report": "research/stage1_eqi_tendon_rct/REPORT.md",
+    "outputs": [
+      "research/stage1_eqi_tendon_rct/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_eqi_tendon_rct/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0146"
+      ],
+      "negative_results": [
+        "NEG-0130"
+      ]
+    },
+    "limits": "Krizaj 2026 lacks post body mass, intermediate visits, and loaded peak tendon strain; OLeary 2026 is non-randomised postpartum with passive control."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0151",
+    "name": "Stage 2 audit of new open human datasets against EXP-0149 provisional CPE45 working assumptions",
+    "status": "completed",
+    "sources": [
+      "SRC-0173",
+      "SRC-0174",
+      "SRC-0175",
+      "SRC-0176"
+    ],
+    "design": "Screen individual 2700-s insulated heat-stress cycling sessions (Narang Zenodo 20284986, n=27, 53 sessions) against EXP-0149 working thresholds, evaluate concurrent VT1/VT2 dual-task cognitive degradation (Bilgin 2026) and 72-h MVC recovery (Deely 2022), and audit provenance of Zenodo 24353000.",
+    "model": "research/stage2_cpe45_open_audit/run.py",
+    "protocol": "research/stage2_cpe45_open_audit/PROTOCOL.md",
+    "inputs": "research/stage2_cpe45_open_audit/SOURCES.json",
+    "report": "research/stage2_cpe45_open_audit/REPORT.md",
+    "outputs": [
+      "research/stage2_cpe45_open_audit/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage2_cpe45_open_audit/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0147"
+      ],
+      "negative_results": [
+        "NEG-0131"
+      ]
+    },
+    "limits": "Zero newly discovered open datasets satisfy the full 2700-s tools/cpe45.py contract; Bilgin and Deely provide group summaries only."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0152",
+    "name": "Pose-transfer audit (0 deg vs 10 deg PF) and tendon safety margin for Kubo-Ishigaki (2017) ADAPT25 plus same-pose RCT check",
+    "status": "completed",
+    "sources": [
+      "SRC-0161",
+      "SRC-0177",
+      "SRC-0178",
+      "SRC-0179",
+      "SRC-0180",
+      "SRC-0181",
+      "SRC-0182"
+    ],
+    "design": "Audit Kubo-Ishigaki (2017) 0 deg vs +10 deg PF pose/measurement differences and Fig. 5-6 digitization; quantify empirical 0 deg <-> 10 deg PF torque and Achilles moment-arm transfer across 33 PF MVC curves, 35 in vivo AT MA curves (Chen & Franklin 2025), 15 MA polynomials (Holzer 2020), and n=11 MRI MA (Wolfram 2018); propagate cohort-mean and 50,000-draw Monte Carlo tendon safety factors against Wren (2001), Nagelli (2022), EXP-0062, and EXP-0060; audit same-pose 12-week RCT Jacobs et al. (2025).",
+    "model": "research/stage1_kubo_pose_transfer/run.py",
+    "protocol": "research/stage1_kubo_pose_transfer/PROTOCOL.md",
+    "inputs": "research/stage1_kubo_pose_transfer/SOURCES.json",
+    "report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "outputs": [
+      "research/stage1_kubo_pose_transfer/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_kubo_pose_transfer/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0148"
+      ],
+      "negative_results": [
+        "NEG-0132"
+      ]
+    },
+    "limits": "Individual participant tables for Kubo-Ishigaki (2017) and Jacobs et al. (2025) are unpublished; Kubo-Ishigaki measured compound tendon+aponeurosis elongation without resting L_0, individual MA(theta), or weeks 4 and 8 tendon visits."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0153",
+    "name": "Lower bound of Achilles load-bearing capacity and audit of independently validated non-destructive tissue criteria (Stage 1)",
+    "status": "completed",
+    "sources": [
+      "SRC-0180",
+      "SRC-0183",
+      "SRC-0184",
+      "SRC-0185",
+      "SRC-0186",
+      "SRC-0187",
+      "SRC-0188",
+      "SRC-0189"
+    ],
+    "design": "Reuse EXP-0152 +10 deg PF and 0 deg Achilles loads directly (without re-auditing EXP-0152 sources) to compute Track A one-sided P05 and LPB95 site-specific human capacity lower bounds (calcaneal avulsion, mid-substance rupture, Wren UTS, regional mCSA sensitivity) and Track B prospective validity audit of non-destructive criteria (tendon strain >=9%, stiffness, UTC, SWE, PSF) plus provisional Kubo-Ishigaki strain mapping.",
+    "model": "research/stage1_tendon_capacity_criterion/run.py",
+    "protocol": "research/stage1_tendon_capacity_criterion/PROTOCOL.md",
+    "inputs": "research/stage1_tendon_capacity_criterion/SOURCES.json",
+    "report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "outputs": [
+      "research/stage1_tendon_capacity_criterion/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_tendon_capacity_criterion/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0149"
+      ],
+      "negative_results": [
+        "NEG-0133"
+      ]
+    },
+    "limits": "All accessible computational checks on published human data are exhausted; no young-adult ex vivo Achilles dataset at +10 deg PF and no prospectively validated non-destructive adult Achilles criterion exist in open literature."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0154",
+    "name": "Stage 1 expansion beyond Kubo-Ishigaki: alternative joints/mechanisms and individual SWV validity test",
+    "status": "completed",
+    "sources": [
+      "SRC-0131",
+      "SRC-0190",
+      "SRC-0191",
+      "SRC-0192",
+      "SRC-0193",
+      "SRC-0194"
+    ],
+    "design": "Audit 5 open human RCT/scoping datasets across 4 anatomical sites (hamstrings/BFlh aponeurosis, patellar tendon, Achilles+running, shoulder/supraspinatus) and 5 training mechanisms (LSET, NHT, functional high-load, eccentric timing, BFR vs HL-RT) against canonical FORCE20/ADAPT25 + tissue safety, plus a new individual-level validity test of resting dSWV% vs loaded dStiffness% and dCSA% on reused SRC-0131 (n=21 complete pairs).",
+    "model": "research/stage1_alternative_mechanisms/run.py",
+    "protocol": "research/stage1_alternative_mechanisms/PROTOCOL.md",
+    "inputs": "research/stage1_alternative_mechanisms/SOURCES.json",
+    "report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "outputs": [
+      "research/stage1_alternative_mechanisms/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_alternative_mechanisms/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0150"
+      ],
+      "negative_results": [
+        "NEG-0134"
+      ]
+    },
+    "limits": "Confirms Stage 1 HOLD / DATA_BLOCKED is a general empirical limit of open human datasets across joints and internal training mechanisms; resting SWV does not track loaded stiffness adaptation at the individual level."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0155",
+    "name": "Stage 2 multi-channel CPE45 expansion (spatial anchor in meters + 4-channel heat HA) and Stage 3 within-person compatibility probe",
+    "status": "completed",
+    "sources": [
+      "SRC-0195",
+      "SRC-0196",
+      "SRC-0197"
+    ],
+    "design": "Three individual-level human dataset analyses with deterministic 10,000-draw bootstrap CIs: (1) DUO-GAIT (n=16 paired x 4 conditions) spatial coordination anchor in meters replacing UNASSESSED_NO_HUMAN_ANCHOR; (2) Goepp 2026 (n=20, 10 BFR vs 10 SHAM, 40 C, 1260 s) 4-channel heat acclimation screening; (3) Agostinelli 2025 (n=33, 35 C, 1124 s) within-person bivariate, median-split, and multiple OLS (controlling VO2max and Sex) compatibility probe linking mass-normalized maximal strength to tactical speed, maxCT, lactate, and cognitive errors.",
+    "model": "research/stage2_multichannel_and_compat/run.py",
+    "protocol": "research/stage2_multichannel_and_compat/PROTOCOL.md",
+    "inputs": "research/stage2_multichannel_and_compat/SOURCES.json",
+    "report": "research/stage2_multichannel_and_compat/REPORT.md",
+    "outputs": [
+      "research/stage2_multichannel_and_compat/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage2_multichannel_and_compat/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0151"
+      ],
+      "negative_results": [
+        "NEG-0135"
+      ]
+    },
+    "limits": "Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED: DUO-GAIT (~360 s), Goepp (1260 s), and Agostinelli (~1124 s, cross-sectional) do not reach 2700 s with full joint CPE45 + post45 + longitudinal Stage 1 strength/tendon tracking; canonical CPE45.json remains unchanged."
   }
 ]

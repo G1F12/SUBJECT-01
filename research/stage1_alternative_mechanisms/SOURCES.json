@@ -1,0 +1,96 @@
+{
+  "experiment_id": "EXP-0154",
+  "data_subdir": "goal_stage1_alt",
+  "files": {
+    "PMC11419281.xml": {
+      "source_id": "SRC-0190",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11419281.1/PMC11419281.1.xml",
+      "version": "PMC11419281.1 (Maeo et al. 2024, Med Sci Sports Exerc 56:1893-1905, CC BY 4.0)",
+      "sha256": "e58d7ab13e519008849928bc878f6767d74f324d80fc82febd6d7f4cc992a105",
+      "bytes": 136584
+    },
+    "PMC7987778.xml": {
+      "source_id": "SRC-0191",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7987778.1/PMC7987778.1.xml",
+      "version": "PMC7987778.1 (Mersmann et al. 2021, Front Physiol 12:626225, CC BY 4.0)",
+      "sha256": "e887fb23c932cd356228957b0ccbce674ea49fddc7f2d85b251f436384a8a27f",
+      "bytes": 103503
+    },
+    "PMC6486809.xml": {
+      "source_id": "SRC-0192",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6486809.1/PMC6486809.1.xml",
+      "version": "PMC6486809.1 (Werkhausen et al. 2019, PeerJ 7:e6764, CC BY 4.0)",
+      "sha256": "389d598d8e0408d78032696dc5817b2ea56b54c79afb6f9f63e0adf095fafeb2",
+      "bytes": 98883
+    },
+    "PMC9367933.xml": {
+      "source_id": "SRC-0193",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9367933.1/PMC9367933.1.xml",
+      "version": "PMC9367933.1 (Martinez et al. 2022, Int J Environ Res Public Health 19:9296, CC BY 4.0)",
+      "sha256": "94352040fe9f3bc550a4b45084ce3be4c2b849a7a71cc2d064ba7b8fd9fc77fe",
+      "bytes": 108017
+    },
+    "PMC12096532.xml": {
+      "source_id": "SRC-0194",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12096532.1/PMC12096532.1.xml",
+      "version": "PMC12096532.1 (Oberg et al. 2025, BMC Musculoskelet Disord, CC BY 4.0)",
+      "sha256": "38d973350cf6bb84ef530b363ad56a78e6199f061d52c34191352f73cbc78512",
+      "bytes": 205638
+    },
+    "seynnes_All_data_except_SWV.csv": {
+      "source_id": "SRC-0131",
+      "url": "https://zenodo.org/api/records/14259356/files/All_data_except_SWV.csv/content",
+      "version": "Reused Zenodo 14259356 (Vesterhus et al. 2025, CC BY 4.0) strictly for new dSWV vs dStiffness individual test",
+      "sha256": "3c8af1c80486e8543b1496b98f20b0aa4a97d042840877b0a7d84544c8097cc7",
+      "bytes": 6884
+    },
+    "seynnes_tendon_SWV_data.csv": {
+      "source_id": "SRC-0131",
+      "url": "https://zenodo.org/api/records/14259356/files/tendon_SWV_data.csv/content",
+      "version": "Reused Zenodo 14259356 SWV table for new dSWV vs dStiffness individual test",
+      "sha256": "4290d724e6faa09c4938f004b1dcda36db6a652e1b820dc3a295cb5004fdaf54",
+      "bytes": 2191
+    }
+  },
+  "maeo_2024_hamstring_rct": {
+    "n_per_group": 14,
+    "weeks": 12,
+    "table1_bflh_aponeurosis_area_cm2": {
+      "LSET": [[35.3, 7.8], [38.5, 8.2]],
+      "NHT": [[37.6, 9.4], [38.8, 9.5]],
+      "CON": [[33.0, 5.9], [33.5, 6.3]]
+    },
+    "table2_knee_flexion_torque_nm": {
+      "eccentric_50dps": {"LSET": [[145.0, 23.0], [169.0, 24.0]], "NHT": [[143.0, 45.0], [159.0, 39.0]], "CON": [[128.0, 33.0], [133.0, 27.0]]},
+      "isometric_0dps": {"LSET": [[124.0, 26.0], [158.0, 23.0]], "NHT": [[132.0, 48.0], [166.0, 39.0]], "CON": [[111.0, 32.0], [127.0, 27.0]]},
+      "concentric_50dps": {"LSET": [[120.0, 20.0], [142.0, 19.0]], "NHT": [[122.0, 39.0], [139.0, 30.0]], "CON": [[108.0, 29.0], [118.0, 27.0]]}
+    }
+  },
+  "mersmann_2021_patellar_rct": {
+    "n_exp": 16,
+    "n_con": 18,
+    "visits": 4,
+    "pain_worsening_exp": [0, 16],
+    "pain_worsening_con": [5, 15],
+    "visa_p_group_p": 0.016,
+    "strength_group_p": 0.50,
+    "strength_interaction_p": 0.44,
+    "strength_cohen_d_exp": 0.49,
+    "strength_cohen_d_con": 0.22
+  },
+  "werkhausen_2019_achilles_rct": {
+    "n_train": 11,
+    "n_con": 10,
+    "weeks": 10,
+    "pf_torque_nm": {"TR": [[172.0, 50.0], [198.0, 51.0]], "CON": [[170.0, 51.0], [180.0, 62.0]]},
+    "at_stiffness_n_mm": {"TR": [[397.0, 146.0], [459.0, 147.0]], "CON": [[399.0, 193.0], [400.0, 212.0]]},
+    "at_elongation_mvc_mm": {"TR": [[4.4, 1.1], [4.1, 0.5]], "CON": [[4.0, 1.5], [3.9, 1.5]]},
+    "running_at_lengthening_mm": {"TR": [[8.0, 3.0], [8.0, 2.0]], "CON": [[10.0, 3.0], [11.0, 4.0]]}
+  },
+  "oberg_2025_bfr_scoping_summary": {
+    "brumitt_2020_rotator_cuff": {"n": 46, "weeks": 8, "abduction_bfr_pct": 21.51, "abduction_llrt_pct": 22.25, "ext_rot_bfr_pct": 49.2, "ext_rot_llrt_pct": 48.84, "supraspinatus_thick_bfr_pct": 3.98, "supraspinatus_thick_llrt_pct": 3.90, "p_group_ge": 0.60},
+    "frouin_2024_hamstrings": {"n": 36, "weeks": 9, "iso_kf_bfr_pct": 6.2, "iso_kf_hlrt_pct": 9.5, "iso_kf_con_pct": -0.3},
+    "centner_2022_patellar": {"n": 29, "weeks": 14, "leg_press_1rm_bfr_pct": 34.0, "leg_press_1rm_hlrt_pct": 37.0, "pt_csa_bfr_pct": 9.0, "pt_csa_hlrt_pct": 4.0, "pt_stiff_bfr_pct": 25.0, "pt_stiff_hlrt_pct": 22.0, "has_untreated_control": false},
+    "centner_2023_achilles": {"n": 29, "weeks": 14, "pf_1rm_bfr_pct": 44.0, "pf_1rm_hlrt_pct": 43.0, "at_csa_bfr_pct": 5.2, "at_csa_hlrt_pct": 5.3, "has_untreated_control": false}
+  }
+}

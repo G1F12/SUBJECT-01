@@ -538,5 +538,166 @@
     "negative_results": [
       "NEG-0127"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "id": "DEC-0045",
+    "title": "Retain Stage 1 HOLD after dynamic force audit",
+    "decision": "Keep Stage 1 on HOLD.",
+    "rationale": "Synchronous dynamic tissue observations cover phase means rather than an identified controlled peak.",
+    "amends": [
+      "DEC-0044"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0148"
+    ],
+    "findings": [
+      "FND-0144"
+    ],
+    "negative_results": [
+      "NEG-0128"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0046",
+    "title": "Adopt provisional CPE45 working assumptions while preserving canonical CPE45.json invariants",
+    "decision": "Use research/cpe45_working_spec/WORKING_SPEC.json as provisional screening assumptions for Stage 2; keep canonical research/targets/CPE45.json success_thresholds=null and Stage 2 on HOLD pending joint 2700-s human calibration.",
+    "rationale": "EXP-0149 grounds schedule, 540/2160 s windows, post45 probes, and strict/working_default/permissive bands in verified EXP-0139 human data while respecting DEC-0007 and repository validation invariants.",
+    "amends": [
+      "DEC-0036"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0149"
+    ],
+    "findings": [
+      "FND-0145"
+    ],
+    "negative_results": [
+      "NEG-0129"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0047",
+    "title": "Retain Stage 1 HOLD after individual 3-arm tendon RCT and 18-week cohort audit",
+    "decision": "Keep Stage 1 on HOLD.",
+    "rationale": "Neither Krizaj 2026 (N=46 individual RCT) nor OLeary 2026 closes FORCE20 or ADAPT25 with pose-matched loaded tendon capacity; Kubo-Ishigaki (EXP-0147) still lacks 10-degree tissue capacity and intermediate visits.",
+    "amends": [
+      "DEC-0045"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0150"
+    ],
+    "findings": [
+      "FND-0146"
+    ],
+    "negative_results": [
+      "NEG-0130"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0048",
+    "title": "Retain Stage 2 HOLD and Stage 3 BLOCKED after independent open-data screening",
+    "decision": "Keep Stage 2 (CPE45) as NOT EXTERNALLY VALIDATED / HOLD and Stage 3 (whole-system compatibility) as BLOCKED / HOLD.",
+    "rationale": "Zero open human cohorts cover the joint 2700-s alternating power, force, velocity, coordination/maneuver error, concurrent trials, thermal, and post45 contract; independent partial data confirm thermal-insulation breaches at ~104 W, severe concurrent VT2 cognitive loss, and 72-h residual MVC depression.",
+    "amends": [
+      "DEC-0046"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0151"
+    ],
+    "findings": [
+      "FND-0147"
+    ],
+    "negative_results": [
+      "NEG-0131"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0049",
+    "title": "Retain Stage 1 HOLD after quantitative 0 deg vs 10 deg PF pose-transfer tendon audit of Kubo-Ishigaki (2017)",
+    "decision": "Keep Stage 1 on HOLD.",
+    "rationale": "Although empirical human torque-angle and moment-arm transfer confirms lower Achilles force at +10 deg PF than at 0 deg neutral (~0.76x), conservative safety-factor intervals cross below SF=1.50 across all 10 scenarios (0/10 pass) due to unmeasured individual MA(theta), unadapted CSA (+1.7% NS, requiring unmeasured dUTS >= +17.7-25.5%), unidentifiable free-tendon strain, and missing weeks 4 and 8 tendon visits; comparable same-pose RCT Jacobs et al. (2025) also fails Stage 1.",
+    "amends": [
+      "DEC-0044",
+      "DEC-0047"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0152"
+    ],
+    "findings": [
+      "FND-0148"
+    ],
+    "negative_results": [
+      "NEG-0132"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0050",
+    "title": "Record Stage 1 as HOLD / DATA_BLOCKED after exhausting published human capacity lower bounds and non-destructive criteria",
+    "decision": "Keep Stage 1 on HOLD with explicit DATA_BLOCKED status; mark accessible computational work on existing published human data complete without closing the Stage 1 scientific criterion.",
+    "rationale": "EXP-0153 reuses EXP-0152 loads and establishes that 0/16 published human ex vivo capacity lower bounds (P05/LPB95) satisfy SF>=1.50, no young-adult +10 deg PF ex vivo dataset exists, and no independently validated prospective non-destructive criterion exists for the adult human Achilles tendon (with provisional mapping of adolescent patellar >=9% strain still unidentifiable and exceeding 9%).",
+    "amends": [
+      "DEC-0049"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0153"
+    ],
+    "findings": [
+      "FND-0149"
+    ],
+    "negative_results": [
+      "NEG-0133"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0051",
+    "title": "Confirm Stage 1 HOLD / DATA_BLOCKED across alternative joints, mechanisms, and resting SWV proxy",
+    "decision": "Maintain Stage 1 on HOLD / DATA_BLOCKED after expanding beyond Kubo-Ishigaki and leg press across 4 anatomical sites and 5 training mechanisms, and disqualify resting SWV change as a stand-alone non-destructive tendon safety criterion.",
+    "rationale": "EXP-0154 shows 0/5 alternative human RCT/scoping datasets close FORCE20 or ADAPT25 with validated tissue safety, and individual SRC-0131 analysis (n=21) shows dSWV% does not track loaded dStiffness% (r=+0.216, p=0.3470).",
+    "amends": [
+      "DEC-0050"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0154"
+    ],
+    "findings": [
+      "FND-0150"
+    ],
+    "negative_results": [
+      "NEG-0134"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0052",
+    "title": "Update Stage 2 spatial anchor in meters and record Stage 3 within-person compatibility constraints while maintaining HOLD / DATA_BLOCKED",
+    "decision": "Keep Stage 2 (CPE45) and Stage 3 on HOLD / DATA_BLOCKED and preserve canonical CPE45.json (success_thresholds=null); adopt DUO-GAIT (n=16) as a partial provisional human anchor in meters for working spatial coordination assumptions and record Agostinelli 2025 (n=33) empirical strength-vs-VO2max thermal/lactate constraints for Stage 3.",
+    "rationale": "EXP-0155 replaces UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination in meters and provides direct within-person Stage 3 compatibility bounds (RelStr independently accelerates loaded work without thermal/cognitive penalty, but VO2max governs maxCT and lactate rises), yet no open cohort reaches 2700 s with all joint CPE45 + post45 channels or links them to longitudinal Stage 1 strength/tendon safety.",
+    "amends": [
+      "DEC-0048"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0155"
+    ],
+    "findings": [
+      "FND-0151"
+    ],
+    "negative_results": [
+      "NEG-0135"
+    ]
   }
 ]

@@ -1,0 +1,42 @@
+{
+  "experiment_id": "EXP-0149",
+  "date": "2026-11-23",
+  "status": "PROVISIONAL_WORKING_ASSUMPTIONS_PENDING_CALIBRATION",
+  "canonical_contract": "research/targets/CPE45.json",
+  "canonical_inputs": {
+    "exp0139_results": "research/cpe45_human_evidence/RESULTS.json",
+    "exp0063_results": "research/exp0063_pennes_bioheat_cpe45/RESULTS.json",
+    "cpe45_contract": "research/targets/CPE45.json"
+  },
+  "raw_inputs_under_data_root": {
+    "mclaughlin": {
+      "registry_id": "SRC-0086",
+      "path": "mclaughlin_29120024.xlsx",
+      "sha256": "499f546648822d99465c476702183cd3e37bdbaa6274de383f542708b052d531"
+    },
+    "jutlah": {
+      "registry_id": "SRC-0040",
+      "path": "recovery_raw/Power_rawdata.xlsx",
+      "sha256": "b5cb03007190a63dae6a118a7a604cd906273f93febf42957a2e7799df16da20"
+    },
+    "norbury": {
+      "registry_id": "SRC-0111",
+      "path": "norbury_24156741.xlsx",
+      "sha256": "295cbe90ebb84e7bfa3cd2804d81f87663b16088bdc06021256343d6f57acb9e"
+    },
+    "stroop": {
+      "registry_id": "SRC-0087",
+      "path": "cpe45_human/task2.tab",
+      "sha256": "11e53a0d89651a1851c496c5061a675f0744904c1b627f6065146e553d80c9fc"
+    },
+    "velocity": {
+      "registry_id": "SRC-0088",
+      "path": "cpe45_human/leg.csv",
+      "sha256": "9283595449be5d7a3ed1641d2ba1f6919288907805df9888098680df022bd3ad"
+    }
+  },
+  "published_summary_anchors": [
+    "SRC-0116",
+    "SRC-0117"
+  ]
+}

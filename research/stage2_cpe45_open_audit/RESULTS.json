@@ -1,0 +1,310 @@
+{
+  "experiment_id": "EXP-0151",
+  "stage": "Stage 2",
+  "target_id": "TARGET-CPE45",
+  "verdict": "NOT_EXTERNALLY_VALIDATED_HOLD",
+  "joint_2700s_admitted_cohorts": 0,
+  "bootstrap": {
+    "seed": 1512026,
+    "draws": 10000,
+    "unit": "participant"
+  },
+  "artifact_sha256_lf": {
+    "PROTOCOL.md": "7eeffe1d5bd688db8f199f6f373c3af1cb48c77fe651789a66f99acb1fe34993",
+    "SOURCES.json": "a58806493a7680cc3293c28270cb49fb4db213f2406d681c3b19ca9da79c7eb3",
+    "run.py": "4d7c52c1621c8293fdc0d7f6b0b20721d8b13414d337fd57baa5d3a7d5b16f21"
+  },
+  "narang_2026_femadapt_zenodo_20284986": {
+    "n_unique_participants": 27,
+    "n_sessions_total": 53,
+    "baseline_n27": {
+      "power_W": {
+        "n": 27,
+        "mean": 102.48148148148148,
+        "sd": 13.907304031087598,
+        "min": 65.0,
+        "max": 124.0,
+        "ci95": [
+          97.33333333333333,
+          107.48148148148148
+        ]
+      },
+      "work45_kJ": {
+        "n": 27,
+        "mean": 276.70000000000005,
+        "sd": 37.549720883936516,
+        "min": 175.5,
+        "max": 334.8,
+        "ci95": [
+          262.3,
+          290.30249999999995
+        ]
+      },
+      "tcore_end_C": {
+        "n": 27,
+        "mean": 38.2735817860654,
+        "sd": 0.515523996867991,
+        "min": 37.43780214088398,
+        "max": 39.73833333333333,
+        "ci95": [
+          38.09218949273104,
+          38.472124712837044
+        ]
+      },
+      "tcore_delta_C": {
+        "n": 27,
+        "mean": 1.152070953960141,
+        "sd": 0.44058832097855427,
+        "min": 0.5641509841160257,
+        "max": 2.466666666666661,
+        "ci95": [
+          0.9985336287968689,
+          1.3267432610500924
+        ]
+      },
+      "hr_ss_bpm": {
+        "n": 26,
+        "mean": 167.1885789060072,
+        "sd": 14.619656819091286,
+        "min": 144.6410256410256,
+        "max": 196.7546064189189,
+        "ci95": [
+          161.72717691995567,
+          172.67377511069662
+        ]
+      },
+      "borg_mean_45": {
+        "n": 25,
+        "mean": 13.9,
+        "sd": 2.174664725116648,
+        "min": 9.5,
+        "max": 17.5,
+        "ci95": [
+          13.06,
+          14.72
+        ]
+      }
+    },
+    "post_n26": {
+      "work45_kJ": {
+        "n": 26,
+        "mean": 276.75000000000006,
+        "sd": 38.29243528426992,
+        "min": 175.5,
+        "max": 334.8,
+        "ci95": [
+          261.6923076923077,
+          290.87307692307695
+        ]
+      },
+      "tcore_end_C": {
+        "n": 25,
+        "mean": 37.97810903836962,
+        "sd": 0.3980551418271166,
+        "min": 37.32707290227901,
+        "max": 38.67813363259668,
+        "ci95": [
+          37.82595713880658,
+          38.13195842271606
+        ]
+      },
+      "tcore_delta_C": {
+        "n": 25,
+        "mean": 0.8970219281137267,
+        "sd": 0.35008277978390495,
+        "min": 0.3149009409530379,
+        "max": 1.605587448204418,
+        "ci95": [
+          0.7618957142283762,
+          1.0330107677101197
+        ]
+      }
+    },
+    "working_spec_screening": {
+      "baseline_n27": {
+        "strict": {
+          "n_work": 27,
+          "n_thermal_observed": 27,
+          "work_passed": 0,
+          "thermal_passed": 25,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 2
+        },
+        "working_default": {
+          "n_work": 27,
+          "n_thermal_observed": 27,
+          "work_passed": 0,
+          "thermal_passed": 26,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 1
+        },
+        "permissive": {
+          "n_work": 27,
+          "n_thermal_observed": 27,
+          "work_passed": 0,
+          "thermal_passed": 26,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 1
+        }
+      },
+      "all_sessions_n53": {
+        "strict": {
+          "n_work": 53,
+          "n_thermal_observed": 52,
+          "work_passed": 0,
+          "thermal_passed": 50,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 2
+        },
+        "working_default": {
+          "n_work": 53,
+          "n_thermal_observed": 52,
+          "work_passed": 0,
+          "thermal_passed": 51,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 1
+        },
+        "permissive": {
+          "n_work": 53,
+          "n_thermal_observed": 52,
+          "work_passed": 0,
+          "thermal_passed": 51,
+          "joint_work_and_thermal_passed": 0,
+          "thermal_breaches_ge_cap": 1
+        }
+      }
+    },
+    "paired_hypoxia_acclimation": {
+      "by_group": {
+        "Hypoxia": {
+          "n_paired_tcore_end": 13,
+          "n_paired_tcore_delta": 13,
+          "post_minus_base_tcore_end_C": {
+            "n": 13,
+            "mean": -0.4537614559836325,
+            "sd": 0.3511676589149685,
+            "min": -1.1783333333333275,
+            "max": -0.09174292127072192,
+            "ci95": [
+              -0.6431801455533275,
+              -0.2852894885429091
+            ]
+          },
+          "post_minus_base_tcore_delta_C": {
+            "n": 13,
+            "mean": -0.3523874088043645,
+            "sd": 0.3782766990035337,
+            "min": -1.048205128205125,
+            "max": 0.2560050500690638,
+            "ci95": [
+              -0.5555038686335037,
+              -0.1595055217012771
+            ]
+          }
+        },
+        "Control": {
+          "n_paired_tcore_end": 12,
+          "n_paired_tcore_delta": 12,
+          "post_minus_base_tcore_end_C": {
+            "n": 12,
+            "mean": -0.12478258575382443,
+            "sd": 0.21126281320620302,
+            "min": -0.629230769230773,
+            "max": 0.07961951830111502,
+            "ci95": [
+              -0.2488180750297625,
+              -0.023496871499884164
+            ]
+          },
+          "post_minus_base_tcore_delta_C": {
+            "n": 12,
+            "mean": -0.12526478278917128,
+            "sd": 0.2992011971588469,
+            "min": -0.7369230769230979,
+            "max": 0.4767351519337022,
+            "ci95": [
+              -0.2889968953087375,
+              0.03551221062764951
+            ]
+          }
+        }
+      },
+      "hypoxia_minus_control": {
+        "tcore_end_C_diff_in_diff": {
+          "estimate": -0.32897887022980804,
+          "ci95": [
+            -0.5460390914110063,
+            -0.11004548090906342
+          ]
+        },
+        "tcore_delta_C_diff_in_diff": {
+          "estimate": -0.2271226260151932,
+          "ci95": [
+            -0.4869502380594329,
+            0.022998996315344664
+          ]
+        }
+      }
+    },
+    "cpe45_contract_gap": "Constant-load 40% MAP in insulated heat suit; no alternating explosive bouts, no force/speed/coordination/maneuver/trials channels, no post45 MVC."
+  },
+  "bilgin_2026_dual_task_cycling_pmc13702500": {
+    "n": 11,
+    "bout_duration_min": 10,
+    "conditions": {
+      "vt1": {
+        "hits_dual_change_pct": -10.08200675349734,
+        "hits_post_change_pct": -1.3506994693680663,
+        "dprime_dual_change_pct": -25.842696629213478,
+        "dprime_post_change_pct": -9.55056179775281,
+        "hit_rt_dual_change_ms": 22.25999999999999,
+        "hit_rt_post_change_ms": 12.75,
+        "dual_rt_exceeds_working_tiers": {
+          "strict": true,
+          "working_default": true,
+          "permissive": false
+        }
+      },
+      "vt2": {
+        "hits_dual_change_pct": -29.14153132250581,
+        "hits_post_change_pct": -12.250580046403714,
+        "dprime_dual_change_pct": -37.03703703703704,
+        "dprime_post_change_pct": -24.33862433862434,
+        "hit_rt_dual_change_ms": 54.24000000000001,
+        "hit_rt_post_change_ms": 13.580000000000041,
+        "dual_rt_exceeds_working_tiers": {
+          "strict": true,
+          "working_default": true,
+          "permissive": true
+        }
+      }
+    },
+    "anova_p": {
+      "hits_cond_x_phase": 0.019,
+      "hit_rt_cond_x_phase": 0.647,
+      "post_vt2_dprime_vs_pre_holm": 0.008
+    },
+    "cpe45_contract_gap": "10-min continuous bouts at VT1/VT2; group summaries only; no 2700-s power/force/coordination/post45 MVC."
+  },
+  "deely_2022_soccer_recovery_pmc9235147": {
+    "n": 16,
+    "post_session_mvc_change_pct": -11.0,
+    "post_session_mvc_p": 0.001,
+    "post_72h_mvc_change_pct": -6.0,
+    "post_72h_mvc_p": 0.03,
+    "va_mvc_r": 0.609,
+    "va_mvc_p": 0.016,
+    "breaches_working_24h_95pct_at_72h": true
+  },
+  "zenodo_24353000_provenance_rejection": {
+    "status": "REJECTED_PROVENANCE_MISMATCH",
+    "zenodo_metadata_claim": "Pilot RCT in 8 elite male judokas (Polish National Judo Senior Team) under hypoxia/normoxia",
+    "actual_file_rows_n": 30,
+    "actual_file_poziom_values": [
+      "TopMMA"
+    ],
+    "readme_declares_topmma_n30": true,
+    "readme_discloses_prior_control_duplication": true,
+    "admitted": false
+  }
+}

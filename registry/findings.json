@@ -1234,5 +1234,69 @@
     "title": "Paired ADAPT25 strength component passes",
     "statement": "Kubo ISO versus PLY +1.38 [0.24,2.53] pp/week at worst admissible correlation with positive control rate.",
     "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "FND-0144",
+    "experiment_id": "EXP-0148",
+    "title": "Dynamic phase means rise with synchronous tendon tracking",
+    "statement": "Hirayama phase 2 and 3 adjusted estimates +20.93 and +20.36 pp with intervals crossing zero. Braking elongation 33 to 26 mm.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0145",
+    "experiment_id": "EXP-0149",
+    "title": "Provisional CPE45 working specification anchored to EXP-0139 human quantiles and tools/cpe45.py",
+    "statement": "Symmetric 5x540 s schedule (D=0.6444, 540/2160 s windows, 3 explosive + 2 submax efforts per window) executes cleanly in tools/cpe45.py and eliminates Jutlah 1x1 start artifact; under working_default thresholds, partial human pass rates are 11/24 McLaughlin work+thermal, 9/21 Jutlah 24s peak+mean, 40/71 Remiszewski joint RT+acc, and 6-7/12 Norbury 45m.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0146",
+    "experiment_id": "EXP-0150",
+    "title": "Individual 3-arm RCT links plantar-flexor torque gains, Achilles thickening, ROM gain, and session pain",
+    "statement": "In Krizaj 2026 (N=46, 6 wk, matched load and TUT), EQI and ECC raised isometric MVC by +13.30 [8.31; 20.21] and +12.04 [7.17; 17.07] pp over passive control, increased Achilles thickness (+7.37% and +8.30%) and closed-chain ROM (+5.53% and +6.94%), with lower mean pain in EQI (1.24 vs 1.71 across 180 session logs/arm).",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0147",
+    "experiment_id": "EXP-0151",
+    "title": "Independent 45-min insulated cycling, concurrent dual-task VT2, and 72-h soccer recovery sharpen CPE45 bounds",
+    "statement": "In Narang (53 sessions, 2700 s in insulated heat suit at 102.5 W, 276.7 kJ), Tcore reached up to 39.74 C (1/27 baseline breach >=39.5 C) and 10-day hypoxia reduced Tcore_end by -0.33 [-0.55; -0.11] C vs control; in Bilgin (n=11), concurrent VT2 cycling cut 2-back hits by -29.1%, d-prime by -37.0%, and slowed RT by +54.2 ms; in Deely (n=16), MVC stayed -6% below baseline at 72 h.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0148",
+    "experiment_id": "EXP-0152",
+    "title": "Empirical 0 deg to +10 deg PF transfer lowers tendon force (~0.76x) but Kubo-Ishigaki SF still crosses below 1.50 across all scenarios",
+    "statement": "Across 33 knee-extended human PF MVC curves (TQ(10PF)/TQ(0)=0.8125+-0.0669; young males n=11: 0.7915+-0.0675; Holzer prone 14M: 0.7480) and 15 Holzer / 35 Chen-Franklin in vivo AT MA curves (MA(10PF)/MA(0)=1.0400 / 1.0330), +10 deg PF reduces AT force to 0.761x [0.642; 0.932] of 0 deg. Yet at Kubo-Ishigaki ISO Post (+10 deg PF: 124.8+-15.0 Nm, CSA 66.0+-7.8 mm2), cohort-mean and 50,000-draw Monte Carlo safety factors cross below SF=1.50 in all 10 tested scenarios (ramp enthesis vs Wren 71 MPa at f_TS=1.00: cohort SF 1.085-2.004, MC median 1.427 [P5=0.753; P95=2.457], 55.6% <1.50; even at f_TS=0.873 vs 85 MPa: cohort 1.488-2.748, MC P5=1.303, 14.3% <1.50).",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0149",
+    "experiment_id": "EXP-0153",
+    "title": "Published human capacity lower bounds fail SF>=1.50 (0/16 checks) and no prospectively validated adult Achilles non-destructive criterion exists",
+    "statement": "Reusing EXP-0152 +10 deg PF loads directly, 0/16 published human ex vivo capacity lower-bound checks (P05 and one-sided LPB95) clear SF>=1.50: Nagelli 2022 healthy calcaneal avulsion P05=2249 N / LPB95=1423 N yields SF 0.623-1.152 / 0.394-0.729 (f_TS=1.00) and 0.714-1.319 / 0.452-0.835 (f_TS=0.873); Wren slow P05=43.04 MPa yields SF 0.658-1.215 (f_TS=1.00) and 0.753-1.392 (f_TS=0.873); regional mCSA 10-25% below malleolus CSA worsens SF to 0.493-1.093. For non-destructive criteria, Weerkamp 2026 (11 prospective cohorts) finds only very low-quality GRADE evidence for all imaging/elastography/UTC/biomechanical Achilles factors, Pang 2026 (50 cohorts) shows strict maximal tendon strain does not significantly decrease (-4.77% [-11.45%; +2.42%]), and Mersmann 2023 >=9% (RR=2.3 [1.1; 4.9]) is validated only on adolescent patellar tendons and still crossed (6.48-11.42%, +1 SD 12.90%) when provisionally mapped to Kubo-Ishigaki.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0150",
+    "experiment_id": "EXP-0154",
+    "title": "Stage 1 DATA_BLOCKED generalizes across 4 joints and 5 mechanisms; resting SWV fails individual stiffness validity (n=21, r=+0.216)",
+    "statement": "Across 4 anatomical sites and 5 internal training mechanisms (Maeo 2024 hamstrings n=42: BFlh MRI aponeurosis +7.55 pp vs CON, but adjusted torque +9.07..+13.00 pp fails FORCE20 and LSET-1.25xNHT crosses zero; Mersmann 2021 patellar n=34: prevents pain 0/16 vs 5/15 p=0.016 but no strength-rate advantage p=0.44; Werkhausen 2019 Achilles n=21: adjusted torque +9.23 pp; Martinez 2022 patellar n=50: no external MVC contrast; Oberg 2025 BFR scoping: Brumitt rotator cuff ADAPT25 -0.788/-1.481 pp/wk, Frouin +6.5/+9.8 pp, Centner matches HL-RT without untreated control), 0/5 cohorts close Stage 1. On reused individual data SRC-0131 (n=21 complete pairs), resting dSWV% (+11.08+-22.47%) does not significantly track loaded dStiffness% (+22.55+-32.37%; r=+0.216, p=0.3470, 95% bootstrap CI [-0.187; +0.587]; Spearman rho=+0.240, p=0.2942) or dCSA% (r=+0.357, p=0.1122).",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "FND-0151",
+    "experiment_id": "EXP-0155",
+    "title": "DUO-GAIT establishes first human spatial anchor in meters; Goepp 2026 quantifies 4-channel HA; Agostinelli 2025 establishes within-person Stage 3 constraints",
+    "statement": "(1) DUO-GAIT (n=16 paired) replaces UNASSESSED_NO_HUMAN_ANCHOR for CPE45 working spatial coordination: combined fatigue + dual-task reduces gait speed -11.78% (p=0.00046), stride length -7.81% (p=0.00051), and min foot clearance -27.52% (-2.58 mm, CI [-4.1; -1.1] mm, p=0.0046), while raising clearance CV +57.20% (p=0.00501) and asymmetry SI +68.39% (p=0.02101). (2) Goepp 2026 (n=20, 40 C, 1260 s): 8-day internal HA lowers 21-min T_re by -0.170 C ([-0.257; -0.081], p=0.00164; 20/20 <39.0 C), improves concurrent SART B3 accuracy +21.63 pp ([+12.33; +31.94], p=0.00047), and moderates MVC drop -14.30% to -11.86% without BFR advantage over SHAM (p>=0.42). (3) Agostinelli 2025 (n=33, 35 C, 1124 s): controlling for VO2max and Sex, mass-normalized strength RelStr independently speeds up 4-round loaded work (partial r=-0.493, beta=-145.9 s, p=0.0056; High vs Low -370.2 s, p=0.00001) with no independent maxCT (partial r=+0.106, p=0.572) or cognitive error penalty (partial r=+0.119, p=0.525), whereas VO2max is the sole dominant independent driver of maxCT (partial r=-0.558, p=0.0011; bivariate r=-0.668) and stronger athletes show higher blood lactate (bivariate r=+0.414, p=0.0165; High vs Low +3.04 mmol/L).",
+    "confidence": "statistically_reproduced"
   }
 ]

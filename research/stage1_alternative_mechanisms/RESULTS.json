@@ -1,0 +1,224 @@
+{
+  "experiment_id": "EXP-0154",
+  "stage1_verdict": "HOLD",
+  "stage1_blocker_status": "DATA_BLOCKED",
+  "scientific_criterion_closed": false,
+  "verified_sources": {
+    "PMC11419281.xml": {
+      "bytes": 136584,
+      "sha256": "e58d7ab13e519008849928bc878f6767d74f324d80fc82febd6d7f4cc992a105",
+      "source_id": "SRC-0190"
+    },
+    "PMC7987778.xml": {
+      "bytes": 103503,
+      "sha256": "e887fb23c932cd356228957b0ccbce674ea49fddc7f2d85b251f436384a8a27f",
+      "source_id": "SRC-0191"
+    },
+    "PMC6486809.xml": {
+      "bytes": 98883,
+      "sha256": "389d598d8e0408d78032696dc5817b2ea56b54c79afb6f9f63e0adf095fafeb2",
+      "source_id": "SRC-0192"
+    },
+    "PMC9367933.xml": {
+      "bytes": 108017,
+      "sha256": "94352040fe9f3bc550a4b45084ce3be4c2b849a7a71cc2d064ba7b8fd9fc77fe",
+      "source_id": "SRC-0193"
+    },
+    "PMC12096532.xml": {
+      "bytes": 205638,
+      "sha256": "38d973350cf6bb84ef530b363ad56a78e6199f061d52c34191352f73cbc78512",
+      "source_id": "SRC-0194"
+    },
+    "seynnes_All_data_except_SWV.csv": {
+      "bytes": 6884,
+      "sha256": "3c8af1c80486e8543b1496b98f20b0aa4a97d042840877b0a7d84544c8097cc7",
+      "source_id": "SRC-0131"
+    },
+    "seynnes_tendon_SWV_data.csv": {
+      "bytes": 2191,
+      "sha256": "4290d724e6faa09c4938f004b1dcda36db6a652e1b820dc3a295cb5004fdaf54",
+      "source_id": "SRC-0131"
+    }
+  },
+  "alternative_mechanisms_tested": {
+    "maeo_2024_hamstring_lset_vs_nht": {
+      "joint_and_mechanism": "Knee flexors / hamstrings (BFlh MRI aponeurosis) — lengthened-state eccentric (LSET) vs Nordic hamstring (NHT) vs CON (n=42, 12 wk)",
+      "bflh_aponeurosis_area_gain_pct": {
+        "LSET": 9.07,
+        "NHT": 3.19,
+        "CON": 1.52,
+        "LSET_minus_CON_pp": 7.55
+      },
+      "torque_outcomes": {
+        "eccentric_50dps": {
+          "lset_gain_pct": 16.55,
+          "nht_gain_pct": 11.19,
+          "con_gain_pct": 3.91,
+          "force20_lset_vs_con_pp": 12.65,
+          "force20_ci95_r05_pp": [
+            -3.17,
+            28.46
+          ],
+          "force20_ci95_r09_pp": [
+            5.2,
+            20.09
+          ],
+          "adapt25_lset_vs_nht_pp_per_wk": 0.214,
+          "adapt25_ci95_r05_pp_per_wk": [
+            -1.635,
+            2.063
+          ],
+          "adapt25_ci95_r09_pp_per_wk": [
+            -0.641,
+            1.069
+          ],
+          "passes_force20": false,
+          "passes_adapt25": false
+        },
+        "isometric_0dps": {
+          "lset_gain_pct": 27.42,
+          "nht_gain_pct": 25.76,
+          "con_gain_pct": 14.41,
+          "force20_lset_vs_con_pp": 13.0,
+          "force20_ci95_r05_pp": [
+            -5.35,
+            31.36
+          ],
+          "force20_ci95_r09_pp": [
+            4.42,
+            21.59
+          ],
+          "adapt25_lset_vs_nht_pp_per_wk": -0.398,
+          "adapt25_ci95_r05_pp_per_wk": [
+            -2.519,
+            1.723
+          ],
+          "adapt25_ci95_r09_pp_per_wk": [
+            -1.414,
+            0.617
+          ],
+          "passes_force20": false,
+          "passes_adapt25": false
+        },
+        "concentric_50dps": {
+          "lset_gain_pct": 18.33,
+          "nht_gain_pct": 13.93,
+          "con_gain_pct": 9.26,
+          "force20_lset_vs_con_pp": 9.07,
+          "force20_ci95_r05_pp": [
+            -7.76,
+            25.91
+          ],
+          "force20_ci95_r09_pp": [
+            1.48,
+            16.67
+          ],
+          "adapt25_lset_vs_nht_pp_per_wk": 0.076,
+          "adapt25_ci95_r05_pp_per_wk": [
+            -1.742,
+            1.895
+          ],
+          "adapt25_ci95_r09_pp_per_wk": [
+            -0.821,
+            0.974
+          ],
+          "passes_force20": false,
+          "passes_adapt25": false
+        }
+      },
+      "verdict": "HOLD (confirmed MRI connective-tissue hypertrophy +7.55 pp vs CON, but all control-adjusted strength gains +9.07..+13.00 pp fail FORCE20 and all active LSET-1.25xNHT contrasts cross zero; no loaded tendon strain or individual data)."
+    },
+    "mersmann_2021_functional_high_load_patellar": {
+      "n_exp": 16,
+      "n_con": 18,
+      "visits": 4,
+      "pain_worsening_exp": [
+        0,
+        16
+      ],
+      "pain_worsening_con": [
+        5,
+        15
+      ],
+      "visa_p_group_p": 0.016,
+      "strength_group_p": 0.5,
+      "strength_interaction_p": 0.44,
+      "strength_cohen_d_exp": 0.49,
+      "strength_cohen_d_con": 0.22,
+      "passes_adapt25": false,
+      "passes_force20": false,
+      "verdict": "HOLD (clinically prevents patellar tendinopathy: 0/16 vs 5/15 worsening, p=0.016, but yields NO strength-rate superiority over active control: group p=0.50, interaction p=0.44)."
+    },
+    "werkhausen_2019_achilles_running_strain": {
+      "joint_and_mechanism": "Ankle plantarflexion isometric training (10 wk, n=11 TR vs n=10 CON) with same-pose AT stiffness and in vivo running AT lengthening",
+      "pf_torque_tr_gain_pct": 15.12,
+      "pf_torque_con_gain_pct": 5.88,
+      "force20_adjusted_pp": 9.23,
+      "force20_ci95_r05_pp": [
+        -19.77,
+        38.23
+      ],
+      "force20_ci95_r09_pp": [
+        -4.29,
+        22.76
+      ],
+      "at_stiffness_tr_gain_pct": 15.62,
+      "at_stiffness_con_gain_pct": 0.25,
+      "passes_force20": false,
+      "passes_adapt25": false,
+      "verdict": "HOLD (control-adjusted torque +9.23 pp far below FORCE20 +20 pp; passive control fails ADAPT25)."
+    },
+    "martinez_2022_patellar_eccentric_execution_time": {
+      "n_total": 50,
+      "arms": "EG6s (n=17) vs EG3s (n=18) vs CG (n=15), 6 wk single-leg decline squat + 6 wk detraining",
+      "passes_force20": false,
+      "passes_adapt25": false,
+      "verdict": "HOLD (proximal PT thickness time x group p=0.037, but no published maximal external strength/MVC contrast or loaded tendon capacity)."
+    },
+    "oberg_2025_multi_site_bfr_vs_hlrt": {
+      "brumitt_2020_rotator_cuff_adapt25_point_pp_per_wk": {
+        "shoulder_abduction": -0.788,
+        "shoulder_ext_rotation": -1.481
+      },
+      "frouin_2024_hamstring_adjusted_pp": {
+        "bfr_vs_con": 6.5,
+        "hlrt_vs_con": 9.8
+      },
+      "centner_2022_2023_bfr_vs_hlrt": "BFR matches rather than exceeds HLRT by +25% (leg press 34% vs 37%; PF 44% vs 43%), lacks untreated control arm in 2022/2023, and individual tables are closed/paywalled.",
+      "passes_force20": false,
+      "passes_adapt25": false
+    }
+  },
+  "individual_swv_validity_test": {
+    "reused_source": "SRC-0131 (Zenodo 14259356, Vesterhus et al. 2025) — strictly new non-destructive SWV validity test, no re-audit of EXP-0142 strength contrasts",
+    "n_paired_swv_stiffness": 21,
+    "swv_change_mean_sd_pct": [
+      11.08,
+      22.47
+    ],
+    "stiffness_change_mean_sd_pct": [
+      22.55,
+      32.37
+    ],
+    "csa_change_mean_sd_pct": [
+      1.13,
+      0.91
+    ],
+    "mvc_change_mean_sd_pct": [
+      11.34,
+      7.23
+    ],
+    "pearson_r_dSWV_vs_dStiffness": 0.216,
+    "pearson_p_dSWV_vs_dStiffness": 0.347,
+    "bootstrap_ci95_r_dSWV_vs_dStiffness": [
+      -0.187,
+      0.587
+    ],
+    "spearman_rho_dSWV_vs_dStiffness": 0.24,
+    "spearman_p_dSWV_vs_dStiffness": 0.2942,
+    "pearson_r_dSWV_vs_dCSA": 0.357,
+    "pearson_p_dSWV_vs_dCSA": 0.1122,
+    "ruling": "Resting patellar SWV change does NOT significantly track loaded tensile stiffness adaptation or CSA change at the individual human level (n=21, r=+0.216, p=0.3470, 95% bootstrap CI [-0.187; +0.587]), disqualifying resting SWV as a stand-alone safety proxy."
+  },
+  "summary_ruling": "Expanding Stage 1 across 4 anatomical sites (ankle, knee/patellar, hamstring/BFlh, shoulder/supraspinatus) and 5 internal training mechanisms (lengthened-state eccentric, Nordic eccentric, functional high-load patellar, eccentric execution time, low-load BFR) confirms Stage 1 DATA_BLOCKED is a general empirical limit of open human datasets, not specific to Kubo-Ishigaki or leg press."
+}

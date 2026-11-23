@@ -1028,5 +1028,69 @@
     "title": "Tissue trajectory absent in the passing strength configuration",
     "statement": "Strength at 10 degrees and tissue at neutral. Tsai matched-volume active contrast precision insufficient.",
     "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-22",
+    "id": "NEG-0128",
+    "experiment_id": "EXP-0148",
+    "title": "Dynamic phase means do not resolve peak functional force",
+    "statement": "Published dynamic data lack participant peak force. Kubo 2007 active strength margin -0.19 [-2.62,2.23] pp/week under worst pairing.",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0129",
+    "experiment_id": "EXP-0149",
+    "title": "Canonical CPE45 thresholds remain uncalibrated due to missing joint 2700-s human data and motor-error anchors",
+    "statement": "Coordination and maneuver errors in meters have zero admissible human datasets; single-sprint 1x1 windows distort mean power loss (-5.35% SD 24.29% at 12s rest); canonical CPE45.json success_thresholds must remain null until external joint 2700-s calibration.",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0130",
+    "experiment_id": "EXP-0150",
+    "title": "Krizaj 2026 and OLeary 2026 fail Stage 1 FORCE20/ADAPT25 closure and resting SWE stiffness did not rise",
+    "statement": "In Krizaj 2026, active ADAPT25 contrasts span zero (ISO -0.29 [-1.65; +1.18], CON +0.13 [-1.75; +2.15], ECC +0.10 [-1.95; +2.21] pp/wk), FORCE20 lower bounds are below +20 pp with no post body mass, and resting Achilles SWE stiffness did not rise (-6.64% EQI, -3.29% ECC; r=0.206 vs MVC gain). OLeary 2026 control-adjusted W18 MVC (+19 [-21; +59] N) spans zero.",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0131",
+    "experiment_id": "EXP-0151",
+    "title": "Zero new open datasets satisfy the 2700-s CPE45 contract and Zenodo 24353000 fails provenance gate",
+    "statement": "0/53 Narang sessions reach permissive >=350 kJ working work threshold and lack explosive/motor/post45 channels; concurrent VT2 dual-task RT (+54.2 ms) breaches all EXP-0149 tiers; Zenodo 24353000 is rejected due to metadata-file mismatch (8 judokas vs 30 TopMMA rows and disclosed prior control duplication).",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0132",
+    "experiment_id": "EXP-0152",
+    "title": "Pose transfer cannot close Stage 1 ADAPT25 in Kubo-Ishigaki (2017) and same-pose RCT Jacobs (2025) also remains HOLD",
+    "statement": "0/10 safety-factor scenarios at +10 deg PF pass SF>=1.50 conservatively, 0 deg training pose is harsher (SF_ent 0.828-1.493 vs 71 MPa, 100% <1.50), non-hypertrophied CSA (+1.7% NS) requires unmeasured dUTS >= +17.7-25.5% to avoid -75% to -95% Wohler fatigue loss, and free-tendon strain plus weeks 4/8 visits are unmeasured. Same-pose 12-week RCT Jacobs et al. (2025, n=18) fails FORCE20 in isometric PF (+7.41 pp NS), KE (+10.36 pp), and squat 1RM lower 95% CI, and lacks an active strength comparator for ADAPT25.",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0133",
+    "experiment_id": "EXP-0153",
+    "title": "Stage 1 is formally DATA_BLOCKED on existing published human data across both capacity lower bounds and non-destructive criteria",
+    "statement": "Neither site-specific human ex vivo capacity lower bounds (no young-adult +10 deg PF cohort; all existing P05/LPB95 bounds fail SF>=1.50) nor independently validated non-destructive criteria (none validated prospectively for adult human Achilles tendon; 2D compound elongation lacks resting L_0 and free-tendon isolation and carries 2D vs 3D MRI error p<0.001) can close Stage 1 ADAPT25 or FORCE20 on published data.",
+    "confidence": "computed_and_scope_audited"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0134",
+    "experiment_id": "EXP-0154",
+    "title": "Alternative joints/mechanisms fail to unblock Stage 1 and resting SWV fails as an individual non-destructive stiffness proxy",
+    "statement": "Expanding Stage 1 across hamstrings, patellar tendon, Achilles running, and rotator cuff BFR yields 0/5 cohorts passing FORCE20 or ADAPT25 with validated tissue safety, and individual resting dSWV% fails to significantly correlate with loaded dStiffness% (r=+0.216, CI [-0.187; +0.587]) or dCSA% (r=+0.357, p=0.1122).",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0135",
+    "experiment_id": "EXP-0155",
+    "title": "No open cohort closes 2700-s CPE45 or longitudinal Stage 3; BFR adds zero benefit to HA; strength alone cannot control thermal ceiling",
+    "statement": "Despite new individual-level anchors (DUO-GAIT ~360 s, Goepp 1260 s, Agostinelli ~1124 s), 0 open human datasets combine 2700 s alternating load, spatial meters, concurrent cognition, thermoregulation, and post45 recovery. In Goepp 2026, BFR fails to outperform SHAM across all 10 measured channels (p>=0.42) and intra-session SART B3-B2 drop stays ~-9.6 pp. In Agostinelli 2025, RelStr cannot replace VO2max for core thermal control (partial r=+0.106 vs VO2max partial r=-0.558) and accompanies elevated blood lactate (+3.04 mmol/L).",
+    "confidence": "statistically_reproduced"
   }
 ]

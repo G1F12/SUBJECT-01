@@ -1,0 +1,166 @@
+{
+  "experiment_id": "EXP-0153",
+  "data_subdir": "stage1_tendon_capacity_criterion",
+  "reused_experiment": {
+    "id": "EXP-0152",
+    "results_path": "research/stage1_kubo_pose_transfer/RESULTS.json"
+  },
+  "files": {
+    "PMC10482817.xml": {
+      "source_id": "SRC-0183",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10482817.1/PMC10482817.1.xml",
+      "version": "PMC10482817.1 (Mersmann et al. 2023, Sports Med Open 9:83, CC BY 4.0)",
+      "sha256": "486eefea8aaf49edbfa4d795e598accb677efc23beae1aefa98fc407e979e685",
+      "bytes": 108909
+    },
+    "PMC11519156.xml": {
+      "source_id": "SRC-0184",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11519156.1/PMC11519156.1.xml",
+      "version": "PMC11519156.1 (Weidlich/Domroes et al. 2024, Eur J Appl Physiol 124:3165-3179, CC BY 4.0)",
+      "sha256": "75d33f2a885c62e0364ec6b427cbf03ec7e95e6bbb6594b2200caa671b1bcbea",
+      "bytes": 185809
+    },
+    "PMC13692497.xml": {
+      "source_id": "SRC-0185",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13692497.1/PMC13692497.1.xml",
+      "version": "PMC13692497.1 (Pang et al. 2026, J Funct Morphol Kinesiol 11:393, CC BY 4.0)",
+      "sha256": "4d3abea681c878dd492fc7d128e38b548a7ddfa85e9e8915b0c942c60a74ce94",
+      "bytes": 214560
+    },
+    "PMC13248229.xml": {
+      "source_id": "SRC-0186",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13248229.1/PMC13248229.1.xml",
+      "version": "PMC13248229.1 (Deng & Kawakami 2026, Scand J Med Sci Sports, CC BY 4.0)",
+      "sha256": "24fa0b80ef2abfcdf8a750eae2edd6a1f20b11c9f2b53931b1971b1b1e9f74e8",
+      "bytes": 115802
+    },
+    "PMC13339936.xml": {
+      "source_id": "SRC-0187",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13339936.1/PMC13339936.1.xml",
+      "version": "PMC13339936.1 (Deng, Shiotani & Kawakami 2025/2026, J Anat, CC BY 4.0)",
+      "sha256": "ca9faf1b13efda828b21c4fefe58a6ad1e470ab8214d6be873f37513f53a0b8d",
+      "bytes": 100856
+    },
+    "PMC13723899.xml": {
+      "source_id": "SRC-0188",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13723899.1/PMC13723899.1.xml",
+      "version": "PMC13723899.1 (Weerkamp et al. 2026, BMJ Open Sport Exerc Med, CC BY-NC 4.0)",
+      "sha256": "8fbdb40ac0f25478fbcb31d453152b256fdc844d0b6dbec7177342dfd8c9ed23",
+      "bytes": 141974
+    },
+    "PMC7955091.xml": {
+      "source_id": "SRC-0189",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7955091.1/PMC7955091.1.xml",
+      "version": "PMC7955091.1 (Kharazi et al. 2021, Sci Rep 11:5830, CC BY 4.0)",
+      "sha256": "ba1b5f2748fa5d30f904714e2db246e697f0c0cbf0a36e4663bf0607eace908b",
+      "bytes": 141557
+    }
+  },
+  "track_a_ex_vivo_human_achilles_benchmarks": {
+    "nagelli_2022_healthy_adults_0deg": {
+      "source_id": "SRC-0180",
+      "donor_age_yr": [42.1, 9.8],
+      "bonar_histology": "0-0.5 (no tendinopathy)",
+      "pose": "0 deg anatomical neutral plantigrade calcaneus (30 deg anatomic angle)",
+      "avulsion_n": 5,
+      "avulsion_load_n": [4216.9, 1196.4],
+      "midsubstance_n": 5,
+      "midsubstance_load_n": [5649.1, 565.5]
+    },
+    "wren_2001_fresh_human_achilles": {
+      "source_note": "Wren et al. 2001 Clin Biomech 16:245-251 (reused from EXP-0060/EXP-0152)",
+      "donor_age_range_yr": [35, 80],
+      "slow_1pct_s_n": 13,
+      "slow_1pct_s_uts_mpa": [71.0, 17.0],
+      "fast_10pct_s_n": 12,
+      "fast_10pct_s_uts_mpa": [86.0, 24.0]
+    },
+    "louis_ugbo_2004_older_donors": {
+      "donor_age_range_yr": [57, 93],
+      "mean_failure_load_n": 1189.0,
+      "range_failure_load_n": [360.0, 1965.0]
+    },
+    "kharazi_2021_in_vivo_survival_0deg_mvc": {
+      "source_id": "SRC-0189",
+      "n": 11,
+      "mvc_peak_force_n": [5523.0, 552.0],
+      "mvc_elongation_mm": [14.0, 2.5],
+      "running_3_5_ms_force_n": [2556.0, 54.0],
+      "running_3_5_ms_strain_pct": [4.9, 1.2],
+      "running_pct_of_mvc_strain": 62.0,
+      "reference_resting_length_mm": 200.0
+    },
+    "deng_2026_3d_mri_free_at": {
+      "source_id": "SRC-0186",
+      "n": 18,
+      "free_at_length_pf20_mm": [71.8, 16.0],
+      "free_at_csa_mm2": [74.7, 13.0],
+      "csa_to_stiffness_r2": 0.277,
+      "csa_to_stiffness_p": 0.025,
+      "psf_h_to_stiffness_r2": 0.0001,
+      "psf_v_to_stiffness_r2": 0.010
+    },
+    "regional_mcsa_discount_sensitivity": [1.0, 0.9, 0.8, 0.75]
+  },
+  "track_b_non_destructive_criteria": {
+    "mersmann_2023_patellar_strain_threshold": {
+      "source_id": "SRC-0183",
+      "tendon_site": "Patellar tendon (NOT Achilles tendon)",
+      "population": "Adolescent athletes (age 15.0-15.2 yr; n=23 ASYM, n=14 SYM)",
+      "threshold_pct": 9.0,
+      "risk_ratio": 2.3,
+      "risk_ratio_ci95": [1.1, 4.9],
+      "risk_ratio_p": 0.026,
+      "strain_cohen_d": 0.85,
+      "strain_p": 0.03,
+      "stiffness_cohen_d": -0.23,
+      "stiffness_p": 0.51,
+      "force_cohen_d": 0.18,
+      "force_p": 0.47
+    },
+    "weidlich_2024_adult_patellar_prescription": {
+      "source_id": "SRC-0184",
+      "tendon_site": "Patellar tendon (NOT Achilles tendon)",
+      "population": "Adult male volleyball athletes (n=11 Con, n=10 Int, 9 months)",
+      "safe_band_pct": [4.5, 9.0],
+      "psf_change_p_gt": 0.05
+    },
+    "pang_2026_strength_stiffness_meta": {
+      "source_id": "SRC-0185",
+      "n_cohorts": 50,
+      "n_matched_units": 70,
+      "strength_gain_pct": 16.12,
+      "stiffness_gain_pct": 24.06,
+      "strict_max_strain_change_pct": -4.77,
+      "strict_max_strain_ci95_pct": [-11.45, 2.42],
+      "strict_max_strain_p": 0.17,
+      "strict_max_strain_cohorts": 14,
+      "achilles_vs_patellar_interaction_lnrr": 0.0071,
+      "achilles_vs_patellar_interaction_ci95": [-0.0951, 0.1092]
+    },
+    "deng_2025_2d_vs_3d_free_at_strain": {
+      "source_id": "SRC-0187",
+      "pf20_df20_3d_strain_pct": [1.2, 0.3],
+      "pf20_df20_2d_strain_pct": [-0.6, 0.9],
+      "paired_diff_p_lt": 0.001,
+      "offset_2mm_medial_error_mm": [6.3, 8.0]
+    },
+    "weerkamp_2026_bmj_achilles_tendinopathy_sr": {
+      "source_id": "SRC-0188",
+      "n_prospective_cohorts": 11,
+      "n_case_control": 8,
+      "utc_or_ci95": [9.7, 1.007, 93.185],
+      "utc_n": 37,
+      "sonoelastography_rr_ci95": [5.23, 1.34, 20.44],
+      "sonoelastography_n": 63,
+      "grade_evidence_imaging_biomech": "very_low",
+      "us_stiffness_associated": false
+    },
+    "kubo_ishigaki_provisional_strain_mapping": {
+      "iso_post_0deg_ramp_elongation_mm": [21.7, 2.8],
+      "iso_post_0deg_ballistic_elongation_mm": [16.0, 3.2],
+      "calcaneus_mg_mtj_l0_range_mm": [177.0, 215.0],
+      "compound_fascicle_insertion_l0_range_mm": [230.0, 300.0]
+    }
+  }
+}

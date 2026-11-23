@@ -1,0 +1,118 @@
+{
+  "spec_id": "CPE45-WORKING-SPEC-V1",
+  "experiment_id": "EXP-0149",
+  "status": "PROVISIONAL_WORKING_ASSUMPTIONS_PENDING_CALIBRATION",
+  "approved_canonical": false,
+  "canonical_contract_ref": "research/targets/CPE45.json",
+  "governance_note": "Working assumptions anchored to EXP-0139 human partial benchmarks and EXP-0063/0131 thermal envelopes. Canonical CPE45.json keeps success_thresholds=null until independent joint 2700-s human calibration.",
+  "duration_s": 2700.0,
+  "intensity_schedule": {
+    "structure": "5 identical 540-s macro-blocks partitioning [0, 2700] s without gaps or overlaps",
+    "block_duration_s": 540.0,
+    "n_blocks": 5,
+    "per_block_sequence": [
+      {"repeat": 3, "effort": {"duration_s": 6.0, "task_id": "explosive_sprint_6s", "demand": "maximal_all_out_effort"}, "recovery": {"duration_s": 24.0, "task_id": "active_recovery_24s", "demand": "low_intensity_active_recovery"}},
+      {"repeat": 2, "effort": {"duration_s": 165.0, "task_id": "submax_sustained_165s", "demand": "high_submaximal_matched_power"}, "recovery": {"duration_s": 60.0, "task_id": "active_recovery_60s", "demand": "low_intensity_active_recovery"}}
+    ],
+    "totals_over_2700s": {
+      "n_explosive_efforts": 15,
+      "n_submax_efforts": 10,
+      "total_effort_s": 1740.0,
+      "total_recovery_s": 960.0,
+      "duty_cycle": 0.6444444444444445
+    },
+    "anchor_rationale": "6-s maximal bouts with 24-s rest match Jutlah 24-s condition (statistically lower peak loss vs 12-s rest by 4.24 [0.95; 7.32] pp); duty cycle 0.6444 sits below EXP-0063/0131 hot-humid thermal limit D_max=0.65 (32C/80%RH) and temperate D_max=0.92 (20C/50%RH)."
+  },
+  "early_late_windows_s": {
+    "working_default": {
+      "early_end_s": 540.0,
+      "late_start_s": 2160.0,
+      "max_gap_s": 1.0,
+      "recommended_explosive_sampling_gap_s": 0.1,
+      "matched_whole_efforts_per_window": {"explosive_sprint_6s": 3, "submax_sustained_165s": 2}
+    },
+    "sensitivity_windows": [
+      {"name": "5min_block_edges", "early_end_s": 300.0, "late_start_s": 2400.0},
+      {"name": "11min_wide", "early_end_s": 660.0, "late_start_s": 2040.0},
+      {"name": "15min_thirds", "early_end_s": 900.0, "late_start_s": 1800.0}
+    ],
+    "anchor_rationale": "9-min (540-s) symmetric early/late windows match McLaughlin 9-min window and ensure 3 complete explosive sprints per window, avoiding single-bout start variability observed in Jutlah."
+  },
+  "post45_observation_times_s": {
+    "acute_post_window_s": [2730.0, 2850.0],
+    "short_recovery_s": 3000.0,
+    "intermediate_recovery_s": 5400.0,
+    "delayed_24h_s": 89100.0,
+    "mandatory_timestamp_rule": "Exact elapsed timestamp t > 2700 s must be recorded per participant for every post45 test; nominal labels without individual timestamps are inadmissible.",
+    "anchor_rationale": "Acute 30-150 s post-2700s mirrors Goodall et al. (<=150 s); +5 min (3000 s), +45 min (5400 s), and +24 h (89100 s) mirror Norbury et al. recovery schedule."
+  },
+  "working_thresholds": {
+    "aggregation_rule": "vector_all_mandatory_channels_no_weighted_score",
+    "missing_channel_rule": "not_assessed_never_pass",
+    "tiers": {
+      "strict": {
+        "work_positive_2700s_kJ_min": 600.0,
+        "explosive_peak_power_drop_pct_max": 10.0,
+        "mean_power_drop_pct_max": 5.0,
+        "in_task_force_drop_pct_max": 5.0,
+        "velocity_drop_pct_max": 10.0,
+        "correct_latency_increase_ms_max": 10.0,
+        "accuracy_drop_pp_max": 2.0,
+        "omission_rate_pct_max": 2.0,
+        "between_effort_next_over_prev_power_min": 0.95,
+        "post45_acute_mvc_retention_pct_min": 95.0,
+        "post45_45min_mvc_retention_pct_min": 95.0,
+        "post45_24h_mvc_retention_pct_min": 98.0,
+        "thermal_core_max_C": 39.0,
+        "coordination_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR",
+        "maneuver_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR"
+      },
+      "working_default": {
+        "work_positive_2700s_kJ_min": 450.0,
+        "explosive_peak_power_drop_pct_max": 15.0,
+        "mean_power_drop_pct_max": 10.0,
+        "in_task_force_drop_pct_max": 10.0,
+        "velocity_drop_pct_max": 15.0,
+        "correct_latency_increase_ms_max": 20.0,
+        "accuracy_drop_pp_max": 3.0,
+        "omission_rate_pct_max": 5.0,
+        "between_effort_next_over_prev_power_min": 0.90,
+        "post45_acute_mvc_retention_pct_min": 90.0,
+        "post45_45min_mvc_retention_pct_min": 93.0,
+        "post45_24h_mvc_retention_pct_min": 95.0,
+        "thermal_core_max_C": 39.5,
+        "coordination_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR",
+        "maneuver_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR"
+      },
+      "permissive": {
+        "work_positive_2700s_kJ_min": 350.0,
+        "explosive_peak_power_drop_pct_max": 20.0,
+        "mean_power_drop_pct_max": 15.0,
+        "in_task_force_drop_pct_max": 15.0,
+        "velocity_drop_pct_max": 20.0,
+        "correct_latency_increase_ms_max": 35.0,
+        "accuracy_drop_pp_max": 5.0,
+        "omission_rate_pct_max": 10.0,
+        "between_effort_next_over_prev_power_min": 0.85,
+        "post45_acute_mvc_retention_pct_min": 85.0,
+        "post45_45min_mvc_retention_pct_min": 90.0,
+        "post45_24h_mvc_retention_pct_min": 95.0,
+        "thermal_core_max_C": 39.5,
+        "coordination_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR",
+        "maneuver_error_m_status": "UNASSESSED_NO_HUMAN_ANCHOR"
+      }
+    },
+    "uncalibrated_channels": [
+      {
+        "channel": "coordination_error_m",
+        "status": "UNASSESSED_NO_HUMAN_ANCHOR",
+        "note": "Model proxy CV=2.1% retired by DEC-0035; Kudzia raw data unavailable (ISS-0038) and precision grip duplicated (ISS-0040)."
+      },
+      {
+        "channel": "maneuver_error_m",
+        "status": "UNASSESSED_NO_HUMAN_ANCHOR",
+        "note": "No open controlled trajectory-error dataset synchronized with 2700-s external work."
+      }
+    ]
+  }
+}

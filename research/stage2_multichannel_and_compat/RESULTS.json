@@ -1,0 +1,977 @@
+{
+  "experiment_id": "EXP-0155",
+  "stage2_verdict": "HOLD",
+  "stage2_blocker_status": "DATA_BLOCKED",
+  "stage3_verdict": "HOLD",
+  "stage3_blocker_status": "DATA_BLOCKED_PREREQS_AND_UNIFIED_COHORT",
+  "scientific_criteria_closed": {
+    "stage2": false,
+    "stage3": false
+  },
+  "canonical_cpe45_unchanged": true,
+  "verified_sources": {
+    "PMC10442385.xml": {
+      "source_id": "SRC-0195",
+      "bytes": 98549,
+      "sha256": "6c8fd0b6782ae8ae60c4352c1cf4167434508023e6185b4af8dd33bc1510b5ad"
+    },
+    "duogait_processed.zip": {
+      "source_id": "SRC-0195",
+      "bytes": 2637155,
+      "sha256": "2c3f8826b323304b8e1611f3a0c0a5b1f102253b5d10c79c4471168b3f6ad51c"
+    },
+    "PMC13132146.xml": {
+      "source_id": "SRC-0196",
+      "bytes": 154020,
+      "sha256": "3a1dba1c9ac752069f4f17baae2e3e6c011da1e8a0390f2856090fc89e575752"
+    },
+    "osf_ekvcg_DEMOGRAPHIC.csv": {
+      "source_id": "SRC-0196",
+      "bytes": 780,
+      "sha256": "66a56104d9a19cab8b88f3945c6f22400e5a7d80f74e4e6b600d8ac92cd157a0"
+    },
+    "osf_ekvcg_HSTCMDT_PERFORMANCE.csv": {
+      "source_id": "SRC-0196",
+      "bytes": 1739,
+      "sha256": "3ce236450a44dd6e00866cb1b24572a295b5314e9c2d0286bcc5de8a01f0b7e2"
+    },
+    "osf_ekvcg_HSTCMDT_HR_TC.csv": {
+      "source_id": "SRC-0196",
+      "bytes": 3080,
+      "sha256": "d1fafdd0ec5ce4f2ef6ec580beb39a00666f3a88e114dcf0a5b3b89fff4e36e0"
+    },
+    "osf_ekvcg_HSTCMDT_SART.csv": {
+      "source_id": "SRC-0196",
+      "bytes": 5879,
+      "sha256": "52fc41ded03108b1103b22826c9b4da5c5c381a868a640e8f8a415bff11deb12"
+    },
+    "osf_ekvcg_HSTCMDT_NEUROMUSCULAR_FUNCTION.csv": {
+      "source_id": "SRC-0196",
+      "bytes": 8037,
+      "sha256": "8dcc54dcee7aa4d6c1138c8f1bdee6fcb6dd59d1adc0b78a5fe9c7fec0eede05"
+    },
+    "PMC12015927.xml": {
+      "source_id": "SRC-0197",
+      "bytes": 164103,
+      "sha256": "b86c433d04f4d7356e921ad67df1135e4bf847fb4494e7b504bd139d50421d48"
+    },
+    "agostinelli_FORD_Training.xlsx": {
+      "source_id": "SRC-0197",
+      "bytes": 46642,
+      "sha256": "82ad4a0241aeabdd88886295035f1901dfb4f13e56b15d17310b3bfd8e33a126"
+    }
+  },
+  "track1_duogait_spatial_anchor": {
+    "source_id": "SRC-0195",
+    "dataset": "DUO-GAIT (Zhou et al. 2023, Zenodo 8244887, Sci Data 10:543)",
+    "n_paired_all_4_conditions": 16,
+    "participants": [
+      "sub_01",
+      "sub_02",
+      "sub_03",
+      "sub_05",
+      "sub_06",
+      "sub_07",
+      "sub_08",
+      "sub_09",
+      "sub_10",
+      "sub_11",
+      "sub_12",
+      "sub_13",
+      "sub_14",
+      "sub_15",
+      "sub_17",
+      "sub_18"
+    ],
+    "protocol_duration_s_approx": 360,
+    "metrics": {
+      "speed_avg": {
+        "unit": "m/s",
+        "st_control_mean_sd": [
+          1.3019,
+          0.13459
+        ],
+        "st_fatigue_mean_sd": [
+          1.28774,
+          0.12831
+        ],
+        "dt_control_mean_sd": [
+          1.15803,
+          0.08253
+        ],
+        "dt_fatigue_mean_sd": [
+          1.14857,
+          0.08193
+        ],
+        "dt_fat_minus_st_con_mean": -0.15333,
+        "dt_fat_minus_st_con_ci95": [
+          -0.2199,
+          -0.0892
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": -11.78,
+        "indiv_pct_change_q25_q50_q75": [
+          -18.81,
+          -10.81,
+          -4.34
+        ],
+        "paired_t_dt_fat_vs_st_con": -4.457,
+        "paired_p_dt_fat_vs_st_con": 0.00046,
+        "paired_p_st_fat_vs_st_con": 0.37993,
+        "paired_p_dt_con_vs_st_con": 0.0002
+      },
+      "stride_lengths_avg": {
+        "unit": "m",
+        "st_control_mean_sd": [
+          1.43619,
+          0.10827
+        ],
+        "st_fatigue_mean_sd": [
+          1.40854,
+          0.11729
+        ],
+        "dt_control_mean_sd": [
+          1.3469,
+          0.10047
+        ],
+        "dt_fatigue_mean_sd": [
+          1.32406,
+          0.1134
+        ],
+        "dt_fat_minus_st_con_mean": -0.11213,
+        "dt_fat_minus_st_con_ci95": [
+          -0.1625,
+          -0.065
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": -7.81,
+        "indiv_pct_change_q25_q50_q75": [
+          -10.9,
+          -6.58,
+          -2.67
+        ],
+        "paired_t_dt_fat_vs_st_con": -4.409,
+        "paired_p_dt_fat_vs_st_con": 0.00051,
+        "paired_p_st_fat_vs_st_con": 0.02151,
+        "paired_p_dt_con_vs_st_con": 0.00062
+      },
+      "clearances_min_avg": {
+        "unit": "m",
+        "st_control_mean_sd": [
+          0.00938,
+          0.00324
+        ],
+        "st_fatigue_mean_sd": [
+          0.00798,
+          0.00351
+        ],
+        "dt_control_mean_sd": [
+          0.00767,
+          0.00269
+        ],
+        "dt_fatigue_mean_sd": [
+          0.0068,
+          0.00265
+        ],
+        "dt_fat_minus_st_con_mean": -0.00258,
+        "dt_fat_minus_st_con_ci95": [
+          -0.0041,
+          -0.0011
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": -27.52,
+        "indiv_pct_change_q25_q50_q75": [
+          -45.39,
+          -31.75,
+          -15.91
+        ],
+        "paired_t_dt_fat_vs_st_con": -3.327,
+        "paired_p_dt_fat_vs_st_con": 0.0046,
+        "paired_p_st_fat_vs_st_con": 0.01898,
+        "paired_p_dt_con_vs_st_con": 0.05259
+      },
+      "clearances_min_CV": {
+        "unit": "ratio",
+        "st_control_mean_sd": [
+          0.64067,
+          0.22503
+        ],
+        "st_fatigue_mean_sd": [
+          1.49071,
+          2.76593
+        ],
+        "dt_control_mean_sd": [
+          0.78501,
+          0.40505
+        ],
+        "dt_fatigue_mean_sd": [
+          1.00713,
+          0.45405
+        ],
+        "dt_fat_minus_st_con_mean": 0.36645,
+        "dt_fat_minus_st_con_ci95": [
+          0.1704,
+          0.5921
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": 57.2,
+        "indiv_pct_change_q25_q50_q75": [
+          9.47,
+          25.77,
+          110.02
+        ],
+        "paired_t_dt_fat_vs_st_con": 3.285,
+        "paired_p_dt_fat_vs_st_con": 0.00501,
+        "paired_p_st_fat_vs_st_con": 0.2324,
+        "paired_p_dt_con_vs_st_con": 0.10808
+      },
+      "stride_lengths_CV": {
+        "unit": "ratio",
+        "st_control_mean_sd": [
+          0.04263,
+          0.00996
+        ],
+        "st_fatigue_mean_sd": [
+          0.04428,
+          0.0088
+        ],
+        "dt_control_mean_sd": [
+          0.03741,
+          0.00939
+        ],
+        "dt_fatigue_mean_sd": [
+          0.03802,
+          0.00587
+        ],
+        "dt_fat_minus_st_con_mean": -0.00461,
+        "dt_fat_minus_st_con_ci95": [
+          -0.0086,
+          -0.0013
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": -10.82,
+        "indiv_pct_change_q25_q50_q75": [
+          -17.58,
+          -4.73,
+          2.07
+        ],
+        "paired_t_dt_fat_vs_st_con": -2.34,
+        "paired_p_dt_fat_vs_st_con": 0.03354,
+        "paired_p_st_fat_vs_st_con": 0.12373,
+        "paired_p_dt_con_vs_st_con": 0.03327
+      },
+      "stride_times_CV": {
+        "unit": "ratio",
+        "st_control_mean_sd": [
+          0.01978,
+          0.00491
+        ],
+        "st_fatigue_mean_sd": [
+          0.0224,
+          0.00607
+        ],
+        "dt_control_mean_sd": [
+          0.02099,
+          0.00486
+        ],
+        "dt_fatigue_mean_sd": [
+          0.02323,
+          0.00689
+        ],
+        "dt_fat_minus_st_con_mean": 0.00345,
+        "dt_fat_minus_st_con_ci95": [
+          0.0003,
+          0.0063
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": 17.43,
+        "indiv_pct_change_q25_q50_q75": [
+          8.15,
+          26.01,
+          41.58
+        ],
+        "paired_t_dt_fat_vs_st_con": 2.162,
+        "paired_p_dt_fat_vs_st_con": 0.04722,
+        "paired_p_st_fat_vs_st_con": 0.08641,
+        "paired_p_dt_con_vs_st_con": 0.41541
+      },
+      "clearances_max_SI": {
+        "unit": "pct",
+        "st_control_mean_sd": [
+          0.04076,
+          0.03987
+        ],
+        "st_fatigue_mean_sd": [
+          0.04727,
+          0.04643
+        ],
+        "dt_control_mean_sd": [
+          0.07048,
+          0.04402
+        ],
+        "dt_fatigue_mean_sd": [
+          0.06864,
+          0.0614
+        ],
+        "dt_fat_minus_st_con_mean": 0.02788,
+        "dt_fat_minus_st_con_ci95": [
+          0.009,
+          0.0495
+        ],
+        "dt_fat_minus_st_con_pct_of_mean": 68.39,
+        "indiv_pct_change_q25_q50_q75": [
+          3.47,
+          69.05,
+          527.24
+        ],
+        "paired_t_dt_fat_vs_st_con": 2.578,
+        "paired_p_dt_fat_vs_st_con": 0.02101,
+        "paired_p_st_fat_vs_st_con": 0.37042,
+        "paired_p_dt_con_vs_st_con": 0.00303
+      }
+    },
+    "cpe45_spatial_anchor_verdict": "REPLACES UNASSESSED_NO_HUMAN_ANCHOR WITH PARTIAL HUMAN EMPIRICAL ANCHOR IN METERS: combined physical fatigue + cognitive dual-task degrades gait speed (-11.8%), stride length (-7.8%), minimum foot clearance (-27.7%, -2.6 mm), spatial clearance CV (+57.2%), and clearance asymmetry (+68.4%). Still NOT full CPE45 closure (duration ~360 s << 2700 s, no heavy resistance alternation, no core temp, no post45)."
+  },
+  "track2_goepp2026_four_channel_heat_ha": {
+    "source_id": "SRC-0196",
+    "dataset": "Goepp et al. 2026 (PMC13132146, OSF ekvcg, Scand J Med Sci Sports)",
+    "n_total": 20,
+    "n_bfr": 10,
+    "n_sham": 10,
+    "environment": "40 C / 40% RH",
+    "protocol_duration_s": 1260,
+    "tc_below_39C_pre_ha_n": 19,
+    "tc_below_39C_post_ha_n": 20,
+    "channels": {
+      "core_temp_21min_C": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          38.413,
+          0.383
+        ],
+        "post_ha_mean_sd": [
+          38.244,
+          0.371
+        ],
+        "pooled_post_minus_pre": -0.17,
+        "pooled_delta_ci95": [
+          -0.257,
+          -0.0805
+        ],
+        "pooled_paired_p": 0.00164,
+        "bfr_delta_mean": -0.155,
+        "sham_delta_mean": -0.184,
+        "bfr_minus_sham_delta": 0.029,
+        "bfr_minus_sham_ci95": [
+          -0.155,
+          0.201
+        ],
+        "bfr_vs_sham_welch_p": 0.7635
+      },
+      "core_temp_drift_C": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          1.202,
+          0.39
+        ],
+        "post_ha_mean_sd": [
+          1.099,
+          0.365
+        ],
+        "pooled_post_minus_pre": -0.102,
+        "pooled_delta_ci95": [
+          -0.239,
+          0.0585
+        ],
+        "pooled_paired_p": 0.20958,
+        "bfr_delta_mean": -0.168,
+        "sham_delta_mean": -0.036,
+        "bfr_minus_sham_delta": -0.132,
+        "bfr_minus_sham_ci95": [
+          -0.449,
+          0.141
+        ],
+        "bfr_vs_sham_welch_p": 0.4175
+      },
+      "mean_rel_power_pct_pma": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          60.098,
+          6.806
+        ],
+        "post_ha_mean_sd": [
+          60.032,
+          5.857
+        ],
+        "pooled_post_minus_pre": -0.065,
+        "pooled_delta_ci95": [
+          -1.0132,
+          0.9255
+        ],
+        "pooled_paired_p": 0.89885,
+        "bfr_delta_mean": 0.017,
+        "sham_delta_mean": -0.148,
+        "bfr_minus_sham_delta": 0.166,
+        "bfr_minus_sham_ci95": [
+          -1.8144,
+          2.1201
+        ],
+        "bfr_vs_sham_welch_p": 0.8759
+      },
+      "sart_acc_b2_pct": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          56.613,
+          22.674
+        ],
+        "post_ha_mean_sd": [
+          77.867,
+          18.145
+        ],
+        "pooled_post_minus_pre": 21.254,
+        "pooled_delta_ci95": [
+          13.4485,
+          29.353
+        ],
+        "pooled_paired_p": 7e-05,
+        "bfr_delta_mean": 20.205,
+        "sham_delta_mean": 22.303,
+        "bfr_minus_sham_delta": -2.098,
+        "bfr_minus_sham_ci95": [
+          -18.0862,
+          13.656
+        ],
+        "bfr_vs_sham_welch_p": 0.8098
+      },
+      "sart_acc_b3_pct": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          46.604,
+          32.11
+        ],
+        "post_ha_mean_sd": [
+          68.234,
+          24.716
+        ],
+        "pooled_post_minus_pre": 21.63,
+        "pooled_delta_ci95": [
+          12.3264,
+          31.9389
+        ],
+        "pooled_paired_p": 0.00047,
+        "bfr_delta_mean": 21.739,
+        "sham_delta_mean": 21.521,
+        "bfr_minus_sham_delta": 0.218,
+        "bfr_minus_sham_ci95": [
+          -18.7547,
+          20.1717
+        ],
+        "bfr_vs_sham_welch_p": 0.9838
+      },
+      "sart_acc_intrasession_b3_minus_b2_pp": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          -10.009,
+          21.684
+        ],
+        "post_ha_mean_sd": [
+          -9.633,
+          14.705
+        ],
+        "pooled_post_minus_pre": 0.376,
+        "pooled_delta_ci95": [
+          -7.5667,
+          8.3589
+        ],
+        "pooled_paired_p": 0.92883,
+        "bfr_delta_mean": 1.533,
+        "sham_delta_mean": -0.782,
+        "bfr_minus_sham_delta": 2.316,
+        "bfr_minus_sham_ci95": [
+          -12.8973,
+          18.5227
+        ],
+        "bfr_vs_sham_welch_p": 0.7888
+      },
+      "sart_rt_b3_ms": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          173.987,
+          42.833
+        ],
+        "post_ha_mean_sd": [
+          165.061,
+          57.77
+        ],
+        "pooled_post_minus_pre": -8.926,
+        "pooled_delta_ci95": [
+          -21.6687,
+          4.96
+        ],
+        "pooled_paired_p": 0.21742,
+        "bfr_delta_mean": -8.189,
+        "sham_delta_mean": -9.664,
+        "bfr_minus_sham_delta": 1.475,
+        "bfr_minus_sham_ci95": [
+          -24.6185,
+          28.3019
+        ],
+        "bfr_vs_sham_welch_p": 0.9195
+      },
+      "sart_gs_b3_score": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          62.127,
+          15.716
+        ],
+        "post_ha_mean_sd": [
+          73.265,
+          11.212
+        ],
+        "pooled_post_minus_pre": 11.137,
+        "pooled_delta_ci95": [
+          6.6509,
+          16.1218
+        ],
+        "pooled_paired_p": 0.00025,
+        "bfr_delta_mean": 10.878,
+        "sham_delta_mean": 11.397,
+        "bfr_minus_sham_delta": -0.518,
+        "bfr_minus_sham_ci95": [
+          -9.6088,
+          9.2065
+        ],
+        "bfr_vs_sham_welch_p": 0.9205
+      },
+      "acute_mvc_change_pct": {
+        "n_valid": 20,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 10,
+        "pre_ha_mean_sd": [
+          -14.296,
+          6.98
+        ],
+        "post_ha_mean_sd": [
+          -11.858,
+          6.991
+        ],
+        "pooled_post_minus_pre": 2.438,
+        "pooled_delta_ci95": [
+          -0.669,
+          5.4921
+        ],
+        "pooled_paired_p": 0.14607,
+        "bfr_delta_mean": 2.189,
+        "sham_delta_mean": 2.686,
+        "bfr_minus_sham_delta": -0.496,
+        "bfr_minus_sham_ci95": [
+          -6.4353,
+          5.766
+        ],
+        "bfr_vs_sham_welch_p": 0.8825
+      },
+      "acute_va_delta_pp": {
+        "n_valid": 19,
+        "n_bfr_valid": 10,
+        "n_sham_valid": 9,
+        "pre_ha_mean_sd": [
+          -6.347,
+          5.302
+        ],
+        "post_ha_mean_sd": [
+          -5.318,
+          4.007
+        ],
+        "pooled_post_minus_pre": 1.028,
+        "pooled_delta_ci95": [
+          -0.8589,
+          2.7952
+        ],
+        "pooled_paired_p": 0.29579,
+        "bfr_delta_mean": 0.891,
+        "sham_delta_mean": 1.181,
+        "bfr_minus_sham_delta": -0.29,
+        "bfr_minus_sham_ci95": [
+          -4.0286,
+          3.5058
+        ],
+        "bfr_vs_sham_welch_p": 0.8852
+      }
+    },
+    "cpe45_screening_verdict": "HOLD (4-channel internal Heat Acclimation improves T_re [-0.17 C], concurrent SART B3 accuracy [+21.6 pp], and acute post-exercise MVC retention [+2.44 pp] without BFR superiority over SHAM; however duration is 1260 s < 2700 s, intra-session B3-B2 SART drop remains ~-10 pp, no spatial coordination in meters, and no +45 min/+24 h post45 probe)."
+  },
+  "track3_agostinelli2025_stage3_compat_probe": {
+    "source_id": "SRC-0197",
+    "dataset": "Agostinelli et al. 2025 (PMC12015927, Figshare 28768673, JFMK 10:129)",
+    "n_total": 33,
+    "environment": "35 C / 50% RH",
+    "protocol_duration_mean_sd_s": [
+      1123.9,
+      262.8
+    ],
+    "bivariate_correlations": {
+      "rel_str": {
+        "total_time_s": {
+          "n": 32,
+          "r": -0.695,
+          "p": 1e-05,
+          "ci95": [
+            -0.827,
+            -0.544
+          ]
+        },
+        "max_ct_C": {
+          "n": 33,
+          "r": -0.249,
+          "p": 0.16194,
+          "ci95": [
+            -0.508,
+            0.052
+          ]
+        },
+        "blc_mmol_l": {
+          "n": 33,
+          "r": 0.414,
+          "p": 0.01647,
+          "ci95": [
+            0.099,
+            0.684
+          ]
+        },
+        "total_errors": {
+          "n": 33,
+          "r": 0.215,
+          "p": 0.22952,
+          "ci95": [
+            -0.211,
+            0.42
+          ]
+        },
+        "max_hr": {
+          "n": 33,
+          "r": -0.067,
+          "p": 0.7105,
+          "ci95": [
+            -0.395,
+            0.287
+          ]
+        }
+      },
+      "vj_max": {
+        "total_time_s": {
+          "n": 32,
+          "r": -0.608,
+          "p": 0.00023,
+          "ci95": [
+            -0.792,
+            -0.369
+          ]
+        },
+        "max_ct_C": {
+          "n": 33,
+          "r": -0.39,
+          "p": 0.02494,
+          "ci95": [
+            -0.616,
+            -0.105
+          ]
+        },
+        "blc_mmol_l": {
+          "n": 33,
+          "r": 0.494,
+          "p": 0.00351,
+          "ci95": [
+            0.142,
+            0.766
+          ]
+        },
+        "total_errors": {
+          "n": 33,
+          "r": 0.237,
+          "p": 0.18466,
+          "ci95": [
+            -0.283,
+            0.464
+          ]
+        },
+        "max_hr": {
+          "n": 33,
+          "r": -0.071,
+          "p": 0.69467,
+          "ci95": [
+            -0.384,
+            0.268
+          ]
+        }
+      },
+      "vo2": {
+        "total_time_s": {
+          "n": 32,
+          "r": -0.33,
+          "p": 0.06531,
+          "ci95": [
+            -0.628,
+            0.003
+          ]
+        },
+        "max_ct_C": {
+          "n": 33,
+          "r": -0.668,
+          "p": 2e-05,
+          "ci95": [
+            -0.794,
+            -0.511
+          ]
+        },
+        "blc_mmol_l": {
+          "n": 33,
+          "r": 0.131,
+          "p": 0.46689,
+          "ci95": [
+            -0.218,
+            0.443
+          ]
+        },
+        "total_errors": {
+          "n": 33,
+          "r": 0.098,
+          "p": 0.58596,
+          "ci95": [
+            -0.188,
+            0.29
+          ]
+        },
+        "max_hr": {
+          "n": 33,
+          "r": -0.378,
+          "p": 0.0301,
+          "ci95": [
+            -0.602,
+            -0.096
+          ]
+        }
+      }
+    },
+    "ols_controlling_vo2_and_sex": {
+      "total_time_s": {
+        "n": 32,
+        "r2": 0.5219,
+        "df_resid": 28,
+        "predictors": {
+          "intercept": {
+            "beta": 1930.7935,
+            "se": 236.7425,
+            "t": 8.156,
+            "p": 0.0
+          },
+          "rel_str": {
+            "beta": -145.8974,
+            "se": 48.6062,
+            "t": -3.002,
+            "p": 0.00559,
+            "partial_r": -0.493
+          },
+          "vo2": {
+            "beta": -0.6029,
+            "se": 5.3936,
+            "t": -0.112,
+            "p": 0.9118,
+            "partial_r": -0.021
+          },
+          "sex": {
+            "beta": -131.624,
+            "se": 99.2195,
+            "t": -1.327,
+            "p": 0.19536,
+            "partial_r": -0.243
+          }
+        }
+      },
+      "max_ct_C": {
+        "n": 33,
+        "r2": 0.4799,
+        "df_resid": 29,
+        "predictors": {
+          "intercept": {
+            "beta": 39.7335,
+            "se": 0.4094,
+            "t": 97.048,
+            "p": 0.0
+          },
+          "rel_str": {
+            "beta": 0.0454,
+            "se": 0.0795,
+            "t": 0.572,
+            "p": 0.57186,
+            "partial_r": 0.106
+          },
+          "vo2": {
+            "beta": -0.0338,
+            "se": 0.0093,
+            "t": -3.623,
+            "p": 0.0011,
+            "partial_r": -0.558
+          },
+          "sex": {
+            "beta": -0.2198,
+            "se": 0.1622,
+            "t": -1.356,
+            "p": 0.18566,
+            "partial_r": -0.244
+          }
+        }
+      },
+      "blc_mmol_l": {
+        "n": 33,
+        "r2": 0.2898,
+        "df_resid": 29,
+        "predictors": {
+          "intercept": {
+            "beta": 3.6224,
+            "se": 4.4044,
+            "t": 0.822,
+            "p": 0.41754
+          },
+          "rel_str": {
+            "beta": 0.7636,
+            "se": 0.855,
+            "t": 0.893,
+            "p": 0.3792,
+            "partial_r": 0.164
+          },
+          "vo2": {
+            "beta": -0.0978,
+            "se": 0.1004,
+            "t": -0.974,
+            "p": 0.33831,
+            "partial_r": -0.178
+          },
+          "sex": {
+            "beta": 3.8283,
+            "se": 1.7444,
+            "t": 2.195,
+            "p": 0.03635,
+            "partial_r": 0.377
+          }
+        }
+      },
+      "total_errors": {
+        "n": 33,
+        "r2": 0.0538,
+        "df_resid": 29,
+        "predictors": {
+          "intercept": {
+            "beta": 1.5778,
+            "se": 10.8788,
+            "t": 0.145,
+            "p": 0.88569
+          },
+          "rel_str": {
+            "beta": 1.3602,
+            "se": 2.1119,
+            "t": 0.644,
+            "p": 0.52459,
+            "partial_r": 0.119
+          },
+          "vo2": {
+            "beta": -0.0126,
+            "se": 0.248,
+            "t": -0.051,
+            "p": 0.95987,
+            "partial_r": -0.009
+          },
+          "sex": {
+            "beta": 1.9567,
+            "se": 4.3086,
+            "t": 0.454,
+            "p": 0.65311,
+            "partial_r": 0.084
+          }
+        }
+      }
+    },
+    "high_vs_low_rel_str_split": {
+      "median_rel_str_kg_per_kg": 4.036,
+      "n_high": 17,
+      "n_low": 16,
+      "outcomes": {
+        "total_time_s": {
+          "high_rel_str_mean_sd": [
+            938.808,
+            133.961
+          ],
+          "low_rel_str_mean_sd": [
+            1308.983,
+            227.405
+          ],
+          "high_minus_low": -370.175,
+          "ci95": [
+            -493.9563,
+            -249.2363
+          ],
+          "welch_p": 1e-05
+        },
+        "max_ct_C": {
+          "high_rel_str_mean_sd": [
+            37.847,
+            0.366
+          ],
+          "low_rel_str_mean_sd": [
+            38.181,
+            0.451
+          ],
+          "high_minus_low": -0.334,
+          "ci95": [
+            -0.6129,
+            -0.0621
+          ],
+          "welch_p": 0.02695
+        },
+        "blc_mmol_l": {
+          "high_rel_str_mean_sd": [
+            9.506,
+            3.962
+          ],
+          "low_rel_str_mean_sd": [
+            6.469,
+            3.562
+          ],
+          "high_minus_low": 3.037,
+          "ci95": [
+            0.4511,
+            5.4625
+          ],
+          "welch_p": 0.02723
+        },
+        "total_errors": {
+          "high_rel_str_mean_sd": [
+            11.059,
+            11.508
+          ],
+          "low_rel_str_mean_sd": [
+            7.625,
+            3.202
+          ],
+          "high_minus_low": 3.434,
+          "ci95": [
+            -0.6397,
+            9.7687
+          ],
+          "welch_p": 0.25186
+        }
+      }
+    },
+    "stage3_probe_verdict": "EMPIRICAL COMPATIBILITY CONSTRAINT ESTABLISHED (NOT STAGE 3 CLOSURE): Within the same adults under 35 C heat + 4-round loaded carries/deadlifts + cognition, mass-normalized strength (RelStr) independently speeds up intermittent loaded work without degrading core temp or cognitive accuracy, BUT elevates blood lactate and does NOT replace VO2max for thermal ceiling control (VO2max remains the dominant predictor of maxCT). Stage 3 remains HOLD because Stage 1 and Stage 2 are unclosed and this cohort is cross-sectional (~1124 s < 2700 s) with no tendon safety or post45 tracking."
+  },
+  "summary_ruling": "EXP-0155 advances Stage 2 by replacing UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination with a verified paired human anchor in meters (DUO-GAIT, n=16) and auditing a 4-channel internal Heat Acclimation trial (Goepp 2026, n=20, 40 C), and advances Stage 3 with a direct within-person compatibility probe (Agostinelli 2025, n=33, 35 C) quantifying strength-speed synergy vs lactate/VO2max thermal constraint. Both Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED because no single open human cohort covers >=2700 s alternating load + spatial meters + cognition + thermoregulation + post45, nor links it longitudinally to Stage 1 ADAPT25/FORCE20 + validated tendon safety."
+}

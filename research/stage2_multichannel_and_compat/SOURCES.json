@@ -1,0 +1,76 @@
+{
+  "experiment_id": "EXP-0155",
+  "data_subdir": "goal_stage2_cpe45",
+  "files": {
+    "PMC10442385.xml": {
+      "source_id": "SRC-0195",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10442385.1/PMC10442385.1.xml",
+      "version": "PMC10442385.1 (Zhou et al. 2023, Sci Data 10:543, DUO-GAIT descriptor, CC BY 4.0)",
+      "sha256": "6c8fd0b6782ae8ae60c4352c1cf4167434508023e6185b4af8dd33bc1510b5ad",
+      "bytes": 98549
+    },
+    "duogait_processed.zip": {
+      "source_id": "SRC-0195",
+      "url": "https://zenodo.org/api/records/8244887/files/processed.zip/content",
+      "version": "Zenodo 8244887 processed.zip (DUO-GAIT paired IMU gait parameters in meters, n=16 x 4 conditions, CC BY 4.0)",
+      "sha256": "2c3f8826b323304b8e1611f3a0c0a5b1f102253b5d10c79c4471168b3f6ad51c",
+      "bytes": 2637155
+    },
+    "PMC13132146.xml": {
+      "source_id": "SRC-0196",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13132146.1/PMC13132146.1.xml",
+      "version": "PMC13132146.1 (Goepp et al. 2026, Scand J Med Sci Sports, Heat Acclimation + BFR dual-task, CC BY 4.0)",
+      "sha256": "3a1dba1c9ac752069f4f17baae2e3e6c011da1e8a0390f2856090fc89e575752",
+      "bytes": 154020
+    },
+    "osf_ekvcg_DEMOGRAPHIC.csv": {
+      "source_id": "SRC-0196",
+      "url": "https://files.osf.io/v1/resources/ekvcg/providers/osfstorage/699438f7c4f31e2817e85549",
+      "version": "OSF ekvcg DEMOGRAPHIC.csv (Goepp et al. 2026, n=20)",
+      "sha256": "66a56104d9a19cab8b88f3945c6f22400e5a7d80f74e4e6b600d8ac92cd157a0",
+      "bytes": 780
+    },
+    "osf_ekvcg_HSTCMDT_PERFORMANCE.csv": {
+      "source_id": "SRC-0196",
+      "url": "https://files.osf.io/v1/resources/ekvcg/providers/osfstorage/699438f9f017605168b103fb",
+      "version": "OSF ekvcg HSTCMDT_PERFORMANCE.csv (Goepp et al. 2026, n=20)",
+      "sha256": "3ce236450a44dd6e00866cb1b24572a295b5314e9c2d0286bcc5de8a01f0b7e2",
+      "bytes": 1739
+    },
+    "osf_ekvcg_HSTCMDT_HR_TC.csv": {
+      "source_id": "SRC-0196",
+      "url": "https://files.osf.io/v1/resources/ekvcg/providers/osfstorage/699438f83d6a2736e026e97d",
+      "version": "OSF ekvcg HSTCMDT_HR_TC.csv (Goepp et al. 2026, n=20)",
+      "sha256": "d1fafdd0ec5ce4f2ef6ec580beb39a00666f3a88e114dcf0a5b3b89fff4e36e0",
+      "bytes": 3080
+    },
+    "osf_ekvcg_HSTCMDT_SART.csv": {
+      "source_id": "SRC-0196",
+      "url": "https://files.osf.io/v1/resources/ekvcg/providers/osfstorage/699438fac112b38b4739a17a",
+      "version": "OSF ekvcg HSTCMDT_SART.csv (Goepp et al. 2026, n=20)",
+      "sha256": "52fc41ded03108b1103b22826c9b4da5c5c381a868a640e8f8a415bff11deb12",
+      "bytes": 5879
+    },
+    "osf_ekvcg_HSTCMDT_NEUROMUSCULAR_FUNCTION.csv": {
+      "source_id": "SRC-0196",
+      "url": "https://files.osf.io/v1/resources/ekvcg/providers/osfstorage/699438f861d46e692c85662d",
+      "version": "OSF ekvcg HSTCMDT_NEUROMUSCULAR_FUNCTION.csv (Goepp et al. 2026, n=20)",
+      "sha256": "8dcc54dcee7aa4d6c1138c8f1bdee6fcb6dd59d1adc0b78a5fe9c7fec0eede05",
+      "bytes": 8037
+    },
+    "PMC12015927.xml": {
+      "source_id": "SRC-0197",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12015927.1/PMC12015927.1.xml",
+      "version": "PMC12015927.1 (Agostinelli et al. 2025, JFMK 10:129, CC BY 4.0)",
+      "sha256": "b86c433d04f4d7356e921ad67df1135e4bf847fb4494e7b504bd139d50421d48",
+      "bytes": 164103
+    },
+    "agostinelli_FORD_Training.xlsx": {
+      "source_id": "SRC-0197",
+      "url": "https://ndownloader.figshare.com/files/53564849",
+      "version": "Figshare 28768673 FORD_Training.xlsx (Agostinelli et al. 2025, n=33 individual heat+load+cognition, CC BY 4.0)",
+      "sha256": "82ad4a0241aeabdd88886295035f1901dfb4f13e56b15d17310b3bfd8e33a126",
+      "bytes": 46642
+    }
+  }
+}

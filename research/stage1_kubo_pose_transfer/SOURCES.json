@@ -1,0 +1,204 @@
+{
+  "experiment_id": "EXP-0152",
+  "data_subdir": "stage1_kubo_pose_transfer",
+  "files": {
+    "ply.xml": {
+      "source_id": "SRC-0161",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5555899.1/PMC5555899.1.xml",
+      "version": "PMC5555899.1 (Physiol Rep 2017;5(15):e13374)",
+      "sha256": "37f03f1234fad797af82a731f506254a5654dc6bfaf270af59d005f46f476eae",
+      "bytes": 119273
+    },
+    "ply-list.xml": {
+      "source_id": "SRC-0161",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC5555899",
+      "version": "PMC5555899.1 S3 inventory (confirms no tabular supplement)",
+      "sha256": "056851b60a34e191d4011924e0b0e26437d7d27291b2e9ae8992ed5cea6c0435",
+      "bytes": 3395
+    },
+    "kubo.pdf": {
+      "source_id": "SRC-0161",
+      "url": "https://www.wheelersportstech.com/wp-content/uploads/2023/05/Effects-of-plyometric-and-isometric-training-on-muscle-and-tendon-stiffness-in-vivo.pdf",
+      "version": "Published PDF Physiol Rep 2017;5(15):e13374",
+      "sha256": "b25f42596168a733329cf0fe942da02d17435acb866de6cf432caeffe358f2c1",
+      "bytes": 258235
+    },
+    "PHY2-5-e13374-g005.jpg": {
+      "source_id": "SRC-0161",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5555899.1/PHY2-5-e13374-g005.jpg",
+      "version": "Fig. 5 Ramp force-elongation curves (PMC5555899.1)",
+      "sha256": "2ef127835897a01b4eaf05d549cb32a9cadfca520aa3c8c9c018ace888bf0e53",
+      "bytes": 71587
+    },
+    "PHY2-5-e13374-g006.jpg": {
+      "source_id": "SRC-0161",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5555899.1/PHY2-5-e13374-g006.jpg",
+      "version": "Fig. 6 Ballistic force-elongation curves (PMC5555899.1)",
+      "sha256": "a0fffa8989effa1d1ffbbba694777502848f90644771c637639d301f384cd8a9",
+      "bytes": 74407
+    },
+    "PMC7658232.xml": {
+      "source_id": "SRC-0177",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7658232.1/PMC7658232.1.xml",
+      "version": "PMC7658232.1 (Holzer et al. 2020, Sci Rep 10:19559, CC BY 4.0)",
+      "sha256": "d25ebbec4014f35d5792d0775e4609dec4459a4fb4fc4602637deb865ea6536e",
+      "bytes": 121083
+    },
+    "PMC7658232_Fig1.jpg": {
+      "source_id": "SRC-0177",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7658232.1/41598_2020_76625_Fig1_HTML.jpg",
+      "version": "Holzer et al. 2020 Fig. 1 individual prone knee-extended PF torque-angle curves",
+      "sha256": "04ad0a0bdbd8098a42ce85d17fcbfec2b180dec1a1ff572def7967dc3991dcd9",
+      "bytes": 95904
+    },
+    "PMC12283864.xml": {
+      "source_id": "SRC-0178",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12283864.1/PMC12283864.1.xml",
+      "version": "PMC12283864.1 (Chen & Franklin 2025, Ann Biomed Eng, CC BY 4.0)",
+      "sha256": "2505804cb6a267c906cc72f2d027761f074e69c6e72753f36eee729ce651e3e9",
+      "bytes": 357444
+    },
+    "PMC12283864_10439_2025_3735_MOESM1_ESM.zip": {
+      "source_id": "SRC-0178",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12283864.1/10439_2025_3735_MOESM1_ESM.zip",
+      "version": "Chen & Franklin 2025 MOESM1 archive (S2_Metadata_Catalog.xlsx, S3_Datasets.mat; Figshare 10.6084/m9.figshare.26018563)",
+      "sha256": "e3239ef1f97e3e117f210c7dc905f2f26dbe255337b88450d9f3e7e81c65cfc7",
+      "bytes": 4398645
+    },
+    "z4939556_AT_moment_arms.xlsx": {
+      "source_id": "SRC-0179",
+      "url": "https://zenodo.org/records/4939556/files/AT%20moment%20arms.xlsx?download=1",
+      "version": "Wolfram et al. 2018 (Dryad 10.5061/dryad.3t251 / Zenodo 4939556, CC0)",
+      "sha256": "69c6892faa2f1859c991955ed2763d400a83f1c0af9aed24584a3d49ee455fd2",
+      "bytes": 9832
+    },
+    "PMC9286485.xml": {
+      "source_id": "SRC-0180",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9286485.1/PMC9286485.1.xml",
+      "version": "PMC9286485.1 (Nagelli et al. 2022, Eur Cell Mater 43:153-161, CC BY-SA 4.0)",
+      "sha256": "c7bf49411dd878466c959be0d80e9b8a391732c78c3e40e64218c68f9fa8c685",
+      "bytes": 75674
+    },
+    "PMC7886322.xml": {
+      "source_id": "SRC-0181",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7886322.1/PMC7886322.1.xml",
+      "version": "PMC7886322.1 (Yin et al. 2021, eLife 10:e63204, CC BY 4.0)",
+      "sha256": "d2afe5bc4f526392f703234e757f1060846ceea48b78d0f83ae8f24a333e07e8",
+      "bytes": 138768
+    },
+    "PMC12301477.xml": {
+      "source_id": "SRC-0182",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12301477.1/PMC12301477.1.xml",
+      "version": "PMC12301477.1 (Jacobs et al. 2025, Sci Rep 15:28127, CC BY 4.0)",
+      "sha256": "f11562f22db59bd3486283078b9ca3177e8ca25045cb8bb7986477965d9e16f1",
+      "bytes": 133218
+    },
+    "PMC12301477_MOESM1.docx": {
+      "source_id": "SRC-0182",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12301477.1/41598_2025_12721_MOESM1_ESM.docx",
+      "version": "Jacobs et al. 2025 Supplementary Tables 1-2",
+      "sha256": "bdcba8e4636a5671b0aed66fe416f70e405bb1a229d1ca78917a86492d3fd9a2",
+      "bytes": 16474
+    }
+  },
+  "kubo_ishigaki_2017_transcribed": {
+    "n_participants": 11,
+    "sex_age_height_mass": "11 healthy untrained young males; age 22.5 +- 3.2 yr; height 172.2 +- 2.5 cm; mass 60.9 +- 6.5 kg (mass unchanged post-12 wk)",
+    "design": "Within-subject randomized leg assignment (ISO vs PLY), 12 weeks, 3 sessions/week",
+    "angle_convention": "0 deg = anatomical neutral (foot perpendicular to tibia); positive (+) = plantar flexion (+10 deg PF); negative (-) = dorsiflexion (-10 deg DF)",
+    "posture_all_tests": "Prone on dynamometer bench, hip neutral (~0 deg), knee fully extended (0 deg), foot secured by two straps (Applied Office, Tokyo)",
+    "iso_training_protocol": "Prone, knee extended, ankle 0 deg neutral (Vine dynamometer), 10 x 15 s @ 80% MVC, 30 s rest, 3x/wk; load re-tested every 4 wk at 0 deg MVC (+27.6 +- 4.0% at week 12)",
+    "ply_training_protocol": "Unilateral hopping + 20-cm drop jumps on Cybex VR-4100 sledge @ 40% 1RM, 5 x 10 reps each, 3x/wk; load re-tested every 4 wk via sledge 1RM (+37.7 +- 11.3% at week 12)",
+    "table1_mvc_10deg_pf_nm": {
+      "iso_pre": [104.3, 16.7],
+      "iso_post": [124.8, 15.0],
+      "iso_indiv_gain_pct": [22.1, 14.2],
+      "ply_pre": [103.3, 7.6],
+      "ply_post": [107.3, 9.4],
+      "ply_indiv_gain_pct": [4.4, 5.0]
+    },
+    "iso_0deg_training_mvc_gain_pct": [27.6, 4.0],
+    "table2_tendon_0deg": {
+      "iso_csa_mm2_pre": [64.9, 7.8],
+      "iso_csa_mm2_post": [66.0, 7.8],
+      "ply_csa_mm2_pre": [65.8, 7.8],
+      "ply_csa_mm2_post": [64.8, 7.1],
+      "iso_ramp_lmax_mm_pre": [21.3, 2.8],
+      "iso_ramp_lmax_mm_post": [21.7, 2.8],
+      "iso_ramp_stiffness_n_mm_pre": [23.7, 5.4],
+      "iso_ramp_stiffness_n_mm_post": [32.5, 8.7],
+      "iso_ramp_stiffness_gain_pct": [42.1, 48.2],
+      "iso_ramp_hysteresis_pct_pre": [20.4, 9.0],
+      "iso_ramp_hysteresis_pct_post": [18.6, 7.5],
+      "iso_ballistic_lmax_mm_pre": [16.6, 2.7],
+      "iso_ballistic_lmax_mm_post": [16.0, 3.2],
+      "iso_ballistic_stiffness_n_mm_pre": [19.2, 4.0],
+      "iso_ballistic_stiffness_n_mm_post": [24.2, 6.5],
+      "iso_ballistic_stiffness_gain_pct": [27.3, 28.4],
+      "iso_ballistic_hysteresis_pct_pre": [35.7, 8.7],
+      "iso_ballistic_hysteresis_pct_post": [34.3, 7.8]
+    },
+    "digitized_fig5_fig6_mg_force_0deg_n": {
+      "resolution_n_per_px": 0.785,
+      "sensitivity_px": 2,
+      "iso_ramp_pre": {"force_n": 335.2, "sd_n": 58.8, "lmax_mm_fig": 21.34, "lmax_mm_table2": 21.3},
+      "iso_ramp_post": {"force_n": 403.9, "sd_n": 48.6, "lmax_mm_fig": 21.69, "lmax_mm_table2": 21.7},
+      "iso_ballistic_pre": {"force_n": 332.0, "sd_n": 53.8, "lmax_mm_fig": 16.62, "lmax_mm_table2": 16.6},
+      "iso_ballistic_post": {"force_n": 394.1, "sd_n": 49.5, "lmax_mm_fig": 16.04, "lmax_mm_table2": 16.0},
+      "ply_ramp_pre": {"force_n": 335.6, "sd_n": 23.6, "lmax_mm_fig": 21.36, "lmax_mm_table2": 21.3},
+      "ply_ramp_post": {"force_n": 339.7, "sd_n": 14.9, "lmax_mm_fig": 21.80, "lmax_mm_table2": 21.9},
+      "ply_ballistic_pre": {"force_n": 332.7, "sd_n": 32.3, "lmax_mm_fig": 15.96, "lmax_mm_table2": 15.9},
+      "ply_ballistic_post": {"force_n": 341.8, "sd_n": 33.8, "lmax_mm_fig": 18.19, "lmax_mm_table2": 18.2}
+    }
+  },
+  "holzer_2020_table2_ma_polynomials_cm": {
+    "angle_convention": "0 deg neutral; positive = dorsiflexion, negative = plantarflexion (so 10 deg PF is theta = -10)",
+    "functions": [
+      {"study": "Deforth et al. (GI 1f, Rest)", "method": "GI", "intensity": "Rest", "p1": -0.000835, "p2": -0.0572, "p3": 4.560, "r2": 0.9997},
+      {"study": "Fath et al. (GI 2D, Rest)", "method": "GI", "intensity": "Rest", "p1": -0.000478, "p2": -0.0308, "p3": 5.177, "r2": 0.9998},
+      {"study": "Fath et al. (TE, Rest)", "method": "TE", "intensity": "Rest", "p1": -0.000011, "p2": -0.0049, "p3": 3.529, "r2": 0.9676},
+      {"study": "Fletcher et al. (TE, Rest)", "method": "TE", "intensity": "Rest", "p1": -0.000773, "p2": -0.0005, "p3": 3.532, "r2": 0.5251},
+      {"study": "Hashizume et al. (GI 3D FHA, Rest)", "method": "GI_3D", "intensity": "Rest", "p1": -0.001750, "p2": -0.0325, "p3": 4.025, "r2": 0.9495},
+      {"study": "Hashizume et al. (GI 2D, Rest)", "method": "GI", "intensity": "Rest", "p1": -7.143e-19, "p2": -0.0340, "p3": 4.930, "r2": 0.9966},
+      {"study": "Maganaris et al. (GI 2D, MVC)", "method": "GI", "intensity": "MVC", "p1": -0.000222, "p2": -0.0397, "p3": 6.017, "r2": 0.9972},
+      {"study": "Maganaris et al. (GI 2D, Rest)", "method": "GI", "intensity": "Rest", "p1": -0.000222, "p2": -0.0260, "p3": 4.730, "r2": 0.9966},
+      {"study": "Maganaris et al. (TE, MVC)", "method": "TE", "intensity": "MVC", "p1": 0.000248, "p2": -0.0328, "p3": 4.832, "r2": 1.0000},
+      {"study": "Maganaris et al. (TE, Rest)", "method": "TE", "intensity": "Rest", "p1": 0.000227, "p2": -0.0294, "p3": 4.833, "r2": 0.9666},
+      {"study": "Manal et al. (UsKin, Rest)", "method": "UsKin", "intensity": "Rest", "p1": -0.000300, "p2": 0.0040, "p3": 3.646, "r2": 0.9250},
+      {"study": "Manal et al. (UsKin, MVC)", "method": "UsKin", "intensity": "MVC", "p1": -0.000179, "p2": 0.0057, "p3": 3.748, "r2": 0.9756},
+      {"study": "Obst et al. (UsKin straight, Rest)", "method": "UsKin", "intensity": "Rest", "p1": -0.000027, "p2": -0.0193, "p3": 4.303, "r2": 0.9943},
+      {"study": "Obst et al. (UsKin curved, Rest)", "method": "UsKin", "intensity": "Rest", "p1": -0.000029, "p2": -0.0179, "p3": 4.253, "r2": 0.9949},
+      {"study": "Rugg et al. (GI 2D, Submax)", "method": "GI", "intensity": "Submax", "p1": -0.000515, "p2": -0.0294, "p3": 5.263, "r2": 0.9903}
+    ]
+  },
+  "tendon_failure_and_canonical_benchmarks": {
+    "wren_2001_uts_slow_1pct_s_mpa": [71.0, 17.0],
+    "wren_2001_uts_fast_10pct_s_mpa": [86.0, 24.0],
+    "nagelli_2022_avulsion_load_n": [4216.9, 1196.4],
+    "nagelli_2022_midsubstance_load_n": [5649.1, 565.5],
+    "nagelli_2022_longitudinal_rupture_strain_pct": 6.0,
+    "yin_2021_subtendon_uts_mpa": {"LG": [53.4, 33.4], "MG": [45.1, 12.2], "SOL": [45.2, 10.4]},
+    "exp0062_safety_factor_gate": 1.5,
+    "exp0062_collagen_yield_mpa": 85.0,
+    "exp0062_ramp_enthesis_von_mises_mult": 1.1976,
+    "exp0062_ballistic_enthesis_von_mises_mult": 1.2834,
+    "exp0060_wohler_b_nominal": 8.45,
+    "exp0060_wohler_b_fitted": 13.27,
+    "fukunaga_1996_triceps_surae_pcsa_share": 0.873
+  },
+  "jacobs_2025_same_pose_rct": {
+    "n_intervention": 9,
+    "n_control": 9,
+    "weeks": 12,
+    "pf_pose": "0 deg ankle neutral, knee fully extended (measured 13 +- 5 deg plantarflexion rotation during MVC)",
+    "ke_pose": "60 deg knee flexion",
+    "table1": {
+      "pf_mvc_nm": {"int_pre": [206.49, 40.07], "int_post": [224.72, 33.72], "con_pre": [218.75, 33.90], "con_post": [221.86, 39.35]},
+      "at_stiffness_n_mm": {"int_pre": [299.14, 46.13], "int_post": [409.60, 76.99], "con_pre": [305.85, 67.38], "con_post": [287.21, 68.81]},
+      "ke_mvc_nm": {"int_pre": [317.02, 35.93], "int_post": [345.07, 40.44], "con_pre": [305.87, 37.70], "con_post": [301.25, 40.15]},
+      "pt_stiffness_n_mm": {"int_pre": [1696.17, 359.01], "int_post": [1964.06, 420.65], "con_pre": [1880.66, 333.81], "con_post": [1772.83, 359.57]},
+      "squat_1rm_kg": {"int_pre": [84.67, 14.17], "int_post": [100.44, 12.30], "con_pre": [78.89, 12.91], "con_post": [77.67, 12.95], "int_text_gain_pct": [20.0, 9.7]},
+      "pmax_w": {"int_pre": [397.85, 63.03], "int_post": [454.53, 64.14], "con_pre": [355.34, 61.61], "con_post": [352.07, 74.45]}
+    }
+  }
+}

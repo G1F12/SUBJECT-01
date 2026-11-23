@@ -2060,7 +2060,9 @@
     "url": "https://doi.org/10.1007/s00421-017-3561-9",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/cpe45_human_evidence/REPORT.md",
-    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "calibration_review": {
+      "scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."
+    },
     "limits": "Article results and 150 s upper bound for post measurement reviewed; raw data not obtained."
   },
   {
@@ -2072,7 +2074,9 @@
     "url": "https://doi.org/10.1371/journal.pone.0102753",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/cpe45_human_evidence/REPORT.md",
-    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "calibration_review": {
+      "scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."
+    },
     "limits": "Matched 15-minute blocks; access explicitly limited to summary results."
   },
   {
@@ -2084,7 +2088,9 @@
     "url": "https://doi.org/10.6084/m9.figshare.14678322.v1",
     "verification": "metadata_and_scope_checked_only",
     "audit_report": "research/cpe45_human_evidence/REPORT.md",
-    "calibration_review": {"scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."},
+    "calibration_review": {
+      "scope": "Primary protocol or supplement checked; see audit report and SOURCES.json for access and claim limits."
+    },
     "limits": "Publisher DOCX inspected; aggregate pre-sprint tables only."
   },
   {
@@ -2725,6 +2731,390 @@
     "audit_report": "research/stage1_active_pose/REPORT.md",
     "calibration_review": {
       "scope": "Published test geometry, strength and tissue coverage audited in the report."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0166",
+    "name": "Hirayama depth-jump force and tendon dynamics",
+    "url": "https://doi.org/10.3389/fphys.2017.00016",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_dynamic_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, configuration and public file coverage audited."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0167",
+    "name": "Kubo 2021 plyometric responses with controls",
+    "url": "https://doi.org/10.14814/phy2.15073",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_dynamic_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, configuration and public file coverage audited."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0168",
+    "name": "Kubo 2007 paired plyometric and weight training",
+    "url": "https://doi.org/10.1249/mss.0b013e31813e630a",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_dynamic_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, configuration and public file coverage audited."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "id": "SRC-0169",
+    "name": "Burgess jump and isometric force-development trial",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17685695/",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_dynamic_pose/REPORT.md",
+    "calibration_review": {
+      "scope": "Outcome, configuration and public file coverage audited."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0170",
+    "name": "Krizaj et al. 2026 EQI versus eccentric triceps surae RCT and Zenodo 19202208 dataset",
+    "url": "https://doi.org/10.5281/zenodo.19202208",
+    "type": "primary_dataset_and_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_eqi_tendon_rct/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual 46-participant XLSX verified against JSSM 2026 Table 1 baseline means; resting SWE stiffness and missing post body mass audited."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0171",
+    "name": "OLeary et al. 2026 18-week postpartum bone and patellar tendon non-randomised trial",
+    "url": "https://doi.org/10.1038/s41598-026-51411-3",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_eqi_tendon_rct/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC13324743 Tables 1, 4, and 5 audited across weeks 1, 6, and 18."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0172",
+    "name": "Waugh et al. 2021 Achilles tendon strength training adaptation and walking function",
+    "url": "https://doi.org/10.1371/journal.pone.0255221",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_eqi_tendon_rct/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC8320898 Table 1 audited for isometric-to-walking tendon transfer."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0173",
+    "name": "Narang FemAdapt 45-minute heat-stress cycling and hypoxia dataset (Zenodo 20284986)",
+    "url": "https://doi.org/10.5281/zenodo.20284986",
+    "type": "primary_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_cpe45_open_audit/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual 53-session XLSX verified and screened against EXP-0149 working CPE45 thresholds."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0174",
+    "name": "Bilgin et al. 2026 concurrent 2-back working memory during VT1 and VT2 cycling",
+    "url": "https://doi.org/10.3390/brainsci16101073",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_cpe45_open_audit/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC13702500 Tables 1-4 audited for concurrent cognitive-motor interference."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0175",
+    "name": "Deely et al. 2022 academy soccer training neuromuscular fatigue and 72-hour recovery",
+    "url": "https://doi.org/10.3389/fphys.2022.911009",
+    "type": "primary_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_cpe45_open_audit/REPORT.md",
+    "calibration_review": {
+      "scope": "PMC9235147 Results and Tables 1-4 audited for acute and 72-h MVC recovery."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0176",
+    "name": "Zenodo 24353000 rejected provenance-mismatched record (judokas metadata vs TopMMA files)",
+    "url": "https://doi.org/10.5281/zenodo.24353000",
+    "type": "rejected_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_cpe45_open_audit/REPORT.md",
+    "calibration_review": {
+      "scope": "Rejected at provenance gate: record describes 8 Polish judokas under hypoxia while files contain 30 TopMMA rows and an erratum disclosing prior control-group duplication."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0177",
+    "name": "Holzer et al. (2020) Achilles tendon moment arm functions and prone knee-extended PF torque-angle data (PMC7658232)",
+    "url": "https://doi.org/10.1038/s41598-020-76625-x",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "15 in vivo human Achilles tendon MA(theta) polynomial functions (0 deg and 10 deg PF) plus paired prone knee-extended plantarflexion MVC torque-angle curves (n=14 males) and Vicon joint-rotation/heel-lift error."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0178",
+    "name": "Chen & Franklin (2025) compiled lower-limb joint moment-angle and muscle moment arm-angle dataset archive (PMC12283864 / Figshare 26018563)",
+    "url": "https://doi.org/10.1007/s10439-025-03735-w",
+    "type": "open_access_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "MOESM1 S3_Datasets.mat provides 33 knee-extended healthy human isometric plantarflexion MVC torque-angle curves and 35 in vivo Achilles/triceps-surae moment-arm curves spanning 0 deg and 10 deg PF."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0179",
+    "name": "Wolfram et al. (2018) individual human MRI Achilles tendon moment arms at neutral ankle angle (Zenodo 4939556 / Dryad 10.5061/dryad.3t251)",
+    "url": "https://doi.org/10.5061/dryad.3t251",
+    "type": "open_access_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual MRI Achilles tendon moment arm at 0 deg neutral (n=11, mean 47.93 +- 4.54 mm, range 41.5-56.7 mm, CV 9.47%) quantifying inter-individual anatomical dispersion."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0180",
+    "name": "Nagelli et al. (2022) in vitro mechanical and DIC strain failure testing of human Achilles tendon (PMC9286485)",
+    "url": "https://doi.org/10.22203/eCM.v043a12",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "Ex vivo human Achilles tendon failure loads (calcaneus avulsion 4216.9 +- 1196.4 N, n=5; mid-substance 5649.1 +- 565.5 N, n=5) and longitudinal rupture strain (6.0%)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0181",
+    "name": "Yin et al. (2021) human Achilles sub-tendon ultimate stress, strain, and CSA testing (PMC7886322)",
+    "url": "https://doi.org/10.7554/eLife.63204",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "Table 1 individual donor LG/MG/SOL sub-tendon CSA, failure force, ultimate stress (45.1-53.4 MPa), and ultimate strain (10.1-14.7%) in older human specimens."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0182",
+    "name": "Jacobs et al. (2025) 12-week strength training RCT with same-pose Achilles and patellar tendon testing in triathletes (PMC12301477)",
+    "url": "https://doi.org/10.1038/s41598-025-12721-0",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_kubo_pose_transfer/REPORT.md",
+    "calibration_review": {
+      "scope": "12-week RCT (n=9 ST+Endurance vs n=9 Endurance control) with same-pose 0 deg isometric PF + AT stiffness, 60 deg KE + PT stiffness, and 1RM squat; no individual tables or tendon CSA."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0183",
+    "name": "Mersmann et al. (2023) longitudinal patellar tendon strain >=9% risk factor study in adolescent athletes (PMC10482817)",
+    "url": "https://doi.org/10.1186/s40798-023-00627-y",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "Prospective validation of >=9.0% maximal tendon strain (RR=2.3 [1.1; 4.9], p=0.026) strictly on adolescent patellar tendon (n=37); stiffness (p=0.51) and force (p=0.47) did not separate symptomatic from asymptomatic athletes."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0184",
+    "name": "Weidlich/Domroes et al. (2024) personalized patellar tendon strain prescription in adult male athletes (PMC11519156)",
+    "url": "https://doi.org/10.1007/s00421-024-05525-z",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "9-month adult male volleyball intervention applying 4.5-9.0% strain band to patellar tendon (not Achilles); ultrasound PSF micromorphology showed no change (p>0.05)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0185",
+    "name": "Pang et al. (2026) multilevel meta-analysis of strength and tendon stiffness adaptation in healthy humans (PMC13692497)",
+    "url": "https://doi.org/10.3390/jfmk11040393",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "50 human cohorts (70 matched units): strength +16.12%, stiffness +24.06%, but strict maximal tendon strain showed no significant reduction (-4.77% [-11.45%; +2.42%], p=0.170, 14 cohorts) and controlled contrast included zero."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0186",
+    "name": "Deng & Kawakami (2026) 3D MRI and ultrasound texture morphology-mechanics study of free Achilles tendon (PMC13248229)",
+    "url": "https://doi.org/10.1111/sms.70316",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "3D MRI free Achilles tendon (n=18, L0_free=71.8+-16.0 mm, CSA=74.7+-13.0 mm2): CSA explains R^2=0.277 (p=0.025) of stiffness, while ultrasound texture PSF-H/V explains R^2<=0.010 (p>=0.69)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0187",
+    "name": "Deng, Shiotani & Kawakami (2025/2026) 3D MRI vs 2D Achilles tendon longitudinal strain limitations (PMC13339936)",
+    "url": "https://doi.org/10.1111/joa.70093",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "Demonstrates significant discrepancy between 3D MRI centroid and conventional 2D Achilles strain across all ankle intervals (p<0.001; 1.2+-0.3% vs -0.6+-0.9%) and 6.3+-8.0 mm length error per 2 mm medial offset."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0188",
+    "name": "Weerkamp et al. (2026) BMJ systematic review and meta-analysis of factors associated with Achilles tendinopathy (PMC13723899)",
+    "url": "https://doi.org/10.1136/bmjsem-2026-003387",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "11 prospective cohorts and 8 case-control studies: all imaging/elastography/UTC/biomechanical predictors of midportion and insertional Achilles tendinopathy are very low-quality GRADE evidence (UTC OR 9.7 [1.007; 93.185], sonoelastography RR 5.23 [1.34; 20.44], US stiffness not associated)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0189",
+    "name": "Kharazi et al. (2021) in vivo Achilles tendon mechanical loading and strain during MVC, walking, and running (PMC7955091)",
+    "url": "https://doi.org/10.1038/s41598-021-84847-w",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_tendon_capacity_criterion/REPORT.md",
+    "calibration_review": {
+      "scope": "In vivo curved-path Achilles tendon loading (n=11): 0 deg ramp MVC 5523+-552 N at 14.0+-2.5 mm (~7.9% strain; implied L0 ~177 mm), fast running 2556 N / 4.9% strain."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0190",
+    "name": "Maeo et al. (2024) Hamstrings hypertrophy and BFlh aponeurosis area: LSET vs NHT vs CON RCT (PMC11419281)",
+    "url": "https://doi.org/10.1249/MSS.0000000000003490",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "calibration_review": {
+      "scope": "12-wk 3-arm RCT (n=42, 14/arm) measuring eccentric/isometric/concentric knee flexion torque and MRI BFlh aponeurosis area (+9.07% LSET vs +1.52% CON)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0191",
+    "name": "Mersmann et al. (2021) Functional high-load exercise intervention for patellar tendon pain and strength RCT (PMC7987778)",
+    "url": "https://doi.org/10.3389/fphys.2021.626225",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "calibration_review": {
+      "scope": "4-visit patellar tendon high-load RCT (n=34: 16 exp, 18 con): prevents pain worsening (0/16 vs 5/15, p=0.016) with no active strength-rate superiority (group p=0.50, interaction p=0.44)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0192",
+    "name": "Werkhausen et al. (2019) Isometric plantarflexion training, Achilles stiffness, and running strain RCT (PMC6486809)",
+    "url": "https://doi.org/10.7717/peerj.6764",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "calibration_review": {
+      "scope": "10-wk ankle isometric RCT (n=21: 11 TR, 10 CON): control-adjusted PF torque +9.23 pp (< FORCE20), AT stiffness +15.62% vs +0.25%, passive control unsuitable for ADAPT25."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0193",
+    "name": "Martinez et al. (2022) Eccentric contraction execution time (6 s vs 3 s vs CON) and patellar tendon properties RCT (PMC9367933)",
+    "url": "https://doi.org/10.3390/ijerph19159296",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "calibration_review": {
+      "scope": "6+6-wk 3-arm RCT (n=50) testing eccentric execution duration on proximal patellar tendon thickness (time x group p=0.037) without maximal external strength contrast or loaded failure capacity."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0194",
+    "name": "Oberg et al. (2025) Blood flow restriction training vs high-load RT tendon adaptation scoping review (PMC12096532)",
+    "url": "https://doi.org/10.1186/s12891-025-08734-5",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_alternative_mechanisms/REPORT.md",
+    "calibration_review": {
+      "scope": "Multi-site BFR vs HL-RT tendon adaptation scoping review covering Brumitt 2020 (supraspinatus, n=46), Frouin 2024 (hamstrings, n=36), and Centner 2022/2023 (patellar/Achilles, n=29)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0195",
+    "name": "Zhou et al. (2023) DUO-GAIT paired human gait dataset under fatigue and cognitive dual-task (PMC10442385, Zenodo 8244887)",
+    "url": "https://doi.org/10.1038/s41597-023-02391-w",
+    "type": "open_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_multichannel_and_compat/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual paired IMU spatial gait parameters in meters (n=16 across ST-Con, ST-Fat, DT-Con, DT-Fat): speed, stride length, min foot clearance (m), clearance CV, stride-time CV, and asymmetry SI."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0196",
+    "name": "Goepp et al. (2026) Heat acclimation with BFR vs SHAM: 4-channel thermal, power, SART cognition, and MVC/VA RCT (PMC13132146, OSF ekvcg)",
+    "url": "https://doi.org/10.1111/sms.70282",
+    "type": "open_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_multichannel_and_compat/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual 8-day heat acclimation RCT (n=20: 10 BFR, 10 SHAM) at 40 C / 40% RH (21 min = 1260 s) jointly measuring %PMA, T_re, concurrent SART RT/ACC/GS, and pre/post MVC & VA."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0197",
+    "name": "Agostinelli et al. (2025) Fitness, relative strength, thermal load, lactate, and cognition during loaded heat work (PMC12015927, Figshare 28768673)",
+    "url": "https://doi.org/10.3390/jfmk10020129",
+    "type": "open_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_multichannel_and_compat/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual adult dataset (n=33, 35 C / 50% RH, 4-round loaded deadlift/carry + cognition, 1124+-263 s) linking Squat/Bench/Deadlift/Weight, VJ_max, VO2max, TotalTime, maxCT, blood lactate, and Total_errors."
     }
   }
 ]

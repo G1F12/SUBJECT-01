@@ -1,0 +1,88 @@
+{
+  "experiment_id": "EXP-0150",
+  "date": "2026-11-23",
+  "files_under_data_root": {
+    "krizaj_xlsx": {
+      "registry_id": "SRC-0170",
+      "path": "stage1_eqi_tendon_rct/EQI_Data.xlsx",
+      "url": "https://zenodo.org/api/records/19202208/files/EQI_Data.xlsx/content",
+      "doi": "10.5281/zenodo.19202208",
+      "article_doi": "10.52082/jssm.2026.960",
+      "license": "CC BY 4.0",
+      "sha256": "2a6d7c597484bc1af93be142f66ae24a2210ef57e3553247260b9062a83e89ed"
+    },
+    "krizaj_pdf": {
+      "registry_id": "SRC-0170",
+      "path": "stage1_eqi_tendon_rct/jssm_2026_960.pdf",
+      "url": "https://www.jssm.org/hfpdf.php?volume=25&issue=4&page=960",
+      "doi": "10.52082/jssm.2026.960",
+      "sha256": "d6c9fb5a05c5189a717d38007b75fec0d904366a36515596dd9608d7c5bc7fab"
+    },
+    "oleary_xml": {
+      "registry_id": "SRC-0171",
+      "path": "stage1_eqi_tendon_rct/PMC13324743.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13324743/fullTextXML",
+      "doi": "10.1038/s41598-026-51411-3",
+      "license": "CC BY 4.0",
+      "sha256": "0d8668b2774f288125de13dafe04d92c8b0e46879868bd083953e3addf20bd72"
+    },
+    "waugh_xml": {
+      "registry_id": "SRC-0172",
+      "path": "stage1_eqi_tendon_rct/0255221.xml",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0255221&type=manuscript",
+      "doi": "10.1371/journal.pone.0255221",
+      "license": "CC BY 4.0",
+      "sha256": "d2fa8618e59907931ae168d43025375db46f46b21fc471ee74cca1c88835ddc5"
+    }
+  },
+  "krizaj_table1_baseline_check": {
+    "EQI": {"IS_Nm": 194.256, "CS_Nm": 228.387, "ES_Nm": 221.372, "ATT_mm": 4.782, "ATS_kPa": 127.044},
+    "ECC": {"IS_Nm": 195.824, "CS_Nm": 237.434, "ES_Nm": 232.705, "ATT_mm": 4.880, "ATS_kPa": 117.551},
+    "Control": {"IS_Nm": 194.186, "CS_Nm": 228.592, "ES_Nm": 222.979, "ATT_mm": 4.760, "ATS_kPa": 115.640}
+  },
+  "oleary_2026_published_tables": {
+    "design": "non-randomised controlled trial, 18 weeks, postpartum UK Servicewomen, 90-deg knee extension ramped MVC",
+    "weeks_measured": [1, 6, 18],
+    "table4_means": {
+      "control_n14": {
+        "mvc_N": [143.0, 138.0, 141.0],
+        "tendon_force_N": [3968.0, 3834.0, 3879.0],
+        "stiffness_N_mm": [1968.0, 2184.0, 2203.0],
+        "stress_MPa": [54.4, 55.7, 56.1],
+        "strain_pct": [9.00, 8.11, 8.00],
+        "csa_mm2": [73.2, 70.2, 70.1]
+      },
+      "intervention_n17": {
+        "mvc_N": [127.0, 139.0, 159.0],
+        "tendon_force_N": [3623.0, 3929.0, 4528.0],
+        "stiffness_N_mm": [2040.0, 1917.0, 2418.0],
+        "stress_MPa": [49.6, 54.4, 62.4],
+        "strain_pct": [7.29, 7.29, 6.64],
+        "csa_mm2": [73.7, 74.6, 74.2]
+      }
+    },
+    "table5_paired_complete": {
+      "control_n": 9,
+      "intervention_n": 11,
+      "mvc_N_w1_w6": {"control": [8.0, -6.0, 22.0], "intervention": [12.0, -4.0, 27.0]},
+      "mvc_N_w1_w18": {"control": [10.0, -9.0, 30.0], "intervention": [29.0, -5.0, 63.0]},
+      "stiffness_N_mm_w1_w6": {"control": [217.0, -134.0, 568.0], "intervention": [-123.0, -427.0, 181.0]},
+      "stiffness_N_mm_w1_w18": {"control": [137.0, -443.0, 298.0], "intervention": [293.0, -473.0, 1060.0]},
+      "tendon_force_N_w1_w18": {"control": [233.0, -298.0, 763.0], "intervention": [760.0, -117.0, 1636.0]},
+      "stress_MPa_w1_w18": {"control": [3.6, -4.5, 11.6], "intervention": [11.2, -1.0, 23.3]},
+      "strain_pct_w1_w18": {"control": [0.00, -1.27, 1.27], "intervention": [-0.27, -1.07, 0.53]}
+    }
+  },
+  "waugh_2021_published_table1": {
+    "n": 14,
+    "weeks": 12,
+    "isometric_at_stiffness_gain_pct_reported": 31.0,
+    "walking_pre_post": {
+      "at_csa_mm2": [60.3, 60.8, 0.8, 0.09],
+      "peak_at_force_N": [1965.7, 2012.7, 2.4, 0.16],
+      "strain_pct": [6.6, 6.3, -4.4, 0.06],
+      "stress_MPa": [33.2, 33.5, 1.13, 0.06],
+      "stiffness_N_mm": [101.8, 107.3, 5.4, 0.15]
+    }
+  }
+}

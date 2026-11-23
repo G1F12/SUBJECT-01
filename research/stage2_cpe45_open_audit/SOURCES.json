@@ -1,0 +1,78 @@
+{
+  "experiment_id": "EXP-0151",
+  "date": "2026-11-23",
+  "working_spec_ref": "research/cpe45_working_spec/WORKING_SPEC.json",
+  "files_under_data_root": {
+    "narang_xlsx": {
+      "registry_id": "SRC-0173",
+      "path": "stage2_cpe45_open_audit/FemAdapt_ExerciseHeatStress_Hypoxia_Data.xlsx",
+      "url": "https://zenodo.org/api/records/20284986/files/FemAdapt_ExerciseHeatStress_Hypoxia_Data.xlsx/content",
+      "doi": "10.5281/zenodo.20284986",
+      "license": "CC BY 4.0",
+      "sha256": "60401b882d00a6c8d9cf98003cb6b2a0f4fe71c07fc3243ac8648d8adc024de4"
+    },
+    "bilgin_xml": {
+      "registry_id": "SRC-0174",
+      "path": "stage2_cpe45_open_audit/PMC13702500.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13702500/fullTextXML",
+      "doi": "10.3390/brainsci16101073",
+      "license": "CC BY 4.0",
+      "sha256": "7b908e8ce8e9b8d380963d9681529058ae012f58d687b119d48a4e57e1a18ffe"
+    },
+    "deely_xml": {
+      "registry_id": "SRC-0175",
+      "path": "stage2_cpe45_open_audit/PMC9235147.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9235147/fullTextXML",
+      "doi": "10.3389/fphys.2022.911009",
+      "license": "CC BY 4.0",
+      "sha256": "34e008498d1f3e0022b719ffab5e8eb0e81ddc2eb20a41902dd4cfec89519d84"
+    },
+    "zenodo_24353000_readme": {
+      "registry_id": "SRC-0176",
+      "path": "stage2_cpe45_open_audit/z24353000_12_analysis_pipeline_README.md",
+      "url": "https://zenodo.org/api/records/24353000/files/12_analysis_pipeline_README.md/content",
+      "doi": "10.5281/zenodo.24353000",
+      "license": "CC BY 4.0",
+      "status": "REJECTED_PROVENANCE_MISMATCH",
+      "sha256": "df11521e3640c4c8ba3ccf7401d09615d0fe192816cebbf382dff313b65b3d90"
+    },
+    "zenodo_24353000_demographics": {
+      "registry_id": "SRC-0176",
+      "path": "stage2_cpe45_open_audit/z24353000_01_participant_demographics.csv",
+      "url": "https://zenodo.org/api/records/24353000/files/01_participant_demographics.csv/content",
+      "doi": "10.5281/zenodo.24353000",
+      "status": "REJECTED_PROVENANCE_MISMATCH",
+      "sha256": "737c31efab3f94b578e4735f55af0cd3b4d07a5e0aee618408e7f02544e74757"
+    }
+  },
+  "bilgin_2026_published_tables": {
+    "n": 11,
+    "bout_duration_min": 10,
+    "vt1_vo2_ml_kg_min": [35.88, 3.94],
+    "vt2_vo2_ml_kg_min": [44.14, 5.74],
+    "vt1_hr_bpm": [155.98, 14.70],
+    "vt2_hr_bpm": [173.96, 11.04],
+    "hits": {
+      "vt1": {"pre": [20.73, 2.87], "dual": [18.64, 3.50], "post": [20.45, 3.86]},
+      "vt2": {"pre": [21.55, 2.54], "dual": [15.27, 6.07], "post": [18.91, 3.59]}
+    },
+    "hit_rt_ms": {
+      "vt1": {"pre": [535.33, 88.80], "dual": [557.59, 84.82], "post": [548.08, 112.52]},
+      "vt2": {"pre": [535.15, 93.51], "dual": [589.39, 183.31], "post": [548.73, 124.71]}
+    },
+    "dprime": {
+      "vt1": {"pre": [1.78, 0.51], "dual": [1.32, 0.56], "post": [1.61, 0.73]},
+      "vt2": {"pre": [1.89, 0.63], "dual": [1.19, 0.60], "post": [1.43, 0.61]}
+    },
+    "anova_p": {"hits_cond_x_phase": 0.019, "hit_rt_cond_x_phase": 0.647, "post_vt2_dprime_vs_pre_holm": 0.008}
+  },
+  "deely_2022_published_summary": {
+    "n": 16,
+    "post_session_mvc_change_pct": -11.0,
+    "post_session_mvc_p": 0.001,
+    "post_72h_mvc_change_pct": -6.0,
+    "post_72h_mvc_p": 0.03,
+    "va_mvc_r": 0.609,
+    "va_mvc_p": 0.016
+  }
+}

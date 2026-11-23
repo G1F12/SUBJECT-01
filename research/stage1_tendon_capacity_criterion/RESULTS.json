@@ -1,0 +1,509 @@
+{
+  "experiment_id": "EXP-0153",
+  "stage1_verdict": "HOLD",
+  "stage1_blocker_status": "DATA_BLOCKED",
+  "scientific_criterion_closed": false,
+  "computational_work_on_existing_data_complete": true,
+  "reused_exp0152": {
+    "path": "research/stage1_kubo_pose_transfer/RESULTS.json",
+    "sha256": "57e074de1531369054a9bca3df9b024b06e3606e6652c2895d4eabc359df23fa",
+    "stage1_verdict_inherited": "HOLD",
+    "adapt25_strength_preserved": {
+      "control_rate_pp_per_wk": [
+        0.37,
+        0.09,
+        0.65
+      ],
+      "adapt25_contrast_r_neg1_pp_per_wk": [
+        1.38,
+        0.24,
+        2.53
+      ],
+      "status": "STRENGTH_COMPONENT_PASS_TISSUE_HOLD"
+    }
+  },
+  "verified_new_source_files": {
+    "PMC10482817.xml": {
+      "bytes": 108909,
+      "sha256": "486eefea8aaf49edbfa4d795e598accb677efc23beae1aefa98fc407e979e685",
+      "source_id": "SRC-0183"
+    },
+    "PMC11519156.xml": {
+      "bytes": 185809,
+      "sha256": "75d33f2a885c62e0364ec6b427cbf03ec7e95e6bbb6594b2200caa671b1bcbea",
+      "source_id": "SRC-0184"
+    },
+    "PMC13692497.xml": {
+      "bytes": 214560,
+      "sha256": "4d3abea681c878dd492fc7d128e38b548a7ddfa85e9e8915b0c942c60a74ce94",
+      "source_id": "SRC-0185"
+    },
+    "PMC13248229.xml": {
+      "bytes": 115802,
+      "sha256": "24fa0b80ef2abfcdf8a750eae2edd6a1f20b11c9f2b53931b1971b1b1e9f74e8",
+      "source_id": "SRC-0186"
+    },
+    "PMC13339936.xml": {
+      "bytes": 100856,
+      "sha256": "ca9faf1b13efda828b21c4fefe58a6ad1e470ab8214d6be873f37513f53a0b8d",
+      "source_id": "SRC-0187"
+    },
+    "PMC13723899.xml": {
+      "bytes": 141974,
+      "sha256": "8fbdb40ac0f25478fbcb31d453152b256fdc844d0b6dbec7177342dfd8c9ed23",
+      "source_id": "SRC-0188"
+    },
+    "PMC7955091.xml": {
+      "bytes": 141557,
+      "sha256": "ba1b5f2748fa5d30f904714e2db246e697f0c0cbf0a36e4663bf0607eace908b",
+      "source_id": "SRC-0189"
+    }
+  },
+  "track_a_lower_bound_capacity": {
+    "young_adult_ex_vivo_10pf_dataset_exists": false,
+    "any_published_lower_bound_passes_sf_1_50": false,
+    "capacity_lower_bounds_vs_10pf": {
+      "calcaneal_avulsion_nagelli2022_n5": {
+        "capacity_n": {
+          "mean": 4216.9,
+          "sd": 1196.4,
+          "n": 5,
+          "normal_p05": 2249.0,
+          "one_sided_lpb95": 1422.92
+        },
+        "fTS_1_000_vs_p05": {
+          "sf_range": [
+            0.623,
+            1.152
+          ],
+          "sf_median_ma": 0.895,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_1_000_vs_lpb95": {
+          "sf_range": [
+            0.394,
+            0.729
+          ],
+          "sf_median_ma": 0.566,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_p05": {
+          "sf_range": [
+            0.714,
+            1.319
+          ],
+          "sf_median_ma": 1.025,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_lpb95": {
+          "sf_range": [
+            0.452,
+            0.835
+          ],
+          "sf_median_ma": 0.649,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        }
+      },
+      "midsubstance_rupture_nagelli2022_n5": {
+        "capacity_n": {
+          "mean": 5649.1,
+          "sd": 565.5,
+          "n": 5,
+          "normal_p05": 4718.94,
+          "one_sided_lpb95": 4328.48
+        },
+        "fTS_1_000_vs_p05": {
+          "sf_range": [
+            1.308,
+            2.417
+          ],
+          "sf_median_ma": 1.878,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": false
+        },
+        "fTS_1_000_vs_lpb95": {
+          "sf_range": [
+            1.2,
+            2.217
+          ],
+          "sf_median_ma": 1.723,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": false
+        },
+        "fTS_0_873_vs_p05": {
+          "sf_range": [
+            1.499,
+            2.769
+          ],
+          "sf_median_ma": 2.152,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": false
+        },
+        "fTS_0_873_vs_lpb95": {
+          "sf_range": [
+            1.375,
+            2.539
+          ],
+          "sf_median_ma": 1.974,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": false
+        }
+      },
+      "wren2001_slow_1pct_s_vs_ramp_enthesis": {
+        "capacity_mpa": {
+          "mean": 71.0,
+          "sd": 17.0,
+          "n": 13,
+          "normal_p05": 43.04,
+          "one_sided_lpb95": 39.56
+        },
+        "fTS_1_000_vs_p05": {
+          "sf_range": [
+            0.658,
+            1.215
+          ],
+          "sf_median_ma": 0.944,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_1_000_vs_lpb95": {
+          "sf_range": [
+            0.604,
+            1.117
+          ],
+          "sf_median_ma": 0.868,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_p05": {
+          "sf_range": [
+            0.753,
+            1.392
+          ],
+          "sf_median_ma": 1.081,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_lpb95": {
+          "sf_range": [
+            0.692,
+            1.279
+          ],
+          "sf_median_ma": 0.994,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        }
+      },
+      "wren2001_fast_10pct_s_vs_ballistic_enthesis": {
+        "capacity_mpa": {
+          "mean": 86.0,
+          "sd": 24.0,
+          "n": 12,
+          "normal_p05": 46.52,
+          "one_sided_lpb95": 41.14
+        },
+        "fTS_1_000_vs_p05": {
+          "sf_range": [
+            0.663,
+            1.225
+          ],
+          "sf_median_ma": 0.952,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_1_000_vs_lpb95": {
+          "sf_range": [
+            0.587,
+            1.083
+          ],
+          "sf_median_ma": 0.842,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_p05": {
+          "sf_range": [
+            0.76,
+            1.403
+          ],
+          "sf_median_ma": 1.091,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        },
+        "fTS_0_873_vs_lpb95": {
+          "sf_range": [
+            0.672,
+            1.241
+          ],
+          "sf_median_ma": 0.965,
+          "all_models_ge_1_50": false,
+          "all_models_below_1_50": true
+        }
+      }
+    },
+    "regional_mcsa_sensitivity_fTS_1_000": {
+      "mCSA_ratio_1.00": {
+        "implied_mcsa_mm2": 66.0,
+        "enthesis_stress_10pf_mpa_range": [
+          35.43,
+          65.46
+        ],
+        "sf_vs_wren_mean_71mpa_range": [
+          1.085,
+          2.004
+        ],
+        "sf_vs_wren_p05_43mpa_range": [
+          0.658,
+          1.215
+        ],
+        "sf_vs_exp0062_85mpa_range": [
+          1.299,
+          2.399
+        ],
+        "passes_sf_1_50_vs_mean_71": false
+      },
+      "mCSA_ratio_0.90": {
+        "implied_mcsa_mm2": 59.4,
+        "enthesis_stress_10pf_mpa_range": [
+          39.37,
+          72.73
+        ],
+        "sf_vs_wren_mean_71mpa_range": [
+          0.976,
+          1.804
+        ],
+        "sf_vs_wren_p05_43mpa_range": [
+          0.592,
+          1.093
+        ],
+        "sf_vs_exp0062_85mpa_range": [
+          1.169,
+          2.159
+        ],
+        "passes_sf_1_50_vs_mean_71": false
+      },
+      "mCSA_ratio_0.80": {
+        "implied_mcsa_mm2": 52.8,
+        "enthesis_stress_10pf_mpa_range": [
+          44.29,
+          81.82
+        ],
+        "sf_vs_wren_mean_71mpa_range": [
+          0.868,
+          1.603
+        ],
+        "sf_vs_wren_p05_43mpa_range": [
+          0.526,
+          0.972
+        ],
+        "sf_vs_exp0062_85mpa_range": [
+          1.039,
+          1.919
+        ],
+        "passes_sf_1_50_vs_mean_71": false
+      },
+      "mCSA_ratio_0.75": {
+        "implied_mcsa_mm2": 49.5,
+        "enthesis_stress_10pf_mpa_range": [
+          47.24,
+          87.28
+        ],
+        "sf_vs_wren_mean_71mpa_range": [
+          0.813,
+          1.503
+        ],
+        "sf_vs_wren_p05_43mpa_range": [
+          0.493,
+          0.911
+        ],
+        "sf_vs_exp0062_85mpa_range": [
+          0.974,
+          1.799
+        ],
+        "passes_sf_1_50_vs_mean_71": false
+      }
+    },
+    "deng_2026_morphology_mechanics_limits": {
+      "source_id": "SRC-0186",
+      "n": 18,
+      "free_at_length_pf20_mm": [
+        71.8,
+        16.0
+      ],
+      "free_at_csa_mm2": [
+        74.7,
+        13.0
+      ],
+      "csa_to_stiffness_r2": 0.277,
+      "csa_to_stiffness_p": 0.025,
+      "psf_h_to_stiffness_r2": 0.0001,
+      "psf_v_to_stiffness_r2": 0.01
+    },
+    "in_vivo_survival_not_lower_bound": {
+      "kharazi_2021_0deg_mvc_force_n": [
+        5523.0,
+        552.0
+      ],
+      "ruling": "In vivo non-rupture peak (5523 +- 552 N in a separate cohort) is an upper survival observation, not a lower failure bound or SF >= 1.50 guarantee for Kubo-Ishigaki's cohort or enthesis fatigue durability."
+    }
+  },
+  "track_b_non_destructive_criteria_audit": {
+    "independently_validated_adult_achilles_criterion_exists": false,
+    "patellar_strain_criterion_mersmann2023": {
+      "source_id": "SRC-0183",
+      "tendon_site": "Patellar tendon (NOT Achilles tendon)",
+      "population": "Adolescent athletes (age 15.0-15.2 yr; n=23 ASYM, n=14 SYM)",
+      "threshold_pct": 9.0,
+      "risk_ratio": 2.3,
+      "risk_ratio_ci95": [
+        1.1,
+        4.9
+      ],
+      "risk_ratio_p": 0.026,
+      "strain_cohen_d": 0.85,
+      "strain_p": 0.03,
+      "stiffness_cohen_d": -0.23,
+      "stiffness_p": 0.51,
+      "force_cohen_d": 0.18,
+      "force_p": 0.47
+    },
+    "adult_patellar_prescription_weidlich2024": {
+      "source_id": "SRC-0184",
+      "tendon_site": "Patellar tendon (NOT Achilles tendon)",
+      "population": "Adult male volleyball athletes (n=11 Con, n=10 Int, 9 months)",
+      "safe_band_pct": [
+        4.5,
+        9.0
+      ],
+      "psf_change_p_gt": 0.05
+    },
+    "strength_stiffness_meta_pang2026": {
+      "source_id": "SRC-0185",
+      "n_cohorts": 50,
+      "n_matched_units": 70,
+      "strength_gain_pct": 16.12,
+      "stiffness_gain_pct": 24.06,
+      "strict_max_strain_change_pct": -4.77,
+      "strict_max_strain_ci95_pct": [
+        -11.45,
+        2.42
+      ],
+      "strict_max_strain_p": 0.17,
+      "strict_max_strain_cohorts": 14,
+      "achilles_vs_patellar_interaction_lnrr": 0.0071,
+      "achilles_vs_patellar_interaction_ci95": [
+        -0.0951,
+        0.1092
+      ]
+    },
+    "imaging_2d_vs_3d_error_deng2025": {
+      "source_id": "SRC-0187",
+      "pf20_df20_3d_strain_pct": [
+        1.2,
+        0.3
+      ],
+      "pf20_df20_2d_strain_pct": [
+        -0.6,
+        0.9
+      ],
+      "paired_diff_p_lt": 0.001,
+      "offset_2mm_medial_error_mm": [
+        6.3,
+        8.0
+      ]
+    },
+    "achilles_tendinopathy_sr_weerkamp2026": {
+      "source_id": "SRC-0188",
+      "n_prospective_cohorts": 11,
+      "n_case_control": 8,
+      "utc_or_ci95": [
+        9.7,
+        1.007,
+        93.185
+      ],
+      "utc_n": 37,
+      "sonoelastography_rr_ci95": [
+        5.23,
+        1.34,
+        20.44
+      ],
+      "sonoelastography_n": 63,
+      "grade_evidence_imaging_biomech": "very_low",
+      "us_stiffness_associated": false
+    },
+    "provisional_kubo_strain_test": {
+      "caveat": "Mersmann 2023 >=9.0% risk threshold (RR=2.3 [1.1; 4.9]) is prospectively validated ONLY on the patellar tendon in adolescents, NOT on the adult human Achilles tendon; moreover Kubo-Ishigaki measured compound tendon+aponeurosis 2D displacement without resting L_0 or isolated free Achilles tendon strain.",
+      "kharazi_2021_in_vivo_reference": {
+        "mvc_elongation_mm": [
+          14.0,
+          2.5
+        ],
+        "implied_mvc_strain_pct": 7.9,
+        "implied_l0_mm": 177.1
+      },
+      "if_l0_calcaneus_mg_mtj_177_215mm": {
+        "at_0deg_ramp_mvc": {
+          "strain_cohort_mean_range_pct": [
+            10.09,
+            12.26
+          ],
+          "strain_midpoint_pct": 11.07,
+          "strain_plus1sd_upper_pct": 13.84,
+          "upper_bound_below_9pct": false,
+          "plus1sd_below_9pct": false
+        },
+        "transferred_10deg_pf_linear_bound": {
+          "strain_cohort_mean_range_pct": [
+            6.48,
+            11.42
+          ],
+          "strain_midpoint_pct": 8.43,
+          "strain_plus1sd_upper_pct": 12.9,
+          "upper_bound_below_9pct": false,
+          "plus1sd_below_9pct": false
+        },
+        "at_0deg_ballistic_mvc": {
+          "strain_cohort_mean_range_pct": [
+            7.44,
+            9.04
+          ],
+          "strain_midpoint_pct": 8.16,
+          "strain_plus1sd_upper_pct": 10.85,
+          "upper_bound_below_9pct": false,
+          "plus1sd_below_9pct": false
+        }
+      },
+      "if_l0_compound_fascicle_insertion_230_300mm": {
+        "at_0deg_ramp_mvc": {
+          "strain_cohort_mean_range_pct": [
+            7.23,
+            9.43
+          ],
+          "strain_midpoint_pct": 8.19,
+          "strain_plus1sd_upper_pct": 10.65,
+          "upper_bound_below_9pct": false,
+          "plus1sd_below_9pct": false
+        },
+        "transferred_10deg_pf_linear_bound": {
+          "strain_cohort_mean_range_pct": [
+            4.64,
+            8.79
+          ],
+          "strain_midpoint_pct": 6.23,
+          "strain_plus1sd_upper_pct": 9.93,
+          "upper_bound_below_9pct": true,
+          "plus1sd_below_9pct": false
+        }
+      }
+    }
+  },
+  "stage1_paths_summary": {
+    "ADAPT25": "STRENGTH_PASS_EXP0147 / TISSUE_DATA_BLOCKED_EXP0152_EXP0153 (Kubo-Ishigaki 2017 is the sole cohort clearing strength rate; fails both Track A capacity lower bounds and Track B non-destructive criteria/measurement identifiability, plus missing weeks 4 & 8 visits).",
+    "FORCE20": "STRENGTH_AND_TISSUE_HOLD_EXP0140_TO_EXP0152 (0 open human cohorts clear controlled lower 95% CI >= +20 pp at matched mass with pose-matched loaded tissue reserve)."
+  },
+  "decisive_missing_indicator": "1) Either a prospectively validated non-destructive adult human Achilles tendon safety criterion (linking individual 3D free-tendon strain epsilon_free and/or regional enthesis loading to clinical injury/structural failure incidence with calibrated sensitivity/specificity) measured longitudinally in the target pose (+10 deg PF and 0 deg) at weeks 0, 4, 8, and 12 alongside individual MRI/3D-US MA(theta), resting L_0, narrowest mCSA, and exposure-matched active control; 2) OR site- and age-matched human free Achilles tendon & calcaneal enthesis mechanical capacity lower bounds combined with individual MA(theta), regional mCSA, and intermediate-visit trajectories in the same participants.",
+  "resumption_condition": "Resume Stage 1 computational adjudication immediately upon receipt of either (a) participant-level longitudinal records with pose-matched strength, individual MA(theta), 3D free-tendon resting L_0 & maximal strain, regional mCSA, and weeks 0/4/8/12 visits under active control, OR (b) an externally validated prospective adult Achilles non-destructive criterion paired with raw Kubo-Ishigaki (or equivalent ADAPT25/FORCE20) participant-level measurements."
+}
