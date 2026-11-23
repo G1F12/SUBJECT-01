@@ -73,6 +73,35 @@ try:
         problems.append('CPE45 historical/threshold policy changed without validation')
 except Exception as exc: problems.append(f'CPE45 specification missing/invalid: {exc}')
 
+# Enforce pre-registered candidate CPE45 spec governance invariants (DEC-0056)
+cand_path = ROOT / 'research/targets/CPE45_CANDIDATE_FINAL_SPEC.json'
+if cand_path.is_file():
+    try:
+        cand = json.loads(
+            cand_path.read_text('utf-8'),
+            parse_constant=lambda x: (_ for _ in ()).throw(ValueError(f'non-RFC8259 constant: {x}')),
+        )
+        if cand.get('empirical_validation') is not False:
+            problems.append('CPE45 candidate spec must enforce empirical_validation=false')
+        if cand.get('status') != 'PREREGISTERED_CANDIDATE_NOT_EMPIRICALLY_VALIDATED':
+            problems.append('CPE45 candidate spec status must be PREREGISTERED_CANDIDATE_NOT_EMPIRICALLY_VALIDATED')
+        if cand.get('duration_s') != 2700.0:
+            problems.append('CPE45 candidate spec duration_s must be 2700.0')
+        tot = cand.get('intensity_schedule', {}).get('totals_over_2700s', {})
+        if abs((tot.get('total_effort_s', 0) + tot.get('total_recovery_s', 0)) - 2700.0) > 1e-6:
+            problems.append('CPE45 candidate spec effort+recovery != 2700 s')
+        th_lim = cand.get('candidate_success_thresholds', {}).get('thermoregulatory_limits', {})
+        if not (
+            th_lim.get('research_pass_ceiling_temperate_20C', 99) < th_lim.get('medical_abort_ceiling_C', 0)
+            and th_lim.get('research_pass_ceiling_warm_acclimatized_32C', 99) < th_lim.get('medical_abort_ceiling_C', 0)
+        ):
+            problems.append('CPE45 candidate spec must strictly separate research thermal ceiling from medical abort ceiling')
+        req = cand.get('sampling_and_sync_requirements', {})
+        if req.get('min_effort_hz', 0) < 100.0 or req.get('max_sync_offset_s', 0) <= 0 or req.get('min_cognitive_trials_per_window', 0) < 10:
+            problems.append('CPE45 candidate spec sampling/sync requirements missing or under-specified')
+    except Exception as exc:
+        problems.append(f'CPE45 candidate spec invalid: {exc}')
+
 # Enforce permanent data provenance gate
 try:
     from verify_data_provenance import audit_dataset_provenance_records, audit_registry_experiments, audit_validation_scripts
