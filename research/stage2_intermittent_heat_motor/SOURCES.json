@@ -1,0 +1,42 @@
+{
+  "experiment_id": "EXP-0157",
+  "data_subdir": "goal_stage2_new",
+  "files": {
+    "PMC13249198.xml": {
+      "source_id": "SRC-0202",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13249198.1/PMC13249198.1.xml",
+      "version": "PMC13249198.1 (PLOS ONE 2026, Heat stress psychophysiological & locomotor demands in SSGs, CC BY 4.0)",
+      "sha256": "75f2175081cb14398e7cc82eb34b253ea3feaa367f401a2a36442592245a6b69",
+      "bytes": 124796
+    },
+    "SSGs_Heat.xlsx": {
+      "source_id": "SRC-0202",
+      "url": "https://zenodo.org/api/records/17418102/files/SSGs_Heat.xlsx/content",
+      "version": "Zenodo 17418102 SSGs_Heat.xlsx (n=16 paired x 3 heat levels x 2v2/4v4 x 4 bouts, CC BY 4.0)",
+      "sha256": "736509a4c1ff42705441d434d26dc549c5c73f5d13919ffde4f4349928a86cd4",
+      "bytes": 89638
+    },
+    "PMC11369344.xml": {
+      "source_id": "SRC-0203",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11369344.1/PMC11369344.1.xml",
+      "version": "PMC11369344.1 (Malcolm et al. 2024, Eur J Sport Sci 24:1287, 90-min intermittent running in 33 C heat + cognition at 45 & 90 min, CC BY 4.0)",
+      "sha256": "4386f207dabf0f5ec3ceb1f3de43611e2e4fbfea3aea735d9895e469ad20b7d0",
+      "bytes": 163442
+    }
+  },
+  "malcolm_2024_con_native_arm": {
+    "n": 12,
+    "environment": "33 C / 50% RH",
+    "protocol_s": 5400,
+    "halftime_s": 2700,
+    "mean_tre_C": [37.44, 0.65],
+    "complex_stroop_rt_ms": {"pre": [873.0, 176.0], "ht_45min": [877.0, 180.0], "post_90min": [867.0, 220.0]},
+    "complex_stroop_acc_pct": {"pre": [98.3, 2.5], "ht_45min": [95.0, 6.4], "post_90min": [93.8, 6.4]},
+    "complex_vs_rt_ms": {"pre": [1234.0, 208.0], "ht_45min": [1230.0, 199.0], "post_90min": [1131.0, 204.0]},
+    "complex_vs_acc_pct": {"pre": [99.2, 1.8], "ht_45min": [98.9, 2.7], "post_90min": [97.2, 4.8]},
+    "sternberg_5item_rt_ms": {"pre": [662.0, 129.0], "post_90min": [711.0, 180.0]},
+    "sternberg_5item_acc_pct": {"pre": [98.7, 2.5], "post_90min": [96.9, 3.3]},
+    "rvip_rt_ms": {"pre": [511.0, 80.0], "post_90min": [509.0, 76.0]},
+    "rvip_acc_pct": {"pre": [57.0, 20.3], "post_90min": [58.0, 21.6]}
+  }
+}

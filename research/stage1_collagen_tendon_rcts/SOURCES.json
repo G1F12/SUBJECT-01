@@ -1,0 +1,80 @@
+{
+  "experiment_id": "EXP-0156",
+  "data_subdir": "goal_stage1_collagen",
+  "files": {
+    "balshaw_2025_am.pdf": {
+      "source_id": "SRC-0198",
+      "url": "https://api.figshare.com/v2/articles/28715441",
+      "version": "Balshaw et al. (2025) Loughborough Author Manuscript PDF on Figshare 28715441 (15-wk CP vs PLA RT RCT, n=39)",
+      "sha256": "ab8ab92c8c91cef3b88e45258a4497621455d4aa47f56f0ecab5ff888a4fb8e5",
+      "bytes": 573558
+    },
+    "PMC11917387.xml": {
+      "source_id": "SRC-0199",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11917387.1/PMC11917387.1.xml",
+      "version": "PMC11917387.1 (Lee et al. 2025, Eur J Sport Sci 25:e12281, 12-wk HC vs PLA RT RCT, n=20, CC BY 4.0)",
+      "sha256": "23857cc3a76a2e86b1a204c050cc942d64b7896784f3bd312f40de9b288bb69d",
+      "bytes": 147862
+    },
+    "PMC9910607.xml": {
+      "source_id": "SRC-0200",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9910607.1/PMC9910607.1.xml",
+      "version": "PMC9910607.1 (Lee et al. 2023, Front Physiol 14:1089971, 10-wk COL vs PLA RT RCT, n=17, CC BY 4.0)",
+      "sha256": "7545bdf76684f35fda73ab380c209b048fad312874c6000fe8b45a4348358350",
+      "bytes": 136618
+    },
+    "PMC9768072.xml": {
+      "source_id": "SRC-0201",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9768072.1/PMC9768072.1.xml",
+      "version": "PMC9768072.1 (Radovanovic et al. 2022, Sports Med Open 8:149, 12-wk High-Load vs Alfredson vs Passive RCT, n=44, CC BY 4.0)",
+      "sha256": "e5b1cc13488ccbc3dfcfa28e4c6ed8e1328fed7b225ff5681f0282df245f5166",
+      "bytes": 182404
+    }
+  },
+  "balshaw_2025": {
+    "n_cp": 19,
+    "n_pla": 20,
+    "weeks": 15,
+    "ke_mvt_pct_mean_sd": {"CP": [21.4, 7.8], "PLA": [21.7, 10.7], "gxt_p_range": [0.596, 0.671]},
+    "kf_mvt_pct_mean_sd": {"CP": [23.3, 15.4], "PLA": [21.3, 17.6], "gxt_p_range": [0.596, 0.671]},
+    "body_mass_kg_pre_post": {"CP": [[73.3, 12.0], [75.4, 12.0]], "PLA": [[75.8, 11.5], [76.7, 10.0]], "gxt_p": 0.155},
+    "pt_mean_csa_pct": {"CP": [1.1, 3.2], "PLA": [1.7, 3.7], "gxt_p_min": 0.365},
+    "vl_aponeurosis_area_pct": {"CP": [10.0, 8.5], "PLA": [9.4, 10.0], "gxt_p_min": 0.697},
+    "pt_stiffness_pct": {"CP": [17.3, 23.5], "PLA": [20.9, 22.0], "gxt_p": 0.613},
+    "pt_strain_80pct_pre_mvt_pct": {"CP": [[8.5, 1.5], [7.5, 1.2]], "PLA": [[8.4, 1.7], [7.6, 1.1]], "gxt_p": 0.775}
+  },
+  "lee_2025": {
+    "n_col": 9,
+    "n_pla": 11,
+    "weeks": 12,
+    "ke_mvt_nm": {"COL": [[213.0, 62.0], [233.0, 44.0]], "PLA": [[232.0, 56.0], [247.0, 46.0]], "gxt_p": 0.754},
+    "ten_rm_kg": {"COL": [[72.0, 14.0], [109.0, 19.0]], "PLA": [[67.0, 16.0], [97.0, 18.0]], "gxt_p": 0.116},
+    "ke_prtd_nms": {"COL": [[1038.0, 582.0], [1211.7, 577.0]], "PLA": [[990.0, 479.0], [1215.0, 404.0]], "gxt_p": 0.637},
+    "cmj_power_w": {"COL": [[3065.0, 499.0], [3221.0, 563.0]], "PLA": [[3272.0, 626.0], [3382.0, 689.0]], "gxt_p": 0.422},
+    "pt_stiffness_n_mm": {"COL": [[1174.0, 294.0], [1836.0, 518.0]], "PLA": [[1304.0, 622.0], [1551.0, 612.0]], "gxt_p": 0.009},
+    "pt_modulus_gpa": {"COL": [[0.52, 0.14], [0.76, 0.17]], "PLA": [[0.53, 0.29], [0.62, 0.29]], "gxt_p": 0.018},
+    "pt_csa_mm2": {"COL": [[108.0, 13.0], [115.0, 10.0]], "PLA": [[117.0, 6.0], [117.0, 6.0]], "gxt_p": 0.027},
+    "pt_strain_pct": {"COL": [[11.3, 3.4], [9.1, 2.3]], "PLA": [[10.7, 4.0], [9.9, 2.6]], "gxt_p": 0.082}
+  },
+  "lee_2023": {
+    "n_col": 8,
+    "n_pla": 9,
+    "weeks": 10,
+    "iso_ke_mvc_nm": {"COL": [[175.0, 45.0], [192.0, 31.0], [16.8, 28.1]], "PLA": [[182.0, 50.0], [184.0, 29.6], [2.2, 31.3]], "gxt_p": 0.325},
+    "con_ke_mvc_nm": {"COL": [[138.0, 31.0], [139.0, 30.0], [1.1, 12.3]], "PLA": [[132.0, 29.0], [141.0, 22.0], [9.6, 26.1]], "gxt_p": 0.849},
+    "pt_strain_pct": {"COL": [[8.9, 3.0], [7.3, 1.1]], "PLA": [[8.0, 1.5], [8.1, 2.5]], "gxt_p": 0.133},
+    "pt_csa_mm2": {"COL": [[76.9, 7.1], [77.1, 7.2]], "PLA": [[77.7, 8.1], [77.7, 8.2]], "gxt_p": 0.084}
+  },
+  "radovanovic_2022": {
+    "n_high_load": 15,
+    "n_alfredson": 15,
+    "n_passive": 14,
+    "weeks": 12,
+    "hl_pf_mvc_pct_mean_sd": [7.2, 9.9],
+    "hl_at_stiffness_pct_mean_sd": [20.1, 20.5],
+    "hl_at_csa_pct_mean_sd": [8.98, 5.8],
+    "hl_at_max_strain_pct_mean_sd": [-12.4, 10.3],
+    "cmj_cm_hl_pre_post": [[27.39, 4.5], [25.9, 4.0]],
+    "cmj_overall_change_cm": [-0.63, 4.07, 0.005]
+  }
+}

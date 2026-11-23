@@ -1,0 +1,318 @@
+{
+  "experiment_id": "EXP-0156",
+  "stage1_verdict": "HOLD",
+  "stage1_blocker_status": "DATA_BLOCKED",
+  "scientific_criterion_closed": false,
+  "n_cohorts_tested": 4,
+  "n_participants_total": 120,
+  "cohorts_passing_stage1": 0,
+  "verified_sources": {
+    "balshaw_2025_am.pdf": {
+      "source_id": "SRC-0198",
+      "bytes": 573558,
+      "sha256": "ab8ab92c8c91cef3b88e45258a4497621455d4aa47f56f0ecab5ff888a4fb8e5"
+    },
+    "PMC11917387.xml": {
+      "source_id": "SRC-0199",
+      "bytes": 147862,
+      "sha256": "23857cc3a76a2e86b1a204c050cc942d64b7896784f3bd312f40de9b288bb69d"
+    },
+    "PMC9910607.xml": {
+      "source_id": "SRC-0200",
+      "bytes": 136618,
+      "sha256": "7545bdf76684f35fda73ab380c209b048fad312874c6000fe8b45a4348358350"
+    },
+    "PMC9768072.xml": {
+      "source_id": "SRC-0201",
+      "bytes": 182404,
+      "sha256": "e5b1cc13488ccbc3dfcfa28e4c6ed8e1328fed7b225ff5681f0282df245f5166"
+    }
+  },
+  "trials": {
+    "balshaw_2025_cp_patellar_15wk": {
+      "source_id": "SRC-0198",
+      "cohort": "Balshaw et al. 2025 (n=39 completers: 19 CP vs 20 PLA, 15 wk lower-body RT, 3T MRI)",
+      "ke_mvt_adapt25": {
+        "rate_I_pp_per_wk": 1.427,
+        "rate_C_pp_per_wk": 1.447,
+        "adapt25_contrast_pp_per_wk": -0.382,
+        "ci95_pp_per_wk": [
+          -0.852,
+          0.089
+        ],
+        "passes_adapt25": false,
+        "published_gxt_p_range": [
+          0.596,
+          0.671
+        ]
+      },
+      "kf_mvt_adapt25": {
+        "rate_I_pp_per_wk": 1.553,
+        "rate_C_pp_per_wk": 1.42,
+        "adapt25_contrast_pp_per_wk": -0.222,
+        "ci95_pp_per_wk": [
+          -1.04,
+          0.596
+        ],
+        "passes_adapt25": false,
+        "published_gxt_p_range": [
+          0.596,
+          0.671
+        ]
+      },
+      "body_mass_gain_pct": {
+        "CP": 2.86,
+        "PLA": 1.19,
+        "note": "Both groups gained body mass significantly (CP p<0.001, PLA p=0.016); no untreated control arm exists for FORCE20."
+      },
+      "tendon_outcomes": {
+        "pt_mean_csa_pct": {
+          "CP": [
+            1.1,
+            3.2
+          ],
+          "PLA": [
+            1.7,
+            3.7
+          ],
+          "gxt_p_min": 0.365
+        },
+        "vl_aponeurosis_area_pct": {
+          "CP": [
+            10.0,
+            8.5
+          ],
+          "PLA": [
+            9.4,
+            10.0
+          ],
+          "gxt_p_min": 0.697
+        },
+        "pt_stiffness_pct": {
+          "CP": [
+            17.3,
+            23.5
+          ],
+          "PLA": [
+            20.9,
+            22.0
+          ],
+          "gxt_p": 0.613
+        },
+        "pt_strain_at_80pct_pre_mvt": {
+          "CP": [
+            [
+              8.5,
+              1.5
+            ],
+            [
+              7.5,
+              1.2
+            ]
+          ],
+          "PLA": [
+            [
+              8.4,
+              1.7
+            ],
+            [
+              7.6,
+              1.1
+            ]
+          ],
+          "gxt_p": 0.775
+        },
+        "linear_extrapolated_strain_at_100pct_post_mvt_pct": 11.38,
+        "strain_limitation": "Strain measured only at fixed 80% pre-RT MVT (8.5->7.5%), NOT at the new post-RT 100% MVT (+21.4%); linear scaling yields ~11.4% (>9.0% patellar threshold)."
+      },
+      "passes_adapt25": false,
+      "passes_force20": false,
+      "verdict": "HOLD (strictly negative ADAPT25 point estimate on KE MVT -0.382 pp/wk [-0.852; +0.089], GxT p>=0.596; no CP advantage on 3T MRI PT CSA, stiffness, or strain; no untreated control arm and +2.9% mass gain disqualify FORCE20)."
+    },
+    "lee_2025_hc_patellar_12wk": {
+      "source_id": "SRC-0199",
+      "cohort": "Lee et al. 2025 (PMC11917387, n=20: 9 COL vs 11 PLA, 12 wk RT, middle-aged adults)",
+      "ke_mvt_adapt25_r05": {
+        "rate_I_pp_per_wk": 0.782,
+        "rate_C_pp_per_wk": 0.539,
+        "adapt25_contrast_pp_per_wk": 0.109,
+        "ci95_pp_per_wk": [
+          -2.002,
+          2.22
+        ],
+        "passes_adapt25": false,
+        "gain_I_pct": 9.39,
+        "gain_C_pct": 6.47
+      },
+      "ke_mvt_adapt25_r09": {
+        "rate_I_pp_per_wk": 0.782,
+        "rate_C_pp_per_wk": 0.539,
+        "adapt25_contrast_pp_per_wk": 0.109,
+        "ci95_pp_per_wk": [
+          -0.964,
+          1.182
+        ],
+        "passes_adapt25": false,
+        "gain_I_pct": 9.39,
+        "gain_C_pct": 6.47
+      },
+      "ke_mvt_published_gxt_p": 0.754,
+      "ten_rm_submax_adapt25_r09": {
+        "rate_I_pp_per_wk": 4.282,
+        "rate_C_pp_per_wk": 3.731,
+        "adapt25_contrast_pp_per_wk": -0.382,
+        "ci95_pp_per_wk": [
+          -1.436,
+          0.672
+        ],
+        "passes_adapt25": false,
+        "gain_I_pct": 51.39,
+        "gain_C_pct": 44.78,
+        "published_gxt_p": 0.116,
+        "note": "Submaximal 10-RM, not 1RM/MVC; ADAPT25 point estimate is still negative (-0.383 pp/wk)."
+      },
+      "explosive_and_power_gxt_p": {
+        "ke_prtd_p": 0.637,
+        "cmj_power_p": 0.422
+      },
+      "tendon_remodeling_proven": {
+        "pt_stiffness_gain_pct": {
+          "COL": 56.39,
+          "PLA": 18.94,
+          "gxt_p": 0.009
+        },
+        "pt_modulus_gxt_p": 0.018,
+        "pt_csa_gain_pct": {
+          "COL": 6.48,
+          "PLA": 0.0,
+          "gxt_p": 0.027
+        },
+        "pt_max_strain_pre_post_pct": {
+          "COL": [
+            [
+              11.3,
+              3.4
+            ],
+            [
+              9.1,
+              2.3
+            ]
+          ],
+          "PLA": [
+            [
+              10.7,
+              4.0
+            ],
+            [
+              9.9,
+              2.6
+            ]
+          ],
+          "gxt_p": 0.082
+        }
+      },
+      "passes_adapt25": false,
+      "passes_force20": false,
+      "verdict": "HOLD — MECHANISTIC DECOUPLING PROVEN: Collagen significantly accelerates patellar tendon stiffness (+56.4% vs +18.9%, p=0.009), modulus (p=0.018), and CSA (+6.5% vs 0.0%, p=0.027) while reducing strain 11.3->9.1%, YET yields no statistically detectable strength/power acceleration (KE MVT GxT p=0.754, pRTD p=0.637, CMJ power p=0.422; wide CIs span zero)."
+    },
+    "lee_2023_col_patellar_10wk": {
+      "source_id": "SRC-0200",
+      "cohort": "Lee et al. 2023 (PMC9910607, n=17: 8 COL vs 9 PLA, 10 wk in-season RT, female soccer players)",
+      "iso_ke_mvc_adapt25": {
+        "rate_I_pp_per_wk": 0.96,
+        "rate_C_pp_per_wk": 0.121,
+        "adapt25_contrast_pp_per_wk": 0.809,
+        "ci95_pp_per_wk": [
+          -1.14,
+          2.757
+        ],
+        "passes_adapt25": false,
+        "published_gxt_p": 0.325
+      },
+      "con_ke_mvc_adapt25": {
+        "rate_I_pp_per_wk": 0.08,
+        "rate_C_pp_per_wk": 0.727,
+        "adapt25_contrast_pp_per_wk": -0.829,
+        "ci95_pp_per_wk": [
+          -2.709,
+          1.051
+        ],
+        "passes_adapt25": false,
+        "published_gxt_p": 0.849
+      },
+      "pt_strain_pre_post_pct": {
+        "COL": [
+          [
+            8.9,
+            3.0
+          ],
+          [
+            7.3,
+            1.1
+          ]
+        ],
+        "PLA": [
+          [
+            8.0,
+            1.5
+          ],
+          [
+            8.1,
+            2.5
+          ]
+        ],
+        "gxt_p": 0.133
+      },
+      "passes_adapt25": false,
+      "passes_force20": false,
+      "verdict": "HOLD (PT strain stays <9.0% in COL [8.9->7.3%], but Iso KE MVC ADAPT25 CI spans zero [-1.140; +2.757] pp/wk with GxT p=0.325 and near-zero PLA rate +0.121 pp/wk; Con KE MVC is negative -0.829 pp/wk)."
+    },
+    "radovanovic_2022_hl_achilles_12wk": {
+      "source_id": "SRC-0201",
+      "cohort": "Radovanovic et al. 2022 (PMC9768072, n=44: 15 High-Load vs 15 Alfredson vs 14 Passive, 12 wk Achilles tendinopathy RCT)",
+      "high_load_pf_mvc_gain_pct": {
+        "mean": 7.2,
+        "sd": 9.9,
+        "ci95": [
+          1.72,
+          12.68
+        ]
+      },
+      "high_load_tendon_remodeling": {
+        "at_stiffness_pct": [
+          20.1,
+          20.5
+        ],
+        "at_csa_pct": [
+          8.98,
+          5.8
+        ],
+        "at_max_strain_pct": [
+          -12.4,
+          10.3
+        ]
+      },
+      "cmj_tradeoff": {
+        "hl_pre_post_cm": [
+          [
+            27.39,
+            4.5
+          ],
+          [
+            25.9,
+            4.0
+          ]
+        ],
+        "overall_change_cm_sd_p": [
+          -0.63,
+          4.07,
+          0.005
+        ]
+      },
+      "passes_adapt25": false,
+      "passes_force20": false,
+      "verdict": "HOLD (strain-targeted high-loading genuinely increases Achilles CSA +8.98%, stiffness +20.1%, and lowers max strain -12.4% p=0.001, YET PF MVC rises only +7.2% [1.72; 12.68]% — far below FORCE20 — and explosive CMJ height decreases -0.63 cm p=0.005; tendinopathic clinical cohort)."
+    }
+  },
+  "summary_ruling": "Testing a new internal biological mechanism — hydrolysed/bioactive collagen peptides + heavy RT across 3 double-blind RCTs on the patellar tendon (Balshaw 2025 n=39, Lee 2025 n=20, Lee 2023 n=17) plus strain-targeted Achilles loading (Radovanovic 2022 n=44) — yields 0/4 cohorts closing Stage 1. Crucially, Lee 2025 and Radovanovic 2022 establish a mechanistic decoupling: targeted biological/mechanical interventions CAN significantly accelerate tendon matrix remodeling (stiffness +20..+56%, CSA +6.5..+9.0%, strain reduction) WITHOUT producing ADAPT25 or FORCE20 maximal strength superiority (KE MVT GxT p=0.754 in Lee 2025, p>=0.596 / ADAPT25=-0.382 pp/wk in Balshaw 2025, PF MVC +7.2% with CMJ decline in Radovanovic 2022). Stage 1 remains HOLD / DATA_BLOCKED."
+}

@@ -4479,14 +4479,14 @@
   {
     "date": "2026-11-23",
     "id": "EXP-0155",
-    "name": "Stage 2 multi-channel CPE45 expansion (spatial anchor in meters + 4-channel heat HA) and Stage 3 within-person compatibility probe",
+    "name": "Stage 2 multi-channel CPE45 expansion and Stage 3 within-person probe (v2 independent statistical audit & corrigendum)",
     "status": "completed",
     "sources": [
       "SRC-0195",
       "SRC-0196",
       "SRC-0197"
     ],
-    "design": "Three individual-level human dataset analyses with deterministic 10,000-draw bootstrap CIs: (1) DUO-GAIT (n=16 paired x 4 conditions) spatial coordination anchor in meters replacing UNASSESSED_NO_HUMAN_ANCHOR; (2) Goepp 2026 (n=20, 10 BFR vs 10 SHAM, 40 C, 1260 s) 4-channel heat acclimation screening; (3) Agostinelli 2025 (n=33, 35 C, 1124 s) within-person bivariate, median-split, and multiple OLS (controlling VO2max and Sex) compatibility probe linking mass-normalized maximal strength to tactical speed, maxCT, lactate, and cognitive errors.",
+    "design": "Three individual-level human dataset analyses with v2 independent statistical audit: (1) DUO-GAIT (n=16 paired x 4 conditions) 2x2 RM decomposition (Fatigue, Dual-Task, Interaction) + Wilcoxon + sub_18 outlier/log sensitivity; (2) Goepp 2026 (n=20: 10 BFR vs 10 SHAM + CTRL n=25 SART test-retest) separating pure SHAM HA from baseline-adjusted ANCOVA BFR with precision caveats; (3) Agostinelli 2025 (n=33, 35 C) full robustness audit (VIF multicollinearity, Cook's D outliers incl. ID=17=55 errors, covariate specs M0..M4, Huber robust regression, LOOCV, and explicit 95% non-zero-harm bounds).",
     "model": "research/stage2_multichannel_and_compat/run.py",
     "protocol": "research/stage2_multichannel_and_compat/PROTOCOL.md",
     "inputs": "research/stage2_multichannel_and_compat/SOURCES.json",
@@ -4504,5 +4504,63 @@
       ]
     },
     "limits": "Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED: DUO-GAIT (~360 s), Goepp (1260 s), and Agostinelli (~1124 s, cross-sectional) do not reach 2700 s with full joint CPE45 + post45 + longitudinal Stage 1 strength/tendon tracking; canonical CPE45.json remains unchanged."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0156",
+    "name": "Stage 1 new internal mechanism: collagen-peptide + RT patellar tendon RCTs and high-loading Achilles RCT",
+    "status": "completed",
+    "sources": [
+      "SRC-0198",
+      "SRC-0199",
+      "SRC-0200",
+      "SRC-0201"
+    ],
+    "design": "Audit 4 new OA RCTs (N=120 total, zero overlap with prior registry) testing hydrolysed/bioactive collagen peptides + heavy RT on the patellar tendon (Balshaw 2025 n=39, Lee 2025 n=20, Lee 2023 n=17) plus high-loading strain-targeted Achilles RT (Radovanovic 2022 n=44) against canonical ADAPT25/FORCE20 and tendon remodeling/strain safety.",
+    "model": "research/stage1_collagen_tendon_rcts/run.py",
+    "protocol": "research/stage1_collagen_tendon_rcts/PROTOCOL.md",
+    "inputs": "research/stage1_collagen_tendon_rcts/SOURCES.json",
+    "report": "research/stage1_collagen_tendon_rcts/REPORT.md",
+    "outputs": [
+      "research/stage1_collagen_tendon_rcts/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage1_collagen_tendon_rcts/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0152"
+      ],
+      "negative_results": [
+        "NEG-0136"
+      ]
+    },
+    "limits": "Group-level published RCT outcomes (no raw participant-level CSVs released); proves mechanistic decoupling between tendon matrix acceleration and maximal strength superiority while Stage 1 remains HOLD / DATA_BLOCKED."
+  },
+  {
+    "date": "2026-11-23",
+    "id": "EXP-0157",
+    "name": "Stage 2 multi-bout intermittent heat stress (SSGs_Heat n=16 x 3 heat levels) and 45/90-min intermittent heat cognition (Malcolm 2024)",
+    "status": "completed",
+    "sources": [
+      "SRC-0202",
+      "SRC-0203"
+    ],
+    "design": "Individual-level paired repeated-measures audit of SSGs_Heat (Zenodo 17418102, n=16 x 3 heat levels <23.9/24-27.9/>28 C x 2v2 840 s & 4v4 1680 s x 4 bouts: Core Temp ceiling >=39.0 C, bout-by-bout locomotor distance in meters, Heat x Bout pacing interaction, HR %max, and pass/lost-ball technical motor accuracy) plus native uncooled CON arm audit of Malcolm 2024 (n=12, 33 C, 45-min and 90-min intermittent running cognition). Explicitly documents screening exclusion of OSF 84fru and Zenodo 19240351.",
+    "model": "research/stage2_intermittent_heat_motor/run.py",
+    "protocol": "research/stage2_intermittent_heat_motor/PROTOCOL.md",
+    "inputs": "research/stage2_intermittent_heat_motor/SOURCES.json",
+    "report": "research/stage2_intermittent_heat_motor/REPORT.md",
+    "outputs": [
+      "research/stage2_intermittent_heat_motor/RESULTS.json"
+    ],
+    "reproduction_command": "python research/stage2_intermittent_heat_motor/run.py --data-root tmp --check",
+    "results": {
+      "findings": [
+        "FND-0153"
+      ],
+      "negative_results": [
+        "NEG-0137"
+      ]
+    },
+    "limits": "SSGs_Heat is <=1680 s (<2700 s) in adolescents without calibrated mechanical power or post45; Malcolm 2024 reports group means only without mechanical power or post45. Stage 2 remains HOLD / DATA_BLOCKED."
   }
 ]

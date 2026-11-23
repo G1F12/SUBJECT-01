@@ -3116,5 +3116,77 @@
     "calibration_review": {
       "scope": "Individual adult dataset (n=33, 35 C / 50% RH, 4-round loaded deadlift/carry + cognition, 1124+-263 s) linking Squat/Bench/Deadlift/Weight, VJ_max, VO2max, TotalTime, maxCT, blood lactate, and Total_errors."
     }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0198",
+    "name": "Balshaw et al. (2025) Specific bioactive collagen peptides on patellar tendon remodeling during 15 wk RT RCT (Figshare 28715441)",
+    "url": "https://figshare.com/articles/journal_contribution/28715441",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_collagen_tendon_rcts/REPORT.md",
+    "calibration_review": {
+      "scope": "15-wk double-blind RCT (n=39 completers: 19 CP vs 20 PLA), 3T MRI patellar CSA (+1.1 vs +1.7%), VL aponeurosis (+10.0 vs +9.4%), PT stiffness (+17.3 vs +20.9%), strain at 80% pre-MVT (8.5->7.5%), and KE/KF MVT (+21.4 vs +21.7%, GxT p>=0.596)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0199",
+    "name": "Lee et al. (2025) Hydrolysed collagen supplementation enhances patellar tendon adaptations to 12 wk RT RCT (PMC11917387)",
+    "url": "https://doi.org/10.1002/ejsc.12281",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_collagen_tendon_rcts/REPORT.md",
+    "calibration_review": {
+      "scope": "12-wk double-blind RCT (n=20: 9 COL vs 11 PLA) in middle-aged adults: accelerates PT stiffness (+56.4 vs +18.9%, p=0.009), modulus (p=0.018), and CSA (+6.5 vs 0%, p=0.027) while KE MVT (p=0.754), pRTD (p=0.637), and CMJ power (p=0.422) show no significant superiority."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0200",
+    "name": "Lee et al. (2023) Collagen supplementation augments patellar tendon properties in female soccer players RCT (PMC9910607)",
+    "url": "https://doi.org/10.3389/fphys.2023.1089971",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_collagen_tendon_rcts/REPORT.md",
+    "calibration_review": {
+      "scope": "10-wk pair-matched RCT (n=17: 8 COL vs 9 PLA): PT strain 8.9->7.3% in COL vs 8.0->8.1% in PLA (p=0.133), Iso KE MVC +16.8+-28.1 vs +2.2+-31.3 Nm (GxT p=0.325), Con KE MVC p=0.849."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0201",
+    "name": "Radovanovic et al. (2022) Evidence-based high-loading Achilles tendon exercise 12-wk 3-arm RCT (PMC9768072)",
+    "url": "https://doi.org/10.1186/s40798-022-00545-5",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage1_collagen_tendon_rcts/REPORT.md",
+    "calibration_review": {
+      "scope": "12-wk 3-arm Achilles tendinopathy RCT (n=44: 15 High-Load, 15 Alfredson, 14 Passive): High-Load increases AT CSA (+8.98%, p<0.001) and stiffness (+20.1%, p=0.049) and cuts max strain (-12.4%, p=0.001), while PF MVC rises only +7.2+-9.9% and CMJ height decreases (-0.63 cm, p=0.005)."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0202",
+    "name": "PLOS ONE (2026) Heat stress psychophysiological responses, locomotor demands, and technical skills in SSGs (PMC13249198, Zenodo 17418102)",
+    "url": "https://doi.org/10.1371/journal.pone.0351116",
+    "type": "open_dataset",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_intermittent_heat_motor/REPORT.md",
+    "calibration_review": {
+      "scope": "Individual paired dataset (SSGs_Heat.xlsx, n=16 x 3 heat levels <23.9 / 24-27.9 / >28 C x 2v2 [840 s] and 4v4 [1680 s] x 4 bouts) with pre/post Core Temp, bout-by-bout distance in meters, HR %max, RPE, and pass/shot/lost-ball technical motor accuracy."
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "id": "SRC-0203",
+    "name": "Malcolm et al. (2024) Cognitive function at 45-min half-time and 90-min intermittent running in 33 C heat (PMC11369344)",
+    "url": "https://doi.org/10.1002/ejsc.12178",
+    "type": "open_access_article",
+    "verification": "metadata_and_scope_checked_only",
+    "audit_report": "research/stage2_intermittent_heat_motor/REPORT.md",
+    "calibration_review": {
+      "scope": "Randomized crossover (n=12 men, 90-min intermittent running at 33 C / 50% RH); native uncooled CON arm audited at exact 45-min (2700 s) half-time and 90-min full-time across Complex Stroop, Visual Search, Sternberg 5-item, and RVIP."
+    }
   }
 ]

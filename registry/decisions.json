@@ -685,7 +685,7 @@
     "id": "DEC-0052",
     "title": "Update Stage 2 spatial anchor in meters and record Stage 3 within-person compatibility constraints while maintaining HOLD / DATA_BLOCKED",
     "decision": "Keep Stage 2 (CPE45) and Stage 3 on HOLD / DATA_BLOCKED and preserve canonical CPE45.json (success_thresholds=null); adopt DUO-GAIT (n=16) as a partial provisional human anchor in meters for working spatial coordination assumptions and record Agostinelli 2025 (n=33) empirical strength-vs-VO2max thermal/lactate constraints for Stage 3.",
-    "rationale": "EXP-0155 replaces UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination in meters and provides direct within-person Stage 3 compatibility bounds (RelStr independently accelerates loaded work without thermal/cognitive penalty, but VO2max governs maxCT and lactate rises), yet no open cohort reaches 2700 s with all joint CPE45 + post45 channels or links them to longitudinal Stage 1 strength/tendon safety.",
+    "rationale": "EXP-0155 v2 (independent statistical audit & corrigendum) replaces UNASSESSED_NO_HUMAN_ANCHOR for spatial coordination in meters with an additive 2x2 RM decomposition (DUO-GAIT n=16), separates pure SHAM HA from underpowered ANCOVA BFR contrasts in Goepp 2026 (retracting overstated MVC and zero-BFR claims), and retracts overstated 'no thermal/cognitive harm' claims in Agostinelli 2025 after Cook's D, VIF, Huber, and LOOCV checks confirm only robust VO2max thermal prediction (R2_LOOCV=0.409) and covariate-sensitive RelStr speed association. Stage 2 and Stage 3 remain HOLD / DATA_BLOCKED.",
     "amends": [
       "DEC-0048"
     ],
@@ -698,6 +698,46 @@
     ],
     "negative_results": [
       "NEG-0135"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0053",
+    "title": "Maintain Stage 1 HOLD / DATA_BLOCKED after testing collagen-peptide patellar tendon RCTs and high-load Achilles RCT",
+    "decision": "Keep Stage 1 on HOLD / DATA_BLOCKED after 0/4 new tendon-remodeling RCTs (N=120) satisfy ADAPT25 or FORCE20 simultaneously with validated tendon safety.",
+    "rationale": "EXP-0156 tests a new internal nutritional/biological mechanism (collagen peptides + heavy RT on patellar tendon with validated <9.0% strain criterion) across 3 double-blind RCTs plus high-loading Achilles RT and proves mechanistic decoupling: accelerating tendon matrix stiffness/CSA does not yield ADAPT25 or FORCE20 strength superiority.",
+    "amends": [
+      "DEC-0051"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0156"
+    ],
+    "findings": [
+      "FND-0152"
+    ],
+    "negative_results": [
+      "NEG-0136"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "id": "DEC-0054",
+    "title": "Maintain Stage 2 HOLD / DATA_BLOCKED after multi-bout intermittent heat-stress motor audit (SSGs_Heat) and 45-min heat cognition audit (Malcolm 2024)",
+    "decision": "Keep Stage 2 (CPE45) on HOLD / DATA_BLOCKED and preserve canonical CPE45.json (success_thresholds=null); record empirical >28 C thermal ceiling breach (>=39.0 C in 13-15/16 within 14-28 min) and -4.28 pp concurrent motor accuracy loss as working design constraints.",
+    "rationale": "EXP-0157 adds paired individual multi-bout intermittent heat-stress data (Zenodo 17418102, n=16) and exact 45-min half-time heat cognition (Malcolm 2024, n=12), while screening out OSF 84fru and Zenodo 19240351; 0 open human datasets yet unite full 2700-s alternating load, power, spatial meters, concurrent cognition, thermoregulation, and post45 recovery.",
+    "amends": [
+      "DEC-0052"
+    ],
+    "supersedes": [],
+    "experiments": [
+      "EXP-0157"
+    ],
+    "findings": [
+      "FND-0153"
+    ],
+    "negative_results": [
+      "NEG-0137"
     ]
   }
 ]

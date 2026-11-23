@@ -1,0 +1,572 @@
+{
+  "experiment_id": "EXP-0157",
+  "stage2_verdict": "HOLD",
+  "stage2_blocker_status": "DATA_BLOCKED",
+  "scientific_criterion_closed": false,
+  "canonical_cpe45_unchanged": true,
+  "excluded_screened_datasets": [
+    "OSF 84fru (PMC13118115, 2026): n=8 valid recruit firefighters with Core/Skin Temp across 7 PPE ON/OFF transitions only; excluded from quantitative CPE45 battery for lacking external work/power, velocity/distance, cognition, and post45 neuromuscular channels.",
+    "Zenodo 19240351 (PMC13395447, 2026): incremental cardiorespiratory step test in volunteer firefighters; excluded as incremental VO2max profiling rather than 2700-s intermittent CPE45 + post45."
+  ],
+  "verified_sources": {
+    "PMC13249198.xml": {
+      "source_id": "SRC-0202",
+      "bytes": 124796,
+      "sha256": "75f2175081cb14398e7cc82eb34b253ea3feaa367f401a2a36442592245a6b69"
+    },
+    "SSGs_Heat.xlsx": {
+      "source_id": "SRC-0202",
+      "bytes": 89638,
+      "sha256": "736509a4c1ff42705441d434d26dc549c5c73f5d13919ffde4f4349928a86cd4"
+    },
+    "PMC11369344.xml": {
+      "source_id": "SRC-0203",
+      "bytes": 163442,
+      "sha256": "4386f207dabf0f5ec3ceb1f3de43611e2e4fbfea3aea735d9895e469ad20b7d0"
+    }
+  },
+  "track1_ssgs_heat_individual": {
+    "source_id": "SRC-0202",
+    "dataset": "SSGs_Heat (PMC13249198, Zenodo 17418102, PLOS ONE 2026)",
+    "n_paired": 16,
+    "formats": {
+      "2v2_840s": {
+        "by_heat_level": {
+          "LEH_lt23_9C": {
+            "pre_tc_mean_sd_C": [
+              36.781,
+              0.295
+            ],
+            "post_tc_mean_sd_C": [
+              38.356,
+              0.213
+            ],
+            "delta_tc_mean_sd_C": [
+              1.575,
+              0.43
+            ],
+            "post_tc_ge_39_0C_n": 0,
+            "post_tc_ge_39_5C_n": 0,
+            "max_post_tc_C": 38.7,
+            "total_distance_mean_sd_m": [
+              1084.6,
+              114.9
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              13.77,
+              22.24
+            ],
+            "hr_pct_mean_sd": [
+              90.22,
+              1.63
+            ],
+            "rpe_mean_sd": [
+              15.86,
+              0.71
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              87.64,
+              7.17
+            ],
+            "lost_balls_mean_sd": [
+              3.44,
+              1.09
+            ]
+          },
+          "MEH_24_27_9C": {
+            "pre_tc_mean_sd_C": [
+              37.081,
+              0.283
+            ],
+            "post_tc_mean_sd_C": [
+              38.919,
+              0.207
+            ],
+            "delta_tc_mean_sd_C": [
+              1.837,
+              0.401
+            ],
+            "post_tc_ge_39_0C_n": 6,
+            "post_tc_ge_39_5C_n": 0,
+            "max_post_tc_C": 39.2,
+            "total_distance_mean_sd_m": [
+              1158.4,
+              102.1
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              15.06,
+              20.86
+            ],
+            "hr_pct_mean_sd": [
+              94.22,
+              2.02
+            ],
+            "rpe_mean_sd": [
+              16.5,
+              0.64
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              90.17,
+              5.28
+            ],
+            "lost_balls_mean_sd": [
+              2.0,
+              0.37
+            ]
+          },
+          "HEH_gt28C": {
+            "pre_tc_mean_sd_C": [
+              37.475,
+              0.208
+            ],
+            "post_tc_mean_sd_C": [
+              39.2,
+              0.186
+            ],
+            "delta_tc_mean_sd_C": [
+              1.725,
+              0.319
+            ],
+            "post_tc_ge_39_0C_n": 15,
+            "post_tc_ge_39_5C_n": 2,
+            "max_post_tc_C": 39.5,
+            "total_distance_mean_sd_m": [
+              1121.7,
+              66.1
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              -4.36,
+              12.88
+            ],
+            "hr_pct_mean_sd": [
+              94.81,
+              2.58
+            ],
+            "rpe_mean_sd": [
+              17.09,
+              1.0
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              85.16,
+              7.48
+            ],
+            "lost_balls_mean_sd": [
+              4.75,
+              1.29
+            ]
+          }
+        },
+        "paired_heh_vs_leh_and_bout_decomposition": {
+          "heat_effect_post_tc_C": {
+            "n": 16,
+            "mean_diff": 0.8438,
+            "sd_diff": 0.3386,
+            "ci95_boot": [
+              0.6813,
+              1.0063
+            ],
+            "t": 9.969,
+            "p_ttest": 0.0,
+            "p_wilcoxon": 0.00043,
+            "cohen_dz": 2.492
+          },
+          "heat_effect_delta_tc_C": {
+            "n": 16,
+            "mean_diff": 0.15,
+            "sd_diff": 0.7174,
+            "ci95_boot": [
+              -0.1875,
+              0.4875
+            ],
+            "t": 0.836,
+            "p_ttest": 0.41608,
+            "p_wilcoxon": 0.50109,
+            "cohen_dz": 0.209
+          },
+          "heat_effect_total_dist_m": {
+            "n": 16,
+            "mean_diff": 37.125,
+            "sd_diff": 140.5052,
+            "ci95_boot": [
+              -29.7516,
+              100.9391
+            ],
+            "t": 1.057,
+            "p_ttest": 0.30728,
+            "p_wilcoxon": 0.25223,
+            "cohen_dz": 0.264
+          },
+          "bout_fatigue_dist_leh_m": {
+            "n": 16,
+            "mean_diff": 31.6562,
+            "sd_diff": 49.0805,
+            "ci95_boot": [
+              9.093,
+              55.7828
+            ],
+            "t": 2.58,
+            "p_ttest": 0.02092,
+            "p_wilcoxon": 0.02899,
+            "cohen_dz": 0.645
+          },
+          "bout_fatigue_dist_heh_m": {
+            "n": 16,
+            "mean_diff": -14.7188,
+            "sd_diff": 38.9174,
+            "ci95_boot": [
+              -33.0633,
+              3.0945
+            ],
+            "t": -1.513,
+            "p_ttest": 0.15111,
+            "p_wilcoxon": 0.25223,
+            "cohen_dz": -0.378
+          },
+          "heat_x_bout_interaction_dist_m": {
+            "n": 16,
+            "mean_diff": -46.375,
+            "sd_diff": 51.7496,
+            "ci95_boot": [
+              -70.7508,
+              -22.5312
+            ],
+            "t": -3.585,
+            "p_ttest": 0.00271,
+            "p_wilcoxon": 0.00418,
+            "cohen_dz": -0.896
+          },
+          "heat_effect_hr_pct": {
+            "n": 16,
+            "mean_diff": 4.587,
+            "sd_diff": 2.4918,
+            "ci95_boot": [
+              3.3785,
+              5.754
+            ],
+            "t": 7.363,
+            "p_ttest": 0.0,
+            "p_wilcoxon": 3e-05,
+            "cohen_dz": 1.841
+          },
+          "heat_effect_rpe": {
+            "n": 16,
+            "mean_diff": 1.2344,
+            "sd_diff": 1.2058,
+            "ci95_boot": [
+              0.6719,
+              1.8125
+            ],
+            "t": 4.095,
+            "p_ttest": 0.00096,
+            "p_wilcoxon": 0.00306,
+            "cohen_dz": 1.024
+          },
+          "heat_effect_pass_acc_pp": {
+            "n": 16,
+            "mean_diff": -2.4777,
+            "sd_diff": 7.2993,
+            "ci95_boot": [
+              -6.1636,
+              0.8076
+            ],
+            "t": -1.358,
+            "p_ttest": 0.19461,
+            "p_wilcoxon": 0.40375,
+            "cohen_dz": -0.339
+          },
+          "heat_effect_lost_balls": {
+            "n": 16,
+            "mean_diff": 1.3125,
+            "sd_diff": 1.3022,
+            "ci95_boot": [
+              0.6875,
+              1.9375
+            ],
+            "t": 4.032,
+            "p_ttest": 0.00109,
+            "p_wilcoxon": 0.00244,
+            "cohen_dz": 1.008
+          }
+        }
+      },
+      "4v4_1680s": {
+        "by_heat_level": {
+          "LEH_lt23_9C": {
+            "pre_tc_mean_sd_C": [
+              36.9,
+              0.278
+            ],
+            "post_tc_mean_sd_C": [
+              38.369,
+              0.26
+            ],
+            "delta_tc_mean_sd_C": [
+              1.469,
+              0.438
+            ],
+            "post_tc_ge_39_0C_n": 0,
+            "post_tc_ge_39_5C_n": 0,
+            "max_post_tc_C": 38.9,
+            "total_distance_mean_sd_m": [
+              2038.4,
+              231.0
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              5.67,
+              9.86
+            ],
+            "hr_pct_mean_sd": [
+              85.46,
+              1.92
+            ],
+            "rpe_mean_sd": [
+              13.62,
+              1.49
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              89.05,
+              5.08
+            ],
+            "lost_balls_mean_sd": [
+              3.81,
+              1.05
+            ]
+          },
+          "MEH_24_27_9C": {
+            "pre_tc_mean_sd_C": [
+              37.256,
+              0.228
+            ],
+            "post_tc_mean_sd_C": [
+              38.931,
+              0.342
+            ],
+            "delta_tc_mean_sd_C": [
+              1.675,
+              0.439
+            ],
+            "post_tc_ge_39_0C_n": 9,
+            "post_tc_ge_39_5C_n": 1,
+            "max_post_tc_C": 39.7,
+            "total_distance_mean_sd_m": [
+              2114.1,
+              164.0
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              5.49,
+              8.5
+            ],
+            "hr_pct_mean_sd": [
+              88.75,
+              1.89
+            ],
+            "rpe_mean_sd": [
+              13.81,
+              1.05
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              90.14,
+              4.18
+            ],
+            "lost_balls_mean_sd": [
+              1.88,
+              0.72
+            ]
+          },
+          "HEH_gt28C": {
+            "pre_tc_mean_sd_C": [
+              37.381,
+              0.214
+            ],
+            "post_tc_mean_sd_C": [
+              39.219,
+              0.191
+            ],
+            "delta_tc_mean_sd_C": [
+              1.837,
+              0.344
+            ],
+            "post_tc_ge_39_0C_n": 13,
+            "post_tc_ge_39_5C_n": 0,
+            "max_post_tc_C": 39.5,
+            "total_distance_mean_sd_m": [
+              2092.1,
+              200.8
+            ],
+            "late_minus_early_dist_pct_mean_sd": [
+              1.58,
+              7.68
+            ],
+            "hr_pct_mean_sd": [
+              89.79,
+              2.19
+            ],
+            "rpe_mean_sd": [
+              14.33,
+              1.26
+            ],
+            "pass_accuracy_mean_sd_pct": [
+              84.77,
+              3.02
+            ],
+            "lost_balls_mean_sd": [
+              4.69,
+              1.08
+            ]
+          }
+        },
+        "paired_heh_vs_leh_and_bout_decomposition": {
+          "heat_effect_post_tc_C": {
+            "n": 16,
+            "mean_diff": 0.85,
+            "sd_diff": 0.3812,
+            "ci95_boot": [
+              0.6625,
+              1.0312
+            ],
+            "t": 8.919,
+            "p_ttest": 0.0,
+            "p_wilcoxon": 0.00064,
+            "cohen_dz": 2.23
+          },
+          "heat_effect_delta_tc_C": {
+            "n": 16,
+            "mean_diff": 0.3687,
+            "sd_diff": 0.7463,
+            "ci95_boot": [
+              0.0248,
+              0.7312
+            ],
+            "t": 1.976,
+            "p_ttest": 0.06679,
+            "p_wilcoxon": 0.10323,
+            "cohen_dz": 0.494
+          },
+          "heat_effect_total_dist_m": {
+            "n": 16,
+            "mean_diff": 53.6875,
+            "sd_diff": 188.0403,
+            "ci95_boot": [
+              -38.0,
+              143.9437
+            ],
+            "t": 1.142,
+            "p_ttest": 0.27134,
+            "p_wilcoxon": 0.19281,
+            "cohen_dz": 0.286
+          },
+          "bout_fatigue_dist_leh_m": {
+            "n": 16,
+            "mean_diff": 26.9688,
+            "sd_diff": 49.4922,
+            "ci95_boot": [
+              3.3117,
+              50.8766
+            ],
+            "t": 2.18,
+            "p_ttest": 0.04563,
+            "p_wilcoxon": 0.08788,
+            "cohen_dz": 0.545
+          },
+          "bout_fatigue_dist_heh_m": {
+            "n": 16,
+            "mean_diff": 7.9375,
+            "sd_diff": 39.0904,
+            "ci95_boot": [
+              -10.375,
+              26.0633
+            ],
+            "t": 0.812,
+            "p_ttest": 0.42937,
+            "p_wilcoxon": 0.49542,
+            "cohen_dz": 0.203
+          },
+          "heat_x_bout_interaction_dist_m": {
+            "n": 16,
+            "mean_diff": -19.0312,
+            "sd_diff": 73.6918,
+            "ci95_boot": [
+              -54.375,
+              15.3133
+            ],
+            "t": -1.033,
+            "p_ttest": 0.31796,
+            "p_wilcoxon": 0.39347,
+            "cohen_dz": -0.258
+          },
+          "heat_effect_hr_pct": {
+            "n": 16,
+            "mean_diff": 4.3324,
+            "sd_diff": 2.4124,
+            "ci95_boot": [
+              3.1684,
+              5.4957
+            ],
+            "t": 7.183,
+            "p_ttest": 0.0,
+            "p_wilcoxon": 6e-05,
+            "cohen_dz": 1.796
+          },
+          "heat_effect_rpe": {
+            "n": 16,
+            "mean_diff": 0.7031,
+            "sd_diff": 1.4641,
+            "ci95_boot": [
+              0.0312,
+              1.4219
+            ],
+            "t": 1.921,
+            "p_ttest": 0.07394,
+            "p_wilcoxon": 0.10799,
+            "cohen_dz": 0.48
+          },
+          "heat_effect_pass_acc_pp": {
+            "n": 16,
+            "mean_diff": -4.2823,
+            "sd_diff": 4.6732,
+            "ci95_boot": [
+              -6.5064,
+              -2.0584
+            ],
+            "t": -3.665,
+            "p_ttest": 0.0023,
+            "p_wilcoxon": 0.00305,
+            "cohen_dz": -0.916
+          },
+          "heat_effect_lost_balls": {
+            "n": 16,
+            "mean_diff": 0.875,
+            "sd_diff": 1.0878,
+            "ci95_boot": [
+              0.375,
+              1.375
+            ],
+            "t": 3.217,
+            "p_ttest": 0.00575,
+            "p_wilcoxon": 0.01123,
+            "cohen_dz": 0.804
+          }
+        }
+      }
+    },
+    "cpe45_screening_verdict": "HOLD (provides verified individual-level paired Core Temp + intermittent locomotor distance in meters + technical motor accuracy across 3 heat levels and 4 bouts, showing rapid thermal escalation toward/above 39.0 C in >28 C heat already within 840-1680 s; however duration 1680 s < 2700 s, adolescent sample age ~16.5 y, no calibrated mechanical power/force, no standardized cognitive RT/omissions, and no +45 min/+24 h post45 neuromuscular battery)."
+  },
+  "track2_malcolm2024_45min_90min_cognition": {
+    "source_id": "SRC-0203",
+    "dataset": "Malcolm et al. 2024 (PMC11369344, Eur J Sport Sci 24:1287, n=12, 90-min intermittent running at 33 C / 50% RH)",
+    "native_arm_only": "Unacclimatized uncooled CON arm audited; COOL arm (ice slurry + ice collar) excluded as external cooling under GOVERNANCE.md.",
+    "halftime_2700s_deltas_con": {
+      "complex_stroop_rt_ms": 4.0,
+      "complex_stroop_acc_pp": -3.3,
+      "complex_visual_search_rt_ms": -4.0,
+      "complex_visual_search_acc_pp": -0.3
+    },
+    "fulltime_5400s_deltas_con": {
+      "complex_stroop_acc_pp": -4.5,
+      "sternberg_5item_rt_ms": 49.0,
+      "sternberg_5item_acc_pp": -1.8
+    },
+    "working_spec_screening": "At exact 45-min (2700 s) half-time in 33 C intermittent running, Complex Stroop accuracy drops -3.3 pp (98.3->95.0%, reaching -4.5 pp at 90 min) while RT stays near baseline (+4 ms); at 90 min high-load working memory (Sternberg 5-item) slows by +49 ms (exceeding EXP-0149 working_default +40 ms). Group means only (data request-only), no individual time-series, no mechanical work/power, no spatial meters, and no post45 neuromuscular battery."
+  },
+  "summary_ruling": "EXP-0157 expands Stage 2 with individual paired multi-bout intermittent heat-stress data (SSGs_Heat n=16 x 3 heat levels x 2v2/4v4, jointly measuring Core Temp, locomotor distance pacing in meters, HR %max, and technical motor accuracy) plus exact 45-min (2700 s) half-time intermittent heat cognitive data (Malcolm 2024 n=12). Stage 2 remains HOLD / DATA_BLOCKED: no open human dataset combines full >=2700 s alternating load, calibrated mechanical power/velocity, spatial coordination in meters, concurrent cognition, thermoregulation, and post45 recovery."
+}

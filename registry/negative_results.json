@@ -1089,8 +1089,24 @@
     "date": "2026-11-23",
     "id": "NEG-0135",
     "experiment_id": "EXP-0155",
-    "title": "No open cohort closes 2700-s CPE45 or longitudinal Stage 3; BFR adds zero benefit to HA; strength alone cannot control thermal ceiling",
-    "statement": "Despite new individual-level anchors (DUO-GAIT ~360 s, Goepp 1260 s, Agostinelli ~1124 s), 0 open human datasets combine 2700 s alternating load, spatial meters, concurrent cognition, thermoregulation, and post45 recovery. In Goepp 2026, BFR fails to outperform SHAM across all 10 measured channels (p>=0.42) and intra-session SART B3-B2 drop stays ~-9.6 pp. In Agostinelli 2025, RelStr cannot replace VO2max for core thermal control (partial r=+0.106 vs VO2max partial r=-0.558) and accompanies elevated blood lactate (+3.04 mmol/L).",
+    "title": "EXP-0155 v2: 0 open 2700-s CPE45 cohorts; Goepp BFR underpowered (wide CIs); Agostinelli fails to rule out thermal/cognitive harm and shows covariate/outlier sensitivity",
+    "statement": "No open cohort in EXP-0155 reaches 2700 s with joint CPE45 + post45 or links longitudinally to Stage 1. In DUO-GAIT, Fatigue x Dual-Task interaction is NS across all 7 metrics (p>=0.229) and clearances_min_CV contains a 15x outlier (sub_18=11.81). In Goepp 2026, acute MVC retention (+2.44 pp p=0.146) is NS and BFR vs SHAM ANCOVA CIs are too wide (n=10/arm) to establish equivalence. In Agostinelli 2025, Total_errors has an extreme outlier (ID=17=55 errors) and negative LOOCV R2 (-0.055), RelStr speed slope loses significance under collinear PBF (p=0.083) or Cook's D exclusion (p=0.113), and 95% CIs do NOT rule out moderate thermal (+0.21..+0.31 C) or cognitive (+1.22..+5.68 errors) harm.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0136",
+    "experiment_id": "EXP-0156",
+    "title": "0/4 collagen-peptide and high-load tendon RCTs (N=120) pass ADAPT25 or FORCE20 despite confirmed tendon remodeling",
+    "statement": "Bioactive/hydrolysed collagen peptides + RT across Balshaw 2025 (n=39, ADAPT25=-0.382 pp/wk), Lee 2025 (n=20, KE MVT GxT p=0.754 despite +56.4% PT stiffness and +6.5% CSA), and Lee 2023 (n=17, GxT p=0.325) plus Radovanovic 2022 (n=44, +7.2% PF MVC, CMJ -0.63 cm) fail to close Stage 1.",
+    "confidence": "statistically_reproduced"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "NEG-0137",
+    "experiment_id": "EXP-0157",
+    "title": "SSGs_Heat (<=1680 s, adolescents) and Malcolm 2024 (group means only) fail to close 2700-s CPE45; >28 C intermittent work breaches 39.0 C and degrades pass accuracy within 28 min",
+    "statement": "Neither SSGs_Heat (840-1680 s, no calibrated power/force or post45; 13-15/16 breach >=39.0 C in >28 C heat with -4.28 pp pass accuracy loss) nor Malcolm 2024 (request-only microdata, no mechanical work or post45) nor excluded OSF 84fru / Zenodo 19240351 closes Stage 2.",
     "confidence": "statistically_reproduced"
   }
 ]
